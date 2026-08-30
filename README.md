@@ -28,3 +28,6 @@ Run `scripts/link-skills.sh` to symlink all 48 skills into `~/.claude/skills` (o
 
 ## Conventions
 `[sage]` = upstream Sage repo · `[docs]` = your internal docs repo (optional deep-dives). Every self-authored skill opens with a one-line failure statement ("this skill exists to stop: …") and a HOW-TO-USE section with modes and output formats. Decision history: `docs/DECISIONS.md`.
+
+## License
+MIT — see `LICENSE`. Upstream material (Sage, sage-product, mattpocockSkills) keeps its original MIT-style attribution.

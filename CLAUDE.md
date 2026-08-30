@@ -13,7 +13,7 @@ A self-contained skill kit (48 skills, 7 categories) for AI agents, extracted 20
 ## State at handoff (2026-08-30)
 - Done: extraction, renaming (see README table), full EN translation, de-branding, routing ported; 3 scenarios PASS with independent fresh-agent runs (`okr-outcome-architect`, `product-council`, `ux-cro-audit` — run #1 missed the AI-failure branch → §7 row 15 added → run #2 PASS); 6-step review checklist run and all findings fixed; kafka-patterns dropped (48 skills); Sage-runtime commands/paths removed (K5); outputs namespaced under `.jimmy/`; usage guide in docs/USAGE.md.
 - Origin: an internal Vietnamese working set that keeps evolving separately; sync is MANUAL and one-way (archives stay in the origin repo).
-- Open: git remote + tag v0.1.0 (needs the remote URL). Install tooling for Codex/Cursor destinations is documented in docs/USAGE.md; `link-skills.sh --category` filter not built yet.
+- Published: https://github.com/jimnguyendev/jimmy-kit (public, MIT), tag v0.1.0. Install tooling for Codex/Cursor destinations is documented in docs/USAGE.md; `link-skills.sh --category` filter not built yet.
 
 ## Review checklist for the next session (Claude Code)
 1. Vietnamese scan: `grep -rP` with the Vietnamese-diacritics character class over `skills/` → empty.

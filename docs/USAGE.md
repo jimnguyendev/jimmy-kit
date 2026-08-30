@@ -6,7 +6,7 @@ How to install the kit into a project or machine, start a session with it, and k
 
 ### Option A — global, one machine (fastest)
 ```bash
-git clone <kit-remote-url> ~/jimmy-kit
+git clone https://github.com/jimnguyendev/jimmy-kit.git ~/jimmy-kit
 ~/jimmy-kit/scripts/link-skills.sh                     # Claude Code  → ~/.claude/skills
 ~/jimmy-kit/scripts/link-skills.sh ~/.agents/skills    # Codex CLI    → ~/.agents/skills
 ~/jimmy-kit/scripts/link-skills.sh ~/.cursor/skills    # Cursor       → ~/.cursor/skills
@@ -16,7 +16,7 @@ Update later with `git -C ~/jimmy-kit pull` — the symlinks follow automaticall
 ### Option B — per repo, shared with the team
 ```bash
 # inside the target repo
-git submodule add <kit-remote-url> vendor/jimmy-kit
+git submodule add https://github.com/jimnguyendev/jimmy-kit.git vendor/jimmy-kit
 vendor/jimmy-kit/scripts/link-skills.sh .claude/skills   # Claude Code
 vendor/jimmy-kit/scripts/link-skills.sh .agents/skills   # Codex
 vendor/jimmy-kit/scripts/link-skills.sh .cursor/skills   # Cursor
