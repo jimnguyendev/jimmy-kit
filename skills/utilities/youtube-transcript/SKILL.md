@@ -49,7 +49,7 @@ Three modes:
 # (a) Known timestamps — fastest, no video download
 capture_frames.py <VIDEO_ID> --at 3:56,13:34,24:26 --out shots/ --prefix v06
 # (b) Timestamps straight from a written guide — closes the loop with docs
-capture_frames.py <VIDEO_ID> --at-guide docs/guides/v06_guide.md --out shots/ --prefix v06 --dedupe --emit-markdown
+capture_frames.py <VIDEO_ID> --at-guide .jimmy/docs/guides/v06_guide.md --out shots/ --prefix v06 --dedupe --emit-markdown
 # (c) Unknown — let ffmpeg detect slide changes
 capture_frames.py <VIDEO_ID> --auto --download --limit 30 --dedupe --out shots/ --prefix v06
 ```

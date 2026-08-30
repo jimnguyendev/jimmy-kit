@@ -12,15 +12,15 @@ Examples:
 
     # cut exactly 5 timestamps
     python3 capture_frames.py Xx3V8i11weo --at 3:56,13:34,24:26,1:08:53,1:36:09 \\
-        --out docs/notes/screenshots --prefix v06
+        --out .jimmy/docs/screenshots --prefix v06
 
     # take timestamps straight from a written guide
-    python3 capture_frames.py Xx3V8i11weo --at-guide docs/notes/guides/v06_guide.md \\
-        --out docs/notes/screenshots --prefix v06 --emit-markdown
+    python3 capture_frames.py Xx3V8i11weo --at-guide .jimmy/docs/guides/v06_guide.md \\
+        --out .jimmy/docs/screenshots --prefix v06 --emit-markdown
 
     # detect slide changes (download the video first — much faster)
     python3 capture_frames.py Xx3V8i11weo --auto --threshold 0.3 --download \\
-        --out docs/notes/screenshots --prefix v06
+        --out .jimmy/docs/screenshots --prefix v06
 
     # work from a file you already have
     python3 capture_frames.py --local lecture.mp4 --auto --out ./slides

@@ -12,7 +12,7 @@
  *   2. run   openTranscriptPanel()      → opens the "Show transcript" panel
  *   3. run   await collectSegments()    → scrolls so YouTube renders every segment
  *   4. run   downloadTranscript(45)     → groups into paragraphs & downloads a .txt
- *   5. move the file into docs/<group>/transcripts/_raw/ and run clean_transcript.py
+ *   5. move the file into .jimmy/docs/transcripts/_raw/ and post-process as you like
  *
  * Note: step 3 is mandatory — YouTube uses virtual scrolling; without scrolling you
  * only get the first ~30 lines.
@@ -69,7 +69,7 @@ async function collectSegments() {
 
 /**
  * Group segments into paragraphs by time window, then download a .txt file.
- * The header matches the format clean_transcript.py expects.
+ * The header matches the format get_transcript.py writes.
  * @param {number} windowSec grouping window, default 45 seconds
  */
 function downloadTranscript(windowSec = 45) {

@@ -21,7 +21,7 @@
 ## Context (read these first, in order)
 - <repo-relative file paths the work touches, with one line each on why>
 - Rules that bind this work: AGENTS.md · .jimmy/adr/0001 (legacy schema parity) ·
-  docs/be-rebuild/03-design.md §Invariants · docs/be-rebuild/05-language.md (naming gate)
+  .jimmy/docs/be-rebuild/03-design.md §Invariants · .jimmy/docs/be-rebuild/05-language.md (naming gate)
 - <any prior packet this builds on>
 
 ## Plan

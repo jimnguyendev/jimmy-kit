@@ -29,33 +29,33 @@ def extract_video_id(url_or_id: str) -> str:
     return url_or_id
 
 class IpBlockedError(RuntimeError):
-    """YouTube chan IP goi den (thuong gap khi chay tu container/cloud)."""
+    """YouTube blocked the calling IP (common when running from a container/cloud)."""
 
 
 BROWSER_FALLBACK_HINT = """
-YouTube da chan IP dang goi (loi IpBlocked).
+YouTube blocked the calling IP (IpBlocked).
 
-Nguyen nhan: IP cua cac nha cung cap cloud (AWS/GCP/Azure, container CI...) bi
-YouTube chan mac dinh. Chay lai script nay tu may ca nhan thi thuong duoc.
+Cause: cloud-provider IPs (AWS/GCP/Azure, CI containers...) are blocked by YouTube
+by default. Re-running this script from a personal machine usually works.
 
-Neu khong chay duoc tu may ca nhan, dung duong trinh duyet — xem
-  .claude/skills/youtube-transcript/browser_capture.js
-Mo video trong Chrome roi chay lan luot:
+If a personal machine is not an option, use the browser path — see
+  browser_capture.js next to this script.
+Open the video in Chrome and run, in order:
   openTranscriptPanel()
   await collectSegments()
   downloadTranscript(45)
-File .txt tai ve co cung dinh dang header nen dung tiep duoc voi
-docs/_tools/clean_transcript.py ma khong can sua gi.
+The downloaded .txt has the same header format as this script's output, so any
+post-processing you apply to one works on the other.
 """.strip()
 
 
 def _list_transcripts(ytt, video_id):
-    """Tuong thich nhieu phien ban API: .list() (moi) va .list_transcripts() (cu)."""
+    """Compatible with several API versions: .list() (new) and .list_transcripts() (old)."""
     for name in ("list", "list_transcripts"):
         fn = getattr(ytt, name, None)
         if callable(fn):
             return fn(video_id)
-    raise RuntimeError("Phien ban youtube-transcript-api khong co .list()/.list_transcripts()")
+    raise RuntimeError("This youtube-transcript-api version has neither .list() nor .list_transcripts()")
 
 
 def get_transcript(video_id: str, languages=['vi', 'en', 'en-US']):
@@ -76,7 +76,7 @@ def get_transcript(video_id: str, languages=['vi', 'en', 'en-US']):
             if type(e2).__name__ in ("IpBlocked", "RequestBlocked"):
                 raise IpBlockedError(BROWSER_FALLBACK_HINT) from e2
             raise RuntimeError(
-                f"Khong lay duoc transcript cho video '{video_id}'.\n"
+                f"Could not fetch a transcript for video '{video_id}'.\n"
                 f"  - fetch(languages={languages}): {type(first_err).__name__}: {first_err}\n"
                 f"  - fallback list(): {type(e2).__name__}: {e2}"
             ) from e2
@@ -145,7 +145,7 @@ def main():
         lines.append(f"# YouTube Transcript ({vid})")
         lines.append(f"# URL: https://www.youtube.com/watch?v={vid}")
         lines.append(f"# Duration: ~{duration_str} | Segments: {len(items)} | Words: {word_count}")
-        lines.append("# Nguon: phu de YouTube, lay bang .claude/skills/youtube-transcript/get_transcript.py\n")
+        lines.append("# Source: YouTube captions, fetched with get_transcript.py\n")
         for item in items:
             ts = format_timestamp(item['start'])
             lines.append(f"{ts} {item['text']}")
