@@ -16,7 +16,7 @@ A self-contained skill kit (49 skills, 7 categories) for AI agents, extracted 20
 - Open items: (1) independent runs of the 3 scenarios; (2) git remote + tag v0.1.0 when ready; (3) maybe package as a `sage add` pack later (rejected for now — DECISIONS K1).
 
 ## Review checklist for the next session (Claude Code)
-1. Vietnamese scan: `grep -rP '[ạảấầẩẫậắằẳẵặ...]' skills/` → empty.
+1. Vietnamese scan: `grep -rP` with the Vietnamese-diacritics character class over `skills/` → empty.
 2. Every skill dir: SKILL.md present, `name:` matches folder name.
 3. Cross-references resolve to kit names (routing, analyst, architect, quality-gates, change-tiers, decision-log, independent-review, retrospective, tracking-architect, product-council, okr-outcome-architect, ux-*, jtbd, prd, opportunity-map, problem-solving…).
 4. No source-company or real-person names outside README credits.

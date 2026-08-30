@@ -1,5 +1,5 @@
 ---
-name: jobs-to-be-done
+name: jtbd
 description: >-
   Systematically uncovers customer jobs, pains, and gains using the
   Jobs-to-be-Done framework. Produces structured JTBD analyses with job
