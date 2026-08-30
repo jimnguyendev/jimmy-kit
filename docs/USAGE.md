@@ -4,7 +4,22 @@ How to install the kit into a project or machine, start a session with it, and k
 
 ## 1. Install
 
-### Option A — global, one machine (fastest)
+### Fastest — one command, any agent (Claude Code, Codex, Cursor, Gemini, …)
+```bash
+npx skills add jimnguyendev/jimmy-kit            # interactive: pick agents + skills
+npx skills add jimnguyendev/jimmy-kit -y -g      # everything, globally, no prompts
+npx skills add jimnguyendev/jimmy-kit --skill product-council --skill okr-outcome-architect
+```
+Uses the open-source `skills` CLI (skills.sh). It clones the repo, finds all 48 `SKILL.md`, and writes them into the right folder for each agent you select (`.claude/skills`, `.agents/skills`, `.cursor/skills`, …). Re-run to update. No clone or symlink to manage.
+
+### Claude Code plugin (namespaced skills, updates via `/plugin`)
+```text
+/plugin marketplace add jimnguyendev/jimmy-kit
+/plugin install jimmy-kit@jimmy-kit
+```
+Skills then appear as `jimmy-kit:<skill>` (e.g. `/jimmy-kit:product-council`). Manifests live in `.claude-plugin/`; the marketplace pins the `v0.1.0` tag. To test a local checkout before publishing: `claude --plugin-dir /path/to/jimmy-kit`.
+
+### Option A — global clone + symlinks (when you want `git pull` updates)
 ```bash
 git clone https://github.com/jimnguyendev/jimmy-kit.git ~/jimmy-kit
 ~/jimmy-kit/scripts/link-skills.sh                     # Claude Code  → ~/.claude/skills
