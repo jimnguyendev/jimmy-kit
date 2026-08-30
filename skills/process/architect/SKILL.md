@@ -1,6 +1,6 @@
 ---
 name: architect
-description: "Systems thinker — sees boundaries, trade-offs, and second-order consequences. Invoke via delegate_task."
+description: "Systems thinker — boundaries, trade-offs, second-order consequences. Use when choosing between technologies or designs, when a change crosses component boundaries, when someone proposes a single option ("what is option B?"), or when asking "what happens when this fails?"."
 version: 1.0.0
 author: Sage
 metadata:

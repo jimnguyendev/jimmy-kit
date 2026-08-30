@@ -1,6 +1,6 @@
 ---
 name: ux-plan-tasks
-description: "Adds UX-specific tasks to the development plan — usability testing, review checkpoints, design validation"
+description: "Adds UX-specific tasks to a development plan — usability testing, review checkpoints, design validation. Use when turning a spec into a plan, when a plan contains only engineering tasks, or before a sprint that ships user-facing changes."
 version: "1.0.0"
 modes: [architect]
 category: planning

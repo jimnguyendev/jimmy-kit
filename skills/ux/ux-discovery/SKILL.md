@@ -1,6 +1,6 @@
 ---
 name: ux-discovery
-description: "User research and context gathering — understands who users are, what they do, and why"
+description: "User research and context gathering — who users are, what they do, why. Use when starting a new feature without user evidence, when benchmarking competitors, when the team debates what users want with no data, or before writing any brief or spec."
 version: "1.0.0"
 modes: [build, architect]
 category: elicitation

@@ -1,6 +1,6 @@
 ---
 name: ux-specify
-description: "Enriches feature specifications with UX requirements — error states, user flows, accessibility, five-planes analysis"
+description: "Enriches feature specs with UX requirements — error states, user flows, accessibility, five-planes analysis. Use when a spec covers only the happy path, when loading/error/empty/timeout states are undefined, or before handing a spec to engineering."
 version: "1.0.0"
 modes: [build, architect]
 category: planning

@@ -1,6 +1,6 @@
 ---
 name: "ux-design"
-description: "UX design process — research, evaluation, specification, design, and review woven into the development workflow."
+description: "End-to-end UX design process — research, evaluation, specification, design, review woven into the development workflow. Use when a feature needs design work coordinated across phases, or when unsure which ux-* skill applies (this one routes)."
 version: "2.0.0"
 type: bundle
 includes:

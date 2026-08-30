@@ -1,6 +1,6 @@
 ---
 name: independent-review
-description: "Review report with strengths, issues, risks, verdict"
+description: "Independent evaluation with strengths, issues, risks, and a three-level verdict. Use when an artifact (spec, brief, plan, document) needs fresh-eyes review before it is trusted, when work is about to be declared done, or when the author is reviewing their own work and needs a blind-spot check."
 version: 1.0.0
 author: Sage
 metadata:
