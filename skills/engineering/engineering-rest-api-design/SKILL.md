@@ -1,11 +1,11 @@
 ---
 name: engineering-rest-api-design
-description: "REST API design conventions covering URL structure, HTTP methods, pagination, async patterns, idempotency, error envelopes, and API documentation standards. Use when designing new endpoints, reviewing API contracts, or establishing API guidelines before implementation in any language."
+description: "REST API design conventions covering URL structure, HTTP methods, pagination, sparse-fieldset query collections, async patterns, idempotency, error envelopes, and API documentation standards. Use when designing new endpoints, reviewing API contracts, or establishing API guidelines before implementation in any language."
 user-invocable: false
 license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 allowed-tools: Read Edit Write Glob Grep Bash(git:*) Agent AskUserQuestion
 ---
 
@@ -151,6 +151,35 @@ GET /orders?status=pending&created_after=2024-01-01
 
 For complex filtering (range, OR, nested), document the query language explicitly. Never pass filter values directly into SQL — always parameterize.
 
+## Query Collections (Sparse Fieldsets)
+
+When one collection serves several screens with very different costs (public landing vs personalized dashboard vs expanded cards), do not multiply endpoints, return everything, or reach for GraphQL. Use a POST query endpoint with a small whitelisted field/filter grammar. Reference implementation: `pkg/restquery` in learning-be; full rationale in `docs/architecture/restquery-design-vi.md`.
+
+```
+POST /api/v1/query/{domain}/{collection}
+{
+  "queries": {
+    "fields": "id,name,tags{id,code},learner_state{progress}",
+    "filtering": { "product_line_id:eq": 1, "skill_id:in": [1, 2] },
+    "limit": 12,
+    "offset": 0
+  }
+}
+```
+
+Core rules:
+
+- **`fields` is a 3-symbol grammar** — identifier, comma, braces for subfields. No operators, no literals, nothing to execute, so nothing to inject. Parser carries its own caps (length and nesting depth) independent of the global body limit. Empty `fields` returns the collection's default field set, so adding an expensive field later never bloats old clients.
+- **`filtering` keys are `field:operator`** with exactly three operators (`eq`, `in`, `contains`). A per-collection schema whitelists which fields accept which operators and value types, and declares required filters. "No filter" = omit the key; an empty `in` array is a validation error, never `IN ()`. Filter keys are walked in sorted order so duplicate spellings (`premium` vs `premium:eq`) are rejected deterministically and the parsed filter list is stable — a prerequisite for canonical cache keys.
+- **Validation collects every violation into one 400** (`extra_meta.violations` as `[{section, field, message}]`) so the client fixes the request in one round-trip. Violation messages stay in English — they address the developer calling the contract, not end users.
+- **Expensive data is gated before reading**: check `fields.Has("learner_state")` (plus a valid token) before touching learner stores. Projection trims bytes; gating saves reads — the read is what you are economizing. Any branch that produces a personalized response sets `Cache-Control: no-store`. A token alone never triggers personal reads: the client must also select a learner field.
+- **Schemas fail at boot** (`MustSchema` panics on an inconsistent schema), and each collection's test calls `CheckSource(sample)` so a field can never be selectable but permanently empty.
+- **Projection stays above the cache**: repositories always return the full shape, keyed by filters + pagination only — `fields` is not part of the cache key, so every field combination shares one cache entry.
+- **Two-layer whitelist**: grammar validation (layer 1) then an explicit handler switch mapping each validated filter to a typed struct (layer 2), feeding fixed parameterized SQL. A filter that reaches layer 2 unmapped is a loud 500 (schema/switch drift), never a silently ignored filter. Adding a filter or field means schema + switch branch + wire map key in the same commit.
+- Empty collections return `data: []`, never `null`. Pagination uses the standard `meta.pagination` envelope.
+
+Do **not** use this grammar for detail resources, grading results, actions, or polling — those stay typed endpoints. Free multi-dimensional filtering/sorting is a search-engine problem, not a hand-written allowlist. Deep relationship graphs with many divergent clients are where GraphQL (with depth limits, complexity scoring, persisted queries) earns its infrastructure cost.
+
 ## Sorting
 
 Three common conventions — pick one per API, stay consistent:
@@ -167,6 +196,8 @@ GET /articles?sort=publish_date,asc;title,desc
 ```
 
 Default sort direction should be documented (typically descending for dates, ascending for names). **Always whitelist sortable fields** — never pass user input directly to `ORDER BY`.
+
+**No sort is a valid contract.** When list order is fixed business ordering, do not expose sorting at all — exposing `sort` invites ordering by unindexed columns. But still *decode and explicitly reject* `sort`/`direction` with a 400 violation: silently ignoring them makes clients believe they are sorting when they are not.
 
 ## Relationship Endpoints
 
@@ -281,6 +312,23 @@ Standard envelope structure for all API responses:
 }
 ```
 
+Paginated list responses carry pagination as a **first-class `meta.pagination` object** — not inside `extra_meta`:
+
+```json
+{
+  "meta": {
+    "code": "200000",
+    "type": "SUCCESS",
+    "message": "Success",
+    "service_id": "learning-be",
+    "pagination": { "total": 57, "limit": 12, "offset": 0, "has_next": true }
+  },
+  "data": [ { "id": 5, "name": "IELTS Mock Test 2026" } ]
+}
+```
+
+Offset-style lists use `limit`/`offset`/`has_next`; legacy page-style lists use `page`/`per_page` in the same object. Empty collections return `data: []`, never `null`.
+
 Error responses use the same envelope with `"data": null`:
 
 ```json
@@ -291,6 +339,24 @@ Error responses use the same envelope with `"data": null`:
     "message": "Debit account has an insufficient amount of balance",
     "service_id": "payment-service",
     "extra_meta": {}
+  },
+  "data": null
+}
+```
+
+Validation errors that can report multiple field problems return **all of them at once** under `extra_meta.violations` (each `{section, field, message}`) so clients fix a request in one round-trip instead of fix-one-resend-discover-the-next:
+
+```json
+{
+  "meta": {
+    "code": "400000",
+    "type": "invalid_query",
+    "message": "invalid query",
+    "service_id": "learning-be",
+    "extra_meta": { "violations": [
+      { "section": "fields", "field": "tests.bad", "message": "unknown field" },
+      { "section": "pagination", "field": "limit", "message": "limit exceeds maximum of 20" }
+    ] }
   },
   "data": null
 }
@@ -307,6 +373,7 @@ Every endpoint must be documented with: spec (method, URL, headers, body), reque
 - For MyVocab project-specific response envelope and handler patterns, use `jimmy-skills@myvocap-backend`.
 - For error handling conventions in Go, use `jimmy-skills@backend-go-error-handling`.
 - For database query patterns (pagination SQL), use `jimmy-skills@backend-go-database`.
+- For the query-collection grammar (sparse fieldsets + whitelisted filtering), the reference implementation is `pkg/restquery` in learning-be, with design rationale in `docs/architecture/restquery-design-vi.md`.
 
 ## External Sources
 

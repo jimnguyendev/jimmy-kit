@@ -43,16 +43,16 @@ Response includes the cursor for the next page, wrapped in the standard envelope
     "type": "SUCCESS",
     "message": "Success",
     "service_id": "user-service",
-    "extra_meta": {
+    "pagination": {
       "next_cursor": "user_abc123",
-      "has_more": true
+      "has_next": true
     }
   },
   "data": [...]
 }
 ```
 
-Pagination metadata (`next_cursor`, `has_more`) goes in `extra_meta` to keep the envelope consistent across all endpoints.
+Pagination metadata is a **first-class `meta.pagination` object**, consistent across all list endpoints: offset-style lists carry `{total, limit, offset, has_next}`, page-style lists carry `{total, page, per_page}`, cursor-style lists carry `{next_cursor, has_next}`. Do not put pagination in `extra_meta` — that field is reserved for error metadata (e.g. validation violations).
 
 ## Solution: Deferred Join
 
@@ -83,4 +83,4 @@ X-Page-Size: 10
 Link: </users?cursor=abc123&limit=10>; rel="next"
 ```
 
-Note: always include pagination info in the response body (`extra_meta`) as the primary source. Headers are supplementary.
+Note: always include pagination info in the response body (`meta.pagination`) as the primary source. Headers are supplementary.
