@@ -44,14 +44,14 @@ below still apply. `--ux` uses the `ux-review` skill, which is bundled in this k
 
 ## Step 1: Identify What to Review
 
-If not specified, scan `docs/work/` and `docs/` for recent
+If not specified, scan `.jimmy/work/` and `docs/` for recent
 artifacts. Present them:
 
 Sage: Available for review:
 
-[1] docs/work/20260316-checkout/brief.md (updated today)
-[2] docs/work/20260316-checkout/spec.md (updated today)
-[3] docs/ux-audit-homepage.md (updated yesterday)
+[1] .jimmy/work/20260316-checkout/brief.md (updated today)
+[2] .jimmy/work/20260316-checkout/spec.md (updated today)
+[3] .jimmy/docs/ux-audit-homepage.md (updated yesterday)
 
 Which artifact should I review? Or describe what you'd like evaluated.
 
@@ -139,7 +139,7 @@ Based on the verdict:
 [R] Revise — I'll address the issues found
 [D] Discuss — let's talk about specific findings
 
-Prepend review findings to `docs/DECISIONS.md`.
+Prepend review findings to `.jimmy/decisions.md`.
 
 ## Rules
 

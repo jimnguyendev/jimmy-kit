@@ -27,8 +27,8 @@ description: Architecture Decision Records (ADRs) and Technical Decision Logging
 
 | Scope                             | Location                                | Example                                           |
 | :-------------------------------- | :-------------------------------------- | :------------------------------------------------ |
-| **Initiative / Feature Specific** | `docs/decisions/<feature>-decisions.md` | "Use TanStack Table for Virtualized Student Rows" |
-| **Project-Wide / Global**         | `docs/decisions/global-adr.md`          | "Monorepo Package Strategy with Vite-Plus"        |
+| **Initiative / Feature Specific** | `.jimmy/work/<feature>/decisions.md`    | "Use TanStack Table for Virtualized Student Rows" |
+| **Project-Wide / Global**         | `.jimmy/decisions.md`                   | "Monorepo Package Strategy with Vite-Plus"        |
 
 ---
 

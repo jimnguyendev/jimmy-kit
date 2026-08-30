@@ -61,7 +61,7 @@ out-of-scope with rationale. 30-45 minutes.
 ## Prerequisites
 
 This skill requires a JTBD analysis as input. If no JTBD analysis exists:
-1. Check if a JTBD analysis file exists (`docs/jtbd-analysis.md`)
+1. Check if a JTBD analysis file exists (`.jimmy/docs/jtbd-analysis.md`)
 2. If not, recommend running the `jtbd` skill first
 3. If the user insists on proceeding without JTBD, produce a brief but label
    every requirement as "ungrounded — no JTBD source" and flag this in the
@@ -224,10 +224,10 @@ If issues are found, fix before presenting.
 
 ## Output
 
-Save to `docs/work/<YYYYMMDD>-<slug>/brief.md` using the template from
+Save to `.jimmy/work/<YYYYMMDD>-<slug>/brief.md` using the template from
 `templates/prd-template.md`.
 
-Append to `docs/DECISIONS.md` recording the brief
+Append to `.jimmy/decisions.md` recording the brief
 scope (which opportunity, how many requirements per priority tier),
 key decisions, and open questions. Update the "Current Artifacts" section
 to list the new file as Active.

@@ -24,7 +24,7 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Source tokens**: `[sage]` = upstream Sage repo (github.com/xoai/sage) · `[docs]` = your internal docs repo. Deep-dives only; skills run without them; a MUST READ step stops and asks when its file is missing.
 
-**Work paths**: where skills write — `docs/work/<feature>/` (in-progress artifacts: brief, spec, plan, screenshots) · `docs/` (durable docs: research briefs, audits, voice & tone) · `docs/DECISIONS.md` (ADRs) · `docs/CONSTITUTION.md` (project principles). Upstream Sage used `.sage/…`; the kit never does (DECISIONS K5). _Avoid:_ `.sage/`, tool-specific paths.
+**Work paths**: where skills write inside the repo they are installed in — everything under `.jimmy/` (one namespaced dir, mirrors upstream `.sage/`): `.jimmy/work/<feature>/` (in-progress artifacts: brief, spec, plan, screenshots, `decisions.md` for that feature) · `.jimmy/docs/` (durable outputs: research briefs, audits, voice & tone) · `.jimmy/decisions.md` (global ADRs) · `.jimmy/constitution.md` (project principles). _Avoid:_ `.sage/`, the target repo's `docs/`, tool-specific paths.
 
 ## Relationships
 - The `routing` skill dispatches problems to skill chains (map: `docs/OPERATING-WORKFLOW.md`).

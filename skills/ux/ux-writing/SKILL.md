@@ -120,7 +120,7 @@ Confirm with the user in ONE message:
    transitional text, confirmations, notifications, errors), show one
    good and one bad example in the product's voice.
 
-Save the voice and tone guide to `docs/ux-writing-voice-and-tone.md`.
+Save the voice and tone guide to `.jimmy/docs/ux-writing-voice-and-tone.md`.
 This becomes a cross-cutting reference for all future work.
 
 **BUILD mode — confirm or establish minimal voice:**
@@ -200,17 +200,17 @@ Before presenting, validate:
 ## Output
 
 **Voice and tone guide (ARCHITECT):**
-Save to `docs/ux-writing-voice-and-tone.md`
+Save to `.jimmy/docs/ux-writing-voice-and-tone.md`
 This is a project-level reference used by all future work — developers
 writing microcopy during implementation, designers creating mockups, PMs
-writing PRD copy. Append to `docs/DECISIONS.md`.
+writing PRD copy. Append to `.jimmy/decisions.md`.
 
 **Microcopy set (BUILD or ARCHITECT):**
-Save to `docs/work/<YYYYMMDD>-<slug>/microcopy.md`
+Save to `.jimmy/work/<YYYYMMDD>-<slug>/microcopy.md`
 Organized by screen/flow, with all touchpoints covered.
 
 **Content audit (ARCHITECT):**
-Save to `docs/content-audit.md`
+Save to `.jimmy/docs/content-audit.md`
 Evaluates existing copy against the content heuristics, identifies
 inconsistencies and improvement priorities.
 

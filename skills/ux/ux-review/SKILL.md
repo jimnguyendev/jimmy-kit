@@ -47,9 +47,9 @@ Do NOT use for:
 If screenshots don't already exist, capture them:
 
 Use whatever screenshot tool the agent has — a browser automation tool (e.g. Playwright:
-`npx playwright screenshot --full-page <url> docs/work/<feature>/screenshots/current-before.png`),
+`npx playwright screenshot --full-page <url> .jimmy/work/<feature>/screenshots/current-before.png`),
 a device/browser MCP tool, or screenshots the user provides — and save them under
-`docs/work/<feature>/screenshots/` with a `current` / `before` label in the filename.
+`.jimmy/work/<feature>/screenshots/` with a `current` / `before` label in the filename.
 
 If the user provided a URL, also fetch the page content for structural analysis:
 - Page title, meta description
@@ -142,7 +142,7 @@ Footer:  [columns, links, contact info]
 
 ### Step 7: Produce Design System Document
 
-Combine all extractions into `docs/work/<feature>/current-design-system.md`:
+Combine all extractions into `.jimmy/work/<feature>/current-design-system.md`:
 
 ```markdown
 # Current Design System: [page/product name]
@@ -272,8 +272,8 @@ category does). Before ux-brief (translating evaluation into design decisions).
 ### Step 1: Load Inputs
 
 Read both artifacts:
-- `docs/work/<feature>/current-design-system.md` (from ux-audit)
-- `docs/work/<feature>/category-benchmarks.md` (from ux-research)
+- `.jimmy/work/<feature>/current-design-system.md` (from ux-audit)
+- `.jimmy/work/<feature>/category-benchmarks.md` (from ux-research)
 
 If either is missing, the evaluation can't proceed. Run the missing skill first.
 
@@ -384,7 +384,7 @@ Impact factors:
 
 ### Step 5: Produce Evaluation Document
 
-Save to `docs/work/<feature>/design-evaluation.md`:
+Save to `.jimmy/work/<feature>/design-evaluation.md`:
 
 ```markdown
 # Design Evaluation: [page/product]
@@ -598,4 +598,4 @@ Mode: [BUILD light / ARCHITECT full]
 ---
 ## Applied context (edtech) — kit notes
 
-- Upstream (Sage) captured screenshots with its own runtime tool and stored work under `.sage/`; this kit uses any available screenshot tool and the `docs/work/<feature>/` layout (see DECISIONS K5). Skill names in the body are kit names; use `routing` to find the chain.
+- Upstream (Sage) captured screenshots with its own runtime tool and stored work under `.sage/`; this kit uses any available screenshot tool and the `.jimmy/work/<feature>/` layout (see DECISIONS K5). Skill names in the body are kit names; use `routing` to find the chain.

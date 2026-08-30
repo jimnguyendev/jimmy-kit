@@ -24,7 +24,7 @@ Hooks are guards, not gates.
 ## Why you were blocked
 
 **"Sage spec gate: no spec exists for the active cycle."** A cycle in
-`docs/work/*/manifest.md` has `gate_state: pre-spec`, and you tried to edit a
+`.jimmy/work/*/manifest.md` has `gate_state: pre-spec`, and you tried to edit a
 source file. Write the spec, get `[A]`, and the manifest advances to
 `spec-approved`. Then the edit lands.
 
@@ -43,8 +43,8 @@ satisfy in about a minute.
 
 **Build (Standard+) — BEFORE implementing, verify both files exist on disk:**
 
-- `docs/work/<initiative>/spec.md` — `status: completed`
-- `docs/work/<initiative>/plan.md` — `status: completed`
+- `.jimmy/work/<initiative>/spec.md` — `status: completed`
+- `.jimmy/work/<initiative>/plan.md` — `status: completed`
 
 If either is missing, create it first. No exceptions.
 
@@ -65,8 +65,8 @@ that matter are the two above: never implement on the default branch, never merg
 
 **Gate sequence (build):**
 
-1. Spec → `docs/work/` → `[A]`/`[R]` → wait
-2. Plan → `docs/work/` → `[A]`/`[R]` → wait
+1. Spec → `.jimmy/work/` → `[A]`/`[R]` → wait
+2. Plan → `.jimmy/work/` → `[A]`/`[R]` → wait
 3. Implement (tests before code, via the build loop)
 4. Verify with **pasted** test output → `[A]`/`[R]`
 
@@ -87,7 +87,7 @@ Do not fix before the root cause is confirmed. Do not skip fix scoping — a
 1. Complete all three elicitation rounds (vision, constraints, gaps). Each
    produces visible output. `brief.md` must exist before design begins. Do not
    compress the rounds. Do not skip them because "I understand the system."
-2. Design with ADRs → `docs/` → spec → `docs/work/` → `[A]`/`[R]`
+2. Design with ADRs → `docs/` → spec → `.jimmy/work/` → `[A]`/`[R]`
 3. Milestone plan → `[A]`/`[R]` → phased build; each milestone follows the
    build gates independently.
 
@@ -116,7 +116,7 @@ precisely how a gate reports success on code it never looked at.
 evidence either way. On exit 2, present the choice and record it:
 
 ```
-[P] Proceed unverified — logged as a waiver in docs/DECISIONS.md
+[P] Proceed unverified — logged as a waiver in .jimmy/decisions.md
 [F] Fix verification setup — install the runner, then re-run
 ```
 

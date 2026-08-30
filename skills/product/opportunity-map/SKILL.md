@@ -234,10 +234,10 @@ Before presenting, validate:
 
 ## Output
 
-Save to `docs/opportunity-map.md` using the
+Save to `.jimmy/docs/opportunity-map.md` using the
 template from `templates/opportunity-map-template.md`.
 
-Append decisions to `docs/DECISIONS.md` recording pursue/
+Append decisions to `.jimmy/decisions.md` recording pursue/
 monitor/defer decisions, key rationale, and sequencing. Update the
 "Current Artifacts" section.
 

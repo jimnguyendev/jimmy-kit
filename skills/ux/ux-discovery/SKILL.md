@@ -252,7 +252,7 @@ from the audited product — or where the category has a gap:
 
 ### Step 6: Produce Benchmarks Document
 
-Save to `docs/work/<feature>/category-benchmarks.md`:
+Save to `.jimmy/work/<feature>/category-benchmarks.md`:
 
 ```markdown
 # Category Benchmarks: [product] — [page type]
