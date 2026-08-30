@@ -1,7 +1,7 @@
 # CLAUDE.md — Jimmy Kit
 
 ## What this repo is
-A self-contained skill kit (49 skills, 7 categories) for AI agents, extracted 2026-08-30 from an internal working set. All English, brand-neutral (generic edtech examples), provenance in README.md. Operating model: docs/OPERATING-WORKFLOW.md (7-question intake → product-council gate → 4-phase chain; `routing` skill is the dispatcher). Glossary: CONTEXT.md (domain language — keep it updated when terms shift). Install tooling: scripts/. Decisions: docs/DECISIONS.md (ADR style, newest first — read before restructuring anything).
+A self-contained skill kit (48 skills, 7 categories) for AI agents, extracted 2026-08-30 from an internal working set. All English, brand-neutral (generic edtech examples), provenance in README.md. Operating model: docs/OPERATING-WORKFLOW.md (7-question intake → product-council gate → 4-phase chain; `routing` skill is the dispatcher). Glossary: CONTEXT.md (domain language — keep it updated when terms shift). Install tooling: scripts/. Decisions: docs/DECISIONS.md (ADR style, newest first — read before restructuring anything).
 
 ## Conventions (enforced)
 - Every self-authored skill opens with `> **This skill exists to stop:** …` (one-line failure statement) and a `## 🤖 0. HOW TO USE` section (modes + output formats).
@@ -13,7 +13,7 @@ A self-contained skill kit (49 skills, 7 categories) for AI agents, extracted 20
 ## State at handoff (2026-08-30)
 - Done: extraction, renaming (see README table), full EN translation, de-branding, templates translated, routing added from upstream, 3 scenarios PASS (author dry runs — first independent runs still wanted).
 - Origin: the practice-labs working set (Vietnamese, keeps evolving separately); sync is MANUAL and one-way; archives live in the origin repo (skills-archive-2026-08-30/).
-- Open items: (1) independent runs of the 3 scenarios; (2) git remote + tag v0.1.0 when ready; (3) maybe package as a `sage add` pack later (rejected for now — DECISIONS K1).
+- Open items: (1) independent runs DONE 2026-08-30 — okr + council PASS, ux-cro-audit PARTIAL (missed AI-failure branch → add §7 row for failure/empty states; see its SCENARIO.md); 6-step checklist run + all findings fixed 2026-08-30 (kafka-patterns removed → 48 skills); (2) git remote + tag v0.1.0 when ready; (3) maybe package as a `sage add` pack later (rejected for now — DECISIONS K1).
 
 ## Review checklist for the next session (Claude Code)
 1. Vietnamese scan: `grep -rP` with the Vietnamese-diacritics character class over `skills/` → empty.

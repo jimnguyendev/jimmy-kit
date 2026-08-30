@@ -1,42 +1,42 @@
 /**
- * browser_capture.js — lấy transcript YouTube qua chính trình duyệt.
+ * browser_capture.js — grab a YouTube transcript through the browser itself.
  *
- * DÙNG KHI: get_transcript.py báo `IpBlocked`. YouTube chặn IP của các nhà cung cấp
- * cloud (AWS/GCP/Azure...), nên script python chạy trong container sẽ hỏng, trong khi
- * trình duyệt trên máy cá nhân thì không bị chặn.
+ * USE WHEN: get_transcript.py reports `IpBlocked`. YouTube blocks cloud-provider IPs
+ * (AWS/GCP/Azure…), so the python script fails inside a container, while a browser
+ * on a personal machine is not blocked.
  *
- * CÁCH DÙNG (dán từng khối vào Console của tab đang mở video, hoặc chạy qua
- * mcp__claude-in-chrome__javascript_tool):
+ * HOW TO USE (paste each block into the Console of the tab playing the video, or run
+ * it via a browser-automation tool such as mcp__claude-in-chrome__javascript_tool):
  *
- *   1. mở  https://www.youtube.com/watch?v=<VIDEO_ID>
- *   2. chạy  openTranscriptPanel()      → mở panel "Show transcript"
- *   3. chạy  await collectSegments()    → cuộn cho YouTube render hết segment
- *   4. chạy  downloadTranscript(45)     → gom đoạn & tải file .txt về máy
- *   5. chuyển file vào docs/<nhóm>/transcripts/_raw/ rồi chạy clean_transcript.py
+ *   1. open  https://www.youtube.com/watch?v=<VIDEO_ID>
+ *   2. run   openTranscriptPanel()      → opens the "Show transcript" panel
+ *   3. run   await collectSegments()    → scrolls so YouTube renders every segment
+ *   4. run   downloadTranscript(45)     → groups into paragraphs & downloads a .txt
+ *   5. move the file into docs/<group>/transcripts/_raw/ and run clean_transcript.py
  *
- * Lưu ý: bước 3 bắt buộc — YouTube dùng virtual scrolling, không cuộn thì chỉ
- * lấy được ~30 dòng đầu.
+ * Note: step 3 is mandatory — YouTube uses virtual scrolling; without scrolling you
+ * only get the first ~30 lines.
  */
 
-/** Mở panel bản chép lời. Trả về true nếu tìm thấy nút. */
+/** Open the transcript panel. Returns true if the button was found. */
 function openTranscriptPanel() {
   const expand = document.querySelector("tp-yt-paper-button#expand, #expand");
   if (expand) expand.click();
   const btn = [...document.querySelectorAll("button")].find((b) =>
-    /^Show transcript|bản chép lời/i.test(b.getAttribute("aria-label") || ""),
+    /^Show transcript|b\u1ea3n ch\u00e9p l\u1edbi/i.test(b.getAttribute("aria-label") || ""), // en + vi locale labels
   );
   if (btn) btn.click();
   return !!btn;
 }
 
 /**
- * Cuộn panel cho tới khi không còn segment mới. Ghi kết quả vào window.__RAW.
+ * Scroll the panel until no new segments appear. Stores the result in window.__RAW.
  * @returns {Promise<{count:number, first:string[], last:string[]}>}
  */
 async function collectSegments() {
   const video = document.querySelector("video");
-  if (video) video.pause(); // tránh panel tự cuộn theo tiến độ phát
-  await new Promise((r) => setTimeout(r, 3000)); // chờ panel tải xong
+  if (video) video.pause(); // stop the panel auto-scrolling with playback
+  await new Promise((r) => setTimeout(r, 3000)); // wait for the panel to load
 
   const all = () => [...document.querySelectorAll("ytd-transcript-segment-renderer")];
   const box =
@@ -68,12 +68,12 @@ async function collectSegments() {
 }
 
 /**
- * Gom segment thành đoạn theo cửa sổ thời gian rồi tải file .txt về máy.
- * Header khớp định dạng mà clean_transcript.py đọc được.
- * @param {number} windowSec cửa sổ gom đoạn, mặc định 45 giây
+ * Group segments into paragraphs by time window, then download a .txt file.
+ * The header matches the format clean_transcript.py expects.
+ * @param {number} windowSec grouping window, default 45 seconds
  */
 function downloadTranscript(windowSec = 45) {
-  if (!window.__RAW?.length) throw new Error("Chưa có dữ liệu — chạy collectSegments() trước.");
+  if (!window.__RAW?.length) throw new Error("No data yet — run collectSegments() first.");
 
   const toSec = (ts) => {
     const p = ts.split(":").map(Number);
@@ -117,7 +117,7 @@ function downloadTranscript(windowSec = 45) {
     `# Channel: ${vd.author || ""}`,
     `# URL: https://www.youtube.com/watch?v=${vid}`,
     `# Duration: ~[${fmt(dur)}] | Segments: ${lines.length} | Words: ${lines.join(" ").split(/\s+/).length}`,
-    `# Nguon: panel Transcript cua YouTube, lay bang browser_capture.js`,
+    `# Source: YouTube Transcript panel, captured with browser_capture.js`,
     "",
   ].join("\n");
 

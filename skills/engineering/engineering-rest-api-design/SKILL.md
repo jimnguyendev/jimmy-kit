@@ -5,7 +5,6 @@ user-invocable: false
 license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents.
 metadata:
-  author: jimnguyendev
   version: "1.0.0"
 allowed-tools: Read Edit Write Glob Grep Bash(git:*) Agent AskUserQuestion
 ---

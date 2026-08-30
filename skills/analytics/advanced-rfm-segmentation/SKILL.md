@@ -112,6 +112,6 @@ graph TD
 
 ## 🛠️ 5. Scripts & Templates Included in this Skill
 
-1. [`scripts/jenks_breaks_rfm.py`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/advanced-rfm-segmentation/scripts/jenks_breaks_rfm.py): Pure Python script to compute 1D Jenks Natural Breaks and calculate $CV$ habit regularity.
-2. [`scripts/rfm_migration_matrix.sql`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/advanced-rfm-segmentation/scripts/rfm_migration_matrix.sql): SQL query to build the $H_1 \to H_2$ transition matrix.
-3. [`templates/advanced_rfm_executive_report.md`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/advanced-rfm-segmentation/templates/advanced_rfm_executive_report.md): Executive Markdown report template.
+1. [`scripts/jenks_breaks_rfm.py`](scripts/jenks_breaks_rfm.py): Pure Python script to compute 1D Jenks Natural Breaks and calculate $CV$ habit regularity.
+2. [`scripts/rfm_migration_matrix.sql`](scripts/rfm_migration_matrix.sql): SQL query to build the $H_1 \to H_2$ transition matrix.
+3. [`templates/advanced_rfm_executive_report.md`](templates/advanced_rfm_executive_report.md): Executive Markdown report template.

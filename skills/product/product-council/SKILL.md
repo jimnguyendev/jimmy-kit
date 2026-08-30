@@ -11,7 +11,7 @@ An INTERNAL red-team: simulate the four toughest reviewers before the idea meets
 
 ## 🤖 HOW TO RUN (agent workflow)
 
-**Step 0 — Enough evidence?** Before convening: does the problem have (a) a problem statement (not a solution in disguise), (b) at least one sourced+dated number, (c) clear scope? Missing → ask the user first; never debate on top of a [GUESS].
+**Step 0 — Enough evidence?** Before convening: does the problem have (a) a problem statement (not a solution in disguise), (b) at least one sourced+dated number, (c) clear scope? Missing → ask the user first; never debate on top of a [GUESS]. If you must proceed anyway (user insists / test harness), tag every assumption [GUESS], cap the verdict at ⚠ or ✗, and make "get the missing evidence" homework #1. Each seat may be written as a labelled 3–6-sentence paragraph (question / hole / acceptance condition) rather than one line. When the verdict is ✗, "next skill" points BACK in the chain (analyst / jtbd), not forward.
 
 **Step 1 — Each seat speaks.** Every seat MUST produce exactly three parts: the hardest question it would ask · the specific hole it sees (point at a detail — generic criticism is invalid) · **its acceptance condition** (what change earns this seat's yes). A seat that only criticizes without an acceptance condition is out of order.
 

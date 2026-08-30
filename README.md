@@ -5,7 +5,7 @@ A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini)
 **UNDERSTAND → ENVISION → DELIVER → REFLECT**, with a 7-question thinking layer on intake and a `product-council` red-team gate before anything gets built or pitched. See `docs/OPERATING-WORKFLOW.md`.
 
 ## Install
-Run `scripts/link-skills.sh` to symlink all 49 skills into `~/.claude/skills` (or pass a target dir), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
+Run `scripts/link-skills.sh` to symlink all 48 skills into `~/.claude/skills` (or pass a target dir), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
 
 ## Categories
 | Folder | What's inside |
@@ -14,7 +14,7 @@ Run `scripts/link-skills.sh` to symlink all 49 skills into `~/.claude/skills` (o
 | `skills/ux/` | ux-brief · ux-design · ux-discovery · ux-plan-tasks · ux-review · ux-specify · ux-writing · ux-cro-audit |
 | `skills/process/` | analyst · architect · constitution · decision-log · quality-gates · change-tiers · independent-review · retrospective · routing |
 | `skills/analytics/` | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation |
-| `skills/engineering/` | domain-modeling · codebase-design · improve-codebase-architecture · zero-tech-debt · tdd-go · capture-knowledge-go · port-service · kafka-patterns · diagnose · prototype · triage · design-thinking · perf-optimization · rest-api-design |
+| `skills/engineering/` | domain-modeling · codebase-design · improve-codebase-architecture · zero-tech-debt · tdd-go · capture-knowledge-go · port-service · diagnose · prototype · triage · design-thinking · perf-optimization · rest-api-design |
 | `skills/productivity/` | zoom-out · handoff · write-a-skill · grilling · grill-with-docs · grill-me · orchestrate |
 | `skills/utilities/` | youtube-transcript |
 

@@ -1,6 +1,10 @@
 # Decision log — Jimmy Kit
 > Newest first. Each entry: decision · why · rejected alternatives with losing reasons.
 
+## 2026-08-30 · K4 — kafka-patterns removed; kit trimmed to 48 skills
+**Decision:** Drop `engineering/kafka-patterns` from the kit (owner's call: not needed by the target teams). Kit = 48 skills, 7 categories. Same session: independent scenario runs recorded in the 3 SCENARIO.md files, review checklist findings fixed (relative links to bundled scripts/templates, Vietnamese remnants translated, personal author handles removed, H1s added to the Pocock one-liners, `ux-cro-audit` gained row 15 "Failure & empty states" after the independent run missed the AI-failure branch).
+**Why:** a reference-style Kafka pattern catalogue is infrastructure knowledge, not a workflow skill, and had no consumer in the operating model. **Rejected:** keeping it as `user-invocable: false` reference (still costs review/translation effort every sync).
+
 ## 2026-08-30 · K3 — Routing skill added from upstream
 **Decision:** Port sage-routing verbatim as `routing` (process/), with a kit appendix pointing at the 10-problem routing table in OPERATING-WORKFLOW.md.
 **Why:** a kit of 49 skills without a router forces every user to memorize the map. **Rejected:** writing a custom router (upstream's is battle-tested; ours is just the table).

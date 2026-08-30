@@ -10,10 +10,10 @@ description: "OKR & Outcome Architecture — adapted from an internal OKR handbo
 ## 🤖 0. HOW TO USE (agent workflow)
 
 **A. AUDIT an existing OKR set** ("review these OKRs"):
-1. Run the 2 sanity tests (§1) on every O–KR pair.
+1. Run the 2 sanity tests (§1) on the set as a whole (all KRs vs the Objective).
 2. Grade each Objective against the 4 rules (§2), each KR against the 4 parts + 2 diagnostic tests (§3), scan the 4 metric traps.
-3. Check priorities: volume limits, Committed/Stretch labels, ranking, owners (§4).
-4. Output: a `❌ current | ⚠️ why it fails | ✅ proposed fix` table per issue + the 60-second checklist result (§7). No generic praise — every remark points at a specific line.
+3. Check priorities: volume limits (skip if a single Objective), Committed/Stretch labels, ranking, owners (§4).
+4. Output: one `❌ current | ⚠️ why it fails | ✅ proposed fix` table, one row per issue, + the 60-second checklist result (§7). No generic praise — every remark points at a specific line.
 
 **B. WRITE a new OKR set** ("help me set this quarter's OKRs"):
 1. Ask before writing: what's the strategy / why-now? Which business outcome? Which metrics HAVE baselines? (No baseline → the KR can't be written yet — go measure first.)
@@ -22,7 +22,7 @@ description: "OKR & Outcome Architecture — adapted from an internal OKR handbo
 
 **C. MAP roadmap ↔ OKRs** ("which KR does this work serve?"): build the OKR–Initiative matrix (§5), answer its three questions, label non-OKR work explicitly.
 
-⚠️ All modes: if the user supplies Objectives/KRs missing baselines or a business outcome — stop and ask. Never invent numbers.
+⚠️ All modes: if the user supplies Objectives/KRs missing baselines or a business outcome — ask for them. Never invent numbers. In AUDIT mode, still deliver the audit: write every unknown as `[baseline TBD — measure first] → [target]`, state your assumed business outcome as A1/A2… and mark the set "not finishable until measured".
 
 ## 🧠 1. THE CORE IDEA
 

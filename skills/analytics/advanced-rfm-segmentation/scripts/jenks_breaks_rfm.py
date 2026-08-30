@@ -121,7 +121,7 @@ if __name__ == "__main__":
     print(f"Goodness of Variance Fit (GVF): {gvf * 100:.2f}% (Target ≥ 85%)")
     print("-" * 65)
     for i in range(len(breaks) - 1):
-        print(f"Tier {i+1}: [{breaks[i]:>10,.0f} VNĐ ➔ {breaks[i+1]:>10,.0f} VNĐ]")
+        print(f"Tier {i+1}: [{breaks[i]:>10,.0f} → {breaks[i+1]:>10,.0f}]")
     print("=" * 65)
 
     # Test CV for 2 learners

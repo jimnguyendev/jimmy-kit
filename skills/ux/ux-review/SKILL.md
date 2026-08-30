@@ -328,7 +328,7 @@ a classification:
 |---------|---------|-------------------|----------------|-----------|
 | Course cards | Image + title + description | Image + title + key metric + CTA | SHOULD IMPROVE | Missing differentiating metric (e.g., "95% AI accuracy") |
 | Testimonials | Text carousel | Photo + name + score + quote | SHOULD IMPROVE | Photo + score increases credibility |
-| Bee mascot | Present throughout | N/A (unique to công ty) | MUST KEEP | Brand differentiator, recognized by users |
+| Bee mascot | Present throughout | N/A (unique to the brand) | MUST KEEP | Brand differentiator, recognized by users |
 ```
 
 #### Information Architecture Evaluation
@@ -597,3 +597,9 @@ Mode: [BUILD light / ARCHITECT full]
 - `heuristic-evaluation.md` — Full heuristic descriptions and checkpoints
 - `usability-principles.md` — Krug's laws and Norman's principles
 - `error-and-recovery-design.md` — Error taxonomy for H5/H9 evaluation
+
+---
+## Applied context (edtech) — kit notes
+
+- `bash sage/runtime/tools/sage-screenshot.sh …` in Step 1 is a **`[sage]` runtime tool** (upstream Sage repo); it is **not shipped with this kit** and the `.sage/work/` layout is Sage's. Without Sage, capture screenshots any other way and continue from Step 2 unchanged: user-provided screenshots, a browser/device tool available to the agent (e.g. Playwright `npx playwright screenshot --full-page <url> out.png`, or an argent/MCP `screenshot` tool), and save them under `docs/ux/<feature>/screenshots/`.
+- Heritage `/sage-*` command names inside the canonical body are intentional (see README "Source convention"); map them to kit names via `routing`.

@@ -146,7 +146,7 @@ Save to `.sage/work/<feature>/design-brief.md`:
 
 ## Objective
 [One sentence: what this redesign achieves]
-Example: "Modernize the công ty homepage to improve conversion by
+Example: "Modernize the product homepage to improve conversion by
 clarifying the value proposition above the fold and strengthening
 social proof."
 

@@ -130,6 +130,6 @@ graph LR
 
 ## 🛠️ 4. Scripts & Templates Included in this Skill
 
-1. [`scripts/calculate_markov.py`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/growth-markov-duolingo/scripts/calculate_markov.py): Standalone Python script to compute transition matrices and forecast DAU up to 90 days.
-2. [`scripts/extract_states.sql`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/growth-markov-duolingo/scripts/extract_states.sql): Production SQL query to label daily user states.
-3. [`templates/markov_growth_report.md`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/growth-markov-duolingo/templates/markov_growth_report.md): Markdown template for executive growth reporting.
+1. [`scripts/calculate_markov.py`](scripts/calculate_markov.py): Standalone Python script to compute transition matrices and forecast DAU up to 90 days.
+2. [`scripts/extract_states.sql`](scripts/extract_states.sql): Production SQL query to label daily user states.
+3. [`templates/markov_growth_report.md`](templates/markov_growth_report.md): Markdown template for executive growth reporting.

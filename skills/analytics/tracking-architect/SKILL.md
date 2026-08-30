@@ -3,7 +3,7 @@ name: tracking-architect
 description: 5W1H Event Taxonomy, Type-Safe Data Contracts & Funnel Analytics skill. Use when designing event tracking plans, defining Zod schemas for analytics events, auditing tracking quality, instrumenting friction/rage-click detection, or writing SQL queries for conversion funnels and drop-off analysis.
 ---
 
-# công ty Tracking Architect: 5W1H Type-Safe Event Taxonomy & Data Contracts
+# Tracking Architect: 5W1H Type-Safe Event Taxonomy & Data Contracts
 
 > **This skill exists to stop:** designing new events without checking the existing contract — spawning a third naming convention and fragmenting data (a failure that actually happened; see rationalization T5).
 
@@ -93,6 +93,6 @@ $$\text{Step Conversion Rate} = \frac{\text{Users completing Step } N}{\text{Use
 
 ## 🛠️ 5. Scripts & Templates Included in this Skill
 
-1. [`templates/tracking-schema.ts`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/tracking-architect/templates/tracking-schema.ts): Production TypeScript Zod Schemas for all 5 event categories.
-2. [`scripts/funnel_dropoff_analysis.sql`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/tracking-architect/scripts/funnel_dropoff_analysis.sql): SQL query to compute step-by-step conversion and drop-off rates.
-3. [`templates/tracking_audit_checklist.md`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/tracking-architect/templates/tracking_audit_checklist.md): Pre-release tracking QA checklist.
+1. [`templates/tracking-schema.ts`](templates/tracking-schema.ts): Production TypeScript Zod Schemas for all 5 event categories.
+2. [`scripts/funnel_dropoff_analysis.sql`](scripts/funnel_dropoff_analysis.sql): SQL query to compute step-by-step conversion and drop-off rates.
+3. [`templates/tracking_audit_checklist.md`](templates/tracking_audit_checklist.md): Pre-release tracking QA checklist.

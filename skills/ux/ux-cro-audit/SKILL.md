@@ -1,6 +1,6 @@
 ---
 name: ux-cro-audit
-description: "CRO & Stakeholder Negotiation Suite — ethical conversion optimization (14-topic landing/pricing/moat-messaging audit), design-defense negotiation (stakeholder fear map, trigger/popup policy), and VoC mining. Use when optimizing conversion, auditing a landing or pricing page, writing headlines/price framing, when 'the boss dislikes the design', or when Sales/Marketing demand popups. NOT for general UX quality/heuristic review — that's the ux-review skill."
+description: "CRO & Stakeholder Negotiation Suite — ethical conversion optimization (15-topic landing/pricing/in-app-screen audit), design-defense negotiation (stakeholder fear map, trigger/popup policy), and VoC mining. Use when optimizing conversion, auditing a landing or pricing page, writing headlines/price framing, when 'the boss dislikes the design', or when Sales/Marketing demand popups. NOT for general UX quality/heuristic review — that's the ux-review skill."
 ---
 
 # CRO & Stakeholder Negotiation Suite
@@ -13,7 +13,11 @@ description: "CRO & Stakeholder Negotiation Suite — ethical conversion optimiz
 
 ## 🤖 0. HOW TO USE (agent workflow)
 
-**A. AUDIT a page/screen** ("audit this landing"): run the 3-question filter (§3) on the flow's main screen → sweep the 14-topic table (§7), only reporting rows with real findings, each pointing at a concrete element → check triggers/popups (§4) and visual safety (§5). Output table: `# | exact location | disease | fix | severity (launch-blocking / should-fix / nice-to-have)`. Generic remarks ("UI feels dated") are invalid.
+**A. AUDIT a page/screen** ("audit this landing"): run the 3-question filter (§3) on the flow's main screen → sweep the 15-topic table (§7), only reporting rows with real findings, each pointing at a concrete element → check triggers/popups (§4) and visual safety (§5) → **enumerate the non-happy paths** (row 15: every async/AI/network step must have a specified failure, empty and low-confidence state). Output table: `# | exact location | disease | fix | severity`. Generic remarks ("UI feels dated") are invalid.
+
+**Severity scale:** *launch-blocking* = breaks or coerces the core arc of the flow (§3 three questions unanswered, dark pattern, unspecified failure branch, payment/registration wall before any value) · *should-fix* = measurable conversion or trust leak with a known fix · *nice-to-have* = polish. Rows that don't apply to the surface type (e.g. hero/social proof on an in-app result screen) are listed once as "swept, n/a".
+
+**Spec-only input** (no screenshot / URL): still run the full audit; write "exact location" descriptively and tag it `[UNVERIFIED]`; close with the list of what you need to see. For a scored deliverable use `templates/ux_audit_scorecard.md` (1–9 per topic, P0/P1/P2 map to launch-blocking/should-fix/nice-to-have).
 
 **B. NEGOTIATE with stakeholders** ("boss dislikes it", "marketing wants popups", "brand demands the color"): identify which group in the fear map (§2) → speak THEIR language of concerns → never oppose the goal, change HOW it's reached (move the trigger, re-zone the space). Output: a concrete dialogue script (feeling→goal question, trade-off option) per §2 templates.
 
@@ -63,7 +67,7 @@ Standard guest experience arc: an obvious next action (no spare buttons) → a s
 
 1. Five real users from the target segment. 2. One single task ("open this page, try one speaking question, see your score"). 3. Observe in silence — note stalls >3s, mis-taps, confusion. 4. Fix the dumbest failures the same day, before dev. (Basis: Nielsen's finding that ~5 users surface most usability issues.)
 
-## 📑 7. THE 14-TOPIC CRO AUDIT TABLE
+## 📑 7. THE 15-TOPIC CRO AUDIT TABLE
 
 | # | Topic | Common disease | Standard fix |
 | :-: | :--- | :--- | :--- |
@@ -81,6 +85,7 @@ Standard guest experience arc: an obvious next action (no spare buttons) → a s
 | 12 | Cognitive load | Dumping 40 errors | Highlight the ONE fatal error, tuck the other 39 |
 | 13 | Reverse trial | Card required upfront | 7-day full unlock, transparent countdown |
 | 14 | Dark-pattern check | Sneaky renewals, hidden cancel | 1-click cancel, explicit terms, no hidden fees |
+| 15 | Failure & empty states | AI grading / upload / payment step has no specified failure, timeout or low-confidence branch — user sees a spinner or a blank result | Spec every branch: plain-language error, retry, what is preserved (answers, score), a human fallback for AI low-confidence; **unspecified = launch-blocking** |
 
 ## 📝 8. VOICE-OF-CUSTOMER PAIN MINING
 

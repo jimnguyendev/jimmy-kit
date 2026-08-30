@@ -102,6 +102,6 @@ Perform correlation analysis: Users who touch $\ge 1$ Niche feature in Week 1 ha
 
 ## 🛠️ 5. Scripts & Templates Included in this Skill
 
-1. [`scripts/calculate_engagement_matrix.py`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/engagement-matrix-analytics/scripts/calculate_engagement_matrix.py): Pure Python script to compute coordinates, medians, quadrant assignments, and generate text-based scatter plots.
-2. [`scripts/extract_feature_usage.sql`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/engagement-matrix-analytics/scripts/extract_feature_usage.sql): SQL query to extract Breadth and Frequency for every feature event.
-3. [`templates/engagement_portfolio_report.md`](file:///Users/admin/workspaces/prep-fe/practice-labs/.claude/skills/engagement-matrix-analytics/templates/engagement_portfolio_report.md): Executive Markdown report template for Product Council reviews.
+1. [`scripts/calculate_engagement_matrix.py`](scripts/calculate_engagement_matrix.py): Pure Python script to compute coordinates, medians, quadrant assignments, and generate text-based scatter plots.
+2. [`scripts/extract_feature_usage.sql`](scripts/extract_feature_usage.sql): SQL query to extract Breadth and Frequency for every feature event.
+3. [`templates/engagement_portfolio_report.md`](templates/engagement_portfolio_report.md): Executive Markdown report template for Product Council reviews.

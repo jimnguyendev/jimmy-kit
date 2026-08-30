@@ -179,7 +179,7 @@ Select reference products based on:
 3. [Product] — [why]
 ```
 
-For the công ty homepage example:
+For the product homepage example:
 1. Duolingo — category leader in language learning UX
 2. Coursera — established online education platform
 3. Khan Academy — known for accessible learning design
