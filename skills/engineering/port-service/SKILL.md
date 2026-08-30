@@ -215,10 +215,10 @@ Skip if Phase 0 chose "fresh".
 
 By end of Phase 7:
 - `.claude/knowledge/source-*.md` — per-entry-point briefs of the source.
-- `docs/adr/NNNN-*.md` — every non-trivial decision.
+- `.jimmy/adr/NNNN-*.md` — every non-trivial decision.
 - `internal/feature/<...>/` — ported features following CLAUDE.md layout.
 - `internal/jobs/migrate-<...>/` — idempotent migration jobs.
-- Cutover runbook (typically in the ADR or a `docs/runbooks/` file).
+- Cutover runbook (typically in the ADR or a `.jimmy/docs/runbooks/` file).
 
 ## Guardrails
 
@@ -305,7 +305,7 @@ Rule of thumb: `/goal` for mechanical convergence on a measurable bar; interacti
   (c) make test passes (race detector on)
   (d) every feature listed in PORT-PLAN.md has at least one integration test under //go:build integration that exercises the documented happy path
   (e) for each migration job in internal/jobs/migrate-*, the dry-run mode produces a sample .jsonl whose first 100 transformed docs match the expected shape from PORT-PLAN.md
-  (f) no file outside internal/feature/<scoped names>, internal/jobs/migrate-*, cmd/app/, docs/adr/, and PORT-PLAN.md is modified
+  (f) no file outside internal/feature/<scoped names>, internal/jobs/migrate-*, cmd/app/, .jimmy/adr/, and PORT-PLAN.md is modified
 Stop after 200 turns or when (a)–(f) all hold. Do NOT run production migration. Do NOT cutover.
 ```
 

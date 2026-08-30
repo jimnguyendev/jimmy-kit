@@ -63,7 +63,7 @@ Before writing any code, inspect an inbound handoff first. If it already contain
 interface, boundaries, risks, scope, and verification state, treat planning approval as satisfied and ask
 only about missing, contradictory, or newly expanded fields. Otherwise:
 
-- [ ] Read the relevant area of the codebase. Use the project's domain vocabulary from `CONTEXT.md` (if it exists) and `docs/adr/` so test names match the language the team already speaks.
+- [ ] Read the relevant area of the codebase. Use the project's domain vocabulary from `CONTEXT.md` (if it exists) and `.jimmy/adr/` so test names match the language the team already speaks.
 - [ ] Confirm with user: which feature layer is affected? (`handler` / `service` / `repository` / `middleware`)
 - [ ] Confirm with user: which behaviors matter most? You can't test everything — prioritize critical paths and complex logic.
 - [ ] Sketch the public interface (handler signature, service method, repo method). Service-layer tests are the usual sweet spot: they exercise real business rules without HTTP plumbing.

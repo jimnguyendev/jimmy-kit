@@ -29,6 +29,7 @@ description: Architecture Decision Records (ADRs) and Technical Decision Logging
 | :-------------------------------- | :-------------------------------------- | :------------------------------------------------ |
 | **Initiative / Feature Specific** | `.jimmy/work/<feature>/decisions.md`    | "Use TanStack Table for Virtualized Student Rows" |
 | **Project-Wide / Global**         | `.jimmy/decisions.md`                   | "Monorepo Package Strategy with Vite-Plus"        |
+| **Engineering ADR (numbered)**    | `.jimmy/adr/NNNN-slug.md`               | Written by `domain-modeling` / `port-service`; format in domain-modeling/ADR-FORMAT.md |
 
 ---
 
