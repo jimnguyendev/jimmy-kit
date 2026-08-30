@@ -24,10 +24,12 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Source tokens**: `[sage]` = upstream Sage repo (github.com/xoai/sage) · `[docs]` = your internal docs repo. Deep-dives only; skills run without them; a MUST READ step stops and asks when its file is missing.
 
+**Work paths**: where skills write — `docs/work/<feature>/` (in-progress artifacts: brief, spec, plan, screenshots) · `docs/` (durable docs: research briefs, audits, voice & tone) · `docs/DECISIONS.md` (ADRs) · `docs/CONSTITUTION.md` (project principles). Upstream Sage used `.sage/…`; the kit never does (DECISIONS K5). _Avoid:_ `.sage/`, tool-specific paths.
+
 ## Relationships
 - The `routing` skill dispatches problems to skill chains (map: `docs/OPERATING-WORKFLOW.md`).
 - `product-council` gates the ENVISION → DELIVER transition.
-- Every self-authored skill carries a Failure statement and a HOW-TO-USE section; canonical upstream bodies stay verbatim.
+- Every self-authored skill carries a Failure statement and a HOW-TO-USE section; canonical upstream bodies stay close to upstream, minus Sage-runtime commands/paths (K5).
 
 ## Flagged ambiguities
 - "done" — resolved: done means exit 0 (evidence attached), never "spec written" or "code merged".

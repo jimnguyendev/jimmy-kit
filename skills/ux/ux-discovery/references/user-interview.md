@@ -209,10 +209,10 @@ Before presenting, validate:
 
 ## Output
 
-Save to `.sage/docs/research-brief-<slug>.md` using the
+Save to `docs/research-brief-<slug>.md` using the
 template from `templates/research-brief-template.md`.
 
-Append key decisions to `.sage/decisions.md` recording the
+Append key decisions to `docs/DECISIONS.md` recording the
 research objectives, participant criteria, and what upstream claims this
 study validates. Update the "Current Artifacts" section.
 

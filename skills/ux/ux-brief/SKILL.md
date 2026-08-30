@@ -136,7 +136,7 @@ For each section of the redesigned page:
 
 ### Step 5: Produce Design Brief
 
-Save to `.sage/work/<feature>/design-brief.md`:
+Save to `docs/work/<feature>/design-brief.md`:
 
 ```markdown
 # Design Brief: [page/product] Redesign

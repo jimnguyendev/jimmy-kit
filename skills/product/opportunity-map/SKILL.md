@@ -234,10 +234,10 @@ Before presenting, validate:
 
 ## Output
 
-Save to `.sage/docs/opportunity-map.md` using the
+Save to `docs/opportunity-map.md` using the
 template from `templates/opportunity-map-template.md`.
 
-Append decisions to `.sage/decisions.md` recording pursue/
+Append decisions to `docs/DECISIONS.md` recording pursue/
 monitor/defer decisions, key rationale, and sequencing. Update the
 "Current Artifacts" section.
 

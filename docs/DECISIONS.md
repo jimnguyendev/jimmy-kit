@@ -1,6 +1,11 @@
 # Decision log — Jimmy Kit
 > Newest first. Each entry: decision · why · rejected alternatives with losing reasons.
 
+## 2026-08-30 · K5 — No Sage runtime dependencies inside skills (supersedes the "verbatim" clause of K2)
+**Decision:** Every command, script or path that only works with the Sage runtime is replaced by a kit-runnable equivalent: `sage-*-gate.sh` → described as generic pre-edit hooks / gate checks; `sage-screenshot.sh` → any available screenshot tool; `sage add …` → "bundled in this kit"; `sage/core/...` doc paths → `[sage]` token (optional upstream deep-dive); `/sage-*` → kit skill names; `.sage/work/` → `docs/work/<feature>/`, `.sage/docs/` → `docs/`, `.sage/decisions.md` → `docs/DECISIONS.md`, `.sage/constitution.md` → `docs/CONSTITUTION.md`. Bodies otherwise stay close to upstream (no re-voicing, no restructuring) so diffs against upstream remain readable.
+**Why:** the kit's own rule is "skills must run without [sage]/[docs]"; dead commands violate it and confuse every non-Sage user (Codex, Cursor). An upstream-diff that shows only these substitutions is still easy to sync.
+**Rejected:** keeping verbatim + appendix notes (tried this session for ux-review — the dead command is still the first thing the agent reads); shipping the Sage runtime with the kit (contradicts K1).
+
 ## 2026-08-30 · K4 — kafka-patterns removed; kit trimmed to 48 skills
 **Decision:** Drop `engineering/kafka-patterns` from the kit (owner's call: not needed by the target teams). Kit = 48 skills, 7 categories. Same session: independent scenario runs recorded in the 3 SCENARIO.md files, review checklist findings fixed (relative links to bundled scripts/templates, Vietnamese remnants translated, personal author handles removed, H1s added to the Pocock one-liners, `ux-cro-audit` gained row 15 "Failure & empty states" after the independent run missed the AI-failure branch).
 **Why:** a reference-style Kafka pattern catalogue is infrastructure knowledge, not a workflow skill, and had no consumer in the operating model. **Rejected:** keeping it as `user-invocable: false` reference (still costs review/translation effort every sync).

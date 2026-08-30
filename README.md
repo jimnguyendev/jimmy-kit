@@ -19,8 +19,8 @@ Run `scripts/link-skills.sh` to symlink all 48 skills into `~/.claude/skills` (o
 | `skills/utilities/` | youtube-transcript |
 
 ## Credits & provenance (keep when redistributing)
-- **Sage** — github.com/xoai/sage: the process backbone (gates, tiers, constitution, review, analyst, architect — canonical bodies kept verbatim; `/sage-*` commands inside them are heritage of the original). Renamed here: sage-gates→quality-gates, sage-tiers→change-tiers, sage-decisions→decision-log, sage-review→independent-review, sage-reflect→retrospective, sage-analyst→analyst, sage-architect→architect, sage-constitution→constitution, sage-routing→routing.
-- **sage-product pack** — github.com/xoai/sage-product: jtbd, prd, opportunity-map, problem-solving, ux-brief/design/discovery/plan-tasks/review/specify/writing (verbatim).
+- **Sage** — github.com/xoai/sage: the process backbone (gates, tiers, constitution, review, analyst, architect — bodies kept close to upstream; Sage-runtime commands and `.sage/` paths replaced with kit-runnable equivalents — see docs/DECISIONS.md K5). Renamed here: sage-gates→quality-gates, sage-tiers→change-tiers, sage-decisions→decision-log, sage-review→independent-review, sage-reflect→retrospective, sage-analyst→analyst, sage-architect→architect, sage-constitution→constitution, sage-routing→routing.
+- **sage-product pack** — github.com/xoai/sage-product: jtbd, prd, opportunity-map, problem-solving, ux-brief/design/discovery/plan-tasks/review/specify/writing (close to upstream; same K5 substitutions).
 - **Matt Pocock skills** — github.com/yykui/mattpocockSkills: zoom-out, handoff, write-a-skill, grill-me, grilling, grill-with-docs, diagnose, prototype, triage, orchestrate.
 - OKR handbook + stakeholder/UX field lessons: internal materials and public UX Foundation talks, anonymized; examples use a generic edtech context.
 

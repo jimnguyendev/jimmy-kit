@@ -19,19 +19,19 @@ The base set, present in every project:
 
 | # | Principle | Enforced by |
 |---|---|---|
-| 1 | **Tests before code** — every behavior has a test before implementation | `sage-tdd-gate.sh` (PreToolUse — blocks the edit) |
+| 1 | **Tests before code** — every behavior has a test before implementation | pre-edit hook "test exists before implementation" (blocks the edit; see `quality-gates` Hooks) |
 | 2 | **No silent failures** — errors handled, logged, or propagated | Gate 3 (judgment) |
 | 3 | **Secrets never in code** — env vars or a secret manager | Gate 3 (judgment) |
-| 4 | **Dependencies explicit** — declared, pinned | Gate 4 (`sage-hallucination-check.sh`) |
+| 4 | **Dependencies explicit** — declared, pinned | Gate 4 (dependency check — every import resolves to a declared, pinned package) |
 | 5 | **Changes reversible** — migrations reversible, deploys rollbackable | Gate 3 (judgment) |
 
 Principles 6+ come from the project's preset and its own
-`.sage/constitution.md`. They are appended by the generator, numbered
+`docs/CONSTITUTION.md`. They are appended by the project, numbered
 continuously, and they carry exactly the same weight as the base five. A
 project addition is not a suggestion.
 
 **Read the project's own additions before assuming the base five are the whole
-story.** They are in `.sage/constitution.md`, and they are where the rules that
+story.** They are in `docs/CONSTITUTION.md`, and they are where the rules that
 actually bite in *this* codebase live.
 
 ## The distinction that matters
@@ -62,7 +62,7 @@ eager layer for a reason: if it fails to fire, nothing else here loads.)
 
 **Rule 3 — Document decisions.** Decisions that affect the project get
 recorded — for agents *and* for the humans who arrive later. Specs, plans,
-ADRs, and briefs go to `.sage/work/` or `.sage/docs/`. Even a Tier 2 task
+ADRs, and briefs go to `docs/work/` or `docs/`. Even a Tier 2 task
 leaves a record of what was decided and why. Partially mechanical: the
 spec-gate hook blocks source edits while a cycle is `pre-spec`, so the *spec*
 half has teeth. The rest is on you.

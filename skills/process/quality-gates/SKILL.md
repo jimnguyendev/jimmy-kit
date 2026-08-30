@@ -17,14 +17,14 @@ people end up arguing with a hook.
 | **When** | Before a tool call (PreToolUse) | After work, on demand |
 | **What** | Block the edit itself | Score the result |
 | **Failure mode** | **Fail open** — a broken hook must not brick the session | **Fail closed** — an unrun gate is not a passed gate |
-| **Examples** | `sage-spec-gate.sh`, `sage-tdd-gate.sh` | Gates 1–6 |
+| **Examples** | a "spec exists before code" pre-edit hook, a "test exists before implementation" pre-edit hook (implement as agent hooks or CI checks) | Gates 1–6 |
 
 Hooks are guards, not gates.
 
 ## Why you were blocked
 
 **"Sage spec gate: no spec exists for the active cycle."** A cycle in
-`.sage/work/*/manifest.md` has `gate_state: pre-spec`, and you tried to edit a
+`docs/work/*/manifest.md` has `gate_state: pre-spec`, and you tried to edit a
 source file. Write the spec, get `[A]`, and the manifest advances to
 `spec-approved`. Then the edit lands.
 
@@ -43,8 +43,8 @@ satisfy in about a minute.
 
 **Build (Standard+) — BEFORE implementing, verify both files exist on disk:**
 
-- `.sage/work/<initiative>/spec.md` — `status: completed`
-- `.sage/work/<initiative>/plan.md` — `status: completed`
+- `docs/work/<initiative>/spec.md` — `status: completed`
+- `docs/work/<initiative>/plan.md` — `status: completed`
 
 If either is missing, create it first. No exceptions.
 
@@ -60,13 +60,13 @@ If either is missing, create it first. No exceptions.
 **Branch gate (Standard+, git projects).** Before implementation commits begin,
 HEAD must not be the default branch — unless a branching decline is recorded in
 the initiative's decision log. Merging is **always** a user-gated `[M]` action.
-No workflow path merges on its own. Full protocol:
-`sage/core/capabilities/execution/git-discipline/SKILL.md`.
+No workflow path merges on its own. Full protocol: `[sage]` git-discipline capability (upstream, optional) — the rules
+that matter are the two above: never implement on the default branch, never merge unasked.
 
 **Gate sequence (build):**
 
-1. Spec → `.sage/work/` → `[A]`/`[R]` → wait
-2. Plan → `.sage/work/` → `[A]`/`[R]` → wait
+1. Spec → `docs/work/` → `[A]`/`[R]` → wait
+2. Plan → `docs/work/` → `[A]`/`[R]` → wait
 3. Implement (tests before code, via the build loop)
 4. Verify with **pasted** test output → `[A]`/`[R]`
 
@@ -87,7 +87,7 @@ Do not fix before the root cause is confirmed. Do not skip fix scoping — a
 1. Complete all three elicitation rounds (vision, constraints, gaps). Each
    produces visible output. `brief.md` must exist before design begins. Do not
    compress the rounds. Do not skip them because "I understand the system."
-2. Design with ADRs → `.sage/docs/` → spec → `.sage/work/` → `[A]`/`[R]`
+2. Design with ADRs → `docs/` → spec → `docs/work/` → `[A]`/`[R]`
 3. Milestone plan → `[A]`/`[R]` → phased build; each milestone follows the
    build gates independently.
 
@@ -116,7 +116,7 @@ precisely how a gate reports success on code it never looked at.
 evidence either way. On exit 2, present the choice and record it:
 
 ```
-[P] Proceed unverified — logged as a waiver in .sage/decisions.md
+[P] Proceed unverified — logged as a waiver in docs/DECISIONS.md
 [F] Fix verification setup — install the runner, then re-run
 ```
 

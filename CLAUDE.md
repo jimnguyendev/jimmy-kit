@@ -6,7 +6,7 @@ A self-contained skill kit (48 skills, 7 categories) for AI agents, extracted 20
 ## Conventions (enforced)
 - Every self-authored skill opens with `> **This skill exists to stop:** …` (one-line failure statement) and a `## 🤖 0. HOW TO USE` section (modes + output formats).
 - Source tokens: `[sage]` = github.com/xoai/sage · `[docs]` = internal docs repo (optional deep-dives; skills must run without them; steps marked MUST READ stop and ask if the file is missing).
-- Canonical bodies (routing, quality-gates, constitution, analyst, architect, change-tiers, independent-review + the 11 sage-product skills) are kept verbatim — do NOT rewrite them; heritage `/sage-*` mentions inside are intentional. Kit-specific context lives only in the "Applied context (edtech)" appendix at the end of a file.
+- Canonical bodies (routing, quality-gates, constitution, analyst, architect, change-tiers, independent-review + the 11 sage-product skills) stay close to upstream — do not restructure or re-voice them. Exception (DECISIONS K5): anything that needs the Sage runtime is replaced with a kit-runnable equivalent — no `sage-*.sh`, `sage add`, `sage/...` paths, `/sage-*` commands, or `.sage/` paths anywhere in `skills/`. Output paths: `docs/work/<feature>/` (in-progress artifacts), `docs/` (durable docs), `docs/DECISIONS.md`, `docs/CONSTITUTION.md`. Kit-specific context lives in the "Applied context (edtech)" appendix at the end of a file.
 - No company names, no real internal people. Voice profiles in product-council are anonymized archetypes — keep them unnamed.
 - New/changed skills: add or update SCENARIO.md (write the scenario BEFORE the skill; status stays "exit 2" until a real run is pasted in).
 

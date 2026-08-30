@@ -9,7 +9,7 @@ metadata:
 ---
 
 ## When to Use
-Load this skill when the user runs `/sage-review` or asks to review something (the Sage review workflow).
+Load this skill when the user asks for an independent review of an artifact (spec, plan, design, code, document).
 
 ## Arguments
 Hermes does NOT interpolate an in-body argument token. The user's arguments/flags arrive as a SEPARATE instruction line appended to this skill invocation. Wherever the steps below refer to "the user's arguments", use the text of that appended instruction line.
@@ -39,20 +39,19 @@ artifact review.
 
 These modes fold in the former `/analyze`, `/design-review`, and `/qa`
 workflows. On a mode flag, read the matching reference and follow it; the Rules
-below still apply. `--ux` uses the `ux-review` skill, which ships in the
-`sage-product` pack — if it is not installed, say so and offer
-`sage add xoai/sage-product`.
+below still apply. `--ux` uses the `ux-review` skill, which is bundled in this kit
+(`skills/ux/ux-review`) — if it is not installed, say so.
 
 ## Step 1: Identify What to Review
 
-If not specified, scan `.sage/work/` and `.sage/docs/` for recent
+If not specified, scan `docs/work/` and `docs/` for recent
 artifacts. Present them:
 
 Sage: Available for review:
 
-[1] .sage/work/20260316-checkout/brief.md (updated today)
-[2] .sage/work/20260316-checkout/spec.md (updated today)
-[3] .sage/docs/ux-audit-homepage.md (updated yesterday)
+[1] docs/work/20260316-checkout/brief.md (updated today)
+[2] docs/work/20260316-checkout/spec.md (updated today)
+[3] docs/ux-audit-homepage.md (updated yesterday)
 
 Which artifact should I review? Or describe what you'd like evaluated.
 
@@ -83,8 +82,9 @@ consider a fresh session or the /review command."
 
 Review the artifact against three lenses:
 
-For detailed code quality review, read
-`sage/core/capabilities/review/quality-review/SKILL.md`.
+For detailed code quality review, use the project's own review checklist if one
+exists (`[sage]` quality-review capability upstream, optional); otherwise apply the
+three lenses below to the code.
 
 **Completeness** — Does it cover what it should? Are there missing
 sections, unaddressed scenarios, or gaps in reasoning? Check against
@@ -139,7 +139,7 @@ Based on the verdict:
 [R] Revise — I'll address the issues found
 [D] Discuss — let's talk about specific findings
 
-Prepend review findings to `.sage/decisions.md`.
+Prepend review findings to `docs/DECISIONS.md`.
 
 ## Rules
 

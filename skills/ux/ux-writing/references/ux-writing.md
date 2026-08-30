@@ -74,7 +74,7 @@ A voice and tone guide includes:
 4. **Word list** — preferred terms vs avoided terms
 5. **Do/don't examples** for each microcopy pattern
 
-This is a living document stored in `.sage/docs/` — it informs all
+This is a living document stored in `docs/` — it informs all
 future UX writing and development work.
 
 ## Microcopy Patterns
