@@ -77,7 +77,7 @@ Optimizing a cold path that handles 2% of traffic while the hot path is untouche
 
 **If you have not profiled, STOP. Intuition about bottlenecks is wrong ~80% of the time.**
 
-See `jimmy-skills@backend-go-performance` for Go-specific profiling methodology.
+Go-specific profiling methodology (pprof, benchstat) lives in the internal Go skill pack `[docs]` — optional; the process below is language-agnostic.
 
 ### Gate 4: What is the simplest sufficient solution?
 
@@ -132,9 +132,6 @@ A PR that says "improved performance" without these five items is incomplete.
 
 ## Cross-References
 
-- `jimmy-skills@backend-go-performance` — Go-specific optimization patterns, profiling methodology, benchmarking
-- `jimmy-skills@backend-go-observability` — Metrics, tracing, profiling, alerting setup
-- `jimmy-skills@backend-go-benchmark` — Go benchmarking with benchstat, CI regression detection
-- `jimmy-skills@backend-go-database` — Query optimization, connection pooling, N+1 elimination
-- `jimmy-skills@backend-go-concurrency` — Worker pools, singleflight, sync.Pool, lock contention
-- `jimmy-skills@engineering-rest-api-design` — API contract design before optimization
+- `engineering-rest-api-design` (this kit) — API contract design before optimization
+- `diagnose` (this kit) — when the "slow" report is really a bug
+- `[docs]` internal Go pack (optional, not bundled): Go performance patterns, observability, benchmarking with benchstat, database query optimization, concurrency primitives

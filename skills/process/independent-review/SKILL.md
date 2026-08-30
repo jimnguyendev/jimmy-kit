@@ -12,10 +12,10 @@ metadata:
 Load this skill when the user asks for an independent review of an artifact (spec, plan, design, code, document).
 
 ## Arguments
-Hermes does NOT interpolate an in-body argument token. The user's arguments/flags arrive as a SEPARATE instruction line appended to this skill invocation. Wherever the steps below refer to "the user's arguments", use the text of that appended instruction line.
+The user's arguments/flags (e.g. `--ux`) arrive as plain text with the invocation. Wherever the steps below refer to "the user's arguments", use that text.
 
-## Independent review (delegate_task)
-When a step calls for an independent review, invoke `delegate_task` against the `sage-reviewer` skill. Hermes delegate_task has NO toolset-restriction parameter — read-only is prompt-enforced, and you MUST verify afterward that the reviewer made no edits (e.g. `git status` unchanged) before accepting its verdict.
+## Independent review (separate agent)
+When a step calls for an independent review, run it in a **fresh context** — a subagent (Claude Code `Agent` tool), a new Codex/Cursor chat, or a teammate — that gets only this skill and the artifact, never the author's reasoning. Instruct it to be read-only; since most agent runtimes cannot enforce that, verify afterward that the reviewer made no edits (`git status` unchanged) before accepting its verdict.
 
 
 # Review Workflow
@@ -27,17 +27,17 @@ objectivity, but also works within an existing session.
 
 ## Step 0: Mode Dispatch
 
-`/review` has four modes. Parse `the arguments the user provided alongside this skill invocation (delivered as a separate instruction line, NOT a literal token)` for a mode flag; default is code /
+This skill has four modes. Parse `the arguments the user provided alongside this skill invocation (delivered as a separate instruction line, NOT a literal token)` for a mode flag; default is code /
 artifact review.
 
 | Invocation | Mode | Read the mode reference |
 |---|---|---|
-| `/review` (default) | Code / artifact quality | (this file, Steps 1–5) |
-| `/review --ux` | UX assessment (audit → evaluate → heuristics) | `core/workflows/review-modes/ux.md` |
-| `/review --design` | Design-system compliance + visual quality | `core/workflows/review-modes/design.md` |
-| `/review --browser` | Functional / browser QA (optional Lightpanda) | `core/workflows/review-modes/browser.md` |
+| (default) | Code / artifact quality | (this file, Steps 1–5) |
+| `--ux` | UX assessment (audit → evaluate → heuristics) | the `ux-review` skill (bundled) |
+| `--design` | Design-system compliance + visual quality | `ux-review` audit mode + Steps 1–5 below (`[sage]` design review-mode is an optional deep-dive) |
+| `--browser` | Functional / browser QA | drive the running app with whatever browser/device tool the agent has, then Steps 1–5 (`[sage]` browser review-mode is optional) |
 
-These modes fold in the former `/analyze`, `/design-review`, and `/qa`
+These modes fold in the former analyze, design-review, and qa
 workflows. On a mode flag, read the matching reference and follow it; the Rules
 below still apply. `--ux` uses the `ux-review` skill, which is bundled in this kit
 (`skills/ux/ux-review`) — if it is not installed, say so.

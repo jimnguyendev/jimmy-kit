@@ -1,6 +1,6 @@
 ---
 name: routing
-description: Choosing which Sage workflow fits a request. Use when the user asks what to run, which command or workflow to use, where to start, or when a request is ambiguous or spans multiple surfaces and needs to be routed to build, fix, architect, review, learn, reflect, or continue.
+description: Choosing which skill chain fits a request. Use when the user asks what to run, which command or workflow to use, where to start, or when a request is ambiguous or spans multiple surfaces and needs to be routed to build, fix, architect, review, learn, reflect, or continue.
 version: "1.0.0"
 type: system
 ---
@@ -20,8 +20,8 @@ No match → Layer 2.
 **Layer 2 — Sub-agent classifier.** If the Task tool is available, spawn a
 classifier sub-agent:
 
-> Classify this request as UNDERSTAND (/research or /review --ux),
-> ENVISION (/design or /architect), or DELIVER (/build or /fix).
+> Classify this request as UNDERSTAND (analyst / jtbd / ux-review),
+> ENVISION (prd / architect), or DELIVER (engineering skills / diagnose).
 
 Use the response to select the workflow → confirm. No Task tool → Layer 3.
 
@@ -29,9 +29,9 @@ Use the response to select the workflow → confirm. No Task tool → Layer 3.
 
 | Shape of the request | Category | Workflow |
 |---|---|---|
-| Question, evaluation, "why" | UNDERSTAND | `/research`, `/review --ux` |
-| Future, "should", "let's create" | ENVISION | `/design`, `/architect` |
-| Action, "add", "implement" | DELIVER | `/build`, `/fix` |
+| Question, evaluation, "why" | UNDERSTAND | `analyst`, `jtbd`, `ux-review` |
+| Future, "should", "let's create" | ENVISION | `prd`, `ux-brief`, `architect` |
+| Action, "add", "implement" | DELIVER | `change-tiers` → engineering skills, `diagnose` |
 | Ambiguous | — | present options from all matching categories |
 
 ## Confirmation (Zone 1)
@@ -53,7 +53,7 @@ wearing a number's clothing.
 
 ## Worked examples
 
-**"audit our checkout UX"** — keyword `audit` → `/review --ux`.
+**"audit our checkout UX"** — keyword `audit` → `ux-review` (or `ux-cro-audit` if it is a conversion/pricing page).
 
 > Sage → review workflow. Evaluating the checkout experience.
 >
@@ -63,7 +63,7 @@ wearing a number's clothing.
 >
 > Pick 1-3, type / for commands, or describe what you need.
 
-**"the checkout page is throwing 500 errors"** — keyword `error` → `/fix`.
+**"the checkout page is throwing 500 errors"** — keyword `error` → `diagnose`.
 Single match, no ambiguity, so confirm and go:
 
 > Sage → fix workflow. Investigating 500 errors on checkout.

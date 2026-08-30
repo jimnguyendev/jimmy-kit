@@ -20,17 +20,17 @@ Three layers. The spine is Sage's intent spectrum (UNDERSTAND → ENVISION → D
 |---|---|---|
 | UNDERSTAND | analyst · jtbd · ux-discovery · problem-solving · zoom-out · youtube-transcript | Problem statement + jobs + sourced benchmark |
 | ENVISION | opportunity-map · ux-brief · ux-design · prd · ux-specify · ux-writing · ux-plan-tasks | Spec with hard-cases-first + clean copy |
-| DELIVER | architect · change-tiers · decision-log · constitution · quality-gates · okr-outcome-architect · engineering/* | 2 options + ADR + gates + bets wired to KRs |
-| REFLECT | tracking-architect · growth-markov · engagement-matrix · advanced-rfm · ux-review · independent-review · ux-cro-audit · retrospective | Gated metrics + independent review + WHEN/CHECK/BECAUSE lessons |
+| DELIVER | architect · change-tiers · decision-log · constitution · quality-gates · okr-outcome-architect · the `skills/engineering/` category | 2 options + ADR + gates + bets wired to KRs |
+| REFLECT | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation · ux-review · independent-review · ux-cro-audit · retrospective | Gated metrics + independent review + WHEN/CHECK/BECAUSE lessons |
 
 ## Ten real problems → skill chains
-1. **"Conversion is low, do something"** → analyst (label the claim) → tracking-architect (is the number gated?) → jtbd → product-council → prd → okr → quality-gates → retrospective.
+1. **"Conversion is low, do something"** → analyst (label the claim) → tracking-architect (is the number gated?) → jtbd → product-council → prd → okr-outcome-architect → quality-gates → retrospective.
 2. **"Just build feature X"** (solution smuggled into the brief) → 7 questions flip it → jtbd → product-council (PD seat catches solution bias) → opportunity-map → prd.
-3. **Audit / optimize a landing or pricing page** → ux-cro-audit (14-topic table) → ux-writing → tracking-architect (before/after events) → single-variable A/B.
+3. **Audit / optimize a landing or pricing page** → ux-cro-audit (15-topic table) → ux-writing → tracking-architect (before/after events) → single-variable A/B.
 4. **"Boss dislikes the design" / popup demands** → ux-cro-audit negotiation mode (stakeholder fear map; change the trigger, don't ban the goal).
 5. **Write or review quarterly OKRs** → okr-outcome-architect → OKR–initiative matrix → weekly confidence check-ins.
 6. **"Is tracking done?" / add an event** → tracking-architect (MUST READ registry; status by gates; 4-line report).
-7. **"Retention is dropping"** → growth-markov (which transition leaks) → engagement-matrix (which feature retains) → advanced-rfm (which segment to save) → okr bet.
+7. **"Retention is dropping"** → growth-markov-duolingo (which transition leaks) → engagement-matrix-analytics (which feature retains) → advanced-rfm-segmentation (which segment to save) → okr-outcome-architect (bet wired to a KR).
 8. **A/B test ended / incident closed** → retrospective (WHEN/CHECK/BECAUSE; 5-whys) → decision-log (ADR) → constitution if the new rule needs enforcement.
 9. **Leadership pitch next week** → product-council red-team → 4-line report → 10-slide narrative → tough-question bank.
 10. **Technical decision** (pick a technology, change architecture) → change-tiers → architect (≥2 options + what-happens-when-this-fails) → decision-log → quality-gates.

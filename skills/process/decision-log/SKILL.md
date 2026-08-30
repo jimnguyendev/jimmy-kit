@@ -3,7 +3,7 @@ name: decision-log
 description: Architecture Decision Records (ADRs) and Technical Decision Logging skill. Use when documenting technical decisions, recording architecture choices, logging trade-offs, explaining why a library or design pattern was selected over alternatives, or tracking decision history.
 ---
 
-# Sage Decisions (Architecture Decision Records - ADRs)
+# Decision Log (Architecture Decision Records - ADRs)
 
 > **This skill exists to stop:** decisions living in someone's head or a chat thread — three months later the team relitigates the same question with the same arguments (Chesterton's Fence).
 

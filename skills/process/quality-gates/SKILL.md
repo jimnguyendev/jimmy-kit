@@ -76,7 +76,7 @@ that matter are the two above: never implement on the default branch, never merg
 2. **Then** scope the fix:
    - Surgical (1–2 files) → proceed
    - Moderate (3–5 files) → write a fix plan first → `[A]`/`[R]`
-   - Systemic (5+ files, interface changes) → escalate to `/build` or `/architect`
+   - Systemic (5+ files, interface changes) → escalate: re-run `architect` (options + ADR) before continuing the build
 3. Implement → verify with pasted output → `[A]`/`[R]`
 
 Do not fix before the root cause is confirmed. Do not skip fix scoping — a

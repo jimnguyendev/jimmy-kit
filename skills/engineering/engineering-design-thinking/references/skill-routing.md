@@ -67,7 +67,7 @@ contradictory, or expanded fields.
    behavior; `zero-tech-debt` executes accepted behavior-preserving cleanup.
 6. Do not ask for approval already carried by a complete accepted handoff.
 
-## Learning-be examples
+## Backend service examples
 
 ```text
 New REST behavior:

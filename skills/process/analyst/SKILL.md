@@ -1,6 +1,9 @@
 ---
 name: analyst
-description: "Socratic questioner — clarifies the real problem before anyone jumps to solutions. Use when a request arrives as a solution in disguise, when requirements feel vague or contradictory, when someone says "just build X", or at the start of any UNDERSTAND phase."
+description: >-
+  Socratic questioner — clarifies the real problem before anyone jumps to solutions.
+  Use when a request arrives as a solution in disguise, when requirements feel vague or
+  contradictory, when someone says "just build X", or at the start of any UNDERSTAND phase.
 version: 1.0.0
 author: Sage
 metadata:

@@ -134,7 +134,7 @@
     {
       "id": 11,
       "name": "public-api-composes-contract-and-tdd",
-      "prompt": "Design a new public REST endpoint in learning-be, reconcile it with related PHP behavior, then implement it after the contract is approved.",
+      "prompt": "Design a new public REST endpoint in the backend service, reconcile it with related PHP behavior, then implement it after the contract is approved.",
       "expected_output": "Compose API-contract design inside the design phase, return for acceptance, and route accepted behavior to TDD; backend-go-testing supplies mechanics inside that owner.",
       "files": [],
       "assertions": [

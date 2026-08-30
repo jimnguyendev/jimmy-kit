@@ -5,6 +5,8 @@ description: >
   screenshots or a live URL (audit), benchmark it against category leaders
   (evaluate), and check it against usability heuristics (Nielsen, Norman, Krug).
   Merges the former ux-audit, ux-evaluate, and ux-heuristic-review skills.
+  Use when asked to review, audit, evaluate or critique an existing UI, when a redesign
+  needs a baseline, or before ux-brief. NOT for conversion/pricing pages — use ux-cro-audit.
 version: "1.0.0"
 type: process
 tags: [ux, review, audit, evaluate, heuristics, assessment]

@@ -153,7 +153,7 @@ For complex filtering (range, OR, nested), document the query language explicitl
 
 ## Query Collections (Sparse Fieldsets)
 
-When one collection serves several screens with very different costs (public landing vs personalized dashboard vs expanded cards), do not multiply endpoints, return everything, or reach for GraphQL. Use a POST query endpoint with a small whitelisted field/filter grammar. Reference implementation: `pkg/restquery` in learning-be; full rationale in `docs/architecture/restquery-design-vi.md`.
+When one collection serves several screens with very different costs (public landing vs personalized dashboard vs expanded cards), do not multiply endpoints, return everything, or reach for GraphQL. Use a POST query endpoint with a small whitelisted field/filter grammar. A reference implementation and full rationale live in the internal docs repo `[docs]` (optional).
 
 ```
 POST /api/v1/query/{domain}/{collection}
@@ -320,7 +320,7 @@ Paginated list responses carry pagination as a **first-class `meta.pagination` o
     "code": "200000",
     "type": "SUCCESS",
     "message": "Success",
-    "service_id": "learning-be",
+    "service_id": "course-service",
     "pagination": { "total": 57, "limit": 12, "offset": 0, "has_next": true }
   },
   "data": [ { "id": 5, "name": "IELTS Mock Test 2026" } ]
@@ -352,7 +352,7 @@ Validation errors that can report multiple field problems return **all of them a
     "code": "400000",
     "type": "invalid_query",
     "message": "invalid query",
-    "service_id": "learning-be",
+    "service_id": "course-service",
     "extra_meta": { "violations": [
       { "section": "fields", "field": "tests.bad", "message": "unknown field" },
       { "section": "pagination", "field": "limit", "message": "limit exceeds maximum of 20" }
@@ -368,12 +368,10 @@ Every endpoint must be documented with: spec (method, URL, headers, body), reque
 
 ## Cross-References
 
-- For backend implementation of these patterns, start with `jimmy-skills@backend-core`.
-- For Go-specific HTTP handler details, use `jimmy-skills@backend-go-code-style`.
-- For MyVocab project-specific response envelope and handler patterns, use `jimmy-skills@myvocap-backend`.
-- For error handling conventions in Go, use `jimmy-skills@backend-go-error-handling`.
-- For database query patterns (pagination SQL), use `jimmy-skills@backend-go-database`.
-- For the query-collection grammar (sparse fieldsets + whitelisted filtering), the reference implementation is `pkg/restquery` in learning-be, with design rationale in `docs/architecture/restquery-design-vi.md`.
+- `engineering-design-thinking` (this kit) — decide the contract before implementing it.
+- `domain-modeling` (this kit) — resource names must come from the domain glossary.
+- `[docs]` internal Go pack (optional, not bundled): handler code style, error-handling conventions, pagination SQL patterns, and any project-specific response envelope.
+- For the query-collection grammar (sparse fieldsets + whitelisted filtering), a reference implementation and its design rationale live in the internal docs repo `[docs]` (optional deep-dive; the grammar above is self-sufficient).
 
 ## External Sources
 

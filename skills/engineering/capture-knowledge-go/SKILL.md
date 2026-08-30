@@ -54,7 +54,7 @@ Note the framework boundaries: Gin, mongo-driver/v2, prep-go-log, franz-go (Kafk
 Identify:
 - **Purpose** — what the entry point does in one sentence, in domain language from `CONTEXT.md` if present.
 - **Core logic** — execution flow, key branches, error paths.
-- **Patterns** — which CLAUDE.md / jimmy-skills patterns are followed; which deviate.
+- **Patterns** — which CLAUDE.md / team skill-pack patterns are followed; which deviate.
 - **Risks** — missing `context.WithTimeout`, repo returning raw `bson.M`, handler doing semantic validation, no rate limit, no idempotency, etc.
 - **Improvements** — concrete next steps (cross-ref `improve-arch-go` candidates).
 - **Open questions** — things you could not resolve from the code alone.
