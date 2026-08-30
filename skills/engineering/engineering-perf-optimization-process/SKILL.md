@@ -1,6 +1,6 @@
 ---
 name: engineering-perf-optimization-process
-description: "Constraint-driven performance optimization process. Prevents over-engineering by requiring measurable targets, profiling proof, and rollback plans before any optimization is applied. Use when someone asks to 'make it faster', 'optimize performance', or 'build for high performance' without specifying concrete constraints. Also use when reviewing optimization PRs to verify they followed the gate process. Not for Go-specific patterns (see backend-go-performance) or observability setup (see backend-go-observability)."
+description: "Constraint-driven performance optimization process. Prevents over-engineering by requiring measurable targets, profiling proof, and rollback plans before any optimization is applied. Use when someone asks to 'make it faster', 'optimize performance', or 'build for high performance' without specifying concrete constraints. Also use when reviewing optimization PRs to verify they followed the gate process. Not for language-specific profiling mechanics or observability setup."
 user-invocable: true
 license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents. Stack-agnostic.

@@ -69,4 +69,4 @@ Typical invocations (any tool; skills trigger on the situation, you can also nam
 ## 5. Keep it healthy
 - Upgrading: `git pull` (Option A) or bump the submodule (Option B). Read `docs/DECISIONS.md` first if a skill moved or was renamed.
 - Adding or changing a skill: write `SCENARIO.md` before the skill, run it with a fresh agent, paste the result (see `skills/product/product-council/SCENARIO.md` for the shape).
-- Before publishing a change, run the review checklist in `CLAUDE.md`.
+- Before publishing a change, run the review checklist in `AGENTS.md`.

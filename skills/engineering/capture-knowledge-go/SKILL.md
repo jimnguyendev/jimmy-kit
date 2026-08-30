@@ -1,11 +1,11 @@
 ---
 name: capture-knowledge-go
-description: Capture structured understanding of a Go entry point (file, package, feature, endpoint, job) into a Markdown brief under .claude/knowledge/. Use when onboarding to unfamiliar code, before refactoring something you have not worked with, or as the discovery step of a larger task like /port-service. Project-local, no database required.
+description: Capture structured understanding of a Go entry point (file, package, feature, endpoint, job) into a Markdown brief under .jimmy/knowledge/. Use when onboarding to unfamiliar code, before refactoring something you have not worked with, or as the discovery step of a larger task like `port-service`. Project-local, no database required.
 ---
 
 # Capture Knowledge (Go, project-local)
 
-Build structured understanding of a Go entry point and save it as `.claude/knowledge/<name>.md`. Analysis-first: do not write the brief until exploration is complete.
+Build structured understanding of a Go entry point and save it as `.jimmy/knowledge/<name>.md`. Analysis-first: do not write the brief until exploration is complete.
 
 This is a **stripped-down adaptation** of the generic capture-knowledge skill — no SQLite, no FTS, no cross-session DB. Just one Markdown file per entry point, version-controlled or git-ignored as the team prefers.
 
@@ -28,7 +28,7 @@ This is a **stripped-down adaptation** of the generic capture-knowledge skill �
 
 - Confirm the entry point with the user. Acceptable: file path, package path, feature name (`internal/feature/<name>`), endpoint (`POST /v1/...`), job name, gRPC method.
 - Confirm depth: **shallow** (overview + top deps), **standard** (overview + deps depth 2 + risks), **deep** (overview + deps depth 3 + diagrams + improvements).
-- Check if a brief already exists at `.claude/knowledge/<name>.md`. If yes, surface it and ask: refresh, update sections, or start fresh?
+- Check if a brief already exists at `.jimmy/knowledge/<name>.md`. If yes, surface it and ask: refresh, update sections, or start fresh?
 
 ### 2. Collect source context
 
@@ -61,7 +61,7 @@ Identify:
 
 ### 5. Write the brief
 
-`mkdir -p .claude/knowledge && write .claude/knowledge/<kebab-name>.md` using the template below. Normalize the name (`internal/feature/example` → `feature-example`; `POST /v1/scores` → `endpoint-post-v1-scores`).
+`mkdir -p .jimmy/knowledge && write .jimmy/knowledge/<kebab-name>.md` using the template below. Normalize the name (`internal/feature/example` → `feature-example`; `POST /v1/scores` → `endpoint-post-v1-scores`).
 
 Include Mermaid only when a flow has ≥3 decision points or the dependency graph is non-trivial — otherwise prose + lists are clearer and cheaper.
 

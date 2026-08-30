@@ -5,6 +5,8 @@ description: Orchestrator for porting an existing service (Go, Laravel/PHP, or o
 
 # Port a Service Into This Repo
 
+> 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate internal pack, **not bundled** in this kit — `[docs]`. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
+
 This skill orchestrates a **multi-phase port** of an existing service (the *source* — any language/framework) into this Go repo (the *target*). It does NOT do the porting itself — it produces a plan, drives discovery, and hands each phase off to a focused skill, pausing for user approval at every boundary.
 
 **Cross-language is the common case** (Laravel/PHP, Node, Rails → Go). The orchestrator is language-agnostic; Phase 1 has source-specific discovery checklists.
@@ -86,15 +88,15 @@ Pick the discovery method by source stack:
 
 **If source is Go** → run `/capture-knowledge-go` (depth=standard) for every entry point in scope.
 
-**If source is Laravel/PHP** → do NOT use `capture-knowledge-go` (it reads Go-specific patterns). Instead, for each entry point write a brief manually to `.claude/knowledge/source-<name>.md` following the Laravel checklist below. Use `Agent subagent_type=Explore` for broad scans of unfamiliar PHP code.
+**If source is Laravel/PHP** → do NOT use `capture-knowledge-go` (it reads Go-specific patterns). Instead, for each entry point write a brief manually to `.jimmy/knowledge/source-<name>.md` following the Laravel checklist below. Use `Agent subagent_type=Explore` for broad scans of unfamiliar PHP code.
 
 **If source is Node/Rails/other** → adapt the Laravel checklist (route file → routes; controller → action; model → ORM call; queue/job → background worker; middleware → middleware).
 
 Universal outputs regardless of stack:
-- Per-entry-point brief at `.claude/knowledge/source-<name>.md`.
+- Per-entry-point brief at `.jimmy/knowledge/source-<name>.md`.
 - MongoDB collection catalogue: for each collection, document shape, indexes, ID type (`ObjectId` / UUID / numeric), expected cardinality, write pattern (insert-only / heavy update).
 - External dependency catalogue: third-party APIs, env vars, queue brokers, cache, mail, storage.
-- **Gate**: `.claude/knowledge/source-overview.md` linking every per-entry-point brief + collection catalogue + dependency catalogue.
+- **Gate**: `.jimmy/knowledge/source-overview.md` linking every per-entry-point brief + collection catalogue + dependency catalogue.
 
 #### Laravel hidden unknowns — MANDATORY investigation
 
@@ -132,7 +134,7 @@ PHP/Laravel is dynamically typed; the source code does NOT fully declare what a 
 
 **Output of this investigation**: a `Shadow Fields` section in each per-entry-point brief, listing every shadow + the decision (carry over, drop with ADR, change semantic).
 
-**Verification step**: capture 10–20 real production requests + responses (sanitized) per endpoint as `.claude/knowledge/fixtures/<endpoint>.jsonl`. These become parity test fixtures in Phase 4.
+**Verification step**: capture 10–20 real production requests + responses (sanitized) per endpoint as `.jimmy/knowledge/fixtures/<endpoint>.jsonl`. These become parity test fixtures in Phase 4.
 
 #### Laravel discovery checklist (per entry point)
 
@@ -214,7 +216,7 @@ Skip if Phase 0 chose "fresh".
 ## Outputs the user gets
 
 By end of Phase 7:
-- `.claude/knowledge/source-*.md` — per-entry-point briefs of the source.
+- `.jimmy/knowledge/source-*.md` — per-entry-point briefs of the source.
 - `.jimmy/adr/NNNN-*.md` — every non-trivial decision.
 - `internal/feature/<...>/` — ported features following CLAUDE.md layout.
 - `internal/jobs/migrate-<...>/` — idempotent migration jobs.
@@ -284,7 +286,7 @@ Rule of thumb: `/goal` for mechanical convergence on a measurable bar; interacti
 
 **Session 1 (interactive Plan mode)** — do not invoke `/goal` here:
 
-1. Run `/port-service` (or invoke this skill manually).
+1. Invoke the `port-service` skill.
 2. Answer all Phase 0 inputs.
 3. Co-author every Phase 1 brief + Phase 2 ADRs + mapping table.
 4. Save the final, frozen artifact to `PORT-PLAN.md` at repo root containing:

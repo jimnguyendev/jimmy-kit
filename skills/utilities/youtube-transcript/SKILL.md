@@ -27,7 +27,7 @@ Two jobs: **transcript** → `get_transcript.py` or `browser_capture.js` (§1–
 
 ## 1. Path A — python
 ```bash
-/usr/bin/python3 .claude/skills/youtube-transcript/get_transcript.py "<URL_OR_ID>" --out transcript.txt
+python3 <path-to-this-skill>/get_transcript.py "<URL_OR_ID>" --out transcript.txt
 ```
 Options: `--json` for per-segment start/duration. Exit codes: 0 ok · 1 generic error · 2 IP-blocked (switch to B). Dependency: `pip install youtube-transcript-api --user`.
 
