@@ -40,11 +40,14 @@ Commit the submodule and the symlinks. Pin a version with `git -C vendor/jimmy-k
 
 Only need a subset? Copy the folders you want: `cp -r vendor/jimmy-kit/skills/product/* .claude/skills/`.
 
-| Tool | Per-project folder | Global folder |
-|---|---|---|
-| Claude Code | `.claude/skills/<name>/` | `~/.claude/skills/<name>/` |
-| Codex CLI | `.agents/skills/<name>/` | `~/.agents/skills/<name>/` |
-| Cursor | `.cursor/skills/<name>/` | `~/.cursor/skills/<name>/` |
+| Tool | Per-project folder | Global folder | Instructions file it reads |
+|---|---|---|---|
+| Claude Code | `.claude/skills/<name>/` | `~/.claude/skills/<name>/` | `CLAUDE.md` (→ `AGENTS.md`) |
+| Codex CLI | `.agents/skills/<name>/` | `~/.agents/skills/<name>/` | `AGENTS.md` |
+| OpenCode | `.opencode/skill/<name>/` (also picks up `.claude/skills/`) | `~/.config/opencode/skill/<name>/` | `AGENTS.md` |
+| Cursor | `.cursor/skills/<name>/` | `~/.cursor/skills/<name>/` | `.cursor/rules`, `AGENTS.md` |
+
+`npx skills add jimnguyendev/jimmy-kit -a codex,opencode,claude-code,cursor` writes to all of these at once (`-a '*'` = every agent it knows — 70+, incl. gemini-cli, windsurf, github-copilot, zed). Codex users can also install from inside Codex with its built-in `$skill-installer` skill by pasting the repo URL.
 
 `scripts/list-skills.sh` prints every skill with its one-line description.
 
