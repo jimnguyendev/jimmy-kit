@@ -1,7 +1,7 @@
 # CLAUDE.md — Jimmy Kit
 
 ## What this repo is
-A self-contained skill kit (49 skills, 7 categories) for AI agents, extracted 2026-08-30 from an internal working set. All English, brand-neutral (generic edtech examples), provenance in README.md. Operating model: docs/OPERATING-WORKFLOW.md (7-question intake → product-council gate → 4-phase chain; `routing` skill is the dispatcher). Decisions: docs/DECISIONS.md (ADR style, newest first — read before restructuring anything).
+A self-contained skill kit (49 skills, 7 categories) for AI agents, extracted 2026-08-30 from an internal working set. All English, brand-neutral (generic edtech examples), provenance in README.md. Operating model: docs/OPERATING-WORKFLOW.md (7-question intake → product-council gate → 4-phase chain; `routing` skill is the dispatcher). Glossary: CONTEXT.md (domain language — keep it updated when terms shift). Install tooling: scripts/. Decisions: docs/DECISIONS.md (ADR style, newest first — read before restructuring anything).
 
 ## Conventions (enforced)
 - Every self-authored skill opens with `> **This skill exists to stop:** …` (one-line failure statement) and a `## 🤖 0. HOW TO USE` section (modes + output formats).

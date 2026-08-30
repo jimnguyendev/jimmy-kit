@@ -5,7 +5,7 @@ A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini)
 **UNDERSTAND → ENVISION → DELIVER → REFLECT**, with a 7-question thinking layer on intake and a `product-council` red-team gate before anything gets built or pitched. See `docs/OPERATING-WORKFLOW.md`.
 
 ## Install
-Copy the skill folders you need into your project's `.claude/skills/` (or `.agents/skills/`). Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
+Run `scripts/link-skills.sh` to symlink all 49 skills into `~/.claude/skills` (or pass a target dir), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
 
 ## Categories
 | Folder | What's inside |
