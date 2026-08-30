@@ -1,0 +1,55 @@
+{
+  "skill_name": "tdd-go",
+  "evals": [
+    {
+      "id": 1,
+      "name": "red-exposes-contract-ambiguity",
+      "prompt": "The first failing test reveals two plausible 404 response contracts, and neither the accepted brief nor ADR chooses one. Continue with the safest next action.",
+      "route": {"from": "tdd-go", "to": "engineering-design-thinking"},
+      "expected_output": "Pause the RED slice and hand the failing example plus contract decision to design instead of encoding a guess.",
+      "assertions": [
+        "Pauses implementation while RED",
+        "Names engineering-design-thinking as the next owner",
+        "Carries the failing example, alternatives, and decision needed",
+        "Does not guess the public contract"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "green-exposes-broader-candidate",
+      "prompt": "The accepted behavior slice is green. It exposed duplicated repository ownership across three features outside the approved scope. Continue without widening the slice.",
+      "route": {"from": "tdd-go", "to": "improve-arch-go"},
+      "expected_output": "Keep the green slice bounded and hand the broader evidence to architecture review for discovery and prioritization.",
+      "assertions": [
+        "Does not widen the completed slice",
+        "Names improve-arch-go as the next owner",
+        "Carries green-state evidence and candidate scope",
+        "Does not assume the candidate is accepted cleanup"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "green-leaves-approved-cleanup",
+      "prompt": "The behavior change is green and accepted. One separately approved compatibility wrapper and its dead aliases remain, with caller evidence recorded.",
+      "route": {"from": "tdd-go", "to": "zero-tech-debt"},
+      "expected_output": "Hand the green tests and cleanup ledger to structural cleanup; do not keep behavior implementation as owner.",
+      "assertions": [
+        "Names zero-tech-debt as the next owner",
+        "Carries green tests, invariants, and deletion evidence",
+        "Separates completed behavior work from cleanup",
+        "Does not reopen the accepted design"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "accepted-bug-entry",
+      "prompt": "The expected behavior and public interface for a catalog pagination bug are approved. Fix it test-first.",
+      "expected_output": "Own the implementation and begin one vertical RED-GREEN slice without asking for duplicate approval.",
+      "assertions": [
+        "Treats tdd-go as the current owner",
+        "Does not request approval already present in the handoff",
+        "Starts with one observable failing case"
+      ]
+    }
+  ]
+}

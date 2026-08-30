@@ -1,0 +1,148 @@
+{
+  "skill_name": "engineering-design-thinking",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We need to add scheduled invoice reminders to our SaaS app. This will touch the billing service, email delivery, user notification preferences, and a new retry policy for failed sends. Can you implement it?",
+      "expected_output": "The agent should NOT start implementation. It should run the five-gate design process, clarify the problem and constraints, and produce a design brief for approval before any code is written.",
+      "files": [],
+      "assertions": [
+        "The agent does NOT start writing implementation code immediately",
+        "The agent frames the problem before discussing implementation details",
+        "The agent asks or states relevant constraints such as delivery timing, retries, user preferences, and failure handling",
+        "The agent identifies that the feature is non-trivial because it spans multiple files or concerns",
+        "The agent produces or promises a design brief before implementation"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/design We want to add organization-level SSO to our product. This will affect login flow, user provisioning, account linking, and admin settings. Please think it through first.",
+      "expected_output": "The agent should explicitly run the full design flow, covering problem framing, context, options, architecture, and routing, then end with a structured design brief instead of code.",
+      "files": [],
+      "assertions": [
+        "The response covers problem framing rather than jumping straight to SAML or OIDC implementation details",
+        "The response includes context analysis such as current auth flow, provisioning behavior, and deployment constraints",
+        "The response evaluates at least two distinct approaches or integration options",
+        "The response includes an architecture sketch with boundaries, data flow, or failure modes",
+        "The response includes an ordered skill-routing or implementation sequence",
+        "The response ends with a design brief or approval checkpoint before implementation"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review this design for a new Redis cache layer in our checkout service. The proposal says: 'Add Redis in front of every database call so checkout is faster. Engineering will figure out invalidation during implementation.'",
+      "expected_output": "The agent should switch to review mode, evaluate the proposal against the gates, and flag what is missing instead of accepting the design at face value.",
+      "files": [],
+      "assertions": [
+        "The agent identifies missing problem framing such as unclear targets or unclear user-facing outcome",
+        "The agent flags missing context analysis such as current bottlenecks or existing data flow",
+        "The agent notes that solution evaluation is incomplete because only one approach is presented",
+        "The agent flags architecture risk around cache invalidation, coupling, or failure modes",
+        "The agent does NOT approve the design as sufficient without additional gate evidence"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "What's the scope of adding audit logs for admin actions across our API, background jobs, and internal dashboard? I need to know what to investigate first.",
+      "expected_output": "The agent should run in scope mode and return a prioritized checklist, highlighting the gates that deserve the most attention rather than producing a full implementation plan.",
+      "files": [],
+      "assertions": [
+        "The response is framed as scope analysis or a prioritized checklist",
+        "The response identifies cross-cutting concerns such as API paths, async jobs, retention, and who consumes the logs",
+        "The response highlights which gates need the most attention, such as context and architecture",
+        "The agent does NOT jump into code or detailed implementation steps"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Should we build our new multi-tenant reporting feature by adding tenant_id everywhere in the current service, or by extracting a separate reporting pipeline and store?",
+      "expected_output": "The agent should evaluate multiple approaches using trade-offs and ideality, not anchor on the first option or choose based on novelty alone.",
+      "files": [],
+      "assertions": [
+        "The agent compares at least two distinct approaches",
+        "The agent discusses benefits, resource costs, and harmful effects or operational burden",
+        "The agent treats hidden coupling or maintenance cost as part of the decision",
+        "The agent chooses an approach with explicit rationale instead of saying 'it depends' without analysis"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "How do I parse JSON into a struct in Go?",
+      "expected_output": "The agent should recognize this as a single implementation question and avoid forcing the full five-gate design workflow.",
+      "files": [],
+      "assertions": [
+        "The agent does NOT run the full design-thinking process for this simple question",
+        "The agent does NOT produce a five-gate design brief",
+        "The agent answers directly or routes to a more appropriate implementation skill"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "scoped-architecture-discovery-handoff",
+      "prompt": "Before choosing a design, we need evidence about ownership drift and candidate boundaries across catalog, benefit, and authentication. The product outcome is framed, but the current architecture is not yet mapped.",
+      "route": {"from": "engineering-design-thinking", "to": "improve-arch-go"},
+      "expected_output": "Pause design context analysis and hand a bounded evidence-gathering scope to architecture review, with an explicit return condition before option selection.",
+      "files": [],
+      "assertions": [
+        "The agent does not invent architecture evidence",
+        "The agent names improve-arch-go as the next owner",
+        "The handoff includes scope, constraints, evidence questions, and return condition",
+        "The agent pauses design until scoped discovery returns"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "accepted-behavior-handoff",
+      "prompt": "The design brief is approved for an authenticated catalog endpoint. Public behavior, response envelope, pagination, errors, boundaries, risks, and implementation scope are all settled. Implement it test-first.",
+      "route": {"from": "engineering-design-thinking", "to": "tdd-go"},
+      "expected_output": "Hand the accepted brief directly to TDD as implementation owner without requesting the same approval again.",
+      "files": [],
+      "assertions": [
+        "The agent names tdd-go as the next owner",
+        "The handoff includes accepted behavior, interface, scope, risks, and evidence",
+        "The agent does not ask for duplicate design approval",
+        "The agent does not route an approved new behavior to cleanup"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "accepted-cleanup-handoff",
+      "prompt": "The approved end state removes one internal adapter and its dead aliases. Public behavior remains unchanged, compatibility evidence is complete, and deletion scope and rollback are settled.",
+      "route": {"from": "engineering-design-thinking", "to": "zero-tech-debt"},
+      "expected_output": "Hand the accepted end state, invariants, and compatibility ledger directly to bounded cleanup without starting a new behavior cycle.",
+      "files": [],
+      "assertions": [
+        "The agent names zero-tech-debt as the next owner",
+        "The handoff includes end state, scope, invariants, authority, and compatibility evidence",
+        "The agent does not invoke TDD for unchanged behavior",
+        "The agent does not rerun architecture discovery for an accepted candidate"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "linked-skills-are-not-mandatory-pipeline",
+      "prompt": "These four skills are linked. For an approved pure cleanup that preserves behavior, should every linked skill run automatically before work begins?",
+      "expected_output": "Explain that links are conditional routes, select cleanup directly, and name the concrete triggers that would justify another owner.",
+      "files": [],
+      "assertions": [
+        "The agent does NOT invoke all four skills merely because they are linked",
+        "The agent routes directly to zero-tech-debt for the accepted structural cleanup",
+        "The agent preserves existing behavior tests rather than starting a new TDD behavior cycle",
+        "The agent names the trigger that would justify routing back to design, review, or TDD"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "public-api-composes-contract-and-tdd",
+      "prompt": "Design a new public REST endpoint in learning-be, reconcile it with related PHP behavior, then implement it after the contract is approved.",
+      "expected_output": "Compose API-contract design inside the design phase, return for acceptance, and route accepted behavior to TDD; backend-go-testing supplies mechanics inside that owner.",
+      "files": [],
+      "assertions": [
+        "The sequence includes engineering-rest-api-design before contract acceptance",
+        "The contract returns to engineering-design-thinking for the decision",
+        "Accepted behavior routes to tdd-go",
+        "backend-go-testing does not replace tdd-go as phase owner"
+      ]
+    }
+  ]
+}
