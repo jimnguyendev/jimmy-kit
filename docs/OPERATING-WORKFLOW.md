@@ -1,4 +1,4 @@
-# Operating Workflow — how the 48 skills fit together
+# Operating Workflow — how the 46 skills fit together
 
 Three layers. The spine is Sage's intent spectrum (UNDERSTAND → ENVISION → DELIVER → REFLECT); this kit extends it with an intake thinking layer and a red-team gate.
 
