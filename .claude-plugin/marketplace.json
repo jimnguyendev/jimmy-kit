@@ -1,6 +1,6 @@
 {
   "name": "jimmy-kit",
-  "description": "Jimmy Kit \u2014 48 product, UX, process, analytics and engineering skills for AI agents.",
+  "description": "Jimmy Kit \u2014 46 product, UX, process, analytics and engineering skills for AI agents.",
   "owner": {
     "name": "jimnguyendev",
     "url": "https://github.com/jimnguyendev/jimmy-kit"
@@ -11,10 +11,10 @@
       "source": {
         "source": "github",
         "repo": "jimnguyendev/jimmy-kit",
-        "ref": "v0.1.0"
+        "ref": "v0.1.1"
       },
-      "description": "48 product, UX, process, analytics and engineering skills for AI agents.",
-      "version": "0.1.0"
+      "description": "46 product, UX, process, analytics and engineering skills for AI agents.",
+      "version": "0.1.1"
     }
   ]
 }

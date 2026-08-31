@@ -1,7 +1,7 @@
 # AGENTS.md — Jimmy Kit (instructions for any agent: Claude Code, Codex, Cursor, Gemini)
 
 ## What this repo is
-A self-contained skill kit (48 skills, 7 categories) for AI agents, extracted 2026-08-30 from an internal working set. All English, brand-neutral (generic edtech examples), provenance in README.md. Operating model: docs/OPERATING-WORKFLOW.md (7-question intake → product-council gate → 4-phase chain; `routing` skill is the dispatcher). Glossary: CONTEXT.md (domain language — keep it updated when terms shift). Install tooling: scripts/. Decisions: docs/DECISIONS.md (ADR style, newest first — read before restructuring anything).
+A self-contained skill kit (46 skills, 7 categories) for AI agents, extracted 2026-08-30 from an internal working set. All English, brand-neutral (generic edtech examples), provenance in README.md. Operating model: docs/OPERATING-WORKFLOW.md (7-question intake → product-council gate → 4-phase chain; `routing` skill is the dispatcher). Glossary: CONTEXT.md (domain language — keep it updated when terms shift). Install tooling: scripts/. Decisions: docs/DECISIONS.md (ADR style, newest first — read before restructuring anything).
 
 ## Conventions (enforced)
 - Every self-authored skill opens with `> **This skill exists to stop:** …` (one-line failure statement) and a `## 🤖 0. HOW TO USE` section (modes + output formats).
@@ -11,7 +11,7 @@ A self-contained skill kit (48 skills, 7 categories) for AI agents, extracted 20
 - New/changed skills: add or update SCENARIO.md (write the scenario BEFORE the skill; status stays "exit 2" until a real run is pasted in).
 
 ## State at handoff (2026-08-30)
-- Done: extraction, renaming (see README table), full EN translation, de-branding, routing ported; 3 scenarios PASS with independent fresh-agent runs (`okr-outcome-architect`, `product-council`, `ux-cro-audit` — run #1 missed the AI-failure branch → §7 row 15 added → run #2 PASS); 6-step review checklist run and all findings fixed; kafka-patterns dropped (48 skills); Sage-runtime commands/paths removed (K5); outputs namespaced under `.jimmy/`; usage guide in docs/USAGE.md.
+- Done: extraction, renaming (see README table), full EN translation, de-branding, routing ported; 3 scenarios PASS with independent fresh-agent runs (`okr-outcome-architect`, `product-council`, `ux-cro-audit` — run #1 missed the AI-failure branch → §7 row 15 added → run #2 PASS); 6-step review checklist run and all findings fixed; kafka-patterns, capture-knowledge-go, port-service dropped (46 skills); Sage-runtime commands/paths removed (K5); outputs namespaced under `.jimmy/`; usage guide in docs/USAGE.md.
 - Origin: an internal Vietnamese working set that keeps evolving separately; sync is MANUAL and one-way (archives stay in the origin repo).
 - Published: https://github.com/jimnguyendev/jimmy-kit (public, MIT), tag v0.1.0. Always-on routing: `templates/eager-dispatcher.md` must be appended to the target repo's AGENTS.md (USAGE §3) — the `routing` skill's Layer 1 lives there, keep them consistent (K6). Install channels: `npx skills add jimnguyendev/jimmy-kit` (verified, 48 found), Claude Code plugin via `.claude-plugin/` (validated --strict, loads via --plugin-dir), clone+symlink scripts. Bumping a release: update version in `.claude-plugin/plugin.json` + `marketplace.json` `ref`, then tag.
 

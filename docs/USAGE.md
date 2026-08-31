@@ -59,7 +59,7 @@ Everything a skill produces goes under **`.jimmy/`** in the repo you are working
 | `.jimmy/work/<feature>/` | in-progress artifacts: brief, spec, plan, screenshots, `decisions.md` for that feature |
 | `.jimmy/docs/` | durable outputs: research briefs, audits, voice & tone, runbooks |
 | `.jimmy/decisions.md` | project-wide ADR log (owned by `decision-log`) |
-| `.jimmy/adr/NNNN-slug.md` | numbered engineering ADRs (`domain-modeling`, `port-service`) |
+| `.jimmy/adr/NNNN-slug.md` | numbered engineering ADRs (`domain-modeling`) |
 | `.jimmy/constitution.md` | project principles (`constitution`) |
 
 Add `.jimmy/` to `.gitignore` if you don't want it tracked; most teams track `decisions.md`, `adr/` and `constitution.md` and ignore `work/`.

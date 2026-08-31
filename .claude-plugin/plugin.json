@@ -1,12 +1,25 @@
 {
   "name": "jimmy-kit",
-  "description": "48 product, UX, process, analytics and engineering skills for AI agents — routing dispatcher, product-council red-team gate, quality gates, OKR/JTBD/PRD, CRO audit, growth analytics.",
-  "version": "0.1.0",
-  "author": { "name": "jimnguyendev", "url": "https://github.com/jimnguyendev/jimmy-kit" },
+  "description": "46 product, UX, process, analytics and engineering skills for AI agents \u2014 routing dispatcher, product-council red-team gate, quality gates, OKR/JTBD/PRD, CRO audit, growth analytics.",
+  "version": "0.1.1",
+  "author": {
+    "name": "jimnguyendev",
+    "url": "https://github.com/jimnguyendev/jimmy-kit"
+  },
   "homepage": "https://github.com/jimnguyendev/jimmy-kit",
   "repository": "https://github.com/jimnguyendev/jimmy-kit",
   "license": "MIT",
-  "keywords": ["skills", "product", "ux", "okr", "jtbd", "prd", "analytics", "engineering", "quality-gates"],
+  "keywords": [
+    "skills",
+    "product",
+    "ux",
+    "okr",
+    "jtbd",
+    "prd",
+    "analytics",
+    "engineering",
+    "quality-gates"
+  ],
   "skills": [
     "./skills/analytics/",
     "./skills/engineering/",

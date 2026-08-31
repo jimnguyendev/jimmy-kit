@@ -1,6 +1,10 @@
 # Decision log — Jimmy Kit
 > Newest first. Each entry: decision · why · rejected alternatives with losing reasons.
 
+## 2026-08-31 · K7 — capture-knowledge-go and port-service removed (46 skills)
+**Decision:** Drop both from the kit (owner's call). `capture-knowledge-go`: a shell without its engine — the stripped adaptation of a SQLite/FTS-backed skill reduced to "explore, then write a Markdown brief", which agents do natively and `zoom-out` already covers in-conversation; its only in-kit consumer was port-service. `port-service`: genuinely strong guardrails (dry-run migrations, read-only source, phase gates) but situational — useful only when a service port/merge is actually planned, and written against a specific Go repo + the non-bundled Go pack. Both survive in the origin repo and git history; re-import when a port is scheduled.
+**Why:** a company kit should not carry skills 95% of installers never trigger — they are routing noise and per-sync maintenance cost. **Rejected:** generalizing capture-knowledge-go (the generic version is agent default behavior); keeping port-service "just in case" (the trigger condition is knowable — a planned port — so import-on-demand beats carry-always).
+
 ## 2026-08-31 · K6 — Eager dispatcher block ships as a template (fixes a dangling port)
 **Decision:** `routing` was ported assuming Sage's always-on layer ("the eager layer carries the keyword map") which the kit never shipped — in Sage that map lives in the generated CLAUDE.md/AGENTS.md (Rule 0), not in the skill. Fix: `templates/eager-dispatcher.md` (~35 lines: kit keyword map → skill chains, council gate, evidence rule) is the single source; target repos append it to their AGENTS.md (USAGE §3); `routing` points at it and keeps Layers 2–3 (classifier fallback, confirmation format, worked examples).
 **Why:** without an always-on layer the router body was a dangling reference, natural-language requests could bypass routing entirely, and the "mandatory" council gate had no instruction behind it.
