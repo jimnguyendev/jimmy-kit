@@ -30,4 +30,5 @@ None, or the request is ambiguous → load the `routing` skill (classifier fallb
 
 Two standing rules on top of the map:
 - **Gate:** before building or pitching anything new, run `product-council`; verdict ⚠/✗ means back to the problem, not forward to code.
+- **Constitution:** the five base principles in the `constitution` skill bind every change — tests before code, no silent failures, secrets never in code, dependencies explicit and pinned, changes reversible.
 - **Evidence:** no `[VERIFIED]` problem → no solution writing; label every claim `[VERIFIED]` / `[ASSUMPTION]` / `[GUESS]`; never invent numbers or baselines.

@@ -9,9 +9,10 @@ type: system
 
 > 📁 **Source convention:** `[sage]` = upstream Sage repo (github.com/xoai/sage); `[docs]` = your internal docs repo (optional deep-dives — adjust paths to your setup). Sources are for deeper reading: if a file is missing, the skill still runs on the rules inlined here. The ONLY exception: a step marked **MUST READ** — if that file is missing, STOP and ask the user instead of improvising.
 
-The eager layer carries each principle as one line naming the mechanism that
-enforces it. This carries the reasoning, and the rules that have no mechanism
-behind them.
+The always-on dispatcher block in the target repo's AGENTS.md
+(`templates/eager-dispatcher.md` in this kit) carries the standing rules; the
+table below carries each principle with the mechanism that enforces it. This
+file carries the reasoning, and the rules that have no mechanism behind them.
 
 ## Engineering principles
 
@@ -55,10 +56,11 @@ not a reason to write the prose more forcefully.
 
 These are enforced by the model reading them, which is a real but weaker thing.
 
-**Rule 2 — Skills before assumptions.** If a Sage skill exists for the task at
+**Rule 2 — Skills before assumptions.** If a kit skill exists for the task at
 hand, read it and follow it. Do not fall back on general training when a skill
-provides a specific methodology. (This is the dispatcher rule, and it is in the
-eager layer for a reason: if it fails to fire, nothing else here loads.)
+provides a specific methodology. (This is the dispatcher rule, and it lives in
+the always-on dispatcher block for a reason: if it fails to fire, nothing else
+here loads.)
 
 **Rule 3 — Document decisions.** Decisions that affect the project get
 recorded — for agents *and* for the humans who arrive later. Specs, plans,
