@@ -64,7 +64,14 @@ Everything a skill produces goes under **`.jimmy/`** in the repo you are working
 
 Add `.jimmy/` to `.gitignore` if you don't want it tracked; most teams track `decisions.md`, `adr/` and `constitution.md` and ignore `work/`.
 
-## 3. Start a session
+## 3. Make routing always-on (recommended)
+Installing skills gives the agent 48 tools it *can* pick up; it does not force routing through them. To get Sage-style "route every request" behavior, append the eager dispatcher block to your repo's instructions file once:
+```bash
+cat vendor/jimmy-kit/templates/eager-dispatcher.md >> AGENTS.md   # or ~/jimmy-kit/…
+```
+(Claude Code reads it via a `CLAUDE.md` containing "Read AGENTS.md"; Codex and OpenCode read `AGENTS.md` directly; Cursor: paste it into a `.cursor/rules` file.) Without this block, routing is on-demand: the agent matches skill descriptions, and the `product-council` gate is a convention rather than an instruction.
+
+## 4. Start a session
 1. **Don't pick a skill — describe the problem.** The `routing` skill is the dispatcher: "conversion is low", "audit this landing page", "retention is dropping", "review this PRD". It maps the request to one of the ten problem chains in `docs/OPERATING-WORKFLOW.md`.
 2. Every chain runs **UNDERSTAND → ENVISION → DELIVER → REFLECT**, with the 7-question intake first and a mandatory `product-council` red-team before anything is built or pitched.
 3. Skills refuse to run on guesses: expect to be asked for a sourced, dated number or a baseline. Answer with the number, or say "no baseline" — the skill then writes `[baseline TBD — measure first]` instead of inventing one.
@@ -77,14 +84,14 @@ Typical invocations (any tool; skills trigger on the situation, you can also nam
 - "Independent review of this spec" → `independent-review` (runs in a fresh agent, read-only)
 - "Which skill should I use?" → `routing`
 
-## 4. Conventions you will see inside skills
+## 5. Conventions you will see inside skills
 - `> This skill exists to stop: …` — the mistake the skill prevents; if it doesn't apply to you, you are in the wrong skill.
 - `## 🤖 0. HOW TO USE` — modes (audit / write / plan …) and the exact output format.
 - Claim labels `[VERIFIED]` · `[ASSUMPTION]` · `[GUESS]`; exit codes 0 / 1 / 2 (pass / fail / unverifiable).
 - `[sage]` / `[docs]` tokens mark optional deep-dives in external repos; every skill runs without them.
 - Shared vocabulary: `CONTEXT.md`.
 
-## 5. Keep it healthy
+## 6. Keep it healthy
 - Upgrading: `git pull` (Option A) or bump the submodule (Option B). Read `docs/DECISIONS.md` first if a skill moved or was renamed.
 - Adding or changing a skill: write `SCENARIO.md` before the skill, run it with a fresh agent, paste the result (see `skills/product/product-council/SCENARIO.md` for the shape).
 - Before publishing a change, run the review checklist in `AGENTS.md`.

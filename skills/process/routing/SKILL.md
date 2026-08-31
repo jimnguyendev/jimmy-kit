@@ -7,14 +7,17 @@ type: system
 
 # Routing depth
 
-The eager layer carries the keyword map — the trigger. This carries the rest:
-what to do when the keyword map misses, how to present the choice, and what
-routing looks like when it is done well.
+An always-on dispatcher block carries the keyword map — the trigger. In this kit
+that block is `templates/eager-dispatcher.md`, installed into the target repo's
+`AGENTS.md` (see docs/USAGE.md §3). If it is not installed, use that file's map
+directly as Layer 1. This skill carries the rest: what to do when the keyword
+map misses, how to present the choice, and what routing looks like when it is
+done well.
 
 ## The three-layer chain
 
 **Layer 1 — Keyword routing (deterministic, checked first).** The map in the
-eager layer. One match → confirm. Multiple matches → present them as options.
+dispatcher block (`templates/eager-dispatcher.md`). One match → confirm. Multiple matches → present them as options.
 No match → Layer 2.
 
 **Layer 2 — Sub-agent classifier.** If the Task tool is available, spawn a
@@ -39,7 +42,7 @@ Use the response to select the workflow → confirm. No Task tool → Layer 3.
 Always, except for explicit slash commands and Tier 1 tasks:
 
 ```
-Sage → [workflow]. [One-line rationale].
+Routing → [workflow]. [One-line rationale].
 
 [1] [Workflow] — [skill → chain → arrows] ([N] steps)
 [2] [Alternative] — [chain] ([N] steps)
@@ -55,7 +58,7 @@ wearing a number's clothing.
 
 **"audit our checkout UX"** — keyword `audit` → `ux-review` (or `ux-cro-audit` if it is a conversion/pricing page).
 
-> Sage → review workflow. Evaluating the checkout experience.
+> Routing → review workflow. Evaluating the checkout experience.
 >
 > [1] Review — UX audit → evaluation (2 steps)
 > [2] Research — interview → JTBD → opportunity map (3 steps)
@@ -66,7 +69,7 @@ wearing a number's clothing.
 **"the checkout page is throwing 500 errors"** — keyword `error` → `diagnose`.
 Single match, no ambiguity, so confirm and go:
 
-> Sage → fix workflow. Investigating 500 errors on checkout.
+> Routing → fix workflow. Investigating 500 errors on checkout.
 
 **"improve our onboarding conversion rate"** — `conversion` → review,
 `improve` → build. Two matches, so do not pick for the user:
