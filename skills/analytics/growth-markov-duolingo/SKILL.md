@@ -7,7 +7,7 @@ description: Duolingo 7-State Markov Growth Modeling & DAU Forecasting skill. Us
 
 > **This skill exists to stop:** debating retention by gut feel or one blended metric, instead of decomposing users into lifecycle states and finding the exact leaking transition.
 
-> 📁 **Source convention:** `[sage]` = upstream Sage repo (github.com/xoai/sage); `[docs]` = your internal docs repo (optional deep-dives — adjust paths to your setup). Sources are for deeper reading: if a file is missing, the skill still runs on the rules inlined here. The ONLY exception: a step marked **MUST READ** — if that file is missing, STOP and ask the user instead of improvising.
+> 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Classify users into the 7 lifecycle states** from event data — define the anchor event explicitly and keep it stable; changing it mid-series is a methodology change that must be logged.

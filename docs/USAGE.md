@@ -88,7 +88,7 @@ Typical invocations (any tool; skills trigger on the situation, you can also nam
 - `> This skill exists to stop: …` — the mistake the skill prevents; if it doesn't apply to you, you are in the wrong skill.
 - `## 🤖 0. HOW TO USE` — modes (audit / write / plan …) and the exact output format.
 - Claim labels `[VERIFIED]` · `[ASSUMPTION]` · `[GUESS]`; exit codes 0 / 1 / 2 (pass / fail / unverifiable).
-- `[sage]` / `[docs]` tokens mark optional deep-dives in external repos; every skill runs without them.
+- `[sage]` marks optional deeper reading in the public upstream repo; skills carry no internal-doc links and run fully on their own.
 - Shared vocabulary: `CONTEXT.md`.
 
 ## 6. Keep it healthy

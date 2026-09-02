@@ -7,7 +7,7 @@ description: Architecture Decision Records (ADRs) and Technical Decision Logging
 
 > **This skill exists to stop:** decisions living in someone's head or a chat thread — three months later the team relitigates the same question with the same arguments (Chesterton's Fence).
 
-> 📁 **Source convention:** `[sage]` = upstream Sage repo (github.com/xoai/sage); `[docs]` = your internal docs repo (optional deep-dives — adjust paths to your setup). Sources are for deeper reading: if a file is missing, the skill still runs on the rules inlined here. The ONLY exception: a step marked **MUST READ** — if that file is missing, STOP and ask the user instead of improvising.
+> 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Write a new ADR — the moment the decision is made, not at sprint end.** Three required parts: what was decided (one sentence) · why (reasoning, not restatement) · losing alternatives WITH the reason they lost. Prepend newest first; rotate to archive at ~200 lines.

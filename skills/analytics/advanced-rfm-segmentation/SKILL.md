@@ -7,7 +7,7 @@ description: Advanced RFM/RFE Segmentation, Jenks Natural Breaks Variance Optimi
 
 > **This skill exists to stop:** segmenting customers with arbitrary equal-split thresholds — producing non-homogeneous groups and mistargeted campaigns.
 
-> 📁 **Source convention:** `[sage]` = upstream Sage repo (github.com/xoai/sage); `[docs]` = your internal docs repo (optional deep-dives — adjust paths to your setup). Sources are for deeper reading: if a file is missing, the skill still runs on the rules inlined here. The ONLY exception: a step marked **MUST READ** — if that file is missing, STOP and ask the user instead of improvising.
+> 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Compute RFM/RFE with Jenks natural breaks** — report before/after variance to prove thresholds aren't arbitrary.
@@ -135,4 +135,4 @@ Score R, F, M on 1–5 and read the combination as a behavioral persona with a d
 | Lost (111) | Lowest on all three | Ignore or cheap automated remarketing |
 
 **Automatic clustering:** normalize R/F/M first (they live on different scales), then K-means: pick K, seed centroids, assign by Euclidean distance, recompute, iterate to convergence. Choose K with the **elbow plot** (WCSS vs K — take the bend, usually K = 3–4) or silhouette score. Too many clusters (K = 50) overfits and no team can run 50 campaigns. Jenks (this skill's main method) and K-means answer different questions: Jenks finds natural thresholds on one dimension; K-means groups on several.
-📄 Source: `[docs] guides/v12_guide.md`.
+

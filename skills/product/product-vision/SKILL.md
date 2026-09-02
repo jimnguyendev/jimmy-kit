@@ -7,6 +7,9 @@ description: "Set or repair a product vision so the team stops being a feature f
 
 > **This skill exists to stop:** the feature factory — building whatever the loudest customer or executive asks for, until the product is a patchwork nobody can explain — and its cousin, deleting a feature because internal click data was low.
 
+## Quick start
+Paste a backlog or a "delete this feature" request and get back: a one-sentence vision check, each request reframed as the user question it answers, a ripple-effect map for any removal, and the North Star the roadmap serves.
+
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Vision check:** can the team state, in one sentence, what core value the product delivers to whom over the next 3–5 years? If not, draft it before any roadmap talk. Then draw the **ecosystem map** — every actor who touches the product (end user, operator, partner, admin, support), not just the main screen.

@@ -33,7 +33,7 @@ Run `scripts/link-skills.sh` to symlink all 46 skills into `~/.claude/skills` (o
 - OKR handbook + stakeholder/UX field lessons: internal materials and public UX Foundation talks, anonymized; examples use a generic edtech context.
 
 ## Conventions
-`[sage]` = upstream Sage repo · `[docs]` = your internal docs repo (optional deep-dives). Every self-authored skill opens with a one-line failure statement ("this skill exists to stop: …") and a HOW-TO-USE section with modes and output formats. Decision history: `docs/DECISIONS.md`.
+`[sage]` = upstream Sage repo (public, optional deeper reading). Skills are self-contained: no internal-doc links inside skills; provenance lives here in README. Every self-authored skill opens with a one-line failure statement ("this skill exists to stop: …") and a HOW-TO-USE section with modes and output formats. Decision history: `docs/DECISIONS.md`.
 
 ## License
 MIT — see `LICENSE`. Upstream material (Sage, sage-product, mattpocockSkills) keeps its original MIT-style attribution.

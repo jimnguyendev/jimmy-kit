@@ -1,13 +1,10 @@
 # Decision log — Jimmy Kit
 > Newest first. Each entry: decision · why · rejected alternatives with losing reasons.
 
-## 2026-08-30 · K8 — Proposal only: five frameworks from the lecture series (drafts/, not skills/)
-**Decision:** Do NOT add skills unilaterally. Gap analysis shows five frameworks (growth loops, paywall/subscription, GTM, product vision, stage-gate strategy) absent from the kit; drafts parked in `drafts/from-lecture-series/` pending the owner's call, to be rebuilt via `write-a-skill` if approved.
-**Why:** the owner asked whether the kit was missing these ideas — not for them to be written; and drafts written outside the kit's own process (write-a-skill, scenario-first) don't meet the bar. **Rule reaffirmed:** skills carry no internal-doc links; provenance lives in README only.
-
-## 2026-08-30 · K8 — Five skills distilled from the lecture-notes series
-**Decision:** Add growth-loops, subscription-paywall, go-to-market, product-vision, product-strategy (product/), and enrich advanced-rfm-segmentation with the 11 RFM personas + K-means/elbow appendix. Source: the internal lecture guides v05–v09 and v12 (`[docs] guides/`), which the kit had only partially absorbed (v10, v11, v13).
-**Why:** the guides carried five frameworks with no home in the kit (loops/hooks, paywall psychology + revenue tree, GTM sequencing, vision/systems thinking, stage-gate strategy); each is a recurring product decision. **Rejected:** bundling the guides verbatim (Vietnamese, brand-bound, stale-copy risk) — distilled to English skills with [docs] pointers instead. Scenarios written, not yet run (exit 2).
+## 2026-08-30 · K8 — Five frameworks from the lecture series: proposed, approved, built via write-a-skill
+**Decision:** Gap analysis of the 9 internal lecture guides showed the kit had absorbed 3 (retention analytics, engagement matrix, RFM) and lacked 5 frameworks. First drafted unilaterally — reverted to `drafts/` as proposals (the owner had asked *whether* the kit was missing them, not for them to be written, and drafts skipped the kit's own `write-a-skill` process). Owner then approved all five; rebuilt to the write-a-skill template (Quick start, "Use when" description, <150 lines, scenario-first) and promoted to `skills/product/`: growth-loops, subscription-paywall, go-to-market, product-vision, product-strategy. advanced-rfm-segmentation gained an 11-persona + K-means appendix.
+**Rules reaffirmed:** no internal-doc links inside skills (all `[docs]` tokens removed kit-wide; provenance lives in README only; `[sage]` kept because it is public); new skills go through write-a-skill; scenarios written first and stay exit 2 until run.
+**Rejected:** bundling the guides verbatim (Vietnamese, brand-bound, stale-copy risk).
 
 ## 2026-08-31 · K7 — capture-knowledge-go and port-service removed (46 skills)
 **Decision:** Drop both from the kit (owner's call). `capture-knowledge-go`: a shell without its engine — the stripped adaptation of a SQLite/FTS-backed skill reduced to "explore, then write a Markdown brief", which agents do natively and `zoom-out` already covers in-conversation; its only in-kit consumer was port-service. `port-service`: genuinely strong guardrails (dry-run migrations, read-only source, phase gates) but situational — useful only when a service port/merge is actually planned, and written against a specific Go repo + the non-bundled Go pack. Both survive in the origin repo and git history; re-import when a port is scheduled.

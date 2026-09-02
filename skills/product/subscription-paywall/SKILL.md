@@ -7,6 +7,9 @@ description: "Design paywalls, trials, and pricing pages for subscription produc
 
 > **This skill exists to stop:** locking the one feature that solves the user's pain behind the paywall (so free users never see value), and selling a once-a-month use case as a monthly subscription.
 
+## Quick start
+Paste the current plan/pricing table and ask: *"Which model and which revenue-tree lever?"* You get: freemium / trial / reverse-trial recommendation with reasoning, the hero-feature check, a three-tier table mock, the exact tree branch + measuring event, and one single-variable A/B.
+
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Choose the model:** freemium / free trial / **reverse trial**. Default recommendation for products whose value needs to be *felt* before it is understood: reverse trial (full access, then step down).

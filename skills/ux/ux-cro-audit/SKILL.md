@@ -9,7 +9,7 @@ description: "CRO & Stakeholder Negotiation Suite — ethical conversion optimiz
 
 > 🔀 **Division of labor with ux-review:** this skill covers CONVERSION + NEGOTIATION; general UX quality/usability/heuristics → use `ux-review` (canonical, ships with its own gates).
 
-> 📁 **Source convention:** `[sage]` = upstream Sage repo; `[docs]` = your internal docs repo (optional deep-dives). Missing files: the skill runs on the rules inlined here.
+> 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
 ## 🤖 0. HOW TO USE (agent workflow)
 

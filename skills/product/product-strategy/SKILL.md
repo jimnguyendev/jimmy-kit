@@ -7,6 +7,9 @@ description: "Build a product strategy with validation gates, resource reality, 
 
 > **This skill exists to stop:** strategies that never checked whether resources outlast R&D cost, and launches that jump from prototype to mass rollout because the pilot "looked fine".
 
+## Quick start
+Paste the product idea and get back: classification (breakthrough / platform / derivative), one competitive weapon, the resource-law check with numbers or [ASSUMPTION] flags, a gate plan with exit criteria, and a mission statement — before any roadmap.
+
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Classify the product:** breakthrough (new to the world) · platform (shared foundation for a family) · derivative/incremental (inherits a frame). Classification sets the validation depth — breakthrough runs every gate; derivative may compress early gates. Say which and why.

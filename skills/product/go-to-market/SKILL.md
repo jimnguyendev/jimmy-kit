@@ -7,6 +7,9 @@ description: "Plan a go-to-market for a digital product without throwing it over
 
 > **This skill exists to stop:** "the product is done — marketing, go get users," followed by ad spend into a funnel that loses half its users at onboarding.
 
+## Quick start
+Paste the launch ask ("feature is done, launch it") and get back: the retention gate that must pass before any spend, a co-signed positioning statement, the SAVE table, the journey funnel with one metric per step, and the first segment.
+
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Sequence check first (the million-dollar rule):** Retention → Conversion → Acquisition. If retention of a small organic cohort is unknown, refuse to plan paid acquisition; plan the retention measurement instead.

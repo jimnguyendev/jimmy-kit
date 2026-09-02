@@ -6,7 +6,7 @@ user-invocable: true
 
 # Zero Tech Debt
 
-> 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate internal pack, **not bundled** in this kit — `[docs]`. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
+> 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate pack, **not bundled** in this kit. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
 
 Make the scoped area look as though the intended product and architecture had existed from day one, while preserving every verified external contract.
 

@@ -5,7 +5,7 @@ description: Implement already accepted feature behavior or bug fixes test-first
 
 # TDD (Go) — Vertical-Slice Red/Green/Refactor
 
-> 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate internal pack, **not bundled** in this kit — `[docs]`. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
+> 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate pack, **not bundled** in this kit. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
 
 This skill is the **process layer** on top of `backend-go-testing`. Use it whenever you build a new feature or fix a non-trivial bug in this repo.
 

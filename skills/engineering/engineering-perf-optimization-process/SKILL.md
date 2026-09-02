@@ -77,7 +77,7 @@ Optimizing a cold path that handles 2% of traffic while the hot path is untouche
 
 **If you have not profiled, STOP. Intuition about bottlenecks is wrong ~80% of the time.**
 
-Go-specific profiling methodology (pprof, benchstat) lives in the internal Go skill pack `[docs]` — optional; the process below is language-agnostic.
+Go-specific profiling methodology (pprof, benchstat) belongs to a separate Go skill pack, not bundled here; the process below is language-agnostic.
 
 ### Gate 4: What is the simplest sufficient solution?
 
@@ -134,4 +134,4 @@ A PR that says "improved performance" without these five items is incomplete.
 
 - `engineering-rest-api-design` (this kit) — API contract design before optimization
 - `diagnose` (this kit) — when the "slow" report is really a bug
-- `[docs]` internal Go pack (optional, not bundled): Go performance patterns, observability, benchmarking with benchstat, database query optimization, concurrency primitives
+- Not bundled (separate Go pack): Go performance patterns, observability, benchmarking with benchstat, database query optimization, concurrency primitives

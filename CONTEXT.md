@@ -22,7 +22,7 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Initiative vs Key Result**: an initiative is a bet ("we believe X moves KR Y by Z because…"); a KR is an outcome with metric + baseline + target + date. Shipping an initiative proves nothing about the KR. Owned by `okr-outcome-architect`.
 
-**Source tokens**: `[sage]` = upstream Sage repo (github.com/xoai/sage) · `[docs]` = your internal docs repo. Deep-dives only; skills run without them; a MUST READ step stops and asks when its file is missing.
+**Source token**: `[sage]` = upstream Sage repo (github.com/xoai/sage), public. Skills carry no internal-doc links; provenance is in README. A MUST READ step refers to the user's own project file and stops-and-asks when it is missing.
 
 **Work paths**: where skills write inside the repo they are installed in — everything under `.jimmy/` (one namespaced dir, mirrors upstream `.sage/`): `.jimmy/work/<feature>/` (in-progress artifacts: brief, spec, plan, screenshots, `decisions.md` for that feature) · `.jimmy/docs/` (durable outputs: research briefs, audits, voice & tone) · `.jimmy/decisions.md` (global ADRs) · `.jimmy/adr/NNNN-slug.md` (numbered engineering ADRs) · `.jimmy/constitution.md` (project principles). _Avoid:_ `.sage/`, the target repo's `docs/`, tool-specific paths.
 

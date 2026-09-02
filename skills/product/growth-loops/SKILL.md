@@ -7,6 +7,9 @@ description: "Design and diagnose growth loops and habit hooks instead of one-of
 
 > **This skill exists to stop:** growing by campaigns (spend → spike → decay) instead of by loops (output of one cycle feeds the next), and debating "retention" without a written Active-User definition.
 
+## Quick start
+Paste the product's core action and ask: *"Map the growth loop and its three control metrics."* You get: Trigger → Action → Value → Investment with the gap where the loop fails to close, the three metrics (or which are missing), one lever, and the cohort-curve verdict.
+
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Map the existing loop:** Trigger → Action → Value/Reward → Investment/Output → (feeds the next Trigger). Name each node concretely; if the loop doesn't close, say so — you have a funnel, not a loop.

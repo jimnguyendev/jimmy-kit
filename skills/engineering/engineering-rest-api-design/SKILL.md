@@ -153,7 +153,7 @@ For complex filtering (range, OR, nested), document the query language explicitl
 
 ## Query Collections (Sparse Fieldsets)
 
-When one collection serves several screens with very different costs (public landing vs personalized dashboard vs expanded cards), do not multiply endpoints, return everything, or reach for GraphQL. Use a POST query endpoint with a small whitelisted field/filter grammar. A reference implementation and full rationale live in the internal docs repo `[docs]` (optional).
+When one collection serves several screens with very different costs (public landing vs personalized dashboard vs expanded cards), do not multiply endpoints, return everything, or reach for GraphQL. Use a POST query endpoint with a small whitelisted field/filter grammar. The grammar below is self-sufficient; a reference implementation may exist in your own codebase.
 
 ```
 POST /api/v1/query/{domain}/{collection}
@@ -370,8 +370,8 @@ Every endpoint must be documented with: spec (method, URL, headers, body), reque
 
 - `engineering-design-thinking` (this kit) — decide the contract before implementing it.
 - `domain-modeling` (this kit) — resource names must come from the domain glossary.
-- `[docs]` internal Go pack (optional, not bundled): handler code style, error-handling conventions, pagination SQL patterns, and any project-specific response envelope.
-- For the query-collection grammar (sparse fieldsets + whitelisted filtering), a reference implementation and its design rationale live in the internal docs repo `[docs]` (optional deep-dive; the grammar above is self-sufficient).
+- Not bundled (separate Go pack): handler code style, error-handling conventions, pagination SQL patterns, and any project-specific response envelope.
+- The query-collection grammar (sparse fieldsets + whitelisted filtering) above is self-sufficient; keep any reference implementation in your own codebase.
 
 ## External Sources
 

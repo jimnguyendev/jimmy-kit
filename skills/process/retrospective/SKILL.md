@@ -7,7 +7,7 @@ description: "Use when an A/B test just ended (win or lose — run it either way
 
 > **This skill exists to stop:** incidents passing without producing a rule — or lessons written as "be more careful," which nobody can reuse.
 
-> 📁 **Source convention:** `[sage]` = upstream Sage repo; `[docs]` = your internal docs repo. Missing files: run on the rules inlined here.
+> 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. A/B test retro:** compare the original bet ("we believed X would move KR Y by Z because…") with actuals; if multiple variables were mixed, report "result unreadable" instead of inventing a conclusion.

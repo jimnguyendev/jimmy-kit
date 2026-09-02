@@ -7,7 +7,7 @@ description: Amplitude 4-Quadrant Feature Portfolio & Retention Smile Curve skil
 
 > **This skill exists to stop:** judging features by gut feel or the loudest voice in the room, instead of their real position on the breadth × frequency matrix.
 
-> 📁 **Source convention:** `[sage]` = upstream Sage repo (github.com/xoai/sage); `[docs]` = your internal docs repo (optional deep-dives — adjust paths to your setup). Sources are for deeper reading: if a file is missing, the skill still runs on the rules inlined here. The ONLY exception: a step marked **MUST READ** — if that file is missing, STOP and ask the user instead of improvising.
+> 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Build the 4-quadrant matrix** from MAU/frequency data (median split), with measurement window + source.
