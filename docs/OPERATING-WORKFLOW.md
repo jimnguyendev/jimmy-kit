@@ -2,6 +2,16 @@
 
 Three layers. The spine is Sage's intent spectrum (UNDERSTAND → ENVISION → DELIVER → REFLECT); this kit extends it with an intake thinking layer and a red-team gate.
 
+
+## Dosage — read this before the chains below
+The chains in this document are MAXIMAL maps ("what could apply"), not mandatory pipelines. Using every skill on every problem is bureaucracy — the exact failure `change-tiers` exists to prevent. Rules of thumb:
+- **Start with ONE skill.** Escalate only when its output surprises you or leaves a decision open.
+- **Tier 1 work (small, reversible):** zero skills, or one 5-minute skill (`ux-writing` for a label; `zoom-out` when lost in code).
+- **Tier 2 work:** one or two skills used as a lens (`okr-outcome-architect` mode A for an OKR review; `tracking-architect` for "can we add event X?"; `ux-cro-audit` negotiation mode when the boss dislikes a design).
+- **Tier 3 work (ambiguous, expensive, one-way door):** the full 7-question intake + `product-council`. Realistically 3–5 times a quarter, not daily.
+- **Two signs you are being mechanical:** a skill's output changed none of your decisions (you ran it for show); you needed this table to know the next step (the map is driving you).
+- **Stop early.** "Retention dropped" → `analyst` (is the number real?) → `growth-markov` (which transition leaks) → STOP if the bottleneck is clear; `engagement-matrix`/`advanced-rfm` only when it is not.
+
 ## Layer 1 — Intake: the 7 questions (run in your head first)
 0. How big is this, what does "done" mean, who confirms? → `change-tiers`
 1. What do I actually KNOW? (label [VERIFIED]/[ASSUMPTION]/[GUESS]) → `analyst`

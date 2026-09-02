@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .cache_video/
+
+# Bản dịch song ngữ cá nhân (không commit)
+.learn-vi/
