@@ -1,6 +1,6 @@
 # Jimmy Kit — Product & Engineering Skills
 
-A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini): product discovery, spec discipline, quality gates, analytics, UX, and engineering workflows. 46 skills across 7 categories, organized around one operating loop:
+A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini): product discovery, spec discipline, quality gates, analytics, UX, and engineering workflows. 51 skills across 7 categories, organized around one operating loop:
 
 **UNDERSTAND → ENVISION → DELIVER → REFLECT**, with a 7-question thinking layer on intake and a `product-council` red-team gate before anything gets built or pitched. See `docs/OPERATING-WORKFLOW.md`.
 
@@ -17,7 +17,7 @@ Run `scripts/link-skills.sh` to symlink all 46 skills into `~/.claude/skills` (o
 ## Categories
 | Folder | What's inside |
 |---|---|
-| `skills/product/` | jtbd · opportunity-map · prd · problem-solving · okr-outcome-architect · product-council |
+| `skills/product/` | jtbd · opportunity-map · prd · problem-solving · okr-outcome-architect · product-council · growth-loops · subscription-paywall · go-to-market · product-vision · product-strategy |
 | `skills/ux/` | ux-brief · ux-design · ux-discovery · ux-plan-tasks · ux-review · ux-specify · ux-writing · ux-cro-audit |
 | `skills/process/` | analyst · architect · constitution · decision-log · quality-gates · change-tiers · independent-review · retrospective · routing |
 | `skills/analytics/` | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation |
@@ -29,6 +29,7 @@ Run `scripts/link-skills.sh` to symlink all 46 skills into `~/.claude/skills` (o
 - **Sage** — github.com/xoai/sage: the process backbone (gates, tiers, constitution, review, analyst, architect — bodies kept close to upstream; Sage-runtime commands and `.sage/` paths replaced with kit-runnable equivalents — see docs/DECISIONS.md K5). Renamed here: sage-gates→quality-gates, sage-tiers→change-tiers, sage-decisions→decision-log, sage-review→independent-review, sage-reflect→retrospective, sage-analyst→analyst, sage-architect→architect, sage-constitution→constitution, sage-routing→routing.
 - **sage-product pack** — github.com/xoai/sage-product: jtbd, prd, opportunity-map, problem-solving, ux-brief/design/discovery/plan-tasks/review/specify/writing (close to upstream; same K5 substitutions).
 - **Matt Pocock skills** — github.com/yykui/mattpocockSkills: zoom-out, handoff, write-a-skill, grill-me, grilling, grill-with-docs, diagnose, prototype, triage, orchestrate.
+- Internal lecture series (growth loops, subscription strategy, GTM, product vision, product strategy, retention analytics, RFM) — distilled into growth-loops, subscription-paywall, go-to-market, product-vision, product-strategy and the analytics skills; notes stay in the docs repo (`[docs] guides/`).
 - OKR handbook + stakeholder/UX field lessons: internal materials and public UX Foundation talks, anonymized; examples use a generic edtech context.
 
 ## Conventions

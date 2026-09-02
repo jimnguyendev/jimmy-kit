@@ -28,8 +28,8 @@ The chains in this document are MAXIMAL maps ("what could apply"), not mandatory
 ## Layer 3 — The 4-phase chain
 | Phase | Skills | Produces |
 |---|---|---|
-| UNDERSTAND | analyst · jtbd · ux-discovery · problem-solving · zoom-out · youtube-transcript | Problem statement + jobs + sourced benchmark |
-| ENVISION | opportunity-map · ux-brief · ux-design · prd · ux-specify · ux-writing · ux-plan-tasks | Spec with hard-cases-first + clean copy |
+| UNDERSTAND | analyst · jtbd · ux-discovery · problem-solving · product-vision · zoom-out · youtube-transcript | Problem statement + jobs + sourced benchmark |
+| ENVISION | opportunity-map · product-strategy · ux-brief · ux-design · prd · ux-specify · ux-writing · ux-plan-tasks | Spec with hard-cases-first + clean copy |
 | DELIVER | architect · change-tiers · decision-log · constitution · quality-gates · okr-outcome-architect · the `skills/engineering/` category | 2 options + ADR + gates + bets wired to KRs |
 | REFLECT | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation · ux-review · independent-review · ux-cro-audit · retrospective | Gated metrics + independent review + WHEN/CHECK/BECAUSE lessons |
 
@@ -44,6 +44,11 @@ The chains in this document are MAXIMAL maps ("what could apply"), not mandatory
 8. **A/B test ended / incident closed** → retrospective (WHEN/CHECK/BECAUSE; 5-whys) → decision-log (ADR) → constitution if the new rule needs enforcement.
 9. **Leadership pitch next week** → product-council red-team → 4-line report → 10-slide narrative → tough-question bank.
 10. **Technical decision** (pick a technology, change architecture) → change-tiers → architect (≥2 options + what-happens-when-this-fails) → decision-log → quality-gates.
+
+11. **"How do we grow this?" / ad budget proposed** → go-to-market (retention gate first) → growth-loops (does a loop close?) → only then acquisition.
+12. **"Lock more features to convert free users"** → subscription-paywall (hero-feature check, reverse trial, revenue-tree lever) → single-variable A/B.
+13. **Backlog ordered by loudest voice / "delete the unused feature"** → product-vision (vision sentence, questions-behind-requests, ripple check) → opportunity-map.
+14. **New product or platform proposed** → product-strategy (classify, weapon, resource law, gates, mission) → change-tiers → architect.
 
 ## Five laws that apply to every problem
 1. No [VERIFIED] problem, no solution writing. 2. Exit 2 (unverifiable) is never a pass. 3. Ceremony scales with risk, not size. 4. A rule that matters needs a mechanism, not a reminder. 5. Every claim carries a source + date, or an [ASSUMPTION] label.

@@ -115,3 +115,24 @@ graph TD
 1. [`scripts/jenks_breaks_rfm.py`](scripts/jenks_breaks_rfm.py): Pure Python script to compute 1D Jenks Natural Breaks and calculate $CV$ habit regularity.
 2. [`scripts/rfm_migration_matrix.sql`](scripts/rfm_migration_matrix.sql): SQL query to build the $H_1 \to H_2$ transition matrix.
 3. [`templates/advanced_rfm_executive_report.md`](templates/advanced_rfm_executive_report.md): Executive Markdown report template.
+
+---
+
+## Appendix — the 11 RFM personas and automatic clustering (from lecture 12)
+Score R, F, M on 1–5 and read the combination as a behavioral persona with a default action:
+| Persona (typical codes) | Signal | Default action |
+|---|---|---|
+| Champions (555, 554) | Recent, frequent, high spend | 1:1 care, turn into advocates |
+| Loyal (543, 444) | Steady buyers | Upsell / cross-sell, loyalty program |
+| Potential loyalists (523, 432) | New-ish, decent spend | Related offers, next-purchase voucher |
+| New customers (511, 512) | First purchase | Smooth onboarding, post-purchase care |
+| Promising (412, 312) | Recent, no second purchase yet | Re-order nudges |
+| Need attention (333, 323) | Decent history, going quiet | Satisfaction check, time-boxed offer |
+| About to sleep (222, 212) | Below average, drifting | Re-engagement email, restate value |
+| At risk (255, 244) | Spent a lot before, long absence | Urgent rescue campaign |
+| Can't lose them (155, 144) | Former champions, gone long | Direct call, privileged offer |
+| Hibernating (122, 112) | Long gone, low frequency | Only big-sale pushes, low cost |
+| Lost (111) | Lowest on all three | Ignore or cheap automated remarketing |
+
+**Automatic clustering:** normalize R/F/M first (they live on different scales), then K-means: pick K, seed centroids, assign by Euclidean distance, recompute, iterate to convergence. Choose K with the **elbow plot** (WCSS vs K — take the bend, usually K = 3–4) or silhouette score. Too many clusters (K = 50) overfits and no team can run 50 campaigns. Jenks (this skill's main method) and K-means answer different questions: Jenks finds natural thresholds on one dimension; K-means groups on several.
+📄 Source: `[docs] guides/v12_guide.md`.
