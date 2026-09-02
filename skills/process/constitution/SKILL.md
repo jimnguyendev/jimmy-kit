@@ -64,7 +64,7 @@ here loads.)
 
 **Rule 3 — Document decisions.** Decisions that affect the project get
 recorded — for agents *and* for the humans who arrive later. Specs, plans,
-ADRs, and briefs go to `.jimmy/work/` or `docs/`. Even a Tier 2 task
+ADRs, and briefs go to `.jimmy/work/`, `.jimmy/docs/`, or `.jimmy/adr/`. Even a Tier 2 task
 leaves a record of what was decided and why. Partially mechanical: the
 spec-gate hook blocks source edits while a cycle is `pre-spec`, so the *spec*
 half has teeth. The rest is on you.

@@ -6,6 +6,16 @@ user-invocable: true
 
 # Zero Tech Debt
 
+> **This skill exists to stop:** cleanup from becoming an unbounded rewrite or deleting compatibility whose authority and callers are still unknown.
+
+## 🤖 0. HOW TO USE
+
+- **Execute** (default): remove one accepted structural path in reversible, behavior-preserving slices.
+- **Review**: verify deletion evidence, invariants, compatibility policy, authority, rollback, and accepted end state before editing.
+- **Handoff**: transfer open decisions, candidate discovery, or intentional behavior changes to the canonical owner.
+
+Output: a smaller accepted structure with verified external behavior unchanged and a compatibility/deletion ledger.
+
 > 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate pack, **not bundled** in this kit. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
 
 Make the scoped area look as though the intended product and architecture had existed from day one, while preserving every verified external contract.
@@ -16,8 +26,8 @@ Make the scoped area look as though the intended product and architecture had ex
 
 - Use `engineering-design-thinking` first when the problem, options, or end state are not accepted. This skill does not discover product requirements.
 - Use `codebase-design` to judge module depth, interface size, seam placement, adapters, leverage, locality, and the deletion test.
-- Use `improve-arch-go` to discover and prioritize architecture candidates. This skill executes one agreed, bounded candidate.
-- Use `tdd-go` when behavior changes or a bug is being fixed. For a pure refactor, keep existing behavior tests green after every small step.
+- Use `improve-codebase-architecture` to discover and prioritize architecture candidates. This skill executes one agreed, bounded candidate.
+- Use `tdd-go` when Go behavior changes or a bug is being fixed; for non-Go code use the target project's test-first workflow. For a pure refactor, keep existing behavior tests green after every small step.
 - Use `backend-go-testing` for Go test mechanics and the repository's unit/integration conventions.
 
 ## Routing contract
@@ -46,7 +56,7 @@ For every wrapper, alias, fallback, mode, field, route, or branch considered for
 
 - **Code callers** — direct calls, interfaces, reflection, generated code, tests, registries, constructors, and dependency wiring.
 - **Runtime entry points** — HTTP/gRPC routes, jobs, consumers, events, feature flags, environment configuration, retries, and recovery paths.
-- **External callers** — legacy PHP, mobile/web clients, scoring-service, scripts, documented journeys, and supported old app versions.
+- **External callers** — legacy systems, mobile/web clients, external grading services, scripts, documented journeys, and supported old app versions.
 - **Persisted state** — MySQL/Mongo fields, enum values, historical documents, serialized payloads, Kafka messages, and reconciliation readers.
 - **Operational evidence** — telemetry or production queries when absence of use is part of the deletion argument.
 
@@ -54,12 +64,12 @@ Absence-of-use evidence is valid only when instrumentation is known to cover the
 
 Classify each candidate:
 
-| Classification | Meaning | Action |
-| --- | --- | --- |
-| Dead | Evidence shows no active caller or persisted contract | Delete and prove the direct path |
-| Intentional | Current callers or contracts require it | Keep it; name and test the reason |
+| Classification   | Meaning                                                   | Action                                        |
+| ---------------- | --------------------------------------------------------- | --------------------------------------------- |
+| Dead             | Evidence shows no active caller or persisted contract     | Delete and prove the direct path              |
+| Intentional      | Current callers or contracts require it                   | Keep it; name and test the reason             |
 | Migration bridge | Temporary compatibility has an owner and sunset condition | Keep or remove only when the condition is met |
-| Unknown | Relevant evidence is missing or contradictory | Stop deletion and report the gap |
+| Unknown          | Relevant evidence is missing or contradictory             | Stop deletion and report the gap              |
 
 A repository-local search returning zero results is never sufficient proof for an externally reachable or persisted contract.
 
@@ -82,6 +92,7 @@ For legacy ports, distinguish behavior that executes for the in-scope journey fr
 - Remove mode flags only when the modes are accidental. Keep separate flows when they represent real product lines, lifecycles, permissions, or persistence semantics.
 - Move shared rules to one owning module; do not create a generic utility or framework for one feature.
 - Prefer one authoritative rule over duplicated validation, but preserve checks that intentionally defend separate trust boundaries.
+- State whether the slice reduces, isolates, or accepts complexity. If it only relocates the same state, effects, dependencies, or control flow behind more indirection, reject it as cleanup.
 
 ### 4. Build a behavior ledger
 

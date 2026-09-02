@@ -108,7 +108,7 @@ def calculate_regularity_cv(session_intervals_in_days):
     return round(cv, 3), tier
 
 if __name__ == "__main__":
-    # Test dataset for Prep Practice Lab Revenue & Activity
+    # Test dataset for generic practice-lab revenue and activity
     sample_revenue = [
         50000, 50000, 60000, 75000, 99000, 120000, 150000, 180000,
         450000, 500000, 650000, 790000, 890000, 1200000, 1500000,
@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
     breaks, gvf = compute_jenks_breaks(sample_revenue, num_classes=4)
     print("=" * 65)
-    print("=== JENKS NATURAL BREAKS CLASSIFICATION (PREP LAB REVENUE) ===")
+    print("=== JENKS NATURAL BREAKS CLASSIFICATION (GENERIC PRACTICE LAB REVENUE) ===")
     print(f"Goodness of Variance Fit (GVF): {gvf * 100:.2f}% (Target ≥ 85%)")
     print("-" * 65)
     for i in range(len(breaks) - 1):

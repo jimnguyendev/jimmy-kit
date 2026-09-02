@@ -88,7 +88,7 @@ def analyze_engagement_matrix(features_data, total_mau):
     }
 
 if __name__ == "__main__":
-    # Test dataset for Prep Practice Lab
+    # Test dataset for a generic practice lab
     sample_mau = 20000
     sample_features = [
         {"feature_name": "ai_speaking_part2_grading", "unique_users": 15600, "total_events": 94000},
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     analysis = analyze_engagement_matrix(sample_features, sample_mau)
     
     print("=" * 75)
-    print("=== AMPLITUDE 4-QUADRANT ENGAGEMENT MATRIX (PREP PRACTICE LAB) ===")
+    print("=== AMPLITUDE 4-QUADRANT ENGAGEMENT MATRIX (GENERIC PRACTICE LAB) ===")
     print(f"Total MAU: {analysis['total_mau']:,} | Features Audited: {analysis['total_features']}")
     print(f"Median Breadth: {analysis['median_breadth_pct']}% | Median Frequency: {analysis['median_frequency']} events/user")
     print("=" * 75)

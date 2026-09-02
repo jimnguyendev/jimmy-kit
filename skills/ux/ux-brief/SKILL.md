@@ -142,7 +142,7 @@ Save to `.jimmy/work/<feature>/design-brief.md`:
 # Design Brief: [page/product] Redesign
 
 **Based on:** design-evaluation.md (confirmed by user on [date])
-**Prepared for:** [Sage specify + plan skills]
+**Prepared for:** [`ux-specify` + `ux-plan-tasks`]
 
 ## Objective
 [One sentence: what this redesign achieves]

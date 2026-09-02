@@ -80,12 +80,12 @@
       "id": 7,
       "name": "scoped-architecture-discovery-handoff",
       "prompt": "Before choosing a design, we need evidence about ownership drift and candidate boundaries across catalog, benefit, and authentication. The product outcome is framed, but the current architecture is not yet mapped.",
-      "route": {"from": "engineering-design-thinking", "to": "improve-arch-go"},
+      "route": {"from": "engineering-design-thinking", "to": "improve-codebase-architecture"},
       "expected_output": "Pause design context analysis and hand a bounded evidence-gathering scope to architecture review, with an explicit return condition before option selection.",
       "files": [],
       "assertions": [
         "The agent does not invent architecture evidence",
-        "The agent names improve-arch-go as the next owner",
+        "The agent names improve-codebase-architecture as the next owner",
         "The handoff includes scope, constraints, evidence questions, and return condition",
         "The agent pauses design until scoped discovery returns"
       ]
@@ -93,7 +93,7 @@
     {
       "id": 8,
       "name": "accepted-behavior-handoff",
-      "prompt": "The design brief is approved for an authenticated catalog endpoint. Public behavior, response envelope, pagination, errors, boundaries, risks, and implementation scope are all settled. Implement it test-first.",
+      "prompt": "The design brief is approved for an authenticated catalog endpoint in Go. Public behavior, response envelope, pagination, errors, boundaries, risks, and implementation scope are all settled. Implement it test-first.",
       "route": {"from": "engineering-design-thinking", "to": "tdd-go"},
       "expected_output": "Hand the accepted brief directly to TDD as implementation owner without requesting the same approval again.",
       "files": [],
@@ -134,7 +134,7 @@
     {
       "id": 11,
       "name": "public-api-composes-contract-and-tdd",
-      "prompt": "Design a new public REST endpoint in the backend service, reconcile it with related PHP behavior, then implement it after the contract is approved.",
+      "prompt": "Design a new public REST endpoint in the Go backend service, reconcile it with related PHP behavior, then implement it after the contract is approved.",
       "expected_output": "Compose API-contract design inside the design phase, return for acceptance, and route accepted behavior to TDD; backend-go-testing supplies mechanics inside that owner.",
       "files": [],
       "assertions": [
@@ -142,6 +142,155 @@
         "The contract returns to engineering-design-thinking for the decision",
         "Accepted behavior routes to tdd-go",
         "backend-go-testing does not replace tdd-go as phase owner"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "solution-smuggled-problem-frame",
+      "prompt": "Add Kafka so profile updates appear instantly. We saw one 700 ms dashboard trace and support expects under 300 ms, but no latency breakdown exists.",
+      "expected_output": "Challenge the proposed mechanism and create a solution-free Problem Frame before comparing implementations.",
+      "files": [],
+      "assertions": [
+        "Separates the proposed Kafka solution from the user-visible problem",
+        "Names stakeholders, actual state and evidence, expected state, and the gap",
+        "Labels constraints, assumptions, cause hypotheses, and abstraction level",
+        "Defines success evidence without inventing a baseline"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "first-principles-mode",
+      "prompt": "Our familiar caching pattern conflicts with the consistency requirement in this unfamiliar offline-sync architecture. Derive the decision instead of copying the usual pattern.",
+      "expected_output": "Use first-principles mode to separate evidence from convention and rebuild options from fundamentals with a bounded stopping rule.",
+      "files": [],
+      "assertions": [
+        "Separates verified facts, conventions, and assumptions",
+        "Decomposes one causal layer deeper into fundamentals and interactions",
+        "Derives options rather than treating a known pattern as proof",
+        "Uses a timebox or evidence threshold to prevent analysis paralysis"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "contradiction-before-compromise",
+      "prompt": "We need strict global ordering and maximum write throughput. Pick a reasonable compromise and move on.",
+      "expected_output": "Test whether the apparent trade-off is a removable contradiction before accepting a compromise.",
+      "files": [],
+      "assertions": [
+        "States both desired properties and the condition creating conflict",
+        "Tests separation in time, space, condition, and parts versus whole",
+        "Compares any remaining compromise using benefits, resources, and harmful effects",
+        "Does not promise impossible properties or accept compromise by default"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "expectation-is-part-of-gap",
+      "prompt": "Users expect a live answer for a report that requires a two-hour external data refresh. The current system returns the correct report after the refresh. Frame the problem.",
+      "expected_output": "Treat the problem as an actual-versus-expected gap and consider changing the expectation as well as changing the system.",
+      "files": [],
+      "assertions": [
+        "Identifies the stakeholder and the actual-versus-expected gap",
+        "Separates the underlying job from the demand for a live answer",
+        "Considers expectation design as a legitimate option",
+        "Defines evidence that would show whether the gap is closed"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "close-learning-loop",
+      "prompt": "The design was implemented and shipped. The chosen queue reduced median latency but doubled timeout errors. Update the decision model.",
+      "expected_output": "Connect the original claim and evidence to the decision, observed outcome, and an explicit model update.",
+      "files": [],
+      "assertions": [
+        "Records the original claim and supporting evidence",
+        "Compares the observed outcome with the success evidence",
+        "Updates or reverses the decision rather than defending it",
+        "Captures a reusable model update with scope and limits"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "typescript-backend-complexity",
+      "prompt": "Design a TypeScript order backend that applies pricing rules, writes Postgres, calls a payment gateway, and publishes an event. The team is split between one large OrderService class and rewriting everything as pure functions.",
+      "expected_output": "Classify the complexity and combine explicit functional data flow with role-first object isolation only where state, effects, lifecycle, or adapters require it.",
+      "files": [],
+      "assertions": [
+        "Distinguishes essential domain rules from accidental design complexity",
+        "Scans the relevant mutable-state, side-effect, dependency, control-flow, and code-size axes",
+        "States which complexity is reduced, isolated, or accepted",
+        "Designs messages, roles, and contracts before TypeScript classes",
+        "Uses composition rather than inheritance and rejects both the god class and forced all-functions rewrite",
+        "Separates direct core tests from process-boundary integration evidence"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "simple-crud-counterexample",
+      "prompt": "A local admin-only CRUD path has one handler, one database operation, no domain rules, no external integration, and no expected variants. Should we introduce Functional Core / Imperative Shell and repository interfaces?",
+      "expected_output": "Keep the direct local flow unless evidence shows a real moving part or seam; do not create ceremonial architecture.",
+      "files": [],
+      "assertions": [
+        "Does not impose Functional Core / Imperative Shell",
+        "Does not create an interface for one adapter without a real variation",
+        "Explains that extra layers would relocate or add complexity rather than reduce it",
+        "Recommends verification proportional to the simple database contract"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "non-go-implementation-handoff",
+      "prompt": "The accepted implementation is a TypeScript backend change. Behavior, public contract, scope, and risks are settled. Which owner should receive the implementation handoff?",
+      "expected_output": "Use the target repository's concrete TypeScript test-first workflow, preserving the standard handoff artifact, without routing the code to the Go-only TDD skill.",
+      "files": [],
+      "assertions": [
+        "Does not route TypeScript implementation to tdd-go",
+        "Names the target project's test-first workflow or repository conventions",
+        "Carries accepted behavior, interface, scope, risks, and verification state",
+        "Does not request duplicate design approval"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "go-backend-complexity",
+      "prompt": "Design a Go order backend that applies pricing rules, writes Postgres, calls a payment gateway, and publishes an event. The team proposes either a Java-style interface for every struct or one large service struct.",
+      "expected_output": "Use functions and values to reduce avoidable moving parts, structs and small consumer-owned interfaces to isolate necessary state and effects, and no class-emulation ceremony.",
+      "files": [],
+      "assertions": [
+        "Distinguishes essential domain rules from accidental design complexity and scans the five axes",
+        "States which complexity is reduced, isolated, or accepted",
+        "Uses functions and values for deterministic rules where they remove mutation or temporal coupling",
+        "Uses structs for cohesive state or dependencies and small consumer-owned interfaces only at real seams",
+        "States that an imperative shell does not require classes and rejects interface-per-struct ceremony",
+        "Separates pure core tests from adapter integration or contract tests and critical end-to-end evidence"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "go-package-cycle-philosophy",
+      "prompt": "A Go backend has orders importing inventory to reserve stock, while inventory imports orders to read order state. The team proposes adding common, plus global handlers, services, repositories, and models packages. Redesign the package graph.",
+      "expected_output": "Preserve business-capability locality and a dependency DAG; resolve the cycle through ownership, merge, or a consumer-owned contract rather than technical-layer packages or a common dumping ground.",
+      "files": [],
+      "assertions": [
+        "Defaults to business-capability locality and fewer packages instead of global technical-layer buckets",
+        "Keeps names contextual and types near their owning transport, persistence, or domain boundary",
+        "Requires a directed acyclic dependency graph and identifies Go as compile-time enforcement",
+        "Tries moving responsibility or merging a fake boundary before introducing an interface",
+        "Places any necessary interface at the consumer and rejects common as a vague dumping ground"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "typescript-cycle-is-stack-neutral",
+      "prompt": "A TypeScript backend has billing importing notifications to send receipts, while notifications imports billing to format invoice data. It builds today. Should we ignore the circular import or create a shared service layer?",
+      "expected_output": "Apply the stack-neutral ownership and DAG principle even though TypeScript may permit the import cycle, without manufacturing a generic shared service layer.",
+      "files": [],
+      "assertions": [
+        "Does not ignore the cycle merely because the project builds",
+        "Explains the ownership, hidden-coupling, initialization, or independent-change risk",
+        "Rejects a generic shared layer unless it is a real owned concept",
+        "Uses a small consumer-owned contract only if billing and notifications remain independently owned",
+        "Treats Go as a stronger enforcement example rather than the owner of the design principle"
       ]
     }
   ]

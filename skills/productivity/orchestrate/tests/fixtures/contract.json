@@ -1,0 +1,49 @@
+{
+  "schema_version": "orchestrate.contract.v1",
+  "cycle": {
+    "id": "100",
+    "slug": "orchestrate-flow-v2",
+    "plan_path": "plan.md",
+    "plan_version": "v2",
+    "packet_path": "packet.md"
+  },
+  "recon_gate": [
+    {
+      "id": "RG-001",
+      "status": "PASS",
+      "claim": "The bundled fixture is self-contained",
+      "command": "verify fixture files",
+      "expected": {"files": 4},
+      "observed": {"files": 4}
+    }
+  ],
+  "acceptance": [
+    {"id": "AC-001", "command": "check contract shape", "expected": {"exit_code": 0}},
+    {"id": "AC-002", "command": "check metadata", "expected": {"exit_code": 0}},
+    {"id": "AC-003", "command": "check recon", "expected": {"exit_code": 0}},
+    {"id": "AC-004", "command": "check references", "expected": {"exit_code": 0}},
+    {"id": "AC-005", "command": "check verdicts", "expected": {"exit_code": 0}},
+    {"id": "AC-006", "command": "check document coverage", "expected": {"exit_code": 0}}
+  ],
+  "drift_routes": [
+    {
+      "class": "fixture-drift",
+      "actions": ["repair-fixture"],
+      "evidence_owner": "test owner",
+      "runtime_fix_owner": "skill owner",
+      "allowance_policy": "forbidden"
+    }
+  ],
+  "document_coverage": [
+    {
+      "concept": "evidence ownership",
+      "pattern": "Evidence belongs to an explicit owner.",
+      "files": ["covered/guide.md"]
+    },
+    {
+      "concept": "runtime ownership",
+      "pattern": "Runtime fixes belong to an explicit owner.",
+      "files": ["covered/guide.md"]
+    }
+  ]
+}

@@ -6,12 +6,27 @@ disable-model-invocation: true
 
 # Improve Codebase Architecture
 
+> **This skill exists to stop:** broad refactors from being proposed without scoped architecture evidence, ranked candidates, or a clear decision owner.
+
+## 🤖 0. HOW TO USE
+
+- **Discover** (default): inspect a named area or recent hot spot, then rank deepening candidates in the HTML report.
+- **Review**: test one proposed candidate against boundaries, locality, leverage, deletion evidence, and existing ADRs.
+- **Handoff**: transfer an unsettled decision, accepted behavior change, or accepted cleanup using the canonical routing artifact.
+
+Output: an evidence-backed candidate report. Discovery ranks possibilities; it does not silently accept product behavior, public contracts, migrations, or cleanup authority.
+
 Surface architectural friction and propose **deepening opportunities** — refactors that turn shallow modules into deep ones. The aim is testability and AI-navigability.
 
 This command is _informed_ by the project's domain model and built on a shared design vocabulary:
 
 - Run the `/codebase-design` skill for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, "the interface is the test surface", "one adapter = hypothetical seam, two = real"). Use these terms exactly in every suggestion — don't drift into "component," "service," "API," or "boundary."
+- Read [engineering-philosophy.md](../codebase-design/references/engineering-philosophy.md) when package/module ownership, placement, names, types, or dependency direction are part of the friction.
 - The domain language in `CONTEXT.md` gives names to good seams; ADRs in `.jimmy/adr/` record decisions this command should not re-litigate.
+
+## Routing contract
+
+Read [skill-routing.md](../engineering-design-thinking/references/skill-routing.md) before transferring ownership. Route unsettled behavior, contracts, boundaries, or authority to `engineering-design-thinking`; accepted Go behavior changes to `tdd-go`; accepted non-Go behavior to the target project's test-first workflow; and one accepted behavior-preserving candidate to `zero-tech-debt`.
 
 ## Process
 
@@ -30,9 +45,12 @@ Then use the Agent tool with `subagent_type=Explore` to walk the codebase. Don't
 - Where are modules **shallow** — interface nearly as complex as the implementation?
 - Where have pure functions been extracted just for testability, but the real bugs hide in how they're called (no **locality**)?
 - Where do tightly-coupled modules leak across their seams?
+- Where does a dependency cycle reveal misplaced responsibility or a fake boundary?
 - Which parts of the codebase are untested, or hard to test through their current interface?
 
 Apply the **deletion test** to anything you suspect is shallow: would deleting it concentrate complexity, or just move it? A "yes, concentrates" is the signal you want.
+
+For a cycle, rank remedies in this order: **move responsibility** to its owner; **merge** modules when the boundary is fake; then introduce a small **consumer-owned** contract only when independent ownership is real. Reject a generic `common` extraction or interface-per-implementation proposal unless it improves the dependency DAG and locality rather than relocating coupling.
 
 ### 2. Present candidates as an HTML report
 
@@ -46,6 +64,8 @@ For each candidate, render a card with:
 - **Problem** — why the current architecture is causing friction
 - **Solution** — plain English description of what would change
 - **Benefits** — explained in terms of locality and leverage, and how tests would improve
+- **Complexity treatment** — essential versus accidental; relevant axes; `reduce`, `isolate`, or `accept`; and what the proposal deletes rather than merely relocates
+- **Ownership and dependency direction** — capability owner, locality, allowed DAG edges, forbidden reverse edges, and why the proposed cycle treatment is better
 - **Before / After diagram** — side-by-side, custom-drawn, illustrating the shallowness and the deepening
 - **Recommendation strength** — one of `Strong`, `Worth exploring`, `Speculative`, rendered as a badge
 

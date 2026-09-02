@@ -44,7 +44,7 @@ below still apply. `--ux` uses the `ux-review` skill, which is bundled in this k
 
 ## Step 1: Identify What to Review
 
-If not specified, scan `.jimmy/work/` and `docs/` for recent
+If not specified, scan `.jimmy/work/` and `.jimmy/docs/` for recent
 artifacts. Present them:
 
 Sage: Available for review:

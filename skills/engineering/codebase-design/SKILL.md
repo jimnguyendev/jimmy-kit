@@ -5,6 +5,19 @@ description: Shared vocabulary for designing deep modules. Use when the user wan
 
 # Codebase Design
 
+> **This skill exists to stop:** interface-first refactors from hiding, relocating, or multiplying complexity without improving leverage, locality, or testability.
+
+## 🤖 0. HOW TO USE
+
+- **Design** (default): shape one deep module and its smallest useful interface.
+- **Review**: apply depth, locality, seam, deletion, and complexity-treatment checks to a proposal.
+- **Complexity**: when state, effects, dependencies, control flow, or size drive the decision, read [complexity-management.md](references/complexity-management.md).
+- **Structure**: when package/module ownership, placement, naming, or dependency direction is in scope, read [engineering-philosophy.md](references/engineering-philosophy.md).
+
+Output: a module/interface decision with evidence. If state, effects, dependencies, control flow, or size is the reason for the design, begin with these required fields: `Essential complexity`, `Accidental complexity`, `Axes observed`, `Treatment per axis (reduce/isolate/accept)`, `Complexity deleted versus relocated`, and `Verification by layer`. Do not impose a paradigm or Functional Core / Imperative Shell on simple work.
+
+If package/module structure is central, also emit: `Capability and owner`, `Locality`, `Packages/modules and evidence for each split`, `Names and type placement`, and `Dependency DAG (allowed and forbidden edges)`. For a cycle, show all three candidates in order—`move responsibility`, `merge fake boundary`, `consumer-owned contract`—and select the first sufficient remedy, stating why each earlier candidate did or did not settle the problem. When discussing Go, distinguish its compile-time enforcement from the stack-neutral design principle.
+
 Design **deep modules**: a lot of behaviour behind a small interface, placed at a clean seam, testable through that interface. Use this language and these principles wherever code is being designed or restructured. The aim is leverage for callers, locality for maintainers, and testability for everyone.
 
 ## Glossary
@@ -59,10 +72,12 @@ When designing an interface, ask:
 
 ## Principles
 
+- **Structure serves clarity, not paradigm.** Apply the capability-first, fewer-units, contextual-naming, type-locality, and dependency-DAG defaults in [engineering-philosophy.md](references/engineering-philosophy.md). Depart when the target repository has a stronger accepted rule, but record why locality and one-way dependencies still hold.
 - **Depth is a property of the interface, not the implementation.** A deep module can be internally composed of small, mockable, swappable parts — they just aren't part of the interface. A module can have **internal seams** (private to its implementation, used by its own tests) as well as the **external seam** at its interface.
 - **The deletion test.** Imagine deleting the module. If complexity vanishes, it was a pass-through. If complexity reappears across N callers, it was earning its keep.
 - **The interface is the test surface.** Callers and tests cross the same seam. If you want to test *past* the interface, the module is probably the wrong shape.
 - **One adapter means a hypothetical seam. Two adapters means a real one.** Don't introduce a seam unless something actually varies across it.
+- **Reduce before isolating.** When complexity is central, use [complexity-management.md](references/complexity-management.md) to distinguish essential from accidental complexity and choose `reduce`, `isolate`, or `accept`. Reject a module that merely moves the same complexity behind more indirection.
 
 ## Designing for testability
 
@@ -112,3 +127,5 @@ Good interfaces make testing natural:
 
 - **Deepening a cluster given its dependencies** — see [DEEPENING.md](DEEPENING.md): dependency categories, seam discipline, and replace-don't-layer testing.
 - **Exploring alternative interfaces** — see [DESIGN-IT-TWICE.md](DESIGN-IT-TWICE.md): spin up parallel sub-agents to design the interface several radically different ways, then compare on depth, locality, and seam placement.
+- **Choosing FP, OOP, or a mixed boundary** — see [complexity-management.md](references/complexity-management.md): explicit conditions, TypeScript backend guidance, counterexamples, and verification by layer.
+- **Choosing package/module ownership and dependency direction** — see [engineering-philosophy.md](references/engineering-philosophy.md): business-capability locality, contextual names, type placement, DAGs, and ordered circular-dependency remedies.

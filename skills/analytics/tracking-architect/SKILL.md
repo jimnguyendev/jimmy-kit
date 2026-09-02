@@ -43,7 +43,7 @@ graph LR
 
 ```mermaid
 graph TD
-    subgraph TAXONOMY["5 CORE EVENT CATEGORIES (PREP PRACTICE LAB)"]
+    subgraph TAXONOMY["5 CORE EVENT CATEGORIES (GENERIC PRACTICE LAB)"]
         C1["<b>1. FUNNEL (P0 Conversion):</b><br/>landing_viewed, hero_cta_clicked, price_comparison_hover, demo_error_clicked, diagnostic_lead_saved"]
         C2["<b>2. LAB CORE (Room Interaction):</b><br/>lab_test_started, mic_permission_resolved, speaking_recording_started, speaking_recording_completed, test_submitted"]
         C3["<b>3. AI FEEDBACK (Latency & Quality):</b><br/>ai_grading_requested, ai_stream_first_chunk (TTFB), ai_grading_completed, error_diagnostic_expanded, retake_question_clicked"]

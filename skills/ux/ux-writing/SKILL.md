@@ -70,8 +70,8 @@ The skill works with whatever context is available:
   alongside (or ahead of) visual identity.
 - **Existing copy** — if the product already has interface text, reviewing it
   reveals the current (often implicit) voice and its inconsistencies.
-- **Voice and tone guide** — if one exists (in `docs/` or
-  elsewhere), load it. All microcopy should follow it. If none exists,
+- **Voice and tone guide** — if one exists (in `.jimmy/docs/` or a
+  project-defined location), load it. All microcopy should follow it. If none exists,
   creating one is the first step.
 
 ## Process

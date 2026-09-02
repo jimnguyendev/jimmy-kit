@@ -18,11 +18,11 @@
       "id": 2,
       "name": "multiple-candidates-handoff",
       "prompt": "Clean up catalog architecture, but three competing module end states remain and none has been ranked or selected.",
-      "route": {"from": "zero-tech-debt", "to": "improve-arch-go"},
+      "route": {"from": "zero-tech-debt", "to": "improve-codebase-architecture"},
       "expected_output": "Stop execution and hand the candidate evidence to architecture review for discovery and prioritization.",
       "assertions": [
         "Does not pick an end state",
-        "Names improve-arch-go as the next owner",
+        "Names improve-codebase-architecture as the next owner",
         "Carries candidate scope and available evidence",
         "Does not start cleanup before one candidate is accepted"
       ]
@@ -30,7 +30,7 @@
     {
       "id": 3,
       "name": "behavior-change-handoff",
-      "prompt": "The cleanup is approved, but one slice will intentionally change an observable response and fix a client-facing bug. The desired behavior is settled.",
+      "prompt": "The cleanup is approved, but one Go slice will intentionally change an observable response and fix a client-facing bug. The desired behavior is settled.",
       "route": {"from": "zero-tech-debt", "to": "tdd-go"},
       "expected_output": "Pause cleanup and hand the accepted behavior delta to a RED-GREEN implementation slice, returning only for remaining structural work.",
       "assertions": [

@@ -252,7 +252,7 @@ playbook: ux-design
 requires: [ux-audit, ux-research]
 -->
 
-# UX Evaluate
+## UX Evaluate
 
 Compare what you have against what the category expects. Not to copy
 competitors — to make intentional decisions about what to keep, evolve,
@@ -482,7 +482,7 @@ findings AND your self-assessment:
 ## Mode: Heuristic Review — check against usability heuristics
 
 
-# UX Heuristic Review
+## UX Heuristic Review
 
 Evaluates the implementation against usability heuristics. Runs ALONGSIDE the
 core `quality-review` skill at the review phase. When installed, this review
@@ -600,4 +600,4 @@ Mode: [BUILD light / ARCHITECT full]
 ---
 ## Applied context (edtech) — kit notes
 
-- Upstream (Sage) captured screenshots with its own runtime tool and stored work under `.sage/`; this kit uses any available screenshot tool and the `.jimmy/work/<feature>/` layout (see DECISIONS K5). Skill names in the body are kit names; use `routing` to find the chain.
+- Upstream used its own screenshot runtime and storage convention; this kit uses any available screenshot tool and the `.jimmy/work/<feature>/` layout (see DECISIONS K5). Skill names in the body are kit names; use `routing` to find the chain.

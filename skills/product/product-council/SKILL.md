@@ -1,6 +1,8 @@
 ---
 name: product-council
-description: "A 4-lens red-team council (CEO/Business, Product Director/Strategy, CTO/Engineering, Lead UX/Human) for any feature idea, proposal, or product problem. Use when the user wants an idea stress-tested before building or pitching, says 'debate this', 'council review', 'what will leadership ask', '4 perspectives', or before any leadership presentation."
+description: >-
+  Use when a decision is Tier 3, the user explicitly requests a red-team, debate, council review,
+  pitch review or rehearsal, or the work is a consequential product/platform decision.
 ---
 
 # Product Council — 4-lens red-team debate
@@ -9,7 +11,7 @@ description: "A 4-lens red-team council (CEO/Business, Product Director/Strategy
 
 An INTERNAL red-team: simulate the four toughest reviewers before the idea meets real ones. The lenses are archetypes distilled from real working notes (anonymized); every organization should re-tune the signature questions to its own leadership.
 
-## 🤖 HOW TO RUN (agent workflow)
+## 🤖 0. HOW TO USE
 
 **Step 0 — Enough evidence?** Before convening: does the problem have (a) a problem statement (not a solution in disguise), (b) at least one sourced+dated number, (c) clear scope? Missing → ask the user first; never debate on top of a [GUESS]. If you must proceed anyway (user insists / test harness), tag every assumption [GUESS], cap the verdict at ⚠ or ✗, and make "get the missing evidence" homework #1. Each seat may be written as a labelled 3–6-sentence paragraph (question / hole / acceptance condition) rather than one line. When the verdict is ✗, "next skill" points BACK in the chain (analyst / jtbd), not forward.
 
@@ -78,4 +80,4 @@ Next in chain: [skill]
 ```
 
 ## Position in the 4-phase chain
-UNDERSTAND (analyst, jtbd, ux-discovery) → ENVISION (ux-brief, prd, ux-specify, ux-writing) → **product-council (the gate)** → DELIVER (architect, decision-log, okr-outcome-architect, quality-gates) → REFLECT (tracking-architect, analytics, retrospective).
+UNDERSTAND (analyst, jtbd, ux-discovery) → ENVISION (ux-brief, prd, ux-specify, ux-writing) → **product-council (conditional Tier 3 / explicit red-team gate)** → DELIVER (architect, decision-log, okr-outcome-architect, quality-gates) → REFLECT (tracking-architect, analytics, retrospective).

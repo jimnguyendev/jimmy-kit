@@ -105,7 +105,7 @@ def forecast_growth(current_state_vector, p_matrix, projected_new_users, days=30
     return history
 
 if __name__ == "__main__":
-    # Test run for Prep Practice Lab
+    # Test run for a generic practice lab
     s0 = [1000, 15000, 1200, 500, 6000, 12000, 50000]
     
     # Sample realistic P matrix
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     ]
 
     results = forecast_growth(s0, sample_p, projected_new_users=1200, days=14)
-    print("=== 14-Day DAU Growth Forecast (Prep Practice Lab) ===")
+    print("=== 14-Day DAU Growth Forecast (Generic Practice Lab) ===")
     print(f"{'Day':<5} | {'DAU':<8} | {'Current(C)':<12} | {'At-Risk WAU':<12} | {'WAU':<8} | {'MAU':<8}")
     print("-" * 65)
     for r in results:

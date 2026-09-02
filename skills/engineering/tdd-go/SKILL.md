@@ -5,6 +5,16 @@ description: Implement already accepted feature behavior or bug fixes test-first
 
 # TDD (Go) — Vertical-Slice Red/Green/Refactor
 
+> **This skill exists to stop:** accepted behavior from being implemented in broad horizontal batches, guessed contracts, or tests coupled to private implementation.
+
+## 🤖 0. HOW TO USE
+
+- **Build** (default): implement one accepted behavior at a time through vertical RED -> GREEN -> REFACTOR slices.
+- **Bug fix**: start from one observable failing example after the desired behavior is accepted.
+- **Handoff**: transfer unsettled decisions, broader architecture evidence, or remaining pure cleanup through the canonical routing artifact.
+
+Output: green behavior tests through public interfaces plus a bounded implementation; never an imagined batch of cases written ahead of learning.
+
 > 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate pack, **not bundled** in this kit. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
 
 This skill is the **process layer** on top of `backend-go-testing`. Use it whenever you build a new feature or fix a non-trivial bug in this repo.
@@ -30,6 +40,12 @@ canonical handoff artifact when a route trigger appears, and never encode an uns
 **Bad tests** mock internal collaborators, assert on private state, or duplicate the implementation in the test body. Warning sign: rename an unexported helper and tests break, even though behavior didn't change.
 
 This aligns with `backend-go-testing` rule #5 ("NEVER test implementation details"). The rest of this skill is *how to get there reliably*.
+
+### When implementation changes structure
+
+When an accepted slice creates or moves **packages, types, or interfaces**, read [engineering-philosophy.md](../codebase-design/references/engineering-philosophy.md). Preserve business-capability locality, contextual names without stuttering, types near their owner, and an acyclic import graph. A consumer-side interface is justified only by a real seam, not by every concrete type.
+
+Go enforces package DAGs at compile-time; it does not own the principle. The same one-way dependency rule is stack-neutral. If a cycle appears, move responsibility first, merge a fake boundary second, and introduce a consumer-owned interface only when the modules remain independently owned.
 
 ## Anti-Pattern: Horizontal Slices
 
@@ -107,7 +123,7 @@ Rules per cycle:
 After ALL planned cases pass:
 
 - [ ] Look for duplication across cases (helper, fixture).
-- [ ] Deepen modules: can a complex sequence move behind a simpler interface? (See `engineering-design-thinking` for upfront design, `improve-arch-go` for codebase-wide deepening sweeps.)
+- [ ] Deepen modules: can a complex sequence move behind a simpler interface? (See `engineering-design-thinking` for upfront design, `improve-codebase-architecture` for codebase-wide deepening sweeps.)
 - [ ] Apply Go conventions and the current repository rules in `AGENTS.md`.
 - [ ] Run `make test` (race detector on) + `golangci-lint run` after each refactor step.
 

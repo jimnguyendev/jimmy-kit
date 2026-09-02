@@ -87,7 +87,7 @@ Do not fix before the root cause is confirmed. Do not skip fix scoping — a
 1. Complete all three elicitation rounds (vision, constraints, gaps). Each
    produces visible output. `brief.md` must exist before design begins. Do not
    compress the rounds. Do not skip them because "I understand the system."
-2. Design with ADRs → `docs/` → spec → `.jimmy/work/` → `[A]`/`[R]`
+2. Design with ADRs → `.jimmy/adr/` → spec → `.jimmy/work/` → `[A]`/`[R]`
 3. Milestone plan → `[A]`/`[R]` → phased build; each milestone follows the
    build gates independently.
 

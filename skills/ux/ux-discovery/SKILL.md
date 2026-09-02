@@ -126,7 +126,7 @@ playbook: ux-design
 requires: [ux-audit]
 -->
 
-# UX Research
+## UX Research
 
 Benchmark the current design against category leaders. Not to copy — to
 understand what conventions users already expect, and where intentional

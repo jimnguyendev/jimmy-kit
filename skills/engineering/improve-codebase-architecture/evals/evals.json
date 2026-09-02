@@ -1,0 +1,68 @@
+{
+  "skill_name": "improve-codebase-architecture",
+  "evals": [
+    {
+      "id": 1,
+      "name": "candidate-needs-decision",
+      "prompt": "The scan found three notification-preference owners, but the public opt-out contract and migration authority are unsettled.",
+      "route": {"from": "improve-codebase-architecture", "to": "engineering-design-thinking"},
+      "expected_output": "Return bounded candidate evidence to design for the open contract and authority decision.",
+      "assertions": [
+        "Does not choose the public contract",
+        "Names engineering-design-thinking as the next owner",
+        "Carries candidate evidence and the open decision",
+        "Defines a return condition"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "accepted-behavior-change",
+      "prompt": "One ranked candidate in Go code is accepted. It intentionally changes observable retry behavior, and that behavior and scope are approved.",
+      "route": {"from": "improve-codebase-architecture", "to": "tdd-go"},
+      "expected_output": "Transfer the accepted behavior delta and candidate evidence to a bounded RED-GREEN slice.",
+      "assertions": [
+        "Names tdd-go as the next owner",
+        "Carries the accepted behavior delta and scope",
+        "Does not implement inside discovery",
+        "Preserves a return condition for remaining architecture work"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "accepted-pure-cleanup",
+      "prompt": "One behavior-preserving candidate is ranked and accepted. The deletion test, compatibility evidence, scope, and rollback are settled.",
+      "route": {"from": "improve-codebase-architecture", "to": "zero-tech-debt"},
+      "expected_output": "Transfer the bounded candidate and invariants to cleanup without opening a behavior implementation cycle.",
+      "assertions": [
+        "Names zero-tech-debt as the next owner",
+        "Carries deletion evidence, invariants, and rollback",
+        "Does not route unchanged behavior to TDD",
+        "Does not rerank the accepted candidate"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "discovery-entry",
+      "prompt": "Ownership drift makes the catalog area hard to change. Inspect current architecture and rank bounded deepening candidates; do not decide product behavior.",
+      "expected_output": "Own scoped architecture discovery and produce evidence-backed ranked candidates.",
+      "assertions": [
+        "Scopes the scan before exploring",
+        "Uses architecture evidence and the deletion test",
+        "Ranks candidates without silently approving one",
+        "Keeps product behavior decisions out of discovery"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "candidate-complexity-treatment",
+      "prompt": "A candidate splits a large coordinator into eight interfaces and wrappers but leaves the same mutation, effects, dependencies, and branching in place. Rank it against a candidate that removes two temporal dependencies and isolates the database effect.",
+      "expected_output": "Prefer the candidate that demonstrably reduces and isolates complexity; reject interface count as evidence of architectural improvement.",
+      "assertions": [
+        "Classifies essential and accidental complexity",
+        "Scores relevant complexity axes",
+        "States reduce, isolate, accept, or merely relocate for each candidate",
+        "Does not equate more interfaces with greater depth"
+      ]
+    }
+  ]
+}

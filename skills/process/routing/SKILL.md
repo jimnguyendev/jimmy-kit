@@ -9,7 +9,7 @@ type: system
 
 An always-on dispatcher block carries the keyword map — the trigger. In this kit
 that block is `templates/eager-dispatcher.md`, installed into the target repo's
-`AGENTS.md` (see docs/USAGE.md §3). If it is not installed, use that file's map
+`AGENTS.md`. If it is not installed, use that file's map
 directly as Layer 1. This skill carries the rest: what to do when the keyword
 map misses, how to present the choice, and what routing looks like when it is
 done well.
@@ -96,4 +96,4 @@ with an implementation is not efficiency. It is a wrong answer that took work.
 ---
 
 ## Applied context — kit routing table (not part of the original)
-This kit's concrete routing map lives in `docs/OPERATING-WORKFLOW.md`: 10 real problem shapes → skill chains, plus the 7-question intake layer and the product-council gate. When a request arrives, route by problem shape first (vague metric complaint → analyst+tracking-architect; solution-in-disguise → jtbd+product-council; page optimization → ux-cro-audit; quarterly goals → okr-outcome-architect; retention drop → growth-markov chain; post-test/incident → retrospective+decision-log; tech decision → change-tiers+architect). Time estimates are "guesses wearing a number's clothing" — give ranges with conditions.
+This kit's concrete routing map lives in `docs/OPERATING-WORKFLOW.md`: real problem shapes → conditional skill chains, plus the 7-question intake layer and the risk-dosed product-council gate. Classify dosage first: Tier 1 may act directly, Tier 2 normally uses one or two skills, and Tier 3 uses the full intake plus council. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Stop when the current output settles the decision. When routing is needed, choose by problem shape first (vague metric complaint → analyst+tracking-architect; solution-in-disguise → engineering-design-thinking Problem Frame; page optimization → ux-cro-audit; quarterly goals → okr-outcome-architect; retention drop → growth-markov chain; post-test/incident → retrospective+decision-log; tech decision → change-tiers+architect). Time estimates are "guesses wearing a number's clothing" — give ranges with conditions.

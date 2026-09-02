@@ -18,11 +18,11 @@
       "id": 2,
       "name": "green-exposes-broader-candidate",
       "prompt": "The accepted behavior slice is green. It exposed duplicated repository ownership across three features outside the approved scope. Continue without widening the slice.",
-      "route": {"from": "tdd-go", "to": "improve-arch-go"},
+      "route": {"from": "tdd-go", "to": "improve-codebase-architecture"},
       "expected_output": "Keep the green slice bounded and hand the broader evidence to architecture review for discovery and prioritization.",
       "assertions": [
         "Does not widen the completed slice",
-        "Names improve-arch-go as the next owner",
+        "Names improve-codebase-architecture as the next owner",
         "Carries green-state evidence and candidate scope",
         "Does not assume the candidate is accepted cleanup"
       ]

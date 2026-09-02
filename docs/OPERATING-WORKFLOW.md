@@ -1,4 +1,4 @@
-# Operating Workflow — how the 46 skills fit together
+# Operating Workflow — how the 51 skills fit together
 
 Three layers. The spine is Sage's intent spectrum (UNDERSTAND → ENVISION → DELIVER → REFLECT); this kit extends it with an intake thinking layer and a red-team gate.
 
@@ -11,10 +11,11 @@ The chains in this document are MAXIMAL maps ("what could apply"), not mandatory
 - **Tier 3 work (ambiguous, expensive, one-way door):** the full 7-question intake + `product-council`. Realistically 3–5 times a quarter, not daily.
 - **Two signs you are being mechanical:** a skill's output changed none of your decisions (you ran it for show); you needed this table to know the next step (the map is driving you).
 - **Stop early.** "Retention dropped" → `analyst` (is the number real?) → `growth-markov` (which transition leaks) → STOP if the bottleneck is clear; `engagement-matrix`/`advanced-rfm` only when it is not.
+- **Use `problem-solving` as recovery, not intake.** Trigger it after 3+ failed approaches or when complexity keeps increasing; return its reframed problem to the appropriate phase owner.
 
 ## Layer 1 — Intake: the 7 questions (run in your head first)
 0. How big is this, what does "done" mean, who confirms? → `change-tiers`
-1. What do I actually KNOW? (label [VERIFIED]/[ASSUMPTION]/[GUESS]) → `analyst`
+1. What do I actually KNOW? (label [VERIFIED]/[ASSUMPTION]/[GUESS]) → `analyst`; for engineering decisions capture stakeholder + actual state + expected state + gap → `engineering-design-thinking`
 2. What job is the user hiring us for? → `jtbd`
 3. Which assumption kills everything if wrong — cheapest way to test it? → spike
 4. At least 2 options — and how does each fail? → `architect` + `decision-log`
@@ -22,20 +23,20 @@ The chains in this document are MAXIMAL maps ("what could apply"), not mandatory
 6. What evidence counts as done? → `quality-gates`
 7. How do I say it back in 4 lines? (Bottom line / Verified / NOT verified / Lesson)
 
-## Layer 2 — Mandatory gate before building or pitching
-`product-council` — 4 role lenses (CEO/Business · PD/Strategy · CTO/Engineering · UX/Human); every seat must state its acceptance condition. Verdict ⚠/✗ → back to Layer 1.
+## Layer 2 — Conditional red-team gate
+Run `product-council` as part of the full Tier 3 flow. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. The council uses 4 role lenses (CEO/Business · PD/Strategy · CTO/Engineering · UX/Human); every seat must state its acceptance condition. Verdict ⚠/✗ → back to Layer 1.
 
 ## Layer 3 — The 4-phase chain
 | Phase | Skills | Produces |
 |---|---|---|
-| UNDERSTAND | analyst · jtbd · ux-discovery · problem-solving · product-vision · zoom-out · youtube-transcript | Problem statement + jobs + sourced benchmark |
+| UNDERSTAND | analyst · jtbd · ux-discovery · product-vision · zoom-out · youtube-transcript | Problem statement + jobs + sourced benchmark |
 | ENVISION | opportunity-map · product-strategy · ux-brief · ux-design · prd · ux-specify · ux-writing · ux-plan-tasks | Spec with hard-cases-first + clean copy |
 | DELIVER | architect · change-tiers · decision-log · constitution · quality-gates · okr-outcome-architect · the `skills/engineering/` category | 2 options + ADR + gates + bets wired to KRs |
 | REFLECT | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation · ux-review · independent-review · ux-cro-audit · retrospective | Gated metrics + independent review + WHEN/CHECK/BECAUSE lessons |
 
-## Ten real problems → skill chains
-1. **"Conversion is low, do something"** → analyst (label the claim) → tracking-architect (is the number gated?) → jtbd → product-council → prd → okr-outcome-architect → quality-gates → retrospective.
-2. **"Just build feature X"** (solution smuggled into the brief) → 7 questions flip it → jtbd → product-council (PD seat catches solution bias) → opportunity-map → prd.
+## Real problems → skill chains
+1. **"Conversion is low, do something"** → analyst (label the claim) → tracking-architect (is the number gated?) → jtbd → product-council (when Tier 3, explicit, or consequential) → prd → okr-outcome-architect → quality-gates → retrospective.
+2. **"Just build feature X"** (solution smuggled into the brief) → `engineering-design-thinking` Problem Frame (actual/expected gap; no solution words) → jtbd when the user job is unclear → product-council (when Tier 3, explicit, or consequential) → opportunity-map → prd.
 3. **Audit / optimize a landing or pricing page** → ux-cro-audit (15-topic table) → ux-writing → tracking-architect (before/after events) → single-variable A/B.
 4. **"Boss dislikes the design" / popup demands** → ux-cro-audit negotiation mode (stakeholder fear map; change the trigger, don't ban the goal).
 5. **Write or review quarterly OKRs** → okr-outcome-architect → OKR–initiative matrix → weekly confidence check-ins.
@@ -43,7 +44,7 @@ The chains in this document are MAXIMAL maps ("what could apply"), not mandatory
 7. **"Retention is dropping"** → growth-markov-duolingo (which transition leaks) → engagement-matrix-analytics (which feature retains) → advanced-rfm-segmentation (which segment to save) → okr-outcome-architect (bet wired to a KR).
 8. **A/B test ended / incident closed** → retrospective (WHEN/CHECK/BECAUSE; 5-whys) → decision-log (ADR) → constitution if the new rule needs enforcement.
 9. **Leadership pitch next week** → product-council red-team → 4-line report → 10-slide narrative → tough-question bank.
-10. **Technical decision** (pick a technology, change architecture) → change-tiers → architect (≥2 options + what-happens-when-this-fails) → decision-log → quality-gates.
+10. **Technical decision** (pick a technology, change architecture) → change-tiers → engineering-design-thinking (Problem Frame → first principles when needed → options/contradictions) → architect for specialist option stress → decision-log → quality-gates.
 
 11. **"How do we grow this?" / ad budget proposed** → go-to-market (retention gate first) → growth-loops (does a loop close?) → only then acquisition.
 12. **"Lock more features to convert free users"** → subscription-paywall (hero-feature check, reverse trial, revenue-tree lever) → single-variable A/B.

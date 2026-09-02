@@ -1,5 +1,5 @@
 /**
- * Prep Practice Lab: Type-Safe 5W1H Analytics Event Schemas
+ * Generic Practice Lab: Type-Safe 5W1H Analytics Event Schemas
  * Standard: TypeScript + Zod v3
  */
 

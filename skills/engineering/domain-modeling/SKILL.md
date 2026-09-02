@@ -5,6 +5,16 @@ description: Build and sharpen a project's domain model. Use when the user wants
 
 # Domain Modeling
 
+> **This skill exists to stop:** domain terms, boundaries, and load-bearing decisions from drifting across code, conversations, and future architecture work.
+
+## 🤖 0. HOW TO USE
+
+- **Model** (default): challenge and record one concept, its preferred name, avoided synonyms, and boundary.
+- **Clarify**: sharpen a fuzzy term with edge cases and update the relevant `CONTEXT.md` immediately.
+- **Decide**: record a load-bearing domain or architecture choice under `.jimmy/adr/` with losing alternatives.
+
+Output: the smallest glossary or ADR update needed to keep the project's ubiquitous language coherent.
+
 Actively build and sharpen the project's domain model as you design. This is the *active* discipline — challenging terms, inventing edge-case scenarios, and writing the glossary and decisions down the moment they crystallise. (Merely *reading* `CONTEXT.md` for vocabulary is not this skill — that's a one-line habit any skill can do. This skill is for when you're changing the model, not just consuming it.)
 
 ## File structure
@@ -14,7 +24,7 @@ Most repos have a single context:
 ```
 /
 ├── CONTEXT.md
-├── docs/
+├── .jimmy/
 │   └── adr/
 │       ├── 0001-event-sourced-orders.md
 │       └── 0002-postgres-for-write-model.md

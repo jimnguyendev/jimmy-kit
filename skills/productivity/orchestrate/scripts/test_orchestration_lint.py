@@ -21,11 +21,11 @@ from typing import Callable
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_ROOT = SCRIPT_DIR.parent
-REPO_ROOT = SKILL_ROOT.parents[2]
 LINTER = SCRIPT_DIR / "orchestration_lint.py"
-CONTRACT_SOURCE = REPO_ROOT / ".orchestrate" / "contracts" / "100-orchestrate-flow-v2.json"
-PLAN_SOURCE = REPO_ROOT / ".orchestrate" / "plans" / "100-orchestrate-flow-v2.md"
-PACKET_SOURCE = REPO_ROOT / ".orchestrate" / "packets" / "100-orchestrate-flow-v2.md"
+FIXTURE_ROOT = SKILL_ROOT / "tests" / "fixtures"
+CONTRACT_SOURCE = FIXTURE_ROOT / "contract.json"
+PLAN_SOURCE = FIXTURE_ROOT / "plan.md"
+PACKET_SOURCE = FIXTURE_ROOT / "packet.md"
 
 
 class Fixture:
@@ -54,7 +54,7 @@ class Fixture:
 
         for item in self.contract["document_coverage"]:
             for relative_file in item["files"]:
-                source = REPO_ROOT / relative_file
+                source = FIXTURE_ROOT / relative_file
                 destination = self.root / relative_file
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(source, destination)
@@ -261,7 +261,7 @@ class OrchestrationLintTests(unittest.TestCase):
             path: path.read_bytes()
             for item in json.loads(CONTRACT_SOURCE.read_text(encoding="utf-8"))["document_coverage"]
             for relative_file in item["files"]
-            for path in [REPO_ROOT / relative_file]
+            for path in [FIXTURE_ROOT / relative_file]
         }
 
         contract = json.loads(CONTRACT_SOURCE.read_text(encoding="utf-8"))

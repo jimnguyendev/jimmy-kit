@@ -6,10 +6,16 @@
 ## Jimmy Kit — route every request (always-on)
 
 Before any substantial response: check whether a Jimmy Kit skill covers this.
-If one does, read it and follow it. Keyword match first — deterministic:
+Choose by the current problem state before topic keywords. An implementation verb does not prove the problem, contract, or boundary is accepted. Then use the deterministic map:
+
+Dose the workflow before following the map:
+- **Tier 1:** act directly or use one short skill; no menu or council.
+- **Tier 2:** announce and proceed with one or two relevant skills; stop when the decision is resolved.
+- **Tier 3:** run the full intake and council gate.
 
 | Request mentions | Go to |
 |---|---|
+| proposed solution is named but stakeholder / actual state / expected state / evidence is unclear | `engineering-design-thinking` → Problem Frame |
 | build / implement / create / add / ship / feature | `change-tiers` → (spec? if none: `prd`) → engineering skills → `quality-gates` |
 | fix / bug / error / crash / failing / debug | `diagnose` |
 | architect / redesign / migrate / rewrite / "which technology" | `architect` → `decision-log` |
@@ -25,10 +31,10 @@ If one does, read it and follow it. Keyword match first — deterministic:
 
 One match → announce it and go. Several → present them as options.
 None, or the request is ambiguous → load the `routing` skill (classifier fallback
-+ confirmation format); the 10 problem-shape chains live in the kit's
++ confirmation format); the problem-shape chains live in the kit's
 `docs/OPERATING-WORKFLOW.md`.
 
 Two standing rules on top of the map:
-- **Gate:** before building or pitching anything new, run `product-council`; verdict ⚠/✗ means back to the problem, not forward to code.
+- **Gate:** run `product-council` as part of the full Tier 3 flow. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Verdict ⚠/✗ means back to the problem, not forward to code.
 - **Constitution:** the five base principles in the `constitution` skill bind every change — tests before code, no silent failures, secrets never in code, dependencies explicit and pinned, changes reversible.
 - **Evidence:** no `[VERIFIED]` problem → no solution writing; label every claim `[VERIFIED]` / `[ASSUMPTION]` / `[GUESS]`; never invent numbers or baselines.

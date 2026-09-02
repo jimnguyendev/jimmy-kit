@@ -18,7 +18,29 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Gate**: a checkpoint that blocks progress until evidence exists — never a reminder. A checklist line without a required-evidence column is a "confidence tick", not a gate.
 
-**Council seat**: one of four anonymized reviewer archetypes in `product-council` (CEO/Business, PD/Strategy, CTO/Engineering, UX/Human). A seat must state its **acceptance condition**; criticism without one is out of order.
+**Problem Frame**: the decision artifact that names owner and stakeholders, evidence-backed actual state, expected state, the gap and why it matters, abstraction level, constraints, assumptions, cause hypotheses, success evidence, and out-of-scope boundaries. It must be solution-free. Owned by `engineering-design-thinking`.
+
+**First-principles mode**: a bounded derivation that separates facts, conventions, and assumptions; decomposes to testable fundamentals; maps their interactions; and rebuilds options. It is used when evidence and familiar patterns conflict, not as permission for endless analysis.
+
+**Solution ideality**: `Benefits / (Resources Required + Harmful Effects)`. It is a comparison lens, not fake precision; every term needs evidence or an assumption label.
+
+**Contradiction**: an apparent need for opposite properties under the same condition. Test separation in time, space, condition, or parts/whole before accepting a compromise; if separation does not work, record the real trade-off and decision authority.
+
+**Learning record**: `Claim -> Evidence -> Decision -> Outcome -> Model update`. Shipping closes implementation, not learning; the observed outcome must update, narrow, or reverse the decision model.
+
+**Essential vs accidental complexity**: essential complexity belongs to the real domain, required state, failure, or coordination; accidental complexity comes from a design choice. The five scan axes are shared mutable state, side effects, dependencies, control flow, and code size.
+
+**Complexity treatment**: `reduce` removes an unnecessary moving part · `isolate` puts a necessary moving part behind one owner and a small interface · `accept` keeps essential complexity explicitly. Moving it behind more indirection is relocation, not improvement.
+
+**Functional Core / Imperative Shell**: an optional architecture in which explicit value transformations and domain rules form the core while required state, effects, dependencies, and coordination stay in the shell. It is not a mandate to use functions everywhere or classes in the shell.
+
+**Feature-first locality**: organize code around a business capability so the behavior, transport, persistence mapping, and feature-local types that change together remain close. It is a default, not permission to ignore a target repository's accepted architecture.
+
+**Dependency DAG**: a one-way directed acyclic graph of package/module dependencies. Go enforces package cycles at compile time; other stacks may not, but the ownership and coupling principle is stack-neutral.
+
+**Consumer-owned contract**: the smallest role/interface defined by the module that needs the behavior, satisfied by a provider and wired at the composition root. Use it for a real independent seam, not for every implementation or as the first response to a cycle.
+
+**Council seat**: one of four anonymized reviewer archetypes in `product-council` (CEO/Business, PD/Strategy, CTO/Engineering, UX/Human). A seat must state its **acceptance condition**; criticism without one is out of order. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3.
 
 **Initiative vs Key Result**: an initiative is a bet ("we believe X moves KR Y by Z because…"); a KR is an outcome with metric + baseline + target + date. Shipping an initiative proves nothing about the KR. Owned by `okr-outcome-architect`.
 
@@ -28,7 +50,7 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 ## Relationships
 - The `routing` skill dispatches problems to skill chains (map: `docs/OPERATING-WORKFLOW.md`).
-- `product-council` gates the ENVISION → DELIVER transition.
+- `product-council` gates the full Tier 3 flow. Direct explicit red-team/pitch and consequential product/platform requests are council-only exceptions to the default Tier 1/Tier 2 bypass.
 - Every self-authored skill carries a Failure statement and a HOW-TO-USE section; canonical upstream bodies stay close to upstream, minus Sage-runtime commands/paths (K5).
 
 ## Flagged ambiguities

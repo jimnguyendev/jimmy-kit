@@ -11,7 +11,7 @@ from pathlib import Path
 
 SKILLS = (
     "engineering-design-thinking",
-    "improve-arch-go",
+    "improve-codebase-architecture",
     "tdd-go",
     "zero-tech-debt",
 )
@@ -23,10 +23,26 @@ def fail(message: str) -> None:
 
 
 def frontmatter_description(text: str, path: Path) -> str:
-    match = re.search(r'^description:\s*["\']?(.*?)["\']?\s*$', text, re.MULTILINE)
+    match = re.search(r"^description:\s*(.*?)\s*$", text, re.MULTILINE)
     if not match:
         fail(f"missing description in {path}")
-    return match.group(1)
+    value = match.group(1).strip().strip("\"'")
+    if value not in (">", ">-", "|", "|-"):
+        return value
+
+    lines = text[match.end() :].splitlines()
+    block: list[str] = []
+    for line in lines:
+        if not line.strip():
+            if block:
+                break
+            continue
+        if not line.startswith((" ", "\t")):
+            break
+        block.append(line.strip())
+    if not block:
+        fail(f"empty block description in {path}")
+    return " ".join(block)
 
 
 def load_evals(path: Path) -> list[dict[str, object]]:
@@ -45,7 +61,8 @@ def load_evals(path: Path) -> list[dict[str, object]]:
 
 def main() -> None:
     root = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path.cwd()
-    skills_root = root / ".agents" / "skills"
+    installed_root = root / ".agents" / "skills"
+    skills_root = installed_root if installed_root.is_dir() else root / "skills" / "engineering"
     reference = skills_root / "engineering-design-thinking" / "references" / "skill-routing.md"
     reference_text = reference.read_text()
 
@@ -99,7 +116,7 @@ def main() -> None:
         if reference_text.count(marker) + reference_text.count(reverse_marker) != 1:
             fail(f"canonical matrix must contain pair exactly once: {a} <-> {b}")
 
-    stale_tokens = ("jimmy-skills@", "sqlc queries", "MyVocab")
+    stale_tokens = ("legacy-pack@", "sqlc queries")
     for token in stale_tokens:
         engineering_text = (skills_root / "engineering-design-thinking" / "SKILL.md").read_text()
         if token in reference_text or token in engineering_text:

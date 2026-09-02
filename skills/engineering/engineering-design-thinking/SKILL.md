@@ -1,256 +1,118 @@
 ---
 name: engineering-design-thinking
-description: "Decide and approve non-trivial engineering changes before implementation. Use for /design, scoping or reviewing a proposed change, new public contracts, multi-file or multi-concern features, and unsettled architecture choices."
+description: >-
+  Decide and approve non-trivial engineering changes before implementation. Use for /design,
+  scoping or reviewing a proposed change, solution-shaped requests, new public contracts,
+  multi-file features, and unsettled architecture choices.
 user-invocable: true
 license: MIT
-compatibility: "Designed for Claude Code or similar AI coding agents. Stack-agnostic — works for backend, frontend, or full-stack features."
+compatibility: "Stack-agnostic; designed for AI coding agents."
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 allowed-tools: Read Edit Write Glob Grep Bash(git:*) Agent WebFetch WebSearch AskUserQuestion
 ---
 
-# Design Thinking Process
+# Engineering Design Thinking
 
-Use this skill before writing code for any feature that is non-trivial.
+> **This skill exists to stop:** solution-shaped requests, familiar patterns, and elegant diagrams from replacing a verified problem and an evidence-backed engineering decision.
 
-**Non-trivial** = touches multiple files, introduces a new concept, changes data flow, adds a dependency, or requires a migration.
+## 🤖 0. HOW TO USE
 
-## Core Principle
+Choose one mode:
 
-Programming is thinking, not typing.
-AI can produce 10,000 lines per day. The engineering problem is deciding which lines matter.
+- **Think** (default): pass all five gates, then present a design brief for acceptance.
+- **Review**: score an existing proposal against the gates; do not repair skipped gates silently.
+- **Scope**: identify the smallest investigation that can settle the highest-risk gate.
+- **First principles**: use when the system is unfamiliar, high-risk, novel, or a familiar pattern conflicts with evidence. Read [first-principles.md](references/first-principles.md).
 
-This skill enforces that decision process through five gates.
-No implementation begins until all gates are satisfied.
+Outputs: a Problem Frame, option comparison, architecture sketch, accepted-decision handoff, and a post-delivery model update. Do not implement before the design is accepted. Skip the full flow for a small, reversible question whose behavior and boundary are already clear.
 
-## Modes
+## 1. Gate 1 — Frame the problem
 
-### Think mode (default)
+Complete [problem-frame.md](references/problem-frame.md). The gate fails unless the frame names:
 
-Walk through all five gates. Produce a design brief at the end.
-Refuse to write implementation code until the brief is accepted.
+- the decision owner and affected stakeholders;
+- actual state with evidence, expected state, and the gap between them;
+- why the gap matters, at the right abstraction level;
+- constraints, labelled assumptions, cause hypotheses, and success evidence.
 
-### Review mode
+Write the problem without the proposed solution. A stakeholder expectation can be wrong or poorly designed; closing the gap may mean changing reality, expectation, or both.
 
-Given an existing design or PR, evaluate it against the five gates.
-Flag any gate that was skipped or insufficiently addressed.
+## 2. Gate 2 — Read the current system
 
-### Scope mode
+Inspect relevant code, data flow, dependencies, recent history, deployment constraints, and accepted ADRs. Separate:
 
-Given a feature request, determine scope boundaries and identify which gates require the most attention. Output a prioritized checklist.
+- `[VERIFIED]` current evidence;
+- `[ASSUMPTION]` claims with a way to check;
+- conventions or patterns that are useful precedent but not proof.
 
----
+If architecture health or ownership is unknown, route a bounded evidence question to `improve-codebase-architecture`. Do not invent the missing map.
 
-## The Five Gates
+## 3. Gate 3 — Derive and compare options
+
+List at least two materially different options. If analogy or convention is doing the reasoning, switch to [first-principles.md](references/first-principles.md) and rebuild the options from fundamentals and interactions.
+
+Compare each option using:
 
 ```text
-  "Build feature X"
-        │
-        ▼
-  ┌─ GATE 1 ─┐     What is the real problem?
-  │  Problem  │     Requirements? Constraints? Who benefits?
-  └─────┬─────┘
-        ▼
-  ┌─ GATE 2 ─┐     What exists today?
-  │  Context  │     Codebase state? Dependencies? Team constraints?
-  └─────┬─────┘
-        ▼
-  ┌─ GATE 3 ─┐     What are the options?
-  │  Options  │     Solution ideality? Trade-off resolution?
-  └─────┬─────┘
-        ▼
-  ┌─ GATE 4 ─┐     How should it be structured?
-  │  Design   │     Boundaries? Data flow? Failure modes?
-  └─────┬─────┘
-        ▼
-  ┌─ GATE 5 ─┐     What skills guide implementation?
-  │  Routing  │     Which skills, in what order?
-  └───────────┘
-```
-
-### Gate 1: Problem Framing
-
-Do not start with "how." Start with "what" and "why."
-
-| Question | Must answer |
-|----------|-------------|
-| What is the user-facing outcome? | One sentence, no jargon |
-| What are the functional requirements? | List, prioritized |
-| What are the non-functional requirements? | Latency, throughput, availability, security |
-| What assumptions are we making? | Label each as verified or unverified |
-| What is NOT in scope? | Explicit exclusions prevent creep |
-
-**Anti-patterns:**
-
-- Jumping to solution before understanding the problem
-- Anchoring on the first framing without challenging it
-- Treating vague requirements as constraints ("it should be fast" is not a requirement)
-
-### Gate 2: Context Analysis
-
-Understand the existing system before proposing changes.
-
-| Question | Must answer |
-|----------|-------------|
-| What code exists in this area? | Files, packages, data flow |
-| What are the existing dependencies? | Internal and external |
-| What is the team's expertise? | Relevant tech stack experience |
-| What is the deployment environment? | Infra constraints, scaling model |
-| What is the timeline? | Hard deadline vs. flexible |
-| What tech debt is in the path? | Must fix vs. can work around |
-
-**Actions:**
-
-1. Read the relevant code before proposing anything
-2. Check git history for recent changes in the area
-3. Identify existing patterns the codebase uses
-4. Note any friction points that will affect implementation
-
-### Gate 3: Solution Evaluation
-
-Evaluate options by Solution Ideality, not by elegance.
-
-```
 Solution Ideality = Benefits / (Resources Required + Harmful Effects)
 ```
 
-- **Resources**: time, cost, people, infrastructure
-- **Harmful effects**: known AND unknown (coupling, operational burden, maintenance cost)
-- A solution that looks clean but introduces hidden coupling scores low
+Count time, people, money, infrastructure, coupling, operational load, migration risk, and unknown harmful effects. Do not choose novelty, familiarity, or a numeric ratio without explaining the evidence behind it.
 
-**Process:**
+When two desirable properties appear to conflict, apply [contradiction-resolution.md](references/contradiction-resolution.md) before accepting a compromise. Some trade-offs are real; others are removable coupling.
 
-1. List at least 2 distinct approaches (avoid single-option bias)
-2. For each approach, score: benefits, resources, harmful effects
-3. Identify trade-offs — then ask: is this a real trade-off or coupling in disguise?
-4. If it is coupling, resolve it (separate concerns) instead of picking a side
-5. Choose the approach with the highest ideality ratio
+## 4. Gate 4 — Make the architecture decision
 
-**Anti-patterns:**
+When state, effects, dependencies, control flow, or code size are central, read [complexity-management.md](../codebase-design/references/complexity-management.md). Classify essential versus accidental complexity and choose `reduce`, `isolate`, or `accept` per relevant axis. Functional Core / Imperative Shell is one possible result, not the default. Design messages and roles before choosing classes.
 
-- Evaluating only one option
-- Choosing the most "interesting" or "modern" approach
-- Over-engineering for hypothetical future requirements
-- Under-engineering because "we can refactor later"
+When package/module ownership or placement is in scope, read [engineering-philosophy.md](../codebase-design/references/engineering-philosophy.md). Default to business-capability locality, fewer units, short contextual names, types near their owner, and a dependency DAG. A repository's accepted alternative may override feature-first organization, but it must preserve explicit ownership and one-way dependencies. Classify contention as convergent or distributed when concurrency affects the architecture.
 
-### Gate 4: Architecture Decision
+Produce a compact sketch:
 
-Structure the solution before writing it.
-
-| Decision | Criteria |
-|----------|----------|
-| Feature-first or layer-first? | Default: feature-first unless strong reason |
-| How many packages/modules? | Start with fewer, split only when pain appears |
-| What are the boundaries? | Each unit should own one business capability |
-| What is the dependency direction? | Must form a DAG — no cycles |
-| What is the data flow? | Request → processing → persistence → response |
-| What are the failure modes? | Network, timeout, partial failure, data inconsistency |
-| What is the contention model? | Low contention vs. high contention → different patterns |
-
-**Output:** A brief architecture sketch — not a diagram tool, just text:
-
-```
-Feature: [name]
-Packages: [list with one-line responsibility each]
-Dependencies: [A → B → C, no cycles]
-Data flow: [request path, happy and error]
-Key decisions: [1-3 non-obvious choices with rationale]
+```text
+Feature: user-visible capability
+Modules: responsibility and owner of each boundary
+Structure: capability locality, evidence for each split, names and type placement
+Dependencies: one-way DAG, allowed edges, forbidden reverse edges, cycle treatment
+Data flow: happy path and error path
+Failure modes: timeout, partial failure, inconsistency, rollback
+Decisions: 1-3 non-obvious choices and losing alternatives
 ```
 
-### Gate 5: Skill Routing
+Prefer fewer, deeper modules; split when evidence shows a distinct capability or change boundary. Resolve a cycle by moving responsibility, merging a fake boundary, or—only at a real independent seam—introducing a consumer-owned contract wired from the composition root. Make external contracts, migration/compatibility policy, contention, observability, and rollback explicit when relevant.
 
-Map the implementation to the right skills in the right order.
+## 5. Gate 5 — Transfer ownership deliberately
 
-Routing is compositional: a task can need a contract specialist inside the design phase and a different
-owner for execution. Do not choose only one row when multiple concerns apply.
+Read [skill-routing.md](references/skill-routing.md). Select one current phase owner:
 
-| Concern | Phase owner or specialist | Required continuation |
-|---|---|---|
-| Problem, option, architecture, or public-contract decision | `engineering-design-thinking` | Accept one design before execution |
-| REST contract details | `engineering-rest-api-design` | Return here for acceptance; then use the execution owner |
-| Scoped architecture evidence or candidate ranking | `improve-arch-go` | Return here when a decision remains |
-| New or changed observable behavior | `tdd-go` | Use `backend-go-testing` for mechanics inside the TDD cycle |
-| Accepted behavior-preserving cleanup | `zero-tech-debt` | Route any discovered behavior delta through `tdd-go` |
-| Go package/database/performance mechanics | Relevant `backend-go-*` skill | Use inside the current phase owner; do not replace it |
+| Current state | Owner |
+|---|---|
+| Problem, option, contract, boundary, or authority unsettled | `engineering-design-thinking` |
+| Architecture evidence or candidate ranking needed | `improve-codebase-architecture` |
+| Accepted observable behavior needs Go implementation | `tdd-go` |
+| Accepted observable behavior needs non-Go implementation | Target project's test-first workflow |
+| Accepted behavior-preserving cleanup needs execution | `zero-tech-debt` |
 
-**Output:** An ordered skill sequence for the implementation phase.
+Specialists such as `engineering-rest-api-design`, `architect`, or a project testing guide can operate inside a phase. They do not replace its owner. Emit the canonical handoff artifact instead of restarting discovery or asking for approval already carried by the handoff.
 
-### Routing contract
+## Design brief
 
-Before Gate 5, read and apply the canonical [skill-routing.md](references/skill-routing.md). This skill owns
-decisions, not architecture discovery or implementation. Emit the canonical handoff artifact, transfer
-phase ownership, and resume only when its return condition is satisfied.
-
----
-
-## Design Brief Template
-
-After all five gates are satisfied, produce this brief:
-
-```
-## Design Brief: [Feature Name]
-
-### Problem
-[One paragraph from Gate 1]
-
-### Context
-[Key findings from Gate 2]
-
-### Chosen Approach
-[Selected option from Gate 3 with ideality rationale]
-
-### Architecture
-[Sketch from Gate 4]
-
-### Implementation Plan
-[Ordered skill sequence from Gate 5]
-[Estimated scope: files to create/modify]
-
-### Risks & Mitigations
-[From failure mode analysis in Gate 4]
-
-### Out of Scope
-[Explicit exclusions from Gate 1]
+```text
+Problem Frame: stakeholder, actual, expected, gap, evidence, level, constraints
+Context: verified system facts, assumptions, and cause hypotheses
+Options: benefits, resources, harmful effects, contradictions
+Decision: chosen option, losing reasons, authority
+Architecture: modules, dependencies, flows, failures, rollback
+Complexity when central: essential/accidental, axes, reduce/isolate/accept, core/shell boundary, complexity deleted versus relocated
+Routing: next owner, owned scope, required output, return condition
+Success evidence: signal, baseline, target/range, observation window
+Learning record: Claim -> Evidence -> Decision -> Outcome -> Model update
+Out of scope: explicit exclusions
 ```
 
-**Do not begin implementation until the user accepts the brief.**
+Before implementation, the learning record contains the claim, current evidence, decision, and planned success evidence. After delivery, compare the observed outcome with that evidence and update, narrow, or reverse the model. Shipping is not proof that the decision was right.
 
----
+## Stop conditions
 
-## When to Use This Skill
-
-| Trigger | Action |
-|---------|--------|
-| User says "build feature X" or "implement X" | Run full five gates |
-| User says "I need to add..." with scope > 1 file | Run full five gates |
-| User says "/design" | Run full five gates |
-| User says "review this design" | Run in review mode |
-| User says "what's the scope of X?" | Run in scope mode |
-| User asks a single implementation question | Skip — route directly to implementation skill |
-
-## Recommended Hooks
-
-For teams that want design thinking enforced automatically, add to `.claude/settings.json`:
-
-```json
-{
-  "hooks": {
-    "PreToolCall": [
-      {
-        "matcher": "Write",
-        "command": "echo 'Creating new file — have you run /design for this feature?'"
-      }
-    ]
-  }
-}
-```
-
-This provides a gentle reminder when creating new files, without blocking single-file edits.
-
-## Cross-References
-
-- `backend-core` — backend-specific design principles
-- `engineering-perf-optimization-process` — performance-specific gate process
-- `engineering-rest-api-design` — API contract design
-- `tdd-go` — accepted behavior implementation owner
-- `zero-tech-debt` — accepted behavior-preserving cleanup owner
+Stop analysis and present the decision when the Problem Frame is evidence-backed, one option is good enough for the decision's reversibility and risk, remaining uncertainty has an owner/check, and more research is unlikely to change the choice. Timebox deeper reasoning; learn one causal layer deeper than the decision requires, not the whole universe.

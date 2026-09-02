@@ -10,7 +10,7 @@ npx skills add jimnguyendev/jimmy-kit            # interactive: pick agents + sk
 npx skills add jimnguyendev/jimmy-kit -y -g      # everything, globally, no prompts
 npx skills add jimnguyendev/jimmy-kit --skill product-council --skill okr-outcome-architect
 ```
-Uses the open-source `skills` CLI (skills.sh). It clones the repo, finds all 48 `SKILL.md`, and writes them into the right folder for each agent you select (`.claude/skills`, `.agents/skills`, `.cursor/skills`, …). Re-run to update. No clone or symlink to manage.
+Uses the open-source `skills` CLI (skills.sh). It clones the repo, finds all 51 `SKILL.md`, and writes them into the right folder for each agent you select (`.claude/skills`, `.agents/skills`, `.cursor/skills`, …). Re-run to update. No clone or symlink to manage.
 
 ### Claude Code plugin (namespaced skills, updates via `/plugin`)
 ```text
@@ -65,15 +65,15 @@ Everything a skill produces goes under **`.jimmy/`** in the repo you are working
 Add `.jimmy/` to `.gitignore` if you don't want it tracked; most teams track `decisions.md`, `adr/` and `constitution.md` and ignore `work/`.
 
 ## 3. Make routing always-on (recommended)
-Installing skills gives the agent 48 tools it *can* pick up; it does not force routing through them. To get Sage-style "route every request" behavior, append the eager dispatcher block to your repo's instructions file once:
+Installing skills gives the agent 51 tools it *can* pick up; it does not force routing through them. To get always-on problem-state and dosage routing, append the eager dispatcher block to your repo's instructions file once:
 ```bash
 cat vendor/jimmy-kit/templates/eager-dispatcher.md >> AGENTS.md   # or ~/jimmy-kit/…
 ```
-(Claude Code reads it via a `CLAUDE.md` containing "Read AGENTS.md"; Codex and OpenCode read `AGENTS.md` directly; Cursor: paste it into a `.cursor/rules` file.) Without this block, routing is on-demand: the agent matches skill descriptions, and the `product-council` gate is a convention rather than an instruction.
+(Claude Code reads it via a `CLAUDE.md` containing "Read AGENTS.md"; Codex and OpenCode read `AGENTS.md` directly; Cursor: paste it into a `.cursor/rules` file.) Without this block, routing and dosage are on-demand: the agent matches skill descriptions rather than applying the shared Tier 1/2/3 policy automatically.
 
 ## 4. Start a session
-1. **Don't pick a skill — describe the problem.** The `routing` skill is the dispatcher: "conversion is low", "audit this landing page", "retention is dropping", "review this PRD". It maps the request to one of the ten problem chains in `docs/OPERATING-WORKFLOW.md`.
-2. Every chain runs **UNDERSTAND → ENVISION → DELIVER → REFLECT**, with the 7-question intake first and a mandatory `product-council` red-team before anything is built or pitched.
+1. **Don't pick a skill — describe the problem.** The `routing` skill is the dispatcher: "conversion is low", "audit this landing page", "retention is dropping", "review this PRD". It maps the request to a problem-shape chain in `docs/OPERATING-WORKFLOW.md`.
+2. The four phases are a maximal map, not a pipeline. Tier 1 may use no skill, Tier 2 normally uses one or two, and Tier 3 uses the full intake plus `product-council`. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Stop when the current skill settles the decision.
 3. Skills refuse to run on guesses: expect to be asked for a sourced, dated number or a baseline. Answer with the number, or say "no baseline" — the skill then writes `[baseline TBD — measure first]` instead of inventing one.
 
 Typical invocations (any tool; skills trigger on the situation, you can also name them):

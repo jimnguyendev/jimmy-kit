@@ -1,5 +1,5 @@
 -- ============================================================================
--- Prep Practice Lab: Step-by-Step Funnel Drop-off Analysis Query
+-- Generic Practice Lab: Step-by-Step Funnel Drop-off Analysis Query
 -- Dialect: Standard ANSI SQL / PostgreSQL / DuckDB / BigQuery
 -- ============================================================================
 
