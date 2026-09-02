@@ -1,6 +1,9 @@
 ---
 name: okr-outcome-architect
-description: "OKR & Outcome Architecture — adapted from an internal OKR handbook shared by product leadership. Use when writing, auditing, scoring, weighting, or aligning company/team OKRs, mapping roadmap initiatives to KRs, separating outcomes from outputs, or diagnosing broken metric systems. Triggers: write OKRs, review my OKRs, are these KRs good, quarterly goals, map roadmap to OKRs, OKR weighting."
+description: >-
+  Writes, audits and scores OKRs: Objectives tied to business outcomes, Key Results with metric/baseline/target/date, weighting and confidence check-ins, and a roadmap-to-KR matrix.
+  Use when writing, auditing, scoring, weighting, or aligning company/team OKRs, mapping roadmap initiatives to KRs, separating outcomes from outputs, or diagnosing broken metric systems.
+  Triggers: write OKRs, review my OKRs, are these KRs good, quarterly goals, committed vs stretch, aspirational OKRs, confidence check-in, OKR weighting or scoring, map roadmap to OKRs, our OKRs do not match what the team actually works on.
 ---
 
 # OKR & Outcome Architecture
@@ -23,6 +26,8 @@ description: "OKR & Outcome Architecture — adapted from an internal OKR handbo
 **C. MAP roadmap ↔ OKRs** ("which KR does this work serve?"): build the OKR–Initiative matrix (§5), answer its three questions, label non-OKR work explicitly.
 
 ⚠️ All modes: if the user supplies Objectives/KRs missing baselines or a business outcome — ask for them. Never invent numbers. In AUDIT mode, still deliver the audit: write every unknown as `[baseline TBD — measure first] → [target]`, state your assumed business outcome as A1/A2… and mark the set "not finishable until measured".
+
+**Handoffs:** metric has no baseline or is not instrumented → `tracking-architect` before the KR can be written · the "why this, why now" behind an Objective is missing → `product-strategy`, then `product-council` as the gate · an initiative needs to become shippable scope → `prd`.
 
 ## 🧠 1. THE CORE IDEA
 
@@ -72,11 +77,19 @@ Every KR needs 4 parts: **metric · baseline · target · date.** Any missing �
 
 **Volume limits (the rule most teams break):** company 3–5 Objectives · team 2–4 · 2–5 KRs each. If everything is a priority, nothing is.
 
-**Two tiers — label every OKR:** **Committed** (must hit, 100%, missing = real problem) vs **Stretch** (~70% is success). Never mix silently — teams treat stretch as committed and burn out, or the reverse and miss.
+**Two tiers — label every OKR:** **Committed** (must hit, 100%, missing = real problem) vs **Stretch** (a.k.a. Aspirational — ~70% is success). Never mix silently — teams treat stretch as committed and burn out, or the reverse and miss.
 
 **Rank, don't average:** list Objectives in priority order; when the mid-quarter tradeoff hits (it will), the rank says what to drop.
 
 **Weights — two ways:** **A. Ranked order** (simpler; recommended for new teams). **B. Explicit % weights** (when you must roll up scores): sum to 100% at each level · reflect **importance, never effort** · round to 5/10% (37%/23% is false precision) · within ~5% → make equal · mid-quarter re-weighting rare and explicit.
+
+A weighted set — 100% resets *inside* each Objective, it does not span them:
+
+```
+O1 (40%)  Make new users successful in week one    →  KR1.1 (50%) · KR1.2 (30%) · KR1.3 (20%)   = 100% within O1
+O2 (35%)  Turn support into a retention driver     →  KR2.1 (60%) · KR2.2 (40%)                 = 100% within O2
+O3 (25%)  Establish enterprise as growth engine    →  …                    40 + 35 + 25 = 100% across Objectives
+```
 
 Scoring (if weighted): `Objective score = Σ(KR% × KR weight)`; `Overall = Σ(Objective score × weight)`. Skip weights when: ≤2 Objectives · team new to OKRs · nobody uses the rolled-up score.
 
@@ -90,7 +103,16 @@ The most common execution failure isn't bad OKRs — it's the gap between OKRs a
 
 Every initiative must be expressible as: `"We believe [initiative] will move [KR] by [amount] because [reasoning]."` Can't fill the blanks → you're not betting, just working.
 
-**OKR–Initiative matrix** (map every initiative to KRs, High/Med/Low) exposes three questions: **1.** Any KR with no initiative? A wish, not a plan. **2.** Any unmapped initiative? Maybe still right (debt, infra) — but say so explicitly. **3.** Over-betting on one KR? Five initiatives on KR1.2 and zero on KR1.1 = unbalanced.
+**OKR–Initiative matrix** — one row per initiative, one column per KR, cell = expected contribution (High/Med/Low, `—` = none):
+
+| Initiative | KR1.1 Retention | KR1.2 Activation | KR1.3 Time-to-value |
+| :--- | :--- | :--- | :--- |
+| Redesign onboarding flow | Med | High | High |
+| Activation email series | Med | High | Low |
+| Customer success outreach | High | Low | Low |
+| Refactor billing service | — | — | — |
+
+It exposes three questions: **1.** Any KR with no initiative (an empty column)? A wish, not a plan. **2.** Any unmapped initiative (a row of all `—`)? Maybe still right (debt, infra) — but say so explicitly. **3.** Over-betting on one KR? Five initiatives on KR1.2 and zero on KR1.1 = unbalanced.
 
 **Healthy unmapped work:** keep-the-lights-on, incidents, compliance, enabling tech debt. Rule of thumb: **60–70% of capacity on OKR-mapped work.** 100% mapped → over-planning or hidden work; <40% → your OKRs aren't where the team lives.
 
@@ -111,7 +133,7 @@ Every initiative must be expressible as: `"We believe [initiative] will move [KR
 
 **Objectives:** outcome not project · passes "so that…" · one memorable sentence · time-bound.
 **KRs:** metric+baseline+target+date · passes sufficiency & necessity · ≥1 lagging · no disguised projects.
-**Priority & weights:** 2–4 O/team · 2–5 KR/O · ranked or weighted to 100% · Committed/Stretch labeled · one owner per KR.
+**Priority & weights:** 2–4 O/team · 2–5 KR/O · Objectives ranked or weighted to 100% · KRs ranked or weighted *within* each Objective · Committed/Stretch labeled · one owner per KR.
 **Roadmap:** every KR has ≥1 initiative · every initiative names its KR bet · non-OKR work labeled · ~60–70% capacity on OKR work.
 
 ## 🏆 8. WORKED EXAMPLE
