@@ -8,7 +8,7 @@ description: >-
 
 # OKR & Outcome Architecture
 
-> **This skill exists to stop:** projects and initiatives disguised as Key Results — teams celebrating shipped work that moved no business outcome (the #1 mistake in the handbook).
+> **This skill exists to stop:** projects and initiatives disguised as Key Results — teams celebrating shipped work that moved no business outcome.
 
 ## 🤖 0. HOW TO USE (agent workflow)
 
@@ -19,7 +19,7 @@ description: >-
 4. Output: one `❌ current | ⚠️ why it fails | ✅ proposed fix` table, one row per issue, + the 60-second checklist result (§7). No generic praise — every remark points at a specific line.
 
 **B. WRITE a new OKR set** ("help me set this quarter's OKRs"):
-1. Ask before writing: what's the strategy / why-now? Which business outcome? Which metrics HAVE baselines? (No baseline → the KR can't be written yet — go measure first.)
+1. Ask before writing: what's the strategy / why-now? Which business outcome? **Which customer outcome does it serve, and is that outcome underserved?** (No answer → `jtbd`/`opportunity-map` first, §3b.) Which metrics HAVE baselines? (No baseline → the KR can't be written yet — go measure first.)
 2. Draft per §2–§3; every Objective gets ≥1 lagging + 1–2 leading metrics.
 3. Self-run the 60-second checklist before presenting.
 
@@ -27,7 +27,7 @@ description: >-
 
 ⚠️ All modes: if the user supplies Objectives/KRs missing baselines or a business outcome — ask for them. Never invent numbers. In AUDIT mode, still deliver the audit: write every unknown as `[baseline TBD — measure first] → [target]`, state your assumed business outcome as A1/A2… and mark the set "not finishable until measured".
 
-**Handoffs:** metric has no baseline or is not instrumented → `tracking-architect` before the KR can be written · the "why this, why now" behind an Objective is missing → `product-strategy`, then `product-council` as the gate · an initiative needs to become shippable scope → `prd`.
+**Handoffs:** metric has no baseline or is not instrumented → `tracking-architect` before the KR can be written · the "why this, why now" behind an Objective is missing → `product-strategy`, then `product-council` as the gate · an initiative needs to become shippable scope → `prd` · **nobody can say which customer outcome the Objective should serve → `jtbd` then `opportunity-map` first** (§3b). This last one is the most common silent failure: the set is well-formed, and it measures the wrong thing confidently.
 
 ## 🧠 1. THE CORE IDEA
 
@@ -72,6 +72,34 @@ Every KR needs 4 parts: **metric · baseline · target · date.** Any missing �
 **Leading vs lagging:** lagging (revenue, retention, NPS) proves impact but moves slowly; leading (activation, WAU, time-to-value) signals fast but must genuinely link to the outcome. Pair **≥1 lagging** (anchor) with **1–2 leading** (steering wheel).
 
 **Four metric traps:** vanity (easy to grow, no business effect) · activity (counting work done) · unmeasurable ("improve quality" → define a proxy or drop) · out-of-control (share price → find a closer proxy you can move).
+
+### 3b. Where the metric should come from
+
+A well-formed KR set can still measure the wrong thing. Sufficiency and
+necessity test the KRs **against the Objective** — neither asks whether the
+Objective serves a need customers actually rate highly. That question is
+answered upstream, and there is a mechanical path from it into a KR.
+
+**Desired outcome → Key Result.** A customer desired-outcome statement is
+written as `[minimize | maximize | reduce | increase] + [metric: likelihood,
+time, effort] + [object]` — see `jtbd`. It becomes a KR by attaching the
+three things it deliberately lacks: **baseline, target, date.**
+
+| Desired outcome (from `jtbd`) | The KR it becomes |
+| :--- | :--- |
+| "Minimize the time it takes to identify a blocked task" | Time-to-identify-blocker **40 min → 5 min** by Q4 |
+| "Reduce the likelihood of committing to a date the team cannot meet" | Slipped-commitment rate **31% → 15%** by Q4 |
+
+This has a side benefit: an outcome statement is **structurally incapable**
+of naming a project, so KRs derived this way cannot be the disguised
+initiatives this skill exists to stop.
+
+**Then use the position, not just the score.** `opportunity-map` places each
+outcome as underserved / table stakes / overserved / appropriately served. A
+Committed KR pointed at a **table stakes** or **overserved** position is the
+subtle failure: the metric moves, the team scores 100%, and customers feel
+nothing, because that need was already served. Before committing a KR, say
+which position its outcome sits in and why moving it changes anything.
 
 ## ⚖️ 4. PRIORITIZATION, WEIGHTS & CHECK-INS
 
@@ -127,12 +155,12 @@ It exposes three questions: **1.** Any KR with no initiative (an empty column)? 
 5. **100% hit rate every quarter** — targets too soft; stretch should land ~70%.
 6. **Mid-quarter sunk cost** — a KR clearly unreachable by week 6: say so openly; don't grind a meaningless number.
 7. **No owner per KR** — one accountable name, never "the team."
-8. **Strategy confusion** — OKRs are the RESULT of strategy, not a substitute. Can't explain why this OKR matters NOW → you skipped the strategy step.
+8. **Strategy confusion** — OKRs are the RESULT of strategy, not a substitute. Can't explain why this OKR matters NOW → you skipped the strategy step. Its quieter twin: a set that never asked which customer need it serves (§3b) — nothing in the OKR grammar catches that, which is why it survives audits.
 
 ## ✅ 7. THE 60-SECOND SELF-CHECK
 
 **Objectives:** outcome not project · passes "so that…" · one memorable sentence · time-bound.
-**KRs:** metric+baseline+target+date · passes sufficiency & necessity · ≥1 lagging · no disguised projects.
+**KRs:** metric+baseline+target+date · passes sufficiency & necessity · ≥1 lagging · no disguised projects · each Committed KR names the customer-outcome position it serves (not table stakes, not overserved).
 **Priority & weights:** 2–4 O/team · 2–5 KR/O · Objectives ranked or weighted to 100% · KRs ranked or weighted *within* each Objective · Committed/Stretch labeled · one owner per KR.
 **Roadmap:** every KR has ≥1 initiative · every initiative names its KR bet · non-OKR work labeled · ~60–70% capacity on OKR work.
 

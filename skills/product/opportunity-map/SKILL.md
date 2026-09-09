@@ -132,6 +132,16 @@ Tag each opportunity's confidence level based on the evidence behind it:
   consistent indirect signals (metrics, behavioral data)
 - **Low:** Hypothesized from context or 1-2 data points — needs validation
 
+**Tag the two dimensions separately when their evidence differs.** The
+common case is a product already in testing: satisfaction is measured (you
+can see what the current build does), while importance is still your
+hypothesis because nobody has interviewed a customer yet. One blended
+confidence level hides that, and the ranking looks better sourced than it
+is. Write it as `Sat: high (measured) · Imp: low (assumed)`, and say in the
+output that the **ordering is provisional until importance has a source** —
+the decisions that do not depend on ordering (a release gate, anything
+inside your own team's lane, the reduce list) are still safe to act on.
+
 Present the scored landscape to the user for review before proceeding.
 Scores are judgment calls — the user may adjust based on context the
 discovery didn't capture.
@@ -246,6 +256,8 @@ The opportunity map is a living document. Define:
 Before presenting, validate:
 
 - [ ] Every opportunity has a score, confidence level, and decision
+- [ ] Where importance and satisfaction rest on different evidence, they are
+      tagged separately and the ordering is marked provisional
 - [ ] No more than 4 opportunities are "pursue"
 - [ ] Every "pursue" has a rationale including do-nothing alternative
 - [ ] Every "monitor" has a specific trigger signal
