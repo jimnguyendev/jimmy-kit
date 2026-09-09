@@ -9,6 +9,7 @@
 - Ignoring anxiety and habit
 - Fabricating JTBD without research
 - Treating all pains as equal
+- Drawing a user journey and calling it a job map
 - No job performer defined
 - Missing the struggling moment
 - Wrong level of abstraction
@@ -63,6 +64,16 @@
 **Symptom:** 15–20 pains listed with no ranking.
 
 **Fix:** Rank on intensity × frequency. For precision, use opportunity scoring: Importance + max(Importance − Satisfaction, 0). Ask the forcing question: "If we solved only one pain, which would most drive someone to switch?"
+
+## Drawing a User Journey and Calling It a Job Map
+
+**The mistake:** mapping the screens and steps a user moves through inside your product, then labelling the result a job map. It is the most common failure in practice because the two artifacts look identical on a whiteboard.
+
+**Why it breaks the analysis:** a journey is *dependent and sequential* — step 4 exists because step 3 happened, and all of it happens inside your solution. A job map is *independent* — each stage is a thing some performers do and others skip, and it holds true whether or not your product exists. Map a journey, and every need you find is a need *of your current design*; the unserved jobs live outside it, which is exactly what you came to find.
+
+**Test it:** pick two performers. If a stage that one of them performs is genuinely absent for the other, it is a job step. If every stage happens for everyone in the same order, and only makes sense with your product in hand, it is a journey.
+
+**Fix:** keep the journey — it is the right artifact for improving an existing experience — and draw the job map separately, starting from the Execute stage and asking "what were you trying to get done" rather than "what did you click".
 
 ## No Job Performer Defined
 

@@ -7,3 +7,4 @@
 - [ ] Runs a ripple-effect check before any removal and asks for external user input
 - [ ] Names the North Star the roadmap serves
 **Status:** [UNVERIFIED — exit 2] Not yet run. Paste the first real run here to promote to exit 0.
+**Revised 2026-09-09:** an unsourced "10% of features" figure removed from the Design Ladder example. Status stays exit 2.

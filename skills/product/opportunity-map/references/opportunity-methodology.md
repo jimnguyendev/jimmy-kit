@@ -80,6 +80,34 @@ this need? (1-10)
 - 10-11 = Moderate opportunity
 - <10 = Low opportunity (either unimportant or already well-served)
 
+**The `max(gap, 0)` floor is load-bearing — never use `abs(gap)`.** With
+absolute value, a need scoring importance 3 / satisfaction 9 comes out at
+9 instead of 3, so the ranking puts your most over-engineered features at
+the top of the roadmap. This is not a rounding difference; it inverts the
+conclusion. Teams have shipped this mistake.
+
+### Step 1b: Read the Position, Not Just the Score
+
+The same two numbers place a need in one of four positions, and three of
+them are actionable:
+
+| Position | Importance | Satisfaction | Action |
+|---|---|---|---|
+| **Underserved** | high | low | Pursue candidate — the classic opportunity |
+| **Table stakes** | high | high | Keep it working; more investment returns nothing |
+| **Overserved** | low | high | **Reduce candidate** — cap, simplify, or drop it |
+| **Appropriately served** | low | low | Leave alone |
+
+Overserved positions are where cost hides. A team that only ever adds
+work will keep paying to maintain capability the customer does not rate,
+while the opportunities it wants to fund go unstaffed. Cutting an
+overserved capability can also lower price — serving the customer better
+on the axis they do care about. Two moves, one table.
+
+Prefer the reduce list to be short and evidenced: name the score pair,
+and say what would break if the capability went away. If nothing in the
+landscape is overserved, say so explicitly rather than omitting it.
+
 ### Step 2: Assess Capability Fit
 
 For each scored opportunity, evaluate the organization's ability to serve it.

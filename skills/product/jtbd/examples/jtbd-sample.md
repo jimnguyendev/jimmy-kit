@@ -54,6 +54,7 @@
 | Define | Set project goals, scope, success criteria | Hard to translate business objectives into concrete milestones |
 | Locate | Identify available people, skills, prior work | No single view of team capacity across projects |
 | Prepare | Break work into tasks, assign owners, set timelines | Estimating effort is guesswork without historical data |
+| Confirm | Check the plan is actually deliverable before kickoff — capacity, dependencies, sign-off | No way to test whether committed dates survive the team's other commitments |
 | Execute | Team members work on assigned tasks | People update status in different tools (or not at all) |
 | Monitor | Track progress, identify blockers | Blockers surface too late — often at standup, not when they happen |
 | Modify | Re-prioritize when scope changes or a dependency breaks | Cascading impact of changes is invisible until damage is done |
@@ -102,6 +103,7 @@
 | Modify | Minimize the likelihood of missing a cascading impact when a deadline changes | 9 | 2 | 16 |
 | Share | Minimize the time it takes to assemble an accurate status report | 8 | 3 | 13 |
 | Prepare | Increase the accuracy of effort estimates for new tasks | 8 | 3 | 13 |
+| Confirm | Minimize the likelihood of committing to a date the team cannot meet | 8 | 2 | 14 |
 | Locate | Minimize the time it takes to determine a team member's current availability | 7 | 3 | 11 |
 | Execute | Minimize the likelihood that two team members unknowingly duplicate work | 7 | 4 | 10 |
 

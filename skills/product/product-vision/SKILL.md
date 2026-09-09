@@ -19,7 +19,7 @@ Paste a backlog or a "delete this feature" request and get back: a one-sentence 
 **Standard output:** one-sentence vision · ecosystem map · questions-behind-requests table · ripple-effect map for any proposed removal · the one North Star the roadmap serves.
 
 ## 1. Danish Design Ladder (where design sits in the org)
-Level 1 **Non-design** (function only) → Level 2 **Styling** (logo, packaging at the end) → Level 3 **Process** (design shapes flows and systems: design system, consistent journeys) → Level 4 **Strategy** (design discovers new business — e.g. a heavyweight photo tool spinning out a focused product for a segment that used 10% of the features). Most SMEs sit at level 1–2; the leap to 3 is a process change, not a hire.
+Level 1 **Non-design** (function only) → Level 2 **Styling** (logo, packaging at the end) → Level 3 **Process** (design shapes flows and systems: design system, consistent journeys) → Level 4 **Strategy** (design discovers new business — e.g. a heavyweight photo tool spinning out a focused product for professionals who barely touched the original). Most SMEs sit at level 1–2; the leap to 3 is a process change, not a hire.
 
 ## 2. Product vision — three jobs it does
 1. **Keystone:** what core value, for whom, over 3–5 years. Without it, a business plan alone produces a feature factory.

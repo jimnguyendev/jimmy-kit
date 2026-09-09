@@ -79,6 +79,14 @@ because O1 requires O3's output."]
 |---|-------------|-----------|-------------|
 | O[W] | [Brief] | [Low score / misalignment / competitor serves it well / too costly] | [Condition that would re-open this] |
 
+### Reduce Candidates (Overserved — high satisfaction, low importance)
+
+| # | Capability / Need | Imp | Sat | What to Cut or Cap | What Would Break |
+|---|-------------------|:---:|:---:|--------------------|------------------|
+| R1 | [Brief] | [1-10] | [1-10] | [Simplify / cap / drop] | [Who depends on it] |
+
+_State "none found" if the landscape has no overserved positions._
+
 ## 5. Sequence
 
 | Order | Opportunity | Rationale for Position |

@@ -19,12 +19,15 @@ Paste the current plan/pricing table and ask: *"Which model and which revenue-tr
 **Standard output:** model choice + why · pricing table mock · revenue-tree node targeted · one A/B with a single variable · churn hypothesis.
 
 ## 1. Reverse trial vs freemium
-Freemium's two blind spots: (1) **locking the hero feature** — the team guesses which features are "advanced" and locks the one that actually kills the pain, so free users conclude the product is useless; (2) **free forever** — free is so generous nobody upgrades. Reverse trial: sign up with email only → 100% access for N days → user invests time and data, reaches the aha moment → auto-downgrade → loss aversion does the selling. The user stays in the ecosystem either way.
+Freemium's two blind spots: (1) **locking the hero feature** — the team guesses which features are "advanced" and locks the one that actually kills the pain, so free users conclude the product is useless; (2) **free forever** — free is so generous nobody upgrades. Reverse trial: sign up with email only → 100% access for N days (14–15 is the common window) → user invests time and data, reaches the aha moment → auto-downgrade → loss aversion does the selling. The user stays in the ecosystem either way.
+
+**The signup gate is half the mechanism, and it is easy to miss:** a classic free trial asks for a card before the user has felt anything, so the cost of trying is a payment decision. A reverse trial asks for an email. Same trial length, different population walking in — compare drop-off at the signup step before attributing a conversion difference to the paywall copy.
 
 ## 2. Pricing-table psychology
-- **Center-stage effect:** the middle option reads as "balanced and safe"; with a highlight border and a "Most popular" label, mid-tier selection can roughly double.
+Treat these as **shapes worth testing**, not laws. Each is a real published effect, none carries a reliable multiplier — measure the lift on your own funnel and quote that number, not one from a slide.
+- **Center stage:** the middle option reads as "balanced and safe"; a highlight border plus a "Most popular" label concentrates selection there. Expect a shift, size unknown until measured.
 - **Decoy / anchor:** the expensive top tier exists to make the middle one feel like a deal.
-- **Rule of three:** Basic – Pro (target) – Enterprise. More than three = decision paralysis.
+- **Three tiers** (Basic – Pro target – Enterprise) is the common shape because it gives an anchor, a target, and a floor. Adding a fourth is a test, not a mistake.
 - **Honesty line:** anchors are fine; fake countdowns, hidden renewals, buried cancel links are not.
 
 ## 3. Revenue tree (find the lever before acting)
@@ -37,6 +40,7 @@ ARPU = tier pricing + add-ons / cross-sell
 Every paywall or feature change must name the branch it moves. "Improve the pricing page" is not a plan; "raise New paying via conversion, measured by checkout_completed / pricing_viewed" is.
 
 ## 4. Retention mechanics
+**The subscription model is not the product; retention is.** A model change moves the conversion branch once, then the renewal branch decides whether the business compounds. If the frequency and onboarding items below are unresolved, choosing between freemium and reverse trial is a rounding error.
 - **A30 → A1/A7:** a monthly-only use case makes users feel they pay for 29 idle days. Add daily/weekly companions (instant balance alerts, daily prompts, morning suggestions) around the monthly core.
 - **First-use onboarding vs the cold screen:** an empty screen after sign-up is a churn event. Interactive walkthrough, sample data, or ready templates so the aha moment lands inside the first 60 seconds.
 - **State model:** Trial → {Free, Pro, Lost} with measured transition probabilities — hand the matrix to `growth-markov-duolingo`.

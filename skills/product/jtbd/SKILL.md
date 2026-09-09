@@ -58,6 +58,8 @@ Identify who executes the job. Distinguish from the buyer — they have differen
 - **Job performer**: Role and context (not demographics). "Project lead managing a distributed team of 8–12 engineers" — not "35-year-old male." Demographics correlate with buying but don't cause it.
 - **Buyer/Approver**: Who makes and authorizes the purchase decision
 - **Audience**: Who consumes the output of the job
+
+In B2B these separate further, and each role sends the interview somewhere different. An accounting-automation tool: the **performer** is the accountant, the **buyer** is the CEO or CFO, the **budget holder** may be neither, the loudest **feedback** often arrives second-hand from a peer of the buyer, and a **blocker** (frequently technical) argues the job is too small to pay for. Name whoever exists in your case; interview the performer for the job, the buyer for the purchase, and the blocker for the objection you will have to answer anyway.
 - **The struggling moment**: What specific event or frustration triggered the desire for change? Without a struggling moment, there's no demand. "I realized I was sleeping on the recliner every night because our mattress was so bad" is a struggling moment. "People need better mattresses" is a supply-side assumption.
 - **Circumstances**: When, where, and under what constraints the job arises. Jobs without context aren't actionable. "Get breakfast on the go while late for work" is specific enough to design for; "get breakfast" is not.
 - **Current solutions hired**: What do they use today? Competition is defined by customers, not product categories — it includes any solution that serves the same progress. A project management tool might compete with WhatsApp groups, spreadsheets, and weekly meetings, not just other PM software. Include workarounds, manual processes, and doing nothing. Note **compensatory behaviors** — when customers use products in unintended ways, it signals unmet jobs.
@@ -90,11 +92,19 @@ Break the main job into stages. Use this universal scaffold and adapt:
 1. **Define** — Plan objectives and approach
 2. **Locate** — Gather inputs, information, materials
 3. **Prepare** — Set up and organize
-4. **Execute** — Perform the core activity
-5. **Monitor** — Check progress and quality
-6. **Modify** — Adjust when something changes
-7. **Conclude** — Finish and wrap up
-8. **Share** — Communicate results or hand off
+4. **Confirm** — Verify readiness before committing (right inputs, right amount, right settings). The stage teams skip most often, and a reliable source of outcomes: "reduce the likelihood of discovering a missing input after starting."
+5. **Execute** — Perform the core activity
+6. **Monitor** — Check progress and quality
+7. **Modify** — Adjust when something changes
+8. **Conclude** — Finish and wrap up
+
+Some jobs add a hand-off stage (**Share** — communicate results, pass to the next person); add it when the performer's job genuinely ends in someone else's hands.
+
+**Start in the middle.** Name the **Execute** stage first — it is the one performers describe without prompting — then walk outward: what had to happen before, what happens after. Starting at Define invites a guessed-at sequence; starting at Execute anchors the map on something real.
+
+**A job map is not a user journey.** Journey steps are dependent and sequential: each one is reached through the last, inside your product. Job steps are **independent** — a step that person A performs, person B skips entirely (one listener checks play history before choosing music; another opens recommendations and presses play). If your map only makes sense read top to bottom, and only inside your product, you have drawn a journey and labelled it a job map.
+
+Also probe the **consumption chain** — the jobs around the core job that most analyses miss: obtain, install/set up, learn, maintain, upgrade, dispose. These stages are where a technically capable product fails in the field ("a small-restaurant owner has no laptop to configure the menu on"), and they are usually unserved because nobody mapped them.
 
 For each stage, note what the performer is trying to accomplish and where friction exists. The map organizes where to probe for needs in Step 4.
 
@@ -108,6 +118,8 @@ Use this for most analyses — it's accessible, workshop-friendly, and sufficien
 
 - **Pains**: Challenges, costliness (be specific — "3 hours/week"), common mistakes, unresolved problems
 - **Gains**: Expectations, savings (measurable), adoption factors, life improvement
+
+**Run the canvas in one direction: job step → pain → gain → and only then across to the product side** (which feature relieves which pain, which one creates which gain). The canvas is a cross-section of the job model, not a brainstorming grid; filling the product side first produces features in search of a pain. If a listed feature maps to no pain and no gain, it has no customer-side justification yet.
 
 Use `template.md` for the full fill-in structure. See `examples/sample.md` for worked examples.
 
@@ -148,6 +160,7 @@ Quality Validation:
 - [ ] Pains are specific (numbers, frequencies, consequences) — not "tools are bad"
 - [ ] Gains are measurable or observable — not "better UX"
 - [ ] No statement confuses a job with a solution (supply-side test: would an engineer write this, or a customer?)
+- [ ] Job map passes the independence test — at least one stage some performers skip (otherwise it is a user journey)
 - [ ] Forces of progress analyzed — especially anxiety and habit blocking the switch
 - [ ] Needs are prioritized, not just listed
 - [ ] Analysis is consistent with scope and constraints from context.md (if provided)

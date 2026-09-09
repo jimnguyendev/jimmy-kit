@@ -16,7 +16,7 @@ Paste the product idea and get back: classification (breakthrough / platform / d
 **B. Choose the competitive weapon** explicitly: cost · core technology · experience · industrial design. One primary. "All four" is not a strategy.
 **C. Resource law:** total resources (cash + committed funding) must exceed total R&D + validation cost with margin. If the sum fails, shrink scope now — not at the pilot stage.
 **D. Gates:** define the validation stages (§2) and the exit criteria for each; **never skip to mass rollout after a failed pilot — run pilot 2, pilot 3.**
-**E. Mission statement** (§4) before the roadmap; roadmap phases must trace back to it.
+**E. Mission statement** (§6) before the roadmap; roadmap phases must trace back to it.
 **Standard output:** classification + weapon · resource check (numbers) · gate plan with exit criteria · mission statement · phased roadmap.
 
 ## 1. Physical vs digital — what changes
@@ -26,16 +26,22 @@ Software can "ship and patch"; hardware cannot recall a million units to fix a f
 | Stage (hardware) | Purpose | Sample size | Digital analogue |
 |---|---|---|---|
 | Kick-off | Concept & design | — | Problem framing, PRD |
-| **EVT** — engineering validation | Does the core work? 90–95% of intended function | 5–20 hand-built units | Spike / prototype on the riskiest assumption |
-| **DVT** — design validation | Durability, environment, "simple is best" — cut every spare part before tooling | dozens | Alpha with internal users; edge cases; performance |
+| **EVT** — engineering validation | Does the core work? 90–95% of intended function | hand-built samples | Spike / prototype on the riskiest assumption |
+| **DVT** — design validation | Durability, environment, "simple is best" — cut every spare part before tooling | small batch | Alpha with internal users; edge cases; performance |
 | **PVT** — production validation | Can the factory make it? Yield, cycle time, component failures | 100–1,000 | Beta / pilot with a real cohort; ops load; support load |
 | **MP** — mass production | Ship at scale | — | General availability |
 **Rule:** a serious failure at PVT means PVT-2 and PVT-3, never MP. In digital terms: a failed pilot does not "graduate with notes".
 
-## 3. Metrics framework
+## 3. Owning the technology is a negotiating position
+A capability that never ships can still pay for itself. Build to ~90% of the quality you currently buy in, at half to two-thirds the price, and the conversation with the vendor changes: *if you don't move on price, we make it ourselves.* Two consequences for how you judge R&D: a project that wins a price concession has returned its cost without ever reaching a customer, and **"did it commercialize?" is the wrong single test** for exploratory work — state which of the two outcomes you are buying before you fund it.
+
+## 4. Voice of Customer arrives too late to save a physical product
+For anything expensive to reverse, customer VoC is a post-mortem, not a feedback loop: by the time customers are holding the product it is the mass-production build, and the only remedies left are a new revision or a recall. That is the entire reason for staged gates — the expert review inside the gates has to substitute for the customer feedback you cannot get yet. Split VoC by source: **expert VoC** catches design and system faults early; **customer VoC** answers whether it sells. You need both, in that order.
+
+## 5. Metrics framework
 Digital products live on DAU/MAU, retention, CAC. Physical (and physical-adjacent) products need: **sales velocity** (sell-in vs sell-out), **resale value** (does the product hold price at 6–12 months — the market's quality verdict), **deposit-to-delivery conversion** (commitment after the demo), **VoC root-cause split** (complaints caused by engineering vs by sales/marketing promises). Whatever the product, split complaints by root cause before assigning blame.
 
-## 4. Strategy framework — four steps
+## 6. Strategy framework — four steps
 1. **Positioning & competition** — product type + competitive weapon (§0 A–B).
 2. **Resource law** — cash + funding > R&D + validation cost. A great strategy that runs out of money at DVT is a dead project.
 3. **Roadmap phasing** — which features in which phase, and what each phase must prove.

@@ -6,4 +6,6 @@
 - [ ] Reports the 3 control metrics with window + source or marks them missing
 - [ ] Picks ONE lever with the metric it should move
 - [ ] Reads the cohort curve before recommending scale
+- [ ] Calls a **flattening** curve the PMF signal; if it sees a smile, names the cycle driving the return instead of treating it as extra proof
 **Status:** [UNVERIFIED — exit 2] Not yet run. Paste the first real run here to promote to exit 0.
+**Revised 2026-09-09:** curve-reading check added — the earlier wording credited the smile curve as the PMF signal. Status stays exit 2.

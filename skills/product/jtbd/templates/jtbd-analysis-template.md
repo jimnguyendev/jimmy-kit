@@ -52,11 +52,12 @@ Fill in each section. Skip categories only if they genuinely don't apply. List a
 | Define | [Plan objectives for the job] | [What goes wrong?] |
 | Locate | [Gather needed inputs/info/materials] | [What goes wrong?] |
 | Prepare | [Set up and organize] | [What goes wrong?] |
+| Confirm | [Verify readiness before committing] | [What goes wrong?] |
 | Execute | [Perform the core activity] | [What goes wrong?] |
 | Monitor | [Check progress and quality] | [What goes wrong?] |
 | Modify | [Adjust when something changes] | [What goes wrong?] |
 | Conclude | [Finish and wrap up] | [What goes wrong?] |
-| Share | [Communicate results or hand off] | [What goes wrong?] |
+| Share (if the job hands off) | [Communicate results or hand off] | [What goes wrong?] |
 
 ---
 

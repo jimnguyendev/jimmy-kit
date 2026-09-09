@@ -109,6 +109,22 @@ scoring from `references/opportunity-methodology.md`:
 - Satisfaction (1-10): How well do current solutions serve this need?
 - Opportunity = Importance + max(Importance - Satisfaction, 0)
 
+**Never replace `max(gap, 0)` with `abs(gap)`.** The floor at zero is the
+point: a need already served better than it matters (satisfaction above
+importance) earns **no** opportunity credit. Absolute value hands the
+highest scores to the needs you are over-serving, and the roadmap that
+follows invests exactly where it should be cutting.
+
+Then classify each scored need, because "high score" is only one of four
+positions and the other three also imply action:
+
+| Position | Importance | Satisfaction | What it means |
+|---|---|---|---|
+| **Underserved** | high | low | The opportunity — carry into Step 2 |
+| **Table stakes** | high | high | Must keep working; adding more buys nothing |
+| **Overserved** | low | high | Investment the customer does not value — a **reduce** candidate (Step 4) |
+| **Appropriately served** | low | low | Leave alone |
+
 Tag each opportunity's confidence level based on the evidence behind it:
 - **High:** Validated by quantitative data (survey n≥100) or multiple
   qualitative sources (8+ interviews)
@@ -177,6 +193,13 @@ For each opportunity, assign one of three decisions:
 - Confidence too low — needs validation first
 - For each: document WHAT signal would change this to "pursue"
 
+**Reduce** (a parallel output, not a fourth decision):
+Overserved positions from Step 1 — high current satisfaction on needs the
+customer rates low. Each one is a candidate to simplify, cap, or drop:
+cost comes back, and the saved capacity funds a Pursue. Name the evidence
+(the score pair) and what would break if it went away. A map that only
+adds work is half a map.
+
 **Defer** (explicitly not now):
 - Low score relative to alternatives, or
 - Requires fundamentally new capabilities we can't build in the horizon, or
@@ -231,6 +254,8 @@ Before presenting, validate:
 - [ ] Capability context from the user informed the assessment
 - [ ] Confidence levels are tagged per opportunity with validation needs
 - [ ] Review plan is defined with date and event triggers
+- [ ] Overserved positions are listed as reduce candidates (or the map
+      states none were found)
 
 ## Output
 
@@ -244,7 +269,8 @@ monitor/defer decisions, key rationale, and sequencing. Update the
 Present to user: "Here's the opportunity map. I recommend pursuing [N]
 opportunities: [X, Y, Z]. [X] comes first because [rationale]. [M]
 opportunities are on the monitor list — the key signal to watch is
-[signal]. Want to discuss any of the decisions?"
+[signal]. [K] are overserved and are reduce candidates: [list]. Want to
+discuss any of the decisions?"
 
 ## Rules
 
