@@ -140,32 +140,57 @@ After ALL planned cases pass:
 [ ] No speculative fields, no "I'll need this later" code
 [ ] New external calls follow the timeout/cancellation policy accepted by this repository
 [ ] Error handling follows the current feature convention and preserves the accepted public envelope
+[ ] Seam touched (SQL/document store/cache/client/config/response shape)? Then the slice is NOT done
+    until one reality check exists and was observed running: the feature's acceptance test (real
+    containers + real router, `-tags integration -v`, paste `--- PASS`) or a replay diff against
+    the legacy system. Fakes never close a seam slice. (skill: `reality-gate`)
 ```
 
-## Mocking strategy (this repo)
+## Test doubles — six rules (gated, not advisory)
 
-Follow the repository test conventions: mock process boundaries, not implementation details you own.
+These replace the older "the repository is a process boundary, so mock it" doctrine. In a
+coding-agent loop that doctrine produces hundreds of fake-backed service tests that stay green
+while the real database, config, and client break. Sources: Khorikov (managed vs unmanaged
+dependencies), Fowler (sociable over solitary), Cooper (behavior, not method), Google Testing
+Blog (change-detector tests), Bernhardt (functional core / imperative shell), Rainsberger
+(contract tests on both sides of every fake), Beck (coupled to behavior, decoupled from structure).
 
-This skill interprets the **repository interface as a process boundary** (Mongo is an external process, the repo is the seam in front of it). That makes the repo a legitimate mocking target in service tests — they stay unit, fast, and behavior-focused.
+1. **Trigger = a new observable behavior**, never a new method or type. The observable surface
+   is the HTTP route, the exported service call, or the row/document written. One behavior, one test.
+2. **Fake only unmanaged dependencies**: other services' gRPC/HTTP APIs, message buses, object
+   storage, the clock. **Databases are real**: run them in containers. If a database is shared
+   with another application, its schema and document shapes are a contract with that system —
+   fixtures come from dumped DDL and real (sanitized) rows/documents, never from a hand-written
+   table or an invented row.
+3. **The feature's own repository/reader/writer is not a mocking target.** A service test that
+   needs data goes through the real repository against the container (sociable test). A
+   `fakeXRepo` is allowed only when the logic under test is pure decision logic AND the real
+   implementation has its own container test for the same method.
+4. **Functional core / imperative shell.** If a service needs four or more fakes to test, stop:
+   extract the decision into a pure function with table-driven tests (expected values from the
+   reference implementation), and leave a thin shell covered by one acceptance test.
+5. **No change-detectors.** Never assert SQL text, fake call counts or order, or unexported state.
+   Assert outcomes: response JSON, rows/documents written, returned values. A test that must be
+   edited during a pure refactor is a defect in the test, not a cost of the refactor.
+6. **Contract on both sides of every fake.** A fake for an unmanaged dependency needs a contract
+   test against the real thing or a recorded fixture (an `httptest` server replaying captured
+   responses); otherwise the fake is a guess written by the same agent as the code.
 
-- **Mock**: gRPC clients to other services, Redis, Kafka, the feature's own `Repository` interface, time (via `clockwork` or `synctest`).
-- **Use real Mongo**: in **repository tests** (build-tagged `integration`) and the **one end-to-end happy path per feature**. Repository tests are where Mongo semantics (uniqueness, indexes, transactions) actually get exercised.
-- **Never mock**: another feature's service. If feature A needs feature B, A declares a small consumer-side interface and A's tests use a fake; B's tests use the real thing.
+## Test layering
 
-If a service test is genuinely simpler with a real Mongo (rare — usually means the logic under test is actually persistence logic and belongs in the repo), promote it to `integration` build tag instead of fighting the mock.
+| Code | Test | Build tag |
+|---|---|---|
+| Pure decision functions (grading, projections, parsing, formatting) | unit, table-driven, no fakes, expected from the reference implementation | none |
+| Repository / reader / writer | container-backed, real DDL, real documents | `integration` |
+| Service shell + handler, one per flow | **acceptance**: real router + real middleware + real adapters + containers; assert the JSON body and the persisted document | `integration` |
+| Clients of unmanaged dependencies | unit with `httptest` replaying captured responses + contract test | none / `integration` |
 
-See `backend-go-testing` and `backend-go-stretchr-testify` for the Go-specific mocking mechanics; use `gotests` to scaffold the first row of a new table-driven test.
+Make the integration harness fail loudly when its container is unavailable (an env var such as
+`INTEGRATION_SKIP_OK=1` to opt into skipping), so `ok` always means the tests ran.
 
-## Test layering in this repo
-
-| Layer | Test style | Build tag | Speed |
-|---|---|---|---|
-| `service.go` (business logic) | unit, table-driven, mock repo + process boundaries | none | <1ms |
-| `repository.go` (Mongo) | integration, real Mongo via testcontainers / docker-compose | `integration` | seconds |
-| `handler.go` (HTTP) | unit via `httptest`, table-driven status/body | none | <10ms |
-| End-to-end happy path | one per feature, real Mongo + real Gin engine | `integration` | seconds |
-
-TDD loop runs primarily at the **service layer** — that's where business behavior lives. Handler tests come after, as thin assertions on status code and envelope shape. Repository tests and the end-to-end happy path cement the contract once the service-layer behavior is stable.
+Two metrics replace coverage: a refactor commit that only moves boundaries edits no test file
+except import paths, and every feature has at least one acceptance test that was observed
+running (`-v`, `--- PASS` pasted in the review). The `reality-gate` skill audits both.
 
 ## When NOT to use this skill
 

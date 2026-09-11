@@ -58,8 +58,8 @@ def main() -> int:
     errors: list[str] = []
     skill_files = sorted(skill_root.glob("*/*/SKILL.md"))
 
-    if len(skill_files) != 51:
-        errors.append(f"inventory: expected 51 skills, found {len(skill_files)}")
+    if len(skill_files) != 52:
+        errors.append(f"inventory: expected 52 skills, found {len(skill_files)}")
 
     for path in skill_files:
         text = path.read_text(encoding="utf-8")
@@ -176,8 +176,8 @@ def main() -> int:
         text=True,
         check=False,
     )
-    if listed.returncode or len(listed.stdout.splitlines()) != 51:
-        errors.append("inventory smoke: list-skills.sh did not return 51 skills")
+    if listed.returncode or len(listed.stdout.splitlines()) != 52:
+        errors.append("inventory smoke: list-skills.sh did not return 52 skills")
     with tempfile.TemporaryDirectory(prefix="jimmy-kit-links-") as destination:
         linked = subprocess.run(
             ["bash", str(root / "scripts" / "link-skills.sh"), destination],
@@ -187,8 +187,8 @@ def main() -> int:
             check=False,
         )
         entries = list(Path(destination).iterdir())
-        if linked.returncode or len(entries) != 51 or not all(path.is_symlink() for path in entries):
-            errors.append("link smoke: link-skills.sh did not create 51 isolated symlinks")
+        if linked.returncode or len(entries) != 52 or not all(path.is_symlink() for path in entries):
+            errors.append("link smoke: link-skills.sh did not create 52 isolated symlinks")
 
     if errors:
         for error in errors:
@@ -198,7 +198,7 @@ def main() -> int:
 
     print(
         "repository-contract-audit: PASS "
-        "(51 skills; metadata, links, language, paths, runtime references, syntax, inventory/link smoke)"
+        "(52 skills; metadata, links, language, paths, runtime references, syntax, inventory/link smoke)"
     )
     return 0
 

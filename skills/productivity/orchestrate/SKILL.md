@@ -83,6 +83,11 @@ For `legacy`, resolve the executor from current args → sprint pin →
    non-overlapping writes and integration order recorded in the plan.
 6. **Verify.** Root reviews the diff for scope, parity, architecture, naming and unrelated
    changes, then runs every acceptance command itself. Executor prose is not evidence.
+   A packet touching a seam (SQL, document store, cache, gRPC/HTTP client, config, response
+   shape) MUST carry a reality AC — a named container-backed test run with `-v` whose
+   `--- PASS` line is pasted, or a replay diff against the legacy system — in addition to
+   the unit command. Exit code 0 with tests skipped is not evidence. Template and audit:
+   skill `reality-gate` (`templates/acceptance-criteria.md`).
 7. **Iterate.** Send a short delta describing failed evidence and required correction. Maximum
    three implementation iterations; then root re-scopes, takes over the sticking point, or
    reports the blocker.

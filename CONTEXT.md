@@ -40,6 +40,12 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Consumer-owned contract**: the smallest role/interface defined by the module that needs the behavior, satisfied by a provider and wired at the composition root. Use it for a real independent seam, not for every implementation or as the first response to a cycle.
 
+**Seam**: a boundary where the code meets something it does not own — SQL, a document store, a cache, a gRPC/HTTP client, configuration, or the response shape a client depends on. Fakes may stand in for a seam in pure-logic tests, but a change *to* a seam is only verified against the real thing. Owned by `reality-gate`.
+
+**Reality AC**: an acceptance criterion that can only pass by touching something the agent did not write — a named container-backed test whose `--- PASS` line is pasted, a replay of recorded real requests with a field diff, or a written row/document diffed against the legacy system. `exit 0`, "integration green", and grep gates on prose are not reality ACs. Owned by `reality-gate`.
+
+**Silent skip**: a test harness that exits 0 when its external dependency (Docker, a database) is missing, so the suite reports `ok` having run nothing. Treat any integration result without `-v` output as unverified (exit 2). Owned by `reality-gate`.
+
 **Council seat**: one of four anonymized reviewer archetypes in `product-council` (CEO/Business, PD/Strategy, CTO/Engineering, UX/Human). A seat must state its **acceptance condition**; criticism without one is out of order. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3.
 
 **Initiative vs Key Result**: an initiative is a bet ("we believe X moves KR Y by Z because…"); a KR is an outcome with metric + baseline + target + date. Shipping an initiative proves nothing about the KR. Owned by `okr-outcome-architect`.

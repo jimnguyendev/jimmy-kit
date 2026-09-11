@@ -1,0 +1,51 @@
+{
+  "skill_name": "reality-gate",
+  "evals": [
+    {
+      "id": 1,
+      "name": "green-suite-real-run-failures",
+      "prompt": "All unit and integration tests pass, but a QA agent driving the real UI against the dev database reports many 500s and wrong shapes. Explain why and propose what to change first.",
+      "expected_output": "Maps the failures to the six mechanisms with repo evidence (silent skip probe, hand-written schema, fakes at the seam, missing tracked replay suite, untested wiring, no golden contract) and proposes reality ACs before more unit tests.",
+      "assertions": [
+        "Runs or describes the silent-skip probe with Docker down",
+        "Checks the test DDL against the real schema rather than trusting fixtures",
+        "Does not recommend stricter test-first as the fix",
+        "Proposes tracking the replay suite in the repo"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ac-for-seam-change",
+      "prompt": "Write acceptance criteria for a packet that adds a MySQL reader and a new JSON list endpoint.",
+      "expected_output": "Classifies the change as seam, requires a named verbose container-backed test or replay diff, a silent-skip guard, and a golden or OpenAPI-validated response; forbids exit-code-only evidence.",
+      "assertions": [
+        "Includes a -tags integration -v -run command naming the test",
+        "Includes a contract/golden requirement for the response",
+        "States that executor prose and exit 0 are not evidence",
+        "Distinguishes behavior change from refactor for test-edit rules"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "reject-fixture-column",
+      "prompt": "An executor made a failing integration test pass by adding a column to the test schema helper. Review the change.",
+      "expected_output": "Rejects the change: the column must be confirmed against the real schema dump; if absent there, the query is the bug, not the fixture.",
+      "assertions": [
+        "Asks for SHOW CREATE TABLE or schema dump evidence",
+        "Identifies the fixture edit as mechanism 2",
+        "Does not accept the green test as verification"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "porting-to-new-repo",
+      "prompt": "Apply this skill to a PHP Laravel repo that has PHPUnit tests and no Docker in CI.",
+      "expected_output": "Runs the audit script for what it can count, adds PHPUnit-specific greps at the marked block, keeps the six-mechanism table and AC rules unchanged, and adds the agent-instructions pointer.",
+      "assertions": [
+        "Does not depend on Go-specific tooling for the AC rules",
+        "Adds the pointer to AGENTS.md or CLAUDE.md",
+        "Keeps the replay suite as a tracked repo asset"
+      ]
+    }
+  ]
+}

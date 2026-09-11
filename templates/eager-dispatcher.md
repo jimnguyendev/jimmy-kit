@@ -28,6 +28,7 @@ Dose the workflow before following the map:
 | retention / churn / segments / DAU | `growth-markov-duolingo` → `engagement-matrix-analytics` → `advanced-rfm-segmentation` |
 | retro / lessons / post-mortem / A/B ended | `retrospective` → `decision-log` |
 | stuck after 3+ attempts / complexity spiraling | `problem-solving` |
+| tests pass but QA / real DB / real UI fails · acceptance criteria for a packet touching SQL, config, or response shape · "integration green" · regression replay suite | `reality-gate` |
 
 One match → announce it and go. Several → present them as options.
 None, or the request is ambiguous → load the `routing` skill (classifier fallback
