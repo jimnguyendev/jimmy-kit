@@ -125,6 +125,90 @@ present but never validated in tests.
   (`kin-openapi` `openapi3filter.ValidateResponse` in Go).
 - A JSON marshal guard in one place (nil slice → `[]`) instead of per-field guards.
 
+## 7. Test engine is not the real engine
+
+**How it arises.** A suite pins a convenient tag — `mysql:8`, `postgres:15`, `redis:7` — and
+the deployment moves on, or was never on that version. The tag is copied into every new
+integration file, so the drift is invisible: no single place states which engine the repo
+targets. Schema parity (mechanism 2) hides the gap further, because the DDL IS real; only the
+server executing it is not.
+
+**Detect.** `grep -rn '"mysql:[0-9]' --include='*_test.go'` for more than one distinct tag, or
+for a tag with no minor version (`audit.sh` reports both). Then run `SELECT VERSION()` against
+the deployed DSN and compare. Query planners, sort/spill behaviour, JSON functions and
+collations all change between minors; a green container proves nothing about a version it is
+not running.
+
+**Fix.**
+- One exported constant owns the image (e.g. `internal/testsupport.MySQLImage()`); every
+  suite calls it; an env var overrides for a bisect.
+- An `engine-parity` script (kept under the repo's `scripts/certify/`) boots that image,
+  prints its `VERSION()` next to the `VERSION()` of a real DSN, and exits non-zero when the
+  majors differ. Shape:
+
+  ```
+  == test engine (mysql:9.4) ==      version: 9.4.0
+  == deployed engine (host/db) ==    version: 9.4.0  sort_buffer_size: 262144  sql_mode: …
+  PASS: identical (9.4.0)            # or: FAIL: test engine 8.4.11 is not the deployed 9.4.0
+  ```
+
+- Server settings that change behaviour (`sort_buffer_size`, `max_allowed_packet`,
+  `sql_mode`, collation) are printed by the same script, not assumed.
+
+## 8. Cost blindness at the seam
+
+**How it arises.** The change is correct, so every gate passes. Nothing in the pipeline asks
+what one request now costs, and the cost surfaces later — as a slow endpoint, a bill, or an
+outright failure when the data crosses a server limit. The shapes are many and none is exotic:
+a payload column read only to derive a few numbers; one query per item in a loop (N+1); a
+list with no upper bound on the page; one remote call per row; a response that ships a
+document to render a title; a join that multiplies rows before a `DISTINCT`. An agent without
+database or systems experience cannot be expected to ask, and a reviewer reading a diff
+cannot see row width, row count or call count. The fix is not knowledge — it is a number.
+
+**Which number, per seam.** AC-007 asks for one measured value per seam the change touches,
+taken against real-sized data (the widest row, the longest list, the largest account — never
+an invented fixture):
+
+| Seam touched | The number to paste |
+|---|---|
+| Database read | queries per request · rows read · bytes read (N+1 shows up as `queries ∝ items`) |
+| List / pagination path | maximum page size · whether a `LIMIT` exists · cost at the last offset |
+| Database write | rows written · transaction span · locks held |
+| Call to another service | calls per request (fan-out ∝ N?) · timeout · retries |
+| Response | bytes returned for a typical request |
+| Cache | hit ratio on real keys · what one miss costs · what a stampede on one key costs |
+
+Reviewer rule: the cost should sit within an order of magnitude of what is served or done
+(bytes read vs bytes returned, calls vs items). A wider ratio is a design finding, not a
+tuning knob; if it is deliberate, the packet says why in one line.
+
+**Detect.**
+- No cost number anywhere in the packet's AC although a seam is ticked.
+- Go heuristics `audit.sh` reports: columns scanned into fields the response never returns
+  (`db:"…"` next to `json:"-"`) — a payload fetched to be thrown away.
+- A large column inside a statement that also has `ORDER BY`, `GROUP BY` or `DISTINCT`; a
+  query or remote call inside a `for` over request data; a list query without `LIMIT`.
+- On the real database: `SELECT MAX(LENGTH(payload)), AVG(LENGTH(payload)) FROM t` and
+  `SELECT COUNT(*) … GROUP BY owner ORDER BY 1 DESC LIMIT 5` — the widest row and the longest
+  list the path can hit.
+
+**Fix (pick by shape).**
+- Payload read for a summary → project the branch in SQL (`JSON_EXTRACT`, `JSON_LENGTH`), or
+  choose the page on narrow columns and fetch payloads by id in a second statement with no
+  `ORDER BY`, or compute the summary once on write into a small column.
+- N+1 → one batched query keyed by the id set; one remote call for the set.
+- Unbounded list → a hard `LIMIT` with a documented maximum and keyset pagination.
+- Fan-out per row → bound concurrency and cap N, or move the work behind a queue.
+- Whichever is chosen, the AC pastes the number after the change next to the number before.
+
+**Worked example (2026-09-14).** A history endpoint selected `result` — a 350 KB JSON grading
+payload — through `ORDER BY created_at DESC, id DESC` to serve a summary of ~30 bytes. Every
+gate was green; on the deployed MySQL 9.4 the row overflowed `sort_buffer_size` (256 KB) and
+the endpoint answered `Error 1038: Out of sort memory`. `MAX(LENGTH(result))` on the real
+table would have printed `350621` before a line of code was written. The fix projected the
+branch in SQL: 350 KB → 7 KB per dictation row, 65 KB → 30 B per shadowing row.
+
 ## Mapping bugs to mechanisms (worked example)
 
 | Real-run bug | Mechanism |

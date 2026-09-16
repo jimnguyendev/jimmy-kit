@@ -8,7 +8,8 @@
 - [ ] Runs the silent-skip probe (tagged suite with Docker down) before trusting "integration green".
 - [ ] Checks the test schema against the real schema instead of trusting fixtures; names any fixture-only column as the bug source.
 - [ ] Locates the regression/replay script named in reports and verifies it is tracked in git.
-- [ ] Maps each reported bug to one of the six mechanisms and cites file:line evidence.
+- [ ] Maps each reported bug to one of the eight mechanisms and cites file:line evidence.
+- [ ] Compares the integration container's engine version with `SELECT VERSION()` on the deployed database before treating a green container run as evidence; on a seam bug, asks what one request costs (queries, rows, bytes, calls) on real-sized data.
 - [ ] Finds the rule that would have caught the bug living un-gated (prose/table, not checklist/AC) and reports that as root cause.
 - [ ] Proposes a reality AC (named `-v` container test with pasted `--- PASS`, or replay diff) for the next packet; does not recommend stricter test-first.
 

@@ -23,7 +23,7 @@ allowed-tools: Read Edit Write Glob Grep Bash Agent AskUserQuestion
 
 Choose one mode:
 
-- **Audit** (default when tests are green but real runs fail): run `scripts/audit.sh [repo] --probe`, confirm each RED by opening the cited files, map the last real-run bugs to the six mechanisms, write the report to `.jimmy/docs/reality-gate-audit.md` (kit default), or to the report location the target repo's AGENTS.md already names.
+- **Audit** (default when tests are green but real runs fail): run `scripts/audit.sh [repo] --probe`, confirm each RED by opening the cited files, map the last real-run bugs to the eight mechanisms, write the report to `.jimmy/docs/reality-gate-audit.md` (kit default), or to the report location the target repo's AGENTS.md already names.
 - **Gate**: write or review acceptance criteria for a packet/PR with `templates/acceptance-criteria.md`. Seam changes get a reality AC; exit code 0 is not evidence.
 - **Build**: stand up the in-repo regression replay suite (Workflow C) on the first seam change, then grow it one case per real-run bug.
 
@@ -38,12 +38,25 @@ Bugs live at the seams the agent assumed away. One rule closes the gap:
 > has been observed against something the agent did not write** — a real schema, a
 > container that actually ran, a recorded real request, or a diff against the legacy system.
 
+Two corollaries, each earned by a bug that passed every gate above (2026-09-14):
+
+- **The thing that ran must be the thing that runs.** A real container is not evidence if it
+  is a different engine version from the deployed one. A query carrying a 350 KB JSON column
+  through `ORDER BY` failed on the deployed MySQL 9.4 (`Error 1038: Out of sort memory`) and
+  passed on the mysql:8 container the suite booted — at any payload size.
+- **Correct is not the same as affordable.** Every mechanism below asks "does it match
+  reality". None asks "what does it cost" — how many queries, rows, bytes or remote calls one
+  request now spends. A read that pulls 350 KB to return 30 bytes, or a loop that issues one
+  query per item, is green on all of them, and nobody without database experience knows to
+  ask. Make the cost a printed number instead of a judgement call, and a reviewer who knows
+  nothing about the engine can still see that it is wrong.
+
 Do not demand test-first for its own sake. Ask for tests, then gate on outcome evidence.
-Strict TDD-in-the-loop costs tokens and still produces the six failures below. A rule that
+Strict TDD-in-the-loop costs tokens and still produces the eight failures below. A rule that
 lives in prose or a table, but not in a checklist or an acceptance command, does not exist
 for an agent: it optimizes for the AC it is given.
 
-## 2. The six mechanisms (measured by `scripts/audit.sh`)
+## 2. The eight mechanisms (measured by `scripts/audit.sh`; 7 and 8 are heuristics the AC then proves)
 
 | # | Mechanism | Tell-tale | Fix (details in [REFERENCE.md](REFERENCE.md)) |
 |---|---|---|---|
@@ -53,6 +66,8 @@ for an agent: it optimizes for the AC it is given.
 | 4 | Replay suite outside the repo | reports name a script git does not contain | tracked `scripts/certify/`, parameterized by base URL and DSN, named in AC |
 | 5 | Wiring and config untested | many env keys, few in `.env.example`; composition tests pass empty `Deps{}` | one boot test per process; env-example drift check |
 | 6 | No client contract evidence | zero golden responses; many `omitempty`; OpenAPI never validated | golden pairs captured from the real client; response validated against the schema |
+| 7 | Test engine is not the real engine | container image pinned to a major (`mysql:8`) while the deployed server reports another version; nobody compares them | pin the image to the deployed version from ONE constant; an `engine-parity` script prints both `VERSION()`s side by side (template in REFERENCE §7) |
+| 8 | Cost blindness at the seam | the AC for a seam change states no cost number at all — queries, rows or bytes per request, calls to another service, response size — so a correct-but-expensive change is green on every gate | AC-007: one measured number per seam touched, taken on real-sized data; the reviewer reads a number, not a judgement (REFERENCE §8 lists which number per seam) |
 
 ## 3. Workflow A — audit (about 30 minutes)
 
@@ -100,6 +115,9 @@ Use [templates/acceptance-criteria.md](templates/acceptance-criteria.md). Review
 - `strings.Contains(query, ...)` or exact-SQL assertions.
 - An expected value changed to match new output without saying why the old one was wrong.
 - A report naming a script the repo does not contain.
+- An integration run whose engine version was never compared with the deployed one.
+- A seam change whose AC states no cost number (queries, rows, bytes or calls per request)
+  when the seam is a database, another service, or a list/response path.
 
 ## 7. Test-double rules the gate enforces (shared with `tdd-go`)
 

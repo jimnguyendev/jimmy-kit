@@ -142,6 +142,29 @@ if [ -f go.mod ]; then
   echo "  golden/replay files: $GOLDEN · omitempty: $n_omit · manual nil-slice guards: $n_guard · OpenAPI response validation tests: $n_oapi"
   [ "$GOLDEN" -eq 0 ] && [ "$n_oapi" -eq 0 ] && verdict RED "no golden responses and no OpenAPI response validation (mechanism 6)"
 
+  # Engine parity — the container the suites boot (mechanism 7)
+  # shellcheck disable=SC2086
+  IMG_TAGS="$(printf '%s\n' "$TESTS" "$SRC" | xargs grep -ohE '"(mysql|mariadb|postgres(ql)?|redis|mongo(db)?|clickhouse|rabbitmq|kafka)[^":]*:[0-9][^"]*"' 2>/dev/null | grep -vE ':[0-9]{4,}[^"]*"$' | sort -u)"  # drop host:port strings such as "redis:6379"
+  n_imgs=$(count "$IMG_TAGS" '.')
+  n_major_only=$(count "$IMG_TAGS" '^"[^:]+:[0-9]+"$')
+  if [ "$n_imgs" -gt 0 ]; then
+    echo "  container image tags in code: $(printf '%s' "$IMG_TAGS" | tr '\n' ' ')"
+    engines_multi="$(printf '%s\n' "$IMG_TAGS" | sed -E 's/^"([^:]+):.*/\1/' | sort | uniq -d | tr '\n' ' ')"
+    [ -n "$engines_multi" ] && verdict RED "the same engine is pinned to different tags across files ($engines_multi) — no single constant owns the version (mechanism 7)"
+    [ "$n_major_only" -gt 0 ] && verdict AMBER "$n_major_only image tag(s) pin a major only (e.g. mysql:8) — compare with SELECT VERSION() on the deployed DSN (mechanism 7)"
+    [ -z "$engines_multi" ] && [ "$n_major_only" -eq 0 ] && verdict GREEN "image tags are unique per engine and carry a minor version — still compare with the deployed VERSION() (mechanism 7)"
+  fi
+
+  # Read cost — payload columns scanned but never served (mechanism 8)
+  HIDDEN_RE='(db:"[^"]+"[^`]*json:"-"|json:"-"[^`]*db:"[^"]+")'
+  # shellcheck disable=SC2086
+  n_hidden=$(grepc "$HIDDEN_RE" $SRC)
+  # shellcheck disable=SC2086
+  n_orderby=$(grepc 'ORDER BY' $SRC)
+  echo "  fields scanned from the DB but never served (db tag + json:\"-\"): $n_hidden · ORDER BY statements: $n_orderby"
+  # shellcheck disable=SC2086
+  [ "$n_hidden" -gt 0 ] && verdict AMBER "$n_hidden column(s) are read into fields the response never returns — a payload fetched to be thrown away; check none rides through an ORDER BY and put bytes-read in the AC (mechanism 8): $(grepl "$HIDDEN_RE" $SRC | head -3 | tr '\n' ' ')"
+
   if [ "$PROBE" -eq 1 ] && [ -n "$INTEG" ]; then
     echo
     echo "## Probe — silent skip (mechanism 1)"
@@ -164,5 +187,6 @@ fi
 #   Playwright/Cypress: presence of recorded fixtures vs hand-written mocks
 
 echo
-echo "Next: open every RED/AMBER citation, map the last real-run bugs to mechanisms, then"
+echo "Next: open every RED/AMBER citation, map the last real-run bugs to mechanisms, compare the"
+echo "test engine with SELECT VERSION() on the deployed DSN (mechanism 7), then"
 echo "write ACs with templates/acceptance-criteria.md."

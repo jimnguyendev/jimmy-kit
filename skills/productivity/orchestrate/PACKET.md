@@ -52,6 +52,11 @@
 The contract is the single source for commands and expected outcomes; the acceptance-reference
 section below contains IDs only.
 
+<!-- Add AC-006 when a container-backed test is the evidence (engine parity), and AC-007
+     when the packet touches a cost-bearing seam — a database read or write, a call to
+     another service, a list/response path (cost budget). Both come from skill reality-gate. Omitting them is a decision the
+     packet states, not a default. -->
+
 ## Acceptance references
 - AC-001
 - AC-002

@@ -58,6 +58,8 @@ Not all code deserves optimization. Identify which endpoints account for the maj
 - What is the current latency distribution? (p50, p95, p99)
 - What staleness can the data tolerate? (Real-time? 30 seconds? 5 minutes?)
 - What is the read/write ratio?
+- **Who else writes this data?** A writer you cannot observe (another service, an admin tool, a legacy system in parallel run) rules out every active invalidation strategy — the only honest cache is TTL-only with a stated staleness window, and data both systems write interleaved is not cached at all.
+- **How many instances serve it?** A per-instance cache multiplies origin load by the instance count on every expiry.
 
 **If you do not know the hot path, STOP. Instrument first, optimize later.**
 
@@ -125,10 +127,16 @@ A PR that says "improved performance" without these five items is incomplete.
 | Skip load testing | "Works on my machine" is not proof | Load test with production-like data |
 | Bundle optimizations in one PR | Cannot isolate which change helped or hurt | One optimization per PR with its own feature flag |
 | Optimize without observability | Cannot detect regressions | Set up monitoring before optimizing |
+| Write-through invalidation for data another system also writes | Their writes never reach your invalidator; the cache is silently TTL-only with a false sense of freshness | TTL-only with a stated staleness window until you are the sole writer (ladder step 0) |
+| Per-instance cache at N instances, no shared tier | Origin load × N; every instance misses together on expiry | Shared tier with TTL clamp + refresh-ahead behind a cross-instance lock (case study 2) |
+| Long TTL with no clear that reaches every instance | Operators lower TTL for everyone to serve a rare clear | Epoch-prefixed keys: one counter bump invalidates every instance |
+| Serialize a type that drops fields into a shared tier | The same key answers differently per tier | Static serialisation check per cached type; failing types stay in-process |
+| Cache on a write path "with a short TTL" | Stale metadata decides how a write is persisted — wrong forever | A request-scoped memo (no TTL, no sharing) removes the duplicate reads with zero staleness |
 
 ## Case Studies
 
 - [Voucher Distribution System](references/case-study-voucher-system.md) — 30M vouchers, 50K req/s per pod, demonstrates the full escalation ladder from batch indexing through lock-free patterns
+- [Two-Tier Cache Under a Second Writer and Fifteen Instances](references/case-study-two-tier-cache.md) — content cache for a service that is not the only writer of its data and runs as 15 instances: ownership decides the contract (TTL-only), the ladder is climbed in a different order, and the cross-instance mechanisms (TTL clamp, refresh-ahead behind a lock, negative cache, epoch clear, serialisation guard) are worked through, plus what was deliberately not cached
 
 ## Cross-References
 

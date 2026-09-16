@@ -46,6 +46,12 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Silent skip**: a test harness that exits 0 when its external dependency (Docker, a database) is missing, so the suite reports `ok` having run nothing. Treat any integration result without `-v` output as unverified (exit 2). Owned by `reality-gate`.
 
+**Engine parity**: the integration container runs the same engine version as the deployed database, proven by printing both `VERSION()`s (AC-006). A green run on another version is not evidence — the same statement can fail on one and pass on the other. Owned by `reality-gate`.
+
+**Cost budget**: one measured number per seam a change touches — queries, rows or bytes per request for a database read, calls per request for another service, bytes for a response, rows and transaction span for a write — taken on real-sized data and pasted into the AC (AC-007), before and after. Cost should sit within an order of magnitude of what is served or done; a wider ratio is a design finding, not a tuning knob. Owned by `reality-gate`.
+
+**TTL-only contract**: a cache whose only correctness mechanism is expiry, chosen when a writer the service cannot observe (another system, an admin tool, a legacy backend in parallel run) makes every active invalidation dishonest. The staleness window is stated; the escape hatch for "fresh now" is an epoch bump that reaches every instance, not a shorter TTL. Data two systems write interleaved is not cached at all. Owned by `engineering-perf-optimization-process`.
+
 **Council seat**: one of four anonymized reviewer archetypes in `product-council` (CEO/Business, PD/Strategy, CTO/Engineering, UX/Human). A seat must state its **acceptance condition**; criticism without one is out of order. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3.
 
 **Initiative vs Key Result**: an initiative is a bet ("we believe X moves KR Y by Z because…"); a KR is an outcome with metric + baseline + target + date. Shipping an initiative proves nothing about the KR. Owned by `okr-outcome-architect`.

@@ -40,11 +40,23 @@
       "id": 4,
       "name": "porting-to-new-repo",
       "prompt": "Apply this skill to a PHP Laravel repo that has PHPUnit tests and no Docker in CI.",
-      "expected_output": "Runs the audit script for what it can count, adds PHPUnit-specific greps at the marked block, keeps the six-mechanism table and AC rules unchanged, and adds the agent-instructions pointer.",
+      "expected_output": "Runs the audit script for what it can count, adds PHPUnit-specific greps at the marked block, keeps the eight-mechanism table and AC rules unchanged, and adds the agent-instructions pointer.",
       "assertions": [
         "Does not depend on Go-specific tooling for the AC rules",
         "Adds the pointer to AGENTS.md or CLAUDE.md",
         "Keeps the replay suite as a tracked repo asset"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "green-container-real-engine-500",
+      "prompt": "A list endpoint answers 500 'Out of sort memory' on the dev database, but only for rows whose JSON payload column grew past 300 KB. The integration suite (mysql:8 containers) is green and the SQL reads correctly in review. Diagnose, and write the AC for the fix.",
+      "expected_output": "Compares the container's engine version with SELECT VERSION() on the deployed DSN before trusting the green suite (mechanism 7); identifies the payload column carried through ORDER BY and read only to derive a summary (mechanism 8); proposes projecting the branch in SQL or splitting the read; writes AC-006 (both VERSION() lines pasted) and AC-007 (a cost number — here bytes and rows read per request — measured against real-sized rows) next to the container test.",
+      "assertions": [
+        "Checks the deployed engine version instead of assuming the container matches it",
+        "States the read cost as a printed number in the AC, not as a judgement",
+        "Does not propose raising sort_buffer_size as the fix",
+        "Requires the regression test to run on the deployed engine version"
       ]
     }
   ]

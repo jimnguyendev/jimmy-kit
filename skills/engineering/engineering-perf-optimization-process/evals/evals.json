@@ -74,6 +74,19 @@
         "The agent mentions specific L1 implementation advice (TTL, size limits, invalidation strategy)",
         "The agent reminds to verify improvement with load testing after implementation"
       ]
+    },
+    {
+      "id": 7,
+      "prompt": "Our Go content service runs 15 pods. The content tables are also written by a legacy PHP admin tool we do not control. A teammate proposes a per-pod LRU with a 2-minute TTL plus write-through invalidation in our repository so admins see changes immediately. Review the proposal.",
+      "expected_output": "The agent starts from ownership: a second writer the service cannot observe makes write-through invalidation dishonest (it never fires for the PHP writes), so the honest contract is TTL-only with a stated staleness window. It flags that a per-pod cache at 15 pods multiplies origin load by 15 on every expiry and that pods expire together, and proposes a shared tier under the in-process one with a TTL clamp, downward jitter, refresh-ahead behind a cross-pod lock for hot keys, a shorter negative TTL for slug lookups, and an epoch-based clear that reaches every pod so the TTL can be long. It asks which data both systems write interleaved and rules that out of caching entirely.",
+      "assertions": [
+        "The agent rejects write-through invalidation because another system writes the same data",
+        "The agent names TTL-only with an explicit staleness window as the honest contract",
+        "The agent identifies the ×15 origin load and synchronized expiry of a per-pod cache",
+        "The agent proposes an on-demand clear that reaches every pod (epoch or equivalent) rather than a shorter TTL",
+        "The agent asks what data both systems write and excludes it from caching",
+        "The agent requires hit-ratio metrics per cache family before tuning capacity"
+      ]
     }
   ]
 }

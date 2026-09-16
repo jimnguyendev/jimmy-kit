@@ -76,6 +76,12 @@ For `legacy`, resolve the executor from current args → sprint pin →
    No executor starts from an unapproved plan.
 4. **Packetize.** Copy [PACKET.md](PACKET.md). One packet is one bounded change/commit with
    explicit file ownership, stop conditions, and exact acceptance commands.
+   The AC is where quality is decided, not Verify: an executor optimizes for the criteria it
+   is given, so a question the AC never asks is a question nobody asks. A packet touching a
+   cost-bearing seam (database, another service, a list/response path) states its cost budget (AC-007) and, when container tests are the evidence, its
+   engine parity (AC-006). Neither needs database expertise to review — both print a number.
+   An executor cannot measure what it cannot reach: a packet whose AC needs a real database
+   carries the read-only DSN and the exact command, or root runs that AC itself and says so.
 5. **Dispatch.** One packet per executor run. The packet's implementation, evidence,
    runtime-parity, release, and landing **verdict dimensions** are tracked separately. Name both
    an **evidence owner** (who proves the harness/claim) and a **runtime-fix owner** (who changes
@@ -86,8 +92,11 @@ For `legacy`, resolve the executor from current args → sprint pin →
    A packet touching a seam (SQL, document store, cache, gRPC/HTTP client, config, response
    shape) MUST carry a reality AC — a named container-backed test run with `-v` whose
    `--- PASS` line is pasted, or a replay diff against the legacy system — in addition to
-   the unit command. Exit code 0 with tests skipped is not evidence. Template and audit:
-   skill `reality-gate` (`templates/acceptance-criteria.md`).
+   the unit command. Exit code 0 with tests skipped is not evidence. A container-backed test is
+   evidence only when the container is the engine the deployment runs (AC-006); a seam
+   packet is verified only when its cost number (queries, rows, bytes or calls per request)
+   was measured on real-sized data (AC-007). Template and audit: skill `reality-gate`
+   (`templates/acceptance-criteria.md`).
 7. **Iterate.** Send a short delta describing failed evidence and required correction. Maximum
    three implementation iterations; then root re-scopes, takes over the sticking point, or
    reports the blocker.

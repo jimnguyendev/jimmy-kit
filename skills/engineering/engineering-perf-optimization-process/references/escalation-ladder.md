@@ -2,6 +2,25 @@
 
 Start at step 1. Move to the next step ONLY when the current step is insufficient AND you have metric proof.
 
+**The numbering is not an order.** Which step comes next is decided by the profile and by the
+constraints below, not by the step number: a service with a second writer it cannot observe
+takes step 3 before step 2 (see [case study 2](case-study-two-tier-cache.md)); a single-instance
+service may never need step 4's cross-instance half.
+
+## Step 0: Who else writes this data?
+
+Answer this before any cache step. It decides which cache contracts are **honest**:
+
+| Writers of the data | Honest contract |
+|---|---|
+| Only this service | TTL, plus write-through or event-driven invalidation in the same write path |
+| Another system too (an admin tool, a legacy backend in parallel run, a batch job) | **TTL-only** with a stated staleness window — your invalidator never fires for their writes |
+| Both systems, interleaved, on user-visible state | **do not cache** — read the source every request |
+| Inputs to an irreversible write (a grade, a payment) | **never cache** — stale here is persisted wrong forever |
+
+Also count the instances: a per-instance cache multiplies origin load by the instance count on
+every expiry, which is what makes steps 2 and 4 necessary at modest traffic.
+
 ## Step 1: Fix the query
 
 **When:** Database queries appear in the profile as the dominant cost.
@@ -27,7 +46,7 @@ Start at step 1. Move to the next step ONLY when the current step is insufficien
 - Cache hot-path query results in Redis with TTL
 - Add TTL jitter (e.g., base TTL +/- 10%) to avoid synchronized expirations
 - Define key format upfront (e.g., `item:{id}`, `feed:{user_id}:{bucket}`)
-- Invalidate on write for critical fields only (event-driven, not TTL-only)
+- Invalidate on write for critical fields only (event-driven, not TTL-only) — **only when this service is the sole writer** (step 0); otherwise TTL-only with a stated staleness window, and an on-demand clear (step 4) instead of a shorter TTL
 - Add cache hit rate metrics (must monitor from day one)
 
 **Metric proof to escalate:** Cache hit rate is high (>90%) but Redis round-trip latency (typically 1-3ms) still accounts for a significant portion of p99. Show cache hit rate + Redis latency histogram.
@@ -45,6 +64,10 @@ Start at step 1. Move to the next step ONLY when the current step is insufficien
 - Keep L1 TTL short (seconds) or use pub/sub invalidation for consistency
 - Size L1 to fit in memory budget (Gate 1) — do not cache everything
 - Prevent stale write-back: reader nodes should not write to Redis from L1
+- Under a shared tier, **clamp** the L1 TTL to the remaining lifetime of the shared entry (store the absolute expiry with the value) — or one instance's copy outlives the shared truth and N instances serve N versions
+- Jitter the L1 TTL **downwards only** (TTL − random) so the staleness contract is never exceeded; leave the shared entry un-jittered as the common clock
+- Before a type enters a shared tier, check it survives serialisation (fields dropped by JSON come back zero from L2 and intact from L1 — the same key answering differently per tier); types that fail stay in-process only
+- Give "not found" answers on caller-supplied keys (slugs, ids) their own **shorter negative TTL** — crawlers asking for garbage otherwise miss 100 % and every miss reaches the database
 
 **Metric proof to escalate:** L1 hit rate is high but p99 still misses target on cache miss path. Show L1 hit rate, miss rate, and latency breakdown for cache-miss requests.
 
@@ -60,6 +83,8 @@ Start at step 1. Move to the next step ONLY when the current step is insufficien
 - Optionally add distributed lock with short lease (e.g., 2s) for cross-instance deduplication
 - First requester fetches from DB, others wait on the singleflight result
 - Populate cache asynchronously but ensure first requester still meets p99
+- **Across instances, per-process singleflight does not help.** For a hot key that expires everywhere at once (cache breakdown), add **refresh-ahead**: past ~50 % of the entry's lifetime, serve the cached value and reload in the background, with a short cross-instance lock so one instance reloads for the cluster. A failed refresh keeps the old value
+- Give operators a **clear that reaches every instance**: prefix keys with a family **epoch** kept in the shared store and re-read every few seconds; a clear deletes the shared keys and bumps the epoch, so every instance's old entries become unreachable at once — no per-instance call, no restart, and long TTLs stop being dangerous
 
 **Metric proof to escalate:** Singleflight resolves stampede, but CPU is now the bottleneck (not I/O). Show CPU profile flamegraph with marshal/unmarshal dominating.
 
@@ -100,12 +125,13 @@ Start at step 1. Move to the next step ONLY when the current step is insufficien
 
 **Reference implementation:** See `github.com/huykn/distributed-cache` examples/heavy-write-api/poc — demonstrates lock-free atomic pop at 50K req/s per pod with MinuteStore pattern.
 
-**Full case study:** See [Voucher Distribution System](case-study-voucher-system.md) for a real system that progressed through all six steps.
+**Full case studies:** [Voucher Distribution System](case-study-voucher-system.md) — a real system that progressed through all six steps for throughput; [Two-Tier Cache Under a Second Writer and Fifteen Instances](case-study-two-tier-cache.md) — the same ladder climbed in a different order because of ownership and instance count, with the cross-instance mechanisms (TTL clamp, refresh-ahead, negative cache, epoch clear) worked through.
 
 ## Decision Summary
 
 | Step | Trigger condition | Typical throughput range | Complexity added |
 |---|---|---|---|
+| 0. Ownership | before any cache: who else writes the data, how many instances | any | none — decides which contracts are honest |
 | 1. Fix queries | DB queries dominate profile | 0 - 2K RPS | Low |
 | 2. Redis cache | Repeated reads, data tolerates staleness | 2K - 10K RPS | Low-Medium |
 | 3. L1 cache | Redis round-trip is the bottleneck | 10K - 50K RPS | Medium |
