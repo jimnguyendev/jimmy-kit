@@ -1,6 +1,6 @@
 ---
 name: change-tiers
-description: Sizing a task before doing it. Use when the user asks which tier a task is, how big or small a change is, whether something needs a spec or a plan, whether to just do it or slow down, or when deciding how much process a piece of work deserves.
+description: Size workflow effort. Use when deciding how much discovery, planning, review, or verification a change warrants.
 version: "1.0.0"
 type: system
 ---
@@ -20,14 +20,14 @@ silently, differently, every time.
 
 | Tier | Response | What it looks like |
 |---|---|---|
-| **Tier 1** | Just do it. | Single file, no design decisions, a quick answer. No manifest, no spec, no confirmation. |
+| **Tier 1** | Just do it. | Small, reversible, no material design decision. No manifest, no spec, no confirmation. |
 | **Tier 2** | Announce and proceed. | Multiple steps, creates artifacts. Say what you are doing, then do it. |
-| **Tier 3** | Card and choose. | Major effort, genuine ambiguity. Present options and let the user pick. |
+| **Tier 3** | Card and choose. | Consequential unresolved choices. Present trade-offs and resolve those choices; reuse existing approval. |
 
 ## The bias
 
-**Bias toward Standard scope.** When a task sits on a boundary, take the
-higher tier.
+Assess risk, uncertainty, reversibility, and acceptance evidence. Raise the tier
+when a concrete unresolved risk warrants it, not merely because several files change.
 
 Any of these puts a task at **Tier 2 minimum**, regardless of how small the
 diff looks:
@@ -36,20 +36,16 @@ diff looks:
 - an API change
 - a decision the team would want to see
 
-The asymmetry is deliberate. The cost of over-tiering is a few minutes of
-ceremony. The cost of under-tiering is a change nobody reviewed, in a place
-nobody expected, discovered later by someone who did not know it happened.
+Tier 2 means announce and proceed, not mandatory spec/plan approval. Reuse
+accepted behavior and existing authorization. For Tier 3, ask about the consequential
+choice that remains open; do not reopen decisions already accepted by the user.
 
 ## Tier 1 is a real escape hatch, not a trap
 
-Tier 1 exists so the process does not tax trivial work, and it is genuinely
-free: no manifest is created, so the spec-gate hook has nothing to block on
-(the hook reads `gate_state` from a manifest; no manifest means no active
-cycle means edits are unrestricted).
-
-That is the escape hatch working as designed. It is not a loophole — "I will
-call it Tier 1 so I do not have to write a spec" is a rationalization, and the
-list above is what it collides with.
+Tier 1 needs no kit manifest, spec, or routing menu. Apply the target project's
+actual controls and a relevant check. This kit does not install hooks or a manifest
+state machine. A tiny behavior change can still have a large blast radius, so
+inspect that risk instead of using line count as the shortcut.
 
 ## Rationalizations that do not survive contact
 

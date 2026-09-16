@@ -1,27 +1,18 @@
 ---
 name: ux-brief
-description: >
-  Produces a design brief from the evaluation that feeds directly into the
-  specification and planning skills. Translates MUST keep / MAY change /
-  SHOULD improve classifications into concrete design directions with
-  user-confirmed decisions. Use after ux-evaluate when the user has confirmed
-  the classifications, or when the user says "create the design brief",
-  "what should the redesign look like", or "write the design direction".
+description: >-
+  Use when redesign findings need concrete visual direction, accepted keep/change decisions need a design brief, or the user asks what a redesigned page or component should look like.
 version: "1.0.0"
 modes: [build, architect]
 ---
 
-<!-- sage-metadata
-cost-tier: sonnet
-activation: auto
-tags: [ux, design, brief, specification, redesign]
-inputs: [design-evaluation, current-design-system]
-outputs: [design-brief]
-playbook: ux-design
-requires: [ux-evaluate]
--->
-
 # UX Brief
+
+> **This skill exists to stop:** ambiguous design handoffs and repeated approval of directions the user already accepted.
+
+## 🤖 0. HOW TO USE
+
+BUILD produces a focused component/page brief; ARCHITECT covers the full redesign. Use evaluation findings and accepted decisions from the conversation, supplied documents, or `.jimmy/work/<feature>/design-evaluation.md`. Missing filenames do not require repeating research. Output `.jimmy/work/<feature>/design-brief.md`, scoped to the accepted change, for `ux-specify` and the development plan.
 
 Translate evaluation findings into a design brief that the spec and plan
 skills can execute against. This is where analysis becomes direction.
@@ -34,8 +25,8 @@ so implementation follows design intent.
 
 ## When to Use
 
-After ux-evaluate and the user has confirmed classifications. Before the
-normal quick-elicit / specify flow. The design brief becomes an INPUT to
+After ux-review evaluate mode and the user has confirmed classifications. Before the
+normal elicitation and specification flow. The design brief becomes an INPUT to
 the specification — enriching it with visual direction that the spec
 alone wouldn't contain.
 
@@ -43,8 +34,7 @@ alone wouldn't contain.
 
 ### Step 1: Confirm User Decisions
 
-Review the evaluation's classifications with the user. For each SHOULD
-IMPROVE item, confirm the direction:
+Carry accepted classifications and directions forward. Identify only unresolved material choices, especially consequential brand or scope changes. For those choices, propose a direction:
 
 > "The evaluation found [N] items to improve. For each one, I'll propose
 > a direction. Tell me if you agree or want something different."
@@ -67,7 +57,7 @@ Proposed direction: Replace image grid with focused hero —
   Headline: outcome-focused (e.g., "Ace your IELTS with AI-powered practice")
   Subheadline: how it works in one line
   Primary CTA: "Start Learning Free"
-  Trust badges: "100,000+ students" + award logos
+  Trust badges: verified student count + authorized award logos, if evidenced
 → Agree / Adjust / Skip
 ```
 
@@ -141,7 +131,7 @@ Save to `.jimmy/work/<feature>/design-brief.md`:
 ```markdown
 # Design Brief: [page/product] Redesign
 
-**Based on:** design-evaluation.md (confirmed by user on [date])
+**Based on:** [actual evaluation source and accepted decisions, with date/context]
 **Prepared for:** [`ux-specify` + `ux-plan-tasks`]
 
 ## Objective
@@ -177,36 +167,30 @@ social proof."
 4. Social proof visible within first viewport on desktop
 ```
 
-Show the complete brief. This document feeds directly into the `specify`
-skill as additional input — the spec will reference it for visual
-requirements alongside the functional requirements from quick-elicit.
+Present the complete brief with its constraints and unresolved choices. Continue to already authorized specification or implementation work; no extra approval is required for a settled direction.
 
-"Here's the design brief. This will guide the spec and implementation.
-Ready to proceed to specification?"
-
-## How This Connects to Sage Workflow
+## How This Connects to the Kit Workflow
 
 ```
-ux-audit → ux-research → ux-evaluate → ux-brief
+ux-review audit mode → ux-discovery research mode → ux-review evaluate mode → ux-brief
                                             ↓
                                     design-brief.md
                                             ↓
-BUILD workflow: scan → elicit → specify (reads design-brief) → plan → build
+Development: existing context → specification + ux-specify → plan (ux-plan-tasks for ARCHITECT) → implementation
 ```
 
-The design brief is an INPUT to specify, not a replacement for it. Specify
+The design brief is an input to the feature specification, not a replacement. The specification
 adds functional requirements, acceptance criteria, and technical constraints.
 The brief adds visual direction, brand constraints, and design decisions.
-Together, they give the plan skill everything needed for task decomposition.
+Together, they provide the requirements needed for task decomposition.
 
 ## Rules
 
 **MUST (violation = implementation without design direction):**
-- MUST confirm every SHOULD IMPROVE direction with the user before
-  including it in the brief. The user decides, not the agent.
+- MUST preserve accepted directions and authorization. Ask about unresolved consequential choices before dependent work; routine details within the accepted direction may be specified and explained without another approval.
 - MUST include constraints section. Implementation without constraints
   drifts from brand, breaks accessibility, or ignores performance.
-- MUST produce a document that the specify skill can reference by path.
+- MUST produce a brief that downstream specification and planning can reference by path.
 
 **SHOULD (violation = vague brief):**
 - SHOULD be specific enough that two different developers would produce
@@ -214,7 +198,7 @@ Together, they give the plan skill everything needed for task decomposition.
   "Hero with outcome-focused headline, subheadline, primary CTA, trust
   badges — mobile: stacked, desktop: text-left image-right" is specific.
 - SHOULD define mobile layout explicitly, not just desktop.
-- SHOULD include success criteria that can be verified by the visual gate.
+- SHOULD include success criteria that can be verified by visual and interaction checks appropriate to the requirement.
 
 **MAY (context-dependent):**
 - MAY include rough wireframe descriptions (ASCII or text-based layout

@@ -1,30 +1,18 @@
 ---
 name: ux-writing
-description: >
-  Produces UX writing deliverables: voice and tone guides, microcopy for
-  specific features, and content audits of existing product copy. Use when
-  the user needs to define a product's voice, write interface copy for a
-  feature, audit existing microcopy quality, or establish UX writing
-  guidelines. Also triggers when the user says "write the button labels,"
-  "what should the error message say," "create a voice and tone guide,"
-  "audit the product copy," "write microcopy for this flow," or "the copy
-  doesn't sound right." Do NOT use for marketing copy, blog posts, landing
-  page content, or email campaigns — those are marketing writing, not UX
-  writing.
+description: >-
+  Use when interface labels, errors, empty states, or flow copy need writing or review, or a product needs voice and tone guidance. Applies to product microcopy rather than marketing campaigns.
 version: "1.0.0"
 modes: [fix, build, architect]
 ---
 
-<!-- sage-metadata
-cost-tier: sonnet
-activation: auto
-tags: [ux-design, writing, microcopy, voice-tone, content, copy]
-inputs: [feature-context, brand-context]
-outputs: [voice-tone-guide, microcopy-set, content-audit]
-requires: []
--->
-
 # UX Writing
+
+> **This skill exists to stop:** unclear interface copy that hides recovery or disregards the user's context.
+
+## 🤖 0. HOW TO USE
+
+Use FIX for a specific string, BUILD for a flow's microcopy, and ARCHITECT for a complete voice guide/content audit. Reuse supplied audience, voice principles, accepted scope, and emotional context. A FIX can be an inline replacement with rationale; broader deliverables use the paths in Output. Do not require a full voice guide or repeat intake for a scoped edit.
 
 Create the words that help users accomplish their goals inside the product.
 UX writing is about clarity, not cleverness — every word earns its place by
@@ -72,13 +60,13 @@ The skill works with whatever context is available:
   reveals the current (often implicit) voice and its inconsistencies.
 - **Voice and tone guide** — if one exists (in `.jimmy/docs/` or a
   project-defined location), load it. All microcopy should follow it. If none exists,
-  creating one is the first step.
+  establish only the voice principles needed for the selected mode.
 
 ## Process
 
 ### Step 0: Understand the Context
 
-Confirm with the user in ONE message:
+Use known context first. Ask only missing questions that materially affect the requested copy, together in one message:
 
 1. **What's the deliverable?** Voice and tone guide? Microcopy for a specific
    feature/flow? Content audit of existing copy? All three?
@@ -254,9 +242,7 @@ that needs adjustment?"
 ## Failure Modes
 
 - **No voice direction exists and user wants to skip it:** Don't skip.
-  Spend 5 minutes on minimal voice (3 attributes, 1 principle). Without
-  voice direction, copy for buttons will sound different from copy for
-  error messages, and the product will feel schizophrenic.
+  State minimal voice assumptions for the requested scope from the product context and nearby copy. A FIX needs only enough direction for that string; a complete guide is not a prerequisite.
 
 - **User wants marketing language in the UI:** Push back gently. "Inside
   the product, users need help, not persuasion. Marketing copy belongs on

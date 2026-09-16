@@ -1,6 +1,7 @@
 ---
 name: subscription-paywall
-description: "Design paywalls, trials, and pricing pages for subscription products using behavioral psychology and a revenue tree. Use when deciding freemium vs trial vs reverse trial, when a pricing table under-converts, when churn is high after month one, when a use case only happens monthly, or when someone proposes locking a feature behind the paywall."
+description: >-
+  Use when choosing freemium, trial, or reverse trial; reviewing subscription pricing and paywalls; diagnosing weak pricing-page conversion or early churn; or assessing infrequent-use products.
 ---
 
 # Subscription Strategy & Paywall Design

@@ -34,3 +34,15 @@
 - [x] **Finding 4 — AI grading failure/timeout/partial/low-confidence branches unspecified → launch-blocking**, with all four branches specced and "no Register CTA on a failure state". The gap from run #1 is closed by row 15.
 
 Friction reported (fixed in the same session): scorecard template said 14 topics and lacked row 15 → synced; naming drift rows 9/13 → aligned; scoring on spec = estimate, findings table is primary → stated in template footer. Left as-is: §3 guest arc is speaking-test-flavoured (kit example domain).
+
+---
+## Current revision — 2026-09-16 (written before refactor)
+
+**Status: exit 2 — prospective cases; independent execution not yet recorded.**
+
+**Sample input:** Audit an in-app AI result screen with a registration wall and no failure branch; separately route a request only about keyboard accessibility.
+
+**Expected behaviors:**
+- [ ] Retains conversion/negotiation boundary and routes general usability to ux-review.
+- [ ] Reports unspecified AI failure/timeout/low-confidence branches as launch-blocking.
+- [ ] Keeps historical independent results separate from this revision status.

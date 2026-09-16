@@ -1,5 +1,19 @@
 # Scenario — routing dosage (written BEFORE the revision)
 
+## 2026-09-16 refactor scenario (written BEFORE skill changes)
+
+**Status:** [EXIT 2 — specified; independent application not yet recorded for this revision].
+
+**Input 1:** Add the approved tracking event, using the existing registry and tests.
+
+**Expected:** Proceed as Tier 2 without a menu, repeat approval, PRD, or classification subagent; choose only available skills.
+
+**Input 2:** Audit this Python API for correctness.
+
+**Expected:** Route to artifact/code review, not UX review based only on the word audit.
+
+## Earlier evidence (historical scope)
+
 **Rationale:** an always-on dispatcher can turn a maximal skill map into a mandatory pipeline, especially when an implementation verb triggers council and every downstream phase regardless of risk.
 
 **Sample cases:**

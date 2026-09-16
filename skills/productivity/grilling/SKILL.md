@@ -1,14 +1,28 @@
 ---
 name: grilling
-description: Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.
+description: Stress-test a plan or decision through an interview. Use when the user asks to be grilled or wants unresolved assumptions and choices challenged.
 ---
 
 # Grilling
 
-Interview me relentlessly about every aspect of this until we reach a shared understanding. Walk down each branch of the decision tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer.
+> **This skill exists to stop:** an interview from repeating discoverable facts or ending with decisions still hidden in the conversation.
 
-Ask the questions one at a time, waiting for feedback on each question before continuing. Asking multiple questions at once is bewildering.
+## 🤖 0. HOW TO USE
 
-If a *fact* can be found by exploring the environment (filesystem, tools, etc.), look it up rather than asking me. The *decisions*, though, are mine — put each one to me and wait for my answer.
+Interview mode produces a decision summary with accepted choices, assumptions,
+and open blocking questions. Documentation capture is available through
+`grill-with-docs`; `grill-me` is a compatibility name for this interview.
 
-Do not act on it until I confirm we have reached a shared understanding.
+Inspect the supplied plan and relevant environment first. Look up factual answers
+instead of asking the user to repeat them. Identify the unresolved decisions and
+their dependencies; start with the one that changes the most downstream choices.
+
+Ask one decision question at a time, giving a recommendation and its trade-off.
+Wait for that answer before taking the dependent branch. Reuse accepted decisions;
+do not re-ask them solely because a different skill or phase begins.
+
+Finish when no blocking branch remains, or the user asks to stop: summarize the
+choices, evidence, assumptions, and deferred questions, and request confirmation
+only for decisions not yet accepted. An interview alone does not authorize
+implementation. If implementation was also requested and its decisions are
+settled, hand off the accepted scope without another interview.

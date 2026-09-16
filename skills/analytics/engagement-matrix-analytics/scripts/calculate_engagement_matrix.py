@@ -63,19 +63,19 @@ def analyze_engagement_matrix(features_data, total_mau):
 
         if is_high_breadth and is_high_freq:
             item["quadrant"] = "CORE"
-            item["action"] = "PROTECT & OPTIMIZE (Target P95 latency < 20s)"
+            item["action"] = "INVESTIGATE customer value and agreed reliability budget"
             quadrants["CORE (Top-Right: High Breadth, High Freq)"].append(item)
         elif not is_high_breadth and is_high_freq:
             item["quadrant"] = "NICHE"
-            item["action"] = "GROWTH GOLDMINE (Expose in Onboarding Tour)"
+            item["action"] = "INVESTIGATE broader relevance before an adoption experiment"
             quadrants["NICHE / POWER (Top-Left: Low Breadth, High Freq)"].append(item)
         elif is_high_breadth and not is_high_freq:
             item["quadrant"] = "UTILITY"
-            item["action"] = "MAINTAIN STABLE (Periodic UX audit)"
+            item["action"] = "INVESTIGATE expected cadence and reliability needs"
             quadrants["UTILITY (Bottom-Right: High Breadth, Low Freq)"].append(item)
         else:
             item["quadrant"] = "GHOST"
-            item["action"] = "DEPRECATE CANDIDATE (60-day probation)"
+            item["action"] = "INVESTIGATE telemetry, customer value, and dependencies before proposing removal"
             quadrants["GHOST (Bottom-Left: Low Breadth, Low Freq)"].append(item)
 
     return {

@@ -1,6 +1,12 @@
 -- ============================================================================
 -- Generic Practice Lab: Step-by-Step Funnel Drop-off Analysis Query
--- Dialect: Standard ANSI SQL / PostgreSQL / DuckDB / BigQuery
+-- PostgreSQL-style worked example; adapt syntax and semantics to the target warehouse.
+-- Before production use: apply registry-supported version and QA/bot filters,
+-- verify identity stitching, event coverage, and funnel ordering. Missing
+-- instrumentation is unavailable evidence, not proof of zero conversion.
+-- The last step measures checkout start, NOT a verified paid subscription.
+-- This MIN-per-event example does not reconstruct repeated session paths.
+-- Adapt the path logic and validate with recorded real journeys.
 -- ============================================================================
 
 WITH evaluation_window AS (
@@ -23,8 +29,8 @@ user_funnel_steps AS (
     MIN(CASE WHEN event_name = 'ai_grading_completed' THEN event_timestamp END) AS t_graded,
     -- Step 5: Diagnostic Lead Saved
     MIN(CASE WHEN event_name = 'diagnostic_lead_saved' THEN event_timestamp END) AS t_lead_saved,
-    -- Step 6: Subscription Converted
-    MIN(CASE WHEN event_name = 'subscription_checkout_started' THEN event_timestamp END) AS t_paid
+    -- Step 6: Checkout Started (not confirmed payment)
+    MIN(CASE WHEN event_name = 'subscription_checkout_started' THEN event_timestamp END) AS t_checkout
   FROM user_activity_events
   CROSS JOIN evaluation_window w
   WHERE event_timestamp >= w.start_time AND event_timestamp < w.end_time
@@ -38,7 +44,7 @@ funnel_aggregates AS (
     COUNT(DISTINCT CASE WHEN t_test_start IS NOT NULL AND t_test_start >= t_cta THEN anonymous_id END) AS step3_test_started,
     COUNT(DISTINCT CASE WHEN t_graded IS NOT NULL AND t_graded >= t_test_start THEN anonymous_id END) AS step4_test_completed,
     COUNT(DISTINCT CASE WHEN t_lead_saved IS NOT NULL AND t_lead_saved >= t_graded THEN anonymous_id END) AS step5_lead_saved,
-    COUNT(DISTINCT CASE WHEN t_paid IS NOT NULL AND t_paid >= t_lead_saved THEN anonymous_id END) AS step6_subscribed
+    COUNT(DISTINCT CASE WHEN t_checkout IS NOT NULL AND t_checkout >= t_lead_saved THEN anonymous_id END) AS step6_checkout_started
   FROM user_funnel_steps
   GROUP BY device_type
 )
@@ -53,9 +59,9 @@ SELECT
   ROUND(step4_test_completed * 100.0 / NULLIF(step3_test_started, 0), 2) AS conv_3_to_4_pct,
   step5_lead_saved,
   ROUND(step5_lead_saved * 100.0 / NULLIF(step4_test_completed, 0), 2) AS conv_4_to_5_pct,
-  step6_subscribed,
-  ROUND(step6_subscribed * 100.0 / NULLIF(step5_lead_saved, 0), 2) AS conv_5_to_6_pct,
+  step6_checkout_started,
+  ROUND(step6_checkout_started * 100.0 / NULLIF(step5_lead_saved, 0), 2) AS conv_5_to_6_pct,
   -- Overall End-to-End Conversion Rate
-  ROUND(step6_subscribed * 100.0 / NULLIF(step1_landing, 0), 2) AS overall_conversion_pct
+  ROUND(step6_checkout_started * 100.0 / NULLIF(step1_landing, 0), 2) AS overall_conversion_pct
 FROM funnel_aggregates
 ORDER BY step1_landing DESC;

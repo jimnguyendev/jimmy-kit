@@ -1,5 +1,8 @@
 # Requirements Writing
 
+> **Scope:** Apply the relevant sections to the requested change. A source may be a JTBD outcome or other supplied customer evidence; preserve evidence status and label unsupported requirements as hypotheses. Do not require a full discovery workflow for a targeted update.
+
+
 ## Purpose
 
 Precise rules for writing requirements that are grounded in customer jobs,
@@ -68,7 +71,7 @@ Bad:
 
 ## Connecting Requirements to JTBD
 
-Every requirement must trace back to the JTBD analysis. The traceability
+Every requirement must trace to a JTBD outcome or supplied customer need, with its evidence status. The traceability
 chain:
 
 ```
@@ -108,7 +111,7 @@ need, not a system capability. Anyone reading the PRD — PM, developer,
 designer, stakeholder — thinks from the customer's perspective first.
 
 **Why this priority** forces the writer to justify the priority with
-evidence from the JTBD analysis, not with opinion or authority. A
+evidence from JTBD or supplied customer research, not with opinion or authority. A
 requirement without justification is a requirement that might not
 belong.
 

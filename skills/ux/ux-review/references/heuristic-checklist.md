@@ -1,17 +1,8 @@
----
-name: 52-ux-heuristic-review
-order: 52
-category: quality
-version: "1.0.0"
-modes: [build, architect]
-source: "play-ux-design"
----
 
-# Gate 52: UX Heuristic Review
+# UX Heuristic Checklist
 
 Evaluates the implementation against core usability heuristics derived from
-Nielsen, Norman, and Krug. This gate complements Gate 03 (code quality) with
-a user-experience lens.
+Nielsen, Norman, and Krug. Use alongside code quality review for the affected flows. This reference does not install an automated gate.
 
 ## Check Criteria
 

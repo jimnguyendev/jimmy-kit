@@ -1,5 +1,8 @@
 # PRD Methodology
 
+> **Scope:** Use this reference for detailed framing or a full brief. JTBD is the preferred structure; supplied customer evidence is also valid input. For light or partial work, keep source traceability and label hypotheses, missing metrics, and material decisions. A formal JTBD artifact is not a gate.
+
+
 ## Purpose
 
 Provides the structured methodology for writing a Product Requirements Document

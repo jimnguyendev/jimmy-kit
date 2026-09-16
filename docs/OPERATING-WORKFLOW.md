@@ -1,4 +1,4 @@
-# Operating Workflow — how the 51 skills fit together
+# Operating Workflow — how the 52 skills fit together
 
 Three layers. The spine is Sage's intent spectrum (UNDERSTAND → ENVISION → DELIVER → REFLECT); this kit extends it with an intake thinking layer and a red-team gate.
 
@@ -12,6 +12,8 @@ The chains in this document are MAXIMAL maps ("what could apply"), not mandatory
 - **Two signs you are being mechanical:** a skill's output changed none of your decisions (you ran it for show); you needed this table to know the next step (the map is driving you).
 - **Stop early.** "Retention dropped" → `analyst` (is the number real?) → `growth-markov` (which transition leaks) → STOP if the bottleneck is clear; `engagement-matrix`/`advanced-rfm` only when it is not.
 - **Use `problem-solving` as recovery, not intake.** Trigger it after 3+ failed approaches or when complexity keeps increasing; return its reframed problem to the appropriate phase owner.
+
+Accepted scope, supplied evidence, and authorization carry through every skill handoff. A workflow recipe does not create another approval requirement. Continue authorized work through its acceptance checks; ask only about a material unresolved decision, changed scope, or external action not already authorized.
 
 ## Layer 1 — Intake: the 7 questions (run in your head first)
 0. How big is this, what does "done" mean, who confirms? → `change-tiers`
@@ -49,8 +51,8 @@ Run `product-council` as part of the full Tier 3 flow. By default, Tier 1 and al
 11. **"How do we grow this?" / ad budget proposed** → go-to-market (retention gate first) → growth-loops (does a loop close?) → only then acquisition.
 12. **"Lock more features to convert free users"** → subscription-paywall (hero-feature check, reverse trial, revenue-tree lever) → single-variable A/B.
 13. **"Tests are green but QA on the real database / UI keeps failing"** → reality-gate audit (`scripts/audit.sh --probe`; map bugs to the eight mechanisms; find the un-gated rule) → reality AC in every seam packet (`templates/acceptance-criteria.md`; engine parity AC-006 when a container is the evidence, cost budget AC-007 on any cost-bearing seam) → tracked replay suite → quality-gates (pasted `--- PASS`, never exit code).
-13. **Backlog ordered by loudest voice / "delete the unused feature"** → product-vision (vision sentence, questions-behind-requests, ripple check) → opportunity-map.
-14. **New product or platform proposed** → product-strategy (classify, weapon, resource law, gates, mission) → change-tiers → architect.
+14. **Backlog ordered by loudest voice / "delete the unused feature"** → product-vision (vision sentence, questions-behind-requests, ripple check) → opportunity-map.
+15. **New product or platform proposed** → product-strategy (classify, weapon, resource law, gates, mission) → change-tiers → architect.
 
 ## Five laws that apply to every problem
-1. No [VERIFIED] problem, no solution writing. 2. Exit 2 (unverifiable) is never a pass. 3. Ceremony scales with risk, not size. 4. A rule that matters needs a mechanism, not a reminder. 5. Every claim carries a source + date, or an [ASSUMPTION] label.
+1. Ground decisions in evidence; label assumptions and limit conclusions when evidence is missing. 2. Exit 2 (unverifiable) is never a pass. 3. Ceremony scales with risk, not size. 4. A rule that matters needs a mechanism, not a reminder. 5. Decision-relevant factual claims carry a source/date or an explicit uncertainty label; never invent measurements.

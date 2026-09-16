@@ -1,25 +1,28 @@
 ---
 name: ux-discovery
-description: "User research and context gathering — who users are, what they do, why. Use when starting a new feature without user evidence, when benchmarking competitors, when the team debates what users want with no data, or before writing any brief or spec."
+description: >-
+  Use when a feature lacks user evidence, a team needs interview planning or category benchmarks, or disagreement about user behavior leaves a material design decision unresolved.
 version: "1.0.0"
 modes: [build, architect]
-category: elicitation
-activation: auto
-cost-tier: sonnet
-playbook: ux-design
-inputs: [codebase-scan-output]
-outputs: [user-context-notes, persona-profiles, journey-maps]
 ---
 
 # UX Discovery
 
+> **This skill exists to stop:** design decisions based on invented user behavior or unexamined category assumptions.
+
+## 🤖 0. HOW TO USE
+
+Select BUILD for missing context in a scoped feature, ARCHITECT for substantial discovery, or research for category benchmarks. For interview planning, load [User Interview Design](references/user-interview.md). Output context notes, evidence-grounded personas/journeys, a research plan, or category benchmarks under `.jimmy/work/<feature>/` as needed for the handoff; small answers may stay inline.
+
+Reuse supplied context, accepted research objectives, and prior evidence. Ask only missing questions that affect the decision; absent artifact files do not require repeating discovery. User interviews are conducted by people or separately authorized research tools: a plan is not a completed study. Never invent participants, findings, verbatim quotations, or measurements. Label synthesized personas and emotional arcs as hypotheses unless supported by evidence; quotations require an actual source.
+
 Gathers user context to ground specifications in real user behavior rather than
-developer assumptions. Runs alongside `quick-elicit` at the elicitation phase.
+developer assumptions. Supports the current elicitation or `analyst` work when user context is missing.
 
 ## Mode: BUILD (light)
 
 Add these UX-focused questions to the elicitation, woven into the normal
-`quick-elicit` flow. Don't extend the time — make the existing questions sharper.
+elicitation flow. Don't extend the time — make the existing questions sharper.
 
 **Ask about the user's context (pick 2-3 most relevant):**
 
@@ -105,28 +108,11 @@ These feed directly into the specification as requirements and acceptance criter
 
 ## References
 
-Load from `references/` as needed:
-- `user-behavior-model.md` — How users actually behave (Krug, Norman)
-- `user-research-conversations.md` — Mom Test rules for useful conversations
-- `persona-development.md` — Persona construction framework
-- `journey-mapping.md` — Journey mapping components and process
+The discovery methods above are self-contained. Load [User Interview Design](references/user-interview.md) only when planning a qualitative study.
 
 ---
 
-## Research methods (merged from ux-research)
-
-
-<!-- sage-metadata
-cost-tier: sonnet
-activation: auto
-tags: [ux, research, benchmarking, competitors, design-patterns]
-inputs: [current-design-system, product-category]
-outputs: [category-benchmarks]
-playbook: ux-design
-requires: [ux-audit]
--->
-
-## UX Research
+## Mode: Research — category benchmarks
 
 Benchmark the current design against category leaders. Not to copy — to
 understand what conventions users already expect, and where intentional
@@ -140,8 +126,8 @@ convention (match it) vs. what's commodity (differentiate from it).
 
 ## When to Use
 
-- After ux-audit completes (you know what you have)
-- Before ux-evaluate (you need context for the gap analysis)
+- When current-state evidence is available (from ux-review audit mode or equivalent supplied material)
+- Before ux-review evaluate mode (you need context for the gap analysis)
 - When redesigning a page and category context would improve decisions
 
 Do NOT use for:
@@ -152,7 +138,7 @@ Do NOT use for:
 
 ### Step 1: Identify Product Category
 
-From the current design system and project context, determine:
+From supplied current-state evidence and project context, determine:
 
 ```markdown
 ## Category Definition
@@ -280,15 +266,13 @@ design evaluation — we'll compare your current design against these patterns."
 ## Rules
 
 **MUST (violation = uninformed redesign):**
-- MUST analyze at least 3 reference products. Fewer gives insufficient
-  pattern signal.
+- For a category-wide claim, analyze at least 3 relevant reference products. With fewer, label the comparison limited and do not claim a category convention.
 - MUST distinguish conventions (most do this) from individual choices
   (only one does this). Conventions are what users expect.
-- MUST include at least one direct competitor and one category leader.
+- Include a direct competitor and a category leader when they exist and are accessible; otherwise document the limitation and why adjacent references are relevant.
 
 **SHOULD (violation = shallow research):**
-- SHOULD use web search to find current state of reference products —
-  don't rely on training data which may show outdated designs.
+- Use dated supplied evidence or inspect current reference products with available web/browser tools; do not present remembered designs as current observations.
 - SHOULD capture the reference products' mobile approach, not just desktop.
 - SHOULD note the reference products' copy approach (tone, length, language
   level) since this affects conversion as much as visual design.
@@ -314,9 +298,9 @@ design evaluation — we'll compare your current design against these patterns."
   They know their market better.
 
 
-> Interview design lives in `references/user-interview.md` (chained by /research).
+> Interview planning uses [User Interview Design](references/user-interview.md); competitor benchmarking is not user research.
 
 ---
 
 ## Applied context (edtech — merged from a retired research skill)
-> Blocks: benchmarking = listing competitor features and proposing to copy them. Principle: borrow how competitors SIMPLIFY user decisions, and state what they sacrificed. **MUST:** every competitor claim carries source + access date, else label it [ASSUMPTION]. End every benchmark with "3 things we will NOT copy, and why." VoC mining: internal conversation corpus + competitors' 1-star reviews, for verbatim pain language.
+> Blocks: benchmarking = listing competitor features and proposing to copy them. Principle: borrow how competitors SIMPLIFY user decisions, and state what they sacrificed. **MUST:** every competitor claim carries source + access date, else label it [ASSUMPTION]. End every benchmark with "things we will NOT copy, and why (up to 3 supported findings)." VoC mining: internal conversation corpus + competitors' 1-star reviews, for verbatim pain language.

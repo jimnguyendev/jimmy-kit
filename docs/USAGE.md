@@ -74,7 +74,7 @@ cat vendor/jimmy-kit/templates/eager-dispatcher.md >> AGENTS.md   # or ~/jimmy-k
 ## 4. Start a session
 1. **Don't pick a skill — describe the problem.** The `routing` skill is the dispatcher: "conversion is low", "audit this landing page", "retention is dropping", "review this PRD". It maps the request to a problem-shape chain in `docs/OPERATING-WORKFLOW.md`.
 2. The four phases are a maximal map, not a pipeline. Tier 1 may use no skill, Tier 2 normally uses one or two, and Tier 3 uses the full intake plus `product-council`. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Stop when the current skill settles the decision.
-3. Skills refuse to run on guesses: expect to be asked for a sourced, dated number or a baseline. Answer with the number, or say "no baseline" — the skill then writes `[baseline TBD — measure first]` instead of inventing one.
+3. Skills distinguish evidence from assumptions. Missing baselines are reported as `[baseline TBD — measure first]`; they block conclusions that require measurement, while useful drafts and investigation may proceed. Accepted scope and authorization carry through handoffs.
 
 Typical invocations (any tool; skills trigger on the situation, you can also name them):
 - "Review these OKRs: …" → `okr-outcome-architect`

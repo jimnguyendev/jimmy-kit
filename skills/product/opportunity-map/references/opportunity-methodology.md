@@ -1,5 +1,8 @@
 # Opportunity Mapping Methodology
 
+> **Scope:** Use detailed sections when the current assessment needs them. Reuse supplied context; incomplete evidence permits a provisional map. Mark missing scores or capability fit as unassessed and ask only for facts that change a requested commitment.
+
+
 ## Purpose
 
 Provides the structured methodology for assessing which discovered opportunities
@@ -283,10 +286,10 @@ would take 2 years to build.
 **Root cause:** LLMs don't have access to inside-out information unless
 the user provides it. They default to the data they have (customer needs).
 
-**Fix:** Step 2 (capability assessment) is mandatory, not optional. If
-the user hasn't provided capability context, ask for it before proceeding.
-"What are your team's core technical capabilities? What data do you have
-access to? What's your approximate capacity?"
+**Fix:** Assess capability fit before committing to pursue. Use available
+context; if it is missing, mark fit unassessed and keep affected decisions
+on monitor or provisional. Ask for the specific missing facts when the
+requested commitment depends on them, while continuing supported work.
 
 ### 3. Linear Ranking Without Dependencies
 

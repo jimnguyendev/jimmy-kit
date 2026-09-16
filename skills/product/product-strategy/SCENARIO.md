@@ -1,4 +1,19 @@
 # Scenario — product-strategy (written BEFORE the skill was finalized)
+
+## Current revision — 2026-09-16 (K16)
+
+**Status: EXIT 2 — prospective cases; no independent run recorded for this revision.**
+
+**Static baseline finding (not a behavioral run):** Discovery description exceeds 300 characters and obscures the main trigger.
+
+**Sample input:** Select product-strategy for its named product task from skill descriptions, then apply its existing specialist method.
+
+**Expected behavior:** Find the skill from a concise situation-triggered description; retain its existing methodology and applicable boundaries.
+
+**Validation needed:** run the case with a fresh agent, paste its output and grade each expectation. Static checks alone do not promote this revision to PASS.
+
+## Historical scenarios and results (unchanged)
+
 **Rationale (the failure to prevent):** an agent asked for a product strategy writes a roadmap without classifying the product, checking resources against cost, or defining validation gates.
 **Sample input:** "Write the strategy for our new AI grading product."
 **Expected behaviors (pass when all check):**

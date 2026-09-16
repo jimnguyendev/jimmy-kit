@@ -87,6 +87,9 @@ def calculate_regularity_cv(session_intervals_in_days):
     Returns:
     - cv: float
     - tier: 'X' (CV < 0.3), 'Y' (0.3 <= CV <= 0.7), 'Z' (CV > 0.7)
+      These are illustrative cutoffs, not calibrated outcome/churn predictions.
+      Requires at least two observed intervals with positive mean; callers must
+      mark insufficient inputs unavailable rather than interpret the fallback as evidence.
     """
     if len(session_intervals_in_days) < 2:
         return 0.0, "X"
@@ -118,7 +121,7 @@ if __name__ == "__main__":
     breaks, gvf = compute_jenks_breaks(sample_revenue, num_classes=4)
     print("=" * 65)
     print("=== JENKS NATURAL BREAKS CLASSIFICATION (GENERIC PRACTICE LAB REVENUE) ===")
-    print(f"Goodness of Variance Fit (GVF): {gvf * 100:.2f}% (Target ≥ 85%)")
+    print(f"Goodness of Variance Fit (GVF): {gvf * 100:.2f}% (sample fit; no universal target)")
     print("-" * 65)
     for i in range(len(breaks) - 1):
         print(f"Tier {i+1}: [{breaks[i]:>10,.0f} → {breaks[i+1]:>10,.0f}]")
@@ -131,5 +134,5 @@ if __name__ == "__main__":
     cv_a, tier_a = calculate_regularity_cv(learner_a_intervals)
     cv_b, tier_b = calculate_regularity_cv(learner_b_intervals)
 
-    print(f"\nLearner A (Steady): CV = {cv_a} ➔ Tier {tier_a} (True Core VIP)")
-    print(f"Learner B (Burst):  CV = {cv_b} ➔ Tier {tier_b} (Opportunistic Deal Hunter)")
+    print(f"\nLearner A (Steady): CV = {cv_a} ➔ Tier {tier_a} (regular use in this sample)")
+    print(f"Learner B (Burst):  CV = {cv_b} ➔ Tier {tier_b} (burst use in this sample)")

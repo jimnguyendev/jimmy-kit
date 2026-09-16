@@ -10,3 +10,15 @@
 - [ ] Research workflow and output paths are unchanged.
 
 **Status:** [EXIT 2 — scenario specified; no independent fresh-agent run recorded yet].
+
+---
+## Current revision — 2026-09-16 (written before refactor)
+
+**Status: exit 2 — prospective cases; independent execution not yet recorded.**
+
+**Sample input:** Benchmark a redesign using supplied current-state evidence; separately plan interviews without transcripts and with an already accepted research objective.
+
+**Expected behaviors:**
+- [ ] Uses current review mode names and bundled research references.
+- [ ] Does not invent interview findings, quotations, personas or benchmark observations as measured evidence.
+- [ ] Reuses accepted objectives/evidence; missing filenames do not trigger repeated research.

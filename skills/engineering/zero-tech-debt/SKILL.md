@@ -109,7 +109,7 @@ Add characterization tests when current behavior is real but poorly specified. M
 
 Keep structural and behavioral changes separate where practical. Delete one compatibility path at a time, update its callers, run the smallest relevant checks, and inspect the diff before continuing. Do not improve unrelated debt.
 
-For this repository, never weaken the legacy-parity rules in `AGENTS.md`: targeted Mongo updates, legacy enum/timestamp semantics, response envelopes, `is_deleted = 0`, and Go-vs-PHP write parity remain mandatory unless an approved ADR explicitly changes the contract.
+Preserve the target repository's compatibility rules from its applicable instructions and accepted contracts. Apply database, timestamp, response-shape, or legacy-system parity checks only where that target actually has those contracts; do not import this kit's example stack.
 
 ### 6. Verify the intended flow
 
@@ -117,10 +117,10 @@ Choose evidence proportional to the affected contract:
 
 - targeted unit tests through the public interface;
 - integration tests for database, route, permission, concurrency, or persisted-state behavior;
-- Go-vs-PHP parity diff for write paths;
+- legacy/new write parity where a legacy implementation is part of the accepted contract;
 - client/API journey checks for changed navigation, payloads, aliases, or auth tolerance;
 - runtime/telemetry evidence when deleting a supposedly unused production path;
-- `make test`, scoped lint, a final caller search, and `git diff` review.
+- the target's relevant test command, scoped lint, a final caller search, and `git diff` review.
 
 Passing tests prove only what they exercise. Report local, integration, parity, client, and runtime evidence separately.
 

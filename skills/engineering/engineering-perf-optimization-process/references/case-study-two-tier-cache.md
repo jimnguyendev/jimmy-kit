@@ -6,8 +6,8 @@ throughput; this one climbs it for a different reason — the data has a second 
 service cannot observe, and the service runs as fifteen instances.
 
 > **Source:** a Go learning backend rebuilt next to a legacy PHP system and run in parallel with
-> it (the same origin repo as `reality-gate`'s audit). Design record: the origin repo's
-> `docs/architecture/caching-design-vi.md` and ADR-0004 / 0005 / 0036. Numbers are from
+> it (the same origin repo as `reality-gate`'s audit). Design evidence: the origin repo's
+> cache architecture record and ADR-0004 / 0005 / 0036 (not required to use this case). Numbers are from
 > production configuration in 2026-08/09.
 
 ## Context

@@ -1,117 +1,85 @@
 ---
 name: write-a-skill
-description: Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.
+description: Create or refine reusable agent guidance. Use when writing a skill or correcting a demonstrated skill discovery, workflow, or output failure.
 ---
 
 # Writing Skills
 
-## Process
+> **This skill exists to stop:** reusable guidance from accumulating generic instructions, hidden dependencies, and untested claims about agent behavior.
 
-1. **Gather requirements** - ask user about:
-   - What task/domain does the skill cover?
-   - What specific use cases should it handle?
-   - Does it need executable scripts or just instructions?
-   - Any reference materials to include?
+## 🤖 0. HOW TO USE
 
-2. **Draft the skill** - create:
-   - SKILL.md with concise instructions
-   - Additional reference files if content exceeds 500 lines
-   - Utility scripts if deterministic operations needed
+- **Create:** turn a recurring task or observed failure into a small skill and its necessary resources.
+- **Revise:** reproduce the selection or execution problem, then change the guidance responsible for it.
+- **Review:** assess relevance, discovery, conditional detail, authority, and evidence without editing unless requested.
 
-3. **Review with user** - present draft and ask:
-   - Does this cover your use cases?
-   - Anything missing or unclear?
-   - Should any section be more/less detailed?
+Output: the requested skill files plus a short validation report. In Jimmy Kit,
+write or update `SCENARIO.md` before editing `SKILL.md`; leave new behavior at
+exit 2 until a real application run is recorded. Historical passes retain their
+original scope and date.
 
-## Skill Structure
+## 1. Establish the contract
 
-```
-skill-name/
-├── SKILL.md           # Main instructions (required)
-├── REFERENCE.md       # Detailed docs (if needed)
-├── EXAMPLES.md        # Usage examples (if needed)
-└── scripts/           # Utility scripts (if needed)
-    └── helper.js
-```
+Read applicable repository instructions and the existing skill. Reuse supplied
+requirements, examples, and authorization. Ask only when a missing fact changes
+the task or permission boundary.
 
-## SKILL.md Template
+Name the recurring decision this skill improves, when it applies, its output,
+and what evidence counts as done. If ordinary agent behavior already handles the
+task reliably, a short saved prompt or no skill may be sufficient.
 
-```md
+Write a realistic positive case and a nearby case that should not trigger it.
+For a behavior correction, capture the original failure before editing. Keep
+expected criteria separate from the executing evaluator's inputs.
+
+## 2. Write the smallest useful entrypoint
+
+Use YAML `name` matching the folder and a concise `description` that distinguishes
+the task from adjacent skills. Put the capability and actual trigger first;
+move output inventories, implementation details, and synonym lists into the body.
+Use a block scalar for descriptions containing quotes or YAML punctuation.
+
+In Jimmy Kit, include its required failure statement and HOW TO USE section:
+
+```markdown
 ---
-name: skill-name
-description: Brief description of capability. Use when [specific triggers].
+name: example-skill
+description: >-
+  Validate a migration rollout. Use when adding or changing a database migration.
 ---
 
-# Skill Name
+# Example Skill
 
-## Quick start
+> **This skill exists to stop:** a specific observed failure.
 
-[Minimal working example]
+## 🤖 0. HOW TO USE
 
-## Workflows
-
-[Step-by-step processes with checklists for complex tasks]
-
-## Advanced features
-
-[Link to separate files in the same skill folder, e.g. "See REFERENCE.md" — only if that file exists]
+State modes, required inputs, output, completion evidence, and any real boundary.
 ```
 
-## Description Requirements
+Keep non-obvious invariants and decision criteria in the entrypoint. Put distinct
+modes, long schemas, examples, and optional methods into local references; link
+each with the condition for reading it. Split by relevance, not a universal line
+count. Prefer a runnable helper when a repeated deterministic operation warrants it.
 
-The description is **the only thing your agent sees** when deciding which skill to load. It's surfaced in the system prompt alongside all other installed skills. Your agent reads these descriptions and picks the relevant skill based on the user's request.
+Respect accepted scope and prior authorization. Missing evidence lowers the
+confidence of an output; it blocks only the conclusion or action that depends on
+it. Preserve genuine user decisions and external-action boundaries.
 
-**Goal**: Give your agent just enough info to know:
+## 3. Validate and finish
 
-1. What capability this skill provides
-2. When/why to trigger it (specific keywords, contexts, file types)
+- Parse frontmatter, resolve links, check current skill names and output paths.
+- Test the installation shape actually advertised, including selected-skill copies.
+  Required resources must be local, explicitly installed dependencies, or have a
+  usable fallback. Do not assume a source repository or agent-specific command.
+- Run changed helpers on meaningful fixtures and check their real outputs.
+- For changed behavior, use a fresh evaluator with the request, skill, and raw
+  artifacts only. Compare against the original or a no-skill baseline when useful.
+  Record the model, inputs, actual output, result, and limitations. A static lint
+  pass is not an agent behavior pass.
+- For description-only edits, check relevant and irrelevant discovery cases;
+  do not rerun unrelated workflows or create tests that only echo wording.
 
-**Format**:
-
-- Max 1024 chars
-- Write in third person
-- First sentence: what it does
-- Second sentence: "Use when [specific triggers]"
-
-**Good example**:
-
-```
-Extract text and tables from PDF files, fill forms, merge documents. Use when working with PDF files or when user mentions PDFs, forms, or document extraction.
-```
-
-**Bad example**:
-
-```
-Helps with documents.
-```
-
-The bad example gives your agent no way to distinguish this from other document skills.
-
-## When to Add Scripts
-
-Add utility scripts when:
-
-- Operation is deterministic (validation, formatting)
-- Same code would be generated repeatedly
-- Errors need explicit handling
-
-Scripts save tokens and improve reliability vs generated code.
-
-## When to Split Files
-
-Split into separate files when:
-
-- SKILL.md exceeds 150 lines
-- Content has distinct domains (finance vs sales schemas)
-- Advanced features are rarely needed
-
-## Review Checklist
-
-After drafting, verify:
-
-- [ ] Description includes triggers ("Use when...")
-- [ ] SKILL.md under 150 lines
-- [ ] No time-sensitive info
-- [ ] Consistent terminology
-- [ ] Concrete examples included
-- [ ] References one level deep
+Finish when the requested files and relevant validation are complete. Report any
+unrun behavior as exit 2. Do not stop at an initial draft when revisions and checks
+are already authorized, and do not publish or install globally without authorization.

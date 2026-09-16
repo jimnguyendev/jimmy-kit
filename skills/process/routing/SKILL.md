@@ -1,89 +1,67 @@
 ---
 name: routing
-description: Choosing which skill chain fits a request. Use when the user asks what to run, which command or workflow to use, where to start, or when a request is ambiguous or spans multiple surfaces and needs to be routed to build, fix, architect, review, learn, reflect, or continue.
+description: Choose a workflow. Use when the user asks where to start or a request spans skills and its current decision or next action is unclear.
 version: "1.0.0"
 type: system
 ---
 
 # Routing depth
 
-An always-on dispatcher block carries the keyword map — the trigger. In this kit
-that block is `templates/eager-dispatcher.md`, installed into the target repo's
-`AGENTS.md`. If it is not installed, use that file's map
-directly as Layer 1. This skill carries the rest: what to do when the keyword
-map misses, how to present the choice, and what routing looks like when it is
-done well.
+Choose the smallest workflow that resolves the user's current decision. The optional
+kit dispatcher in the target repo's AGENTS.md provides shortcuts; this skill also
+works on its own when only selected skills are installed.
 
-## The three-layer chain
+## Dosage and authority
 
-**Layer 1 — Keyword routing (deterministic, checked first).** The map in the
-dispatcher block (`templates/eager-dispatcher.md`). One match → confirm. Multiple matches → present them as options.
-No match → Layer 2.
+- **Tier 1:** act directly or use one short skill. No menu or council.
+- **Tier 2:** announce and proceed with one or two relevant skills. Reuse accepted
+  scope, supplied context, and existing authorization; do not add approval stops
+  for specs, plans, or skill handoffs.
+- **Tier 3:** use the full intake and council for unresolved consequential decisions.
+  If the user already accepted a decision, carry it forward. Ask only about a
+  material gap, contradiction, changed risk, or action outside that authorization.
 
-**Layer 2 — Sub-agent classifier.** If the Task tool is available, spawn a
-classifier sub-agent:
+This dosage rule governs the workflow recipes below and in linked skills. A recipe
+is not a new permission boundary. Continue authorized work through relevant checks
+and fixes; finish when the requested output and its acceptance criteria are met.
 
-> Classify this request as UNDERSTAND (analyst / jtbd / ux-review),
-> ENVISION (prd / architect), or DELIVER (engineering skills / diagnose).
+## Select by intent and current state
 
-Use the response to select the workflow → confirm. No Task tool → Layer 3.
+Use the request and available evidence to classify in context; routine routing does
+not need a classifier subagent. Topic words alone do not determine the workflow.
 
-**Layer 3 — In-context classification (fallback).**
+| Current need | Relevant owner |
+|---|---|
+| Problem or decision is unclear | `analyst`; `engineering-design-thinking` for an engineering gap |
+| Customer jobs or evidence are unknown | `jtbd` or `ux-discovery` |
+| Accepted needs need requirements | `prd`; `ux-specify` for user-facing gaps |
+| A technical choice is unresolved | `architect` or `engineering-design-thinking` |
+| Accepted behavior needs implementation | Appropriate engineering skill; `tdd-go` only for Go |
+| A bug needs diagnosis | `diagnose` |
+| A document or code needs review | `independent-review` |
+| An existing UI needs usability review | `ux-review`; conversion questions use `ux-cro-audit` |
+| A retention bottleneck is unknown | `growth-markov-duolingo`; other analytics only if needed |
 
-| Shape of the request | Category | Workflow |
-|---|---|---|
-| Question, evaluation, "why" | UNDERSTAND | `analyst`, `jtbd`, `ux-review` |
-| Future, "should", "let's create" | ENVISION | `prd`, `ux-brief`, `architect` |
-| Action, "add", "implement" | DELIVER | `change-tiers` → engineering skills, `diagnose` |
-| Ambiguous | — | present options from all matching categories |
+Load only available skills. If a specialist is absent, state that limitation and
+apply the relevant criteria from the current skill or target project. Do not
+invoke nonexistent commands or require installing the entire kit.
 
-## Confirmation (Zone 1)
+## When to ask
 
-Always, except for explicit slash commands and Tier 1 tasks:
-
-```
-Routing → [workflow]. [One-line rationale].
-
-[1] [Workflow] — [skill → chain → arrows] ([N] steps)
-[2] [Alternative] — [chain] ([N] steps)
-[3] [Alternative] — [chain]
-
-Pick 1-3, type / for commands, or describe what you need.
-```
-
-Show the chain and the step count. No time estimates — they are guesses
-wearing a number's clothing.
+One clear route: announce it and proceed. Multiple compatible skills: select the
+smallest sufficient set. If different routes would produce materially different
+outcomes and the user's intent does not settle the choice, ask one focused
+question with a recommendation. A routing menu is optional, not a default gate.
 
 ## Worked examples
 
-**"audit our checkout UX"** — keyword `audit` → `ux-review` (or `ux-cro-audit` if it is a conversion/pricing page).
-
-> Routing → review workflow. Evaluating the checkout experience.
->
-> [1] Review — UX audit → evaluation (2 steps)
-> [2] Research — interview → JTBD → opportunity map (3 steps)
-> [3] Build — spec → plan → implement → verify
->
-> Pick 1-3, type / for commands, or describe what you need.
-
-**"the checkout page is throwing 500 errors"** — keyword `error` → `diagnose`.
-Single match, no ambiguity, so confirm and go:
-
-> Routing → fix workflow. Investigating 500 errors on checkout.
-
-**"improve our onboarding conversion rate"** — `conversion` → review,
-`improve` → build. Two matches, so do not pick for the user:
-
-> Sage: This could go two ways:
->
-> [1] Review — UX audit → evaluation (2 steps)
-> [2] Build — spec → plan → implement → verify
-> [3] Research — interview → JTBD → opportunity map (3 steps)
->
-> Pick 1-3, type / for commands, or describe what you need.
-
-**"change the button color to blue"** — Tier 1. Just change it. Routing a
-one-line change through a confirmation menu is the process becoming the point.
+- "Audit our checkout UX" → review the supplied UI; no menu unless scope is unclear.
+- "Audit this API's error handling" → code/contract review, not UX review.
+- "Add the approved event" → inspect the existing tracking contract, implement,
+  and verify; no new PRD or repeated approval.
+- "Improve onboarding conversion" → inspect the available funnel and experience;
+  ask only if missing evidence prevents a meaningful next step.
+- "Change the button color to blue" → Tier 1; make and inspect the change.
 
 ## The failure this prevents
 
@@ -96,4 +74,4 @@ with an implementation is not efficiency. It is a wrong answer that took work.
 ---
 
 ## Applied context — kit routing table (not part of the original)
-This kit's concrete routing map lives in `docs/OPERATING-WORKFLOW.md`: real problem shapes → conditional skill chains, plus the 7-question intake layer and the risk-dosed product-council gate. Classify dosage first: Tier 1 may act directly, Tier 2 normally uses one or two skills, and Tier 3 uses the full intake plus council. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Stop when the current output settles the decision. When routing is needed, choose by problem shape first (vague metric complaint → analyst+tracking-architect; solution-in-disguise → engineering-design-thinking Problem Frame; page optimization → ux-cro-audit; quarterly goals → okr-outcome-architect; retention drop → growth-markov chain; post-test/incident → retrospective+decision-log; tech decision → change-tiers+architect). Time estimates are "guesses wearing a number's clothing" — give ranges with conditions.
+This kit's concrete routing map lives in `docs/OPERATING-WORKFLOW.md`: real problem shapes → conditional skill chains, plus the 7-question intake layer and the risk-dosed product-council gate. Classify dosage first: Tier 1 may act directly, Tier 2 normally uses one or two skills, and Tier 3 uses the full intake plus council. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Stop when the current output settles the decision. The map is optional when the full kit is installed. When routing is needed, choose by problem shape first (vague metric complaint → analyst+tracking-architect; solution-in-disguise → engineering-design-thinking Problem Frame; page optimization → ux-cro-audit; quarterly goals → okr-outcome-architect; retention drop → growth-markov chain; post-test/incident → retrospective+decision-log; tech decision → change-tiers+architect). Time estimates are "guesses wearing a number's clothing" — give ranges with conditions.

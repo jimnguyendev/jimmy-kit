@@ -1,6 +1,7 @@
 ---
 name: advanced-rfm-segmentation
-description: Advanced RFM/RFE Segmentation, Jenks Natural Breaks Variance Optimization, Pareto Net Profit (ABC), Habit Regularity CV (XYZ), Multi-Cycle State Migration Matrix (H1➔H2) & 5-Second Executive Alert Dashboard skill. Use when segmenting users by value/engagement, computing statistically optimal breaks on skewed data, diagnosing customer migration across cycles, or designing early-warning retention dashboards.
+description: >-
+  Use when segmenting users by recency, frequency, value, or habit regularity; choosing thresholds for skewed data; or tracking segment migration and retention risks across periods.
 ---
 
 # Advanced RFM/RFE Segmentation, Jenks Natural Breaks & State Migration Analytics
@@ -20,7 +21,7 @@ description: Advanced RFM/RFE Segmentation, Jenks Natural Breaks Variance Optimi
 
 ### The Problem with Equal Split (`NTILE(5)`)
 
-Financial and activity data in EdTech/SaaS follow **power-law (Pareto) distributions**: 5% of users generate 80% of revenue/events. Dividing users into 5 equal 20% bins creates massive distortion by grouping fundamentally different users together.
+Financial and activity data can be highly skewed. Measure the actual concentration before choosing thresholds; no fixed customer share universally produces a fixed revenue share. Equal-count bins can group very different values together. Compare Jenks with that baseline on the supplied data.
 
 ### The Jenks Algorithm (Wedding Seating Table Metaphor)
 
@@ -29,7 +30,9 @@ The Jenks Natural Breaks algorithm iteratively searches for cut-off thresholds t
 1. **Minimize Within-Group Variance ($\text{SDCM} \to \min$):** Users within the same tier are highly homogeneous (e.g. vegetarian guests sit together).
 2. **Maximize Between-Group Variance ($\text{SDAM} - \text{SDCM} \to \max$):** Groups are distinctly separated from each other.
 
-$$\text{Goodness of Variance Fit (GVF)} = \frac{\text{SDAM} - \text{SDCM}}{\text{SDAM}} \quad (\text{Target: } GVF \ge 0.85)$$
+$$\text{Goodness of Variance Fit (GVF)} = \frac{\text{SDAM} - \text{SDCM}}{\text{SDAM}}$$
+
+GVF measures fit to this sample, not business value or predictive accuracy. Select the class count using stability, interpretability, and actionability; there is no universal GVF target. The values below are illustrative.
 
 ```mermaid
 graph LR
@@ -45,10 +48,7 @@ graph LR
 ### Axis 1: Pareto Net Profit (A, B, C)
 
 - **Gross Revenue $\neq$ Net Margin:** A learner paying 5M VND with 50% discount vouchers who spams 200 AI audio tests daily costs more in Token API and server compute than they contribute in profit.
-- **Tiers:**
-  - **Class A (Top Profit):** Top 20% contributing **80% of net margin**.
-  - **Class B (Moderate Profit):** Next tier contributing **15% of margin**.
-  - **Class C (Low/Negative Profit):** Contributing **5% of margin** (or net loss).
+- **Tiers:** Rank by measured contribution margin and choose documented cutoffs. An illustrative ABC policy allocates the first 80% of positive margin to A, the next 15% to B, and the remainder to C; customer shares need not be 20/80. Separate negative-margin users before computing cumulative shares. Calibrate the policy to costs and service commitments.
 
 ---
 
@@ -56,23 +56,27 @@ graph LR
 
 $$\text{Coefficient of Variation (CV)} = \frac{\sigma}{\mu} = \frac{\text{Standard Deviation of Days Between Active Sessions}}{\text{Mean Days Between Active Sessions}}$$
 
+The CV cutoffs below are worked assumptions, not validated outcome or churn predictors. Calibrate them for the product cadence and sufficient observed intervals; insufficient data stays unclassified. CV describes regularity, not whether the usage frequency is desirable.
+
 ```mermaid
 graph TD
     subgraph STABILITY_TIERS["HABIT REGULARITY CLASSIFICATION (X, Y, Z)"]
-        X["<b>Class X (High Regularity - CV < 0.3):</b><br/>Active every 2-3 days like clockwork.<br/><i>➔ 85% IELTS Target Band achievement rate.</i>"]
+        X["<b>Class X (High Regularity - CV < 0.3):</b><br/>Active every 2-3 days like clockwork.<br/><i>➔ Check whether this cadence supports the learner’s goal.</i>"]
         Y["<b>Class Y (Moderate Regularity - 0.3 ≤ CV ≤ 0.7):</b><br/>Active weekly, occasional gaps.<br/><i>➔ Nurture with habit-stacking reminders.</i>"]
-        Z["<b>Class Z (Erratic / Burst - CV > 0.7):</b><br/>Crams 15 tests in week 1, disappears for 3 weeks.<br/><i>➔ 70% churn risk; trigger pacing re-allocation.</i>"]
+        Z["<b>Class Z (Erratic / Burst - CV > 0.7):</b><br/>Crams 15 tests in week 1, disappears for 3 weeks.<br/><i>➔ Investigate burst use and seasonal needs before intervention.</i>"]
     end
 ```
 
-### The $111\text{-Ax}$ vs $111\text{-Cz}$ Acid Test
+### Worked Comparison: High RFM, Different Margin and Regularity
+
+This example uses 1 as the strongest RFM score; the appendix uses 5. Choose and label one convention in an actual report. Candidate actions require customer evidence.
 
 | Metric               | Learner A (`111-Ax`)                               | Learner B (`111-Cz`)                                 |
 | :------------------- | :------------------------------------------------- | :--------------------------------------------------- |
 | **Traditional RFM**  | $111$ (High Recency, High Frequency, High Spend)   | $111$ (High Recency, High Frequency, High Spend)     |
 | **Net Profit**       | **A** (High-margin subscription, low support cost) | **C** (Heavy promo code, excessive Token API cost)   |
 | **Habit Regularity** | **X** ($CV = 0.18$ — steady 3 days/week)           | **Z** ($CV = 0.92$ — crammed 10 tests on 11/11 Sale) |
-| **Real Identity**    | **TRUE CORE VIP**                                  | **OPPORTUNISTIC DEAL HUNTER**                        |
+| **Real Identity**    | **HIGH MARGIN, REGULAR USE**                                  | **LOW MARGIN, BURST USE**                        |
 | **Action**           | 1:1 VIP mentor care, Beta tester invite.           | Low-cost automated email; no high-touch VIP budget.  |
 
 ---
@@ -84,7 +88,7 @@ To track customer health over time, map user transitions across half-year or qua
 ```mermaid
 graph TD
     subgraph MIGRATION_MATRIX["STATE MIGRATION MATRIX (H1 ➔ H2)"]
-        DIAG["<b>MAIN DIAGONAL (Retention Line):</b><br/>Users remaining in their current tier.<br/><i>Target: Top VIP Retention > 70%.</i>"]
+        DIAG["<b>MAIN DIAGONAL (Retention Line):</b><br/>Users remaining in their current tier.<br/><i>Compare VIP retention with the product’s baseline and agreed target.</i>"]
         UPPER["<b>ABOVE DIAGONAL (Churn Leakage):</b><br/>Top VIP ➔ At-Risk / Lost.<br/><i>RED ALERT: VIP customer leak!</i>"]
         LOWER["<b>BELOW DIAGONAL (Growth Upgrade):</b><br/>Potential / Regular ➔ Top VIP.<br/><i>UPSELL WIN: Successful product expansion!</i>"]
     end
@@ -92,14 +96,14 @@ graph TD
 
 ---
 
-## ⚡ 4. The 5-Second Executive Dashboard (Fitts's Law)
+## ⚡ 4. The 5-Second Executive Dashboard
 
-An executive dashboard must communicate critical anomalies within **3 to 5 seconds**:
+Aim for a quickly understandable dashboard; **3 to 5 seconds** is a design goal to test with readers, not a guaranteed law. The counts below are illustrative:
 
 ```mermaid
 graph TD
     subgraph DASHBOARD_LAYOUT["5-SECOND EXECUTIVE ALERT DASHBOARD"]
-        CENTER["<b>CENTER OF VISUAL ATTENTION (Fitts's Law Primary Card):</b><br/>🔴 RED ALERT: 8 Top VIP Learners slipped into 'At-Risk' this cycle!<br/>🟢 GROWTH WIN: 18 Potential Loyalists promoted to Top VIP!"]
+        CENTER["<b>PRIMARY SUMMARY CARD:</b><br/>🔴 RED ALERT: 8 Top VIP Learners slipped into 'At-Risk' this cycle!<br/>🟢 GROWTH WIN: 18 Potential Loyalists promoted to Top VIP!"]
         FILTER["<b>TOP BAR CONTROLS:</b><br/>Cycle: H1 vs H2 | Cohort: 7-Day Reverse Trial | Skill: IELTS Speaking"]
         HEATMAP["<b>MIDDLE SECTION:</b><br/>Color-coded State Migration Matrix Heatmap"]
         EXPORT["<b>BOTTOM ACTION:</b><br/>[Download 8 Leaked VIP IDs ➔ Trigger Immediate CS Intervention]"]
@@ -119,7 +123,7 @@ graph TD
 ---
 
 ## Appendix — the 11 RFM personas and automatic clustering (from lecture 12)
-Score R, F, M on 1–5 and read the combination as a behavioral persona with a default action:
+Score R, F, M on 1–5 (5 strongest) and read the combination as a behavioral segment with a candidate action. Validate actions against customer needs and service obligations; scores do not establish motives:
 | Persona (typical codes) | Signal | Default action |
 |---|---|---|
 | Champions (555, 554) | Recent, frequent, high spend | 1:1 care, turn into advocates |
@@ -134,5 +138,5 @@ Score R, F, M on 1–5 and read the combination as a behavioral persona with a d
 | Hibernating (122, 112) | Long gone, low frequency | Only big-sale pushes, low cost |
 | Lost (111) | Lowest on all three | Ignore or cheap automated remarketing |
 
-**Automatic clustering:** normalize R/F/M first (they live on different scales), then K-means: pick K, seed centroids, assign by Euclidean distance, recompute, iterate to convergence. Choose K with the **elbow plot** (WCSS vs K — take the bend, usually K = 3–4) or silhouette score. Too many clusters (K = 50) overfits and no team can run 50 campaigns. Jenks (this skill's main method) and K-means answer different questions: Jenks finds natural thresholds on one dimension; K-means groups on several.
+**Automatic clustering:** normalize R/F/M first (they live on different scales), then K-means: pick K, seed centroids, assign by Euclidean distance, recompute, iterate to convergence. Choose K with the **elbow plot** (WCSS vs K — consider a supported bend) or silhouette score. Too many clusters (K = 50) overfits and no team can run 50 campaigns. Jenks (this skill's main method) and K-means answer different questions: Jenks finds natural thresholds on one dimension; K-means groups on several.
 

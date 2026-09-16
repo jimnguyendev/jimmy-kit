@@ -1,6 +1,7 @@
 ---
 name: growth-markov-duolingo
-description: Duolingo 7-State Markov Growth Modeling & DAU Forecasting skill. Use when analyzing user lifecycle states (N, C, R, Res, sWAU, sMAU, Dead), computing transition probability matrices, forecasting DAU/WAU/MAU, diagnosing retention drop-offs, or designing Streak & Re-engagement mechanics for EdTech and subscription products.
+description: >-
+  Use when modeling user lifecycle transitions with the seven-state Markov framework, forecasting DAU/WAU/MAU, comparing retention and acquisition scenarios, or investigating churn leakage.
 ---
 
 # Duolingo 7-State Markov Growth Modeling & Lifecycle Forecasting
@@ -24,7 +25,7 @@ Unlike traditional DAU/MAU ratios that hide churn dynamics, the 7-state model de
 graph TD
     subgraph ACTIVE_DAU["ACTIVE USERS (DAU = N + C + R + Res)"]
         N["<b>New Users (N):</b><br/>First active today (account created on Day D)."]
-        C["<b>Current Users (C):</b><br/>Active today AND active at least once in [D-7, D-1].<br/><i>The Core Growth Engine! Target P_CC > 80%.</i>"]
+        C["<b>Current Users (C):</b><br/>Active today AND active at least once in [D-7, D-1].<br/><i>Compare P_CC with this product’s measured baseline.</i>"]
         R["<b>Reactivated Users (R):</b><br/>Active today, inactive in last 7 days, but active in [D-30, D-8]."]
         Res["<b>Resurrected Users (Res):</b><br/>Active today, inactive for >30 days (waking up from Dead)."]
     end
@@ -54,9 +55,9 @@ graph TD
 | **Current Users**     |  $C$   | Active today AND active in $[D-7, D-1]$                           |     **YES**     | **P0 Foundation:** Most valuable power users       |
 | **Reactivated Users** |  $R$   | Active today, NOT active in $[D-7, D-1]$, active in $[D-30, D-8]$ |     **YES**     | Short-term win-back efficiency                     |
 | **Resurrected Users** | $Res$  | Active today, NOT active in last 30 days                          |     **YES**     | Long-term brand recall / Re-engagement             |
-| **At-Risk WAU**       | $sWAU$ | NOT active today, but active in $[D-7, D-1]$                      |       NO        | **Highest Leverage:** Prevent slipping into $sMAU$ |
+| **At-Risk WAU**       | $sWAU$ | NOT active today, but active in $[D-7, D-1]$                      |       NO        | Investigate preventable movement into $sMAU$ |
 | **At-Risk MAU**       | $sMAU$ | NOT active in last 7 days, active in $[D-30, D-8]$                |       NO        | Churn warning zone                                 |
-| **Dead Users**        | $Dead$ | Inactive for $>30$ consecutive days                               |       NO        | Churned cohort; low ROI for high-touch ops         |
+| **Dead Users**        | $Dead$ | Inactive for $>30$ consecutive days                               |       NO        | Dormant cohort; investigate return cycles and value         |
 
 $$\text{DAU}(D) = N(D) + C(D) + R(D) + Res(D)$$
 $$\text{WAU}(D) = \text{DAU}(D) + sWAU(D)$$
@@ -98,7 +99,7 @@ When analyzing an EdTech / SaaS product using this skill, execute the following 
 
 ### Step 1: Data Extraction
 
-Run SQL extraction to compute the daily state for every user over the last 60–90 days (see `scripts/extract_states.sql`).
+Adapt `scripts/extract_states.sql` to the verified source schema and anchor event; choose an observation window suited to the product cadence. Check event completeness and prior activity history before treating inactivity as observed. Missing data is unavailable, not zero activity.
 
 ### Step 2: Compute Empirical Transition Matrix
 
@@ -107,15 +108,19 @@ Calculate transition probabilities by aggregating pairs of $(S_{D-1}, S_D)$ acro
 ### Step 3: Run Sensitivity / Manchester United Analysis
 
 - **The Analogy:** A football club does not win championships by buying 50 new players every week ($N$). It wins by keeping its star players fit and playing on the pitch every match ($C \to C$).
-- **Sensitivity Check:** Test a 1% increase in $P_{C \to C}$ vs a 10% increase in $N$. In 95% of subscription products, improving $P_{C \to C}$ by 1% produces **3x to 5x more long-term DAU** than doubling top-of-funnel ad spend.
+- **Sensitivity Check:** As a worked scenario, compare a **one-percentage-point** increase in $P_{C \to C}$ with a **10% relative** increase in $N$ over the same horizon. Reallocate probability from the same row so it still sums to one. Report the modeled DAU difference, baseline matrix, acquisition assumptions, and intervention costs if known. Neither scenario establishes achievable lift or a universal ranking of retention versus acquisition.
 
 ### Step 4: Isolate Churn Leakage Points
 
-- If $P_{C \to sWAU} > 25\%$: The onboarding or daily learning habit loop is breaking.
-- If $P_{sWAU \to C} < 30\%$: Notifications, Streak Freeze, and re-engagement triggers are ineffective.
-- If $P_{sMAU \to Dead} > 80\%$: Once a user leaves for 2 weeks, they are permanently lost.
+- If $P_{C \to sWAU}$ worsens relative to comparable cohorts, inspect product cadence, onboarding, outages, and activity-event coverage.
+- If $P_{sWAU \to C}$ declines, investigate return triggers and competing explanations; the transition alone does not prove notifications failed.
+- If $P_{sMAU \to Dead}$ rises, examine seasonality and later returns; dormant is not permanently lost.
 
-### Step 5: Prescribe Growth Levers
+Use sample sizes, uncertainty, and a product-specific baseline to decide what merits investigation. Thresholds flag a change; they do not establish its cause.
+
+### Step 5: Propose Growth Experiments
+
+The levers below are candidate hypotheses. Select them using customer evidence and test their effect on the target transition.
 
 ```mermaid
 graph LR
@@ -131,5 +136,5 @@ graph LR
 ## 🛠️ 4. Scripts & Templates Included in this Skill
 
 1. [`scripts/calculate_markov.py`](scripts/calculate_markov.py): Standalone Python script to compute transition matrices and forecast DAU up to 90 days.
-2. [`scripts/extract_states.sql`](scripts/extract_states.sql): Production SQL query to label daily user states.
+2. [`scripts/extract_states.sql`](scripts/extract_states.sql): Example SQL query to adapt and validate against the target warehouse.
 3. [`templates/markov_growth_report.md`](templates/markov_growth_report.md): Markdown template for executive growth reporting.

@@ -1,6 +1,6 @@
 ---
 name: constitution
-description: The project's engineering principles and non-negotiable process rules. Use when asking whether something is allowed, what the project's principles or conventions are, why a rule exists, or when a decision seems to conflict with the constitution.
+description: Apply engineering principles. Use when a project convention is unclear or a proposed change conflicts with its documented rules.
 version: "1.0.0"
 type: system
 ---
@@ -9,45 +9,34 @@ type: system
 
 > 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
-The always-on dispatcher block in the target repo's AGENTS.md
-(`templates/eager-dispatcher.md` in this kit) carries the standing rules; the
-table below carries each principle with the mechanism that enforces it. This
-file carries the reasoning, and the rules that have no mechanism behind them.
+These are the kit's engineering defaults. Read the target project's applicable
+AGENTS.md and `.jimmy/constitution.md` if present. The project controls its own
+workflow and enforcement; a missing optional constitution is not a blocker.
 
 ## Engineering principles
 
-The base set, present in every project:
+The base set to apply to relevant changes:
 
-| # | Principle | Enforced by |
+| # | Principle | Verification mechanism to use when available |
 |---|---|---|
-| 1 | **Tests before code** — every behavior has a test before implementation | pre-edit hook "test exists before implementation" (blocks the edit; see `quality-gates` Hooks) |
-| 2 | **No silent failures** — errors handled, logged, or propagated | Gate 3 (judgment) |
-| 3 | **Secrets never in code** — env vars or a secret manager | Gate 3 (judgment) |
-| 4 | **Dependencies explicit** — declared, pinned | Gate 4 (dependency check — every import resolves to a declared, pinned package) |
-| 5 | **Changes reversible** — migrations reversible, deploys rollbackable | Gate 3 (judgment) |
+| 1 | **Test changed behavior** — prefer tests before code for new behavior and regression fixes | Relevant automated tests; editorial changes use inspection/lint |
+| 2 | **No silent failures** — errors handled, logged, or propagated | Tests and review of failure paths |
+| 3 | **Secrets never in code** — env vars or a secret manager | Secret scan and review |
+| 4 | **Dependencies explicit** — declared, pinned by the project's policy | Package manifest/lockfile and dependency checks |
+| 5 | **Changes reversible** — migrations and deployments have a recovery path appropriate to risk | Migration/deployment checks and rollback review |
 
 Principles 6+ come from the project's preset and its own
 `.jimmy/constitution.md`. They are appended by the project, numbered
 continuously, and they carry exactly the same weight as the base five. A
 project addition is not a suggestion.
 
-**Read the project's own additions before assuming the base five are the whole
-story.** They are in `.jimmy/constitution.md`, and they are where the rules that
-actually bite in *this* codebase live.
-
 ## The distinction that matters
 
-Three of the five principles above are enforced by a *judgment* gate — which
-means they are enforced by a reviewer noticing, and reviewers are exactly as
-reliable as their attention. Two are enforced by a script that blocks the tool
-call, and those two hold whether or not anyone is paying attention.
-
-That is not a criticism of the three. Some rules genuinely cannot be checked
-mechanically ("no silent failures" requires knowing what a silent failure looks
-like *here*). But it is worth being honest about which rules are load-bearing
-and which are aspirational, because the eval that produced this version of Sage
-found that the mechanically-enforced rules moved behavior and the prose ones,
-on their own, did not.
+The kit ships guidance, not runtime enforcement. Installing a skill does not
+install a hook or CI check. Confirm which mechanisms the target actually has;
+report absent checks as absent, and unrun verification as unverifiable.
+Some principles need judgment even when checks exist. A passing script does not
+prove every error path is handled or every migration is recoverable.
 
 If a principle matters and has no mechanism, that is a gap in the mechanism —
 not a reason to write the prose more forcefully.
@@ -56,18 +45,19 @@ not a reason to write the prose more forcefully.
 
 These are enforced by the model reading them, which is a real but weaker thing.
 
-**Rule 2 — Skills before assumptions.** If a kit skill exists for the task at
-hand, read it and follow it. Do not fall back on general training when a skill
-provides a specific methodology. (This is the dispatcher rule, and it lives in
-the always-on dispatcher block for a reason: if it fails to fire, nothing else
-here loads.)
+**Rule 2 — Relevant skills.** Use a skill when its specific guidance changes the
+work. Tier 1 may need none; Tier 2 normally uses one or two. Follow the current
+problem state rather than a keyword chain, and stop when the decision is resolved.
 
-**Rule 3 — Document decisions.** Decisions that affect the project get
-recorded — for agents *and* for the humans who arrive later. Specs, plans,
-ADRs, and briefs go to `.jimmy/work/`, `.jimmy/docs/`, or `.jimmy/adr/`. Even a Tier 2 task
-leaves a record of what was decided and why. Partially mechanical: the
-spec-gate hook blocks source edits while a cycle is `pre-spec`, so the *spec*
-half has teeth. The rest is on you.
+**Rule 3 — Durable decisions.** Record consequential decisions and their reasons
+where the next maintainer will find them. Reuse existing artifacts; a short Tier 2
+record can be the change description. When separate kit artifacts help, use
+`.jimmy/work/`, `.jimmy/docs/`, or `.jimmy/adr/`.
+
+**Authority.** Accepted scope and authorization carry through skill handoffs.
+Ask only for unresolved material decisions or actions beyond that authorization.
+Continue authorized work through its relevant verification; do not add a new
+approval checkpoint just because another skill loaded.
 
 ## Rationalizations
 

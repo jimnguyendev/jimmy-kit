@@ -1,6 +1,7 @@
 ---
 name: tracking-architect
-description: 5W1H Event Taxonomy, Type-Safe Data Contracts & Funnel Analytics skill. Use when designing event tracking plans, defining Zod schemas for analytics events, auditing tracking quality, instrumenting friction/rage-click detection, or writing SQL queries for conversion funnels and drop-off analysis.
+description: >-
+  Use when designing or extending analytics event contracts, auditing instrumentation, measuring funnel drop-offs, or adding friction signals. Preserve the target registry, naming conventions, and validation stack.
 ---
 
 # Tracking Architect: 5W1H Type-Safe Event Taxonomy & Data Contracts
@@ -10,15 +11,15 @@ description: 5W1H Event Taxonomy, Type-Safe Data Contracts & Funnel Analytics sk
 > 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 
 ## 🤖 0. HOW TO USE (agent workflow)
-**A. Add a new event:** MUST READ the event registry + tracking contract first — extend the existing taxonomy, never invent a new naming scheme. Every event carries 5W1H + `schema_version`.
+**A. Add a new event:** MUST READ the event registry + tracking contract first — extend the existing taxonomy, never invent a new naming scheme. Map the 5W1H semantics and versioning policy to that contract; preserve existing field names, optionality, identity rules, and supported schema versions. If the required registry is missing, ask for it before finalizing an extension; a labeled proposal can still identify the gap.
 **B. Audit tracking:** reconcile emitted events against the registry; report status against the runtime verification gates ("spec'd" ≠ "verified"). Output: item → status → missing gate.
-**C. Funnel SQL:** production only; exclude QA/bot traffic and unsupported schema versions.
+**C. Funnel SQL:** use production evidence for production claims; exclude QA/bot traffic and unsupported schema versions. Synthetic examples may demonstrate a query but must be labeled and cannot verify a live funnel.
 **MUST:** every tracking claim declares its verification status; an absent metric is absent, never zero.
 ---
 
-## 🏛️ 1. Core Architecture: The 5W1H Universal Data Contract
+## 🏛️ 1. Core Architecture: Mapping 5W1H to the Existing Contract
 
-Every analytics event emitted from Web, Mobile, or Backend **MUST** adhere to the strict 5W1H structural contract:
+Use 5W1H to check which context each event needs, not to impose a universal envelope. The diagram is an edtech TypeScript/Zod example; adapt its fields, naming, and validation to the target registry and stack. Record intentional omissions and version compatibility.
 
 ```mermaid
 graph LR
@@ -33,9 +34,9 @@ graph LR
 
 ### Golden Engineering Invariants
 
-1. **Zero Untyped Logs:** No arbitrary `track('click', { foo: 'bar' })`. Every event must have an explicit TypeScript Zod schema.
+1. **Validated Contracts:** Every event must conform to the target registry’s schema and validation mechanism (for example Protobuf, JSON Schema, or Zod). Extend existing contracts instead of adding a parallel schema system.
 2. **Server Verification for Macro-Conversions:** `purchase_completed` and `test_submitted` must be emitted or verified server-side. Client never directly declares a purchase complete.
-3. **No PII in Tracking Payloads:** Raw passwords, plain credit cards, or unhashed personal phone numbers are strictly prohibited. Use SHA-256 for user identifiers when needed.
+3. **No PII in Tracking Payloads:** Raw passwords, plain credit cards, or unhashed personal phone numbers are strictly prohibited. Use the project’s approved pseudonymous identity policy; hashing a direct identifier does not automatically make it anonymous.
 
 ---
 
@@ -55,6 +56,8 @@ graph TD
 ---
 
 ## 🛠️ 3. Type-Safe Client Helper Implementation Pattern
+
+Illustrative TypeScript/Zod adapter. Use this only where it matches the existing stack; schema validation alone does not prove an event was emitted, received, stored, or correctly reported.
 
 ```typescript
 import { z } from "zod";
@@ -85,7 +88,9 @@ export function trackEvent<K extends keyof typeof EventSchemas>(
 
 ## 📊 4. Standard Funnel Conversion SQL (`funnel_dropoff_analysis.sql`)
 
-Calculates step-by-step conversion and identifies the biggest drop-off choke points:
+Adapt the bundled SQL to the target dialect, identity model, event ordering, production/QA filters, version policy, and observation window. Its sample final event is checkout start, not verified payment; define the actual conversion event from the registry before using it for revenue claims. Validate instrumentation coverage before interpreting missing events as non-conversions.
+
+Calculates step-by-step conversion:
 
 $$\text{Step Conversion Rate} = \frac{\text{Users completing Step } N}{\text{Users completing Step } N-1} \times 100\%$$
 
@@ -93,6 +98,6 @@ $$\text{Step Conversion Rate} = \frac{\text{Users completing Step } N}{\text{Use
 
 ## 🛠️ 5. Scripts & Templates Included in this Skill
 
-1. [`templates/tracking-schema.ts`](templates/tracking-schema.ts): Production TypeScript Zod Schemas for all 5 event categories.
+1. [`templates/tracking-schema.ts`](templates/tracking-schema.ts): Illustrative TypeScript/Zod schemas across 5 event categories; extend the target registry instead of copying wholesale.
 2. [`scripts/funnel_dropoff_analysis.sql`](scripts/funnel_dropoff_analysis.sql): SQL query to compute step-by-step conversion and drop-off rates.
 3. [`templates/tracking_audit_checklist.md`](templates/tracking_audit_checklist.md): Pre-release tracking QA checklist.

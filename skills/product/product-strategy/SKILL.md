@@ -1,6 +1,7 @@
 ---
 name: product-strategy
-description: "Build a product strategy with validation gates, resource reality, and a mission statement — before roadmapping. Use when a new product or platform is proposed, when someone wants to skip validation and 'ship to everyone', when a roadmap exists but nobody checked whether money lasts to the end, when choosing what to compete on, or when a hardware/physical component is involved."
+description: >-
+  Use when shaping a new product or platform strategy, choosing competitive advantages, checking validation gates and resource constraints, or planning products with hardware components.
 ---
 
 # Product Strategy & Stage-Gate Validation

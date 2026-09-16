@@ -1,7 +1,6 @@
 # UX Design Playbook — Constitution Additions
 
-These principles are added to the project constitution when `play-ux-design`
-is enabled. They apply to all user-facing implementations.
+These are suggested principles for a project constitution. Apply or adapt them to accepted project requirements; reading ux-design does not install or enforce them.
 
 ## UX Design Principles
 

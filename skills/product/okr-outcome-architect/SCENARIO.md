@@ -1,4 +1,19 @@
 # Scenario — okr-outcome-architect (written BEFORE finalization)
+
+## Current revision — 2026-09-16 (K16)
+
+**Status: EXIT 2 — prospective cases; no independent run recorded for this revision.**
+
+**Static baseline finding (not a behavioral run):** Discovery description exceeds 300 characters and obscures the main trigger.
+
+**Sample input:** Select okr-outcome-architect for its named product task from skill descriptions, then apply its existing specialist method.
+
+**Expected behavior:** Find the skill from a concise situation-triggered description; retain its existing methodology and applicable boundaries.
+
+**Validation needed:** run the case with a fresh agent, paste its output and grade each expectation. Static checks alone do not promote this revision to PASS.
+
+## Historical scenarios and results (unchanged)
+
 **Rationale:** given an OKR set full of disguised projects, an unaided agent polishes wording instead of catching structural failures.
 **Sample input (4 planted bugs):** "O: Launch the product successfully. KR1: Complete the 6 tracking gates. KR2: Ship the results teaser. KR3: Improve user satisfaction. KR4: Run 4 marketing campaigns."
 **Expected behaviors:**

@@ -1,20 +1,23 @@
 ---
 name: ux-specify
-description: "Enriches feature specs with UX requirements — error states, user flows, accessibility, five-planes analysis. Use when a spec covers only the happy path, when loading/error/empty/timeout states are undefined, or before handing a spec to engineering."
+description: >-
+  Use when a user-facing specification omits recovery, loading, empty, or timeout states, lacks accessibility criteria, or needs journey-grounded requirements before implementation.
 version: "1.0.0"
 modes: [build, architect]
-category: planning
-activation: auto
-cost-tier: sonnet
-playbook: ux-design
-inputs: [specification, user-context-notes, persona-profiles, journey-maps]
-outputs: [ux-requirements]
 ---
 
 # UX Specify
 
+> **This skill exists to stop:** happy-path specifications that leave users stranded on failure or exclude users with accessibility needs.
+
+## 🤖 0. HOW TO USE
+
+BUILD adds missing relevant state, acceptance, and accessibility requirements; ARCHITECT adds the Five Planes and journey coverage. Output additions to the supplied spec, or `.jimmy/work/<feature>/ux-requirements.md` when a separate handoff is useful. Reuse accepted scope and supplied user context even without discovery files; ask only about missing material behavior.
+
+Complete when the affected journeys and failure states have testable requirements and relevant accessibility checks. Mark unsupported assumptions and genuinely unknown behavior; do not expand a scoped change to unrelated journeys.
+
 Enriches a feature specification with UX requirements that implementation must
-satisfy. Runs AFTER the core `specify` skill completes.
+satisfy. Works from an existing feature spec, PRD, or equivalent supplied requirements.
 
 ## Mode: BUILD (light)
 
@@ -97,9 +100,7 @@ A structured document appended to or linked from the main specification:
 
 ## References
 
-- `five-planes.md` — Garrett's five planes framework
-- `usability-principles.md` — Krug's laws and Norman's principles
-- `error-and-recovery-design.md` — Norman's error taxonomy and design checklist
+The Five Planes and recovery checks are inlined above. Use `ux-discovery` only for missing user evidence, `ux-writing` for interface copy, and `ux-review` heuristic mode for verification.
 
 ## Quality Criteria
 

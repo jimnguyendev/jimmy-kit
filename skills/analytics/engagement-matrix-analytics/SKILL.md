@@ -1,6 +1,7 @@
 ---
 name: engagement-matrix-analytics
-description: Amplitude 4-Quadrant Feature Portfolio & Retention Smile Curve skill. Use when mapping feature breadth (% MAU) vs frequency, computing median-split quadrants (Core, Power/Niche, Casual/Broad, Ghost/Deprecate), diagnosing cohort retention curves (Decline vs Flattening vs Smile), and designing feature adoption or deprecation roadmaps.
+description: >-
+  Use when comparing feature reach and frequency, investigating adoption or removal candidates, or interpreting cohort retention curves. Usage quadrants guide investigation; they do not establish customer value.
 ---
 
 # Amplitude 4-Quadrant Feature Portfolio & Retention Smile Curve Analytics
@@ -11,9 +12,9 @@ description: Amplitude 4-Quadrant Feature Portfolio & Retention Smile Curve skil
 
 ## 🤖 0. HOW TO USE (agent workflow)
 **A. Build the 4-quadrant matrix** from MAU/frequency data (median split), with measurement window + source.
-**B. Recommend per quadrant:** Core → protect; Power-Niche → scale conditionally; Casual-Broad → raise frequency; dead corner → deletion candidates.
+**B. Investigate per quadrant:** Core → verify value/reliability; Power-Niche → assess wider relevance; Casual-Broad → check natural usage cadence; low-use corner → investigate customer value, discovery, and dependencies.
 **C. Smile curve:** plot cohorts, mark the inflection; never conclude from incomplete cohorts.
-**Standard output:** matrix + one action per feature — no feature parked in "keep watching" indefinitely.
+**Standard output:** matrix + evidence + one investigation or experiment per feature, with owner and review trigger. A quadrant alone never authorizes deletion; first establish customer impact, contractual/accessibility needs, dependencies, and a safe migration or replacement.
 ---
 
 ## 🧭 1. Core Framework: T-Shaped Retention vs Engagement
@@ -44,15 +45,15 @@ Every feature in the product portfolio is plotted on a 2D Cartesian plane:
 ```mermaid
 graph TD
     subgraph ENGAGEMENT_MATRIX["4-QUADRANT ENGAGEMENT MATRIX (MEDIAN SPLIT)"]
-        TL["<b>TOP-LEFT: Niche / Power Features</b><br/>(Low Breadth < Median, High Frequency ≥ Median)<br/>• Highly addictive to a dedicated subset.<br/>• <i>Strategy:</i> <b>GROWTH GOLDMINE!</b> Promote in Onboarding to expand reach."]
-        TR["<b>TOP-RIGHT: Core Features</b><br/>(High Breadth ≥ Median, High Frequency ≥ Median)<br/>• The product's main value proposition.<br/>• <i>Strategy:</i> <b>PROTECT & OPTIMIZE!</b> Reduce latency, eliminate UX friction."]
-        BL["<b>BOTTOM-LEFT: Ghost / Underperforming</b><br/>(Low Breadth < Median, Low Frequency < Median)<br/>• Unused or confusing features.<br/>• <i>Strategy:</i> <b>DEPRECATE & SUNSET!</b> If in BL for 2 cycles, remove code."]
-        BR["<b>BOTTOM-RIGHT: Casual / Broad Utility</b><br/>(High Breadth ≥ Median, Low Frequency < Median)<br/>• Broadly used on occasion (e.g. Monthly Tests).<br/>• <i>Strategy:</i> <b>MAINTAIN AS-IS!</b> Keep stable without bloat."]
+        TL["<b>TOP-LEFT: Niche / Power Features</b><br/>(Low Breadth < Median, High Frequency ≥ Median)<br/>• Frequently used by a subset.<br/>• <i>Investigate:</i> broader relevance before an adoption experiment."]
+        TR["<b>TOP-RIGHT: Core Features</b><br/>(High Breadth ≥ Median, High Frequency ≥ Median)<br/>• Broad, frequent use.<br/>• <i>Investigate:</i> customer value and reliability needs."]
+        BL["<b>BOTTOM-LEFT: Ghost / Underperforming</b><br/>(Low Breadth < Median, Low Frequency < Median)<br/>• Low observed use.<br/>• <i>Investigate:</i> cadence, telemetry, customer value, and dependencies before proposing removal."]
+        BR["<b>BOTTOM-RIGHT: Casual / Broad Utility</b><br/>(High Breadth ≥ Median, Low Frequency < Median)<br/>• Broadly used on occasion (e.g. Monthly Tests).<br/>• <i>Investigate:</i> expected cadence and reliability; more frequency may not be desirable."]
     end
 ```
 
 > [!IMPORTANT]
-> **Why Median Split over Mean?** Feature event counts are heavily skewed by power users and automated loops. Using the Arithmetic Mean would artificially push 80% of normal features into the Bottom-Left. Always split axes using **Median Breadth ($\tilde{B}$)** and **Median Frequency ($\tilde{F}$)**.
+> **Why Median Split?** Medians reduce sensitivity to outlier features when counts are skewed. Use **Median Breadth ($\tilde{B}$)** and **Median Frequency ($\tilde{F}$)** for this portfolio view; inspect automation and eligible-user denominators first. These are relative splits, not quality thresholds, and can move when the feature portfolio changes.
 
 ---
 
@@ -63,13 +64,15 @@ When evaluating Cohort Retention curves over 90 days ($D_1 \dots D_{90}$):
 ```mermaid
 graph LR
     subgraph CURVES["3 RETENTION COHORT PATTERNS"]
-        C1["<b>1. Continuous Decline:</b><br/>Approaches 0% over time.<br/>➔ <i>Product has NO Product-Market Fit (Leaky Bucket).</i>"]
-        C2["<b>2. Flattening Curve:</b><br/>Stabilizes at a healthy baseline (e.g. 25-35%).<br/>➔ <i>Healthy PMF achieved.</i>"]
-        C3["<b>3. Smile Curve (Casey Winters):</b><br/>Flattens, then curves UPWARD at D60-D90.<br/>➔ <i>Elite Network Effects, Rich Content, or Re-engagement Loops.</i>"]
+        C1["<b>1. Continuous Decline:</b><br/>Approaches 0% over time.<br/>➔ <i>Investigate unmet value, expected cadence, and data coverage before scaling.</i>"]
+        C2["<b>2. Flattening Curve:</b><br/>Stabilizes above zero for mature, comparable cohorts.<br/>➔ <i>A PMF signal to interpret in product context.</i>"]
+        C3["<b>3. Smile Curve (Casey Winters):</b><br/>Flattens, then curves UPWARD.<br/>➔ <i>Investigate a recurring return cycle; not extra proof of PMF or network effects.</i>"]
     end
 ```
 
-### Driving Factors for a Smile Curve in EdTech:
+### Candidate Explanations for a Smile Curve in EdTech:
+
+Keep the cohort denominator fixed, state the retention definition, and verify mature periods before interpreting a rise. Check these explanations against observed return reasons:
 
 1. **Curriculum Stacking:** Finishing IELTS Foundation $\to$ Starting IELTS Intensive.
 2. **Re-take Exam Cycles:** Learners taking the real exam, resting for 2 weeks, then returning for a higher Band score sprint.
@@ -81,7 +84,7 @@ graph LR
 
 ### Step 1: Feature Event Extraction
 
-Run SQL extraction across all logged product events over the last 30 days (see `scripts/extract_feature_usage.sql`).
+Adapt `scripts/extract_feature_usage.sql` to the verified event registry and analysis window. Check coverage, QA/bot filters, eligible population, and comparable exposure; missing instrumentation is not zero usage.
 
 ### Step 2: Compute Median-Split Coordinates
 
@@ -90,13 +93,13 @@ Calculate Breadth, Frequency, Median X, and Median Y using `scripts/calculate_en
 ### Step 3: Classify Portfolio & Build Action Matrix
 
 - **Core (TR):** Benchmark performance (P95 latency, error rates).
-- **Power/Niche (TL):** Design a 2-step experiment to introduce this feature during user onboarding.
+- **Power/Niche (TL):** Check which segments benefit; test discovery with eligible users if broader value is supported.
 - **Utility (BR):** Verify reliability and prevent over-engineering.
-- **Ghost (BL):** Mark with a 60-day probation window. If still in BL, submit an RFC to remove the feature.
+- **Ghost (BL):** Investigate instrumentation, discoverability, rare but important jobs, customer commitments, and dependencies. Propose removal only with evidence and an impact/migration assessment; use a review window aligned to the job cadence.
 
 ### Step 4: Map Features to Retention Cohorts
 
-Perform correlation analysis: Users who touch $\ge 1$ Niche feature in Week 1 have **$2.4\times$ higher D30 Retention**.
+Compare D30 retention for users who did and did not use a niche feature in Week 1, using mature cohorts and reporting counts, segment mix, and uncertainty. Report the measured association only; selection effects and prior engagement can explain differences. Test an adoption intervention before claiming causal uplift.
 
 ---
 

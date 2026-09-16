@@ -1,13 +1,14 @@
 ---
 name: ux-cro-audit
-description: "CRO & Stakeholder Negotiation Suite — ethical conversion optimization (15-topic landing/pricing/in-app-screen audit), design-defense negotiation (stakeholder fear map, trigger/popup policy), and VoC mining. Use when optimizing conversion, auditing a landing or pricing page, writing headlines/price framing, when 'the boss dislikes the design', or when Sales/Marketing demand popups. NOT for general UX quality/heuristic review — that's the ux-review skill."
+description: >-
+  Use when a landing, pricing, or in-app screen has conversion friction, stakeholders dispute design choices, or popup requests risk trust. For general usability and heuristic review, use ux-review.
 ---
 
 # CRO & Stakeholder Negotiation Suite
 
 > **This skill exists to stop:** auditing UX by feel ("looks off") and optimizing conversion with dark patterns — instead of pointing at specific elements with sourced rules.
 
-> 🔀 **Division of labor with ux-review:** this skill covers CONVERSION + NEGOTIATION; general UX quality/usability/heuristics → use `ux-review` (canonical, ships with its own gates).
+> 🔀 **Division of labor with ux-review:** this skill covers CONVERSION + NEGOTIATION; general UX quality/usability/heuristics → use `ux-review` (with a manual heuristic checklist).
 
 > 📁 **Source note:** `[sage]` = upstream Sage repo (github.com/xoai/sage, public) — optional deeper reading; this skill runs fully on the rules inlined here. A step marked **MUST READ** points at a file in *your own* project (e.g. an event registry) — if it is missing, stop and ask instead of improvising.
 

@@ -1,6 +1,7 @@
 ---
 name: product-vision
-description: "Set or repair a product vision so the team stops being a feature factory. Use when requests are being built in the order they arrive, when nobody can say what the product is for in 3–5 years, when a team wants to delete a 'low-usage' feature, when users keep asking for features that don't fix their problem, or when design is treated as decoration."
+description: >-
+  Use when defining a product vision, requests drive a feature-factory roadmap, customer demands obscure the underlying problem, or low usage is being used to justify deleting a feature.
 ---
 
 # Product Vision & Systems Thinking

@@ -1,27 +1,10 @@
 ---
 name: user-interview
-description: >
-  Designs complete user interview research packages: research brief, screener,
-  interview guide, and analysis framework. Supports discovery interviews,
-  switch interviews, contextual inquiry, and evaluative interviews. Use when
-  the user needs to validate JTBD hypotheses, test a concept with users,
-  understand switching behavior, or observe how users interact with a product.
-  Also triggers when the user says "I need to talk to users," "help me plan
-  user interviews," "write an interview guide," "I need to validate this
-  assumption," or "design a research study." Do NOT use for quantitative
-  research (surveys, A/B tests) or for conducting the research itself.
+description: >-
+  Use when a qualitative study needs an interview guide, screener, research brief, or analysis framework to investigate behavior, switching, or concept adoption. This reference plans research; it does not conduct it.
 version: "1.1.0"
 modes: [fix, build, architect]
 ---
-
-<!-- sage-metadata
-cost-tier: sonnet
-activation: auto
-tags: [product-management, research, interview, qualitative, planning, validation]
-inputs: [research-need]
-outputs: [research-brief]
-requires: []
--->
 
 # User Interview Design
 
@@ -80,7 +63,7 @@ reviewing upstream artifacts for low-confidence claims or open questions.
 
 ### Step 0: Understand the Research Need
 
-Confirm with the user in ONE message:
+Reuse supplied objectives, target segment, evidence, and accepted scope. Ask only the unresolved material questions below, together in one message:
 
 1. **What do you need to learn?** The specific questions this research
    should answer. Not "understand users better" — that's too vague.

@@ -1,6 +1,7 @@
 ---
 name: growth-loops
-description: "Design and diagnose growth loops and habit hooks instead of one-off campaigns. Use when someone asks 'how do we grow this', when acquisition depends on ad budget with nothing compounding, when defining an Active User for the first time, when retention curves need reading (flattening = PMF signal), or when a B2B/B2C product needs a referral or content loop."
+description: >-
+  Use when designing referral, content, or habit loops; acquisition depends on continuing ad spend; an Active User definition is missing; or cohort retention curves need interpretation.
 ---
 
 # Growth Loops & Habit Hooks

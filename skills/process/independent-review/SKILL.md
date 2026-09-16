@@ -1,6 +1,6 @@
 ---
 name: independent-review
-description: "Independent evaluation with strengths, issues, risks, and a three-level verdict. Use when an artifact (spec, brief, plan, document) needs fresh-eyes review before it is trusted, when work is about to be declared done, or when the author is reviewing their own work and needs a blind-spot check."
+description: Review an artifact independently. Use when the user requests a review or a consequential spec, plan, design, or change needs a fresh assessment.
 version: 1.0.0
 author: Sage
 metadata:
@@ -59,9 +59,7 @@ If the user specifies an artifact, proceed directly.
 
 ## Step 2: Gather Context
 
-Search for prior knowledge using sage_memory_search — pass the
-artifact topic and domain as query (string), limit as 5 (integer).
-If the tool is not available, proceed without memory context.
+Use relevant prior decisions supplied by the user or present in the target repository. An optional memory tool is not a prerequisite.
 
 Read the artifact fully.
 
@@ -76,7 +74,7 @@ I wasn't involved in producing this work."
 
 If this is the same session, note: "Sage: I produced this work, so my
 review may have blind spots. For a more independent evaluation,
-consider a fresh session or the /review command."
+consider a fresh review context."
 
 ## Step 3: Evaluate
 
@@ -135,11 +133,9 @@ Based on the verdict:
 - **Needs revision:** List specific items to address, offer to help
 - **Significant gaps:** Recommend which step to return to and why
 
-[A] Accept findings — proceed with suggested next step
-[R] Revise — I'll address the issues found
-[D] Discuss — let's talk about specific findings
+If the user requested review only, finish with findings and actionable next steps. If fixes are already authorized, continue within that scope; ask only for a new material decision.
 
-Prepend review findings to `.jimmy/decisions.md`.
+Return the requested review in chat or its requested report location. Record a consequential decision in `.jimmy/decisions.md` only when the review leads to an accepted decision; findings alone are not ADRs.
 
 ## Rules
 

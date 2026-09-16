@@ -1,15 +1,7 @@
 ---
 name: opportunity-map
-description: >
-  Produces an opportunity map that assesses discovered customer needs against
-  product capabilities, determines which to pursue, and sequences them. Takes
-  any discovery output (JTBD analysis, research findings, lean canvas) as
-  input and applies inside-out assessment to produce pursue/monitor/defer
-  decisions. Use when the user asks what to focus on, what to build next,
-  which opportunities to prioritize, or how to sequence product work. Also
-  triggers when the user says "help me decide what to pursue" or "we have
-  too many opportunities, help us focus." Do NOT use for detailed requirements
-  (that's PRD) or for understanding customer needs (that's discovery).
+description: >-
+  Use when prioritizing discovered customer needs against team capabilities or sequencing product opportunities. Not for detailed requirements or initial customer discovery.
 version: "1.1.0"
 modes: [fix, build, architect]
 ---
@@ -42,9 +34,9 @@ and note what changed and why. Minutes.
 
 **BUILD (light):** Quick assessment. Score the top 3-5 opportunities from
 discovery, do a lightweight capability check (existing capability? unique
-advantage?), make pursue/defer decisions without detailed dependency mapping
-or sequencing rationale. Produces a focused decision sufficient to move into
-a PRD. 10-15 minutes.
+advantage?), and make provisional pursue/monitor/defer decisions. Record any
+dependency that changes the decision; omit extended mapping when unnecessary.
+Missing evidence or capability fit yields a partial map, not a forced commitment. 10-15 minutes.
 
 **ARCHITECT (full):** Complete assessment. All opportunities scored with
 capability fit, full dependency map, detailed sequencing with rationale,
@@ -61,7 +53,8 @@ review plan with triggers. The comprehensive decision document. 30-45 minutes.
 
 ## Prerequisites
 
-This skill requires structured discovery output. Accepted inputs:
+Use discovery output or customer needs and context already supplied in the
+conversation or project artifacts. Accepted inputs:
 
 - **JTBD analysis:** Desired outcomes with opportunity scores (ideal)
 - **Research findings:** Identified needs with importance/satisfaction signals
@@ -71,17 +64,19 @@ This skill requires structured discovery output. Accepted inputs:
 If the input has opportunity scores (Importance + Satisfaction → Score),
 use them directly. If not, Step 1 applies lightweight scoring.
 
-If NO discovery work exists: recommend running a discovery skill first
-(e.g., `jtbd`). Opportunity mapping without customer evidence produces
-opinion-based prioritization — flag this prominently if the user insists.
+If discovery evidence is absent, produce a provisional map of the supplied
+hypotheses and validation needs. Recommend focused discovery (for example
+`jtbd`) where it changes the decision; do not require a separate artifact or
+repeated approval to make useful partial progress.
 
 ## Process
 
 ### Step 0: Gather Context
 
-**Read first:** `references/opportunity-methodology.md`
+Read the relevant sections of `references/opportunity-methodology.md` when
+the scoring, capability, or sequencing work needs more detail.
 
-Confirm with the user in ONE message:
+Reuse supplied context for these dimensions:
 
 1. **Discovery input:** Which analysis is this based on? Where are the
    scored opportunities?
@@ -93,18 +88,18 @@ Confirm with the user in ONE message:
 4. **Scope:** Is this for a specific feature area, an entire product, or
    a new product? (Affects the granularity of assessment)
 
-If the user provides discovery output but no capability context, ask for
-it explicitly: "The opportunity scores tell me what customers need. To
-assess which opportunities YOU should pursue, I need to understand your
-capabilities and constraints. What does your team do well? What data or
-technology advantages do you have?"
+Ask in one exchange only for missing decision-critical facts. If capability
+context is unavailable, mark fit unassessed and keep affected decisions
+provisional or on monitor. Continue independent scoring/evidence work; do
+not repeat intake or reconfirm accepted scope.
 
 ### Step 1: Score Opportunities
 
 If discovery output includes opportunity scores, import them directly.
 
-If not, walk through each identified need and apply the lightweight
-scoring from `references/opportunity-methodology.md`:
+If not, apply the lightweight scoring below where evidence supports it.
+Label assumed ratings explicitly and leave unsupported ratings unscored
+when no defensible estimate exists; never present invented scores as data:
 - Importance (1-10): How critical is this need to the job performer?
 - Satisfaction (1-10): How well do current solutions serve this need?
 - Opportunity = Importance + max(Importance - Satisfaction, 0)
@@ -142,9 +137,9 @@ output that the **ordering is provisional until importance has a source** —
 the decisions that do not depend on ordering (a release gate, anything
 inside your own team's lane, the reduce list) are still safe to act on.
 
-Present the scored landscape to the user for review before proceeding.
-Scores are judgment calls — the user may adjust based on context the
-discovery didn't capture.
+Make the evidence and assumptions reviewable in the output. Proceed within
+accepted scope; pause only for an unresolved choice that materially changes
+the decision. The user can revise ratings when new context emerges.
 
 ### Step 2: Assess Capability Fit
 
@@ -255,7 +250,7 @@ The opportunity map is a living document. Define:
 
 Before presenting, validate:
 
-- [ ] Every opportunity has a score, confidence level, and decision
+- [ ] Every opportunity has a score or explicit unscored gap, evidence confidence, and decision/provisional status
 - [ ] Where importance and satisfaction rest on different evidence, they are
       tagged separately and the ordering is marked provisional
 - [ ] No more than 4 opportunities are "pursue"
@@ -287,12 +282,11 @@ discuss any of the decisions?"
 ## Rules
 
 **MUST:**
-- MUST read `references/opportunity-methodology.md` before starting
-- MUST have structured discovery output as input — mapping without
-  customer evidence produces opinion-based prioritization
-- MUST gather capability context from the user — opportunity scores
-  alone don't tell you what to pursue (outside-in without inside-out
-  produces wish lists)
+- Read detailed methodology sections when needed for the current assessment
+- MUST identify evidence or hypotheses behind each need; label a map based
+  on unvalidated inputs as provisional
+- MUST assess capability fit from supplied context or mark it unassessed;
+  opportunity scores alone do not justify a pursuit commitment
 - MUST limit "pursue" to 2-4 opportunities — if everything is a
   priority, nothing is
 - MUST include the do-nothing alternative for every "pursue" decision —
@@ -302,8 +296,8 @@ discuss any of the decisions?"
   low-confidence items
 
 **SHOULD:**
-- SHOULD present the scored landscape to the user for review before
-  making decisions (scores are judgment calls)
+- SHOULD expose scoring assumptions for review without re-requesting
+  accepted decisions or blocking independent work
 - SHOULD use the job process map (from JTBD) to inform dependency
   mapping when available
 - SHOULD identify foundation capabilities that unlock multiple
@@ -321,11 +315,10 @@ discuss any of the decisions?"
 
 ## Failure Modes
 
-- **No capability context provided:** Don't produce a map with only
-  outside-in scores. Ask for capability context first. If the user can't
-  provide it, the map will note "capability fit unassessed" for all
-  opportunities and recommend the user complete this assessment with
-  their team.
+- **No capability context provided:** Mark affected opportunities
+  "capability fit unassessed" and use monitor/provisional decisions. Ask
+  for the specific capability facts only if a requested commitment depends
+  on them; continue the supported portions of the map.
 
 - **All opportunities score high:** This usually means the satisfaction
   scores are too uniformly low (common when the product is new or the

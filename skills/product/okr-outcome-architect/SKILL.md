@@ -1,9 +1,7 @@
 ---
 name: okr-outcome-architect
 description: >-
-  Writes, audits and scores OKRs: Objectives tied to business outcomes, Key Results with metric/baseline/target/date, weighting and confidence check-ins, and a roadmap-to-KR matrix.
-  Use when writing, auditing, scoring, weighting, or aligning company/team OKRs, mapping roadmap initiatives to KRs, separating outcomes from outputs, or diagnosing broken metric systems.
-  Triggers: write OKRs, review my OKRs, are these KRs good, quarterly goals, committed vs stretch, aspirational OKRs, confidence check-in, OKR weighting or scoring, map roadmap to OKRs, our OKRs do not match what the team actually works on.
+  Use when writing, auditing, scoring, weighting, or aligning OKRs; mapping initiatives to Key Results; distinguishing outcomes from outputs; or reviewing committed and aspirational goals.
 ---
 
 # OKR & Outcome Architecture

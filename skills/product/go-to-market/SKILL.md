@@ -1,6 +1,7 @@
 ---
 name: go-to-market
-description: "Plan a go-to-market for a digital product without throwing it over the fence to marketing. Use when a feature or product is 'done' and someone asks how to launch it, when ad spend is proposed before retention is known, when positioning is unclear across product/marketing/sales, or when deciding whom to sell to first."
+description: >-
+  Use when planning a product launch, choosing an initial customer segment, aligning positioning across product, marketing, and sales, or evaluating acquisition spend before retention is understood.
 ---
 
 # Go-To-Market (GTM) for Digital Products

@@ -1,6 +1,8 @@
 /**
  * Generic Practice Lab: Type-Safe 5W1H Analytics Event Schemas
- * Standard: TypeScript + Zod v3
+ * Worked example: TypeScript + Zod v3. Use the existing registry/stack in a target repo.
+ * Adapt identity, optionality, naming, and version policy before implementation.
+ * This example does not establish production instrumentation or funnel coverage.
  */
 
 import { z } from "zod";
@@ -56,7 +58,7 @@ export const HeroCtaClickedSchema = BaseEventSchema.extend({
 
 export const DiagnosticLeadSavedSchema = BaseEventSchema.extend({
   event_name: z.literal("diagnostic_lead_saved"),
-  lead_email_hash: z.string().length(64), // SHA-256 hash (no plain PII)
+  lead_email_hash: z.string().length(64), // Pseudonymous identifier; hashing alone does not establish anonymity
   weak_skill: z.enum(["speaking", "writing", "reading", "listening"]),
   predicted_band: z.number().min(0).max(9),
 });

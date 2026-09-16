@@ -29,7 +29,7 @@ This skill encodes that constraint framework so every optimization is justified,
 
 ## The Five Gates
 
-No optimization work begins until all five gates are answered. If a gate cannot be answered, the action is to stop and gather information, not to guess and optimize.
+Use these gates to establish relevant constraints and evidence. Baseline measurement and profiling may proceed within the authorized scope while targets are incomplete; implementation needs enough evidence to justify the selected change.
 
 ### Gate 1: What are the hard targets?
 
@@ -44,9 +44,9 @@ Define concrete, measurable targets before writing any optimization code.
 | Memory budget | Steady-state < 60-70% of total RAM | Monitor current usage |
 | Infra constraint | No new paid infrastructure | Clarify budget before choosing tools |
 
-**If you cannot fill this table, STOP. Measure the baseline first, then set targets based on actual requirements.**
+**Fill the constraints relevant to this workload. Measure missing baselines and derive targets from actual requirements; mark unrelated rows not applicable.**
 
-Every target must be monitored in production. A target without a dashboard is a wish.
+For a production service, identify how the relevant target will be monitored. Local algorithms and batch jobs may use a reproducible benchmark or job metric instead of a dashboard.
 
 ### Gate 2: Where is the hot path?
 
@@ -77,7 +77,7 @@ Optimizing a cold path that handles 2% of traffic while the hot path is untouche
 | Contention | Lock/mutex profile hot | Lock profiler, block profile |
 | External dependency | Span breakdown shows slow upstream | OpenTelemetry traces, APM |
 
-**If you have not profiled, STOP. Intuition about bottlenecks is wrong ~80% of the time.**
+**If you have not profiled, STOP. Measure the suspected bottleneck before treating it as established.**
 
 Go-specific profiling methodology (pprof, benchstat) belongs to a separate Go skill pack, not bundled here; the process below is language-agnostic.
 
@@ -93,13 +93,13 @@ See [Escalation Ladder](references/escalation-ladder.md) for the full decision f
 
 Every optimization must be independently reversible.
 
-**Required for each change:**
+**Choose completion evidence appropriate to the change:**
 
-- [ ] Feature flag to disable the optimization without redeploying
-- [ ] Load test script proving improvement (before/after numbers)
-- [ ] Flamegraph comparison for hot path changes
-- [ ] Alert rules for regression detection (p99 breach, cache hit rate drop, error rate spike)
-- [ ] Circuit breaker for new external dependencies
+- [ ] A recovery path; use a feature flag when a live rollout needs immediate runtime disablement
+- [ ] Reproducible benchmark or load test with before/after numbers
+- [ ] Profile comparison when it explains the changed bottleneck
+- [ ] Relevant regression monitoring for production services
+- [ ] Failure handling for new external dependencies; a circuit breaker when its failure mode warrants one
 - [ ] Documentation of what was changed and why
 
 **If you cannot roll back a change independently, do not ship it bundled with other changes.**

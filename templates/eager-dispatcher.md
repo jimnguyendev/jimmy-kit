@@ -5,7 +5,7 @@
 
 ## Jimmy Kit — route every request (always-on)
 
-Before any substantial response: check whether a Jimmy Kit skill covers this.
+For a substantial task, use a Jimmy Kit skill when its specific guidance improves the work.
 Choose by the current problem state before topic keywords. An implementation verb does not prove the problem, contract, or boundary is accepted. Then use the deterministic map:
 
 Dose the workflow before following the map:
@@ -21,7 +21,8 @@ Dose the workflow before following the map:
 | architect / redesign / migrate / rewrite / "which technology" | `architect` → `decision-log` |
 | understand / research / interview / user needs / jobs | `jtbd` (+ `ux-discovery`) |
 | design / wireframe / brief / PRD / prototype / mockup | `ux-brief` / `prd` / `prototype` |
-| audit / evaluate / usability / UX review | `ux-review` — conversion, pricing or landing page → `ux-cro-audit` |
+| review / audit / evaluate an existing UI for usability | `ux-review` — conversion, pricing or landing page → `ux-cro-audit` |
+| review / audit a document, plan, code, or non-UI artifact | `independent-review` |
 | OKR / quarterly goals / key results | `okr-outcome-architect` |
 | red-team / debate / council / "what will leadership ask" | `product-council` |
 | tracking / event / instrument / funnel numbers | `tracking-architect` |
@@ -30,12 +31,13 @@ Dose the workflow before following the map:
 | stuck after 3+ attempts / complexity spiraling | `problem-solving` |
 | tests pass but QA / real DB / real UI fails · acceptance criteria for a packet touching SQL, config, or response shape · "integration green" · regression replay suite | `reality-gate` |
 
-One match → announce it and go. Several → present them as options.
+One clear match → announce and proceed. Several compatible matches → choose the smallest sufficient set. Ask only when materially different outcomes remain unresolved.
 None, or the request is ambiguous → load the `routing` skill (classifier fallback
 + confirmation format); the problem-shape chains live in the kit's
 `docs/OPERATING-WORKFLOW.md`.
 
-Two standing rules on top of the map:
+Standing rules on top of the map:
 - **Gate:** run `product-council` as part of the full Tier 3 flow. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Verdict ⚠/✗ means back to the problem, not forward to code.
-- **Constitution:** the five base principles in the `constitution` skill bind every change — tests before code, no silent failures, secrets never in code, dependencies explicit and pinned, changes reversible.
-- **Evidence:** no `[VERIFIED]` problem → no solution writing; label every claim `[VERIFIED]` / `[ASSUMPTION]` / `[GUESS]`; never invent numbers or baselines.
+- **Authority:** accepted scope, context, and authorization carry through skill handoffs. Continue authorized work through relevant verification and fixes. Ask only for an unresolved material decision, expanded scope, or an external action not already authorized. This dosage rule takes precedence over generic workflow recipes.
+- **Constitution:** apply relevant engineering principles — test changed behavior, no silent failures, secrets never in code, dependencies explicit, changes reversible. Installing skills does not install hooks or CI enforcement.
+- **Evidence:** distinguish verified facts from assumptions where they affect a decision; never invent numbers or baselines. Missing evidence blocks only the conclusion or action that depends on it; useful drafts and investigation may proceed with explicit limits.

@@ -1,19 +1,7 @@
 ---
 name: jtbd
 description: >-
-  Systematically uncovers customer jobs, pains, and gains using the
-  Jobs-to-be-Done framework. Produces structured JTBD analyses with job
-  performer definitions, job process maps, pains/gains, and desired outcome
-  statements. Use when the user mentions jobs to be done, JTBD, customer
-  jobs, unmet needs, pains and gains, value proposition canvas, switch
-  interviews, outcome-driven innovation, desired outcomes, or asks why
-  customers hire or fire a product. Also triggers when the user wants to
-  understand what job a product solves, conduct customer discovery,
-  reposition a product around needs, define unmet needs for a roadmap,
-  analyze competitors through a jobs lens, or create messaging grounded in
-  customer objectives. Do NOT use for general market sizing, feature
-  prioritization without a customer-needs lens, or persona creation based
-  on demographics alone.
+  Use when investigating customer jobs, unmet needs, switching decisions, pains and gains, or desired outcomes. Not for general market sizing or demographic-only personas.
 metadata:
   version: 1.3.0
   category: product-management
@@ -40,17 +28,15 @@ JTBD Analysis Progress:
 
 ### Step 0: Check product context
 
-Before starting the analysis, read [context.md](context.md).
+Use context already supplied in the conversation, customer evidence, and relevant project artifacts. The bundled [context.md](context.md) is an optional intake template, not a prerequisite; its `[TODO]` markers do not invalidate supplied context.
 
-- **If context.md has no `[TODO]` markers**: All sections are filled in. Use this context to ground the entire analysis — it defines the product, segment, known insights, and scope. Proceed to Step 1.
-- **If context.md has `[TODO]` markers in some sections**: Those sections are not yet filled in. Before proceeding, ask the user to provide the missing information. Present all missing sections in a single message — don't ask one at a time.
-- **If context.md is entirely unfilled or the file doesn't exist**: Ask the user to provide product context before starting. Specifically, request: (1) what the product does and what stage it's at, (2) who they believe the target job performer is, (3) what they already know from customer feedback or research, and (4) what decision this analysis should inform. Gather everything in one exchange.
+Establish the product, job performer, circumstances, available evidence, and decision this analysis informs. Ask only for missing facts that materially change that decision, bundling them in one exchange. Continue independent analysis while a gap remains.
 
-After context is established, verify each section is specific enough to ground the analysis. A product description of "B2B SaaS" alone is too thin — it should say what the product does, for whom, and what stage it's at. If any section is present but too vague to be useful, ask the user to elaborate on those specific sections before proceeding.
+**Light/partial analysis:** when evidence or scope is limited, produce the supported performer/job statement, relevant stages, needs, assumptions, and research gaps. Label inferred needs as hypotheses; do not invent interviews, numbers, or a struggling moment to complete a template. Use the full workflow when a complete analysis is requested or the decision needs it. Read linked references only for the method or quality check being applied; use templates and examples when their structure helps.
 
 ### Step 1: Define job performer and context
 
-If context.md provided a target segment and existing knowledge, use that as a starting point — refine and deepen it, don't repeat it. If working assumptions were listed, treat them as hypotheses to pressure-test throughout the analysis, not facts to build on.
+If supplied context provided a target segment and existing knowledge, use that as a starting point — refine and deepen it, don't repeat it. If working assumptions were listed, treat them as hypotheses to pressure-test throughout the analysis, not facts to build on.
 
 Identify who executes the job. Distinguish from the buyer — they have different needs.
 
@@ -148,7 +134,7 @@ Attach outcomes to job map stages. A thorough pass yields 50–150; a lightweigh
 
 ### Step 5: Quality check
 
-Before presenting results, validate against this checklist. If issues are found, fix and re-check.
+Before presenting results, validate the applicable items in this checklist. For a partial analysis, mark unsupported items as gaps rather than completing them with guesses. If issues are found, fix and re-check.
 
 ```
 Quality Validation:

@@ -165,9 +165,15 @@ def main() -> int:
         if ".git" not in path.parts and ".learn-vi" not in path.parts:
             run_syntax_check(["bash", "-n"], path, errors)
 
-    pycache = [path for path in root.rglob("__pycache__") if ".git" not in path.parts]
-    if pycache:
-        errors.append(f"generated Python caches remain: {[str(path) for path in pycache]}")
+    tracked = subprocess.run(
+        ["git", "-C", str(root), "ls-files", "-z"],
+        capture_output=True, text=True, check=False,
+    )
+    if tracked.returncode:
+        errors.append("cannot verify tracked Python caches: git ls-files failed")
+    elif any("__pycache__" in Path(name).parts or name.endswith(".pyc")
+             for name in tracked.stdout.split("\0") if name):
+        errors.append("generated Python caches are tracked")
 
     listed = subprocess.run(
         ["bash", str(root / "scripts" / "list-skills.sh")],

@@ -184,7 +184,7 @@ def main() -> int:
         ),
         Check(
             "no skill sprawl",
-            skill_count == 51 and not (root / "skills" / "engineering" / "engineering-philosophy" / "SKILL.md").exists(),
+            skill_count == 52 and not (root / "skills" / "engineering" / "engineering-philosophy" / "SKILL.md").exists(),
             "preserving philosophy should not add a new skill",
         ),
         Check(

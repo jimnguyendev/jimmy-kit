@@ -1,14 +1,7 @@
 ---
 name: prd
-description: >
-  Produces a Product Requirements Document (PRD) grounded in JTBD outcomes.
-  Takes a JTBD analysis as input and transforms high-opportunity outcomes into
-  structured, prioritized, testable requirements. Use when the user mentions
-  PRD, product requirements, product spec, requirements document, or asks
-  what to build based on a JTBD analysis. Also triggers when the user wants
-  to define scope for an initiative, align a team on what to build, or
-  translate customer needs into product requirements. Do NOT use for technical
-  design documents, project plans, or feature specs that prescribe solutions.
+description: >-
+  Use when defining product requirements, initiative scope, acceptance criteria, or a PRD from customer needs. Not for technical design documents, project plans, or implementation prescriptions.
 version: "1.1.0"
 modes: [fix, build, architect]
 ---
@@ -17,9 +10,9 @@ modes: [fix, build, architect]
 cost-tier: sonnet
 activation: auto
 tags: [product-management, prd, requirements, specification, scope]
-inputs: [jtbd-analysis]
+inputs: [customer-evidence]
 outputs: [prd]
-requires: [jtbd]
+requires: []
 -->
 
 # Product Requirements Document
@@ -40,8 +33,8 @@ traceability table if affected. Minutes.
 
 **BUILD (light):** Light PRD (1-2 pages). Problem statement, 3-5
 requirements in job story format with acceptance criteria, success metrics,
-and out-of-scope list. Skip detailed constraints, open questions, and the
-appendix. Sufficient for well-scoped features where the team has strong
+and out-of-scope list. Omit extended tables and the appendix; retain any
+material constraints and unresolved decisions even in a light brief. Sufficient for well-scoped features where the team has strong
 shared context. 15 minutes.
 
 **ARCHITECT (full):** Full PRD (3-6 pages). All seven sections: problem
@@ -60,49 +53,55 @@ out-of-scope with rationale. 30-45 minutes.
 
 ## Prerequisites
 
-This skill requires a JTBD analysis as input. If no JTBD analysis exists:
-1. Check if a JTBD analysis file exists (`.jimmy/docs/jtbd-analysis.md`)
-2. If not, recommend running the `jtbd` skill first
-3. If the user insists on proceeding without JTBD, produce a brief but label
-   every requirement as "ungrounded — no JTBD source" and flag this in the
-   deliverable header
+Use an existing JTBD analysis when available (for example
+`.jimmy/docs/jtbd-analysis.md`), or customer needs and evidence already supplied
+in the conversation or project artifacts. A formal JTBD file is not required.
+Trace each requirement to its actual source and preserve its evidence status.
+
+When evidence is incomplete, produce a light or partial brief with hypotheses
+and decision-critical gaps marked inline. Recommend focused discovery for
+unsupported needs; do not invent research, baselines, scores, or targets.
+Carry accepted scope and decisions forward without asking for them again.
 
 ## Process
 
 ### Step 0: Locate JTBD Input
 
-Find the JTBD analysis that this PRD will be grounded in. Confirm with the
-user:
+Locate the JTBD analysis or supplied customer evidence. Reuse known context:
 - Which JTBD outcomes to focus on (usually the top 2-3 by opportunity score)
 - Which user segment to target (if the JTBD identified multiple)
 - What scope level is appropriate (light PRD for BUILD, full PRD for ARCHITECT)
 
-If the user provides all of this upfront, proceed. If not, ask in ONE message.
+Proceed with supplied scope and evidence. Ask in one message only for missing
+facts that materially affect the requested decision; label other gaps and
+continue. A targeted update does not require repeating the full workflow.
+Read reference sections when the affected work needs their detailed method;
+use the guidance here for straightforward light briefs.
 
 ### Step 1: Frame the Problem
 
-**Read first:** `references/prd-methodology.md` (Problem Statement section)
+**For detailed framing guidance:** `references/prd-methodology.md` (Problem Statement section)
 
-Write the problem statement using ONLY information from the JTBD analysis:
+Write the problem statement using the JTBD analysis or supplied customer evidence:
 - Job performer → who is affected
 - Main job statement → what they're trying to accomplish
 - Top pains (with evidence) → why current solutions fail
 - Highest-opportunity outcomes → what the opportunity is
 
-Every claim must cite its source (JTBD outcome #, survey data, interview
-quote). If the JTBD analysis is labeled "hypothesized," carry that label
+Every claim must cite its source (JTBD outcome #, supplied brief, survey data,
+interview quote) or be explicitly labeled as an assumption. If the JTBD analysis is labeled "hypothesized," carry that label
 forward.
 
 ### Step 2: Define Goals and Success Metrics
 
-**Read first:** `references/prd-methodology.md` (Goals and Success Metrics)
+**For detailed metric guidance:** `references/prd-methodology.md` (Goals and Success Metrics)
 
 Derive the primary goal from the main job statement. Derive success metrics
 from the desired outcome statements:
 
 - Each high-opportunity outcome (≥12) becomes a candidate success metric
 - Translate the outcome's "direction + measure" into a measurable metric
-- Establish baseline (from JTBD data or current analytics) and target
+- Establish baseline (from supplied evidence or current analytics) and an agreed target; mark unknowns as TBD
 - Specify measurement method
 
 Write non-goals explicitly. Ask: "What might someone expect this initiative
@@ -110,7 +109,7 @@ to do that it will NOT do?" Non-goals prevent scope creep.
 
 ### Step 3: Write Requirements
 
-**Read first:** `references/requirements-writing.md` (all sections)
+**For detailed requirement guidance:** read the relevant sections of `references/requirements-writing.md`.
 
 Requirements are written for TWO audiences: humans (PMs, designers,
 stakeholders who read the brief to understand what we're building and why)
@@ -174,7 +173,7 @@ single requirement's acceptance scenarios.
 
 #### Requirements Overview Table
 
-Build the overview table linking each requirement to its JTBD source,
+Build the overview table linking each requirement to its customer-evidence source,
 priority, and whether it delivers value independently. This is the
 quick-scan summary for stakeholders who don't read every requirement.
 
@@ -200,11 +199,11 @@ requirement that contains the ambiguity.
 
 ### Step 5: Quality Check
 
-**Read first:** `references/requirements-writing.md` (Quality Checklist)
+**For a full brief or substantial requirements change:** consult `references/requirements-writing.md` (Quality Checklist).
 
 Before presenting the brief, validate:
 
-- [ ] Every requirement traces to a JTBD outcome or documented pain
+- [ ] Every requirement traces to a JTBD outcome, documented customer need, or explicitly labeled hypothesis
 - [ ] Every requirement leads with a job story (customer perspective, not system perspective)
 - [ ] Every requirement has a "Why this priority" justification with evidence
 - [ ] Every requirement states whether it delivers value independently
@@ -240,10 +239,10 @@ to refine any section?"
 ## Rules
 
 **MUST:**
-- MUST read `references/prd-methodology.md` before writing any PRD
-- MUST have a JTBD analysis as input — requirements without job-grounding
-  produce feature lists, not product requirements
-- MUST trace every requirement back to a JTBD outcome or documented pain —
+- Read the relevant reference sections when their detailed method is needed
+- MUST ground requirements in customer needs; use supplied evidence or label
+  hypotheses when a formal JTBD analysis is unavailable
+- MUST trace every requirement back to a customer need and its evidence status —
   ungrounded requirements are the primary failure mode
 - MUST write acceptance criteria that are measurable — "the insight is
   helpful" is not a criterion; "≥60% of test users rate the insight as
@@ -270,13 +269,13 @@ to refine any section?"
 
 ## Failure Modes
 
-- **No JTBD input available:** Don't produce an ungrounded PRD. Recommend
-  running the `jtbd` skill first. If the user insists, proceed but label
-  every requirement as "ungrounded" and flag this prominently.
+- **No JTBD artifact available:** Use supplied customer evidence. If evidence
+  is missing, produce a partial brief with hypotheses and focused discovery
+  questions; do not treat an absent file as absent customer knowledge.
 
-- **JTBD analysis has no high-opportunity outcomes:** The JTBD either
-  didn't find significant unmet needs (rare) or didn't apply opportunity
-  scoring. Ask the user to apply scoring to the outcomes before proceeding.
+- **No scored outcomes:** Prioritize using supplied evidence, dependencies,
+  and agreed scope; mark prioritization provisional. Request scoring only
+  when the choice depends on it, and do not manufacture opportunity scores.
 
 - **Requirements drift into solution space:** The most common failure mode
   during writing. Check: does the requirement mention any specific UI
