@@ -87,14 +87,73 @@ Typical invocations (any tool; skills trigger on the situation, you can also nam
 - "Independent review of this spec" → `independent-review` (runs in a fresh agent, read-only)
 - "Which skill should I use?" → `routing`
 
-## 5. Conventions you will see inside skills
+## 5. Prove changes on the running app (`verify-app`)
+
+`verify-app` (group `engineer`) builds a verify skill inside your repo. After that, any agent can start the real service, drive it, read back the database, cache and logs, keep the evidence and clean up, without asking you to run anything. The walkthrough below comes from the run recorded in `skills/engineering/verify-app/SCENARIO.md` on a Go HTTP service (Gin, PostgreSQL, Redis, one CRUD feature).
+
+### Create it once per repo
+
+Install `core` and `engineer` (plus `golang` and `database` for a Go service), append the eager dispatcher to the repo's `AGENTS.md` (section 3), then ask in plain words:
+
+```text
+Every time an agent changes this service, I have to start it myself, call the endpoints,
+check the database and paste the output back. I want agents to be able to prove a change
+actually works on the running service by themselves. Set that up and run it once.
+```
+
+The agent reads the repo first (run commands, pinned image versions, migrations, env), asks only for what the code cannot answer (sandbox credentials, test accounts), and produces:
+
+| Path | What it is |
+|---|---|
+| `<skills dir>/verify-<app>/SKILL.md` | Launch, Doctor, Drive, Evidence, Cleanup, Helpers for this repo |
+| `<skills dir>/verify-<app>/scripts/verify.sh` | one script with `up`, `doctor`, `call`, `last`, `sql`, `redis`, `logs`, `down` |
+| `<skills dir>/verify-<app>/features/` | one recipe per user-visible feature; `README.md` indexes them |
+| `<skills dir>/verify-<app>/scripts/check_feature_map.py` | validates the recipes |
+| `.jimmy/work/verify-<app>/evidence/<run-id>/` | numbered evidence files from each run (or the repo's mapped work folder) |
+
+`<skills dir>` is the folder the repo's agents already load (`.agents/skills/`, `.claude/skills/`, …). In the recorded run it also added a symlink so Claude Code loads the skill, one routing row in `AGENTS.md`, and finished a full launch → doctor → drive → cleanup pass with 48 evidence files left in place.
+
+### Daily loop for an agent (or you)
+
+```bash
+V=<skills dir>/verify-<app>/scripts/verify.sh
+RUN_ID=$(date +%Y%m%d-%H%M%S)
+
+$V up $RUN_ID            # build the working tree, start per-run DB/cache containers, migrate, wait for /health
+$V doctor $RUN_ID        # read-only; compares versions, migration head, build hash, port owner. FAIL = do not drive
+$V call $RUN_ID create POST /api/v1/examples '{"name":"first"}'
+ID=$($V last $RUN_ID .data.id)
+$V sql   $RUN_ID row-after-create "select id, name from examples where id = '$ID'"
+$V redis $RUN_ID cache-after-get EXISTS "verify-${RUN_ID}:example:$ID"
+$V logs  $RUN_ID event-created "example created.*id=$ID"   # bounded poll, never a sleep
+$V down $RUN_ID          # stops only this run's process and containers; evidence stays
+```
+
+Follow the feature file your change touches instead of improvising: each step names the command and the observable result, and each sub-feature is either driven or marked `Skipped: \`id\` — reason`. Report the evidence path, not a summary.
+
+### What the run caught
+
+- Three real service defects, reported and left for a separate change: a non-UUID path ID returned 500, a documented `per_page` parameter was ignored, timestamps came back in the host zone instead of the configured one.
+- A defect in its own recipes: in zsh, `verify-$RUN_ID:example` expands `$RUN_ID:e` as a modifier. Recipes now write `${RUN_ID}`. Keep that form when you add steps.
+
+### Keep it honest
+
+- Doctor fails on `build` after you edit code: the binary is stale. Run `down`, then `up` with a new run ID.
+- When a feature is added or its routes change, update `features/` in the same change and drive the new steps once; run `check_feature_map.py`.
+- Every few weeks, or when recipes start failing for reasons outside your change, ask the agent to "audit the verify skill" (Maintain mode): it re-reads source per feature, drives every feature live, and ships one change set limited to the verify skill.
+
+### Services with store webhooks or async pipelines
+
+For a service that receives signed provider notifications and publishes through an outbox (for example a subscription service), Create mode also writes recipes from `skills/engineering/verify-app/references/service-recipes.md`: genuine sandbox events versus replayed captured payloads, a fresh push token through the run's own subscription, recorded provider API responses, ordered checks from row to outbox to message to read model, an injected clock for expiry and grace, and duplicate, out-of-order, crash-after-publish and reconciliation cases. Have sandbox credentials and a few captured notifications ready before asking; Doctor reports "incomplete coverage" without them.
+
+## 6. Conventions you will see inside skills
 - `> This skill exists to stop: …` — the mistake the skill prevents; if it doesn't apply to you, you are in the wrong skill.
 - `## 🤖 0. HOW TO USE` — modes (audit / write / plan …) and the exact output format.
 - Claim labels `[VERIFIED]` · `[ASSUMPTION]` · `[GUESS]`; exit codes 0 / 1 / 2 (pass / fail / unverifiable).
 - `[sage]` marks optional deeper reading in the public upstream repo; skills carry no internal-doc links and run fully on their own.
 - Shared vocabulary: `CONTEXT.md`.
 
-## 6. Keep it healthy
+## 7. Keep it healthy
 - Upgrading: `git pull` (Option A) or bump the submodule (Option B). Read `docs/DECISIONS.md` first if a skill moved or was renamed.
 - Adding or changing a skill: write `SCENARIO.md` before the skill, run it with a fresh agent, paste the result (see `skills/product/product-council/SCENARIO.md` for the shape).
 - Before publishing a change, run the review checklist in `AGENTS.md`.

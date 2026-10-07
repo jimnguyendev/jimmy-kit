@@ -53,7 +53,7 @@ python3 scripts/kit.py groups                  # list groups and counts
 ```
 Pair `core` with any other group: it carries the routing and gates the other groups hand off to. A backend Go service typically wants `core,engineer,golang,database`.
 
-Full guide (Claude Code / Codex / Cursor, global vs per-repo, where outputs go, how to start a session): **`docs/USAGE.md`**.
+Full guide (Claude Code / Codex / Cursor, global vs per-repo, where outputs go, how to start a session, how to make agents prove changes on the running app with `verify-app`): **`docs/USAGE.md`**.
 
 Run `scripts/link-skills.sh` to symlink all 94 skills into `~/.claude/skills` (or pass a target dir and `--group`), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Skills write their outputs to `.jimmy/` in the repo they are installed in (`work/<feature>/`, `docs/`, `decisions.md`, `adr/NNNN-slug.md`, `constitution.md`) — add it to `.gitignore` if you don't want it tracked. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
 
