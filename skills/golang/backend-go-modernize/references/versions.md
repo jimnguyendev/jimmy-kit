@@ -33,7 +33,7 @@ clear(m)
 
 ### Use `log/slog` instead of third-party loggers _(Go 1.21+)_
 
-`log/slog` is the standard structured logging package. New code SHOULD migrate to `slog` over `zap`, `logrus`, or `zerolog`.
+`log/slog` is the standard structured logging package. New code SHOULD migrate to `slog` over `zap`, `logrus`, or `zerolog` — unless the repo already standardizes on a team logging package (for example a vendored `pkg/log` with a ctx-first interface, chosen by ADR). Then keep that package and do not introduce slog beside it.
 
 ```go
 // Before: zap

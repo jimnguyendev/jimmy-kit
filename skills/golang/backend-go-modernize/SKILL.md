@@ -134,7 +134,7 @@ When modernizing a codebase, prioritize changes by impact:
 
 ### Lower priority (gradual improvement)
 
-16. Migrate to `slog` from third-party loggers _(Go 1.21+)_
+16. Migrate to `slog` from third-party loggers _(Go 1.21+)_ — skip when the repo has a team logging package (for example a vendored `pkg/log` adopted by ADR); converging on that package is the goal, not slog
 17. Adopt iterators where they simplify code _(Go 1.23+)_
 18. Replace `sort.Slice` with `slices.SortFunc` _(Go 1.21+)_ — linter-assisted; the `sort.Strings` family is item 10 and needs a manual grep
 19. Use `strings.SplitSeq` and iterator variants _(Go 1.24+)_

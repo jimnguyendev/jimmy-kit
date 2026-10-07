@@ -168,9 +168,9 @@ At the boundary, extract the structured fields once and log them with the struct
 if err := createOrder(ctx, orderID); err != nil {
     var orderErr *OrderError
     if errors.As(err, &orderErr) {
-        h.logger.ErrorContext(ctx, "create order failed", "err", err, "order_id", orderErr.OrderID)
+        h.logger.Error(ctx, "create order failed", "err", err, "order_id", orderErr.OrderID)
     } else {
-        h.logger.ErrorContext(ctx, "create order failed", "err", err)
+        h.logger.Error(ctx, "create order failed", "err", err)
     }
 }
 ```
