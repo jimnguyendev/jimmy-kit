@@ -7,7 +7,8 @@ role-routing plugin to this repository's durable `.orchestrate/` packet process.
 
 1. Verify `codex plugin list --json` contains an enabled
    `codex-orchestration@codex-orchestration` at a version supported by its own instructions
-   (Planner routing requires 0.5.1 or newer).
+   (Planner routing requires 0.5.1 or newer). If it is missing, install it from the fork:
+   `codex plugin marketplace add jimnguyendev/Codex-Orchestration`.
 2. Installation/update is loaded only by a **new Codex task**. Do not claim the current task
    gained plugin skills after installation.
 3. Run `/codex-orchestration status --require-effective` in the new task before dispatch.
@@ -95,4 +96,7 @@ Keep the five verdict dimensions (implementation, evidence, runtime-parity, rele
 distinct in the packet and status board. An executor report is a handoff, never acceptance
 evidence; the root remains the verifier and release authority.
 
-Upstream behavior and setup commands: https://github.com/Cjbuilds/Codex-Orchestration
+Plugin source, behavior and setup commands: https://github.com/jimnguyendev/Codex-Orchestration
+(the fork this kit uses; its `--update` accepts only this marketplace). Original plugin by
+CJ Zafir: https://github.com/Cjbuilds/Codex-Orchestration (MIT) — credit only, never an install
+or update source.
