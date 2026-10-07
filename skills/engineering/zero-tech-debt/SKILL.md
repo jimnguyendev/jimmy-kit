@@ -16,7 +16,7 @@ user-invocable: true
 
 Output: a smaller accepted structure with verified external behavior unchanged and a compatibility/deletion ledger.
 
-> 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate pack, **not bundled** in this kit. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
+> 🧩 **Go group:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) ship in this kit's `golang` group. Install that group to load them; where they are absent, apply the project's own Go conventions instead.
 
 Make the scoped area look as though the intended product and architecture had existed from day one, while preserving every verified external contract.
 

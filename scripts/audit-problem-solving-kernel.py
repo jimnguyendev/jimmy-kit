@@ -55,8 +55,8 @@ def main() -> int:
             design_dir / "references" / "skill-routing.md",
             design_dir / "scripts" / "validate_routing.py",
             design_dir / "evals" / "evals.json",
-            root / "skills" / "engineering" / "tdd-go" / "SKILL.md",
-            root / "skills" / "engineering" / "tdd-go" / "evals" / "evals.json",
+            root / "skills" / "golang" / "tdd-go" / "SKILL.md",
+            root / "skills" / "golang" / "tdd-go" / "evals" / "evals.json",
             root / "skills" / "engineering" / "zero-tech-debt" / "SKILL.md",
             root / "skills" / "engineering" / "zero-tech-debt" / "evals" / "evals.json",
             root / "skills" / "engineering" / "improve-codebase-architecture" / "SKILL.md",
@@ -72,7 +72,7 @@ def main() -> int:
         ),
         Check(
             "inventory AGENTS",
-            f"({actual_count} skills, 7 categories)" in agents,
+            f"({actual_count} skills, 8 groups)" in agents,
             f"AGENTS should state the current {actual_count}-skill inventory",
         ),
         Check(
@@ -184,7 +184,7 @@ def main() -> int:
         Check(
             "routing links on all owners",
             all(
-                "skill-routing.md" in (root / "skills" / "engineering" / skill / "SKILL.md").read_text()
+                "skill-routing.md" in (next((root / "skills").glob(f"*/{skill}")) / "SKILL.md").read_text()
                 for skill in (
                     "engineering-design-thinking",
                     "improve-codebase-architecture",
@@ -197,7 +197,7 @@ def main() -> int:
         Check(
             "scenario-first coverage",
             all(
-                (root / "skills" / "engineering" / skill / "SCENARIO.md").is_file()
+                (next((root / "skills").glob(f"*/{skill}")) / "SCENARIO.md").is_file()
                 for skill in (
                     "engineering-design-thinking",
                     "improve-codebase-architecture",

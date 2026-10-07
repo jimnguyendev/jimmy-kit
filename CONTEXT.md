@@ -8,6 +8,10 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Failure statement**: the one-line opener `> **This skill exists to stop:** …` — the agent mistake the skill prevents. A skill that can't state one shouldn't exist.
 
+**Group**: an installable set of skills defined in `groups.json` (core, engineer, golang, database, product, ux, analytics, utilities). Each skill folder sits in exactly one group; a group maps to one plugin and one `--group` value. _Avoid:_ pack, bundle.
+
+**Vendored skill**: a third-party skill kept verbatim with its upstream LICENSE/NOTICE and source commit in `groups.json`. Refreshed by re-copying, never edited in place; kit conventions do not apply to it.
+
 **Exit 0 / 1 / 2**: verification states — pass with evidence / fail with evidence / **unverifiable**. Exit 2 is never a pass; "spec'd" is not "done". Owned by `quality-gates`.
 
 **Claim labels**: `[VERIFIED]` (source + date + scope + still true) · `[ASSUMPTION]` (openly unproven, with a plan to check) · `[GUESS]` (unproven and dressed as fact — the dangerous one). Owned by `analyst`.

@@ -1,0 +1,103 @@
+{
+  "groups": {
+    "core": {
+      "description": "Routing, change tiers, quality gates, decisions, independent review, retrospectives, plus session tools (grilling, handoff, orchestrate, write-a-skill, zoom-out).",
+      "dirs": [
+        "skills/process",
+        "skills/productivity"
+      ]
+    },
+    "engineer": {
+      "description": "Stack-agnostic engineering: design thinking, domain modeling, codebase design, diagnose, triage, prototype, REST API design, performance process, reality-gate, backend-core, kafka-patterns.",
+      "dirs": [
+        "skills/engineering"
+      ]
+    },
+    "golang": {
+      "description": "Go implementation: tdd-go, capture-knowledge-go and the backend-go-* pack (testing, concurrency, errors, context, observability, performance, security, linting, project layout).",
+      "dirs": [
+        "skills/golang"
+      ]
+    },
+    "database": {
+      "description": "MySQL, PostgreSQL, MongoDB and ClickHouse: schema design, indexing, query tuning, connections, local ClickHouse, plus Go database access.",
+      "dirs": [
+        "skills/database"
+      ]
+    },
+    "product": {
+      "description": "Product discovery and strategy: JTBD, opportunity map, PRD, problem solving, OKRs, product council, growth loops, subscription paywall, GTM, vision, strategy.",
+      "dirs": [
+        "skills/product"
+      ]
+    },
+    "ux": {
+      "description": "UX brief, discovery, design, plan, review, specify, writing, CRO audit.",
+      "dirs": [
+        "skills/ux"
+      ]
+    },
+    "analytics": {
+      "description": "Tracking architecture, retention Markov model, engagement matrix, RFM segmentation.",
+      "dirs": [
+        "skills/analytics"
+      ]
+    },
+    "utilities": {
+      "description": "YouTube and Facebook transcripts.",
+      "dirs": [
+        "skills/utilities"
+      ]
+    }
+  },
+  "vendored": {
+    "skills/database/mysql": {
+      "upstream": "https://github.com/planetscale/database-skills",
+      "commit": "73b20b7",
+      "license": "MIT"
+    },
+    "skills/database/postgres": {
+      "upstream": "https://github.com/planetscale/database-skills",
+      "commit": "73b20b7",
+      "license": "MIT"
+    },
+    "skills/database/clickhouse-best-practices": {
+      "upstream": "https://github.com/ClickHouse/agent-skills",
+      "commit": "356a8c1",
+      "license": "Apache-2.0",
+      "notice": true
+    },
+    "skills/database/clickhouse-architecture-advisor": {
+      "upstream": "https://github.com/ClickHouse/agent-skills",
+      "commit": "356a8c1",
+      "license": "Apache-2.0",
+      "notice": true
+    },
+    "skills/database/infra-clickhouse": {
+      "upstream": "https://github.com/ClickHouse/agent-skills",
+      "commit": "356a8c1",
+      "license": "Apache-2.0",
+      "notice": true
+    },
+    "skills/database/mongodb-connection": {
+      "upstream": "https://github.com/mongodb/agent-skills",
+      "commit": "18b014e",
+      "license": "Apache-2.0"
+    },
+    "skills/database/mongodb-schema-design": {
+      "upstream": "https://github.com/mongodb/agent-skills",
+      "commit": "18b014e",
+      "license": "Apache-2.0"
+    },
+    "skills/database/mongodb-query-optimizer": {
+      "upstream": "https://github.com/mongodb/agent-skills",
+      "commit": "18b014e",
+      "license": "Apache-2.0"
+    },
+    "skills/database/mongodb-natural-language-querying": {
+      "upstream": "https://github.com/mongodb/agent-skills",
+      "commit": "18b014e",
+      "license": "Apache-2.0"
+    }
+  }
+}

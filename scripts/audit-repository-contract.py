@@ -20,18 +20,33 @@ except ImportError:  # pragma: no cover - reported as an audit finding below
 
 SOURCE_SUFFIXES = {".md", ".py", ".js", ".sql", ".ts"}
 TRIGGER_PHRASES = ("use when", "use for", "use after", "activate when")
+# Letters that occur in Vietnamese but not in other Latin-script languages, so names such as
+# "José" or "Tomás" in code samples do not trip the check.
 VIETNAMESE = re.compile(
-    r"[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡ"
-    r"ùúụủũưừứựửữỳýỵỷỹđÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨ"
-    r"ÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]"
+    r"[ạảấầẩẫậăắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộơớờởỡợụủưứừửữựỳỵỷỹđ"
+    r"ẠẢẤẦẨẪẬĂẮẰẲẴẶẸẺẼẾỀỂỄỆỈỊỌỎỐỒỔỖỘƠỚỜỞỠỢỤỦƯỨỪỬỮỰỲỴỶỸĐ]"
 )
 ASCII_VIETNAMESE = re.compile(
     r"\b(?:khong|duoc|nguon|chay|phien ban|tai ve)\b", re.IGNORECASE
 )
 RUNTIME_REFERENCE = re.compile(
-    r"sage/|\.sage/|sage-[a-z-]+\.(?:sh|py)|/sage-|sage add|delegate_task|Hermes"
+    r"(?<![a-z-])sage/|\.sage/|sage-[a-z-]+\.(?:sh|py)|/sage-|sage add|delegate_task|Hermes"
 )
 LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
+# A skill whose deliverable is the target project's own docs/ tree, not a skill output.
+DOCS_PATH_ALLOWED = ("skills/golang/backend-go-documentation/",)
+
+
+def load_catalog(root: Path) -> tuple[int, set[Path]]:
+    """Total skill count and vendored skill dirs, both from groups.json."""
+    catalog = json.loads((root / "groups.json").read_text(encoding="utf-8"))
+    total = sum(len(list((root / d).glob("*/SKILL.md")))
+                for g in catalog["groups"].values() for d in g["dirs"])
+    return total, {(root / rel).resolve() for rel in catalog.get("vendored", {})}
+
+
+def vendored_skill(path: Path, vendored: set[Path]) -> bool:
+    return any(path.resolve().is_relative_to(v) for v in vendored)
 
 
 def outside_fences(text: str) -> str:
@@ -57,9 +72,16 @@ def main() -> int:
     skill_root = root / "skills"
     errors: list[str] = []
     skill_files = sorted(skill_root.glob("*/*/SKILL.md"))
+    expected, vendored = load_catalog(root)
+    catalog_check = subprocess.run(
+        [sys.executable, str(root / "scripts" / "kit.py"), "check"],
+        capture_output=True, text=True, check=False,
+    )
+    if catalog_check.returncode:
+        errors.append("catalog: scripts/kit.py check failed: " + catalog_check.stdout.strip())
 
-    if len(skill_files) != 52:
-        errors.append(f"inventory: expected 52 skills, found {len(skill_files)}")
+    if len(skill_files) != expected:
+        errors.append(f"inventory: groups.json expects {expected} skills, found {len(skill_files)}")
 
     for path in skill_files:
         text = path.read_text(encoding="utf-8")
@@ -81,7 +103,7 @@ def main() -> int:
         if metadata.get("name") != path.parent.name:
             errors.append(f"{path}: frontmatter name does not match directory")
         description = str(metadata.get("description", "")).lower()
-        if not any(phrase in description for phrase in TRIGGER_PHRASES):
+        if not vendored_skill(path, vendored) and not any(phrase in description for phrase in TRIGGER_PHRASES):
             errors.append(f"{path}: description is not situation-triggered")
         if len(re.findall(r"^# ", outside_fences(text), re.MULTILINE)) != 1:
             errors.append(f"{path}: expected exactly one H1 outside code fences")
@@ -95,6 +117,8 @@ def main() -> int:
             errors.append(f"{path}: invalid JSON: {exc}")
 
     for path in skill_root.rglob("*.md"):
+        if vendored_skill(path, vendored):
+            continue  # upstream content is kept verbatim; its links are upstream's to fix
         text = outside_fences(path.read_text(encoding="utf-8"))
         for raw_target in LINK.findall(text):
             target = raw_target.strip()
@@ -113,12 +137,15 @@ def main() -> int:
         if not path.is_file() or path.suffix not in SOURCE_SUFFIXES:
             continue
         text = path.read_text(encoding="utf-8")
+        if vendored_skill(path, vendored):
+            continue
         if VIETNAMESE.search(text) or ASCII_VIETNAMESE.search(text):
             errors.append(f"{path}: Vietnamese text remains in runnable skill sources")
         for line in text.splitlines():
             if RUNTIME_REFERENCE.search(line):
                 runtime_hits.append((path.relative_to(root), line.strip()))
-        if path.name != "SCENARIO.md":
+        relative_posix = path.relative_to(root).as_posix()
+        if path.name != "SCENARIO.md" and not relative_posix.startswith(DOCS_PATH_ALLOWED):
             for line_number, line in enumerate(text.splitlines(), 1):
                 scrubbed = re.sub(r"https?://\S+", "", line)
                 scrubbed = scrubbed.replace(".jimmy/docs/", "")
@@ -182,8 +209,8 @@ def main() -> int:
         text=True,
         check=False,
     )
-    if listed.returncode or len(listed.stdout.splitlines()) != 52:
-        errors.append("inventory smoke: list-skills.sh did not return 52 skills")
+    if listed.returncode or len(listed.stdout.splitlines()) != expected:
+        errors.append(f"inventory smoke: list-skills.sh did not return {expected} skills")
     with tempfile.TemporaryDirectory(prefix="jimmy-kit-links-") as destination:
         linked = subprocess.run(
             ["bash", str(root / "scripts" / "link-skills.sh"), destination],
@@ -193,8 +220,8 @@ def main() -> int:
             check=False,
         )
         entries = list(Path(destination).iterdir())
-        if linked.returncode or len(entries) != 52 or not all(path.is_symlink() for path in entries):
-            errors.append("link smoke: link-skills.sh did not create 52 isolated symlinks")
+        if linked.returncode or len(entries) != expected or not all(path.is_symlink() for path in entries):
+            errors.append(f"link smoke: link-skills.sh did not create {expected} isolated symlinks")
 
     if errors:
         for error in errors:
@@ -204,7 +231,8 @@ def main() -> int:
 
     print(
         "repository-contract-audit: PASS "
-        "(52 skills; metadata, links, language, paths, runtime references, syntax, inventory/link smoke)"
+        f"({expected} skills, {len(vendored)} vendored; catalog, metadata, links, language, paths, "
+        "runtime references, syntax, inventory/link smoke)"
     )
     return 0
 

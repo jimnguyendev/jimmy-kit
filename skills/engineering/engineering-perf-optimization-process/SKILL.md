@@ -79,7 +79,7 @@ Optimizing a cold path that handles 2% of traffic while the hot path is untouche
 
 **If you have not profiled, STOP. Measure the suspected bottleneck before treating it as established.**
 
-Go-specific profiling methodology (pprof, benchstat) belongs to a separate Go skill pack, not bundled here; the process below is language-agnostic.
+Go-specific profiling methodology (pprof, benchstat) lives in `backend-go-benchmark` and `backend-go-performance` (the kit's `golang` group); the process below is language-agnostic.
 
 ### Gate 4: What is the simplest sufficient solution?
 
