@@ -8,7 +8,7 @@
       ]
     },
     "engineer": {
-      "description": "Stack-agnostic engineering: design thinking, domain modeling, codebase design, diagnose, triage, prototype, REST API design, performance process, reality-gate, backend-core, kafka-patterns.",
+      "description": "Stack-agnostic engineering: verify-app, design thinking, domain modeling, codebase design, diagnose, triage, prototype, REST API design, performance process, reality-gate, backend-core, kafka-patterns.",
       "dirs": [
         "skills/engineering"
       ]

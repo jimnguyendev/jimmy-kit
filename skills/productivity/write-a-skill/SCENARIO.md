@@ -12,3 +12,10 @@
 
 **Expected:** Keep a precise trigger and proportionate validation, not a universal full test pipeline.
 
+## 2026-10-07 blind evaluation scenario (written BEFORE skill changes)
+
+**Status:** [EXIT 2 — specified; independent application not yet recorded for this revision].
+
+**Input 3:** Evaluate whether a changed skill improves agent behavior, comparing it with the previous version and a no-skill baseline.
+
+**Expected:** Follows `references/blind-eval.md`: the candidate workspace contains the skill without its SCENARIO.md or evals; the prompt reads like an ordinary request; expected outputs and the label-to-variant map stay with the coordinator; a judge from a different model family scores outputs by neutral label when one is available, and the limitation is recorded when not; tool use is graded from transcripts, not from the candidate's own account; the coordinator reads every output and reconciles disagreements with the judge.

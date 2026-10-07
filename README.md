@@ -1,6 +1,6 @@
 # Jimmy Kit — Product & Engineering Skills
 
-A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini): product discovery, spec discipline, quality gates, analytics, UX, engineering workflows, Go, and databases (MySQL, PostgreSQL, MongoDB, ClickHouse). 93 skills across 8 installable groups, organized around one operating loop:
+A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini): product discovery, spec discipline, quality gates, analytics, UX, engineering workflows, Go, and databases (MySQL, PostgreSQL, MongoDB, ClickHouse). 94 skills across 8 installable groups, organized around one operating loop:
 
 **UNDERSTAND → ENVISION → DELIVER → REFLECT**, as a maximal map rather than a mandatory pipeline. Ceremony scales with risk: Tier 1 may use no skill, Tier 2 normally uses one or two, and Tier 3 uses the full 7-question intake plus `product-council`. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. See `docs/OPERATING-WORKFLOW.md`.
 
@@ -29,7 +29,7 @@ Install everything, or only the groups you need. Groups are defined once in `gro
 | Group | Skills | What it covers |
 |---|---|---|
 | `core` | 16 | routing, change tiers, quality gates, decisions, review, retrospective, grilling, handoff, orchestrate, write-a-skill |
-| `engineer` | 13 | design thinking, domain modeling, codebase design, diagnose, triage, REST API design, perf process, reality-gate, backend-core, kafka-patterns |
+| `engineer` | 14 | verify-app, design thinking, domain modeling, codebase design, diagnose, triage, REST API design, perf process, reality-gate, backend-core, kafka-patterns |
 | `golang` | 29 | tdd-go, capture-knowledge-go, the `backend-go-*` pack |
 | `database` | 10 | MySQL, PostgreSQL, MongoDB, ClickHouse, Go database access |
 | `product` | 11 | JTBD, PRD, OKRs, product council, growth loops, paywall, GTM, vision, strategy |
@@ -55,7 +55,7 @@ Pair `core` with any other group: it carries the routing and gates the other gro
 
 Full guide (Claude Code / Codex / Cursor, global vs per-repo, where outputs go, how to start a session): **`docs/USAGE.md`**.
 
-Run `scripts/link-skills.sh` to symlink all 93 skills into `~/.claude/skills` (or pass a target dir and `--group`), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Skills write their outputs to `.jimmy/` in the repo they are installed in (`work/<feature>/`, `docs/`, `decisions.md`, `adr/NNNN-slug.md`, `constitution.md`) — add it to `.gitignore` if you don't want it tracked. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
+Run `scripts/link-skills.sh` to symlink all 94 skills into `~/.claude/skills` (or pass a target dir and `--group`), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Skills write their outputs to `.jimmy/` in the repo they are installed in (`work/<feature>/`, `docs/`, `decisions.md`, `adr/NNNN-slug.md`, `constitution.md`) — add it to `.gitignore` if you don't want it tracked. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
 
 ## Categories
 | Folder | What's inside |
@@ -64,7 +64,7 @@ Run `scripts/link-skills.sh` to symlink all 93 skills into `~/.claude/skills` (o
 | `skills/ux/` | ux-brief · ux-design · ux-discovery · ux-plan-tasks · ux-review · ux-specify · ux-writing · ux-cro-audit |
 | `skills/process/` | analyst · architect · constitution · decision-log · quality-gates · change-tiers · independent-review · retrospective · routing |
 | `skills/analytics/` | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation |
-| `skills/engineering/` | domain-modeling · codebase-design · improve-codebase-architecture · zero-tech-debt · diagnose · prototype · triage · engineering-design-thinking · engineering-perf-optimization-process · engineering-rest-api-design · reality-gate · backend-core · kafka-patterns |
+| `skills/engineering/` | domain-modeling · codebase-design · improve-codebase-architecture · zero-tech-debt · diagnose · prototype · triage · engineering-design-thinking · engineering-perf-optimization-process · engineering-rest-api-design · reality-gate · verify-app · backend-core · kafka-patterns |
 | `skills/golang/` | tdd-go · capture-knowledge-go · 27 `backend-go-*` skills (testing, testify, concurrency, context, errors, observability, performance, benchmark, safety, security, linter, naming, code style, project layout, design patterns, structs/interfaces, data structures, dependency management, modernize, documentation, CI, gRPC, CLI, popular libraries, samber/hot, stay updated, troubleshooting) |
 | `skills/database/` | backend-go-database · mysql · postgres · clickhouse-best-practices · clickhouse-architecture-advisor · infra-clickhouse · mongodb-connection · mongodb-schema-design · mongodb-query-optimizer · mongodb-natural-language-querying |
 | `skills/productivity/` | zoom-out · handoff · write-a-skill · grilling · grill-with-docs · grill-me · orchestrate |
@@ -75,6 +75,7 @@ Run `scripts/link-skills.sh` to symlink all 93 skills into `~/.claude/skills` (o
 - **sage-product pack** — github.com/xoai/sage-product: jtbd, prd, opportunity-map, problem-solving, ux-brief/design/discovery/plan-tasks/review/specify/writing (close to upstream; same K5 substitutions).
 - **Matt Pocock skills** — github.com/yykui/mattpocockSkills: zoom-out, handoff, write-a-skill, grill-me, grilling, grill-with-docs, diagnose, prototype, triage, orchestrate.
 - Internal lecture series (growth loops, subscription strategy, GTM, product vision, product strategy, retention analytics, RFM) — distilled into growth-loops, subscription-paywall, go-to-market, product-vision, product-strategy and the analytics skills; lecture notes themselves are not bundled.
+- **pstack** — [cursor/plugins/pstack](https://github.com/cursor/plugins/tree/main/pstack) by Lauren Tan (MIT): ideas adapted, in the kit's own words, into `verify-app` (verification skill + feature map + maintenance pass), `write-a-skill`'s blind evaluation reference, `retrospective`'s mechanism ladder, and the iteration loop in `engineering-perf-optimization-process`.
 - **Go pack** (`skills/golang/`, `backend-core`, `kafka-patterns`, `backend-go-database`) — the author's own Go backend skills, originally derived from [samber/cc-skills-golang](https://github.com/samber/cc-skills-golang) (MIT) and since rewritten.
 - **Vendored database skills** (kept verbatim, each folder carries its upstream LICENSE and, where upstream ships one, NOTICE; source commit in `groups.json`): `mysql`, `postgres` from [planetscale/database-skills](https://github.com/planetscale/database-skills) (MIT); `clickhouse-best-practices`, `clickhouse-architecture-advisor`, `infra-clickhouse` from [ClickHouse/agent-skills](https://github.com/ClickHouse/agent-skills) (Apache-2.0); `mongodb-*` from [mongodb/agent-skills](https://github.com/mongodb/agent-skills) (Apache-2.0).
 - OKR handbook + stakeholder/UX field lessons: internal materials and public UX Foundation talks, anonymized; examples use a generic edtech context.
@@ -83,4 +84,4 @@ Run `scripts/link-skills.sh` to symlink all 93 skills into `~/.claude/skills` (o
 `[sage]` = upstream Sage repo (public, optional deeper reading). Skills are self-contained: no internal-doc links inside skills; provenance lives here in README. Every self-authored skill opens with a one-line failure statement ("this skill exists to stop: …") and a HOW-TO-USE section with modes and output formats. Decision history: `docs/DECISIONS.md`.
 
 ## License
-MIT — see `LICENSE`. Upstream material (Sage, sage-product, mattpocockSkills, samber/cc-skills-golang) keeps its original MIT-style attribution. Vendored database skills keep their own licenses (MIT or Apache-2.0) in their folders.
+MIT — see `LICENSE`. Upstream material (Sage, sage-product, mattpocockSkills, samber/cc-skills-golang, pstack) keeps its original MIT-style attribution. Vendored database skills keep their own licenses (MIT or Apache-2.0) in their folders.

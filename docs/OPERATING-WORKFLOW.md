@@ -1,4 +1,4 @@
-# Operating Workflow — how the 93 skills fit together
+# Operating Workflow — how the 94 skills fit together
 
 Three layers. The spine is Sage's intent spectrum (UNDERSTAND → ENVISION → DELIVER → REFLECT); this kit extends it with an intake thinking layer and a red-team gate.
 
@@ -50,7 +50,7 @@ Run `product-council` as part of the full Tier 3 flow. By default, Tier 1 and al
 
 11. **"How do we grow this?" / ad budget proposed** → go-to-market (retention gate first) → growth-loops (does a loop close?) → only then acquisition.
 12. **"Lock more features to convert free users"** → subscription-paywall (hero-feature check, reverse trial, revenue-tree lever) → single-variable A/B.
-13. **"Tests are green but QA on the real database / UI keeps failing"** → reality-gate audit (`scripts/audit.sh --probe`; map bugs to the eight mechanisms; find the un-gated rule) → reality AC in every seam packet (`templates/acceptance-criteria.md`; engine parity AC-006 when a container is the evidence, cost budget AC-007 on any cost-bearing seam) → tracked replay suite → quality-gates (pasted `--- PASS`, never exit code).
+13. **"Tests are green but QA on the real database / UI keeps failing"** → reality-gate audit (`scripts/audit.sh --probe`; map bugs to the eight mechanisms; find the un-gated rule) → reality AC in every seam packet (`templates/acceptance-criteria.md`; engine parity AC-006 when a container is the evidence, cost budget AC-007 on any cost-bearing seam) → tracked replay suite → verify-app for behavior proven by driving the running app (feature map + evidence directory) → quality-gates (pasted `--- PASS`, never exit code).
 14. **Backlog ordered by loudest voice / "delete the unused feature"** → product-vision (vision sentence, questions-behind-requests, ripple check) → opportunity-map.
 15. **New product or platform proposed** → product-strategy (classify, weapon, resource law, gates, mission) → change-tiers → architect.
 

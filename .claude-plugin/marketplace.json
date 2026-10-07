@@ -1,6 +1,6 @@
 {
   "name": "jimmy-kit",
-  "description": "Jimmy Kit — 93 skills for AI agents, installable whole or by group.",
+  "description": "Jimmy Kit — 94 skills for AI agents, installable whole or by group.",
   "owner": {
     "name": "jimnguyendev",
     "url": "https://github.com/jimnguyendev/jimmy-kit"
@@ -9,7 +9,7 @@
     {
       "name": "jimmy-kit",
       "source": "./",
-      "description": "All 93 skills (every group).",
+      "description": "All 94 skills (every group).",
       "version": "0.2.0"
     },
     {
@@ -29,7 +29,7 @@
       "skills": [
         "./"
       ],
-      "description": "Stack-agnostic engineering: design thinking, domain modeling, codebase design, diagnose, triage, prototype, REST API design, performance process, reality-gate, backend-core, kafka-patterns. (13 skills)"
+      "description": "Stack-agnostic engineering: verify-app, design thinking, domain modeling, codebase design, diagnose, triage, prototype, REST API design, performance process, reality-gate, backend-core, kafka-patterns. (14 skills)"
     },
     {
       "name": "golang",

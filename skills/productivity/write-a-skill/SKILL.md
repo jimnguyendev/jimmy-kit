@@ -76,7 +76,9 @@ it. Preserve genuine user decisions and external-action boundaries.
 - For changed behavior, use a fresh evaluator with the request, skill, and raw
   artifacts only. Compare against the original or a no-skill baseline when useful.
   Record the model, inputs, actual output, result, and limitations. A static lint
-  pass is not an agent behavior pass.
+  pass is not an agent behavior pass. When the result decides whether a change
+  ships or a SCENARIO flips to PASS, run it blind: follow
+  [references/blind-eval.md](references/blind-eval.md).
 - For description-only edits, check relevant and irrelevant discovery cases;
   do not rerun unrelated workflows or create tests that only echo wording.
 

@@ -12,6 +12,12 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Vendored skill**: a third-party skill kept verbatim with its upstream LICENSE/NOTICE and source commit in `groups.json`. Refreshed by re-copying, never edited in place; kit conventions do not apply to it.
 
+**Feature map**: the `features/` folder of a project-local verify skill: an index plus one file per user- or client-visible feature with four sections (Sub-features, How to get to it, Driving it with <harness>, Gotchas). Owned by `verify-app`.
+
+**Doctor**: a read-only check, run before driving an app, that compares the running instance with what the code requires (build, ownership, versions, dependencies) and reports incomplete coverage instead of passing silently.
+
+**Blind evaluation**: judging a skill change with candidates that receive an ordinary request in clean workspaces and cannot see the rubric, and a judge that sees outputs by neutral label. Owned by `write-a-skill`.
+
 **Exit 0 / 1 / 2**: verification states — pass with evidence / fail with evidence / **unverifiable**. Exit 2 is never a pass; "spec'd" is not "done". Owned by `quality-gates`.
 
 **Claim labels**: `[VERIFIED]` (source + date + scope + still true) · `[ASSUMPTION]` (openly unproven, with a plan to check) · `[GUESS]` (unproven and dressed as fact — the dangerous one). Owned by `analyst`.
