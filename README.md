@@ -84,4 +84,4 @@ Run `scripts/link-skills.sh` to symlink all 94 skills into `~/.claude/skills` (o
 `[sage]` = upstream Sage repo (public, optional deeper reading). Skills are self-contained: no internal-doc links inside skills; provenance lives here in README. Every self-authored skill opens with a one-line failure statement ("this skill exists to stop: …") and a HOW-TO-USE section with modes and output formats. Decision history: `docs/DECISIONS.md`.
 
 ## License
-MIT — see `LICENSE`. Upstream material (Sage, sage-product, mattpocockSkills, samber/cc-skills-golang, pstack) keeps its original MIT-style attribution. Vendored database skills keep their own licenses (MIT or Apache-2.0) in their folders.
+MIT — see `LICENSE`. Upstream material (Sage, sage-product, mattpocockSkills, samber/cc-skills-golang, pstack) keeps its original MIT-style attribution. Vendored database skills keep their own licenses (MIT or Apache-2.0) in their folders. The pstack notice is in `THIRD_PARTY_NOTICES.md`.

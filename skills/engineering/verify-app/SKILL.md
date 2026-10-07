@@ -18,7 +18,7 @@ description: >-
 
 Output of Create: `<target skills dir>/verify-<app>/SKILL.md` plus `features/` in the target repo's own agent skills directory (the one its agents already load: `.claude/skills/`, `.agents/skills/`, `.cursor/skills/`; ask if none exists), and evidence from the proving run under `.jimmy/work/verify-<app>/evidence/<run-id>/`. The generated skill lives with the project's skills because agents must load it; it is the one Jimmy Kit output that does not sit under `.jimmy/`.
 
-Done when the generated skill ran once end to end, its evidence survived cleanup, and `scripts/check_feature_map.py <skill dir>/features` passes. A generated skill that never ran is a draft.
+Done when the generated skill ran once end to end, its evidence survived cleanup, and its feature map passes the checker. A generated skill that never ran is a draft.
 
 ## 1. Interview the repo, not the user
 
@@ -36,14 +36,14 @@ If the checkout does not build or start, fix that or report it precisely before 
 
 ## 2. Generate the skill
 
-Write `verify-<app>/SKILL.md` with frontmatter (`name: verify-<app>` and a description naming the app, the surface and when to use it) and these sections, every command taken from this repo, no placeholders:
+Write `verify-<app>/SKILL.md` following the target repo's own skill conventions (if it uses Jimmy Kit's, open with the failure statement and HOW TO USE) with frontmatter (`name: verify-<app>` and a description naming the app, the surface and when to use it) and these sections, every command taken from this repo, no placeholders:
 
 - **Launch** — the exact start command, the readiness signal (log line, port, health route), and teardown. A short-lived CLI has no server: build once, then give each drive its own session.
 - **Doctor** — one read-only check that answers "is this instance worth driving?": process up, expected build or commit, ports owned by this run, dependencies reachable, and required versions *compared*, not just printed (database engine, migration state; see `reality-gate` mechanism 7). Run it before the first drive and after any surprising result.
 - **Drive** — the harness recipe with stable handles: accessible names, data attributes, prompt strings, routes, message keys. No screen coordinates or tab order.
 - **Evidence** — what to capture and where (`.jimmy/work/verify-<app>/evidence/<run-id>/`). Capture the action and the resulting state, including side effects (rows written, messages emitted, files created). Drive the real user path, not internal setters or test-only routes. When the safe path is a dry-run or sandbox mode, observe what it actually skips instead of trusting its name.
 - **Cleanup** — stop only what this run started (never kill by process name), remove scratch data, keep the evidence.
-- **Helpers** — every shipped script is executable and its invocation appears in the skill body.
+- **Helpers** — every shipped script is executable and its invocation appears in the skill body. Copy this skill's `scripts/check_feature_map.py` into `verify-<app>/scripts/` so Maintain mode can run it without Jimmy Kit installed.
 
 Backend services, webhooks, async pipelines and time-dependent states need more than this list: read [references/service-recipes.md](references/service-recipes.md) before writing Drive and Evidence for them.
 
@@ -56,7 +56,7 @@ Create `features/README.md` (baseline preconditions, driving conventions, proof 
 3. `Driving it with <harness>` — starts with `Preconditions:`, then each action paired with its exact command and the observable result.
 4. `Gotchas` — traps that waste or invalidate a run.
 
-Name user paths, stable handles, required state, commands and observable proof; keep implementation detail out. A skipped entry point is reported as skipped, never as verified through another path. See [references/feature-map-example/](references/feature-map-example/README.md) for a service-shaped example, then run `python3 scripts/check_feature_map.py <skill dir>/features`.
+Name user paths, stable handles, required state, commands and observable proof; keep implementation detail out. A skipped entry point is reported as skipped, never as verified through another path. See [references/feature-map-example/](references/feature-map-example/README.md) for a service-shaped example, then run `python3 verify-<app>/scripts/check_feature_map.py verify-<app>/features` from the target skills directory. Every sub-feature ID must appear next to a Drive step or on a `Skipped: \`id\` — reason` line.
 
 ## 4. Prove it before handing over
 

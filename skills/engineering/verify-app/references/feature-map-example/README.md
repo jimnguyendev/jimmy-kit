@@ -8,11 +8,12 @@ The maintained source for proving the client-visible behavior of a course app's 
 - Run `./verify/doctor.sh $RUN_ID` and require: commit matches `git rev-parse HEAD`, PostgreSQL version equals the deployed version in `deploy/postgres.version`, migrations at head, topic and consumer group present, clock mode `injected`.
 - Sandbox credentials for both stores are present in `.env.verify`; Doctor reports "incomplete coverage" otherwise.
 - Never drive an instance this run did not start.
+- Each recipe starts from this baseline. A recipe that mutates state names the learners it owns (`u-verify-*`), and Cleanup deletes their rows and resets the clock; evidence files stay.
 
 ## Driving conventions
 
 - Every request goes through `./verify/call.sh <method> <path> [body-file]`, which adds the run's auth header and prints status and body.
-- Store notifications are replayed with `./verify/replay.sh <capture-dir>`, which posts the captured signed bytes and headers unchanged.
+- Store notifications are replayed with `./verify/replay.sh <capture-dir>`: signed-body notifications are posted with their captured bytes; push-authenticated ones are republished through the run's own push subscription so they arrive with a fresh token. Provider API calls go to the recorded-response server started by `make verify-up`.
 - State is read with `./verify/sql.sh "<query>"` (read-only role) and `./verify/topic.sh <key>` (prints key, partition, offset, payload).
 - Time moves only through `./verify/clock.sh set <RFC3339>`; Cleanup resets it.
 

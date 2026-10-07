@@ -45,7 +45,7 @@ A rule minted in step C is only as strong as what enforces it. Try, in order, an
 3. **Behavior test** — through the public interface; a test that would still pass if every call returned nothing does not count.
 4. **Docs or agent rules** — last, and only for judgment calls nothing can check.
 
-Prove each new check against the real past mistake: it must fail on that change and pass on the fix. Keep one table (in the target repo's agent instructions) pairing each rule with what enforces it; a rule that recurs while listed as enforced means the mechanism failed, so move it up the list. Exceptions sit on the offending line with a reason, an expiry date and an approver.
+Prove each new check against the real past mistake: it must fail on that change and pass on the fix. Keep one table pairing each rule with what enforces it in `.jimmy/docs/rule-enforcement.md`, and propose a one-line pointer to it in the repo's agent instructions; a rule that recurs while listed as enforced means the mechanism failed, so move it up the list. Exceptions sit on the offending line with a reason, an expiry date and an approver.
 
 Implement the mechanism only inside the work the user already accepted. When the strongest fit is outside it (a new CI job, a cross-team lint), write it as a proposal in the report's Next action. Product and A/B lessons usually stay at level 4: they need judgment, not a lint.
 

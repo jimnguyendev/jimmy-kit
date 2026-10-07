@@ -21,7 +21,10 @@ A missing prerequisite ends the Doctor with "incomplete coverage: <what>", never
 A provider's "send test notification" call proves delivery and signature handling only. It usually carries no subscription or order data, so it cannot prove that a renewal, refund or cancellation changes state. Write two separate recipes and label coverage by which one ran:
 
 1. **Genuine sandbox event** — trigger the real event in the provider's sandbox (a sandbox purchase that renews on an accelerated schedule, a test refund) and let it arrive through the configured delivery path.
-2. **Replay of captured bytes** — keep the exact signed body and headers of real sandbox notifications under `testdata/` or the evidence store, together with the provider API responses the handler fetches, and replay them unchanged through the production handler.
+2. **Replay of captured payloads** — keep the exact signed payload bytes of real sandbox notifications under `testdata/`, plus the provider API responses the handler fetched while processing them. Replay the payload unchanged; re-create only the transport around it:
+   - A payload signed inside its own body (a JWS notification) can be posted as captured, as long as the handler accepts its signing date; when it no longer does, the capture is stale and the genuine path is the only proof.
+   - A delivery authenticated by a short-lived bearer token (a Pub/Sub push) cannot be replayed with its old headers. Publish the captured message to the verify run's own topic and push subscription, so the platform mints a fresh token that the unchanged verifier checks.
+   - The provider API responses reach the handler through the adapter's configured base URL, pointed in the verify environment at a recorded-response server that serves the captured bodies. Doctor checks that this override is active only in the verify environment.
 
 Never make a recipe pass by disabling signature or token verification on the production code path. When verification time matters (certificate validity, token expiry), keep the verification clock separate from the domain clock.
 
@@ -44,7 +47,14 @@ Correlate them with one ID chain (notification ID → entity ID → event ID) an
 
 ## Duplicates, ordering and failure
 
-A recipe for a stateful flow covers, at minimum: the same notification twice (no second transition, no second event), an older notification after a newer one (no regression), a crash or error between commit and publish (event still published once), the same message delivered twice to a consumer (no double effect), and a withheld notification recovered by the reconciliation job.
+A recipe for a stateful flow covers, at minimum:
+
+- the same notification twice, sequentially and concurrently: one transition, one outbox event;
+- an older notification after a newer one: no regression of state or expiry;
+- a failure inside the ingest transaction: nothing committed, no outbox row, and a retry succeeds;
+- a crash after the broker acknowledged a publish but before the outbox row was marked sent: the event may be published again, so prove eventual delivery and exactly one downstream effect per event ID, not exactly one message;
+- the same message delivered twice to a consumer: one effect;
+- a withheld notification recovered by the reconciliation job.
 
 ## Time-dependent states
 

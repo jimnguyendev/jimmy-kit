@@ -18,14 +18,14 @@ After a learner buys a plan in the app, the app sends the store's transaction to
 Preconditions:
 
 - Doctor passed for `$RUN_ID`.
-- Learner `u-verify-1` has an account token from `./verify/call.sh POST /subscriptions/account-token testdata/token-u1.json`.
+- Learners `u-verify-1` and `u-verify-2` have no subscription rows, and each has an account token from `./verify/call.sh POST /subscriptions/account-token testdata/token-<learner>.json`.
 - A sandbox purchase capture exists at `testdata/captures/purchase-monthly/`.
 
-- **First verify.** Run `./verify/call.sh POST /subscriptions/verify testdata/captures/purchase-monthly/body.json`. Status `200`, body shows `status: active` and an `expires_at`.
+- **First verify** (`verify-first`). Run `./verify/call.sh POST /subscriptions/verify testdata/captures/purchase-monthly/body.json`. Status `200`, body shows `status: active` and an `expires_at`.
 - **State and event.** Run `./verify/sql.sh "select status, version, expires_at from subscriptions where user_id='u-verify-1'"` and `./verify/topic.sh <subscription_id>`. One row at version 1, one message keyed by the subscription ID.
 - **Access.** Run `./verify/call.sh GET /entitlements/u-verify-1`. Shows the plan with the same `expires_at`.
-- **Repeat.** Run the first command again. Status `200`, version still 1, no new topic message.
-- **Rejected.** Run `./verify/call.sh POST /subscriptions/verify testdata/captures/tampered/body.json`. Status `422`, no row, no message.
+- **Repeat** (`verify-repeat`). Run the first command again. Status `200`, version still 1, no new topic message.
+- **Rejected** (`verify-rejected`). Run `./verify/call.sh POST /subscriptions/verify testdata/captures/tampered-u2/body.json` for `u-verify-2`. Status `422`; `./verify/sql.sh "select count(*) from subscriptions where user_id='u-verify-2'"` returns 0; topic offset unchanged.
 
 ## Gotchas
 

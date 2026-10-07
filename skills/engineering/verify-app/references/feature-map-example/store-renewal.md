@@ -22,10 +22,10 @@ Preconditions:
 - `verify-first` from the purchase feature has run for `u-verify-1`.
 - Captured renewal notifications exist at `testdata/captures/renewal-1/` and `testdata/captures/renewal-0-late/`.
 
-- **Renewal.** Run `./verify/replay.sh testdata/captures/renewal-1`. Status `200`; the subscription row moves to version 2 with a later `expires_at`; one new topic message; `GET /entitlements/u-verify-1` shows the new expiry.
-- **Duplicate.** Run the same replay again. Status `200`, version stays 2, topic offset unchanged.
-- **Stale.** Run `./verify/replay.sh testdata/captures/renewal-0-late`. Status `200`, version stays 2, `expires_at` unchanged.
-- **Reconciled.** Run `./verify/clock.sh set <one hour before expiry>` without replaying the next notification, then `./verify/job.sh reconcile`. The row moves to version 3 from the store API response; one new topic message.
+- **Renewal** (`renewal-extends`). Run `./verify/replay.sh testdata/captures/renewal-1`. Status `200`; the subscription row moves to version 2 with a later `expires_at`; one new topic message; `GET /entitlements/u-verify-1` shows the new expiry.
+- **Duplicate** (`renewal-duplicate`). Run the same replay again. Status `200`, version stays 2, topic offset unchanged.
+- **Stale** (`renewal-stale`). Run `./verify/replay.sh testdata/captures/renewal-0-late`. Status `200`, version stays 2, `expires_at` unchanged.
+- **Reconciled** (`renewal-reconciled`). Run `./verify/clock.sh set <one hour before expiry>` without replaying the next notification, then `./verify/job.sh reconcile`. The row moves to version 3 from the store API response; one new topic message.
 
 ## Gotchas
 

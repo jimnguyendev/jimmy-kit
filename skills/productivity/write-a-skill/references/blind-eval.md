@@ -17,7 +17,7 @@ Use this when a SCENARIO or `evals/evals.json` case decides whether a new or cha
 
 ## Run and judge
 
-5. **Candidates.** Spawn them in parallel, one workspace each, same prompt. Prefer different model families when available and record which ran where; when only one family is available, record that as a limitation.
+5. **Candidates.** Spawn them in parallel, one workspace each, same prompt. Every variant runs on the same model, settings, tools and budget, so a difference comes from the skill and not the model. To check that a result generalizes, repeat the whole set on a second model family. Record which model ran where; one family only is a stated limitation.
 6. **Judge.** One judge, from a different model family than the candidates when possible, scores all outputs in one pass on one scale, seeing only neutral labels (A, B, C) and the rubric, never model or variant names.
 7. **Grade the chain from transcripts.** Whether a candidate read the skill and followed its steps is graded from its own session transcript (files actually opened, commands actually run) and the shape of what it produced, never from what it says it did. Read only transcripts of this evaluation's sessions.
 8. **Read everything yourself.** Compare your reading with the judge's. Disagreement means a biased judge or an ambiguous rubric; fix the rubric and rerun rather than averaging.
