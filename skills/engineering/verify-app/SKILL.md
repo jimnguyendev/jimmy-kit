@@ -40,10 +40,10 @@ Write `verify-<app>/SKILL.md` following the target repo's own skill conventions 
 
 - **Launch** — the exact start command, the readiness signal (log line, port, health route), and teardown. A short-lived CLI has no server: build once, then give each drive its own session.
 - **Doctor** — one read-only check that answers "is this instance worth driving?": process up, expected build or commit, ports owned by this run, dependencies reachable, and required versions *compared*, not just printed (database engine, migration state; see `reality-gate` mechanism 7). Run it before the first drive and after any surprising result.
-- **Drive** — the harness recipe with stable handles: accessible names, data attributes, prompt strings, routes, message keys. No screen coordinates or tab order.
+- **Drive** — the harness recipe with stable handles: accessible names, data attributes, prompt strings, routes, message keys. No screen coordinates or tab order. Every probe carries its own time limit (`curl --max-time`, a deadline around container and database calls), so one hung call cannot outlast the run's polling deadline.
 - **Evidence** — what to capture and where (`.jimmy/work/verify-<app>/evidence/<run-id>/`). Capture the action and the resulting state, including side effects (rows written, messages emitted, files created). Drive the real user path, not internal setters or test-only routes. When the safe path is a dry-run or sandbox mode, observe what it actually skips instead of trusting its name.
 - **Cleanup** — stop only what this run started (never kill by process name), remove scratch data, keep the evidence.
-- **Helpers** — every shipped script is executable and its invocation appears in the skill body. Copy this skill's `scripts/check_feature_map.py` into `verify-<app>/scripts/` so Maintain mode can run it without Jimmy Kit installed.
+- **Helpers** — every shipped script is executable and its invocation appears in the skill body. Where the repo has a task runner, add one target that runs launch, doctor, the mapped checks and cleanup in sequence, so a later agent can prove a change with one command and still open the per-step evidence. Copy this skill's `scripts/check_feature_map.py` into `verify-<app>/scripts/` so Maintain mode can run it without Jimmy Kit installed.
 
 Backend services, webhooks, async pipelines and time-dependent states need more than this list: read [references/service-recipes.md](references/service-recipes.md) before writing Drive and Evidence for them.
 
@@ -60,7 +60,7 @@ Name user paths, stable handles, required state, commands and observable proof; 
 
 ## 4. Prove it before handing over
 
-Follow the generated skill end to end once: Launch, Doctor, drive one mapped feature, capture evidence, Cleanup. Confirm the evidence still exists at its named location after cleanup. Run the generated Cleanup after every failed attempt too, so broken runs do not strand processes or ports. A prerequisite you could not obtain (credentials, a sandbox purchase) is reported as incomplete coverage with what was tried.
+Follow the generated skill end to end once: Launch, Doctor, drive one mapped feature, capture evidence, Cleanup. Confirm the evidence still exists at its named location after cleanup. Then prove the failure path once and keep it as evidence: one deliberately wrong expectation must report failure with the reason and a non-zero exit, and a Doctor run against a stopped or tampered instance must refuse to pass; Cleanup must still leave nothing running. Run the generated Cleanup after every failed attempt too, so broken runs do not strand processes or ports. A prerequisite you could not obtain (credentials, a sandbox purchase) is reported as incomplete coverage with what was tried.
 
 Then point the user at Maintain mode for keeping the map honest as the app changes.
 

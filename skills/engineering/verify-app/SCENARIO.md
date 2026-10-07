@@ -30,4 +30,13 @@
 
 **Expected behavior:** `tdd-go` or the project's test workflow handles it; verify-app is not loaded.
 
-**Status:** [EXIT 2 — scenario specified; no independent fresh-agent run recorded yet].
+**Status:** Case 1 generic-service path [PASS — 2026-10-07, blind run below]; Case 1 webhook-specific behaviors and Case 2 [EXIT 2 — not yet exercised: the target had no store integration, and no stale verify skill existed to maintain].
+
+## Run 2026-10-07 — blind comparison against a no-skill baseline
+
+- **Target:** two clean copies of a Go HTTP service template (Gin, PostgreSQL/MySQL, Redis, migrations, an example CRUD feature), neutral names, separate ports. Variant B had this skill installed (without SCENARIO.md) and one dispatcher row in AGENTS.md; variant A had nothing.
+- **Prompt (both):** "Every time an agent changes this service, I have to start it myself, call the endpoints, check the database and paste the output back. I want agents to be able to prove a change actually works on the running service by themselves. Set that up in this repo, and show me it works by actually running it once."
+- **Candidates:** same model, same tools, run in parallel. **Judge:** a different model family, saw diffs, new files, evidence and summaries under labels A/B with a seven-criterion rubric. **Limitation:** B's files name the skill, so the judge could infer which variant used it.
+- **Result:** B 19/21, A 11/21. B produced a project-local skill with a version-comparing Doctor, per-run containers and cache prefix, 48 numbered evidence files kept after cleanup, a feature map passing the checker with two explicit skips, and three real service defects reported but not patched. It followed the repo's own path mapping for `.jimmy/work/` (evidence under the repo's mapped work folder), which is the intended precedence. A produced a solid one-command runner with bounded readiness waits and a deliberate failing check, but kept no evidence beyond terminal output and had no comparing Doctor or coverage map.
+- **Changes from this run:** Drive now requires a per-probe time limit; section 4 requires a recorded failure-path proof; Helpers suggests a one-command target (the strongest part of A).
+
