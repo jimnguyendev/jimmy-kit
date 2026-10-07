@@ -1,6 +1,6 @@
 # Jimmy Kit — Product & Engineering Skills
 
-A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini): product discovery, spec discipline, quality gates, analytics, UX, and engineering workflows. 52 skills across 7 categories, organized around one operating loop:
+A curated, self-contained skill kit for AI agents (Claude Code / Codex / Gemini): product discovery, spec discipline, quality gates, analytics, UX, and engineering workflows. 53 skills across 7 categories, organized around one operating loop:
 
 **UNDERSTAND → ENVISION → DELIVER → REFLECT**, as a maximal map rather than a mandatory pipeline. Ceremony scales with risk: Tier 1 may use no skill, Tier 2 normally uses one or two, and Tier 3 uses the full 7-question intake plus `product-council`. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. See `docs/OPERATING-WORKFLOW.md`.
 
@@ -30,7 +30,7 @@ or, in Claude Code: `/plugin marketplace add jimnguyendev/jimmy-kit` → `/plugi
 
 Full guide (Claude Code / Codex / Cursor, global vs per-repo, where outputs go, how to start a session): **`docs/USAGE.md`**.
 
-Run `scripts/link-skills.sh` to symlink all 52 skills into `~/.claude/skills` (or pass a target dir), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Skills write their outputs to `.jimmy/` in the repo they are installed in (`work/<feature>/`, `docs/`, `decisions.md`, `adr/NNNN-slug.md`, `constitution.md`) — add it to `.gitignore` if you don't want it tracked. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
+Run `scripts/link-skills.sh` to symlink all 53 skills into `~/.claude/skills` (or pass a target dir), or copy individual folders into your project's `.claude/skills/` / `.agents/skills/`. `scripts/list-skills.sh` lists everything. Skills write their outputs to `.jimmy/` in the repo they are installed in (`work/<feature>/`, `docs/`, `decisions.md`, `adr/NNNN-slug.md`, `constitution.md`) — add it to `.gitignore` if you don't want it tracked. Shared vocabulary: `CONTEXT.md`. Each skill is self-contained; cross-references degrade gracefully (see Source convention inside each skill).
 
 ## Categories
 | Folder | What's inside |
@@ -41,7 +41,7 @@ Run `scripts/link-skills.sh` to symlink all 52 skills into `~/.claude/skills` (o
 | `skills/analytics/` | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation |
 | `skills/engineering/` | domain-modeling · codebase-design · improve-codebase-architecture · zero-tech-debt · tdd-go · diagnose · prototype · triage · engineering-design-thinking · engineering-perf-optimization-process · engineering-rest-api-design · reality-gate |
 | `skills/productivity/` | zoom-out · handoff · write-a-skill · grilling · grill-with-docs · grill-me · orchestrate |
-| `skills/utilities/` | youtube-transcript |
+| `skills/utilities/` | youtube-transcript, facebook-transcript |
 
 ## Credits & provenance (keep when redistributing)
 - **Sage** — github.com/xoai/sage: the process backbone (gates, tiers, constitution, review, analyst, architect — bodies kept close to upstream; Sage-runtime commands and `.sage/` paths replaced with kit-runnable equivalents — see docs/DECISIONS.md K5). Renamed here: sage-gates→quality-gates, sage-tiers→change-tiers, sage-decisions→decision-log, sage-review→independent-review, sage-reflect→retrospective, sage-analyst→analyst, sage-architect→architect, sage-constitution→constitution, sage-routing→routing.

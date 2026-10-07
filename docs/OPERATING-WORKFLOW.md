@@ -31,7 +31,7 @@ Run `product-council` as part of the full Tier 3 flow. By default, Tier 1 and al
 ## Layer 3 — The 4-phase chain
 | Phase | Skills | Produces |
 |---|---|---|
-| UNDERSTAND | analyst · jtbd · ux-discovery · product-vision · zoom-out · youtube-transcript | Problem statement + jobs + sourced benchmark |
+| UNDERSTAND | analyst · jtbd · ux-discovery · product-vision · zoom-out · youtube-transcript · facebook-transcript | Problem statement + jobs + sourced benchmark |
 | ENVISION | opportunity-map · product-strategy · ux-brief · ux-design · prd · ux-specify · ux-writing · ux-plan-tasks | Spec with hard-cases-first + clean copy |
 | DELIVER | architect · change-tiers · decision-log · constitution · quality-gates · okr-outcome-architect · the `skills/engineering/` category | 2 options + ADR + gates + bets wired to KRs |
 | REFLECT | tracking-architect · growth-markov-duolingo · engagement-matrix-analytics · advanced-rfm-segmentation · ux-review · independent-review · ux-cro-audit · retrospective | Gated metrics + independent review + WHEN/CHECK/BECAUSE lessons |

@@ -10,7 +10,7 @@ npx skills add jimnguyendev/jimmy-kit            # interactive: pick agents + sk
 npx skills add jimnguyendev/jimmy-kit -y -g      # everything, globally, no prompts
 npx skills add jimnguyendev/jimmy-kit --skill product-council --skill okr-outcome-architect
 ```
-Uses the open-source `skills` CLI (skills.sh). It clones the repo, finds all 52 `SKILL.md`, and writes them into the right folder for each agent you select (`.claude/skills`, `.agents/skills`, `.cursor/skills`, …). Re-run to update. No clone or symlink to manage.
+Uses the open-source `skills` CLI (skills.sh). It clones the repo, finds all 53 `SKILL.md`, and writes them into the right folder for each agent you select (`.claude/skills`, `.agents/skills`, `.cursor/skills`, …). Re-run to update. No clone or symlink to manage.
 
 ### Claude Code plugin (namespaced skills, updates via `/plugin`)
 ```text
@@ -65,7 +65,7 @@ Everything a skill produces goes under **`.jimmy/`** in the repo you are working
 Add `.jimmy/` to `.gitignore` if you don't want it tracked; most teams track `decisions.md`, `adr/` and `constitution.md` and ignore `work/`.
 
 ## 3. Make routing always-on (recommended)
-Installing skills gives the agent 52 tools it *can* pick up; it does not force routing through them. To get always-on problem-state and dosage routing, append the eager dispatcher block to your repo's instructions file once:
+Installing skills gives the agent 53 tools it *can* pick up; it does not force routing through them. To get always-on problem-state and dosage routing, append the eager dispatcher block to your repo's instructions file once:
 ```bash
 cat vendor/jimmy-kit/templates/eager-dispatcher.md >> AGENTS.md   # or ~/jimmy-kit/…
 ```
