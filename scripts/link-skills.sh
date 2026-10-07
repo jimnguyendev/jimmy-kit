@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
-# Symlink every skill in this kit into ~/.claude/skills so the local CLI picks them up.
-# Adapted from mattpocockSkills (github.com/yykui/mattpocockSkills), MIT-style credit in README.
+# Symlink kit skills into ~/.claude/skills (or a target dir) so the local CLI picks them up.
+# usage: link-skills.sh [TARGET_DIR] [--group core,golang,...]   (no --group = every group)
+# Groups are defined in groups.json; `python3 scripts/kit.py groups` lists them.
+# Originally adapted from mattpocockSkills (github.com/yykui/mattpocockSkills), MIT-style credit in README.
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
-DEST="${1:-$HOME/.claude/skills}"
-# Guard: if DEST is a symlink resolving into this repo, bail instead of polluting the working copy.
-if [ -L "$DEST" ] && [[ "$(readlink -f "$DEST")" == "$REPO"* ]]; then
-  echo "DEST resolves into this repo — aborting to avoid self-linking." >&2; exit 1
-fi
-mkdir -p "$DEST"
-count=0
-while IFS= read -r skill_md; do
-  dir="$(dirname "$skill_md")"; name="$(basename "$dir")"
-  ln -sfn "$dir" "$DEST/$name" && count=$((count+1))
-done < <(find "$REPO/skills" -name SKILL.md)
-echo "Linked $count skills into $DEST"
+TARGET=""; GROUP=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --group) GROUP="$2"; shift 2 ;;
+    --group=*) GROUP="${1#--group=}"; shift ;;
+    *) TARGET="$1"; shift ;;
+  esac
+done
+args=(install)
+[ -n "$TARGET" ] && args+=(--target "$TARGET")
+[ -n "$GROUP" ] && args+=(--group "$GROUP")
+exec python3 "$REPO/scripts/kit.py" "${args[@]}"

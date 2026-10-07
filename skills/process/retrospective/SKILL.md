@@ -37,3 +37,15 @@ When a metric drops or a feature flops, don't blame people — dig five layers. 
 ## 4. Lessons — Rule 1: WHEN … CHECK … BECAUSE …  (repeat)
 ## 5. Next action — [ ] Roll out 100%  [ ] Pivot (replace the initiative, never lower the KR)  [ ] Kill & clean up
 ```
+
+## 🔩 4. PICK THE MECHANISM (strongest that fits the accepted scope)
+A rule minted in step C is only as strong as what enforces it. Try, in order, and stop at the first that works:
+1. **Structure** — one owner per piece of state, one supported way per task, internals the wrong caller cannot import.
+2. **Types** — the bad state cannot be written; if it still compiles, a **lint or CI check whose message names the right function or file**.
+3. **Behavior test** — through the public interface; a test that would still pass if every call returned nothing does not count.
+4. **Docs or agent rules** — last, and only for judgment calls nothing can check.
+
+Prove each new check against the real past mistake: it must fail on that change and pass on the fix. Keep one table pairing each rule with what enforces it in `.jimmy/docs/rule-enforcement.md`, and propose a one-line pointer to it in the repo's agent instructions; a rule that recurs while listed as enforced means the mechanism failed, so move it up the list. Exceptions sit on the offending line with a reason, an expiry date and an approver.
+
+Implement the mechanism only inside the work the user already accepted. When the strongest fit is outside it (a new CI job, a cross-team lint), write it as a proposal in the report's Next action. Product and A/B lessons usually stay at level 4: they need judgment, not a lint.
+

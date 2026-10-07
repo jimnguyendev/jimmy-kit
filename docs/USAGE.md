@@ -9,15 +9,17 @@ How to install the kit into a project or machine, start a session with it, and k
 npx skills add jimnguyendev/jimmy-kit            # interactive: pick agents + skills
 npx skills add jimnguyendev/jimmy-kit -y -g      # everything, globally, no prompts
 npx skills add jimnguyendev/jimmy-kit --skill product-council --skill okr-outcome-architect
+python3 scripts/kit.py npx --group core,golang,database --agent codex   # from a clone: print the command for whole groups
 ```
-Uses the open-source `skills` CLI (skills.sh). It clones the repo, finds all 52 `SKILL.md`, and writes them into the right folder for each agent you select (`.claude/skills`, `.agents/skills`, `.cursor/skills`, …). Re-run to update. No clone or symlink to manage.
+Uses the open-source `skills` CLI (skills.sh). It clones the repo, finds all 94 `SKILL.md`, and writes them into the right folder for each agent you select (`.claude/skills`, `.agents/skills`, `.cursor/skills`, …). Re-run to update. No clone or symlink to manage.
 
 ### Claude Code plugin (namespaced skills, updates via `/plugin`)
 ```text
 /plugin marketplace add jimnguyendev/jimmy-kit
-/plugin install jimmy-kit@jimmy-kit
+/plugin install jimmy-kit@jimmy-kit        # everything
+/plugin install golang@jimmy-kit           # or one group at a time: core, engineer, golang, database, product, ux, analytics, utilities
 ```
-Skills then appear as `jimmy-kit:<skill>` (e.g. `/jimmy-kit:product-council`). Manifests live in `.claude-plugin/`; the marketplace pins the `v0.1.0` tag. To test a local checkout before publishing: `claude --plugin-dir /path/to/jimmy-kit`.
+Skills then appear namespaced by plugin (e.g. `/jimmy-kit:product-council`, `/golang:backend-go-testing`). Install either `jimmy-kit` or groups, not both, or each skill loads twice. Manifests live in `.claude-plugin/` and are generated from `groups.json` by `python3 scripts/kit.py plugins --write`; plugin sources are relative, so they follow the marketplace's default branch. To test a local checkout before publishing: `claude --plugin-dir /path/to/jimmy-kit`.
 
 ### Option A — global clone + symlinks (when you want `git pull` updates)
 ```bash
@@ -25,6 +27,7 @@ git clone https://github.com/jimnguyendev/jimmy-kit.git ~/jimmy-kit
 ~/jimmy-kit/scripts/link-skills.sh                     # Claude Code  → ~/.claude/skills
 ~/jimmy-kit/scripts/link-skills.sh ~/.agents/skills    # Codex CLI    → ~/.agents/skills
 ~/jimmy-kit/scripts/link-skills.sh ~/.cursor/skills    # Cursor       → ~/.cursor/skills
+~/jimmy-kit/scripts/link-skills.sh ~/.claude/skills --group core,golang,database   # only some groups
 ```
 Update later with `git -C ~/jimmy-kit pull` — the symlinks follow automatically.
 
@@ -65,7 +68,7 @@ Everything a skill produces goes under **`.jimmy/`** in the repo you are working
 Add `.jimmy/` to `.gitignore` if you don't want it tracked; most teams track `decisions.md`, `adr/` and `constitution.md` and ignore `work/`.
 
 ## 3. Make routing always-on (recommended)
-Installing skills gives the agent 52 tools it *can* pick up; it does not force routing through them. To get always-on problem-state and dosage routing, append the eager dispatcher block to your repo's instructions file once:
+Installing skills gives the agent 94 tools it *can* pick up; it does not force routing through them. To get always-on problem-state and dosage routing, append the eager dispatcher block to your repo's instructions file once:
 ```bash
 cat vendor/jimmy-kit/templates/eager-dispatcher.md >> AGENTS.md   # or ~/jimmy-kit/…
 ```

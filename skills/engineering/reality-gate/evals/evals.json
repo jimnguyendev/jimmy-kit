@@ -5,7 +5,7 @@
       "id": 1,
       "name": "green-suite-real-run-failures",
       "prompt": "All unit and integration tests pass, but a QA agent driving the real UI against the dev database reports many 500s and wrong shapes. Explain why and propose what to change first.",
-      "expected_output": "Maps the failures to the six mechanisms with repo evidence (silent skip probe, hand-written schema, fakes at the seam, missing tracked replay suite, untested wiring, no golden contract) and proposes reality ACs before more unit tests.",
+      "expected_output": "Maps the failures to the eight mechanisms with repo evidence (silent skip probe, hand-written schema, fakes at the seam, missing tracked replay suite, untested wiring, no golden contract, test engine differing from the deployed engine, no cost number at the seam) and proposes reality ACs before more unit tests.",
       "assertions": [
         "Runs or describes the silent-skip probe with Docker down",
         "Checks the test DDL against the real schema rather than trusting fixtures",

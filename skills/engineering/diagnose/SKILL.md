@@ -17,6 +17,9 @@ Spend disproportionate effort here. **Be aggressive. Be creative. Refuse to give
 
 ### Ways to construct one — try them in roughly this order
 
+If the repo has a `verify-<app>` skill (built by `verify-app`), start from the Drive recipe of the matching feature file; keep a narrower failing test when it is cheaper.
+
+
 1. **Failing test** at whatever seam reaches the bug — unit, integration, e2e.
 2. **Curl / HTTP script** against a running dev server.
 3. **CLI invocation** with a fixture input, diffing stdout against a known-good snapshot.

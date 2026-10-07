@@ -19,6 +19,17 @@ allowed-tools: Read Edit Write Glob Grep Bash(git:*) Agent WebFetch WebSearch As
 
 # Performance Optimization Process
 
+> **This skill exists to stop:** optimization code shipped without a target, a profile, a before/after number from a realistic workload, or a way to roll it back.
+
+## 🤖 0. HOW TO USE
+
+- **Gate** (default): walk the five gates before any optimization code.
+- **Review**: check an optimization PR against the validation requirements.
+- **Plan**: turn concrete constraints into an escalation plan.
+- **Iterate**: several measured attempts toward one target (see Iterating Toward the Target).
+
+Output: filled gates, a plan or review verdict, and for Iterate a decision log at `.jimmy/work/<feature>/perf-decisions.tsv`. Done when the target is confirmed on a frozen harness or the stop rule is met and stated.
+
 ## Core Principle
 
 AI can help you type 10K lines of optimized code per day. Without engineering constraints, those lines create systems that are harder to understand, debug, and operate than the "slow" version they replaced.
@@ -79,7 +90,7 @@ Optimizing a cold path that handles 2% of traffic while the hot path is untouche
 
 **If you have not profiled, STOP. Measure the suspected bottleneck before treating it as established.**
 
-Go-specific profiling methodology (pprof, benchstat) belongs to a separate Go skill pack, not bundled here; the process below is language-agnostic.
+Go-specific profiling methodology (pprof, benchstat) lives in `backend-go-benchmark` and `backend-go-performance` (the kit's `golang` group); the process below is language-agnostic.
 
 ### Gate 4: What is the simplest sufficient solution?
 
@@ -116,6 +127,18 @@ Every optimization PR must include:
 
 A PR that says "improved performance" without these five items is incomplete.
 
+## Iterating Toward the Target
+
+When one change will not reach the Gate 1 target and you need several attempts, run a measured loop instead of a pile of edits:
+
+1. **Build the harness, then freeze it.** One repeatable command that runs a realistic workload and prints the metric, the error count, and how much work completed (requests served, rows processed). Every sample does fresh work: new IDs, new events; replaying the same request measures the duplicate fast path, not the real one. Before freezing, show it separates the slow case from an easy one; a harness that cannot tell them apart measures nothing. A latency that improves because fewer requests succeeded is a regression.
+2. **Record the baseline** as a median over enough samples to see the noise, plus a green run of the regression gate (the tests that must keep passing).
+3. **One change per attempt**, each tied to a named mechanism from the profile ("move signature verification off the request path because it is 40% of the CPU profile"), not "try caching".
+4. **Measure, then keep or revert.** Keep only a change that moves the median beyond the noise with the gate still green; revert the rest in full. Log every attempt, kept or reverted, as one row in `.jimmy/work/<feature>/perf-decisions.tsv`: hypothesis, change, before, after, gate, verdict.
+5. **Stop** when the target is confirmed on the frozen harness, the agreed budget is spent, or several distinct hypotheses in a row move nothing. Do not keep changing code after the target holds; extra changes add risk to locking, ordering and correctness for no requirement.
+
+Each kept change still goes through Gate 5 on its own.
+
 ## Common Anti-Patterns
 
 | Anti-pattern | Why it fails | What to do instead |
@@ -142,4 +165,4 @@ A PR that says "improved performance" without these five items is incomplete.
 
 - `engineering-rest-api-design` (this kit) — API contract design before optimization
 - `diagnose` (this kit) — when the "slow" report is really a bug
-- Not bundled (separate Go pack): Go performance patterns, observability, benchmarking with benchstat, database query optimization, concurrency primitives
+- `golang` group: `backend-go-performance`, `backend-go-benchmark` (benchstat), `backend-go-observability`, `backend-go-concurrency`; `database` group: `postgres`, `mysql`, `mongodb-query-optimizer`, `clickhouse-best-practices` for query and index work

@@ -62,15 +62,24 @@ def load_evals(path: Path) -> list[dict[str, object]]:
 def main() -> None:
     root = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path.cwd()
     installed_root = root / ".agents" / "skills"
-    skills_root = installed_root if installed_root.is_dir() else root / "skills" / "engineering"
-    reference = skills_root / "engineering-design-thinking" / "references" / "skill-routing.md"
+
+    def skill_dir(name: str) -> Path:
+        # Installed copies are flat; the kit groups skills by category (tdd-go lives in skills/golang).
+        if installed_root.is_dir():
+            return installed_root / name
+        found = sorted((root / "skills").glob(f"*/{name}"))
+        if not found:
+            fail(f"skill {name} not found under {root / 'skills'}")
+        return found[0]
+
+    reference = skill_dir("engineering-design-thinking") / "references" / "skill-routing.md"
     reference_text = reference.read_text()
 
     expected_edges = {(source, target) for source in SKILLS for target in SKILLS if source != target}
     observed_edges: set[tuple[str, str]] = set()
 
     for skill in SKILLS:
-        skill_path = skills_root / skill / "SKILL.md"
+        skill_path = skill_dir(skill) / "SKILL.md"
         text = skill_path.read_text()
         description = frontmatter_description(text, skill_path)
         if "Use " not in description:
@@ -81,7 +90,7 @@ def main() -> None:
         if "skill-routing.md" not in text:
             fail(f"{skill} does not link the canonical routing reference")
 
-        eval_path = skills_root / skill / "evals" / "evals.json"
+        eval_path = skill_dir(skill) / "evals" / "evals.json"
         if not eval_path.is_file():
             fail(f"missing independent eval suite: {eval_path}")
         for case in load_evals(eval_path):
@@ -118,7 +127,7 @@ def main() -> None:
 
     stale_tokens = ("legacy-pack@", "sqlc queries")
     for token in stale_tokens:
-        engineering_text = (skills_root / "engineering-design-thinking" / "SKILL.md").read_text()
+        engineering_text = (skill_dir("engineering-design-thinking") / "SKILL.md").read_text()
         if token in reference_text or token in engineering_text:
             fail(f"design routing contains stale token: {token}")
 

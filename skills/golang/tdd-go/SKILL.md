@@ -15,7 +15,7 @@ description: Implement already accepted feature behavior or bug fixes test-first
 
 Output: green behavior tests through public interfaces plus a bounded implementation; never an imagined batch of cases written ahead of learning.
 
-> 🧩 **Companion Go pack:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) are a separate pack, **not bundled** in this kit. Everything in this skill runs without them; where they are named, apply your project's own Go conventions instead.
+> 🧩 **Go group:** the `backend-go-*` skills referenced below (testing, testify, design-patterns, performance, observability…) ship in this kit's `golang` group. Install that group to load them; where they are absent, apply the project's own Go conventions instead.
 
 This skill is the **process layer** on top of `backend-go-testing`. Use it whenever you build a new feature or fix a non-trivial bug in this repo.
 
@@ -27,7 +27,7 @@ When the two conflict, this skill's process wins; the Go-specific patterns in `b
 ## Routing contract
 
 Read and apply the canonical
-[skill-routing.md](../engineering-design-thinking/references/skill-routing.md) before transferring work.
+[skill-routing.md](../../engineering/engineering-design-thinking/references/skill-routing.md) before transferring work.
 This skill owns accepted observable behavior implementation. Keep the current slice bounded, emit the
 canonical handoff artifact when a route trigger appears, and never encode an unsettled contract as a test.
 
@@ -43,7 +43,7 @@ This aligns with `backend-go-testing` rule #5 ("NEVER test implementation detail
 
 ### When implementation changes structure
 
-When an accepted slice creates or moves **packages, types, or interfaces**, read [engineering-philosophy.md](../codebase-design/references/engineering-philosophy.md). Preserve business-capability locality, contextual names without stuttering, types near their owner, and an acyclic import graph. A consumer-side interface is justified only by a real seam, not by every concrete type.
+When an accepted slice creates or moves **packages, types, or interfaces**, read [engineering-philosophy.md](../../engineering/codebase-design/references/engineering-philosophy.md). Preserve business-capability locality, contextual names without stuttering, types near their owner, and an acyclic import graph. A consumer-side interface is justified only by a real seam, not by every concrete type.
 
 Go enforces package DAGs at compile-time; it does not own the principle. The same one-way dependency rule is stack-neutral. If a cycle appears, move responsibility first, merge a fake boundary second, and introduce a consumer-owned interface only when the modules remain independently owned.
 

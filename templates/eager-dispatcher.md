@@ -29,6 +29,9 @@ Dose the workflow before following the map:
 | retention / churn / segments / DAU | `growth-markov-duolingo` → `engagement-matrix-analytics` → `advanced-rfm-segmentation` |
 | retro / lessons / post-mortem / A/B ended | `retrospective` → `decision-log` |
 | stuck after 3+ attempts / complexity spiraling | `problem-solving` |
+| prove it works in the real app · agent keeps asking a human to run/click/paste · make this repo verifiable by agents · verify skill is stale | `verify-app` |
+| Go code / Go tests / Go review / go.mod / golangci-lint | `tdd-go` for new behavior, else the matching `backend-go-*` skill (`golang` group) |
+| MySQL / PostgreSQL / MongoDB / ClickHouse schema, index, slow query, connection pool | the matching `database` group skill (`mysql`, `postgres`, `mongodb-*`, `clickhouse-*`); Go data-access code → `backend-go-database` |
 | tests pass but QA / real DB / real UI fails · acceptance criteria for a packet touching SQL, config, or response shape · "integration green" · regression replay suite | `reality-gate` |
 
 One clear match → announce and proceed. Several compatible matches → choose the smallest sufficient set. Ask only when materially different outcomes remain unresolved.

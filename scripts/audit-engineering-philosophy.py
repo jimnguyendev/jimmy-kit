@@ -32,7 +32,7 @@ def main() -> int:
     codebase = (codebase_dir / "SKILL.md").read_text()
     design = (root / "skills" / "engineering" / "engineering-design-thinking" / "SKILL.md").read_text()
     improve = (root / "skills" / "engineering" / "improve-codebase-architecture" / "SKILL.md").read_text()
-    tdd = (root / "skills" / "engineering" / "tdd-go" / "SKILL.md").read_text()
+    tdd = (root / "skills" / "golang" / "tdd-go" / "SKILL.md").read_text()
     perf = (root / "skills" / "engineering" / "engineering-perf-optimization-process" / "SKILL.md").read_text()
     gates = (root / "skills" / "process" / "quality-gates" / "SKILL.md").read_text()
     scenarios = "\n".join(
@@ -41,7 +41,7 @@ def main() -> int:
             "skills/engineering/codebase-design/SCENARIO.md",
             "skills/engineering/engineering-design-thinking/SCENARIO.md",
             "skills/engineering/improve-codebase-architecture/SCENARIO.md",
-            "skills/engineering/tdd-go/SCENARIO.md",
+            "skills/golang/tdd-go/SCENARIO.md",
         )
     )
     design_evals = json.loads(
@@ -184,7 +184,7 @@ def main() -> int:
         ),
         Check(
             "no skill sprawl",
-            skill_count == 52 and not (root / "skills" / "engineering" / "engineering-philosophy" / "SKILL.md").exists(),
+            not list((root / "skills").glob("*/engineering-philosophy/SKILL.md")),
             "preserving philosophy should not add a new skill",
         ),
         Check(

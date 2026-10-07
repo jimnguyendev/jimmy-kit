@@ -57,3 +57,12 @@ Outcome the old suite could not produce:
 Lesson recorded for the AC template: never make `grep -q` the consumer of a pipeline whose
 producer must finish (`go test … | tee log | grep -q PASS` killed the test run with SIGPIPE and
 reported a false failure). Read the log after the process exits.
+
+## 2026-10-07 hand-off scenario (written BEFORE skill changes)
+
+**Status:** [EXIT 2 — specified; independent application not yet recorded for this revision].
+
+**Input:** "Write the acceptance criteria for the renewal webhook packet; the repo has a verify skill."
+
+**Expected:** The AC names the evidence a seam change needs (real schema, container on the deployed engine version, cost number) and points at the verify skill's renewal recipe for the behavior proof; it does not restate the recipe's steps.
+

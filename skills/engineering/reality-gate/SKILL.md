@@ -69,6 +69,8 @@ for an agent: it optimizes for the AC it is given.
 | 7 | Test engine is not the real engine | container image pinned to a major (`mysql:8`) while the deployed server reports another version; nobody compares them | pin the image to the deployed version from ONE constant; an `engine-parity` script prints both `VERSION()`s side by side (template in REFERENCE §7) |
 | 8 | Cost blindness at the seam | the AC for a seam change states no cost number at all — queries, rows or bytes per request, calls to another service, response size — so a correct-but-expensive change is green on every gate | AC-007: one measured number per seam touched, taken on real-sized data; the reviewer reads a number, not a judgement (REFERENCE §8 lists which number per seam) |
 
+For behavior that is proven by driving the running app (UI, API, webhook, consumer), the executable recipe lives in a project-local verify skill built by `verify-app`; this skill decides what that recipe's evidence must contain.
+
 ## 3. Workflow A — audit (about 30 minutes)
 
 1. `bash <skill>/scripts/audit.sh [repo-root] --probe`. The probe runs one tagged package to

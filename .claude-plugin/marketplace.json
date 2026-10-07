@@ -1,6 +1,6 @@
 {
   "name": "jimmy-kit",
-  "description": "Jimmy Kit \u2014 52 product, UX, process, analytics and engineering skills for AI agents.",
+  "description": "Jimmy Kit — 94 skills for AI agents, installable whole or by group.",
   "owner": {
     "name": "jimnguyendev",
     "url": "https://github.com/jimnguyendev/jimmy-kit"
@@ -8,13 +8,82 @@
   "plugins": [
     {
       "name": "jimmy-kit",
-      "source": {
-        "source": "github",
-        "repo": "jimnguyendev/jimmy-kit",
-        "ref": "v0.1.1"
-      },
-      "description": "52 product, UX, process, analytics and engineering skills for AI agents.",
-      "version": "0.1.1"
+      "source": "./",
+      "description": "All 94 skills (every group).",
+      "version": "0.2.0"
+    },
+    {
+      "name": "core",
+      "source": "./skills",
+      "strict": false,
+      "skills": [
+        "./process/",
+        "./productivity/"
+      ],
+      "description": "Routing, change tiers, quality gates, decisions, independent review, retrospectives, plus session tools (grilling, handoff, orchestrate, write-a-skill, zoom-out). (16 skills)"
+    },
+    {
+      "name": "engineer",
+      "source": "./skills/engineering",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "description": "Stack-agnostic engineering: verify-app, design thinking, domain modeling, codebase design, diagnose, triage, prototype, REST API design, performance process, reality-gate, backend-core, kafka-patterns. (14 skills)"
+    },
+    {
+      "name": "golang",
+      "source": "./skills/golang",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "description": "Go implementation: tdd-go, capture-knowledge-go and the backend-go-* pack (testing, concurrency, errors, context, observability, performance, security, linting, project layout). (29 skills)"
+    },
+    {
+      "name": "database",
+      "source": "./skills/database",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "description": "MySQL, PostgreSQL, MongoDB and ClickHouse: schema design, indexing, query tuning, connections, local ClickHouse, plus Go database access. (10 skills)"
+    },
+    {
+      "name": "product",
+      "source": "./skills/product",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "description": "Product discovery and strategy: JTBD, opportunity map, PRD, problem solving, OKRs, product council, growth loops, subscription paywall, GTM, vision, strategy. (11 skills)"
+    },
+    {
+      "name": "ux",
+      "source": "./skills/ux",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "description": "UX brief, discovery, design, plan, review, specify, writing, CRO audit. (8 skills)"
+    },
+    {
+      "name": "analytics",
+      "source": "./skills/analytics",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "description": "Tracking architecture, retention Markov model, engagement matrix, RFM segmentation. (4 skills)"
+    },
+    {
+      "name": "utilities",
+      "source": "./skills/utilities",
+      "strict": false,
+      "skills": [
+        "./"
+      ],
+      "description": "YouTube and Facebook transcripts. (2 skills)"
     }
   ]
 }
