@@ -184,22 +184,22 @@ func (h *PrivacyHandler) HandleDataDeletion(w http.ResponseWriter, r *http.Reque
 
     // 1. Delete from your database
     if err := h.userRepo.DeleteAllData(ctx, userID); err != nil {
-        slog.ErrorContext(ctx, "failed to delete user data", "user_id", userID, "error", err)
+        lgr.Error(ctx, "failed to delete user data", "user_id", userID, "error", err)
         http.Error(w, "internal error", http.StatusInternalServerError)
         return
     }
 
     // 2. Delete from analytics platform
     if err := h.posthog.DeleteUser(ctx, userID); err != nil {
-        slog.ErrorContext(ctx, "failed to delete analytics data", "user_id", userID, "error", err)
+        lgr.Error(ctx, "failed to delete analytics data", "user_id", userID, "error", err)
     }
 
     // 3. Delete from CDP
     if err := h.segment.DeleteUser(ctx, userID); err != nil {
-        slog.ErrorContext(ctx, "failed to delete CDP data", "user_id", userID, "error", err)
+        lgr.Error(ctx, "failed to delete CDP data", "user_id", userID, "error", err)
     }
 
-    slog.InfoContext(ctx, "user data deletion completed", "user_id", userID)
+    lgr.Info(ctx, "user data deletion completed", "user_id", userID)
     w.WriteHeader(http.StatusNoContent)
 }
 
@@ -210,7 +210,7 @@ func (h *PrivacyHandler) HandleDataExport(w http.ResponseWriter, r *http.Request
 
     export, err := h.userRepo.ExportAllData(ctx, userID)
     if err != nil {
-        slog.ErrorContext(ctx, "failed to export user data", "user_id", userID, "error", err)
+        lgr.Error(ctx, "failed to export user data", "user_id", userID, "error", err)
         http.Error(w, "internal error", http.StatusInternalServerError)
         return
     }

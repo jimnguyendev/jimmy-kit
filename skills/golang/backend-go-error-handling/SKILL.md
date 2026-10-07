@@ -1,6 +1,6 @@
 ---
 name: backend-go-error-handling
-description: "Idiomatic Golang error handling — creation, wrapping with %w, errors.Is/As, errors.Join, custom error types, sentinel errors, panic/recover, the single handling rule, structured logging through the project logger (log/slog by default), and HTTP request logging middleware. Built to make logs usable at scale with log aggregation 3rd-party tools. Use when creating, wrapping, inspecting, or logging errors in Go code."
+description: "Idiomatic Golang error handling — creation, wrapping with %w, errors.Is/As, errors.Join, custom error types, sentinel errors, panic/recover, the single handling rule, structured logging through the project's ctx-first pkg/log logger, and HTTP request logging middleware. Built to make logs usable at scale with log aggregation 3rd-party tools. Use when creating, wrapping, inspecting, or logging errors in Go code."
 user-invocable: false
 license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents, and for projects using Golang.
@@ -24,7 +24,7 @@ allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(g
 
 This skill guides the creation of robust, idiomatic error handling in Go applications. Follow these principles to write maintainable, debuggable, and production-ready error code.
 
-This skill assumes one project-owned structured logger built on `log/slog` (or the single wrapper the team mandates), called with a context: `logger.ErrorContext(ctx, "message", "key", value)`. See `backend-go-observability` for setup.
+This skill assumes the project logs through its vendored `pkg/log`: inject `logger.Logger` and call it ctx-first, `lgr.Error(ctx, "message", "key", value)`. See `backend-go-observability` and its `references/pkg-log.md`.
 
 ## Best Practices Summary
 
@@ -136,4 +136,4 @@ When auditing error handling across a large codebase, use up to 5 parallel sub-a
 
 ## References
 
-- [log/slog package](https://pkg.go.dev/log/slog) — the standard library structured logger
+- `backend-go-observability` → `references/pkg-log.md` — the project logger: ctx-first interface, zap core, OTLP export, `logctx`
