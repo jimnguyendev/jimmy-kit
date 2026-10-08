@@ -241,6 +241,11 @@ class Linter:
                 continue
             status = str(entry.get("status", "")).upper()
             if status == "PASS":
+                expected, observed = entry.get("expected"), entry.get("observed")
+                if isinstance(expected, dict) and isinstance(observed, dict):
+                    for field, value in expected.items():
+                        if field not in observed or observed[field] != value:
+                            self.error("RECON_MISMATCH", f"recon_gate[{index}].observed.{field} does not match expected evidence")
                 continue
             if status == "N/A":
                 reason = entry.get("reason") or entry.get("rationale") or entry.get("justification")

@@ -69,10 +69,23 @@ For `legacy`, resolve the executor from current args → sprint pin →
    contract: upstream revision, isolated checkout/tooling, and any stable observed signature.
    Every recon item is `PASS` or a reasoned `N/A`; a failed or changing gate stops the cycle.
    Verify exact files, symbols, ADRs, legacy sources, and acceptance commands at their source.
+   Before dispatch, verify the actual executor checkout exists, the absolute packet is readable,
+   the workspace and the executor's temporary directory are writable in its execution environment,
+   and the required commands are available. Record the probe and observed result in recon;
+   blocked access or missing tooling stops dispatch instead of sending an unprepared executor.
+   PASS observations must contain every expected field with the expected value; extra observed
+   evidence is allowed. The linter checks recorded evidence, not the environment itself.
 3. **Plan.** Root writes the plan, or obtains a Planner draft. The review unit is the **next release unit**
    (normally one packet), while a longer roadmap records only high-level goals and
    dependencies. When an Advisor is explicitly requested, record its verdict and the root's
    disposition of findings in [PLAN_REVIEW.md](PLAN_REVIEW.md).
+   For a contract-backed cycle, prepare the matching draft packet metadata and acceptance IDs,
+   then run `python3 <installed-skill-dir>/scripts/orchestration_lint.py --contract <contract.json> --plan <plan.md> --packet <packet.md> --phase review`
+   before requesting review. A stale version, mismatched path, missing AC, or failed recon stops
+   the call. After approval, run the same command with `--phase dispatch` before execution.
+   Material behavior/data/security/contract or proof findings can block approval. Wording and
+   formatting preferences are editorial; correct them locally without a fresh model round unless
+   the user or project explicitly requires one. Never omit a required approval.
    No executor starts from an unapproved plan.
 4. **Packetize.** Copy [PACKET.md](PACKET.md). One packet is one bounded change/commit with
    explicit file ownership, stop conditions, and exact acceptance commands.
@@ -104,6 +117,13 @@ For `legacy`, resolve the executor from current args → sprint pin →
 9. **Hygiene.** Capture durable decisions in ADR/docs and refresh HANDOFF.md at milestones. A
    material requirement, baseline, route, or ownership change ends the review episode: obtain user
    authorization for a **fresh cycle** and rerun recon/review rather than patching an approved plan.
+
+## Progress reports
+
+At the first concrete artifact, a failed check, or a blocker, report the changed file paths,
+the exact check and its observed result, and the next bounded action. For a blocker, name the
+action, target, and failure reason. Inspect the owned diff before claiming an executor made
+no progress; silence alone is not evidence. Keep user updates concise and link durable evidence.
 
 ## Non-negotiable rules
 

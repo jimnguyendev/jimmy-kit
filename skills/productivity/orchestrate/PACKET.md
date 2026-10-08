@@ -17,6 +17,7 @@
 - Executor route: `<configured seat or legacy executor>`
 - Owned write paths: `<exact files/directories; must not overlap a parallel packet>`
 - Depends on / integration order: `<packet IDs or none>`
+- Executor preflight evidence: `<recon ID and observed checkout/packet/workspace/temp/tooling check; required before dispatch>`
 
 ## Context (read these first, in order)
 - <repo-relative file paths the work touches, with one line each on why>

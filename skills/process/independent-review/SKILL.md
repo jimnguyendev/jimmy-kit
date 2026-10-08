@@ -100,6 +100,13 @@ For each finding, note:
 - What you observed (specific, with quotes or references)
 - Why it matters (impact on downstream work)
 - Suggested action (fix, clarify, investigate, or accept as-is)
+- Class: material (behavior, data, security, required contracts, or missing proof) or editorial
+  (wording, formatting, or preferences that do not change meaning), with the affected acceptance criterion
+
+A revision verdict needs an unresolved material finding or an unmet explicit user/project
+requirement. Editorial-only notes remain visible and can be corrected in the authorized pass;
+they do not require another model review unless the user or project explicitly requires one.
+Preserve every required approval and verification check.
 
 ## Step 4: Present Findings
 

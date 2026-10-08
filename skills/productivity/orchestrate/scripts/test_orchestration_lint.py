@@ -147,6 +147,24 @@ class OrchestrationLintTests(unittest.TestCase):
             fixture.write_contract()
             self.assert_fail(fixture, "review", "RECON_FIELD")
 
+    def test_pass_recon_with_wrong_observation_is_rejected(self) -> None:
+        with Fixture() as fixture:
+            fixture.contract["recon_gate"][0]["observed"] = {"files": 0}
+            fixture.write_contract()
+            self.assert_fail(fixture, "review", "RECON_MISMATCH")
+
+    def test_pass_recon_with_missing_expected_field_is_rejected(self) -> None:
+        with Fixture() as fixture:
+            fixture.contract["recon_gate"][0]["observed"] = {"summary": "checked"}
+            fixture.write_contract()
+            self.assert_fail(fixture, "review", "RECON_MISMATCH")
+
+    def test_pass_recon_allows_additional_observed_evidence(self) -> None:
+        with Fixture() as fixture:
+            fixture.contract["recon_gate"][0]["observed"]["summary"] = "checked"
+            fixture.write_contract()
+            self.assert_pass(fixture, "review")
+
     def test_stale_plan_version_is_rejected(self) -> None:
         with Fixture() as fixture:
             fixture.contract["cycle"]["plan_version"] = "v1"
