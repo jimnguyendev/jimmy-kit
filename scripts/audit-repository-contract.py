@@ -211,17 +211,26 @@ def main() -> int:
     )
     if listed.returncode or len(listed.stdout.splitlines()) != expected:
         errors.append(f"inventory smoke: list-skills.sh did not return {expected} skills")
-    with tempfile.TemporaryDirectory(prefix="jimmy-kit-links-") as destination:
-        linked = subprocess.run(
-            ["bash", str(root / "scripts" / "link-skills.sh"), destination],
-            cwd=root,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        entries = list(Path(destination).iterdir())
-        if linked.returncode or len(entries) != expected or not all(path.is_symlink() for path in entries):
-            errors.append(f"link smoke: link-skills.sh did not create {expected} isolated symlinks")
+    for mode in ("symlink", "copy"):
+        with tempfile.TemporaryDirectory(prefix=f"jimmy-kit-{mode}-") as destination:
+            command = [sys.executable, str(root / "scripts" / "kit.py"), "install", "--target", destination]
+            if mode == "copy":
+                command.append("--copy")
+            else:
+                command = ["bash", str(root / "scripts" / "link-skills.sh"), destination]
+            installed = subprocess.run(command, cwd=root, capture_output=True, text=True, check=False)
+            entries = list(Path(destination).iterdir())
+            if installed.returncode or len(entries) != expected or any(path.is_symlink() != (mode == "symlink") for path in entries):
+                errors.append(f"{mode} smoke: kit.py did not install {expected} isolated skills")
+            for name in ("orchestrate", "tdd-go", "backend-go-testing", "reality-gate", "verify-app"):
+                if not (Path(destination) / name / "SKILL.md").is_file():
+                    errors.append(f"{mode} smoke: required skill missing: {name}")
+            for entry in entries:
+                if (entry / "CODEX_ORCHESTRATION.md").exists():
+                    errors.append(f"{mode} smoke: removed adapter distributed: {entry.name}")
+                for path in entry.rglob("*.md"):
+                    if path.name != "SCENARIO.md" and "codex-orchestration" in path.read_text(encoding="utf-8").lower():
+                        errors.append(f"{mode} smoke: removed plugin reference distributed: {path}")
 
     if errors:
         for error in errors:
@@ -232,7 +241,7 @@ def main() -> int:
     print(
         "repository-contract-audit: PASS "
         f"({expected} skills, {len(vendored)} vendored; catalog, metadata, links, language, paths, "
-        "runtime references, syntax, inventory/link smoke)"
+        "runtime references, syntax, inventory/install smoke)"
     )
     return 0
 

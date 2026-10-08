@@ -49,9 +49,9 @@ Explicit seat labels are authoritative. Omitted Planner means `root`; omitted Ad
 `none`. Never silently move a model between seats or substitute an unavailable required
 route. A task-local override is not persisted unless the user asks.
 
-For `codex-orchestration`, read [CODEX_ORCHESTRATION.md](CODEX_ORCHESTRATION.md) before
-planning or dispatch. The installed plugin routes roles; it does not replace this skill's
-packet state or the root's authority.
+This kit supports the `legacy` workflow below. If a saved sprint or explicit invocation
+requires another workflow, stop and ask for a supported workflow instead of installing a
+routing plugin or silently changing the requested route.
 
 For `legacy`, resolve the executor from current args → sprint pin →
 `.claude/orchestrator.json` → `sonnet`:
@@ -71,8 +71,8 @@ For `legacy`, resolve the executor from current args → sprint pin →
    Verify exact files, symbols, ADRs, legacy sources, and acceptance commands at their source.
 3. **Plan.** Root writes the plan, or obtains a Planner draft. The review unit is the **next release unit**
    (normally one packet), while a longer roadmap records only high-level goals and
-   dependencies. With an Advisor, run the bounded review loop in the Codex-Orchestration reference
-   and persist [PLAN_REVIEW.md](PLAN_REVIEW.md).
+   dependencies. When an Advisor is explicitly requested, record its verdict and the root's
+   disposition of findings in [PLAN_REVIEW.md](PLAN_REVIEW.md).
    No executor starts from an unapproved plan.
 4. **Packetize.** Copy [PACKET.md](PACKET.md). One packet is one bounded change/commit with
    explicit file ownership, stop conditions, and exact acceptance commands.
