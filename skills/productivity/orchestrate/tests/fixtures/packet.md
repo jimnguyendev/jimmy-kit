@@ -5,6 +5,9 @@
 - Approval state: `APPROVED`
 - Acceptance contract: `contract.json`
 
+## Volume and budget
+- N/A — the linter fixture adds no query over a growing table and no loop on a hot path.
+
 ## Verdict dimensions
 - Implementation verdict: PASS
 - Evidence verdict: PASS

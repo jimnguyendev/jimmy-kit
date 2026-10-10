@@ -274,6 +274,58 @@ class OrchestrationLintTests(unittest.TestCase):
             )
             self.assert_fail(fixture, "dispatch", "PLAN_APPROVAL")
 
+    def test_missing_volume_and_budget_is_rejected(self) -> None:
+        with Fixture() as fixture:
+            mutate_text(
+                fixture.packet_path,
+                lambda text: re.sub(
+                    r"^## Volume and budget\n.*?\n(?=## )", "", text, flags=re.MULTILINE | re.DOTALL
+                ),
+            )
+            self.assert_fail(fixture, "review", "VOLUME_BUDGET")
+
+    def test_volume_and_budget_na_requires_reason(self) -> None:
+        with Fixture() as fixture:
+            mutate_text(
+                fixture.packet_path,
+                lambda text: re.sub(r"^- N/A .*$", "- N/A", text, flags=re.MULTILINE),
+            )
+            self.assert_fail(fixture, "dispatch", "VOLUME_BUDGET")
+
+    def test_volume_and_budget_placeholders_are_rejected(self) -> None:
+        with Fixture() as fixture:
+            mutate_text(
+                fixture.packet_path,
+                lambda text: re.sub(
+                    r"^- N/A .*$",
+                    "- Data volume: <rows at 13 months>\n- Budget: <p99>\n- Proof: <command>",
+                    text,
+                    flags=re.MULTILINE,
+                ),
+            )
+            self.assert_fail(fixture, "review", "VOLUME_BUDGET")
+
+    def test_volume_and_budget_with_numbers_passes(self) -> None:
+        with Fixture() as fixture:
+            mutate_text(
+                fixture.packet_path,
+                lambda text: re.sub(
+                    r"^- N/A .*$",
+                    "- Data volume: 5M ledger rows at 13 months\n"
+                    "- Budget: count p99 < 50 ms\n"
+                    "- Proof: EXPLAIN ANALYZE on a 5M-row seed",
+                    text,
+                    flags=re.MULTILINE,
+                ),
+            )
+            self.assert_pass(fixture, "dispatch")
+
+    def test_packet_template_has_volume_and_budget(self) -> None:
+        template = (SKILL_ROOT / "PACKET.md").read_text(encoding="utf-8")
+        self.assertRegex(template, r"(?m)^## Volume and budget$")
+        for label in ("Data volume:", "Budget:", "Proof:"):
+            self.assertIn(label, template)
+
     def test_every_document_coverage_pair_is_checked_in_isolation(self) -> None:
         source_bytes = {
             path: path.read_bytes()
