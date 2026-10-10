@@ -15,6 +15,7 @@ description: >-
 
 - **Create** (default when the repo has no `verify-<app>` skill): interview the repo, generate the skill and its feature map, run it once end to end. Sections 1–4.
 - **Maintain** (an existing `verify-<app>` skill, or "audit the verify skill"): follow [references/maintain.md](references/maintain.md).
+- **Delegate** (an orchestrator or a long main session needs a running-app check): hand the drive to one verification subagent with one browser. Section 5.
 
 Output of Create: `<target skills dir>/verify-<app>/SKILL.md` plus `features/` in the target repo's own agent skills directory (the one its agents already load: `.claude/skills/`, `.agents/skills/`, `.cursor/skills/`; ask if none exists), and evidence from the proving run under `.jimmy/work/verify-<app>/evidence/<run-id>/`. The generated skill lives with the project's skills because agents must load it; it is the one Jimmy Kit output that does not sit under `.jimmy/`.
 
@@ -30,7 +31,7 @@ Answer from the code first. Ask only for what cannot be observed: credentials, p
 | Run: how does it start locally? | README quickstart, Makefile, package scripts, compose files, env examples, migrations, seed data |
 | Drive: how can an agent act on it? | existing e2e or integration harnesses first; then CDP or a device tool for UI, a PTY or tmux session for CLI/TUI, HTTP for APIs, recorded messages for consumers |
 | Observe: what proves an outcome? | responses, screen state, exit codes, stored rows, emitted messages, logs |
-| Isolate: can two runs coexist? | ports, data directories, database names, topic and consumer-group names |
+| Isolate: can two runs coexist? | ports, data directories, database names, topic and consumer-group names, browser CDP port and profile directory |
 
 If the checkout does not build or start, fix that or report it precisely before generating anything. A recipe written against a broken base teaches wrong steps.
 
@@ -64,11 +65,24 @@ Follow the generated skill end to end once: Launch, Doctor, drive one mapped fea
 
 Then point the user at Maintain mode for keeping the map honest as the app changes.
 
-## 5. Hand-offs
+## 5. Delegate: one verification agent, one browser
+
+When an orchestrator, or any session whose context matters, needs a running-app check, it hands the drive to **one** verification subagent instead of driving itself.
+
+- The subagent owns one browser (its own CDP port and a profile directory under `/tmp`), its own service ports, and the evidence directory. It never attaches to a browser another agent or the user opened: tools that act on the active tab then read someone else's screen.
+- The prompt names the features or pages, the feature-map entry or spec each must match, the ports and profile, and the return format: a verdict per item, the evidence paths, and any gaps (API, product, harness). The subagent returns findings and paths, not DOM trees or inline screenshots.
+- The delegating agent opens the evidence it needs and drives itself only where a judgement is needed.
+- Implementation agents running in parallel never open a browser. They prove their change with the gates and calls against the real service, and report how to reach each state they built (URL + seed step) for the verification agent.
+- Many items: still one agent, driving them in sequence. Parallel readers are fine (Maintain step 3); parallel drivers on one machine are not.
+
+Why: in the origin run (one machine, many parallel executors) about ten executor browsers overloaded the machine, one executor switched the shared browser's active tab while the root was verifying, and the root's own driving used most of a 1M-token context on DOM trees and screenshots. One verification agent with one browser then checked every admin page against its spec in two rounds.
+
+## 6. Hand-offs
 
 - `reality-gate` decides what counts as acceptable evidence for a seam; this skill supplies the executable recipe that produces it.
 - `diagnose` Phase 1 reuses a matching Drive recipe as its feedback loop, keeping a narrower failing test where one is cheaper.
 - `quality-gates` reads the evidence directory; a run without it is exit 2.
+- `orchestrate` uses section 5 for its Verify step and for looking at every frontend land.
 
 ## Applied context (edtech)
 

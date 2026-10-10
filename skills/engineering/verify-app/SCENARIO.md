@@ -50,4 +50,4 @@
 - [ ] The subagent returns a verdict per page and evidence paths, not DOM dumps or inline screenshots; the orchestrator reads the evidence and drives itself only where a judgement is needed.
 - [ ] No executor opens a browser; the verification run never attaches to a browser another agent uses.
 
-**Status:** [EXIT 2 — specified] Origin evidence: on one machine about ten executor browsers overloaded it, and a tool that acts on the active tab read another packet's screen; the root's own driving filled most of a 1M-token context. One verification agent with one browser then verified 16 pages in two rounds.
+**Status:** [EXIT 2 — specified] Origin evidence: on one machine about ten executor browsers overloaded it, and a tool that acts on the active tab read another packet's screen; the root's own driving filled most of a 1M-token context. One verification agent with one browser then checked every admin page against its spec in two rounds.
