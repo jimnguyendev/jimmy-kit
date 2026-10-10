@@ -12,6 +12,10 @@ executor prose is not evidence.
   any call to another service, and any list/response path — including one you only reordered,
   paged, filtered or joined: a `SELECT *`, a new `ORDER BY`, an added join, or one extra call
   per item changes what a request costs without changing what it returns.
+- Task runner or test setup loads a developer env file (`-include .env` + `export`, dotenv in a
+  test bootstrap)? `yes` → AC-008 is required.
+- Does a test compare an app-minted time with the database clock, or depend on a calendar date?
+  `yes` → the two clock lines in the reviewer checklist apply.
 - Behavior change? `yes` → list tests allowed to change + invariant that must hold.
   `no` → test edits forbidden.
 
@@ -95,6 +99,17 @@ a loop that spends one query per item, is rejected even when every other AC is g
 batched, bounded, projected, split, or precomputed (mechanism 8). If the ratio is deliberate,
 the packet says why in one line.
 
+## AC-008 — harness isolation (required when the task runner or test setup loads an env file)
+
+The suite must pass on the code's defaults, not on the developer's `.env` (mechanism 9).
+
+```
+make test-acceptance >/tmp/ac008-make.log 2>&1; echo "make exit=$?"
+go test -tags integration -count=1 -v ./<acceptance package>/ >/tmp/ac008-bare.log 2>&1; echo "bare exit=$?"
+grep -c '^--- PASS' /tmp/ac008-make.log /tmp/ac008-bare.log
+# paste: both exits 0 and equal PASS counts; plus the harness line that clears the .env.example keys
+```
+
 ## Reviewer checklist
 
 - [ ] Every AC-002 output pasted, not summarized.
@@ -108,3 +123,7 @@ the packet says why in one line.
 - [ ] No query or remote call was introduced inside a loop over request data; no list path
       lost its bound; no large column was added to a SELECT that also sorts, groups or
       de-duplicates.
+- [ ] AC-008 pasted when an env file is loaded: same PASS count through the task runner and directly.
+- [ ] No exact comparison between an app-minted time and the database's `now()`; rows are made
+      due on the database clock, not by sleeping; time assertions state a tolerance.
+- [ ] No test depends on a literal calendar date staying in the future.

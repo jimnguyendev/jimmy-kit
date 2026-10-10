@@ -8,6 +8,7 @@
 # Portable: no repo-specific paths. Go-focused counts; non-Go repos get the generic
 # section only. Extend at the "STACK-SPECIFIC" block for PHPUnit/Jest/Vitest/etc.
 #
+# Mechanisms 1-10 are named in SKILL.md section 2.
 # Verdict legend: RED = mechanism present, AMBER = suspicious, GREEN = no signal.
 # Counts are heuristics; confirm every RED by opening the cited files.
 
@@ -60,6 +61,31 @@ if [ -f .env.example ] || [ -f .env.sample ]; then
 else
   verdict AMBER "no .env.example (mechanism 5)"
 fi
+
+# Developer environment reaching the tests (mechanism 9)
+TEST_SETUP="$(printf '%s\n' "$ALL" | grep -E '(_test\.go|\.(test|spec)\.[jt]sx?|setupTests\.[jt]s|(vitest|jest)\.setup\.[jt]s|conftest\.py|_test\.py)$|(^|/)(testsupport|testutil|testhelpers?|harness)[^/]*/.*\.(go|[jt]s|py)$')"
+# shellcheck disable=SC2086
+CLEARS_ENV="$(grepl '\.env\.example' $TEST_SETUP | head -3 | tr '\n' ' ')"
+for runner in Makefile makefile GNUmakefile; do
+  [ -f "$runner" ] || continue
+  if grep -qE '^[[:space:]]*-?include[[:space:]]+[^[:space:]]*\.env' "$runner" &&
+     grep -qE '^[[:space:]]*export([[:space:]]*$|[[:space:]]+[A-Za-z_])' "$runner"; then
+    if [ -n "$CLEARS_ENV" ]; then
+      verdict AMBER "$runner includes .env and exports it; test harness mentions .env.example ($CLEARS_ENV) — confirm it clears every key (mechanism 9)"
+    else
+      verdict RED "$runner includes .env and exports it to every recipe, tests included; no harness clears the keys (mechanism 9)"
+    fi
+  fi
+  break  # case-insensitive filesystems match every spelling
+done
+for runner in Justfile justfile; do
+  [ -f "$runner" ] || continue
+  grep -qE '^[[:space:]]*set[[:space:]]+dotenv-load' "$runner" && verdict AMBER "$runner loads .env into every recipe (mechanism 9)"
+  break
+done
+# shellcheck disable=SC2086
+DOTENV_TESTS="$(grepl 'godotenv\.(Load|Overload)|dotenv/config|dotenv\.config\(|load_dotenv\(' $TEST_SETUP | head -3 | tr '\n' ' ')"
+[ -n "$DOTENV_TESTS" ] && verdict AMBER "test setup loads a dotenv file, so the developer's values reach the suite (mechanism 9): $DOTENV_TESTS"
 
 REPORT_SCRIPTS="$(printf '%s\n' "$ALL" | grep -iE '(report|handoff|audit).*\.md$' | xargs grep -hoE '\b[a-zA-Z0-9_-]+\.(py|sh)\b' 2>/dev/null | sort -u)"
 MISSING=""
@@ -165,6 +191,15 @@ if [ -f go.mod ]; then
   # shellcheck disable=SC2086
   [ "$n_hidden" -gt 0 ] && verdict AMBER "$n_hidden column(s) are read into fields the response never returns — a payload fetched to be thrown away; check none rides through an ORDER BY and put bytes-read in the AC (mechanism 8): $(grepl "$HIDDEN_RE" $SRC | head -3 | tr '\n' ' ')"
 
+  # Two clocks — app time compared with the database clock (mechanism 10)
+  # shellcheck disable=SC2086
+  CLOCK_MIX="$(grepl 'time\.Now\(\)' $TESTS | xargs grep -lE '(now\(\)|NOW\(\)|CURRENT_TIMESTAMP)' 2>/dev/null | sort -u)"
+  n_clock=$(count "$CLOCK_MIX" '.')
+  # shellcheck disable=SC2086
+  n_dates=$(grepc 'time\.Date\(20[0-9]{2}|"20[0-9]{2}-[01][0-9]-[0-3][0-9]' $TESTS)
+  echo "  test files mixing time.Now() with SQL now(): $n_clock · literal calendar dates in tests: $n_dates"
+  [ "$n_clock" -gt 0 ] && verdict AMBER "$n_clock test file(s) compare app time with the database clock — each comparison needs a tolerance, or the row made due on the DB clock (mechanism 10): $(printf '%s\n' "$CLOCK_MIX" | head -3 | tr '\n' ' ')"
+
   if [ "$PROBE" -eq 1 ] && [ -n "$INTEG" ]; then
     echo
     echo "## Probe — silent skip (mechanism 1)"
@@ -188,5 +223,6 @@ fi
 
 echo
 echo "Next: open every RED/AMBER citation, map the last real-run bugs to mechanisms, compare the"
-echo "test engine with SELECT VERSION() on the deployed DSN (mechanism 7), then"
+echo "test engine with SELECT VERSION() on the deployed DSN (mechanism 7), run the suite through the task"
+echo "runner and directly (mechanism 9), then"
 echo "write ACs with templates/acceptance-criteria.md."

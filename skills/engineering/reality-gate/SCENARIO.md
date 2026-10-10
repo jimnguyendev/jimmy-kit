@@ -69,7 +69,7 @@ reported a false failure). Read the log after the process exits.
 
 ## 2026-10-10 environment-leak and two-clock scenario (written BEFORE skill changes)
 
-**Status:** [EXIT 2 — specified; the origin bugs are the only evidence so far].
+**Status:** [EXIT 2 for instruction behavior; audit heuristics PASS] 2026-10-10: on a synthetic repo, `audit.sh` reported RED for a Makefile with `-include .env` + `export` and no harness, AMBER once a harness referenced `.env.example`, and AMBER for a test mixing `time.Now()` with SQL `now()`. On the origin repo (read-only) it reported AMBER for the Makefile because the fixed harness clears the `.env.example` keys, and listed 11 test files mixing the two clocks. No independent model run of Inputs A and B yet.
 
 **Input A:** "The acceptance suite passes with `go test -tags integration ./...` but fails under `make test-acceptance`. The first guess was a cold container; the fix for it did not help."
 

@@ -209,6 +209,66 @@ the endpoint answered `Error 1038: Out of sort memory`. `MAX(LENGTH(result))` on
 table would have printed `350621` before a line of code was written. The fix projected the
 branch in SQL: 350 KB → 7 KB per dictation row, 65 KB → 30 B per shadowing row.
 
+## 9. Test harness reads the developer's environment
+
+**How it arises.** A Makefile starts with `-include .env` and a bare `export`, so every recipe,
+`make test-acceptance` included, runs with the developer's local values: a provider switched to
+live mode, a different port, a feature flag, a shorter timeout. The harness builds config from
+the environment like the real process does, so the suite now tests the developer's machine
+instead of the code's defaults. The same test passes under plain `go test` and fails under
+`make`, or passes only on the one laptop whose `.env` happens to fit. Dotenv loaders in a test
+bootstrap (`godotenv.Load` in `TestMain`, `dotenv/config` in a Jest or Vitest setup file) do the
+same.
+
+**Detect.** A failure that depends on how the suite was started. `grep -nE '^-?include .*\.env|^export' Makefile`;
+dotenv calls in test setup; run the suite through the task runner and directly, and compare.
+Read the failing assertion line before forming a hypothesis: in the origin run the first guess
+was a cold container, its fix was reverted, and the assertion line showed a dev value in one step.
+
+**Fix.**
+- The harness clears every key listed in `.env.example` before it builds config, then sets only
+  what the test needs. `.env.example` is already the list of keys the service reads (mechanism 5
+  keeps it honest), so the clear list cannot drift:
+
+  ```go
+  // acceptance harness, before config.Load
+  for _, k := range envExampleKeys(repoRoot) { // KEY=value lines, comments skipped
+      t.Setenv(k, "")  // registers the restore at cleanup
+      _ = os.Unsetenv(k) // unset, not empty: loaders treat the two differently
+  }
+  ```
+
+- Keep the developer's `.env` and the runner's include; the convenience is real. The harness, not
+  the developer, owns what a test sees.
+- AC-008 runs the suite both ways and pastes both summaries; the test counts must match.
+
+## 10. App clock vs database clock
+
+**How it arises.** A writer stamps `next_attempt_at` with the app's clock; the claim query
+compares it with the database's `now()`. Two clocks decide one comparison. On a laptop the
+database runs in a container VM whose clock drifts from the host by milliseconds after hours of
+uptime; in production they are different machines. A test that inserts a due row and claims it
+at once finds nothing whenever the database trails the app; an exact `expires_at <= now()`
+assertion fails on one machine or branch and passes on another. A literal calendar date in a
+test (`send_at: "2026-10-12"`) is the same bug on a longer fuse: it stays valid until the day passes.
+
+**Detect.** Test files that use both `time.Now()` (or `Date.now()`) and SQL `now()` /
+`CURRENT_TIMESTAMP` (`audit.sh` lists them); due-time columns written from code and compared
+in SQL; flakes that follow machine uptime or the time of day; literal dates near today.
+
+**Fix.**
+- One clock per comparison in production code: either the database stamps and compares
+  (`DEFAULT now()`, `SET next_attempt_at = now() + $1::interval`), or the app passes its time
+  into the query (`WHERE next_attempt_at <= $1`). Do not mix within one column's life.
+- Tests make a row due on the database clock (`UPDATE … SET next_attempt_at = now() - interval '1 second'`,
+  a `makeDue` helper) instead of sleeping until the app's time catches up.
+- Time assertions state a tolerance (`within 1 s of now()`), never exact equality or `<=`
+  across the two clocks.
+- Dates in tests derive from the clock under test (`now + 48h`) or an injected fake clock.
+- State what the skew does in production. In the origin run a due row waited one more poll
+  (milliseconds); for leases or expiry the same skew can act early, and that needs a fence,
+  not a tolerance.
+
 ## Mapping bugs to mechanisms (worked example)
 
 | Real-run bug | Mechanism |
@@ -218,6 +278,8 @@ branch in SQL: 350 KB → 7 KB per dictation row, 65 KB → 30 B per shadowing r
 | `data: null` where client expects `[]` | 6 |
 | Cache layer bug found only on the running pod | 1 (cycle had zero integration AC) + 5 |
 | Endpoint returned wrong shape after refactor, suite green | 3 (fake pinned the old contract) |
+| Acceptance test fails only under `make`; the cold-container fix did not help | 9 (`.env` exported into the harness) |
+| Send-then-claim test finds nothing after hours of uptime; an exact expiry assertion fails on one branch only | 10 (app clock vs container clock) |
 
 ## Porting this skill to another repo
 
