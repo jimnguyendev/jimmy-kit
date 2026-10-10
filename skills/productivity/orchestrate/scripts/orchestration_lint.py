@@ -273,6 +273,27 @@ class Linter:
             if not re.search(pattern, body, re.IGNORECASE):
                 self.error("VERDICT_DIMENSION", f"packet is missing {name} verdict")
 
+    def validate_volume_budget(self) -> None:
+        """A packet states the data volume and budget it is built for, or why none applies."""
+        body = self.section(self.packet, "Volume and budget")
+        if body is None:
+            self.error("VOLUME_BUDGET", "packet Volume and budget section is missing")
+            return
+        body = re.sub(r"<!--.*?-->", "", body, flags=re.DOTALL)
+        lines = [line.strip() for line in body.splitlines() if line.strip()]
+        if not lines:
+            self.error("VOLUME_BUDGET", "packet Volume and budget section is empty")
+            return
+        not_applicable = re.match(r"^-?\s*`?N/A`?\s*[:\-\u2014]*\s*(.*)$", lines[0], re.IGNORECASE)
+        if not_applicable:
+            if len(re.findall(r"[A-Za-z]", not_applicable.group(1))) < 10:
+                self.error("VOLUME_BUDGET", "Volume and budget N/A requires a reason")
+            return
+        for label in ("Data volume", "Budget", "Proof"):
+            value = self.field(r"^\s*-\s*" + label + r":\s*(.*)$", body)
+            if not value or re.fullmatch(r"<[^>]*>", value) or len(re.findall(r"[A-Za-z0-9]", value)) < 3:
+                self.error("VOLUME_BUDGET", f"Volume and budget is missing a measured {label.lower()}")
+
     def validate_docs(self) -> None:
         coverage = self.contract.get("document_coverage")
         if not isinstance(coverage, list):
@@ -327,6 +348,8 @@ class Linter:
                 self.error("ACCEPTANCE_EXTRA", f"{label} has unknown IDs: {', '.join(extra)}")
 
         self.validate_verdicts()
+        if self.phase in ("review", "dispatch"):
+            self.validate_volume_budget()
         if self.phase == "dispatch":
             plan_status = self.field(r"^\s*-\s*Status:\s*`?([^`\s]+)", self.plan)
             if (plan_status or "").upper() != "APPROVED":

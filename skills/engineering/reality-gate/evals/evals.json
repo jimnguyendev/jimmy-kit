@@ -5,7 +5,7 @@
       "id": 1,
       "name": "green-suite-real-run-failures",
       "prompt": "All unit and integration tests pass, but a QA agent driving the real UI against the dev database reports many 500s and wrong shapes. Explain why and propose what to change first.",
-      "expected_output": "Maps the failures to the eight mechanisms with repo evidence (silent skip probe, hand-written schema, fakes at the seam, missing tracked replay suite, untested wiring, no golden contract, test engine differing from the deployed engine, no cost number at the seam) and proposes reality ACs before more unit tests.",
+      "expected_output": "Maps the failures to the ten mechanisms with repo evidence (silent skip probe, hand-written schema, fakes at the seam, missing tracked replay suite, untested wiring, no golden contract, test engine differing from the deployed engine, no cost number at the seam, developer env reaching the harness, app clock compared with the database clock) and proposes reality ACs before more unit tests.",
       "assertions": [
         "Runs or describes the silent-skip probe with Docker down",
         "Checks the test DDL against the real schema rather than trusting fixtures",
@@ -40,7 +40,7 @@
       "id": 4,
       "name": "porting-to-new-repo",
       "prompt": "Apply this skill to a PHP Laravel repo that has PHPUnit tests and no Docker in CI.",
-      "expected_output": "Runs the audit script for what it can count, adds PHPUnit-specific greps at the marked block, keeps the eight-mechanism table and AC rules unchanged, and adds the agent-instructions pointer.",
+      "expected_output": "Runs the audit script for what it can count, adds PHPUnit-specific greps at the marked block, keeps the ten-mechanism table and AC rules unchanged, and adds the agent-instructions pointer.",
       "assertions": [
         "Does not depend on Go-specific tooling for the AC rules",
         "Adds the pointer to AGENTS.md or CLAUDE.md",
@@ -57,6 +57,30 @@
         "States the read cost as a printed number in the AC, not as a judgement",
         "Does not propose raising sort_buffer_size as the fix",
         "Requires the regression test to run on the deployed engine version"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "fails-only-under-make",
+      "prompt": "An acceptance test passes with `go test -tags integration ./...` but fails under `make test-acceptance`. The first fix assumed a cold container and did not help. Diagnose and write the AC.",
+      "expected_output": "Reads the failing assertion and what the Makefile exports before any timing theory; finds `-include .env` plus `export` (mechanism 9); fixes the harness to clear every `.env.example` key before building config; writes AC-008 running the suite through make and directly with equal PASS counts.",
+      "assertions": [
+        "Inspects what the task runner exports before proposing a timing fix",
+        "Names the developer env leaking into the harness as the cause",
+        "Clears keys in the harness rather than deleting the developer's .env",
+        "Requires the suite to pass both through make and directly"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "two-clock-claim-flake",
+      "prompt": "A worker test inserts a due row and claims it at once. It passes on CI and fails on one laptop after a few hours of uptime. The writer sets next_attempt_at with time.Now(); the claim query uses now().",
+      "expected_output": "Identifies two clocks deciding one comparison (mechanism 10); fixes the test by making the row due on the database clock rather than sleeping; asks for a tolerance on any cross-clock time assertion; flags literal calendar dates in tests; states the production effect of the skew.",
+      "assertions": [
+        "Names app clock vs database clock as the cause",
+        "Does not propose a sleep or retry loop as the fix",
+        "Makes the row due on the database clock in the test",
+        "States what the skew does in production"
       ]
     }
   ]

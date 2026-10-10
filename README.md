@@ -54,7 +54,10 @@ python3 scripts/kit.py groups                  # list groups and counts
 Pair `core` with any other group: it carries the routing and gates the other groups hand off to. A backend Go service typically wants `core,engineer,golang,database`.
 
 The generic `orchestrate` skill remains in `core`; it has no external role-routing plugin
-dependency. Installation distributes its local packet, planning, and verification helpers.
+dependency. Installation distributes its local packet, planning, and verification helpers, a
+gating land script (`scripts/land.sh` + `scripts/gates.sh`), and a PreCompact/SessionStart
+hook (`scripts/orchestrate-context.sh`) that you install once into `~/.claude/hooks/`
+(`references/context-and-resume.md`).
 
 Full guide (Claude Code / Codex / Cursor, global vs per-repo, where outputs go, how to start a session, how to make agents prove changes on the running app with `verify-app`): **`docs/USAGE.md`**.
 

@@ -10,6 +10,7 @@
 - Root: <current task model>
 - Planner: <route or root> — <route state>
 - Advisor: <route or none> — <route state>
+- Advisor family and scope: <model family; must differ from root's when the plan touches queue, lease, retry, fencing or idempotency> · read plan + repo at `<commit>` (landed code included)
 - Executor: <route> — <route state>
 - Advisor reviews: 0/5
 - Acceptance contract: `.orchestrate/contracts/NNN-<slug>.json`

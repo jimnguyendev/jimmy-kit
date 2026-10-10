@@ -66,3 +66,15 @@ reported a false failure). Read the log after the process exits.
 
 **Expected:** The AC names the evidence a seam change needs (real schema, container on the deployed engine version, cost number) and points at the verify skill's renewal recipe for the behavior proof; it does not restate the recipe's steps.
 
+
+## 2026-10-10 environment-leak and two-clock scenario (written BEFORE skill changes)
+
+**Status:** [EXIT 2 for instruction behavior; audit heuristics PASS] 2026-10-10: on a synthetic repo, `audit.sh` reported RED for a Makefile with `-include .env` + `export` and no harness, AMBER once a harness referenced `.env.example`, and AMBER for a test mixing `time.Now()` with SQL `now()`. On the origin repo (read-only) it reported AMBER for the Makefile because the fixed harness clears the `.env.example` keys, and listed 11 test files mixing the two clocks. No independent model run of Inputs A and B yet.
+
+**Input A:** "The acceptance suite passes with `go test -tags integration ./...` but fails under `make test-acceptance`. The first guess was a cold container; the fix for it did not help."
+
+**Expected A:** Reads what the task runner exports before forming a hypothesis (`-include .env` plus `export` in a Makefile, a dotenv loader in a test bootstrap); names mechanism 9; the fix is a harness that clears every key listed in `.env.example` before it builds config, plus AC-008 running the suite both through the task runner and directly; it does not delete the developer's `.env`.
+
+**Input B:** "A worker test that sends then claims at once finds nothing on one machine after a few hours of uptime; it passes on CI and on another branch."
+
+**Expected B:** Notices that the writer stamps time with the app clock while the claim compares with the database's `now()`; names mechanism 10; makes the row due on the database clock in the test (or compares with a stated tolerance) instead of sleeping; flags any test that pins a calendar date which will pass into the past; states the production effect (one poll of delay) rather than calling it harmless.

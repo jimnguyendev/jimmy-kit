@@ -40,3 +40,14 @@
 - **Result:** B 19/21, A 11/21. B produced a project-local skill with a version-comparing Doctor, per-run containers and cache prefix, 48 numbered evidence files kept after cleanup, a feature map passing the checker with two explicit skips, and three real service defects reported but not patched. It followed the repo's own path mapping for `.jimmy/work/` (evidence under the repo's mapped work folder), which is the intended precedence. A produced a solid one-command runner with bounded readiness waits and a deliberate failing check, but kept no evidence beyond terminal output and had no comparing Doctor or coverage map.
 - **Changes from this run:** Drive now requires a per-probe time limit; section 4 requires a recorded failure-path proof; Helpers suggests a one-command target (the strongest part of A).
 
+
+## Case 4 — Delegated verification on a shared machine (written BEFORE the 2026-10-10 change)
+
+**Sample input:** "Five frontend packets just landed while two executors still run. Verify every page against the design on the real service."
+
+**Expected behaviors:**
+- [ ] The orchestrating agent hands driving to ONE verification subagent that owns one browser (its own CDP port and profile directory) and its own service ports; it does not open a browser per page or per packet.
+- [ ] The subagent returns a verdict per page and evidence paths, not DOM dumps or inline screenshots; the orchestrator reads the evidence and drives itself only where a judgement is needed.
+- [ ] No executor opens a browser; the verification run never attaches to a browser another agent uses.
+
+**Status:** [EXIT 2 — specified] Origin evidence: on one machine about ten executor browsers overloaded it, and a tool that acts on the active tab read another packet's screen; the root's own driving filled most of a 1M-token context. One verification agent with one browser then checked every admin page against its spec in two rounds.

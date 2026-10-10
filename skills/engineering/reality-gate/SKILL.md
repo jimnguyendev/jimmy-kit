@@ -11,7 +11,7 @@ user-invocable: true
 license: MIT
 compatibility: "Stack-agnostic rules; bundled audit script counts Go repos in depth and degrades gracefully elsewhere."
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 allowed-tools: Read Edit Write Glob Grep Bash Agent AskUserQuestion
 ---
 
@@ -23,7 +23,7 @@ allowed-tools: Read Edit Write Glob Grep Bash Agent AskUserQuestion
 
 Choose one mode:
 
-- **Audit** (default when tests are green but real runs fail): run `scripts/audit.sh [repo] --probe`, confirm each RED by opening the cited files, map the last real-run bugs to the eight mechanisms, write the report to `.jimmy/docs/reality-gate-audit.md` (kit default), or to the report location the target repo's AGENTS.md already names.
+- **Audit** (default when tests are green but real runs fail): run `scripts/audit.sh [repo] --probe`, confirm each RED by opening the cited files, map the last real-run bugs to the ten mechanisms, write the report to `.jimmy/docs/reality-gate-audit.md` (kit default), or to the report location the target repo's AGENTS.md already names.
 - **Gate**: write or review acceptance criteria for a packet/PR with `templates/acceptance-criteria.md`. Seam changes get a reality AC; exit code 0 is not evidence.
 - **Build**: stand up the in-repo regression replay suite (Workflow C) on the first seam change, then grow it one case per real-run bug.
 
@@ -52,11 +52,11 @@ Two corollaries, each earned by a bug that passed every gate above (2026-09-14):
   nothing about the engine can still see that it is wrong.
 
 Do not demand test-first for its own sake. Ask for tests, then gate on outcome evidence.
-Strict TDD-in-the-loop costs tokens and still produces the eight failures below. A rule that
+Strict TDD-in-the-loop costs tokens and still produces the ten failures below. A rule that
 lives in prose or a table, but not in a checklist or an acceptance command, does not exist
 for an agent: it optimizes for the AC it is given.
 
-## 2. The eight mechanisms (measured by `scripts/audit.sh`; 7 and 8 are heuristics the AC then proves)
+## 2. The ten mechanisms (measured by `scripts/audit.sh`; 7, 8 and 10 are heuristics the AC then proves)
 
 | # | Mechanism | Tell-tale | Fix (details in [REFERENCE.md](REFERENCE.md)) |
 |---|---|---|---|
@@ -68,6 +68,8 @@ for an agent: it optimizes for the AC it is given.
 | 6 | No client contract evidence | zero golden responses; many `omitempty`; OpenAPI never validated | golden pairs captured from the real client; response validated against the schema |
 | 7 | Test engine is not the real engine | container image pinned to a major (`mysql:8`) while the deployed server reports another version; nobody compares them | pin the image to the deployed version from ONE constant; an `engine-parity` script prints both `VERSION()`s side by side (template in REFERENCE §7) |
 | 8 | Cost blindness at the seam | the AC for a seam change states no cost number at all — queries, rows or bytes per request, calls to another service, response size — so a correct-but-expensive change is green on every gate | AC-007: one measured number per seam touched, taken on real-sized data; the reviewer reads a number, not a judgement (REFERENCE §8 lists which number per seam) |
+| 9 | Test harness reads the developer's environment | a test fails (or passes) only under the task runner; the Makefile does `-include .env` plus `export`, or test setup loads a dotenv file, so local values reach the suite | the harness clears every key listed in `.env.example` before it builds config; AC-008 runs the suite through the task runner and directly, both green with the same test count |
+| 10 | App clock vs database clock | the app stamps a time and the database compares it with its own `now()` (or the reverse); exact `<=` assertions across the two; a test pins a calendar date that will pass | one clock per comparison; tests make a row due on the database clock instead of sleeping; time assertions carry a stated tolerance; dates derive from the clock under test |
 
 For behavior that is proven by driving the running app (UI, API, webhook, consumer), the executable recipe lives in a project-local verify skill built by `verify-app`; this skill decides what that recipe's evidence must contain.
 
@@ -77,7 +79,10 @@ For behavior that is proven by driving the running app (UI, API, webhook, consum
    catch mechanism 1 and is safe with Docker down.
 2. Confirm every RED/AMBER at the cited file. Counts are heuristics, not verdicts.
 3. Find the latest real-run bug list (QA notes, handoff, post-mortem). Map each bug to a
-   mechanism; a bug that maps to none earns a new row before any recommendation.
+   mechanism; a bug that maps to none earns a new row before any recommendation. A test that
+   fails only under the task runner, or only on one machine or at one time of day, is a
+   mechanism 9 or 10 candidate: read the failing assertion line and what the runner exports
+   before forming a timing hypothesis.
 4. Check whether the rule that would have caught it exists somewhere un-gated (prose in a
    skill, a table, a README). Report that as the root cause, not the missing test.
 
@@ -120,6 +125,9 @@ Use [templates/acceptance-criteria.md](templates/acceptance-criteria.md). Review
 - An integration run whose engine version was never compared with the deployed one.
 - A seam change whose AC states no cost number (queries, rows, bytes or calls per request)
   when the seam is a database, another service, or a list/response path.
+- An acceptance harness that builds config from whatever the shell or task runner exported.
+- An exact comparison between an app-minted timestamp and the database's `now()`; a `sleep`
+  used to make a row due; a literal calendar date that a test needs to stay in the future.
 
 ## 7. Test-double rules the gate enforces (shared with `tdd-go`)
 
