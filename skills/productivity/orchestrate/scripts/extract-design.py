@@ -7,12 +7,14 @@ The root session reads each design page with DesignSync `get_file`; the tool res
 then in the session transcript (~/.claude/projects/<project>/<session>.jsonl). This script
 copies them byte for byte instead of having a model retype them. The last result per path
 wins. It prints one line per file (path, bytes, truncated flag) and never prints contents.
-A path that would escape <out_dir> is refused. Exit 1 when nothing was found.
+A path that would escape <out_dir>, or content that is not text or valid base64, is reported
+and skipped; the other files are still written. Exit 1 when anything was skipped or nothing found.
 """
 
 from __future__ import annotations
 
 import base64
+import binascii
 import json
 import os
 import sys
@@ -37,7 +39,12 @@ def walk(node, found: dict) -> None:
 def destination(out: str, path: str) -> str | None:
     root = os.path.realpath(out)
     dest = os.path.realpath(os.path.join(root, path.lstrip("/")))
-    return dest if dest.startswith(root + os.sep) else None
+    if dest == root:
+        return None
+    try:
+        return dest if os.path.commonpath((root, dest)) == root else None
+    except ValueError:  # different drives on Windows
+        return None
 
 
 def main(argv: list[str]) -> int:
@@ -63,9 +70,18 @@ def main(argv: list[str]) -> int:
             print(f"{path}\trefused: escapes {out}", file=sys.stderr)
             status = 1
             continue
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
         data = obj["content"]
-        raw = base64.b64decode(data) if obj.get("isBase64") else data.encode("utf-8")
+        if not isinstance(data, str):
+            print(f"{path}\tskipped: content is {type(data).__name__}, not text", file=sys.stderr)
+            status = 1
+            continue
+        try:
+            raw = base64.b64decode(data, validate=True) if obj.get("isBase64") else data.encode("utf-8")
+        except (binascii.Error, ValueError):
+            print(f"{path}\tskipped: content is not valid base64", file=sys.stderr)
+            status = 1
+            continue
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "wb") as fh:
             fh.write(raw)
         print(f"{path}\t{len(raw)}\ttruncated={obj.get('truncated')}")

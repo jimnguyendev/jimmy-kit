@@ -104,9 +104,12 @@ the packet says why in one line.
 The suite must pass on the code's defaults, not on the developer's `.env` (mechanism 9).
 
 ```
-make test-acceptance >/tmp/ac008-make.log 2>&1; echo "make exit=$?"
-go test -tags integration -count=1 -v ./<acceptance package>/ >/tmp/ac008-bare.log 2>&1; echo "bare exit=$?"
-grep -c '^--- PASS' /tmp/ac008-make.log /tmp/ac008-bare.log
+make test-acceptance >/tmp/ac008-make.log 2>&1; make_status=$?
+go test -tags integration -count=1 -v ./<acceptance package>/ >/tmp/ac008-bare.log 2>&1; bare_status=$?
+make_pass=$(grep -c '^--- PASS' /tmp/ac008-make.log || true)
+bare_pass=$(grep -c '^--- PASS' /tmp/ac008-bare.log || true)
+printf 'make exit=%s bare exit=%s make PASS=%s bare PASS=%s\n' "$make_status" "$bare_status" "$make_pass" "$bare_pass"
+test "$make_status" -eq 0 && test "$bare_status" -eq 0 && test "$make_pass" -gt 0 && test "$make_pass" -eq "$bare_pass"
 # paste: both exits 0 and equal PASS counts; plus the harness line that clears the .env.example keys
 ```
 

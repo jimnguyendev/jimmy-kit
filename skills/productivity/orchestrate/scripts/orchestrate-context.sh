@@ -7,7 +7,7 @@
 #                                                     into the new context
 #
 # The target repo is the session cwd when it has .orchestrate/SPRINT.md; otherwise the first line
-# "<session cwd> <repo path>" in $ORCH_TARGETS (default ~/.claude/orchestrate-targets) whose first
+# "<session cwd> <repo path>" (either may contain spaces) in $ORCH_TARGETS (default ~/.claude/orchestrate-targets) whose first
 # field equals the cwd. No repo found: exit 0 with no output, so the hook is safe in every session.
 #
 # Environment: ORCH_TARGETS (mapping file) · ORCH_PS_PATTERN (extended regex of executor processes
@@ -40,13 +40,17 @@ repo=""
 if [ -f "$cwd/.orchestrate/SPRINT.md" ]; then
   repo="$cwd"
 elif [ -f "$targets" ]; then
-  repo="$(awk -v c="$cwd" '$1 == c { print $2; exit }' "$targets")"
+  # "<cwd> <repo>": match the whole cwd prefix and keep the rest, so both may contain spaces
+  repo="$(awk -v c="$cwd" 'index($0, c " ") == 1 { print substr($0, length(c) + 2); exit }' "$targets")"
   case "$repo" in "~"|"~/"*) repo="$HOME${repo#\~}" ;; esac
 fi
 [ -n "$repo" ] && [ -f "$repo/.orchestrate/SPRINT.md" ] || exit 0
 state="$repo/.orchestrate"
+# Default branch: origin/HEAD, else the main checkout's branch, else main.
 main="$(git -C "$repo" symbolic-ref --short -q refs/remotes/origin/HEAD 2>/dev/null || true)"
-main="${main#origin/}"; main="${main:-main}"
+main="${main#origin/}"
+[ -n "$main" ] || main="$(git -C "$repo" symbolic-ref --short -q HEAD 2>/dev/null || true)"
+main="${main:-main}"
 pattern="${ORCH_PS_PATTERN:-opencode[0-9]*(\.exe)? run|claude -p|codex exec|remote-debugging-port}"
 
 snapshot() {

@@ -12,7 +12,7 @@
 # before `&&`: the pipe hides its exit code.
 #
 # Environment:
-#   ORCH_MAIN          default branch (default: origin/HEAD, else main)
+#   ORCH_MAIN          default branch (default: origin/HEAD, else the main checkout's branch, else main)
 #   ORCH_GATES         gate runner, called as `<runner> <worktree>` (default: gates.sh beside this file)
 #   ORCH_FORGE         github | gitlab (default: github when origin is on github.com, else gitlab)
 #   ORCH_MERGE_WAIT    seconds to wait for mergeability (default 180)
@@ -35,7 +35,9 @@ repo="$(dirname "$(git -C "$wt" rev-parse --path-format=absolute --git-common-di
 [ "$wt" != "$repo" ] || die "$wt is the main checkout; land a packet worktree"
 branch="$(git -C "$wt" symbolic-ref --short -q HEAD)" || die "$wt has a detached HEAD"
 main="${ORCH_MAIN:-$(git -C "$repo" symbolic-ref --short -q refs/remotes/origin/HEAD 2>/dev/null || true)}"
-main="${main#origin/}"; main="${main:-main}"
+main="${main#origin/}"
+[ -n "$main" ] || main="$(git -C "$repo" symbolic-ref --short -q HEAD 2>/dev/null || true)"
+main="${main:-main}"
 [ "$branch" != "$main" ] || die "refusing to land $main onto itself"
 [ -z "$(git -C "$wt" status --porcelain)" ] || die "$wt has uncommitted or untracked files; commit or clean them first"
 

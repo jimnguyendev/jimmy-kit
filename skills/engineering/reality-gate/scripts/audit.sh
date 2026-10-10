@@ -193,7 +193,10 @@ if [ -f go.mod ]; then
 
   # Two clocks — app time compared with the database clock (mechanism 10)
   # shellcheck disable=SC2086
-  CLOCK_MIX="$(grepl 'time\.Now\(\)' $TESTS | xargs grep -lE '(now\(\)|NOW\(\)|CURRENT_TIMESTAMP)' 2>/dev/null | sort -u)"
+  NOW_TESTS="$(grepl 'time\.Now\(\)' $TESTS)"
+  # grepl returns nothing for an empty file list, so no grep ever reads stdin
+  # shellcheck disable=SC2086
+  CLOCK_MIX="$(grepl '(now\(\)|NOW\(\)|CURRENT_TIMESTAMP)' $NOW_TESTS | sort -u)"
   n_clock=$(count "$CLOCK_MIX" '.')
   # shellcheck disable=SC2086
   n_dates=$(grepc 'time\.Date\(20[0-9]{2}|"20[0-9]{2}-[01][0-9]-[0-3][0-9]' $TESTS)

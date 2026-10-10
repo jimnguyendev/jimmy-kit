@@ -10,6 +10,7 @@ origin, so the land flow runs end to end without network access.
 from __future__ import annotations
 
 import base64
+import importlib.util
 import json
 import os
 import subprocess
@@ -230,6 +231,30 @@ class ContextHookTests(unittest.TestCase):
             resume = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(other)}), ORCH_TARGETS=str(targets))
             self.assertIn("Next: land 001", resume.stdout)
 
+    def test_targets_paths_may_contain_spaces(self) -> None:
+        with Repos() as r:
+            self.setup_state(r)
+            other = r.root / "my session dir"
+            other.mkdir()
+            spaced_repo = r.root / "target repo"
+            spaced_repo.symlink_to(r.repo)
+            targets = r.root / "targets"
+            targets.write_text(f"{other} {spaced_repo}\n", encoding="utf-8")
+            resume = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(other)}), ORCH_TARGETS=str(targets))
+            self.assertIn("Next: land 001", resume.stdout)
+            self.assertIn(f"===== {spaced_repo}/.orchestrate/HANDOFF.md", resume.stdout)
+
+    def test_default_branch_falls_back_to_checkout_branch(self) -> None:
+        with Repos() as r:
+            self.setup_state(r)
+            git(r.repo, "remote", "set-head", "origin", "-d")
+            git(r.repo, "branch", "-m", "main", "trunk")
+            snap = r.run("bash", str(HOOK), "snapshot", stdin=json.dumps({"cwd": str(r.repo)}))
+            self.assertEqual(snap.returncode, 0, snap.stderr)
+            auto = (r.repo / ".orchestrate" / "AUTO-STATE.md").read_text(encoding="utf-8")
+            self.assertIn("## trunk (last 12 commits)", auto)
+            self.assertIn("[p001-feature] ahead=1", auto)
+
     def test_unrelated_session_is_silent(self) -> None:
         with Repos() as r:
             result = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(r.root)}), ORCH_TARGETS=str(r.root / "none"))
@@ -266,6 +291,37 @@ class ExtractDesignTests(unittest.TestCase):
             result = subprocess.run(["python3", str(EXTRACT), str(root / "spec"), str(t)], capture_output=True, text=True)
             self.assertEqual(result.returncode, 1)
             self.assertFalse((root / "evil.txt").exists())
+
+    def test_bad_content_is_skipped_without_traceback(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            t = self.transcript(root, [
+                {"method": "get_file", "path": "a/null.html", "content": None},
+                {"method": "get_file", "path": "a/number.html", "content": 42},
+                {"method": "get_file", "path": "a/bad.png", "content": "not base64!!", "isBase64": True},
+                {"method": "get_file", "path": "a/good.html", "content": "ok"},
+            ])
+            out = root / "spec"
+            result = subprocess.run(["python3", str(EXTRACT), str(out), str(t)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 1)
+            self.assertNotIn("Traceback", result.stderr)
+            for name in ("null.html", "number.html", "bad.png"):
+                self.assertIn(f"a/{name}\tskipped", result.stderr)
+                self.assertFalse((out / "a" / name).exists())
+            self.assertEqual((out / "a/good.html").read_text(encoding="utf-8"), "ok")
+
+    def test_destination_containment(self) -> None:
+        spec = importlib.util.spec_from_file_location("extract_design", EXTRACT)
+        module = importlib.util.module_from_spec(spec)
+        assert spec.loader is not None
+        spec.loader.exec_module(module)
+        self.assertEqual(module.destination("/", "pages/Main.html"), os.path.realpath("/pages/Main.html"))
+        with tempfile.TemporaryDirectory() as tmp:
+            root = os.path.realpath(tmp)
+            self.assertEqual(module.destination(tmp, "/pages/a.html"), os.path.join(root, "pages", "a.html"))
+            self.assertIsNone(module.destination(tmp, "."))
+            self.assertIsNone(module.destination(tmp, "../x"))
+            self.assertIsNone(module.destination(tmp + "/sub", "../sub-evil/x"))
 
     def test_no_results_exits_one(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
