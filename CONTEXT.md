@@ -60,6 +60,14 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **Cost budget**: one measured number per seam a change touches — queries, rows or bytes per request for a database read, calls per request for another service, bytes for a response, rows and transaction span for a write — taken on real-sized data and pasted into the AC (AC-007), before and after. Cost should sit within an order of magnitude of what is served or done; a wider ratio is a design finding, not a tuning knob. Owned by `reality-gate`.
 
+**Environment leak**: a test harness that builds config from whatever the shell or task runner exported (a Makefile's `-include .env` + `export`, a dotenv load in test setup), so the suite tests the developer's machine instead of the code's defaults. The harness clears every key listed in `.env.example`; AC-008 runs the suite through the runner and directly. Owned by `reality-gate`.
+
+**Two clocks**: one comparison decided by two clocks — a time minted by the app compared with the database's `now()`. Host and container clocks drift, so tests make rows due on the database clock and state a tolerance; production code uses one clock per comparison. Owned by `reality-gate`.
+
+**Volume and budget**: the packet section that states the data volume a path sees after 13 months, its latency or throughput target, and the load run or `EXPLAIN ANALYZE` that proves it — or `N/A` with a reason. AC-007 is the per-request cost; this fixes the size it is measured on. Owned by `orchestrate`.
+
+**Land gate**: the land step runs every gate itself on the packet merged with the default branch, then merges with the head SHA and only then removes the worktree. An executor's gate report is not a gate. Owned by `orchestrate` (`scripts/land.sh`).
+
 **TTL-only contract**: a cache whose only correctness mechanism is expiry, chosen when a writer the service cannot observe (another system, an admin tool, a legacy backend in parallel run) makes every active invalidation dishonest. The staleness window is stated; the escape hatch for "fresh now" is an epoch bump that reaches every instance, not a shorter TTL. Data two systems write interleaved is not cached at all. Owned by `engineering-perf-optimization-process`.
 
 **Council seat**: one of four anonymized reviewer archetypes in `product-council` (CEO/Business, PD/Strategy, CTO/Engineering, UX/Human). A seat must state its **acceptance condition**; criticism without one is out of order. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3.
