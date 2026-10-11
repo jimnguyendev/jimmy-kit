@@ -83,6 +83,22 @@ When the user has not pinned a seat per packet, route by packet kind (details an
 | Hard: auth, queue/dispatch, lease/retry, rich editors, performance | Opus |
 | Root | Opus |
 
+## Sprint kickoff
+
+Before packet 001 of a new sprint, and again when a sprint is picked up from another session or
+repo, the root checks and records in SPRINT.md:
+
+1. This skill and LEARNINGS.md re-read; the workflow seats resolved (Advisor route included).
+2. Plans that touch the semantics in step 3 carry the state-machine checklist and an Advisor round
+   before their packets are written.
+3. Every packet draft has a Volume and budget section with the owner's numbers.
+4. Contracts, ADRs and shared seams land before the parallel wave that depends on them.
+5. `land.sh` and `gates.sh` are called from the installed skill, and `.orchestrate/gates` lists
+   every gate.
+
+Origin: a sprint started from another repo's session dispatched two packets without the Advisor
+round and without budgets; the owner had to point back at the previous sprint's workflow.
+
 ## Per-packet lifecycle
 
 1. **Scope.** State the outcome and boundaries. Resolve genuine ambiguity once.
@@ -118,11 +134,18 @@ When the user has not pinned a seat per packet, route by packet kind (details an
      so the wave runs without ordering or faked features.
    - **Design.** FE packets point at a design spec exported into the repo, never at a live design
      tool or canvas screenshots ([references/design-export.md](references/design-export.md)).
-   A plan that touches queue, lease, retry, fencing or idempotency semantics needs an Advisor from
-   a different model family with read access to the repo, including code already landed, and
-   reruns until no material finding is open. If none is configured, stop and ask for one.
-   Origin: three rounds took one dispatcher plan from 15 findings (9 high) to 0; the third
-   found two double-send paths in clients already merged.
+   A plan that touches queue, lease, retry, fencing or idempotency semantics needs an independent
+   Advisor that reads the repo, including code already landed, and reruns until no material
+   finding is open. Run `scripts/advisor-review.sh <plan.md>`: it uses the first installed route
+   (Codex, then opencode's read-only `plan` agent with the configured model) and writes the
+   route under the verdict. When it exits 3, no external route exists: run the round with a fresh
+   general-purpose subagent (skills `engineering-design-thinking` Review mode and
+   `codebase-design`) and mark the plan's Advisor line `same-family`. Before the first round the
+   root answers the [state-machine checklist](references/state-machine-review.md) in the plan;
+   every round answers it again, so a weaker reviewer still asks the questions that found real
+   defects. Origin: three rounds took one dispatcher plan from 15 findings (9 high) to 0; the
+   third found two double-send paths in clients already merged. Codex is not always available,
+   so the seat is a role with a fallback, not a product.
 4. **Packetize.** Copy [PACKET.md](PACKET.md). One packet is one bounded change/commit with
    explicit file ownership, stop conditions, and exact acceptance commands.
    The AC is where quality is decided, not Verify: an executor optimizes for the criteria it
@@ -166,7 +189,10 @@ When the user has not pinned a seat per packet, route by packet kind (details an
    into the packet, runs every gate in `.orchestrate/gates` (`scripts/gates.sh`) on the merged
    result, merges with the head SHA once the forge reports mergeable, and removes the worktree
    only after the merge succeeded. A clean git merge can still fail to build; a gate the land
-   step does not run is a gate nobody runs. Record PR/commit and verdict in SPRINT.md.
+   step does not run is a gate nobody runs. Call the scripts from the installed skill, never a
+   copy under `.orchestrate/bin/`: a project copy made before land ran gates kept landing without
+   them, and a root that pipes gates into `tail && land` lands on a failed gate. The context hook
+   warns when it finds such a copy. Record PR/commit and verdict in SPRINT.md.
 9. **Hygiene.** Rewrite HANDOFF.md after every land (what landed, what runs with agent IDs and
    pids, next actions, standing user rules, and `Waiting on owner` as decision briefs or `None.`,
    checked with `orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md`); the

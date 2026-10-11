@@ -25,6 +25,7 @@ GATES = SCRIPT_DIR / "gates.sh"
 LAND = SCRIPT_DIR / "land.sh"
 HOOK = SCRIPT_DIR / "orchestrate-context.sh"
 EXTRACT = SCRIPT_DIR / "extract-design.py"
+ADVISOR = SCRIPT_DIR / "advisor-review.sh"
 
 GH_STUB = textwrap.dedent(
     """\
@@ -293,6 +294,16 @@ class ContextHookTests(unittest.TestCase):
             self.assertIn("## trunk (last 12 commits)", auto)
             self.assertIn("[p001-feature] ahead=1", auto)
 
+    def test_resume_warns_about_a_project_copy_of_land(self) -> None:
+        with Repos() as r:
+            self.setup_state(r)
+            copies = r.repo / ".orchestrate" / "bin"
+            copies.mkdir()
+            (copies / "land.sh").write_text("#!/bin/sh\n", encoding="utf-8")
+            resume = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(r.repo)}))
+            self.assertIn("WARNING: " + str(copies / "land.sh") + " is a project copy", resume.stdout)
+            self.assertNotIn("gates.sh is a project copy", resume.stdout)
+
     def test_unrelated_session_is_silent(self) -> None:
         with Repos() as r:
             result = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(r.root)}), ORCH_TARGETS=str(r.root / "none"))
@@ -367,6 +378,148 @@ class ExtractDesignTests(unittest.TestCase):
             t = self.transcript(root, [])
             result = subprocess.run(["python3", str(EXTRACT), str(root / "spec"), str(t)], capture_output=True, text=True)
             self.assertEqual(result.returncode, 1)
+
+CODEX_STUB = textwrap.dedent(
+    """\
+    #!/usr/bin/env bash
+    # Codex stand-in: records argv, writes the answer to the -o file.
+    printf '%s\\n' "$@" >"$STUB_LOG"
+    out=""; prev=""
+    for a in "$@"; do [ "$prev" = "-o" ] && out="$a"; prev="$a"; done
+    printf 'PLAN_REVISE\\nA1 high: example finding\\n' >"$out"
+    """
+)
+
+OPENCODE_STUB = textwrap.dedent(
+    """\
+    #!/usr/bin/env bash
+    # opencode stand-in: records argv and cwd, prints a preamble, then the answer (or no verdict).
+    { pwd; printf '%s\\n' "$@"; } >"$STUB_LOG"
+    echo "> plan · stub"
+    if [ -n "${STUB_NO_VERDICT:-}" ]; then echo "I could not decide"; else printf 'PLAN_APPROVED\\nSM: N/A - none\\n'; fi
+    """
+)
+
+
+class AdvisorReviewTests(unittest.TestCase):
+    """Route order: codex, then opencode's read-only plan agent, else exit 3 (same-family fallback)."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory(prefix="advisor-review-")
+        self.root = Path(os.path.realpath(self.tmp.name))
+        self.repo = self.root / "repo"
+        self.repo.mkdir()
+        subprocess.run(["git", "init", "-q", str(self.repo)], check=True)
+        plans = self.repo / ".orchestrate" / "plans"
+        plans.mkdir(parents=True)
+        self.brief = plans / "001-x.md"
+        self.brief.write_text("# Plan 001\nLease and retry on the dispatcher.\n", encoding="utf-8")
+        self.bin = self.root / "bin"
+        self.bin.mkdir()
+        self.log = self.root / "stub.log"
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def stub(self, name: str, body: str) -> None:
+        path = self.bin / name
+        path.write_text(body, encoding="utf-8")
+        path.chmod(0o755)
+
+    def run_advisor(self, **extra: str) -> subprocess.CompletedProcess:
+        # Only the stubs and the tools the script needs: a real codex/opencode next to python3 or
+        # git in the same directory must not be reachable.
+        tools = self.root / "tools"
+        if not tools.exists():
+            tools.mkdir()
+            for t in ("git", "python3", "bash", "awk", "head", "tr", "cat", "dirname", "basename", "printf", "pwd"):
+                found = subprocess.run(["which", t], capture_output=True, text=True).stdout.strip()
+                if found:
+                    (tools / t).symlink_to(found)
+        env = {
+            "PATH": os.pathsep.join([str(self.bin), str(tools)]),
+            "HOME": str(self.root),
+            "STUB_LOG": str(self.log),
+            "ADVISOR_CODEX_APP": str(self.root / "no-desktop-codex"),
+        }
+        env.update(extra)
+        return subprocess.run(["bash", str(ADVISOR), str(self.brief)], cwd=self.root, env=env,
+                              capture_output=True, text=True, check=False)
+
+    def output(self) -> str:
+        return (self.brief.parent / "001-x.advisor.md").read_text(encoding="utf-8")
+
+    def test_codex_is_used_first_and_named_in_the_output(self) -> None:
+        self.stub("codex", CODEX_STUB)
+        self.stub("opencode2", OPENCODE_STUB)
+        result = self.run_advisor(ADVISOR_OPENCODE_MODEL="p/m")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("PLAN_REVISE via codex", result.stdout)
+        self.assertTrue(self.output().startswith("PLAN_REVISE"))
+        self.assertTrue(self.output().rstrip().endswith("Advisor-Route: codex"))
+        argv = self.log.read_text(encoding="utf-8")
+        self.assertIn("read-only", argv)
+        self.assertIn("SM-1", argv, "the prompt carries the state-machine checklist")
+
+    def test_opencode_plan_agent_when_codex_is_absent(self) -> None:
+        self.stub("opencode2", OPENCODE_STUB)
+        result = self.run_advisor(ADVISOR_OPENCODE_MODEL="zai/glm")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("PLAN_APPROVED via opencode:zai/glm", result.stdout)
+        self.assertTrue(self.output().startswith("PLAN_APPROVED"), "preamble before the verdict is dropped")
+        lines = self.log.read_text(encoding="utf-8").splitlines()
+        self.assertEqual(lines[0], str(self.repo), "opencode runs at the repo root so it can read the repo")
+        self.assertIn("--agent", lines)
+        self.assertEqual(lines[lines.index("--agent") + 1], "plan")
+        self.assertNotIn("--auto", lines)
+
+    def test_opencode_model_comes_from_orchestrator_json(self) -> None:
+        self.stub("opencode2", OPENCODE_STUB)
+        (self.repo / ".claude").mkdir()
+        (self.repo / ".claude" / "orchestrator.json").write_text(
+            json.dumps({"advisor": {"opencode_model": "cfg/model"}}), encoding="utf-8")
+        result = self.run_advisor()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("via opencode:cfg/model", result.stdout)
+
+    def test_opencode_without_a_model_is_skipped(self) -> None:
+        self.stub("opencode2", OPENCODE_STUB)
+        result = self.run_advisor()
+        self.assertEqual(result.returncode, 3)
+        self.assertFalse(self.log.exists())
+
+    def test_no_route_exits_three_with_the_same_family_fallback(self) -> None:
+        result = self.run_advisor()
+        self.assertEqual(result.returncode, 3)
+        self.assertIn("same-family", result.stderr)
+        self.assertIn(str(self.brief), result.stderr)
+
+    def test_answer_without_a_verdict_exits_four_and_keeps_the_output(self) -> None:
+        self.stub("opencode2", OPENCODE_STUB)
+        result = self.run_advisor(ADVISOR_OPENCODE_MODEL="p/m", STUB_NO_VERDICT="1")
+        self.assertEqual(result.returncode, 4)
+        self.assertIn("I could not decide", self.output())
+
+    def test_forced_route_does_not_fall_through(self) -> None:
+        self.stub("opencode2", OPENCODE_STUB)
+        result = self.run_advisor(ADVISOR_ROUTE="codex", ADVISOR_OPENCODE_MODEL="p/m")
+        self.assertEqual(result.returncode, 3)
+        self.assertIn("codex: not installed", result.stderr)
+        self.assertFalse(self.log.exists())
+
+    def test_installed_codex_that_fails_falls_through_to_opencode(self) -> None:
+        self.stub("codex", "#!/usr/bin/env bash\necho 'ERROR: 401 Unauthorized' >&2\nexit 1\n")
+        self.stub("opencode2", OPENCODE_STUB)
+        result = self.run_advisor(ADVISOR_OPENCODE_MODEL="p/m")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("PLAN_APPROVED via opencode:p/m", result.stdout)
+
+    def test_every_route_failing_names_each_reason(self) -> None:
+        self.stub("codex", "#!/usr/bin/env bash\nexit 1\n")
+        result = self.run_advisor()
+        self.assertEqual(result.returncode, 3)
+        self.assertIn("codex: failed (exit 1)", result.stderr)
+        self.assertIn("opencode: not installed", result.stderr)
 
 
 if __name__ == "__main__":
