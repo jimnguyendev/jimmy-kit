@@ -399,8 +399,13 @@ def lint_handoff(path: Path) -> int:
     body = re.sub(r"<!--.*?-->", "", body or "", flags=re.DOTALL)
     parts = re.split(r"^###\s+", body, flags=re.MULTILINE)
     preamble, briefs = parts[0], parts[1:]
-    if not errors and not briefs and not re.fullmatch(r"-?\s*`?None\.?`?", preamble.strip(), re.IGNORECASE):
+    is_none = re.fullmatch(r"-?\s*`?None\.?`?", preamble.strip(), re.IGNORECASE) is not None
+    if not errors and not briefs and not is_none:
         error("OWNER_FORM", "Waiting on owner must hold one '###' decision brief per decision, or 'None.'")
+    if briefs and is_none:
+        error("OWNER_FORM", "Waiting on owner says 'None.' and also holds a brief; keep one")
+    elif briefs and preamble.strip():
+        error("OWNER_FORM", "Waiting on owner has text outside its '###' briefs; every question needs its own brief")
 
     for number, brief in enumerate(briefs, start=1):
         heading, _, rest = brief.partition("\n")
@@ -418,8 +423,10 @@ def lint_handoff(path: Path) -> int:
             values[key] = match.group(1).strip()
             if key != "Options" and len(re.findall(r"\w", values[key])) < 3:
                 error("BRIEF_FIELD", f"{label} '{key}' is empty")
-        if "What it is" in values and len(values["What it is"].split()) < 8:
-            error("BRIEF_EXPLAIN", f"{label} 'What it is' must explain the subject, not name it")
+        # Language-neutral: count non-whitespace characters, not space-separated words, so an
+        # explanation in a language written without spaces is measured the same way.
+        if "What it is" in values and len(re.sub(r"\s", "", values["What it is"])) < 30:
+            error("BRIEF_EXPLAIN", f"{label} 'What it is' must explain the subject (30+ characters), not name it")
         options_block = re.search(
             r"^\s*-\s*Options\s*:.*?$(.*?)(?=^\s*-\s*(?:" + "|".join(re.escape(k) for k in BRIEF_KEYS if k != "Options") + r")\s*:|\Z)",
             rest,
