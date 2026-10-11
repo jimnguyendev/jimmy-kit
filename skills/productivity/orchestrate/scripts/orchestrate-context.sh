@@ -107,6 +107,12 @@ resume() {
   echo "Read LEARNINGS.md and packets/ only when a step needs them."
   echo "Your first message to the owner after this follows /ketchup: how many decisions wait on them, what"
   echo "happened since their last message, then one decision brief per item in 'Waiting on owner'."
+  for copy in land.sh gates.sh; do
+    if [ -e "$state/bin/$copy" ]; then
+      echo "WARNING: $state/bin/$copy is a project copy; land and gate with the installed orchestrate skill's"
+      echo "scripts/$copy (it merges main and runs every gate in .orchestrate/gates). Delete the copy."
+    fi
+  done
   for f in HANDOFF.md AUTO-STATE.md SPRINT.md; do
     [ -f "$state/$f" ] || continue
     echo

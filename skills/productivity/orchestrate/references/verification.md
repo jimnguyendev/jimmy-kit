@@ -40,3 +40,17 @@ overflowing text input that only a look at the page caught.
 Findings go back as a delta to the same executor, or into the next FE packet; API gaps become a
 backend packet. When the repo has a project-local verify skill (built with `verify-app`), the
 verification agent follows its recipes and evidence rules.
+
+## Defects only the browser shows
+
+Typecheck, lint and component tests passed while these shipped; look for them on every FE land:
+
+- Utility classes that compile to nothing. A design system's spacing tokens may exist for padding
+  and gap but not for `top-`/`left-`/`inset-`; the class is accepted and emits no CSS, so a dock or
+  side panel renders in the wrong place. Keep a guard test that fails on such class names.
+- Icons in flex rows collapsing to zero width next to long labels (missing `shrink-0`).
+- Text that is correct in the test locale and truncated or untranslated in the other one.
+- Copy that contradicts runtime behaviour (a card promising retries for a route the runtime parks).
+
+Origin: one builder packet landed with 594 green component tests while its dock and panels were
+misplaced; the next packet had 8 findings on the real backend, none caught by 679 tests.

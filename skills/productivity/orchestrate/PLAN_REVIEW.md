@@ -10,7 +10,8 @@
 - Root: <current task model>
 - Planner: <route or root> — <route state>
 - Advisor: <route or none> — <route state>
-- Advisor family and scope: <model family; must differ from root's when the plan touches queue, lease, retry, fencing or idempotency> · read plan + repo at `<commit>` (landed code included)
+- Advisor family and scope: <route from advisor-review.sh: codex | opencode:<model> | same-family subagent (no external route)> · read plan + repo at `<commit>` (landed code included)
+- State-machine checklist: <SM-1..SM-12 answered by root in this plan | N/A — reason>
 - Executor: <route> — <route state>
 - Advisor reviews: 0/5
 - Acceptance contract: `.orchestrate/contracts/NNN-<slug>.json`
