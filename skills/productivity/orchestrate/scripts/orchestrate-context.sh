@@ -112,7 +112,19 @@ resume() {
     echo
     echo "===== $state/$f ====="
     head -c 6000 "$state/$f"
+    if [ "$f" = HANDOFF.md ] && [ "$(wc -c <"$state/$f" | tr -d ' ')" -gt 6000 ]; then
+      echo
+      echo "truncated: read the full file before the catch-up ($state/$f is over 6000 bytes)"
+    fi
   done
+  # Pending owner decisions are printed whole, whatever the size of HANDOFF.md, so the catch-up
+  # can relay every brief.
+  if [ -f "$state/HANDOFF.md" ]; then
+    echo
+    echo "===== Waiting on owner (complete section of $state/HANDOFF.md) ====="
+    awk '/^## /{ if (on) exit; if (tolower($0) ~ /^## +waiting on owner[[:space:]]*$/) on = 1 } on { print; found = 1 }
+         END { if (!found) print "(HANDOFF.md has no Waiting on owner section)" }' "$state/HANDOFF.md"
+  fi
 }
 
 "$mode"

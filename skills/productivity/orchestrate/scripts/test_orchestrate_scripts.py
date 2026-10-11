@@ -222,6 +222,43 @@ class ContextHookTests(unittest.TestCase):
             self.assertIn("AUTO-STATE.md", resume.stdout)
             self.assertIn("/ketchup", resume.stdout)
 
+    def test_resume_prints_whole_owner_section_past_the_head_limit(self) -> None:
+        with Repos() as r:
+            self.setup_state(r)
+            briefs = "".join(
+                f"### {n}. Decision number {n} in one sentence?\n- What it is: brief {n} body.\n" for n in range(1, 4)
+            )
+            handoff = (
+                "# Handoff\nNext: land 001\n\n## Landed\n" + "- packet line\n" * 600
+                + "\n## Waiting on owner\n" + briefs + "\n## Next\n1. after the section\n"
+            )
+            (r.repo / ".orchestrate" / "HANDOFF.md").write_text(handoff, encoding="utf-8")
+            self.assertGreater(len(handoff.encode()), 6000)
+            resume = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(r.repo)}))
+            self.assertEqual(resume.returncode, 0, resume.stderr)
+            self.assertIn("truncated: read the full file before the catch-up", resume.stdout)
+            section = resume.stdout.split("===== Waiting on owner (complete section of", 1)[1]
+            for n in range(1, 4):
+                self.assertIn(f"### {n}. Decision number {n} in one sentence?", section)
+            self.assertNotIn("1. after the section", section.split("=====", 1)[0])
+
+    def test_resume_small_handoff_is_not_marked_truncated(self) -> None:
+        with Repos() as r:
+            self.setup_state(r)
+            (r.repo / ".orchestrate" / "HANDOFF.md").write_text(
+                "# Handoff\nNext: land 001\n\n## Waiting on owner\nNone.\n\n## Next\n1. go\n", encoding="utf-8"
+            )
+            resume = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(r.repo)}))
+            self.assertNotIn("truncated:", resume.stdout)
+            self.assertIn("complete section of", resume.stdout)
+            self.assertIn("None.", resume.stdout.split("complete section of", 1)[1])
+
+    def test_resume_reports_a_missing_owner_section(self) -> None:
+        with Repos() as r:
+            self.setup_state(r)
+            resume = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(r.repo)}))
+            self.assertIn("HANDOFF.md has no Waiting on owner section", resume.stdout)
+
     def test_targets_file_maps_another_cwd(self) -> None:
         with Repos() as r:
             self.setup_state(r)
