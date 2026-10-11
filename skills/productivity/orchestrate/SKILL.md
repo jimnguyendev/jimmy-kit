@@ -134,9 +134,10 @@ round and without budgets; the owner had to point back at the previous sprint's 
      so the wave runs without ordering or faked features.
    - **Design.** FE packets point at a design spec exported into the repo, never at a live design
      tool or canvas screenshots ([references/design-export.md](references/design-export.md)).
-   A plan that touches queue, lease, retry, fencing or idempotency semantics needs an independent
-   Advisor that reads the repo, including code already landed, and reruns until no material
-   finding is open. Run `scripts/advisor-review.sh <plan.md>`: it uses the first installed route
+   A plan that touches queue, lease, retry, lock, fencing, idempotency, outbound-call or
+   long-running state-machine semantics needs an independent Advisor that reads the repo,
+   including code already landed, and reruns until no material finding is open. Run
+   `<installed-skill-dir>/scripts/advisor-review.sh <plan.md>`: it uses the first installed route
    (Codex, then opencode's read-only `plan` agent with the configured model) and writes the
    route under the verdict. When it exits 3, no external route exists: run the round with a fresh
    general-purpose subagent (skills `engineering-design-thinking` Review mode and

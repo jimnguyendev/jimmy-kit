@@ -20,7 +20,8 @@
 # · 4 the route answered without a verdict line (output kept for reading).
 #
 # A route that is installed but fails (not logged in, quota, network) falls through to the next one;
-# its stderr is kept in <output>.route.log.
+# each route's stderr is kept in <output>.<route>.log, and a route that answers after another failed
+# names the failure in an `Advisor-Skipped:` line above `Advisor-Route:`.
 #
 # Environment:
 #   ADVISOR_ROUTE           auto (default) | codex | opencode — try only that route
@@ -82,12 +83,12 @@ run_codex() {
   local args=(exec -s read-only --skip-git-repo-check -C "$repo" -o "$out")
   [ -n "${ADVISOR_MODEL:-}" ] && args+=(-m "$ADVISOR_MODEL")
   [ -n "${ADVISOR_EFFORT:-}" ] && args+=(-c "model_reasoning_effort=\"$ADVISOR_EFFORT\"")
-  "$bin" "${args[@]}" "$prompt" </dev/null >/dev/null 2>"$out.route.log"
+  "$bin" "${args[@]}" "$prompt" </dev/null >/dev/null 2>"$out.codex.log"
 }
 run_opencode() {
   local bin="$1" model="$2"
   # The plan agent cannot edit files; without --auto, permission asks are rejected, not granted.
-  (cd "$repo" && "$bin" run -m "$model" --agent plan "$prompt" </dev/null) >"$out" 2>"$out.route.log"
+  (cd "$repo" && "$bin" run -m "$model" --agent plan "$prompt" </dev/null) >"$out" 2>"$out.opencode.log"
 }
 
 route="${ADVISOR_ROUTE:-auto}"
@@ -98,14 +99,14 @@ if [ "$route" != opencode ]; then
   bin="$(find_codex)"
   if [ -z "$bin" ]; then tried+=("codex: not installed")
   elif run_codex "$bin"; then used="codex"
-  else tried+=("codex: failed (exit $?), see $out.route.log"); fi
+  else tried+=("codex: failed (exit $?), see $out.codex.log"); fi
 fi
 if [ -z "$used" ] && [ "$route" != codex ]; then
   bin="$(find_opencode)"; model="$(opencode_model)"
   if [ -z "$bin" ]; then tried+=("opencode: not installed")
   elif [ -z "$model" ]; then tried+=("opencode: no ADVISOR_OPENCODE_MODEL or opencode_model in .claude/orchestrator.json")
   elif run_opencode "$bin" "$model"; then used="opencode:$model"
-  else tried+=("opencode:$model: failed (exit $?), see $out.route.log"); fi
+  else tried+=("opencode:$model: failed (exit $?), see $out.opencode.log"); fi
 fi
 if [ -z "$used" ]; then
   {
@@ -120,21 +121,28 @@ EOF
   exit 3
 fi
 
-# Keep the answer from the verdict line on: some CLIs echo preamble before it.
+footer() {
+  echo >>"$out"
+  [ "${#tried[@]}" -eq 0 ] || printf 'Advisor-Skipped: %s\n' "${tried[@]}" >>"$out"
+  printf 'Advisor-Route: %s\n' "$used" >>"$out"
+}
+
+# Keep the answer from the verdict line on: some CLIs echo preamble before it. The verdict is a
+# line of its own (optionally in Markdown emphasis), not a sentence that starts with the word.
 if ! python3 - "$out" <<'PY'
 import re, sys
 p = sys.argv[1]
 lines = open(p, encoding="utf-8", errors="replace").read().splitlines()
 for i, line in enumerate(lines):
-    if re.match(r"^\s*\**(PLAN_APPROVED|PLAN_REVISE)\b", line):
+    if re.fullmatch(r"\s*\**(PLAN_APPROVED|PLAN_REVISE)\**\s*", line):
         open(p, "w", encoding="utf-8").write("\n".join(lines[i:]).rstrip() + "\n")
         sys.exit(0)
 sys.exit(1)
 PY
 then
-  printf '\nAdvisor-Route: %s\n' "$used" >>"$out"
+  footer
   echo "advisor-review: $used answered without a PLAN_APPROVED/PLAN_REVISE line; read $out" >&2
   exit 4
 fi
-printf '\nAdvisor-Route: %s\n' "$used" >>"$out"
+footer
 echo "advisor-review: $(head -1 "$out" | tr -d '*' | awk '{print $1}') via $used → $out"

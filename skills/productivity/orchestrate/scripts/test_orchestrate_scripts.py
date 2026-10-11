@@ -396,7 +396,8 @@ OPENCODE_STUB = textwrap.dedent(
     # opencode stand-in: records argv and cwd, prints a preamble, then the answer (or no verdict).
     { pwd; printf '%s\\n' "$@"; } >"$STUB_LOG"
     echo "> plan · stub"
-    if [ -n "${STUB_NO_VERDICT:-}" ]; then echo "I could not decide"; else printf 'PLAN_APPROVED\\nSM: N/A - none\\n'; fi
+    if [ -n "${STUB_NO_VERDICT:-}" ]; then echo "I could not decide"; echo "PLAN_REVISE would be my guess, but no"
+    else printf 'PLAN_APPROVED\\nSM: N/A - none\\n'; fi
     """
 )
 
@@ -497,8 +498,14 @@ class AdvisorReviewTests(unittest.TestCase):
     def test_answer_without_a_verdict_exits_four_and_keeps_the_output(self) -> None:
         self.stub("opencode2", OPENCODE_STUB)
         result = self.run_advisor(ADVISOR_OPENCODE_MODEL="p/m", STUB_NO_VERDICT="1")
-        self.assertEqual(result.returncode, 4)
+        self.assertEqual(result.returncode, 4, "a sentence starting with a verdict word is not a verdict")
         self.assertIn("I could not decide", self.output())
+
+    def test_verdict_in_markdown_emphasis_is_accepted(self) -> None:
+        self.stub("opencode2", "#!/usr/bin/env bash\nprintf '**PLAN_REVISE**\\nA1 high: x\\n'\n")
+        result = self.run_advisor(ADVISOR_OPENCODE_MODEL="p/m")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("PLAN_REVISE via opencode:p/m", result.stdout)
 
     def test_forced_route_does_not_fall_through(self) -> None:
         self.stub("opencode2", OPENCODE_STUB)
@@ -513,6 +520,10 @@ class AdvisorReviewTests(unittest.TestCase):
         result = self.run_advisor(ADVISOR_OPENCODE_MODEL="p/m")
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("PLAN_APPROVED via opencode:p/m", result.stdout)
+        out = self.output()
+        self.assertIn("Advisor-Skipped: codex: failed (exit 1)", out, "the fallback verdict names why codex was skipped")
+        codex_log = self.brief.parent / "001-x.advisor.md.codex.log"
+        self.assertIn("401 Unauthorized", codex_log.read_text(encoding="utf-8"), "opencode does not overwrite the codex log")
 
     def test_every_route_failing_names_each_reason(self) -> None:
         self.stub("codex", "#!/usr/bin/env bash\nexit 1\n")
