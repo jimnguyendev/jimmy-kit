@@ -1,7 +1,7 @@
 {
   "groups": {
     "core": {
-      "description": "Routing, change tiers, quality gates, decisions, independent review, retrospectives, plus session tools (grilling, handoff, orchestrate, write-a-skill, zoom-out).",
+      "description": "Routing, change tiers, quality gates, decisions, independent review, retrospectives, plus session tools (grilling, handoff, ketchup, orchestrate, write-a-skill, zoom-out).",
       "dirs": [
         "skills/process",
         "skills/productivity"

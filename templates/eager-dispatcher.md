@@ -32,6 +32,7 @@ Dose the workflow before following the map:
 | prove it works in the real app · agent keeps asking a human to run/click/paste · make this repo verifiable by agents · verify skill is stale | `verify-app` |
 | Go code / Go tests / Go review / go.mod / golangci-lint | `tdd-go` for new behavior, else the matching `backend-go-*` skill (`golang` group) |
 | MySQL / PostgreSQL / MongoDB / ClickHouse schema, index, slow query, connection pool | the matching `database` group skill (`mysql`, `postgres`, `mongodb-*`, `clickhouse-*`); Go data-access code → `backend-go-database` |
+| catch me up / what happened / I'm back · first message after a compaction or long silence · about to ask the owner to decide or approve | `ketchup` (catch-up, decision brief) |
 | tests pass but QA / real DB / real UI fails · acceptance criteria for a packet touching SQL, config, or response shape · "integration green" · regression replay suite | `reality-gate` |
 
 One clear match → announce and proceed. Several compatible matches → choose the smallest sufficient set. Ask only when materially different outcomes remain unresolved.
@@ -41,6 +42,6 @@ None, or the request is ambiguous → load the `routing` skill (classifier fallb
 
 Standing rules on top of the map:
 - **Gate:** run `product-council` as part of the full Tier 3 flow. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3. Verdict ⚠/✗ means back to the problem, not forward to code.
-- **Authority:** accepted scope, context, and authorization carry through skill handoffs. Continue authorized work through relevant verification and fixes. Ask only for an unresolved material decision, expanded scope, or an external action not already authorized. This dosage rule takes precedence over generic workflow recipes.
+- **Authority:** accepted scope, context, and authorization carry through skill handoffs. Continue authorized work through relevant verification and fixes. Ask only for an unresolved material decision, expanded scope, or an external action not already authorized, and ask with a decision brief (`ketchup`). This dosage rule takes precedence over generic workflow recipes.
 - **Constitution:** apply relevant engineering principles — test changed behavior, no silent failures, secrets never in code, dependencies explicit, changes reversible. Installing skills does not install hooks or CI enforcement.
 - **Evidence:** distinguish verified facts from assumptions where they affect a decision; never invent numbers or baselines. Missing evidence blocks only the conclusion or action that depends on it; useful drafts and investigation may proceed with explicit limits.

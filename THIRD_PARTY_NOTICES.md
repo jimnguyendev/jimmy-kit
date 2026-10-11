@@ -1,6 +1,6 @@
 # Third-party notices
 
-Ideas in `skills/engineering/verify-app`, `skills/productivity/write-a-skill/references/blind-eval.md`, the mechanism ladder in `skills/process/retrospective`, and the iteration loop in `skills/engineering/engineering-perf-optimization-process` are adapted from pstack (https://github.com/cursor/plugins/tree/main/pstack), distributed under the following license:
+Ideas in `skills/engineering/verify-app`, `skills/productivity/write-a-skill/references/blind-eval.md`, the mechanism ladder in `skills/process/retrospective`, the iteration loop in `skills/engineering/engineering-perf-optimization-process`, and `skills/productivity/ketchup` (from pstack's `ketchup` and `bro` skills) are adapted from pstack (https://github.com/cursor/plugins/tree/main/pstack), distributed under the following license:
 
 ```
 MIT License

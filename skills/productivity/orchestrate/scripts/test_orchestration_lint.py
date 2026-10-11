@@ -26,6 +26,7 @@ FIXTURE_ROOT = SKILL_ROOT / "tests" / "fixtures"
 CONTRACT_SOURCE = FIXTURE_ROOT / "contract.json"
 PLAN_SOURCE = FIXTURE_ROOT / "plan.md"
 PACKET_SOURCE = FIXTURE_ROOT / "packet.md"
+HANDOFF_SOURCE = FIXTURE_ROOT / "handoff.md"
 
 
 class Fixture:
@@ -356,6 +357,130 @@ class OrchestrationLintTests(unittest.TestCase):
 
         for path, expected in source_bytes.items():
             self.assertEqual(path.read_bytes(), expected, msg=f"live file changed: {path}")
+
+
+class HandoffLintTests(unittest.TestCase):
+    """`--phase handoff` checks the Waiting on owner section against the decision brief form."""
+
+    def lint(self, text: str) -> subprocess.CompletedProcess[str]:
+        with tempfile.TemporaryDirectory(prefix="orchestration-handoff-") as tempdir:
+            path = Path(tempdir) / "HANDOFF.md"
+            path.write_text(text, encoding="utf-8")
+            return subprocess.run(
+                [sys.executable, str(LINTER), "--phase", "handoff", "--handoff", str(path)],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+
+    def assert_pass(self, text: str) -> None:
+        result = self.lint(text)
+        self.assertEqual(result.returncode, 0, msg=result.stdout + result.stderr)
+        self.assertIn("orchestration lint: PASS (handoff", result.stdout)
+
+    def assert_fail(self, text: str, *codes: str) -> None:
+        result = self.lint(text)
+        self.assertNotEqual(result.returncode, 0, msg=result.stdout + result.stderr)
+        for code in codes:
+            self.assertIn(code, result.stdout)
+
+    @staticmethod
+    def source() -> str:
+        return HANDOFF_SOURCE.read_text(encoding="utf-8")
+
+    def test_valid_brief_passes(self) -> None:
+        self.assert_pass(self.source())
+
+    def test_none_passes(self) -> None:
+        self.assert_pass("# HANDOFF\n\n## Waiting on owner\nNone.\n\n## Next\n1. Continue.\n")
+
+    def test_missing_section_is_rejected(self) -> None:
+        self.assert_fail("# HANDOFF\n\n## Next\n1. Continue.\n", "OWNER_SECTION")
+
+    def test_one_liner_questions_are_rejected(self) -> None:
+        self.assert_fail(
+            "# HANDOFF\n\n## Waiting on owner\n- Open the PR on the kit?\n- Accept ADR-0017?\n",
+            "OWNER_FORM",
+        )
+
+    def test_empty_section_is_rejected(self) -> None:
+        self.assert_fail("# HANDOFF\n\n## Waiting on owner\n\n## Next\n", "OWNER_FORM")
+
+    def test_each_missing_part_is_rejected(self) -> None:
+        for key in ("What it is", "Why now", "Options", "Recommendation", "If no answer", "Evidence"):
+            with self.subTest(key=key):
+                text = re.sub(r"^- " + re.escape(key) + r":.*\n", "", self.source(), flags=re.MULTILINE)
+                self.assert_fail(text, "BRIEF_FIELD", key)
+
+    def test_option_without_cost_or_effect_is_rejected(self) -> None:
+        for key in ("Cost", "Effect"):
+            with self.subTest(key=key):
+                text = re.sub(key + r": [^.]*\.", "", self.source(), count=1)
+                self.assert_fail(text, "BRIEF_OPTION_COST", key)
+
+    def test_single_option_is_rejected(self) -> None:
+        text = re.sub(r"^  - B\..*\n", "", self.source(), flags=re.MULTILINE)
+        self.assert_fail(text, "BRIEF_OPTIONS")
+
+    def test_bare_id_is_rejected(self) -> None:
+        text = self.source().replace(" ADR-0017 records the daily rule;", "")
+        text = text.replace("- Evidence: ", "- Evidence: ADR-0017, ")
+        self.assert_fail(text, "BRIEF_BARE_ID", "ADR-0017")
+
+    def test_short_what_it_is_is_rejected(self) -> None:
+        text = re.sub(r"^- What it is:.*$", "- What it is: the cap (ADR-0017).", self.source(), flags=re.MULTILINE)
+        self.assert_fail(text, "BRIEF_EXPLAIN")
+
+    def test_question_outside_briefs_is_rejected(self) -> None:
+        text = self.source().replace("## Waiting on owner\n", "## Waiting on owner\n- Accept ADR-0017?\n", 1)
+        self.assert_fail(text, "OWNER_FORM", "outside")
+
+    def test_none_alongside_a_brief_is_rejected(self) -> None:
+        text = self.source().replace("## Waiting on owner\n", "## Waiting on owner\nNone.\n", 1)
+        self.assert_fail(text, "OWNER_FORM", "None.")
+
+    def test_what_it_is_length_is_language_neutral(self) -> None:
+        # Values follow the owner's language. CJK has no spaces between words; Vietnamese is
+        # written as escapes because the kit's language audit keeps Vietnamese out of sources.
+        values = {
+            "cjk": "\u9891\u7387\u4e0a\u9650\u9632\u6b62\u4e00\u4f4d\u5b66\u5458\u5728\u4e00\u5929\u5185\u6536\u5230\u592a\u591a"
+            "\u8425\u9500\u6d88\u606f\uff0c\u8d85\u8fc7\u4e0a\u9650\u7684\u6d88\u606f\u4f1a\u88ab\u4e22\u5f03\u3002",
+            "vietnamese": "Gi\u1edbi h\u1ea1n n\u00e0y ch\u1eb7n m\u1ed9t h\u1ecdc vi\u00ean nh\u1eadn qu\u00e1 nhi\u1ec1u tin "
+            "marketing trong m\u1ed9t ng\u00e0y; tin v\u01b0\u1ee3t gi\u1edbi h\u1ea1n b\u1ecb b\u1ecf.",
+        }
+        for language, value in values.items():
+            with self.subTest(language=language):
+                text = re.sub(r"^- What it is:.*$", lambda _m, v=value: "- What it is: " + v, self.source(), flags=re.MULTILINE)
+                self.assert_pass(text)
+        self.assertNotIn(" ", values["cjk"])
+        self.assertLess(len(values["cjk"].split()), 8)  # the old word count would have failed it
+        short = "\u9891\u7387\u4e0a\u9650"
+        text = re.sub(r"^- What it is:.*$", "- What it is: " + short, self.source(), flags=re.MULTILINE)
+        self.assert_fail(text, "BRIEF_EXPLAIN")
+
+    def test_placeholder_is_rejected(self) -> None:
+        text = self.source().replace("- Why now: the admin card", "- Why now: <what it blocks> the admin card")
+        self.assert_fail(text, "BRIEF_PLACEHOLDER")
+
+    def test_topic_heading_is_rejected(self) -> None:
+        text = re.sub(r"^### 1\..*$", "### 1. Cap", self.source(), flags=re.MULTILINE)
+        self.assert_fail(text, "BRIEF_DECISION")
+
+    def test_standard_names_are_not_ids(self) -> None:
+        text = self.source().replace("- Evidence: ", "- Evidence: UTF-8 export, ")
+        self.assert_pass(text)
+
+    def test_contract_phases_still_require_their_files(self) -> None:
+        result = subprocess.run(
+            [sys.executable, str(LINTER), "--phase", "review"], check=False, capture_output=True, text=True
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("--contract", result.stderr)
+
+    def test_resume_docs_name_the_handoff_check(self) -> None:
+        text = (SKILL_ROOT / "references" / "context-and-resume.md").read_text(encoding="utf-8")
+        self.assertIn("--phase handoff", text)
+        self.assertIn("## Waiting on owner", text)
 
 
 if __name__ == "__main__":

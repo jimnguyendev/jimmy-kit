@@ -1,6 +1,6 @@
 {
   "name": "jimmy-kit",
-  "description": "Jimmy Kit — 94 skills for AI agents, installable whole or by group.",
+  "description": "Jimmy Kit — 95 skills for AI agents, installable whole or by group.",
   "owner": {
     "name": "jimnguyendev",
     "url": "https://github.com/jimnguyendev/jimmy-kit"
@@ -9,7 +9,7 @@
     {
       "name": "jimmy-kit",
       "source": "./",
-      "description": "All 94 skills (every group).",
+      "description": "All 95 skills (every group).",
       "version": "0.2.0"
     },
     {
@@ -20,7 +20,7 @@
         "./process/",
         "./productivity/"
       ],
-      "description": "Routing, change tiers, quality gates, decisions, independent review, retrospectives, plus session tools (grilling, handoff, orchestrate, write-a-skill, zoom-out). (16 skills)"
+      "description": "Routing, change tiers, quality gates, decisions, independent review, retrospectives, plus session tools (grilling, handoff, ketchup, orchestrate, write-a-skill, zoom-out). (17 skills)"
     },
     {
       "name": "engineer",

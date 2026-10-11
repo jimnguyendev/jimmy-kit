@@ -8,8 +8,41 @@ packets.
 The state on disk is enough to resume only if it is current. The root rewrites `HANDOFF.md`
 after **every** land and after every dispatch that changes what is running: what landed (packet,
 commit/PR), what is running (packet, route, worktree, agent ID or pid, log path), the next
-actions in order, the owner's standing rules, and open questions for the user. Append, then
-prune superseded lines; keep it under about 6 KB, because the resume hook prints only that much.
+actions in order, the owner's standing rules, and a `## Waiting on owner` section. Append, then
+prune superseded lines; keep it under about 6 KB: the resume hook prints the first 6000 bytes, then
+prints `truncated: read the full file before the catch-up` when the file is longer. It always prints the
+whole `## Waiting on owner` section separately, so no pending brief is lost to the limit.
+
+`## Waiting on owner` holds one decision brief per pending owner decision in the file form of
+skill `ketchup` (references/decision-brief.md), or `None.`:
+
+```markdown
+## Waiting on owner
+
+### 1. <decision in one sentence>
+- What it is: <each PR, ADR, tool or term explained; ids only after the explanation>
+- Why now: <what it blocks or what gets worse>
+- Options:
+  - A. <option>. Cost: <work, money, risk>. Effect: <what someone notices>.
+  - B. <option>. Cost: <...>. Effect: <...>.
+- Recommendation: <option and why>
+- If no answer: <"I wait; X stays blocked", or the standing authority + reversible default + when>
+- Evidence: <link or path>
+```
+
+Keys stay in English; values are in the owner's language. One option per line. A fresh root,
+or the next session, relays these briefs as written, so it never has to reconstruct what a
+question meant. Check the section after every rewrite:
+
+```bash
+python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md
+```
+
+It fails on a missing part, an option without `Cost:` or `Effect:`, a `<placeholder>`, a
+one-line question instead of a brief or next to one, `None.` next to a brief, a `What it is` under
+30 non-space characters (counted the same way in every language), and an id (`ADR-0017`, `PR #12`, `MR !34`, a ticket key)
+used in a brief but never introduced in its `What it is`. Whether the explanation is clear is
+still the root's call.
 
 ## Context hooks
 
@@ -20,7 +53,9 @@ prune superseded lines; keep it under about 6 KB, because the resume hook prints
   commits ahead and dirty files, executor processes still running, and the tail of recent
   executor logs in `.orchestrate/*.log`.
 - `resume` (SessionStart, matcher `compact`): prints `HANDOFF.md`, `AUTO-STATE.md` and
-  `SPRINT.md` into the fresh context with an instruction to continue without asking the user.
+  `SPRINT.md` into the fresh context with an instruction to continue without asking the user,
+  and to open the next owner-facing message with a `/ketchup` catch-up. The complete `Waiting on owner`
+  section follows, outside the 6000-byte limit.
 
 Install once per machine:
 

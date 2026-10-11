@@ -105,12 +105,26 @@ resume() {
   echo "Resume on your own: do not ask the user. Check the background agents and shells named in the"
   echo "conversation summary, then continue the 'Next' list in HANDOFF.md. Refresh HANDOFF.md after every land."
   echo "Read LEARNINGS.md and packets/ only when a step needs them."
+  echo "Your first message to the owner after this follows /ketchup: how many decisions wait on them, what"
+  echo "happened since their last message, then one decision brief per item in 'Waiting on owner'."
   for f in HANDOFF.md AUTO-STATE.md SPRINT.md; do
     [ -f "$state/$f" ] || continue
     echo
     echo "===== $state/$f ====="
     head -c 6000 "$state/$f"
+    if [ "$f" = HANDOFF.md ] && [ "$(wc -c <"$state/$f" | tr -d ' ')" -gt 6000 ]; then
+      echo
+      echo "truncated: read the full file before the catch-up ($state/$f is over 6000 bytes)"
+    fi
   done
+  # Pending owner decisions are printed whole, whatever the size of HANDOFF.md, so the catch-up
+  # can relay every brief.
+  if [ -f "$state/HANDOFF.md" ]; then
+    echo
+    echo "===== Waiting on owner (complete section of $state/HANDOFF.md) ====="
+    awk '/^## /{ if (on) exit; if (tolower($0) ~ /^## +waiting on owner[[:space:]]*$/) on = 1 } on { print; found = 1 }
+         END { if (!found) print "(HANDOFF.md has no Waiting on owner section)" }' "$state/HANDOFF.md"
+  fi
 }
 
 "$mode"
