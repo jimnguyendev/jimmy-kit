@@ -220,6 +220,7 @@ class ContextHookTests(unittest.TestCase):
             resume = r.run("bash", str(HOOK), "resume", stdin=json.dumps({"cwd": str(r.repo), "source": "compact"}))
             self.assertIn("Next: land 001", resume.stdout)
             self.assertIn("AUTO-STATE.md", resume.stdout)
+            self.assertIn("/ketchup", resume.stdout)
 
     def test_targets_file_maps_another_cwd(self) -> None:
         with Repos() as r:

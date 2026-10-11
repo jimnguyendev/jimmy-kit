@@ -168,7 +168,9 @@ When the user has not pinned a seat per packet, route by packet kind (details an
    only after the merge succeeded. A clean git merge can still fail to build; a gate the land
    step does not run is a gate nobody runs. Record PR/commit and verdict in SPRINT.md.
 9. **Hygiene.** Rewrite HANDOFF.md after every land (what landed, what runs with agent IDs and
-   pids, next actions, standing user rules); the PreCompact/SessionStart hook in
+   pids, next actions, standing user rules, and `Waiting on owner` as decision briefs or `None.`,
+   checked with `orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md`); the
+   PreCompact/SessionStart hook in
    `scripts/orchestrate-context.sh` restores it after compaction
    ([references/context-and-resume.md](references/context-and-resume.md)). Add a
    WHEN · CHECK · BECAUSE line to LEARNINGS.md when a failure teaches a rule. After a session
@@ -184,6 +186,34 @@ the exact check and its observed result, and the next bounded action. For a bloc
 action, target, and failure reason. Inspect the owned diff before claiming an executor made
 no progress; silence alone is not evidence. Keep user updates concise and link durable evidence.
 
+An end-of-wave report follows skill `ketchup`: one sentence counting the decisions waiting on the
+owner, what landed and what it means, what still runs and what could not be checked, the calls
+the root made itself (one line each with the reason), then the briefs.
+
+## Asking the owner
+
+The root decides engineering calls itself and records them (HANDOFF, ADR, PR body). It asks the
+owner only for a product choice, approval of an outward-facing or irreversible action not already
+authorized, spending, access it lacks, or a scope change. A standing "decide, don't ask"
+instruction narrows this further.
+
+Every question to the owner is a **decision brief** from skill `ketchup`, one per decision, in the
+owner's language and writing rules: the decision in one sentence; what it is (every PR, ADR, tool
+or term explained, no bare ids); why now; options with cost and visible effect; recommendation and
+why; what happens with no answer (the default and when); evidence. The owner must be able to
+decide without opening a link. This applies wherever the question appears:
+
+- chat text and end-of-wave reports;
+- AskUserQuestion: the briefs go in the message first; the question is the decision sentence and
+  the options mirror the brief's, recommended first;
+- HANDOFF's `Waiting on owner` section, in the file form the linter checks
+  ([references/context-and-resume.md](references/context-and-resume.md#handoff-after-every-land)).
+
+After a compaction-resume, a session limit, or a long silence, the first owner-facing message is
+a `/ketchup` catch-up before any new question. Origin: the root asked "open the PR on the kit?
+accept ADR-0017?" and six one-line tech-debt items with unexplained library names; the owner had
+to ask what each meant before deciding.
+
 ## Non-negotiable rules
 
 - Root writes plans, packets, ADRs, reviews, and performs final verification.
@@ -194,4 +224,5 @@ no progress; silence alone is not evidence. Keep user updates concise and link d
 - An explicit `no subagents` instruction wins.
 - Never weaken permissions, approvals, Goal controls, legacy parity, or repo instructions.
 - Large/architectural sprint: preview the roadmap and workflow before dispatching packet 001.
+- Every owner question is a decision brief (skill `ketchup`); a bundled one-liner is not a question.
 - A misunderstood packet is an orchestration defect: fix the packet, not the model.

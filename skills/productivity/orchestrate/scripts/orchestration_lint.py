@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free validation for contract-backed orchestration cycles."""
+"""Dependency-free validation for contract-backed orchestration cycles and owner decision briefs."""
 
 from __future__ import annotations
 
@@ -14,6 +14,13 @@ from typing import Any
 SCHEMA_VERSION = "orchestrate.contract.v1"
 AC_ID = re.compile(r"^AC-[0-9]+$")
 RG_ID = re.compile(r"^RG-[0-9]+$")
+BRIEF_KEYS = ("What it is", "Why now", "Options", "Recommendation", "If no answer", "Evidence")
+# Ids an owner may not know: ADR-0017, PR #12, MR !34, #123, !34, a ticket key such as ABC-42.
+BRIEF_ID = re.compile(
+    r"\bADR[- ]?[0-9]+\b|\b(?:PR|MR)\s*[#!]?[0-9]+\b|(?<![\w/])[#!][0-9]+\b|\b[A-Z][A-Z0-9]{1,9}-[0-9]+\b"
+)
+# Standard names that look like ticket keys but need no explanation.
+BRIEF_ID_ALLOWED = re.compile(r"^(?:UTF|SHA|ISO|HTTP|TLS|UTC|GMT|MD|BASE)-?[0-9]+$", re.IGNORECASE)
 
 
 class Linter:
@@ -369,13 +376,94 @@ class Linter:
         return 0
 
 
+def lint_handoff(path: Path) -> int:
+    """Check the `Waiting on owner` section of a HANDOFF file against the decision brief form.
+
+    The form is defined by skill `ketchup` (references/decision-brief.md): one `###` per decision,
+    keys in English, every key filled, at least two options with Cost and Effect, and every id used
+    in a brief introduced in its `What it is` line. `None.` means nothing waits.
+    """
+    errors: list[str] = []
+
+    def error(code: str, message: str) -> None:
+        errors.append(f"{code}: {message}")
+
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError as exc:
+        error("FILE_READ", f"cannot read handoff file: {exc}")
+        text = ""
+    body = Linter.section(text, "Waiting on owner")
+    if body is None and not errors:
+        error("OWNER_SECTION", "handoff has no '## Waiting on owner' section; write 'None.' when nothing waits")
+    body = re.sub(r"<!--.*?-->", "", body or "", flags=re.DOTALL)
+    parts = re.split(r"^###\s+", body, flags=re.MULTILINE)
+    preamble, briefs = parts[0], parts[1:]
+    if not errors and not briefs and not re.fullmatch(r"-?\s*`?None\.?`?", preamble.strip(), re.IGNORECASE):
+        error("OWNER_FORM", "Waiting on owner must hold one '###' decision brief per decision, or 'None.'")
+
+    for number, brief in enumerate(briefs, start=1):
+        heading, _, rest = brief.partition("\n")
+        label = f"brief {number}"
+        if len(re.findall(r"\w", re.sub(r"^[0-9]+[.)]\s*", "", heading.strip()))) < 10:
+            error("BRIEF_DECISION", f"{label} heading must state the decision in one sentence")
+        if re.search(r"<[^<>\n]+>", brief):
+            error("BRIEF_PLACEHOLDER", f"{label} still contains a <placeholder>")
+        values: dict[str, str] = {}
+        for key in BRIEF_KEYS:
+            match = re.search(r"^\s*-\s*" + re.escape(key) + r"\s*:(.*)$", rest, re.IGNORECASE | re.MULTILINE)
+            if not match:
+                error("BRIEF_FIELD", f"{label} is missing '{key}'")
+                continue
+            values[key] = match.group(1).strip()
+            if key != "Options" and len(re.findall(r"\w", values[key])) < 3:
+                error("BRIEF_FIELD", f"{label} '{key}' is empty")
+        if "What it is" in values and len(values["What it is"].split()) < 8:
+            error("BRIEF_EXPLAIN", f"{label} 'What it is' must explain the subject, not name it")
+        options_block = re.search(
+            r"^\s*-\s*Options\s*:.*?$(.*?)(?=^\s*-\s*(?:" + "|".join(re.escape(k) for k in BRIEF_KEYS if k != "Options") + r")\s*:|\Z)",
+            rest,
+            re.IGNORECASE | re.MULTILINE | re.DOTALL,
+        )
+        options = [line.strip() for line in (options_block.group(1) if options_block else "").splitlines()
+                   if re.match(r"^\s+[-*]\s+\S", line)]
+        if "Options" in values and len(options) < 2:
+            error("BRIEF_OPTIONS", f"{label} needs at least two options, one per nested bullet")
+        for option in options:
+            for key in ("Cost", "Effect"):
+                if not re.search(r"\b" + key + r"\s*:\s*\S", option, re.IGNORECASE):
+                    error("BRIEF_OPTION_COST", f"{label} option '{option[:40]}' has no {key}:")
+        introduced = values.get("What it is", "")
+        for ident in sorted(set(match.group(0) for match in BRIEF_ID.finditer(brief))):
+            if BRIEF_ID_ALLOWED.match(ident):
+                continue
+            if ident not in introduced:
+                error("BRIEF_BARE_ID", f"{label} uses {ident} without introducing it in 'What it is'")
+
+    if errors:
+        for item in errors:
+            print(f"ERROR {item}")
+        print(f"orchestration lint: FAIL ({len(errors)} error(s))")
+        return 1
+    print(f"orchestration lint: PASS (handoff, {len(briefs)} decision brief(s))")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--contract", required=True, type=Path)
-    parser.add_argument("--plan", required=True, type=Path)
-    parser.add_argument("--packet", required=True, type=Path)
-    parser.add_argument("--phase", required=True, choices=("review", "dispatch", "docs"))
+    parser.add_argument("--contract", type=Path)
+    parser.add_argument("--plan", type=Path)
+    parser.add_argument("--packet", type=Path)
+    parser.add_argument("--handoff", type=Path, help="HANDOFF.md to check (phase handoff)")
+    parser.add_argument("--phase", required=True, choices=("review", "dispatch", "docs", "handoff"))
     args = parser.parse_args()
+    if args.phase == "handoff":
+        if args.handoff is None:
+            parser.error("--phase handoff requires --handoff")
+        return lint_handoff(args.handoff.resolve())
+    missing = [name for name in ("contract", "plan", "packet") if getattr(args, name) is None]
+    if missing:
+        parser.error(f"--phase {args.phase} requires " + ", ".join(f"--{name}" for name in missing))
     linter = Linter(args.contract.resolve(), args.plan.resolve(), args.packet.resolve(), args.phase)
     return linter.run()
 

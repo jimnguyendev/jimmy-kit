@@ -105,6 +105,8 @@ resume() {
   echo "Resume on your own: do not ask the user. Check the background agents and shells named in the"
   echo "conversation summary, then continue the 'Next' list in HANDOFF.md. Refresh HANDOFF.md after every land."
   echo "Read LEARNINGS.md and packets/ only when a step needs them."
+  echo "Your first message to the owner after this follows /ketchup: how many decisions wait on them, what"
+  echo "happened since their last message, then one decision brief per item in 'Waiting on owner'."
   for f in HANDOFF.md AUTO-STATE.md SPRINT.md; do
     [ -f "$state/$f" ] || continue
     echo
