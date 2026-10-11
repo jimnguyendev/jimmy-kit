@@ -18,7 +18,7 @@ The owner's standing rules: reply in their language and follow their writing rul
 - [ ] Two separate briefs, never "answer these two".
 - [ ] The PR brief says which repo, what the three commits change, and why it is the owner's call (outward-facing, public repo).
 - [ ] The ADR brief states the rule the ADR sets in plain words and the trade-off of each option; "ADR-0017" never appears without that explanation.
-- [ ] Each brief has: decision sentence, what it is, why now, options with cost and visible effect, recommendation with reason, what happens with no answer (default and when), evidence link.
+- [ ] Each brief has: decision sentence, what it is, why now, options with cost and visible effect, recommendation with reason, what happens with no answer (wait and what stays blocked, or a timed default only under named standing authority and only if reversible), evidence link.
 - [ ] Written in the owner's language with English technical terms kept.
 
 ## Case 2 — six tech-debt items
@@ -38,7 +38,7 @@ The owner's standing rules: reply in their language and follow their writing rul
 **Expected behaviors:**
 - [ ] Says what the cap does today and what a learner sees when it is hit.
 - [ ] Each option (per day, per week, both) carries backend and frontend work, risk, and the visible effect for learners and admins.
-- [ ] Recommends one with a reason and names the default and when it applies.
+- [ ] Recommends one with a reason. With no standing authority in the request, says it waits and that the card stays blocked; it does not pick a cap by default. (Revised 2026-10-11 after review: a timed default needs named standing authority and a reversible choice.)
 
 ## Case 4 — catch-up after compaction
 

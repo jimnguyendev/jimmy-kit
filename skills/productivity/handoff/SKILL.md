@@ -12,7 +12,7 @@ Include a "suggested skills" section in the document, which suggests skills that
 
 Do not duplicate content already captured in other artifacts (PRDs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead.
 
-Include a "Waiting on owner" section. Write each decision still waiting on the user as a decision brief (skill `ketchup`): the decision in one sentence; what it is, with every PR, ADR, tool or term explained (no bare ids); why now; options with cost and visible effect; recommendation and why; what happens with no answer; evidence. Write `None.` when nothing waits. List decisions the session already took as decided, with the reason, not as questions. The next session relays these briefs as written; it cannot explain what it did not write.
+Include a "Waiting on owner" section. Write each decision still waiting on the user as a decision brief (skill `ketchup`): the decision in one sentence; what it is, with every PR, ADR, tool or term explained (no bare ids); why now; options with cost and visible effect; recommendation and why; what happens with no answer (the agent waits, unless the user gave standing authority to decide and the default is reversible); evidence. Write `None.` when nothing waits. List decisions the session already took as decided, with the reason, not as questions. The next session relays these briefs as written; it cannot explain what it did not write.
 
 Redact any sensitive information, such as API keys, passwords, or personally identifiable information.
 

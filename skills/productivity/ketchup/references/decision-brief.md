@@ -11,10 +11,12 @@ Read when writing a brief into a file, into AskUserQuestion, or when a part is h
 | Why now | what it blocks, or what gets worse while waiting | "for completeness", or empty |
 | Options | 2–4 options, each with cost and visible effect | an option has no cost, or the effect is only "better" |
 | Recommendation | one option and the reason; the fact that would change it, if one is missing | "either works", or the choice handed back ("A if X, else B, tell me") |
-| If no answer | the default and when it applies, or "I wait; X stays blocked" | silent, or a default with no time |
+| If no answer | "I wait; X stays blocked", or, only with standing authority to decide AND a reversible default, the authority, the default and when | silent; a default with no time; a timed default without named authority; a timed default for an irreversible action |
 | Evidence | link or path to detail | the brief cannot be decided without opening it |
 
 Cost is concrete: hours or days of work, money per month, which side (backend, frontend, ops) does the work, the risk taken. Visible effect is what someone notices: what a learner sees, what an admin can do, what breaks for a client, how the bill changes.
+
+Standing authority means the owner already said you may decide: a "decide, don't ask" rule in their agent config or memory, or acceptance of your defaults earlier in this work. Name it, so the owner sees why you will act and can withdraw it. Without it, or when the default cannot be undone (publishing, deleting, sending to users, spending), you wait.
 
 An id is an explanation's suffix, never its replacement: "the rule that retries failed sends in the dispatcher, not at enqueue (ADR-0017)".
 
@@ -44,7 +46,7 @@ Keys stay in English so a linter can read them; values are in the owner's langua
   - A. <option>. Cost: <work, money, risk>. Effect: <what someone notices>.
   - B. <option>. Cost: <...>. Effect: <...>.
 - Recommendation: <option and why>
-- If no answer: <default and when, or what stays blocked>
+- If no answer: <"I wait; X stays blocked", or the standing authority + reversible default + when>
 - Evidence: <link or path>
 ```
 

@@ -200,7 +200,7 @@ instruction narrows this further.
 Every question to the owner is a **decision brief** from skill `ketchup`, one per decision, in the
 owner's language and writing rules: the decision in one sentence; what it is (every PR, ADR, tool
 or term explained, no bare ids); why now; options with cost and visible effect; recommendation and
-why; what happens with no answer (the default and when); evidence. The owner must be able to
+why; what happens with no answer ("I wait; X stays blocked", or a reversible timed default that names the owner's standing authority to decide); evidence. The owner must be able to
 decide without opening a link. This applies wherever the question appears:
 
 - chat text and end-of-wave reports;

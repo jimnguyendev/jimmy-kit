@@ -32,7 +32,7 @@ Raise a brief only for:
 - access or credentials you lack;
 - a change to scope the owner accepted.
 
-Everything else is yours. Pick the option you would recommend, record it with a one-line reason where the work keeps decisions (HANDOFF, decision log, PR body), and report it as a decision taken so the owner can overrule it. A standing "decide, don't ask" instruction from the owner narrows the list further; follow it. Work you can still do yourself is not an action item.
+Everything else is yours. Pick the option you would recommend, record it with a one-line reason where the work keeps decisions (HANDOFF, decision log, PR body), and report it as a decision taken so the owner can overrule it. A standing "decide, don't ask" instruction from the owner narrows the list further; follow it. Without such authority, a question you raise stays open until answered: you never pick an owner's choice by default (section 3, part 6). Work you can still do yourself is not an action item.
 
 ## 2. Write for the owner
 
@@ -51,7 +51,7 @@ Seven parts, in this order:
 3. **Why now.** What it blocks, or what gets worse while it waits. If nothing does, say so: it may not need asking yet.
 4. **Options.** Two to four. Each with its cost (time, money, risk, backend and frontend work) and its visible effect (what users, the team or the system notices).
 5. **Recommendation.** Which option, and why, in one or two sentences. Pick one. If the pick hinges on a fact you lack, recommend for the likely case and name the fact that would change it; do not hand the choice back.
-6. **If no answer.** The default you will take and when, or, for an irreversible action, that you will wait and what stays blocked meanwhile.
+6. **If no answer.** "I wait; <what> stays blocked", unless BOTH hold: the owner gave you standing authority to decide (a "decide, don't ask" rule in their config or memory, or they accepted your defaults in this work) AND the default is reversible. Only then name a timed default, and name that authority in the same line: "Under your decide-don't-ask rule I build B on Monday; switching back is a config change."
 7. **Evidence.** A link or path to the detail. The brief must stand without it.
 
 One brief per decision; several decisions get numbered briefs, the most blocking first. Never bundle ("answer these two"). Keep each brief short enough to read in a minute; the explanation of what it is gets the most room.
@@ -74,6 +74,6 @@ One brief per decision; several decisions get numbered briefs, the most blocking
 - [ ] The count in the first sentence matches the number of briefs.
 - [ ] Every brief has all seven parts; options carry cost and visible effect.
 - [ ] Every id, acronym, tool and library is explained where it first appears.
-- [ ] The default and its timing are stated.
+- [ ] "If no answer" either waits and names what stays blocked, or names the standing authority and a reversible timed default.
 - [ ] Nothing in the briefs is a call you could have made yourself.
 - [ ] Language and writing rules match the owner's.

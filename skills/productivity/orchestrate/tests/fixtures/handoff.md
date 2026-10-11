@@ -12,7 +12,7 @@
   - A. Per day, as built. Cost: none. Effect: a learner can still get 14 pushes a week.
   - B. Per week. Cost: about 1 day backend and half a day frontend. Effect: matches campaigns copied from the old vendor.
 - Recommendation: B, because campaigns are planned weekly and a daily cap allows a heavy week.
-- If no answer: I build B on Monday; switching back to A later is a config change.
+- If no answer: under the owner's decide-don't-ask rule for this build, I build B on Monday; switching back to A is a config change.
 - Evidence: .jimmy/work/limits/brief.md
 
 ## Next

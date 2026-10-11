@@ -42,7 +42,7 @@ No reason to decide now, no cost, no word on what kin-openapi is or what happens
 > Why now: the admin card for the cap is the next frontend packet; its fields depend on this.
 > Options: A. Per day (as built). Cost: none. Effect: a learner can still get 14 pushes a week. B. Per week. Cost: about 1 day backend (count over 7 days), half a day frontend. Effect: matches campaigns copied from the old vendor. C. Both. Cost: about 2 days. Effect: most control; the card gets two fields to explain.
 > Recommendation: B. Campaigns are planned weekly, and a daily cap allows a heavy week.
-> If no answer: I build B on Monday; switching back to A later is a config change.
+> If no answer: under your decide-don't-ask rule for this build, I build B on Monday; switching back to A later is a config change. (Without that rule: I wait, and the cap card stays blocked.)
 > Evidence: `.jimmy/work/limits/brief.md`.
 
 ## The good explanation from the same run
