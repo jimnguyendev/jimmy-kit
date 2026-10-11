@@ -70,6 +70,12 @@ Shared vocabulary for every skill in this kit. Skills (e.g. `zoom-out`) referenc
 
 **TTL-only contract**: a cache whose only correctness mechanism is expiry, chosen when a writer the service cannot observe (another system, an admin tool, a legacy backend in parallel run) makes every active invalidation dishonest. The staleness window is stated; the escape hatch for "fresh now" is an epoch bump that reaches every instance, not a shorter TTL. Data two systems write interleaved is not cached at all. Owned by `engineering-perf-optimization-process`.
 
+**Decision brief**: the form of every question that asks the owner to decide — decision in one sentence · what it is (each PR, ADR, tool or term explained, no bare ids) · why now · options with cost and visible effect · recommendation and why · what happens with no answer (default and when) · evidence. One per decision; decidable without opening a link. Owned by `ketchup`; required by `orchestrate` and `handoff`. _Avoid:_ asking with a one-liner, bundling ("answer these two").
+
+**Owner decision / action item**: a decision or step only the owner can take — a product choice, approval of an outward-facing or irreversible action not already authorized, spending, access the agent lacks, a scope change. Work the agent can still do itself, and reversible engineering calls, are not action items; the agent decides them and reports them as decided. Owned by `ketchup`.
+
+**Catch-up**: the `/ketchup` message — action-item count first, then what happened since the owner's last message, what still runs, calls the agent made, and one decision brief per action item. The first owner-facing message after a compaction, resume or long silence. Owned by `ketchup`.
+
 **Council seat**: one of four anonymized reviewer archetypes in `product-council` (CEO/Business, PD/Strategy, CTO/Engineering, UX/Human). A seat must state its **acceptance condition**; criticism without one is out of order. By default, Tier 1 and already-approved Tier 2 bypass council. Explicit red-team/pitch requests and consequential product/platform decisions are exceptions: they invoke council directly but do not expand the rest of the workflow unless the work is Tier 3.
 
 **Initiative vs Key Result**: an initiative is a bet ("we believe X moves KR Y by Z because…"); a KR is an outcome with metric + baseline + target + date. Shipping an initiative proves nothing about the KR. Owned by `okr-outcome-architect`.
