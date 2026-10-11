@@ -10,7 +10,7 @@ Read when writing a brief into a file, into AskUserQuestion, or when a part is h
 | What it is | each PR, ADR, tool, library, term: what it is and does, in plain words | an id or name appears without explanation; it repeats the decision |
 | Why now | what it blocks, or what gets worse while waiting | "for completeness", or empty |
 | Options | 2–4 options, each with cost and visible effect | an option has no cost, or the effect is only "better" |
-| Recommendation | one option and the reason | "either works" without a pick |
+| Recommendation | one option and the reason; the fact that would change it, if one is missing | "either works", or the choice handed back ("A if X, else B, tell me") |
 | If no answer | the default and when it applies, or "I wait; X stays blocked" | silent, or a default with no time |
 | Evidence | link or path to detail | the brief cannot be decided without opening it |
 

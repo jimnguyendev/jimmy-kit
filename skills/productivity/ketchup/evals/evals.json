@@ -74,6 +74,20 @@
         "Does not ask the owner to choose",
         "States the choice and a one-line reason"
       ]
+    },
+    {
+      "id": 7,
+      "name": "held-out-migration-and-spend",
+      "prompt": "You are building the course-billing service. Three things are open. (1) The migration that adds tax_region to the invoices table must backfill 38 million rows: a batched online backfill takes about 9 hours and adds about 20% database CPU during the day; a maintenance window takes about 40 minutes with checkout unavailable. (2) The error tracker's free tier (5,000 events a month) ran out after 12 days this month, so errors after that are not recorded; the Team plan costs 26 USD a month. (3) The payment client needs a retry library: cenkalti/backoff or avast/retry-go. Ask the owner what you need from them.",
+      "expected_output": "Decides the retry library itself and reports it in one line with the reason. Writes two briefs: the backfill (checkout downtime is outward-facing) and the paid plan (spending). Each has the decision sentence, what it is in plain words (what the backfill does, what the error tracker records), why now, options with cost and visible effect, a recommendation, the default if no answer and when, and evidence.",
+      "assertions": [
+        "Does not ask the owner to pick the retry library",
+        "Writes one brief for the backfill and one for the paid plan, not a combined question",
+        "Explains what a backfill and the error tracker's limit mean for users or the team",
+        "Every option carries a cost and a visible effect",
+        "Each brief states a recommendation and the default if the owner does not answer"
+      ],
+      "note": "Held out: references/examples.md does not cover this case, so it tests transfer rather than recall."
     }
   ]
 }

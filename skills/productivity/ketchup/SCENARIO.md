@@ -62,4 +62,20 @@ The owner's standing rules: reply in their language and follow their writing rul
 
 **Expected behavior:** the agent decides, records the choice and reason, and does not raise a brief.
 
-**Status:** [EXIT 2 — specified; no run recorded yet].
+**Status:** Case 2 [PASS — 2026-10-11 blind run, 17/18 after one revision; the evidence line is still partial]; held-out eval 7 [PASS — 18/18]; Cases 1, 3, 4, 5 and 6 [EXIT 2 — specified, not run].
+
+## Run 2026-10-11 — blind comparison against a no-skill baseline
+
+- **Protocol:** `write-a-skill/references/blind-eval.md`. Neutral workspaces (`notify-svc-N`) with a README and the unrelated `zoom-out` skill; the skill variant also had `ketchup` (SKILL.md and references, without SCENARIO and evals). Same prompt per case and variant, with one sentence pointing at the project's skills directory. Candidates wrote their message to `reply.md`.
+- **Cases:** eval 2 (six tech-debt one-liners) and eval 7 (held out: `references/examples.md` covers evals 1–3, so eval 7 tests transfer, not recall). Evals 1 and 3 were not run because the examples file holds near-answers to them.
+- **Models:** candidates Sonnet; judge Opus, scoring by neutral label (X/Y/Z) on nine criteria (owner calls only, one brief per decision, terms explained, why now, cost and effect per option, recommendation, default if no answer, evidence, plain and quick), 0–2 each, out of 18. The label map stayed with the coordinator.
+- **Results:**
+
+| Case | Baseline (no skill) | Skill, first version | Skill, revised |
+|---|---|---|---|
+| Eval 2, six tech-debt items | 11 (second judge: 10) | 16 (second judge: 15) | 17 (both judges) |
+| Eval 7, held out | 15 | 18 | not rerun |
+
+- **Coordinator reading (agrees with the judge):** both variants triaged the reversible items correctly. The baseline used topic headings instead of decisions, bundled two asks per item ("approve 30 USD, and is double the limit actually harmful?"), left Redis, Sunset and partition unexplained, and gave several options no cost. The first skill version explained every term and priced every option, but its Redis recommendation handed the choice back ("A if…, if it is only a soft limit B is enough, tell me") and two briefs had a weak why-now.
+- **Change from this run:** Recommendation must pick one, and if the pick hinges on a missing fact, name the fact instead of handing the choice back. Why now may honestly say nothing is blocked. The rerun committed to A under a stated assumption and gave every brief a why-now. One gap remains: two of three briefs did not say where their numbers came from.
+- **Limitations:** one run per variant; the coordinator wrote the skill; the judge is another model of the same family; candidates inherited the owner's global writing rules, so the baseline already wrote Vietnamese in their style and the measured difference is the structure of the brief; eval 7's skill reply dated the month from the session clock and made one arithmetic slip the rubric did not score.

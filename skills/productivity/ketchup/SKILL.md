@@ -48,9 +48,9 @@ Seven parts, in this order:
 
 1. **Decision.** One sentence the owner can answer.
 2. **What it is.** Each thing the decision is about, explained: a PR (repository, what changes, how big), an ADR (the rule it sets, in plain words), a tool or library (what it does and why it matters here), a term from the work. No bare ids.
-3. **Why now.** What it blocks, or what gets worse while it waits.
+3. **Why now.** What it blocks, or what gets worse while it waits. If nothing does, say so: it may not need asking yet.
 4. **Options.** Two to four. Each with its cost (time, money, risk, backend and frontend work) and its visible effect (what users, the team or the system notices).
-5. **Recommendation.** Which option, and why, in one or two sentences.
+5. **Recommendation.** Which option, and why, in one or two sentences. Pick one. If the pick hinges on a fact you lack, recommend for the likely case and name the fact that would change it; do not hand the choice back.
 6. **If no answer.** The default you will take and when, or, for an irreversible action, that you will wait and what stays blocked meanwhile.
 7. **Evidence.** A link or path to the detail. The brief must stand without it.
 
