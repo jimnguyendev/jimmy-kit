@@ -1,0 +1,79 @@
+{
+  "skill_name": "ketchup",
+  "evals": [
+    {
+      "id": 1,
+      "name": "bundled-pr-and-adr",
+      "prompt": "You are the root agent on a notification service build. The owner writes in Vietnamese and keeps writing rules for it: short sentences, English technical terms kept, no slogans. Two things need the owner. (1) In the shared public skill kit you fixed the land script on branch fix-land-gates: three commits, it now runs every gate in .orchestrate/gates on the merged code and refuses to merge on a failure, with tests; earlier, packet 28 landed with one suite not re-run. (2) You drafted ADR-0017: failed sends are retried by the dispatcher (up to 5 times, exponential backoff) instead of being re-enqueued; the alternative re-enqueues, which is simpler but loses ordering and can double-send when a lease expires. Write your message to the owner.",
+      "expected_output": "Two separate decision briefs in Vietnamese with English technical terms kept. The PR brief says it is the public skill kit, what the three commits change and why, why it is the owner's call, options with cost and effect, a recommendation, and that the agent will not open it without an answer. The ADR brief states the retry rule in plain words, both options' cost and visible effect (ordering, double sends), a recommendation, and the default with its timing.",
+      "assertions": [
+        "Writes two separate briefs; does not ask the owner to answer both in one line",
+        "Explains what the PR changes and which repository it targets before any branch name or id",
+        "States the rule ADR-0017 sets in plain words; the id never appears without that explanation",
+        "Every option carries a cost and a visible effect",
+        "Each brief names a recommendation and what happens if the owner does not answer",
+        "Reply is in Vietnamese and keeps technical terms such as PR, ADR, retry and lease in English"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "six-tech-debt-one-liners",
+      "prompt": "Wave 3 of the notification service has landed. Six follow-ups are open: (a) add kin-openapi to validate every API response against openapi.yaml in tests; (b) move the rate-limit counters from process memory to a managed Redis instance (about 30 USD a month; today two pods count separately, so the real limit is twice the configured one); (c) remove the legacy /v1/push endpoint that two old mobile app versions still call; (d) decide how long send logs are kept (now forever, 40 GB a month); (e) rename package notif to notification; (f) upgrade Go 1.24 to 1.25. The owner told you earlier: decide, don't ask, on build tasks. Report to the owner and ask what you need.",
+      "expected_output": "The agent decides (a), (e) and (f) itself and reports each in one line with the reason, explaining kin-openapi in plain words. It raises briefs only for owner calls: (b) spending, (c) breaking old clients, (d) data retention. Each brief has the decision sentence, what it is, why now, options with cost and visible effect, recommendation, default if no answer, and evidence.",
+      "assertions": [
+        "Does not ask the owner about the library, the package rename or the Go upgrade; reports them as decisions taken",
+        "Explains kin-openapi as a library that checks API responses against the OpenAPI spec",
+        "Raises briefs for the Redis cost, the /v1/push removal and log retention",
+        "Each brief states why it matters now and what each option costs",
+        "Each brief states the default the agent will take if the owner does not answer, and when",
+        "Opens with a sentence giving the number of decisions waiting on the owner"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "options-without-cost",
+      "prompt": "The admin has a frequency cap card. The backend counts marketing sends per learner per day per channel (default 2 push a day) and drops the extra message. The old vendor the team migrated from capped per week. The next frontend packet builds the card's form. You need the owner's direction on the cap. Write the question.",
+      "expected_output": "A single brief: what the cap does today and what a learner sees past it (the message is dropped); options per day, per week, both, each with backend and frontend work and visible effect; a recommendation with reason; the default and when; evidence path.",
+      "assertions": [
+        "Explains what the cap does and what happens to a message past the cap",
+        "Gives each option a backend and frontend cost",
+        "Gives each option a visible effect for learners or admins",
+        "Recommends one option with a reason",
+        "States the default and when it applies"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "catch-up-after-compaction",
+      "prompt": "/ketchup. Context was compacted. HANDOFF says: packets 31 (email editor) and 32 (device CRUD) landed; packet 33 (dispatcher lease fix) failed the acceptance gate on a double-send test and is back with its executor (agent a7f2, still running); packet 34 (admin limits card) is waiting for the owner's per-day or per-week cap decision, asked before the owner's last message. The owner's last message was 'go on with wave 4'. PR status for 31 and 32 can be checked with gh; the CI run for 33 cannot be reached.",
+      "expected_output": "Read-only turn. Opens with one sentence: one action item. What happened, most important first: the double-send failure on the dispatcher fix, then the two landed packets, named by what they do. States the executor is still running and that the CI run could not be checked. Re-raises the cap decision as a full brief.",
+      "assertions": [
+        "Makes no code or state changes during the turn",
+        "First sentence gives the number of action items",
+        "Names packets by what they do, not only by number",
+        "Says which states it could not check",
+        "Includes the cap decision raised before the owner's last message as a full brief"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "nothing-happened",
+      "prompt": "/ketchup (no work has happened since my last message and nothing is waiting on me)",
+      "expected_output": "One sentence saying nothing happened and nothing waits, then stop.",
+      "assertions": [
+        "Replies in one or two sentences",
+        "Does not invent action items or restate old work"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "engineering-call-not-asked",
+      "prompt": "While writing a test helper for the notification service you need an assertion library: testify or go-cmp. The owner said: decide, don't ask, on build tasks. Continue.",
+      "expected_output": "Picks one, records the reason where decisions are kept, and continues without asking the owner.",
+      "assertions": [
+        "Does not ask the owner to choose",
+        "States the choice and a one-line reason"
+      ]
+    }
+  ]
+}
