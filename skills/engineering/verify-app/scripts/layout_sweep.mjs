@@ -4,6 +4,8 @@
 // Finds what typecheck, lint and component tests cannot: containers that scroll sideways, interactive
 // controls that overlap, controls that run past the panel or dialog that clips them, and raw i18n keys
 // or unrendered template text on screen. It reads the DOM; it never asks a model to look at pixels.
+// A route that does not load (HTTP >= 400, e.g. a stale dev server on the port, or no text after 15 s) and a
+// click text that is not on screen are findings too, so a broken run never prints "ok".
 //
 // usage: node layout_sweep.mjs --cdp http://127.0.0.1:9333 --base http://localhost:5173 --routes routes.json
 //                              [--tab <target id prefix>] [--width 1440] [--height 900] [--out report.json]
@@ -108,6 +110,7 @@ const MEASURE = `(() => {
     if (b.right > pb.right + 1 || b.left < pb.left - 1)
       findings.push({ kind: 'past-edge', where: label(e), detail: Math.round(Math.max(b.right - pb.right, pb.left - b.left)) + ' px outside ' + (p.getAttribute('role') || p.tagName.toLowerCase()) });
   }
+  if (!document.body) return [{ kind: 'not-loaded', where: location.pathname, detail: 'page navigated away during the measure' }];
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   for (let n = walker.nextNode(); n; n = walker.nextNode()) {
     const t = n.textContent.trim();
@@ -122,6 +125,21 @@ const report = [];
 for (const route of routes) {
   send('Page.navigate', { url: args.base + route.path });
   await sleep(Number(route.waitMs ?? 2500));
+  // A loaded box under load can need longer than waitMs: wait up to 15 s for a body with text.
+  // An error page (HTTP >= 400, a stale dev server on the port) is a finding, never "ok".
+  let load = null;
+  for (let i = 0; i < 30; i++) {
+    load = await evaluate(`(() => ({ ready: document.readyState === 'complete' && !!document.body && document.body.innerText.trim().length > 0,
+      status: performance.getEntriesByType('navigation')[0]?.responseStatus ?? 0 }))()`).catch(() => null);
+    if (load?.ready) break;
+    await sleep(500);
+  }
+  if (!load?.ready || load.status >= 400) {
+    const detail = load?.status >= 400 ? `HTTP ${load.status}` : 'no body with text after 15 s';
+    report.push({ name: route.name ?? route.path, path: route.path, findings: [{ kind: 'not-loaded', where: route.path, detail }] });
+    console.log(`FAIL ${route.name ?? route.path} (1)\n     not-loaded: ${route.path} — ${detail}`);
+    continue;
+  }
   const missing = [];
   for (const text of route.open ?? []) {
     const point = await evaluate(`(() => { const t = ${JSON.stringify(text)};
