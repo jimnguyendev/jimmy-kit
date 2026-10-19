@@ -41,6 +41,55 @@ Findings go back as a delta to the same executor, or into the next FE packet; AP
 backend packet. When the repo has a project-local verify skill (built with `verify-app`), the
 verification agent follows its recipes and evidence rules.
 
+## Measure layout, do not read screenshots
+
+The verification agent runs `verify-app`'s `scripts/layout_sweep.mjs` over every route and every
+panel or dialog after each frontend land, and the land waits for zero findings or a recorded waiver.
+It measures the DOM (horizontal scrollers, overlapping controls, controls past their panel edge, raw
+i18n keys) and prints one line per defect; screenshots are for design judgement only.
+Origin: screens built from packet text needed six fix packets (about 800k executor tokens) after
+landing, the root spent about 40 minutes guessing selectors in a shared browser, and the owner still
+found two defects by eye. The first sweep found the remaining one in seconds: a design-system input
+kept its 166 px intrinsic width inside a 64 px box and scrolled a 360 px side panel sideways.
+
+Before the look, rebuild and restart the backend from the branch that just landed and apply its
+migrations. A stale binary produced a fake defect (a raw `…sourceBadge.undefined` key) because
+the old API did not return the new field.
+
+## Design before the screen is built
+
+A screen or panel with no exported design page gets a brief and a design first
+([design-export.md](design-export.md)), or at least the layout rules below in its acceptance
+criteria. Origin: the one screen built from the owner's design page landed in a single round with
+zero layout findings; every screen built from packet text came back with layout and copy defects.
+
+## Layout rules for narrow panels and forms
+
+Put these in every FE packet's acceptance criteria; each one shipped past component tests:
+
+- No fixed pixel wrapper around a control (`w-[104px]` around a select): a design-system control
+  with a larger minimum width spills over its neighbour. Use grids with `minmax(0, 1fr)`.
+- Inputs and textareas carry `min-width: 0` (once, globally): an `<input>` keeps an intrinsic width
+  of about 20 characters and ignores a narrower box.
+- A segmented control with more than three options, or labels that wrap, becomes a dropdown in a
+  panel under about 400 px; never a horizontally scrolling segmented control that hides the selection.
+- No error and no empty-state error on a pristine field or step: validate on blur, save or input.
+- No raw grammar, codes, API paths, field names (`as_of`) or i18n keys on screen; copy in the UI
+  language only.
+- A dialog keeps its action buttons visible (sticky footer) at 1440 x 900.
+- An icon button inside a small chip uses the small size; a removable chip is one local component.
+- When a design-system component falls short (missing `listbox`/`option` roles, a dropped
+  `aria-label`, an intrinsic width), wrap or replace it once in the app's own UI folder for every
+  call site. Forty-nine call sites working around it one by one broke in several places.
+
+## Driving a design-system UI over CDP
+
+`element.click()` does not open many design-system dropdowns; dispatch real mouse events
+(`Input.dispatchMouseEvent` pressed and released at the element centre). Fill long wizards by
+importing their file format (`DOM.setFileInputFiles`) instead of clicking through. Accept
+`beforeunload` dialogs from the CDP session (`Page.javascriptDialogOpening`), or the tab freezes and
+every later call times out.
+
 ## Defects only the browser shows
 
 Typecheck, lint and component tests passed while these shipped; look for them on every FE land:

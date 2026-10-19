@@ -40,6 +40,10 @@
   do not work around another feature's ownership.
 - Do NOT open a browser or a UI-driving tool. The root's single verification agent drives the UI
   after you report; verify with the gates, component tests, and calls against the real service.
+- UI packets: follow the layout rules in references/verification.md (no fixed pixel wrappers around
+  controls, `min-width: 0` on inputs, dropdown instead of a segmented control with more than three
+  options in a narrow panel, no error on a pristine field, no raw keys or codes on screen). The
+  verification agent's layout sweep fails the land on any of them.
 - Do NOT bind ports, CDP ports, profiles or binary paths other than the ones listed above.
 - <packet-specific constraints, e.g. "write BSON field-for-field per appendix E">
 
@@ -85,7 +89,8 @@ section below contains IDs only.
 - Changed files list · what each change does (1 line each)
 - AC-001..AC-NNN exit statuses (root runs the commands from the contract)
 - Anything you were unsure about or deviated on, flagged loudly
-- UI packets: how to reach each state you built (URL + seed step), for the verification agent
+- UI packets: how to reach each state you built (URL + seed step), for the verification agent, and
+  the routes and panels to add to the layout sweep's `routes.json`
 - Remaining risks and integration assumptions
 - Suggested commit message (one line, house style)
 ```

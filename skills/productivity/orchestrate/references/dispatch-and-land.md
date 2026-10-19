@@ -106,6 +106,22 @@ Do not pipe `land.sh` into `tail` or `grep` before `&&`; the pipe hides its exit
 Environment knobs (`ORCH_MAIN`, `ORCH_FORGE`, `GITLAB_TOKEN`, `GITLAB_PROJECT`, …) are listed
 in the script header.
 
+## A gate fails on a branch that did not touch it
+
+Check the three classes of test design before reading the change; in one run every red gate on a
+docs-only or frontend-only branch was one of them:
+
+- **Machine state.** The container runtime is down, so every container test fails in 0 s. Run
+  `docker info` before a land; start the runtime instead of debugging tests.
+- **Wall clock.** A test that crosses a time-of-day policy (quiet hours, business hours, a daily
+  limit) passed by day and failed after 22:00. Such a test pins the business clock.
+- **Sampled statistics.** A test asserting a query plan (`EXPLAIN` uses an index) flipped to a
+  sequential scan when `ANALYZE`'s sample missed a skewed key (200 rows of one user in 200 000).
+  Raise the column's statistics target before `ANALYZE` in the seed.
+
+Fix the test on the branch that found it (one commit, named as a test fix) and rerun it three
+times before the land; never rerun a land until it passes.
+
 ## Session limits
 
 When a provider session or usage limit stops every running agent, worktrees keep their

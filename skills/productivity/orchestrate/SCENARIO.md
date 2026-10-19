@@ -63,3 +63,19 @@
 - [ ] After a compaction-resume or a long silence, the first owner-facing message follows `/ketchup`: action-item count, what happened, then the briefs.
 
 **Status:** [EXIT 2 — specified; no run recorded yet].
+
+## Frontend quality is measured, designed first and synced last (written BEFORE the 2026-10-19 change)
+
+**Rationale:** in the same build, parity screens were built from packet text. After landing they needed six fix packets (about 800k executor tokens), the root spent about 40 minutes driving a shared browser with guessed selectors, and the owner still found two layout defects by eye (an oversized chip remove button, a select overlapping its neighbour in a 360 px panel). The one screen built from the owner's design page landed in one round with zero layout findings. Three gate failures on docs-only branches were test design (container runtime down, a quiet-hours test without a pinned clock, a plan assertion on sampled statistics). A user guide section written one packet early was wrong after the next land.
+
+**Sample input:** "Five FE packets are queued for screens that have no design page yet; two BE packets run in parallel."
+
+**Expected behaviors:**
+- [ ] The root writes a design brief and waits for exported design pages, or puts the layout rules from references/verification.md into each FE packet's acceptance criteria.
+- [ ] After each FE land, one verification agent runs `layout_sweep.mjs` over every route and panel and reports sweep lines; a finding blocks the next FE dispatch.
+- [ ] Before that look, the backend is rebuilt, migrated and restarted from the landed branch.
+- [ ] A design-system shortfall is wrapped once in the app's UI folder, not worked around per call site.
+- [ ] A red gate on an unrelated branch is checked against the three classes in references/dispatch-and-land.md before the change is suspected.
+- [ ] Guide and explainer sections are synced after the last packet that changes their screen.
+
+**Status:** [EXIT 2 — specified] Origin evidence: the run's learnings log (L35–L37); the sweep script itself has a recorded run in `verify-app`'s SCENARIO.md Case 5.
