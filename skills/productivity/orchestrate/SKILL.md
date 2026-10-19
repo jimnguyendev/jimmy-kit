@@ -182,7 +182,8 @@ round and without budgets; the owner had to point back at the previous sprint's 
    that owns one browser and returns verdicts plus evidence paths; root reads the evidence and
    looks at every FE land in that same browser. Mocked-API tests cannot reveal a backend defect,
    and the root's context is not spent on DOM trees
-   ([references/verification.md](references/verification.md)).
+   ([references/verification.md](references/verification.md)). That agent runs the layout sweep
+   over every route and panel after each FE land; a finding blocks the next FE dispatch.
 7. **Iterate.** Send a short delta describing failed evidence and required correction. Maximum
    three implementation iterations; then root re-scopes, takes over the sticking point, or
    reports the blocker.
@@ -202,7 +203,9 @@ round and without budgets; the owner had to point back at the previous sprint's 
    ([references/context-and-resume.md](references/context-and-resume.md)). Add a
    WHEN · CHECK · BECAUSE line to LEARNINGS.md when a failure teaches a rule. After a session
    limit, resume each stopped agent with `SendMessage`; do not respawn it. Capture durable
-   decisions in ADR/docs. A material requirement, baseline, route, or ownership change ends the
+   decisions in ADR/docs. A user guide or explainer section is synced after the last packet that
+   changes its screen, not with the first: a guide written one packet early described a connection
+   test that the next packet had moved before saving. A material requirement, baseline, route, or ownership change ends the
    review episode: obtain user authorization for a **fresh cycle** and rerun recon/review rather
    than patching an approved plan.
 

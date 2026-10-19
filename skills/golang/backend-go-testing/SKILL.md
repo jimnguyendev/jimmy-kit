@@ -6,7 +6,7 @@ license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents, and for projects using Golang.
 metadata:
   author: jimnguyendev
-  version: "1.1.2"
+  version: "1.1.3"
 allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(git:*) Agent Bash(gotests:*) AskUserQuestion
 ---
 
@@ -349,6 +349,13 @@ go test -tags=integration ./...
 ```
 
 For Docker Compose fixtures, SQL schemas, and integration test suites, see [Integration Testing](./references/integration-testing.md).
+
+### Tests that pass by time of day or by sample
+
+Two integration-test designs pass in CI for weeks and then fail on an unrelated branch:
+
+- **Wall clock.** A test that crosses a time-of-day rule (quiet hours, business hours, a daily cap) passes by day and fails at night, because the code reads the real clock. Inject the business clock and pin it in the test (`newWorker(..., atClock(hcm(2026, 10, 9, 10, 0)))`); never assert a time-of-day outcome on `time.Now()`.
+- **Sampled statistics.** A test that asserts a query plan (`EXPLAIN` output contains an index name) depends on what `ANALYZE` sampled. With a skewed seed (one key holds 200 of 200 000 rows) the default sample can miss the key and the planner picks a sequential scan. Raise the column's statistics target before `ANALYZE` (`ALTER TABLE t ALTER COLUMN user_id SET STATISTICS 1000`) and keep the seed's skew documented next to it.
 
 ## Mocking
 

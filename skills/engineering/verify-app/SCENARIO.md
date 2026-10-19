@@ -51,3 +51,36 @@
 - [ ] No executor opens a browser; the verification run never attaches to a browser another agent uses.
 
 **Status:** [EXIT 2 — specified] Origin evidence: on one machine about ten executor browsers overloaded it, and a tool that acts on the active tab read another packet's screen; the root's own driving filled most of a 1M-token context. One verification agent with one browser then checked every admin page against its spec in two rounds.
+
+
+## Case 5 — Layout sweep instead of screenshots (written BEFORE the 2026-10-19 change)
+
+**Sample input:** "Six frontend fix rounds and the owner still finds overlapping controls by eye. Make layout defects fail before a human looks."
+
+**Expected behaviors:**
+- [ ] The generated verify skill ships `scripts/layout_sweep.mjs` and a `routes.json` covering every route and every panel or dialog opened by a click.
+- [ ] The sweep reports horizontal scrollers, overlapping controls in one layer, controls past their clipping panel or dialog, and raw i18n keys or template text; it exits 1 on any finding and 0 on none.
+- [ ] Intentional cases do not fail: a side panel over canvas nodes, a CSS-scaled canvas, a visually hidden (sr-only) input, an element marked `data-allow-scroll`, `data-allow-overlap` or `data-allow-raw`.
+- [ ] The verification agent runs it over the whole route list after every frontend land and returns sweep lines, not screenshots.
+
+**Status:** script behaviors [PASS — 2026-10-19, run below]; generated-skill and orchestrator behaviors [EXIT 2 — not yet exercised in a fresh repo].
+
+### Run 2026-10-19
+
+Fixtures served with `python3 -m http.server 8765 --directory scripts/fixtures`, one Chrome with its own CDP port and profile:
+
+```
+$ node scripts/layout_sweep.mjs --cdp http://127.0.0.1:9333 --base http://127.0.0.1:8765 --routes bad.json
+FAIL bad (5)
+     h-scroll: Did >= — 416 > 376 px
+     h-scroll: wide row — 600 > 300 px
+     overlap: Did / >= — 32 px
+     past-edge: Count — 39 px outside aside
+     raw-text: catalog.connection.sourceBadge.undefined — i18n key, template or undefined on screen
+exit=1
+$ node scripts/layout_sweep.mjs --cdp http://127.0.0.1:9333 --base http://127.0.0.1:8765 --routes good.json
+ok   good
+exit=0
+```
+
+Then an admin SPA, 19 entries (14 routes, 1 dialog, 4 builder side panels). First run: 61 findings, of which 59 were false positives (canvas nodes under a floating side panel, nodes inside a CSS-scaled canvas, sr-only switch inputs) — the layer, canvas and sr-only rules were added from that run. Second run: 18 entries ok, 1 entry with 2 `raw-text` findings that are deliberate (chips showing template syntax as examples; to be marked `data-allow-raw`). The fixtures reproduce the two defects that had shipped past 1,300 component tests in that app: a select in a fixed 104 px wrapper overlapping its neighbour, and a 166 px intrinsic-width input inside a 64 px box scrolling a 360 px panel sideways.
