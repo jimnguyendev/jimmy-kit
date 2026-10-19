@@ -5,6 +5,8 @@ description: >-
   them to decide as a decision brief they can answer without opening a link. Use for /ketchup,
   for the first owner-facing message after a compaction, resume, session limit or long silence,
   and whenever an agent is about to ask the owner to choose, approve, pay for or provide something.
+  Its writing rules (section 2) also apply to every status report, checklist and progress reply to an
+  owner who does not read the code.
 ---
 
 # Ketchup — catch-up and decision briefs
@@ -16,6 +18,7 @@ description: >-
 One format, two modes:
 
 - **Catch-up** (`/ketchup`, or the first message to the owner after a compaction, resume, session limit or long silence): a read-only turn. Output: one sentence counting the action items, what happened, then one decision brief per action item (section 4).
+- **Report** (any status update, end-of-batch summary, go-live checklist or "what is left" list): no briefs unless something waits on the owner, but every line follows section 2. A report is where unexplained terms slip through most, because it does not feel like a question.
 - **Brief** (any time you ask the owner to decide: chat text, AskUserQuestion, a HANDOFF `Waiting on owner` entry, an end-of-wave report, a PR body that needs their call): one decision brief per decision (section 3). Field rules, the file form a linter can read, and the AskUserQuestion mapping: [references/decision-brief.md](references/decision-brief.md).
 
 Read [references/examples.md](references/examples.md) (three bad questions rewritten, one good explanation) before the first brief of a session.
@@ -38,6 +41,8 @@ Everything else is yours. Pick the option you would recommend, record it with a 
 
 - **Language.** Reply in the language of the owner's own messages. If they keep writing rules for that language (a rules file in their agent config, the repo's AGENTS.md, memory), follow them, including which technical terms stay in English.
 - **Plain voice.** Talk like one person to another: short sentences, one idea each, no jargon left unexplained, no slogans.
+- **Config and code names.** An env var, flag, table, endpoint or file path is never the subject of a sentence. Say what it does, who acts on it and what breaks if it is missed, then the name in backticks: "the server switch that picks where consent comes from (`NOTIFY_CONSENT_SOURCE`), set by DevOps at deploy; left at its default, every marketing send is blocked". Before listing a manual step, ask whether a default or a migration can remove it; prefer removing it.
+- **Weight.** Lead with what moves the owner's goal. A cosmetic nit or a one-off chore does not go in a list of gaps next to blockers; put it last or leave it out.
 - **Names they know.** Call a PR, branch, packet or agent by what it does ("the PR that makes the land script run the tests"), not by a label invented during the work (wave B, P23, D4). An id may follow in parentheses, after the explanation.
 - **Their memory.** Assume they remember their own last message and nothing after it. Notifications and subagent reports are not their messages.
 - **Unknowns.** If you do not know a part, say so and say what would tell you. Do not guess.
