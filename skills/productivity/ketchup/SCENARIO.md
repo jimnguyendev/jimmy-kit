@@ -62,7 +62,15 @@ The owner's standing rules: reply in their language and follow their writing rul
 
 **Expected behavior:** the agent decides, records the choice and reason, and does not raise a brief.
 
-**Status:** Case 2 [PASS — 2026-10-11 blind run, 17/18 after one revision; the evidence line is still partial]; held-out eval 7 [PASS — 18/18]; Cases 1, 3, 4, 5 and 6 [EXIT 2 — specified, not run].
+## Case 7 — a status report with bare config names
+
+**Sample input:** after a batch lands, the agent writes the owner (who does not code) a "what is left" list: "set `NOTIFY_CONSENT_SOURCE=local` and `NOTIFY_UNSUBSCRIBE_KEYS`; import the exports; re-save old layouts; a dropdown arrow uses the browser default".
+
+**Expected behavior:** each item says what it does in plain words, who does it and what breaks if missed, with the env name only after that; items a default or migration could remove are offered for removal; the cosmetic nit is dropped or put last, not listed as a gap.
+
+**Rationale:** 2026-10-19 the owner answered such a list with "these two envs, what are they? I don't code, how would I know" and "what is this?". The skill's rules covered decision briefs only, so the agent did not apply them to a report.
+
+**Status:** Case 2 [PASS — 2026-10-11 blind run, 17/18 after one revision; the evidence line is still partial]; held-out eval 7 [PASS — 18/18]; Cases 1, 3, 4, 5, 6 and 7 [EXIT 2 — specified, not run].
 
 ## Run 2026-10-11 — blind comparison against a no-skill baseline
 
