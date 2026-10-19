@@ -58,10 +58,20 @@ the old API did not return the new field.
 
 ## Design before the screen is built
 
-A screen or panel with no exported design page gets a brief and a design first
-([design-export.md](design-export.md)), or at least the layout rules below in its acceptance
-criteria. Origin: the one screen built from the owner's design page landed in a single round with
-zero layout findings; every screen built from packet text came back with layout and copy defects.
+A screen or panel with no design page gets a layout spec written by the root before dispatch.
+The root designs it from the closest pages already exported ([design-export.md](design-export.md)),
+so the owner is not asked to draw every screen:
+
+- Name the page and block to copy (the same panel, table, form or wizard step).
+- Add a layout table: regions, widths, which component sits in each.
+- List the states: empty, loading, error, pristine, a long value.
+- Give the exact copy.
+- Add the layout rules below to the acceptance criteria.
+
+Do not hand-edit exported design pages to make the new screen: a 1,300-line page edit was slow
+and broke three pages. A page the owner did draw still wins over the root's spec.
+Origin: the one screen built from a design page landed in a single round with zero layout
+findings; every screen built from packet text alone came back with layout and copy defects.
 
 ## Layout rules for narrow panels and forms
 

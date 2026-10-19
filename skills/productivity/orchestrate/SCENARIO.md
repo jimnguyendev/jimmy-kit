@@ -71,7 +71,7 @@
 **Sample input:** "Five FE packets are queued for screens that have no design page yet; two BE packets run in parallel."
 
 **Expected behaviors:**
-- [ ] The root writes a design brief and waits for exported design pages, or puts the layout rules from references/verification.md into each FE packet's acceptance criteria.
+- [ ] The root writes a layout spec for each screen from the closest exported design pages (block to copy, layout table, states, copy) plus the layout rules from references/verification.md, without waiting for the owner to draw it.
 - [ ] After each FE land, one verification agent runs `layout_sweep.mjs` over every route and panel and reports sweep lines; a finding blocks the next FE dispatch.
 - [ ] Before that look, the backend is rebuilt, migrated and restarted from the landed branch.
 - [ ] A design-system shortfall is wrapped once in the app's UI folder, not worked around per call site.
