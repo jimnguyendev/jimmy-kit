@@ -45,6 +45,10 @@ cd <worktree> && opencode run -m <provider>/<model> \
   < /dev/null > <repo>/.orchestrate/p<NNN>-opencode.log 2>&1 &
 ```
 
+Launch it detached instead of as a plain `&` job of the agent shell: `nohup setsid opencode run … < /dev/null
+> <log> 2>&1 &` (macOS without `setsid`: plain `nohup`). A job owned by the agent shell dies at that shell's
+background time limit, which cuts a long packet in half.
+
 - `< /dev/null` is required. `opencode run` reads a non-TTY stdin to EOF and appends it to the
   prompt; a background shell keeps stdin open, so the run waits forever with an empty log
   (origin: 14 minutes lost; `sleep 100 | opencode run … PONG` stays silent, `< /dev/null` answers at once).
@@ -57,6 +61,9 @@ cd <worktree> && opencode run -m <provider>/<model> \
 - Watch the process by pid from a background shell; review the diff even when the run died. An
   interrupted run can leave correct, uncommitted work that the root gates and commits.
 - Never run two opencode writers concurrently.
+- Grep the log for provider limit messages ("Usage limit reached", HTTP 429) while it runs. On one,
+  commit the WIP in the worktree and hand it to another executor ("review `git diff`, keep what is
+  right") at once; waiting out a multi-hour reset costs more than the hand-over context.
 
 ## Shared-machine rules
 
@@ -102,6 +109,19 @@ executor's own gate report until packet 28, which landed with one suite not re-r
 last commit. Why build after every merge: two parallel packets changed the same client, git
 merged both cleanly, and the result did not compile (one removed a field the other used).
 
+### Landing under load
+
+- WHEN a land starts · CHECK no executor is running gates and the 5-minute load is low (about 14 on
+  the origin machine) · BECAUSE timing and performance tests with short waits failed three different
+  ways under load 50 and each passed alone in seconds. Land one packet at a time.
+- WHEN a gate fails · CHECK rerun that single test alone 3 times before touching code; consistent
+  passes mean load, so wait and rerun the gate · BECAUSE a fake red gate costs a land (about 25 min).
+- WHEN a wall-clock budget sits in the parallel suite · CHECK it asserts server-side time or a
+  query plan, not the client round trip.
+- WHEN root builds or runs a worktree locally · CHECK never copy a `.env` into it; start the binary
+  with an explicit env-file flag pointing outside the tree · BECAUSE config tests read `.env` and
+  failed the land of a packet that was otherwise green.
+
 Do not pipe `land.sh` into `tail` or `grep` before `&&`; the pipe hides its exit code.
 Environment knobs (`ORCH_MAIN`, `ORCH_FORGE`, `GITLAB_TOKEN`, `GITLAB_PROJECT`, …) are listed
 in the script header.
@@ -113,3 +133,8 @@ uncommitted changes. After the reset, resume each stopped Claude agent with `Sen
 agent ID (its context is intact, and this works across Claude Code sessions) instead of
 spawning a fresh agent that must rediscover the work. Restart an opencode run from the dirty
 worktree. Record the agent IDs in HANDOFF.md so a compacted root can still find them.
+
+When the **root's own** model is rate-limited, nothing wakes it. Before an unattended run (overnight,
+away from the keyboard), schedule a wake-up or check after the known reset time (`schedule`/`loop`
+skill, or a timer), and have it read HANDOFF.md. If the root stalled anyway, say so in the next
+status: when it stopped, how long, what was idle. Do not present a stalled night as progress.

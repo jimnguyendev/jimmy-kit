@@ -63,3 +63,9 @@
 - [ ] After a compaction-resume or a long silence, the first owner-facing message follows `/ketchup`: action-item count, what happened, then the briefs.
 
 **Status:** [EXIT 2 — specified; no run recorded yet].
+
+## Product fit, UI done-ness and executor operations
+
+**Sample input:** "Plan the admin for a product that replaces a third-party tool; dispatch packets overnight with an opencode executor; land them."
+**Expected:** the root builds a usage inventory and parity table, and asks the company-wide count for each model concept, before the first plan; Advisor review stops at 2 rounds; a migration number comes from the SPRINT.md table; opencode is launched detached with a log and a usage-limit line triggers hand-over; a rate-limited root schedules a wake-up; land waits for executor gates to finish; a UI packet is reported done only after a walk-through on seeded data beside the reference screen, and locale files pass a deny-list test.
+**Status:** [exit 2 — no real run pasted yet]
