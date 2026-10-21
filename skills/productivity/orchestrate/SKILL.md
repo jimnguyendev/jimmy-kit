@@ -69,7 +69,9 @@ For `legacy`, resolve the executor from current args → sprint pin →
   packet's worktree, with the brief, packet and any out-of-repo sources copied into
   `<worktree>/.orchestrate/` (its sandbox rejects reads outside the cwd; without `< /dev/null`
   it waits on stdin, without `-m` it falls back to a default model). Never run two opencode
-  writers concurrently. If the CLI/model is absent, stop or use a user-approved fallback.
+  writers concurrently. Launch it detached with a log file
+  ([references/dispatch-and-land.md](references/dispatch-and-land.md#opencode-in-a-worktree)).
+  If the CLI/model is absent, stop or use a user-approved fallback.
 
 ## Model routing
 
@@ -95,6 +97,9 @@ repo, the root checks and records in SPRINT.md:
 4. Contracts, ADRs and shared seams land before the parallel wave that depends on them.
 5. `land.sh` and `gates.sh` are called from the installed skill, and `.orchestrate/gates` lists
    every gate.
+6. A new product area has its usage inventory and parity table before its first technical plan
+   ([references/product-fit.md](references/product-fit.md)).
+7. Every migration number the sprint will use is reserved in the SPRINT.md table.
 
 Origin: a sprint started from another repo's session dispatched two packets without the Advisor
 round and without budgets; the owner had to point back at the previous sprint's workflow.
@@ -136,7 +141,10 @@ round and without budgets; the owner had to point back at the previous sprint's 
      tool or canvas screenshots ([references/design-export.md](references/design-export.md)).
    A plan that touches queue, lease, retry, lock, fencing, idempotency, outbound-call or
    long-running state-machine semantics needs an independent Advisor that reads the repo,
-   including code already landed, and reruns until no material finding is open. Run
+   including code already landed. At most 2 rounds (a third only as a cross-debate), and a lower
+   project cap in `.claude/orchestrator.json` wins; rounds 3+ mostly find defects the root's own
+   fixes introduced, and an Advisor checks plan-to-code consistency, never product fit. Split a plan
+   that needs more into release units. Run
    `<installed-skill-dir>/scripts/advisor-review.sh <plan.md>`: it uses the first installed route
    (Codex, then opencode's read-only `plan` agent with the configured model) and writes the
    route under the verdict. When it exits 3, no external route exists: run the round with a fresh
@@ -145,7 +153,8 @@ round and without budgets; the owner had to point back at the previous sprint's 
    root answers the [state-machine checklist](references/state-machine-review.md) in the plan;
    every round answers it again, so a weaker reviewer still asks the questions that found real
    defects. Origin: three rounds took one dispatcher plan from 15 findings (9 high) to 0; the
-   third found two double-send paths in clients already merged. Codex is not always available,
+   third found two double-send paths in clients already merged. A later feature took 5-6 rounds
+   and still shipped product-level misses, which is why the product-fit check comes first. Codex is not always available,
    so the seat is a role with a fallback, not a product.
 4. **Packetize.** Copy [PACKET.md](PACKET.md). One packet is one bounded change/commit with
    explicit file ownership, stop conditions, and exact acceptance commands.
@@ -161,6 +170,9 @@ round and without budgets; the owner had to point back at the previous sprint's 
    packet that has no numbers; the contract linter rejects a packet without the section. Origin: the
    throughput target existed in an ADR from day one but was never an AC; the first load test
    came after 35 packets and found four bottlenecks the packets themselves asked for.
+   A packet that adds a migration takes its number from the SPRINT.md table, reserved at plan time,
+   and packets land in number order: golang-migrate skips a lower number once a higher one is
+   applied, so a late low number never runs.
 5. **Dispatch.** One packet per executor run. The packet's implementation, evidence,
    runtime-parity, release, and landing **verdict dimensions** are tracked separately. Name both
    an **evidence owner** (who proves the harness/claim) and a **runtime-fix owner** (who changes
@@ -182,7 +194,9 @@ round and without budgets; the owner had to point back at the previous sprint's 
    that owns one browser and returns verdicts plus evidence paths; root reads the evidence and
    looks at every FE land in that same browser. Mocked-API tests cannot reveal a backend defect,
    and the root's context is not spent on DOM trees
-   ([references/verification.md](references/verification.md)).
+   ([references/verification.md](references/verification.md)). A UI packet is done only after the
+   root has walked its flow as a user, on realistic seeded data, next to the reference product's
+   screen; internal vocabulary in the UI fails it.
 7. **Iterate.** Send a short delta describing failed evidence and required correction. Maximum
    three implementation iterations; then root re-scopes, takes over the sticking point, or
    reports the blocker.
@@ -193,7 +207,9 @@ round and without budgets; the owner had to point back at the previous sprint's 
    step does not run is a gate nobody runs. Call the scripts from the installed skill, never a
    copy under `.orchestrate/bin/`: a project copy made before land ran gates kept landing without
    them, and a root that pipes gates into `tail && land` lands on a failed gate. The context hook
-   warns when it finds such a copy. Record PR/commit and verdict in SPRINT.md.
+   warns when it finds such a copy. Land only while no executor is running gates; timing tests
+   flake under load ([references/dispatch-and-land.md](references/dispatch-and-land.md#landing-under-load)).
+   Record PR/commit and verdict in SPRINT.md.
 9. **Hygiene.** Rewrite HANDOFF.md after every land (what landed, what runs with agent IDs and
    pids, next actions, standing user rules, and `Waiting on owner` as decision briefs or `None.`,
    checked with `orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md`); the
@@ -201,7 +217,8 @@ round and without budgets; the owner had to point back at the previous sprint's 
    `scripts/orchestrate-context.sh` restores it after compaction
    ([references/context-and-resume.md](references/context-and-resume.md)). Add a
    WHEN · CHECK · BECAUSE line to LEARNINGS.md when a failure teaches a rule. After a session
-   limit, resume each stopped agent with `SendMessage`; do not respawn it. Capture durable
+   limit, resume each stopped agent with `SendMessage`; do not respawn it. When the root's own
+   model is rate-limited, schedule a wake-up after the reset and write the stall into the status. Capture durable
    decisions in ADR/docs. A material requirement, baseline, route, or ownership change ends the
    review episode: obtain user authorization for a **fresh cycle** and rerun recon/review rather
    than patching an approved plan.

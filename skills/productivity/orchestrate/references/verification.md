@@ -41,6 +41,19 @@ Findings go back as a delta to the same executor, or into the next FE packet; AP
 backend packet. When the repo has a project-local verify skill (built with `verify-app`), the
 verification agent follows its recipes and evidence rules.
 
+## Done means walked as a user
+
+A green UI packet is not done. Before reporting it done, the root (or the verification agent
+it briefs) walks the flow as a user on the local stack, with realistic seeded data copied from the
+reference product's real usage, with the reference product's screen open beside it. Empty or
+toy data hides dead ends, missing columns and broken empty states; a feature checked only
+against our own spec can match the spec and still be the wrong screen.
+
+Internal vocabulary never reaches the UI: terms from the code, ADRs or other repos (revision,
+tombstone, executor, lease) are not words the admin uses. Recommended gate: a test over the
+UI locale files that fails on a deny-list of internal terms, with an allow-list for reviewed
+exceptions. Add words to the list when a review finds one.
+
 ## Defects only the browser shows
 
 Typecheck, lint and component tests passed while these shipped; look for them on every FE land:
