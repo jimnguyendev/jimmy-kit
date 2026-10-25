@@ -6,7 +6,7 @@ license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents, and for projects using Golang.
 metadata:
   author: jimnguyendev
-  version: "1.4.0"
+  version: "1.4.1"
 allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(git:*) Agent AskUserQuestion
 ---
 
@@ -112,15 +112,16 @@ type Deps struct {
     Lgr      logger.Logger
 }
 
-// Provide wires the dependency graph: repo → service → handler
-func Provide(d Deps) *Handler {
+// New wires the dependency graph: repo → service → handler. The Module is what
+// the process sees: it mounts routes, subscribes to events and runs loops.
+func New(d Deps) *Module {
     eb := event.Noop()
     if d.EventBus != nil {
         eb = d.EventBus
     }
     repo := NewPostgresRepository(d.Postgres)
     svc := NewService(repo, d.Cache, eb, d.Lgr)
-    return NewHandler(svc, d.Lgr)
+    return &Module{handler: NewHandler(svc, d.Lgr), svc: svc}
 }
 ```
 
@@ -135,9 +136,9 @@ func Provide(d Deps) *Handler {
 **Rules:**
 
 - `Deps` lists only what the feature needs — delete unused fields immediately
-- `Provide()` returns concrete `*Handler`, not an interface
+- The constructor (`New` or `Provide`) returns a concrete type (`*Module`, `*Handler`), not an interface. A feature that other features read also exposes its `Service`, which satisfies its published contract
 - Optional deps (Cache, EventBus) degrade gracefully when nil
-- No `init()` — all wiring through `Provide(d Deps)`
+- No `init()` — all wiring through the constructor that takes `Deps`
 
 
 ## Constructors & Initialization
