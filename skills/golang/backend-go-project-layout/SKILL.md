@@ -6,7 +6,7 @@ license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents, and for projects using Golang.
 metadata:
   author: jimnguyendev
-  version: "1.2.0"
+  version: "1.3.0"
 allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(git:*) Agent AskUserQuestion
 ---
 
@@ -178,6 +178,8 @@ Go enforces that package imports form a DAG — no cycles allowed. If package A 
 - If two features start depending on each other, extract the shared concept into a separate package or define consumer-side interfaces
 - Do not solve cycles by adding more technical-layer packages; that usually scatters one concern across more folders and worsens locality
 - If two packages are inseparable, merging them is often better than preserving a bad boundary
+- A package whose only job is to connect two features and that holds SQL for a table it does not own is a smell: put the query with the table's owner and call it through the owner's published contract (see `backend-go-design-patterns`, DDD reference, "Published contracts")
+- When every feature needs its own mount function and loop registration and that repeated composition has a demonstrated cost, let each feature expose optional `Mount` and `Loops` and keep the composition root a plain list built in dependency order. Keep lifecycle and shutdown ownership explicit; do not add the abstraction to a small service
 
 → See `backend-go-design-patterns` for interface-based decoupling and dependency injection patterns.
 

@@ -78,3 +78,15 @@ reported a false failure). Read the log after the process exits.
 **Input B:** "A worker test that sends then claims at once finds nothing on one machine after a few hours of uptime; it passes on CI and on another branch."
 
 **Expected B:** Notices that the writer stamps time with the app clock while the claim compares with the database's `now()`; names mechanism 10; makes the row due on the database clock in the test (or compares with a stated tolerance) instead of sleeping; flags any test that pins a calendar date which will pass into the past; states the production effect (one poll of delay) rather than calling it harmless.
+
+## Long-running registrations extension (written BEFORE the revision)
+
+**Sample input:** "All tests pass and the worker boots, but a scheduled job documented as nightly never produced output, and one registered loop makes the whole worker exit a second after start."
+
+**Expected behaviors:**
+- [ ] Separates four stages: registration completeness, startup survival, execution of a due cycle through the production scheduler, shutdown.
+- [ ] Boots the real process against the real datastore and asserts every registered loop is still alive after a few seconds, while saying this does not prove a scheduled body ran.
+- [ ] Drives a due cycle with a controlled clock and asserts its observable result.
+- [ ] Reconciles the design document's job table against the registered jobs by status, schedule and activation condition, allowing explicitly deferred entries.
+
+**Status:** [EXIT 2 — scenario specified; no independent fresh-agent run recorded yet].

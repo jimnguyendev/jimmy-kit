@@ -1,0 +1,709 @@
+[0:05] Rồi. Ok. Đấy là bảng cân đối kế toán. Cái báo cáo thứ hai trong bộ báo cáo tài
+[0:11] chính đó là bảng kết quả sản xuất kinh doanh. Như đã nói với các anh chị từ
+[0:15] đầu, kết quả sản xuất kinh doanh nó là báo cáo thời kỳ. Nghĩa là nó thể hiện
+[0:21] được cái kết quả về mặt kinh tế của công ty trong một kỳ chúng ta lập báo cáo.
+[0:27] Nếu báo cáo kết quả sản xuất kinh doanh lập theo năm là nó thể hiện toàn bộ
+[0:31] doanh thu, chi phí và lợi nhuận của công ty trong cả cái năm đó.
+[0:40] Kết cấu của bảng kết quả sản xuất kinh doanh. Nói chung thì nó như sau thôi.
+[0:47] Chúng ta hình dung giống như một cái cân.
+[0:50] Một bên chúng ta tập hợp toàn bộ doanh thu và thu nhập. Doanh thu thì dễ rồi.
+[0:56] Doanh thu là giá trị tiền hoặc công nợ mà chúng ta có được từ việc cung cấp
+[1:01] hàng hóa dịch vụ cho khách hàng. Còn thu nhập khác là các khoản thu nhập được cho
+[1:07] biếu tặng thanh lý nó có được. Phần còn lại người ta tập hợp toàn bộ cái giá trị
+[1:13] về chi phí, giá vốn. Lấy tổng doanh thu và thu nhập người ta
+[1:19] mang cân đối với tổng chi phí như thế thì nó tạo ra một trong hai cái kết cục
+[1:24] lãi hoặc lộ. lãi này nếu mà có nó quay lại nó bổ sung
+[1:30] vốn chủ sở hữu. Còn nếu bị lỗ thì nó làm gì ạ? Cũng quay lại bổ sung theo cho vốn
+[1:36] chủ sở hữu nhưng bổ sung theo chiều âm. Vì thế nó làm giảm cái vốn chủ sở hữu
+[1:41] đi. Đấy. Ấy thế nhưng vì ở đây nó có cái ý này là doanh thu và
+[1:47] thu nhập là có được từ bán hàng cung cấp dịch vụ lãi tài chính thu nhập khác cho
+[1:52] tặng thanh lý nhưng nó hàm chứa cả công nợ ở đây.
+[1:56] Nó hàm chứa cả công nợ phải thu. Mặc dù được ghi nhận là doanh thu nhưng nếu đó
+[2:02] là doanh thu chưa thu tiền thì cái phần chưa thu tiền đấy nó quay lại nó trở
+[2:06] thành một chỉ tiêu là nợ phải thu ở trên bảng cân đối kế toán.
+[2:11] Vậy có nghĩa là nếu ông cứ bán doanh thu được 10 đồng mà để nợ 6 đồng thì ông báo
+[2:19] cáo lợi nhuận của em là 30% cũng không có giá trị gì chứ gì.
+[2:24] Bởi vì trong trường hợp đấy là lợi nhuận gì? Lợi nhuận hơi tức là lợi nhuận nhưng
+[2:29] không phải tiền ta đang nắm giữ. Lợi nhuận đấy thằng khác đang nắm giữ. Trong
+[2:35] chừng mực đó, nếu công ty nỗ lực đi vay vốn, đi huy động vốn từ bên ngoài để tài
+[2:40] trợ cho hoạt động sản xuất kinh doanh nhưng quản trị công nợ và dòng tiền
+[2:44] không tốt, mặc dù nhìn trên báo cáo kết quả sản xuất kinh doanh lãi rất cao
+[2:49] nhưng vẫn không có tiền. Rõ không? Và về mặt pháp lý các anh chị biết rằng là
+[2:55] công ty nó chết không phải vì lợi nhuận mà nó chết vì không đủ tiền chi trả nợ
+[3:03] đến hạn. Không đủ tiền để đáp ứng cho cái hoạt
+[3:08] động thông thường hàng ngày để nó vận hành.
+[3:12] Cho nên lưu ý chỗ bạn ngân hàng một chút rằng
+[3:17] quy tắc của ngân hàng khi nhìn nhận của một khách hàng là người ta nhìn về thái
+[3:21] độ trả nợ và nhìn về dòng tiền chứ không nhìn lợi nhuận. Cho nên gặp thằng khách
+[3:27] hàng nào cứ khoe lợi nhuận thì bảo nó là thôi ông ơi ông đừng khoe nữa. Tôi hỏi
+[3:32] thật ông là bây giờ tỷ suất công nợ của ông trên doanh thu là bao nhiêu phần
+[3:35] trăm? Bảo chừng 40. Ông lợi nhuận bao nhiêu? 20. Vậy ít nhất lợi nhuận của mày
+[3:40] vẫn còn chứa đựng công đợi. Cho nên là gì ạ? Chúng ta cũng thấy là
+[3:45] đôi khi mình đọc báo này, đôi khi mình thấy là các công ty họ tự lăng C này
+[3:49] hoặc đôi khi mình thấy rằng là thông tin truyền thông trên các phương tiện thông
+[3:52] tin đại chúng nói rằng công ty kia vừa công bố lợi nhuận 3 tháng, 6 tháng hay 9
+[3:57] tháng hay năm vừa qua là mức tăng trưởng lợi nhuận rất là cao. Cái đó hết sức
+[4:01] tham khảo ở mức độ nhìn nhận nhẹ nhàng nhất vì lợi nhuận đấy không nói được lên
+[4:07] chuyện gì cả. anh chị ạ. Đành rằng thì hoạt động ở góc độ nào đó
+[4:13] hiệu quả là có lợi nhuận nhưng nó chỉ thực sự lợi nhuận có ý nghĩa khi nó đồng
+[4:18] hành được với dòng tiền về. Cho nên cho vay là dựa vào dòng tiền và thái độ trả
+[4:22] nợ chứ không nhìn lợi nhu vậy. Ngân hàng là như thế
+[4:26] chứ bởi vì bản chất này công ty mà vay tiền làm ăn có lợi nhuận. Lợi nhuận của
+[4:31] ông ông có chia cho ngân hàng đâu. Có đúng không ạ? Ngân hàng chỉ quan tâm là
+[4:36] thu gốc và lãi đến kỳ. Mà gốc và lãi đến kỳ như vậy nó không phụ thuộc vào lợi
+[4:40] nhuận mà nó phuộc của dòng tiền và thái độ. Có những thằng nó có dòng tiền nhưng
+[4:44] không có thái độ trả nợ vẫn không trả. Đó
+[4:50] vì nói chung chúng ta đều có tâm lý tiếc nợ.
+[4:53] Cho nên nếu một một ngày nào đó các anh chị có dịp quay lại đây để tôi
+[4:58] nói về câu chuyện tả tín dụng công ty và kế hoạch dòng tiền thì tôi sẽ nói kỹ hơn
+[5:04] cái câu chuyện vậy ta ứng xử với cái nợ phải thu thế nào để cho nó giảm bớt cái
+[5:09] tính gọi là tiếc nợ của người phải trả và đòi nợ chủ động là thế nào thì khi đó
+[5:16] tôi sẽ nói kỹ hơn giá vốn và các khoản chi phí hoạt động
+[5:21] kinh doanh khác thì nó cũng bao gồm toàn bộ các hao húi về tiền và công nợ phải
+[5:26] trả để có được hàng hóa dịch vụ thành phẩm để chúng ta cung ứng ra bên ngoài.
+[5:32] Cái này tức là có ra này thì phải có vào. Cái này nó là nguồn để tạo nên cái
+[5:37] doanh thu này đó mang cân đối với nhau. Thế thì về mặt tính toán nó được mô
+[5:43] phỏng bởi một cái bảng tính chi tiết thế này thôi. Phần bên trái màu xanh là ba
+[5:48] khoản doanh thu và thu nhập. Phần bên phải là năm khoản chi phí đứng ở góc độ
+[5:54] quản trị tài chính công ty. Thứ nhất này doanh thu từ bán hàng và cung cấp dịch
+[5:58] vụ gồm có doanh thu bán hàng, bán thành phẩm và doanh thu dịch vụ. Về mặt hạch
+[6:03] toán nó được thể hiện trên tài khoản 511 trên sổ kế toán của công ty.
+[6:08] Như vậy nếu như chúng ta muốn kiểm tra số liệu thì nhìn cái chỉ tiêu là doanh
+[6:15] thu bán hàng trên báo cáo kết quả sản xuất kinh doanh mang đối chiếu luôn
+[6:20] với cái tờ khai thuế đồ ra và mang đối chiếu luôn với lại sổ cái hoặc sổ chi
+[6:25] tiết của tài khoản 511. Ba thứ đó nó khớp với nhau thì mới không tồn tại các
+[6:30] sai sót về mặt số học trong quá trình chúng ta hạch toán và tính toán.
+[6:35] Khoản thứ hai là doanh thu nhưng từ hoạt động tài chính. Công ty dư tiền cho đi
+[6:41] vay có lời. Công ty có tiền gửi trong ngân hàng tạo ra các tiền lãi thì đó là
+[6:46] doanh thu tài chính. Hoặc là có các giao dịch có liên quan đến thanh toán bằng
+[6:51] ngoại tệ. Nhưng cái tỷ giá giữa hai cái thời điểm, một là thời điểm ghi nhận cái
+[6:57] nợ phải trả hoặc phải thu. Thời điểm thứ hai là thời điểm thực tế bỏ tiền Việt ra
+[7:01] mua cái ngoại tệ đó để trả. chúng ta có lợi về mặt tỉ giá thì cái phần chênh
+[7:06] lệch lợi đó nó là doanh thu của hoạt động tài chính. Phần cuối cùng là các
+[7:12] khoản thu nhập khác. À ví dụ như là tài sản tôi không dùng nữa, bây giờ tôi bán
+[7:17] đi. Thu được một khoản gọi là thanh lý, nguyên vật liệu cũng thanh lý là như
+[7:21] vậy. Thế hay là được cho biếu tạng nhận khuyến mãi, nhận chiết khấu của nhà cung
+[7:26] cấp thì đó là các khoản thu nhập khác. Đấy cho nên lát nữa phân tích nốt phần
+[7:33] chi phí mình sẽ đi đến một cái nhìn nhận rằng cùng là báo cáo kết quả sản xuất
+[7:38] kinh doanh lãi 50 tỷ. Nhưng nếu lãi 50 tỷ mà cái tỉ lệ đóng góp từ hoạt động
+[7:44] sản xuất kinh doanh là bằng 0 mà 50 tỷ đấy chủ yếu là từ thu nhập khác. Nghĩa
+[7:49] là cái lợi nhuận anh có được không phải từ cái hoạt động chính yếu của công ty
+[7:54] mà có được từ các vụ việc mang tính chất là bán thanh lý hoặc bán tháo tài sản
+[7:59] cuối năm để có lãi hoặc một số mô hình đặc thù khác là nhận cái tiền gì? Tiền
+[8:04] thưởng tiền cho của các đối tác khi anh đạt được các chỉ tiêu. Thì cái đại diện
+[8:09] cho cái đó là các cái nhà phân phối nhá. Đôi khi họ chấp nhận, chấp nhận là bán
+[8:14] thấp hơn cả cái giá của nhà sản xuất để chấp nhận lỗ luôn. Một sản phẩm cứ một
+[8:20] sản phẩm bán ra thì lỗ. Nhưng khi họ đạt được chỉ tiêu đối với nhà sản xuất thì
+[8:25] nhà sản xuất sẽ tặng họ một cái khoản tiền thưởng cho nhà phân phối và giá trị
+[8:30] tiền thưởng đó nó lớn hơn cả tiền lại. Đó thì đấy là một số cái gốc chúng ta
+[8:35] nhìn. Về mặt chi phí ở đây khoản mục lớn nhất, ưu tiên nhất và cần phải quản trị
+[8:40] sát sao nhất trong doanh nghiệp đó là giá vốn.
+[8:44] Vậy giá vốn với công ty luật thì đó là tiền lương, tiền công tác phí mà phải
+[8:49] trả cho nhân viên và luật sư. Giá vốn đối với lại công ty thời trang thì đó là
+[8:55] gì? Đó là các hao phí để sản xuất lên sản phẩm
+[9:00] gọi là giá thành của sản phẩm. Thế còn giá vốn đối với công ty tư vấn bên kia
+[9:04] là gì? Là tiền chi trả cho chuyên gia, tiền công tác phí của chuyên gia để tạo
+[9:09] nên cái dịch vụ nghiệm thu với khách hàng. Giá vốn của nha khoa là gì? Là
+[9:14] toàn bộ chi phí về labo tiền thuốc, tiền điều trị, tiền bác sĩ, tiền phụ điều trị
+[9:19] của nhân viên vân vân. Tiền hao phí điện nước mà phục vụ cho hoạt động của phòng
+[9:24] khám chứ không phải phục vụ cho hoạt động của gì ạ? Của quản lý. Nhưng bảo
+[9:28] bây giờ em chỉ có mỗi một cái khuôn viên thế này thôi. Em vừa khám răng, em vừa
+[9:32] đặt cái văn phòng để làm việc. Thì trong trường hợp đấy cái chi phí nó ngốn chính
+[9:35] là cho hoạt động gì? Cung cấp dịch vụ. Cho nên có thể đánh đồng cả chi phí quản
+[9:40] lý gồm vào đó luôn đúng không ạ? Ví dụ ở một số nhà máy cái chi phí về quản trị
+[9:45] nhà máy á, quản lý nhà máy nó rất là thấp vì chỉ có 1 ba nhân viên làm quản
+[9:50] lý cả cái nhà máy như vậy thì toàn bộ hao phí về điện đó được xem là tính toàn
+[9:55] bộ cho chi phí sản xuất. Nghĩa là cái gì? để hình thành đến giá trị của tài
+[9:59] sản à xin lỗi của sản phẩm dịch vụ thì cái đó gọi là giá vốn. Đối với lại doanh
+[10:04] nghiệp vận tải thì đó là gì? Tiền của lái xe, của phụ xe, của nâng công, của
+[10:10] phân vác, của phí cầu đường, của khấu hao xe cấu thành cái đó là giá vốn. Ok.
+[10:16] Thế thì ở góc độ của người đi thẩm lị khách hàng, ngân hàng, đối với doanh
+[10:20] nghiệp sản xuất thương mại thì nó dễ nhưng đối với một số doanh nghiệp dịch
+[10:24] vụ thì cái sai lầm trong các công ty hiện nay là họ không hạch toán cái giá
+[10:29] vốn mà cứ những cái gì mà doanh nghiệp chi
+[10:34] tiêu ra nó đưa hết vào chi phí bán hàng với chi phí quản lý doanh nghiệp. Vậy
+[10:38] trong trường hợp đấy, nếu như cái giá vốn ở trong công ty dịch vụ mà em nhìn
+[10:42] thấy nó thấp hoặc nó không có, điều đó có nghĩa là họ đang hạch toán sai về mặt
+[10:46] bản chất. Thế nhưng bây giờ nói với họ, họ bảo em làm 3 4 năm nay thuế có nói gì
+[10:51] đâu. Ồ, nó nói rất hồn nhiên. Vậy là vì người ta đang làm kế toán thuế đối phó
+[10:56] là chính. Mà thuế thì không quan tâm rằng ông hạch
+[11:00] toán có đúng hay không, chỉ quan tâm rằng ông có tập hợp đủ doanh thu chi phí
+[11:04] hay không. Vậy về mặt nộp thuế anh ghi nhận là giá vốn hay chi phí quản lý thì
+[11:09] cuối cùng nó vẫn tính ra một kết quả lợi nhuận chức thuế là như nhau đúng không
+[11:14] ạ? Nhưng quản trị chi phí thì khác nhau rồi. Khác nhau hoàn toàn. Đó. Thế còn
+[11:19] bên thiết kế kiến trúc giám sát công trình thì sao? Đó là toàn bộ chi phí của
+[11:24] kiến trúc sư, tiền nhân công, tiền máy móc, trang thiết bị đầu tư phục vụ cho
+[11:29] các hợp đồng kiến trúc vân vân. Thì cái đấy là cái cái cái giá vốn của hàng bán.
+[11:37] Phần thứ hai là chi phí về tài chính. Một mặt là công ty vay tiền để tài trợ
+[11:43] cho hoạt động sản xuất kinh doanh của mình. Anh phải trả lãi. Vậy lãi đó là
+[11:47] chi phí tài chính. Cái thứ hai là có giao dịch ngoại tệ nhưng giữa hai thời
+[11:51] điểm ghi nhận và chi trả anh bị lỗ về mặt tỉ giá thì nó lại tạo ra gì ạ? Nó
+[11:56] lại tạo ra chi phí tài chính. Đó thế rồi đầu tư về chứng khoán, đầu tư về tài
+[12:03] chính nhưng từ lúc giá trị bỏ ra đầu tư đến lúc thu hồi à nó bị lỗ thì đó cũng
+[12:10] là chi phí tài chính. Khoản thứ ba là chi phí quản lý kinh doanh có hai khoản
+[12:16] gồm có chi phí bán hàng và chi phí quản lý doanh nghiệp.
+[12:20] Toàn bộ chi phí có liên quan đến marketing, Pia, quảng cáo, nhân viên bán
+[12:25] hàng, khấu hao cho bán hàng, xe cộ phục vụ cho bán hàng thì đó đều là chi phí
+[12:30] bán. Còn lại thì là chi phí quản lý doanh
+[12:34] nghiệp như là lương của kế toán, lương của ban giám đốc, chi phí về giao tế,
+[12:37] giao dịch, tiếp khách, khánh tiết vân vân. Thì cái đấy nó thuộc về chi phí
+[12:41] quản lý doanh nghiệp. Ngoài ra các khoản nằm trong hoạt động
+[12:47] nhưng không liệt kê vào ba khoản trên gọi là chi phí khác. Ở góc độ quản trị
+[12:52] tài chính công ty, sau khi tính được ra đến chi phí khác rồi, nó tạo ra giá trị
+[12:56] là lợi nhuận kế toán trước thuế. Anh có lãi anh tính tiếp một phần chi phí thuế
+[13:00] nữa gọi là chi phí thuế thu nhập doanh nghiệp. Trước kia chế độ kế toán chỉ gọi
+[13:06] là thuế thu nhập doanh nghiệp nhưng bây giờ người ta gọi rõ là chi phí thuế thu
+[13:10] nhập doanh nghiệp. Nghĩa là ở góc độ tài chính công ty thì khoản tiền nộp thuế
+[13:16] cũng là chi phí tài chính công ty phải bỏ ra. Đấy cho nên nó mới gọi là chi phí
+[13:21] thuế thu nhập doanh nghiệp. Hiện nay tỉ lệ này ở Việt Nam là bao
+[13:25] nhiêu? 20%. Dự kiến lộ trình sẽ giảm xuống 17. Trước kia là từ 32% xuống 28
+[13:31] xuống 25 đúng không? Xuống 22 à xuống 20 sắp tới sẽ xuống đến 17 là tỉ lệ thuế
+[13:39] thu nhập doanh nghiệp. Thì thế ở góc độ hạch toán ở đây bạn nào là kế toán thì
+[13:43] chú ý cho đây. Toàn bộ các tài khoản để ghi nhận cái này được tôi thể hiện ở
+[13:49] trên mô hình này. Chúng ta cứ về soát xét đúng như vậy là ra thôi, không có gì
+[13:53] khó khăn hết. Còn về cách tính người ta tính như sau.
+[13:57] Giá trị đầu tiên gọi là tổng doanh thu. Tổng doanh thu phân biệt đã thu tiền hay
+[14:04] chưa. Hoạt động của hợp đồng và giao hàng khi nó kết thúc ở cái điểm giao
+[14:10] hàng đó thì lúc đó được ghi nhận là tổng doanh thủ.
+[14:15] Ví dụ như là bên làm về kiến trúc, anh ký một cái hợp đồng, anh nghiệm thu với
+[14:21] người ta về mặt sơ bộ cơ bản các bên thống nhất với nhau giá trị đó là 10 tỷ
+[14:26] thì đó là tổng doanh thu của anh là 10 tỷ. Hay là bên phòng khám anh tổng hợp
+[14:31] lại trong 1 tháng tổng số tiền mà doanh thu được từ cái việc khách đến khám chữa
+[14:37] là 3 tỷ thì đó là tổng doanh thu là 3 tỷ. Nhưng mà sang đến tuần tới có khách
+[14:41] nó gọi là anh ơi tuần trước em vừa mới khám răng ở bên anh nhưng mà về bây giờ
+[14:45] đau quá ăn không được. Thế và đ đến khám thì mới phát hiện ra à cái lỗi này là có
+[14:50] khả năng là tại bên mình và tại phòng khám trong đó có một phần của người ta
+[14:54] nhưng thôi bây giờ đồng ý thế này. Đồng ý là thôi lúc trước thu của em 5 triệu
+[14:59] đúng không? Bây giờ anh giảm tiền cho em giảm đi một phần. hay là bên giám sát
+[15:04] thi công sau khi nghiệm thu đâu đấy với nhau rồi à họ mới phát hiện là trong cái
+[15:08] quá trình trước lúc tôi với ông nghiệm thu là có một số điểm này chưa được phát
+[15:11] hiện ra và bây giờ là như vậy hay là bên tư vấn lúc trước chúng ta nghiệm thu hợp
+[15:15] đồng với họ là 1 tỷ nhưng mà sau đó họ nói rằng bây giờ còn một số cái hoạt
+[15:19] động có liên quan đến đào tạo và hỗ trợ sau này nữa anh đã không hoàn thành
+[15:22] trách nhiệm của mình vậy tôi đề nghị giảm giá 100 triệu vậy thì cái phần giảm
+[15:26] đấy người ta gọi là giảm trừ doanh th giảm trừ doanh thu và lấy tổng doanh thu
+[15:33] trừ đi giảm trừ doanh thu thì nó tạo ra giá trị còn lại là doanh thuần. Thuần
+[15:38] được hiểu là cái nét ta còn nhận được, thực sự còn nhận được. Thế nhưng trong
+[15:43] doanh nghiệp hiện nay các em làm kế toán hoặc chủ doanh nghiệp không phân định
+[15:47] được nên hay nhầm lẫn giữa các khái niệm sau đây thì tôi phải nói rõ.
+[15:53] Cái nhầm lẫn thứ nhất này là để tránh cái nhầm lẫn này thì chúng ta phân biệt
+[15:57] này một là giảm trừ doanh thu. Cái thứ hai là chiết khấu thương mại.
+[16:08] Thứ ba chiết khấu thanh toán. Thứ tư chiết khấu thương mại, chiết khấu thanh
+[16:15] toán. Còn gì nữa ta?
+[16:22] Khuyến mãi khuyến mãi chứ không phải khuyến mại.
+[16:30] Khuyến mại là khuyến thằng bán, khuyến mãi là khuyến thằng mua.
+[16:35] Giảm chiều doanh thu như tôi vừa mới nói đó là hoạt động dường như đã nghiệm thu
+[16:39] rồi nhưng sau đó phát hiện một đỗi lầm nào đó của bên nhà cung cấp. Các bên kỹ
+[16:44] biên bản làm việc và thống nhất với nhau sẽ giảm trừ đi một phần giá trị đã từng
+[16:48] nghiệm thu. Cái đó là giảm trừ doanh thu. Về mặt thủ tục các anh nhớ rằng
+[16:54] trong chính sách bán hàng, trong hợp đồng và trước khi thỏa thuận với các bên
+[16:59] nên nói rõ nếu xảy ra trường hợp giảm trừ doanh thu gồm có giảm giá hàng bán
+[17:04] hoặc hàng bán bị trả lại thì thủ tục phải làm việc với nhau là gì? Xử lý hóa
+[17:10] đơn ra sao? Hầu hết các công ty không bao giờ đề cập đến chuyện này.
+[17:15] Cái này lưu ý với bên em làm tư vấn một chút. Em cần phải tư vấn cho khách hàng
+[17:19] rằng ở quy trình bán hàng chắc chắn phải đưa hai điều khoản đó vào hợp đồng. Vì
+[17:23] nếu không nó sẽ xảy ra một trường hợp là bây giờ hàng lỗi, hàng trả nó quăng cả
+[17:28] hóa đơn cả hàng này mà cầm về xử đi. Trong khi nghiệp vụ không phải thế.
+[17:33] Nghiệp vụ là các bên lập biên bản. Anh đã nhận hàng của tôi rồi thì bây giờ anh
+[17:37] tiếp nhận hóa đơn của tôi và anh xuất hóa đơn trả cho tôi để anh hoặc là không
+[17:43] nghiệm thu hoặc là đổi trả một phần hoặc đổi trả toàn phần. Còn đa phần bây giờ
+[17:47] là vì không thỏa luận với nhau từ đầu và vì kế toán không hiểu cho nên các kế
+[17:52] toán công ty tự làm khó lẫn nhau bằng cách quăng cả hàng cả hóa đơn. Mày về
+[17:55] sửa đi. Kệ mẹ mày. Đấy là việc của mày. Thế là gì? Nếu chưa khai thuế thì em còn
+[18:01] hủy cái hóa đơn đi em xuất lại phải không? Các vị làm kế toán biết rồi. Nếu
+[18:05] khai thế rồi sao hủy rồi không? Vậy bây giờ em xử sao?
+[18:10] Bây giờ nói với sếp, sếp bảo thôi nó khách hàng mày chiều nó tí đi, mày giải
+[18:13] quyết cho nó đi. Đấy là việc của mày và việc của em nhưng làm nó sai quy tắc anh
+[18:17] ơi. Đấy thì phải thống nhất được cái này. Thế cái này nếu mà giám đốc với kế
+[18:22] toán mà cùng đồng thuận góc nhìn với nhau thì phải truyền thông cho bộ phận
+[18:26] kinh doanh và bán hàng họ thấu hiểu được chuyện này để nó khi xảy ra chuyện đấy
+[18:30] họ phải có trách nhiệm đàm phán và lập cái biên bản trước mới làm căn cứ để về
+[18:33] lập các biên bản về điều chỉnh hóa đơn hoặc đổi trả hàng hóa đó không nào. Đó.
+[18:39] Thứ hai, chiết khấu thương mại là giá trị bằng hàng hoặc tiền mà người mua
+[18:43] được hưởng khi họ mua hàng đạt đến một giá trị đủ lớn. Đủ lớn là bằng bao
+[18:49] nhiêu? Là theo chính sách bán hàng của công ty tự đề ra và công ty đã ký phê
+[18:55] duyệt. Ví dụ bây giờ cứ mua trăm cái ghế, ok
+[19:01] chiết khấu cho mày giá còn tám. Bình thường tao bán giá 10. Vậy thì trong
+[19:05] chính sách bán hàng hoặc quy chế tài chính công ty phải quy định chuyện đó và
+[19:08] đã ký phê duyệt rồi. Vậy ai ký phê duyệt? Có phải trình với ai không?
+[19:12] Không. Chỉ cần giám đốc công ty hoặc hội đồng thành viên ký cái đó. Tùy vào điều
+[19:17] lệ công ty quy định rằng những quy chế đó ai ký. Vậy mình ký xong thôi. Đó gọi
+[19:22] là chiết khấu thương mại nó trừ thẳng vào giá trị hóa đơn trước khi phát hành.
+[19:27] Chiết khấu thanh toán lại khác nhé. Chiết khấu thương mại thì là một khoản
+[19:32] chi phí bán hàng. giảm trừ doanh thu ghi nhận giảm cái
+[19:37] doanh thu đi nhưng mà chết khấu thanh toán thì là chi phí tài chính.
+[19:45] Nghĩa là ví dụ anh nợ tôi 100 triệu theo quy định của nghiệm thu hợp đồng bên tôi
+[19:51] quy định rằng 100 triệu đấy anh có trách nhiệm thanh toán cho tôi trong vòng 30
+[19:54] ngày kế tiếp kể từ ngày nghiệm thu. Nhưng tôi lại bảo với anh rằng này, nếu
+[19:58] anh thanh toán cho tôi luôn trong vòng 10 ngày thì anh được giảm 5% cái giá trị
+[20:03] tiền thanh toán đó. Hay là bên chỗ anh Hiển chẳng hạn anh
+[20:06] đưa ra chính sách bán hàng rằng cạo vôi răng 300.000đ.
+[20:12] Nhưng nếu đặt hàng trước và chuyển tiền trước qua hệ thống website hoặc tài
+[20:16] khoản của công ty còn 200. Vậy đó là gì? Chiết khấu thanh toán.
+[20:21] Vậy thì giá trị doanh thu anh hạch toán nó vẫn là bao nhiêu? Nó vẫn là 300.
+[20:26] Nhưng anh chiết khấu thanh toán cho người ta nó còn giá trị chỉ có 200 thôi.
+[20:30] Tức là các ưu đãi bằng tiền mà chúng ta đưa ra để khiến khích cái ý chí trả nợ
+[20:38] của bên trả. ta chấp nhận đổi lại cái ý chí trả nợ, tức là ta nhận được tiền
+[20:43] trước để cải thiện dòng tiền của mình lên thì ta phải chấp nhận chi ra một giá
+[20:48] trị bằng tiền trừ thẳng vào công nợ thanh toán hoặc xuất phiếu chi hoặc ủy
+[20:53] nghiệm chi ra trả tiền cho họ một cách độc lập thì cái đó gọi là chiết khấu
+[20:58] thanh toán. Vậy muốn quản trị tốt hơn dòng tiền thì
+[21:03] không thể nào để chính sách chiết khấu thanh toán ra ngoài.
+[21:07] Bảo bây giờ hợp đồng của em ký với nó lãi lờ được bao nhiêu đâu. Nhất là Minh
+[21:10] Kiến Trúc kia bảo em được 10% chứ mấy. Bây giờ lại chiết khấu cho nó 23% em còn
+[21:15] bao nhiêu đâu. Chiết khấu 23% để đòi được tiền về còn
+[21:19] hơn. Còn hơn là để đến lúc gì ạ? Cứ tham xong rồi đến lúc nó không trả được. Vì
+[21:26] khi khách hàng còn nợ chúng ta, chúng ta không biết được ngày mai chuyện gì sẽ
+[21:31] xảy ra bên công ty nhà nó. Nó có thể cháy nổ, nó có thể phá sản, nó có thể ôm
+[21:36] tiền bỏ chạy, nó có thể vợ chồng nó cãi nhau, công ty tan nát vân vân đủ thứ
+[21:41] chuyện xảy ra. Vậy mình gì ạ? Hãy cố gắng, hãy chấp nhận phải trả một cái phí
+[21:46] nào đó để đổi lại một sự an toàn hơn về dòng tiền cho mình. Cái đó thực hiện
+[21:52] bằng chính sách tín dụng công ty, trong đó có một khoản gọi là chiết khấu thanh
+[21:57] toán. Cuối cùng là khuyến mãi là hình thức khuyến cái người mua bằng một giá
+[22:04] trị cho tặng đủ hấp dẫn khi họ đạt đến một điều kiện mua nào đó hoặc không đạt
+[22:11] đến điều kiện nào nhưng chỉ để khuyến khích cái sự nhận biết về giá trị thương
+[22:15] hiệu về sản phẩm dịch vụ ở trên thị trường. Đấy và khuyến mãi nếu có thông
+[22:21] báo với Sở Công Thương đó là cái khoản mà không chịu thuế giá trị gia tăng
+[22:27] nhưng được ghi nhận vào chi phí bán hàng của công ty thì chúng ta phân biệt với
+[22:32] nhau bốn cái khái niệm này chứ không là sẽ nhập nhèm trong cái cách tính đó.
+[22:39] Tiếp theo có được doanh thuần rồi bây giờ tôi trừ đi giá vốn hàng bán. Thí dụ
+[22:44] cái ghế này tôi mua là 2 triệu đồng. Tôi bán cho anh 2,5 triệu. Vậy không đổi trả
+[22:51] gì cả, không khuyến mãi, không ưu đãi gì cả thì 2 triệu đó là doanh thu. 2 triệu
+[22:56] mua vào ban đầu là giá vốn. Lấy doanh thu trừ đến giá vốn nó ra được một khoản
+[23:02] nó gọi là lãi gộp từ sản xuất kinh doanh.
+[23:07] Người ta gọi nó là lãi gộ vì nó mới chỉ là tính cua trong lỗ.
+[23:13] Nghĩa là nó chưa màng gì đến các hao phí về chi phí tài chính. chi phí bán hàng
+[23:17] và chi phí quản lý doanh nghiệp. Thí dụ mình đi Lạng Sơn mình thấy ồ hàng điện
+[23:23] tử trên đấy ngon lắm mày ơi. Cái nồi cơm điện nó có 200.000 mang về Hà Nội bán
+[23:27] kiều gì cũng được 500. Vậy là tính ra cái lãi gộp rất là cao chứ gì đến trên
+[23:31] 50%. Nhưng mang thử về mà xem ai lo chi phí cầu đường, ai lo chi phí vận tải, ai
+[23:36] lo lộ phí thương mại trên đường không? Về đây thuê cửa hàng. Thuê xong rồi thì
+[23:42] là ai sẽ đi bán hàng? Rồi lương nhân viên của bán hàng thuê
+[23:46] trụ sở đủ thứ tiền khác và cuối cùng tưởng lãi nhưng cuối cùng vẫn gì không
+[23:50] lãi cho nên nó mới là gộp cứ là cái thặng số thương mại thôi. Vậy nó còn ăn
+[23:57] thua ở một loạt các chi phí ở phía dưới là chi phí tài chính, chi phí để bán
+[24:01] hàng, chi phí quản lý doanh nghiệp. Và trong quá trình vận hành như vậy thì có
+[24:04] thể anh có doanh thu tài chính, anh có thu nhập khác. Vậy lấy lợi nhuận gộp
+[24:09] cộng thu nhập khác cộng thu nhập tài chính trừ chi phí tài chính, trừ chi phí
+[24:12] bán hàng. Trừ chi phí quản lý doanh nghiệp, nó tạo ra một giá trị người ta
+[24:17] gọi là lợi nhuận kế toán trước thuế. Lợi nhuận kế toán trước thuế là lợi
+[24:23] nhuận của doanh nghiệp nhưng tính theo tính trung thực, hợp lý có thật của luật
+[24:28] kế toán chứ không tính theo luật thuế. Cho nên nó mới nảy sinh cái khái niệm
+[24:35] người ta gọi là chi phí được trừ hay là không được trừ.
+[24:43] là vì thế tức là thế nào? Tức là cứ cái gì mà phục vụ cho hoạt
+[24:50] động của doanh nghiệp được chủ doanh nghiệp thông qua và phê duyệt có tính
+[24:55] trung thực hợp lý với hoạt động của công ty mang cộng và tính toán với nhau tạo
+[25:01] ra giá trị lợi nhuận thì đó là lợi nhuận kế toán.
+[25:05] Nhưng trong tất cả các chi phí đã ghi nhận theo góc nhìn của kế toán này, nó
+[25:10] có một số trường hợp anh không đáp ứng được điều kiện hồ sơ của luật thuế thu
+[25:15] nhập doanh nghiệp. Tức là nó có sự khác nhau về quy định thành phần hồ sơ và
+[25:20] phương thức hạch toán giữa kế toán doanh nghiệp và thuế. Và sự khác biệt đấy nó
+[25:25] dẫn đến gì ạ? Chênh lệch về mặt chi phí ghi nhận. Tôi nói ví dụ.
+[25:32] Ví dụ như hôm nay mình nhập hàng mang về cửa cửa hàng chuẩn bị bày lên kể nhưng
+[25:38] nhân viên công ty vì một lý do nào đó không có ai có thể làm được chạy ra gọi
+[25:42] luôn hai anh s hôm nay vào đây giúp đấy. Thế anh ta vào gì? Khuân cho mình mấy
+[25:47] cái kệ hàng lên. Khuân xong rồi trả cho gì? Mỗi anh 500 ba anh triệu. Vì trước
+[25:54] khi nào mình bốc gia giáo đốc bảo anh ơi bây giờ không có ai làm cái việc này cả.
+[25:57] Bảo thôi mày gọi luôn hai thập ba ba ông tre ôm vào đây làm. Trong buổi sáng như
+[26:01] vậy người ta khuân hàng mình trả cho mỗi một người là 500.000 ba người là 15
+[26:04] triệu. Kết thúc cái việc đó kế toán lập cái ba
+[26:08] cái phiếu phiếu chi mỗi phiếu 500.000 đưa tiền luôn cho người ta. Vậy đó là
+[26:14] chi phí bất thường, chi phí bằng tiền khác của công ty mà được đưa vào để hạch
+[26:20] toán, tạo ra lợi nhuận kế toán trước thuế. Nhưng với cơ quan thuế thì lại
+[26:25] không được. Vì sao? Hợp đồng lao động đâu? Mã số thế đâu?
+[26:32] Thế rồi nghiệm thu công việc đâu? Thế rồi là chi trả từng lần như thế. Nếu
+[26:37] chi trả dưới hai dưới 2 triệu thì không sao. Chi trả trên 2 triệu thì đã khấu
+[26:41] trừ thuế chưa? Nếu khấu trừ thuế thì mã số thuế đâu vân vân đủ chuyển nữa. Thế
+[26:45] là gì ạ? Nó đáp ứng yêu cầu của doanh nghiệp của luật kế toán nhưng không đáp
+[26:49] ứng yêu cầu của thuế. Nó tạo ra một khoản gọi là chi phí không được trừ. Cho
+[26:54] nên khi lập báo cáo quyết toán thuế người ta phải lấy cái lợi nhuận kế toán
+[26:58] này này. Người ta mang cân đối với các khoản chi phí không được trừ đó. các
+[27:02] chênh lệch do quyết định của giám đốc công ty trái với các quy định của luật
+[27:06] thuế thì cũng tạo ra cái sự chênh lệch và đồng thời nó còn được điều chỉnh với
+[27:11] các ưu đãi về thuế và điều chỉnh tiếp với các khoản lỗ từ năm trước chuyển
+[27:16] sang thì mới tạo ra một cái giá trị gọi là
+[27:20] thu nhập tính thuế. Lấy thu nhập tính thuế tính theo thuế suất hiện hành tạo
+[27:24] ra giá trị là thuế thu nhập doanh nghiệp phải nổi. Lấy lợi nhuận kế toán trước
+[27:29] thuế trừ thuế còn lợi nhuận gì? lợi nhuận sau thuế hay còn gọi là lợi nhuận
+[27:34] dòng. Lợi nhuận dòng này gọi là lợi nhuận chưa
+[27:39] phân phối. Chưa phân phối tức là chưa mang chia,
+[27:43] chưa trích quỹ. Vậy ở góc độ quản trị tài chính khi nào có lợi nhuận dòng thì
+[27:49] các chủ sở hữu đừng có ăn thao. Nghĩa là đừng ăn cả đúng không ạ? Bằng cách khi
+[27:56] đã có lợi nhuận dòng, anh phải có một cái góc nhìn về quản trị tài chính rằng
+[28:00] sẽ phải trích dự phòng bao nhiêu, trích quỹ đầu tư phát triển bao nhiêu, quỹ
+[28:03] phúc lợi cho anh em bao nhiêu, còn lại mang chia.
+[28:07] Thế nhưng cái khổ nhất trong các doanh nghiệp hiện nay nhìn thấy báo cáo tài
+[28:11] chính, lợi nhuận dòng rất cao nhưng không có tiền để chia và đây là lúc bắt
+[28:16] đầu mất đoàn kết và hay cãi nhau. Về lẩm bẩm chửi mẹ nó chứ tại sao mà lãi
+[28:22] nhiều thế này nó không chia cho mình ta. Có tiền đâu mà chia.
+[28:26] Vậy tại sao lợi nhuận không có tiền? Lúc trước tôi nói rồi, trong lợi nhuận nó
+[28:30] hàm chứa cái nợ phải thu. Thế mà bây giờ bán hàng như chỗ hiển cái
+[28:35] kì toàn bộ là bán hàng, toàn bộ là thu tiền mặt. Lợi nhần có vẫn không có tiền.
+[28:40] Là vì sao? Ai bảo ông Húng chưa cần phải mua máy mới đi húc đầu mua cái máy mới
+[28:46] tiền quá đắt về mà công suất khai thác quá thấp. Vậy trong trường hợp đấy có
+[28:50] lợi nhuận nhưng tiền nằm ở đâu? Tài sản đầu cơ quá mức.
+[28:54] Đúng chưa nào? Nhà máy mới mua xe mới cho giám đốc tậu thêm hai em thư khí
+[28:59] chân dài về. Thế là lấy đâu ra tiền nữa có phải không? À thế bây giờ nói với các
+[29:04] chủ sở hữu khác họ là thành viên của hội đồng thành viên thì giải thích nó không
+[29:09] thông do không cùng góc nhìn về tài chính với nhau. Cái thằng nó không trực
+[29:13] tiếp làm ở chỗ mình nó chỉ góp vốn với tư cách là thành viên và cổ đông thôi.
+[29:17] Nó bảo đây nhé. báo cáo tài chính rành dành kế toán được kiểm toán đàng hoàng
+[29:22] lợi nhuận thế này mà bây giờ tại sao mày không chia tiền cho tao đúng không ạ ở
+[29:26] một số cái trường hợp khác thì lại doanh nghiệp hoạt động lỗ triền
+[29:31] miên nhưng năm nào cũng mang chia ra với nhau một ít là vì các anh có cái lợi thế
+[29:35] là thu được tiền trước của khách hàng vậy là cứ cuối năm thấy có tiền là gì là
+[29:41] tạm thời mang chia cho mỗi anh một ít trong khi công ty hoạt động đang lỗ này
+[29:46] nhưng vì trong các trường hợp đấy là hạch toán và quản trị trị tài chính yếu
+[29:49] kém nên họ thuần túy là quản lý tiền thu vào chi ra thôi. Vậy trong trường hợp
+[29:54] đấy thực chất là bố mang nợ phải trả ra để chia với nhau có phải không? Vì ông
+[29:59] nhận tiền trước của khách hàng có phải là nợ phải trả không? Anh phải trả bằng
+[30:03] hàng, bằng dịch vụ hoặc trả bằng tiền nếu anh không cung cấp được cho người
+[30:05] ta. Vậy tại sao mang cái đó chia với nhau? Và đó đấy là những cái mầm mầm do
+[30:11] không cùng góc nhìn về tài chính và quản trị không tốt về tài chính. Nó dẫn đến
+[30:15] những cái câu chuyện nó nực cười như vậy nhưng đau lòng. là thực tế phần lớn
+[30:19] trong các doanh nghiệp SME ở Việt Nam hiện nay câu chuyện của quản lý tài
+[30:22] chính là như thế. Nhất là những công ty mà chồng giám đốc mà vợ làm kế toán
+[30:27] trưởng luôn ấy, vợ quản lý tiền luôn ấy, kế toán trưởng có thể bỏ nhiệm đứa khác
+[30:31] nhưng hầu như chỉ có gì ghi chép chứng từ chứ đố động được vào tài chính công
+[30:34] ty được không? Cho nên ở đây khuyên rằng ông nào có bà
+[30:39] vợ tham gia cùng công ty là loại bài ra khỏi cái câu chuyện tài chính này. Đừng
+[30:43] có dính vào. Dính vào là chết đầu nước nhỉ. Vì lúc đó
+[30:48] nó sẽ dẫn đến tiếp một cái chuyện nữa là gia đình chị và lẫn lộn giữa tiền công
+[30:51] ty và tiền gia đình. Mà cái người chủ mà cái khả năng quản trị tài chính mà không
+[30:57] tốt nữa thì đến một thời điểm nào đó là loạn xì ngầu lên không biết đường nào mà
+[31:02] lẩn thì hết sức lưu ý giúp tôi.
+[31:07] Người nhà thì tốt nhưng không nên được không? Tốt là ở góc độ khác anh có thể
+[31:11] tham gia vào hội đồng thành viên, tham gia về quan hệ khách hàng, giao dịch
+[31:15] khánh tiết, tiếp khách vân vân đủ thứ. Nhưng tuyệt đối đừng động vào tài chính.
+[31:20] Rõ chưa? Bảo bây giờ vợ em làm kế toán trưởng ở bên ngoài, nhà gia đình mở thêm
+[31:25] doanh nghiệp nhỏ nữa mà về tự nhiên phải đi thuê người về làm kế toán viên cho
+[31:29] mình nghe nó kỳ cục xong để vợ làm luôn. Ông cứ thử mà xem. Giao sắc không còn
+[31:33] được chuôi đâu nhỉ. Con nhà giáo là ít đứa học giỏi lắm
+[31:39] đấy. Doanh nghiệp cũng thế thôi. Mặc dù vợ đi làm kế toán trưởng cho công ty rất
+[31:43] là to nhưng tôi đã gặp quá nhiều trường hợp vì bà ấy làm ở doanh nghiệp to về
+[31:48] nhìn doanh nghiệp của nhà đ bé xíu này có cái gì mà quan trọng để đấy cuối năm
+[31:52] và không quản lý được đâu nhé. Đấy là thật chạ. Rồi thì đấy để tôi nói thêm
+[31:58] một chút nữa trong việc mở rộng một góc nhìn là giữa chi phí doanh thu lợi nhuận
+[32:05] của kế toán nó khác với lợi nhuận kế toán trức thuế ấy thế nhưng các doanh
+[32:08] nghiệp lại thường lập báo cáo quyết toán thuế y trang
+[32:13] như báo cáo tài chính nhìn là biết rồi là bố chỉ làm có kế toán thuế đối phó
+[32:19] thôi chứ không làm tài chính công ty đâu.
+[32:23] Bởi vì nếu đã làm tài chính công ty thì chắc chắn luôn luôn có sự khác biệt giữa
+[32:28] lợi nhuận kế toán và lợi nhuận tính thuế. Nên sau này em nhìn báo cáo của
+[32:32] chúng nó đem biết liền là nó bảo không, bên em hạch toán đầy đủ lắm, đảm bảo
+[32:35] đàng hoàng lắm. Mày ơi tao nhìn báo cáo là tao biết rồi, không phải nói nhiều.
+[32:40] Rõ không à? Bởi vì nếu đã làm chắc chắn có sự sai khác. Không bao giờ hoàn toàn
+[32:45] trùng khớp giữa luật kế toán và luật thế cả. Vì một anh là trung thực hợp lý, còn
+[32:49] một anh làm sao phục vụ cho mục tiêu vặt long ngỗng thì nó khác nhau, không thể
+[32:54] giống nhau được. Đấy, cái báo cáo ngắn gọn này bé tí này.
+[32:59] Lập trong vòng có một trang nhưng nó bằng ấy chuyện để nói với nhau. Nhưng
+[33:03] cái đấy nó chưa quan trọng. Vậy cái gì quan trọng hơn? Tính đúng kỳ
+[33:10] của báo cáo kết quả kinh doanh là quan trọng hơn. Mà kính tính đúng kỳ thì chỉ
+[33:15] có người làm kế toán mới biết. Chứ người ngoài nó cũng khó thẩm định,
+[33:20] chỉ bằng biện pháp phỏng vấn một số cái câu hỏi có nghề một chút thì nó mới lòi
+[33:24] ra thôi. Ví dụ
+[33:28] tôi hoạt động khó khăn, tôi vay tiền thêm của bác 1 tỷ đồng, mỗi một tháng là
+[33:34] em trả cho bác ví dụ như là 9 triệu tiền lãi.
+[33:39] Thí dụ thế. Thế bây giờ thỏa luận với nhau là chúng ta cũng ký công chứng các
+[33:43] thứ này kia là cứ ngày mùng năm hàng tháng thì trả tiền lãi cho tháng vừa
+[33:46] qua. Vậy nếu như làm kế toán đúng là phải đến
+[33:52] ngày cuối cùng của tháng này. Tôi ghi nhận khoản chi phí tài chính là 9 triệu
+[33:57] vào chi phí tài chính cái đã và chuyển cái 9 triệu đấy đối ứng sang là cái
+[34:03] nghĩa vụ phải trả mà tôi sẽ trả trong ngày mùng tháng tới.
+[34:09] Và đến ngày mùng tháng tới là đơn thuần chỉ là việc tôi hạch toán nghiệp vụ tiền
+[34:13] đưa ra để trả hết cái nợ vay đó là xong chứ tôi không ghi nhận chi phí ở tháng
+[34:18] sau. Còn nếu chúng ta không làm cái động tác
+[34:22] ở ngày cuối cùng của tháng này ghi nhận chi phí tài chính là sẽ đợi đến lúc nào
+[34:27] gì người ta đến đòi tiền bắt đầu mới xả tiền ra 9 triệu này cháu viết cho chú
+[34:32] cái phiếu chi ra cái. Thế là chi cái 9 triệu tiền mặt chi ra một cái. Thế là
+[34:37] lúc đấy nó mới ghi nhận là nợ chi phí tài chính và có tài khoản tiền. Thế thì
+[34:41] sao? Có sai không? Nói sai cũng không đúng mà nói đúng cũng
+[34:46] không đúng. Hoàn toàn không hợp lý.
+[34:50] Về giá trị nó không sai, về hạch toán cũng không sai, nhưng về thời điểm ghi
+[34:54] nhận chi phí thì sai. Như vậy nếu ông cầm cái bảng kết quả sản
+[34:58] xuất kinh doanh của cái tháng đấy thì nó không đúng rồi đó. Và nếu như cái tháng
+[35:04] đó là cái tháng cuối cùng của năm thì nguyên cái báo cáo tài chính của năm đấy
+[35:08] là không chính xác rồi. Nó thế rõ chưa nào? Vân vân. Thì cái quan trọng của
+[35:13] việc lập báo cáo này kết quả kinh doanh là tính đúng kỳ của các số liệu bao gồm
+[35:18] đúng kỳ doanh thu, đúng thời điểm doanh thu mà thực trạng ở doanh nghiệp của
+[35:23] mình hiện nay là nó có cái chuyện hàng giao xong rồi hàng về nhà nó thậm chí
+[35:28] dùng hết rồi cho nó nợ thêm một khoảng thời gian ví dụ trong 1 tháng 2 tháng
+[35:33] nhưng vì nó chưa trả tiền cho mình nên công ty hay có kiểu là gì om cái hóa đơn
+[35:39] lại chờ nó thanh toán thì mới xuất hóa đơn ra.
+[35:42] Chỗ này có hai cái rủi ro. Rủi ro thứ nhất là kế toán thì làm đối phó đợi có
+[35:47] hóa đơn mới hạch toán. Nhưng thực chất doanh thu nó nổi từ lúc ký nghiệm thu
+[35:51] với nhau. Nhất là với hoạt động bên tư vấn kiến trúc nhha. Nghiệm thu lúc nào
+[35:58] là phát hành hóa đơn lúc đấy còn thanh toán là chuyện của thanh toán. Nhưng vì
+[36:02] kế toán thì hoặc chúng ta quản trị công nợ yếu kém. Chúng ta không còn cái bài
+[36:06] nào là cái bài ngoài cái bài là om hóa đơn lại đúng không ạ?
+[36:10] Nếu gặp phải thằng nào nó hiểu nghề là chết với nó liền. Nó bảo ok mày giữ hóa
+[36:16] đơn cũng được nhưng mà cứ ký và ng nghiệm thu vào bàn giao với nhau cái đã.
+[36:20] Thế là ký được không? Ký xong một cái hôm sau nó về nhà nó bảo này theo như là
+[36:25] luật và quy định về chế độ hóa đơn. Hóa đơn phải lập tại thời điểm hoàn thành
+[36:29] giao dịch mua bán cho nhau. Hoặc công trình hoặc là kiến trúc thì nghiệm thu
+[36:33] với nhau. Dịch vụ cũng như thế. Bây giờ mày nghiệm thu rồi không phát hành hóa
+[36:37] đơn. Lỡ may tháng tới công ty anh mà nó kiểm
+[36:41] tra thuế, người ta hỏi ra anh khai thật tình hình như vậy, tụi mày bị phạt về
+[36:45] cái tội bán hàng không xuất hóa đơn ngày. Có đúng không? Vậy bây giờ ngược
+[36:50] lại nếu ta là người mua nó bảo chưa phát hành hóa đơn vì chưa thanh toán, ok cứ
+[36:54] ký với em cái nghiệm thu cái đá được chưa? Ký xong mai nói với nó câu chuyện
+[36:58] như tôi vừa nói. Thế mà bây giờ xử thế nào? Ít nhất là anh phải phát hành hóa
+[37:03] đơn để đấy. Anh chưa giao liên gốc cho tôi thì chưa giao nhưng vui lòng chụp
+[37:06] cái ảnh. cho tôi biết thông tin để tôi khai thuế đúng không ạ? Tức là đấy, nếu
+[37:12] mình hiểu nghề thì với tư cách là mình là người bán mình cũng có cách để đàm
+[37:16] phán. Với tách là người mua mình cũng có cách để đàm phán. Còn đa phần các báo
+[37:21] cáo hiện nay của các công ty là nó hạch toán theo hóa đơn. Thì tôi nhắc lại đừng
+[37:26] bao giờ hạch toán theo hóa đơn mà phải hạch toán theo đúng bản chất tài chính
+[37:30] của nó gần. mà bản chất tài chính nó phát sinh doanh thu ở tại thời điểm các
+[37:34] bên đã hoàn thành việc chuyển giao hàng hóa dịch vụ cho nhau. Chuyển giao bao
+[37:39] gồm chuyển giao sở hữu, sử dụng và định đoạt cộng với rủi ro thì gọi là bàn
+[37:44] giảm. Đấy,
+[37:49] chi phí cũng như vậy. Thì đấy là hai cái ví dụ điển hình để nhấn mạnh với các anh
+[37:53] chị rằng để có một báo cáo kết quả sản xuất kinh doanh tốt, ngoài việc tính
+[37:57] toán cho nó đúng đủ là chúng ta phải tính toán đến cái việc là nó đúng kỳ cơ.
+[38:04] Đấy. Thế thì qua đấy là hai cái báo cáo rồi.
+[38:08] Vậy bây giờ ta nhận xét qua một chút. Thế có nghĩa là
+[38:14] thế có nghĩa là chúng ta cần phải đảm bảo cái sự khớp đúng nào đó giữa các báo
+[38:20] cáo với nhau đúng không? Mà như phân tích về mặt bản chất kinh tế vừa rồi thì
+[38:26] cái lợi nhuận sau thuế chưa phân phối này này
+[38:30] ở cái báo cáo kết quả sản xuất kinh doanh này nó phải bằng với chỉ tiêu là
+[38:34] lợi nhuận chưa phân phối năm nay của bảng cân đối kế toán chứ có đúng không
+[38:40] ạ? Đấy. Thế và giá vốn tôi ghi nhận ở trên báo cáo này thì nó phải bằng với sổ
+[38:46] ghi nhận giá vốn của kế toán chứ. Nếu là đơn vị kinh doanh thương mại
+[38:50] thuần túy thì nó phải khớp với bảng nhập số tồn chứ. Nếu là đơn vị x lắp thì nó
+[38:54] phải khớp với toàn bộ các báo cáo nghiệm thu giá thành của sản phẩm sẽ lắp chứ
+[38:58] đúng không? À vân vân. Đấy thì chúng ta thấy bắt đầu khi bây giờ ta mới liên kết
+[39:02] các báo cáo lại với nhau ta sẽ nhìn thấy nó là một cái hệ thống số liệu liên hoàn
+[39:07] không thể tách ra được. Nghĩa là rất khó có thể nói dối nếu như nhìn toàn thể
+[39:11] trên cả bốn báo cáo. Báo cáo thứ ba là báo cáo lưu chuyển
+[39:20] tiền tệ. Báo cáo lưu chuyển tiền tệ của công ty nó thuần túy ghi nhận những
+[39:25] nghiệp vụ đã xảy ra và đã xong rồi. Nó xảy ra và xong rồi tức là quay đủ vòng
+[39:31] tiền rồi thì nó trở thành một cái là nó có hai đầu. Một đầu là toàn bộ dòng tiền
+[39:39] vào của doanh nghiệp từ hoạt động thu và toàn bộ dòng tiền ra khỏi doanh nghiệp
+[39:43] là báo cáo lưu chuyển tiền tệ. Lưu chuyển tiền tệ
+[39:50] thì trước khi phân tích về cấu trúc báo cáo xin có một thông điệp mạnh nhất về
+[39:55] phần báo cáo này. Thưa với các anh chị, kinh doanh sống hay còn nó phụ thuộc
+[40:01] hoàn toàn vào việc các anh vận hành cái dòng tiền.
+[40:06] nói em mở doanh nghiệp sau 3 năm nhưng mới chỉ là đoạn đầu tư mà chưa bán hàng,
+[40:11] chưa thu tiền thì 3 năm đấy anh chưa hề kinh doanh. 3 năm đấy đơn thuần là anh
+[40:17] đang tiêu tiền thôi. Vậy khi nào mới thực sự là kinh doanh?
+[40:24] Chừng nào anh thực sự thu tiền và vận hành cái dòng tiền đó mới là kinh doanh.
+[40:30] và nhắc lại rằng doanh nghiệp nó sống còn vì dòng tiền chứ nó không sống còn
+[40:34] vì lợi nhuận đâu. Luật doanh nghiệp nói rằng là do hoạt
+[40:38] động nhiều năm thô lỗ, không có hiệu quả rồi do thế này rồi do thế khác nhưng
+[40:43] điều kiện cuối cùng mới nói là không đủ tiền thanh toán nợ đến hạ.
+[40:48] Thì về mặt kinh tế chúng ta chỉ nhớ cho tôi rằng nó chỉ chết ở đúng cái điểm là
+[40:53] không đủ tiền thanh toán nợ đến hạn mà thôi.
+[40:57] Ví dụ anh nợ người ta bây giờ nó kiện anh không đủ tiền trả. Vậy một là anh
+[41:01] giải thẻ bán thanh lý trả tiền cho nó. Hai là gì? Sang tên đổi chủ đúng không?
+[41:07] Và nó thâu tóm nhau cũng vì dòng tiền chứ không vì lợi nhuận. Và điều đó dẫn
+[41:12] đến các anh chị một thông điệp rằng tiền nó là vua. Và đặc biệt đấy này, nếu anh
+[41:16] quản trị chủ động được cái dòng tiền thì trong mọi trường hợp anh đều có lợi. Tôi
+[41:22] nói ví dụ nha, bây giờ đi đàm phán mua hàng, nếu mình biết chắc rằng là tài
+[41:27] khoản của mình tiền rất sẵn sàng thì mình sẽ rất là khynh khạm đúng không?
+[41:33] Ngồi gác chân lên uống nước các thứ là hỏi thế điều khoản bảo hành thế nào?
+[41:37] Giao hàng ra sao? Nếu chậm là anh phạt nhá. Đố thứ phải không? Mà rồi những cái
+[41:42] điều khoản khác nữa về thanh toán, về điều kiện của hợp đồng, về nghiệm thu
+[41:47] chúng ta dường như mạnh bạo hơn rất nhiều về các cụ mình nói. Mạnh vì bạo
+[41:50] gạo vì tiền à mạnh vì gạo bạo vì tiền cứ có tiền trong tay đi làm phán nó khác
+[41:55] hẳn cái thế nó khác hẳn. Mày bán bán bán thôi tao mua thằng khác phải không? Và
+[41:59] chúng ta luôn chọn được nguồn cung cấp tốt nhất và đó là gì? Cơ sở để cấu thành
+[42:03] đến chất lượng dịch vụ tốt và hoạt động đồng đều. Nhưng nếu thiếu tiền mà xem
+[42:07] đang trong tình cảnh là thiếu tiền cố gắng thúc đẩy mua thì thôi thì bây giờ
+[42:12] làm thế nào cái điều kiện thanh toán nó ưu đãi tí để mình đỡ phải trả trước bán
+[42:16] thì thôi cố gắng lỗ cũng được ký phát này phát để giữ được cái dòng tiền hy
+[42:21] vọng mà khoản ứng trước mang về thế là chúng ta luôn nhận về mình cái gì là
+[42:24] thiệt thòi nhất đấy cho nên nghèo nó hèn là vì thế anh chị đặc biệt cái câu nghèo
+[42:31] hèn các kệ mình nó quá nó ứng dụng quá là đúng trong cái bối cảnh quản trị tiền
+[42:35] của doanh Cứ có tiền đi đàm phán nó khác hẳn mà không có tiền nó khác hẳn.
+[42:40] Ở cách mà các công ty của Nhật họ làm việc thì khi họ lập một kế hoạch kinh
+[42:45] doanh và hành động thì bao giờ họ cũng gì ạ? Mất một khoảng thời gian nhiều hơn
+[42:50] việc lập kế hoạch kinh doanh là lập kế hoạch dòng tiền đi theo nó.
+[42:55] Còn chúng ta thì cứ nghĩ mình toàn là siêu sao tiêu tiền. Cho nên cứ lập kế
+[42:59] hoạch kinh doanh lên thôi chứ không hoạch định một ngân sách để chạy cho cái
+[43:02] kế hoạch đó. không ước đoán được một cách chính xác
+[43:06] dòng tiền vào dòng tiền ra như thế nào. Cho nên kế hoạch nó cứ đổ bể liên tục,
+[43:10] đổ bể liên tục. Và đó là câu chuyện của dòng tiền.
+[43:14] Nhưng tiết hay là báo cáo lưu chuyển tiền tệ này cũng chỉ là báo cáo quá khứ.
+[43:19] nó cũng chỉ phản ánh được cái dòng tiền vận hành trong doanh nghiệp trong cái kỳ
+[43:22] vừa qua ta lập báo cáo chứ cũng chưa mang tới chất ước đoán được,
+[43:26] chưa thể lập được thành cái kế hoạch nhưng ít nhất nó tạo ra một xu hướng để
+[43:30] chúng ta nhìn nhận ở trên cái báo cáo lưu chuyển tiền tệ. Về mặt cấu trúc, về
+[43:36] mặt bản chất thì chúng ta lại nhớ thêm một cái ghi nhớ nữa này.
+[43:41] Ở khía cạnh và quản trị dòng tiền, đôi khi doanh nghiệp có lợi nhuận cao
+[43:46] nhưng hoàn toàn không có tiền. Và ngược lại có những doanh nghiệp đang
+[43:51] lỗ nhưng nó vẫn có tiền. Đang lỗ nhưng vẫn có tiền thì đấy là
+[43:57] thông điểm. Còn về mặt cấu trúc thì báo cáo lưu chuyển tiền tệ được kết cấu như
+[44:01] sau. Phần thứ nhất là lưu chuyển tiền từ hoạt động kinh doanh, tức là thu vào từ
+[44:06] kinh doanh và chi ra phục vụ các hoạt động của kinh doanh. Phần thứ hai là lưu
+[44:11] chuyển tiền từ hoạt động đầu tư. Một là thu hồi đầu tư lợi ích từ đầu tư và tiền
+[44:17] đầu tư mua sắm tài sản để chi ra. Tiếp theo là lưu chuyển tiền từ hoạt động tài
+[44:21] chính. Cuối cùng tiền và các khoản tương đương tiền cuối kỳ.
+[44:27] Thì về mặt chi tiết nó chia thành các khoản mục tiền lưu chuyển tiền từ hoạt
+[44:32] động kinh doanh bao gồm tiền thu bán hàng cung cấp dịch vụ, tiền chi trả cho
+[44:36] nhà cung cấp, tiền chi trả cho người lao động vân vân. Và cuối cùng nó tạo ra một
+[44:40] khoản lưu chuyển thuần từ hoạt động kinh doanh có nghĩa là thiếu hoặc thừa từ
+[44:45] chính hoạt động kinh doanh đó thôi. Đó là phần thứ nhất của báo cáo lưu chuyển
+[44:49] tiền tệ. Phần thứ hai cũng hoàn toàn tương tự như vậy nhưng ở các khoản mục
+[44:53] của đầu tư bao gồm kể cả đầu tư mua sắm tài sản, trang thiết bị đầu tư các thứ
+[44:58] này kia thì đều được gọi là các hạng mục của đầu tư. Và cuối cùng nó cũng là lưu
+[45:02] chuyển thuần từ hoạt động đầu tư. Phần thứ ba là lưu chuyển từ hoạt động tài
+[45:07] chính bao gồm một là thu tiền từ phát hành cổ phiếu nhận vốn góp. Thứ hai là
+[45:12] tiền chi trả vốn góp. Thứ ba là tiền thu đi vay. Đấ và cuối cùng là tiền chi trả
+[45:18] gì ạ? Tiếp theo là tiền chi trả nợ gốc vay vân vân. Cuối cùng là lưu chuyển
+[45:22] thuần từ tài chính để cuối cùng nữa nó ghép với cái số dư tiền từ đầu kỳ khác
+[45:27] trước chuyển qua. Tạo ra một giá trị cuối cùng trong cái báo cáo này.
+[45:33] Đó là tiền và tương đương tiền cuối kỳ. Tiền và tương đương tiền cuối kỳ ở đây
+[45:40] nó phải khớp đúng với sổ kế toán, sổ ngân hàng và nó phải bằng với chỉ tiêu
+[45:46] tiền và tương đương tiền trên bảng cân đối kế toán.
+[45:53] Nhắc lại là tiền và tương đương tiền cuối kỳ trên báo cáo lưu chuyển tiền đề
+[45:58] phải bằng với tiền và tương đương tiền trên bảng cân đối kế toán và bằng với số
+[46:05] dư của các sổ tiền mặt và tiền gửi ngân hàng không phân biệt loại tiền tệ chúng
+[46:11] ta đang nắm giữ là gì đó là liên hoản về số liệu cho các báo cáo. Còn về cách lập
+[46:17] cái báo cáo lưu chuyển tiền tệ có hai phương pháp.
+[46:20] Một là lập trực tiếp, hai là lập gián tiếp. Lập trực tiếp là lấy trực tiếp cái
+[46:26] số phát sinh theo đối ứng của tài khoản kế toán khi chúng ta ghi nhận. Còn lập
+[46:31] gián tiếp là loại trừ từ lợi nhuận đi ngược trở lên.
+[46:40] Thì đấy là sự khác nhau giữa hai phương pháp để nó suy ra được cái dòng tiền vận
+[46:45] hành thế nào ở trong công ty. Đó thì đấy là tổng thể ba cái báo cáo là gì ạ? Kết
+[46:52] quả kinh doanh, lưu chuyển tiền tệ và cân đối kế toán trong công ty. Và cuối
+[46:56] cùng là liên hoàn lại thì nó có một cái giải thích chi tiết là thuyết minh báo
+[47:01] cáo tài chính. Và với ba cái báo cáo đó thì bây giờ
+[47:06] mình kiểm tra chéo số liệu như thế nào. Về mặt nghiệp vụ và kỹ thuật thì tôi xin
+[47:10] mách nhỏ các anh chị một số cái kỹ thuật và biện pháp để chúng ta đánh giá và
+[47:14] kiểm soát à cái cái số liệu và tính hợp lý của các báo cáo liên hoàn lẫn nhau.
+[47:21] Vì chỉ khi chúng ta nhìn chéo số liệu giữa các báo cáo chúng ta mới biết họ có
+[47:25] đang nói dối ta không. Chỉ tiêu thứ nhất là tiền và tương đương tiền trên các báo
+[47:31] cáo gồm có tiền và tương đương tiền trên bảng kết nối kế toán
+[47:35] ở mục 1 năm Mã phải bằng với tiền và tương đương tiền cuối kỳ của báo cáo lưu
+[47:40] chuyển tiền tệ phải bằng với số dư của tiền gửi ngân hàng và tiền mặt được chưa
+[47:47] và nó không liên quan gì đến lãi đâu. Đấy là một. Thứ hai, nợ phải thu, phải
+[47:55] trả mang so sánh với báo cáo chi tiết bao
+[47:59] gồm này giá trị nợ phải thu và phải trả ở trên bảng cân đối kế toán phải được so
+[48:06] sánh khớp đúng theo một danh sách chi tiết
+[48:12] với bảng kê hoặc sổ tổng hợp nợ phải thu phải trả.
+[48:21] rồi mang đối chiếu với chi tiết thuyết minh nợ phải thu phải
+[48:28] trả trên báo cáo thuyết minh. Ở đây có những dấu hiệu rằng nếu các
+[48:37] khoản phải thu phải trả trong một báo cáo chi tiết họ chỉ theo nhất là khi
+[48:41] ngân hàng xem xét hồ sơ cho vay vốn mà thấy số liệu nó cứ tròn tròn
+[48:46] là có vẻ như nó đang đạo số đấy được không? Có vẻ như đang đạo số đấy.
+[48:53] Vậy thì từ chi tiết tổng hợp vào nó phải khớp đúng với nhau. Và nếu yêu cầu nó
+[48:58] cung cấp thêm một báo cáo nữa là bảng chi tiết phát sinh gọi là bảng cân đối
+[49:03] số phát sinh tài khoản. đối chiếu tiếp với số dư đầu, số dư cuối
+[49:07] và phát sinh nữa thì tương đối chắc chắn. Còn muốn kiểm chứng số liệu đấy
+[49:13] thì chúng ta yêu cầu rằng đâu đối chiếu công nợ đối với những khoản công nợ trên
+[49:20] 10 triệu đồng chứ không có chuyện là ghi nhận số liệu
+[49:24] công nợ cuối năm nhưng với những thằng nợ trên 10 triệu lại thiếu thông tin
+[49:28] phản hồi quằng email, điện thoại hoặc là bản đối chiếu công nợ.
+[49:33] Vậy nếu thêm cái đối chiếu công nợ nữa thì sẽ đảm bảo chắc chắn rằng số liệu
+[49:38] phải thu phải trả trên các báo cáo tài chính là đúng đắn.
+[49:43] Cách kiểm tra thứ ba, hàng tồn kho. Giá trị của hàng tồn kho
+[49:49] thì đầu tiên chúng ta nhìn thấy giá trị hàng tồn kho trên bảng cân đối kế toán.
+[49:53] Chúng ta lật tiếp xem ở trên gì ạ? chi tiết ở trên báo cáo thuyết minh tài
+[49:58] chính rằng hàng tồn kho đấy thì sản xuất rửa rang bao nhiêu, thành phẩm bao
+[50:03] nhiêu, hàng hóa bao nhiêu. Được chưa? Rồi. Có được giá trị của thành phẩm hàng
+[50:09] hóa bao nhiêu, chúng ta mang đối chiếu với kết quả của bảng nhập xuất tồn vật
+[50:13] tư hàng hóa trong kỳ là lòi ra liền. Anh có tính đúng hay không? Đấy, nếu cẩn
+[50:20] trọng hơn nữa xem lướt qua cái sổ gọi là sổ chi tiết giao dịch. à chi tiết hạch
+[50:25] toán của vật tư hàng hóa nữa không chạy đi đâu được tí nào hết. Bây giờ kiểm tra
+[50:30] điểm thử một tí, hỏi xem là đâu cho tôi xem một số cái hợp đồng với hóa đơn mua
+[50:34] vào bán ra kèm theo các phiếu nhập phiếu suất. Kiểm tra thử 10 cái, năm cái biết
+[50:38] lề. Để ở góc độ sau này chúng ta muốn kiểm tra, đánh giá một cái chi tiết. Khi
+[50:42] chúng ta có nghi ngờ thì cái cách chúng ta nội suy là cách drain down. Như vậy
+[50:47] là từ số liệu chi tiết chúng ta đi à tổng hợp chúng ta đi về chi tiết.
+[50:51] Kiểm tra thứ tư là tài sản cố định phải khớp đúng với bảng khấu hao.
+[51:00] Giá trị ghi nhận của tài sản cố định trên báo cáo tài chính phải khớp đúng
+[51:05] với bảng khấu hao và sổ chi tiết tài sản cố định.
+[51:12] Kiểm tra thứ năm, thuế giá trị gia tăng còn được khấu trừ hoặc phải nộp trên
+[51:19] bảng cân đối kế toán. Nó phải khớp với tờ khai thuế của kỳ cuối cùng phù hợp
+[51:24] với kỳ báo cáo. Ví dụ
+[51:28] nếu quý 4 năm 2016 anh ghi nhận trên tờ khai thuế giá trị gia tăng rằng tiền
+[51:34] thuế còn được khấu trừ chuyển kỳ kế tiếp là 500 triệu thì chắc chắn trên bảng cân
+[51:39] nối kế toán nó cũng là 500 triệu. Vậy doanh nghiệp nào chỉ làm kế toán thuế
+[51:44] đối phó số này không khớp. hoặc nếu nghiệp vụ hạch toán non số này
+[51:48] không khớp là vì nó quên mất một bút toán mang tính chất kỹ thuật đó là bút
+[51:53] toán kến kết chuyển thuế quên cái đó cho nên là gì ạ rất nhiều người trình cái
+[52:00] báo cáo nên cho c ngân hàng xin vay vốn thế mà cứ tờ khai thuế ghi một số mà báo
+[52:05] cáo tài chính ghi một số hỏi nó tại sao thì nó lớp liếm bằng cách nó bảo cái này
+[52:09] là vì là nội bộ em làm khác mà thuế em làm khác
+[52:14] chấp nhận thuế khác với nội Nhưng doanh thu được ghi nhận ở trên tờ
+[52:18] khai thuế, trên báo cáo quyết toán thuế với báo cáo tài chính nội bộ phải bằng
+[52:22] nhau. Còn nếu không thằng đấy là quá rủi roạt luôn đi nhỉ.
+[52:30] Lợi nhuận sau thuế chưa phân phối trên bảng kết trên bảng cân đối kế toán phải
+[52:35] bằng với lợi nhuận dòng hay lợi nhuận sau thuế trên kết quả kinh doanh.
+[52:43] Lật tiếp lên xem ở thuyết minh báo cáo tài chính xem nó được cấu thành từ đâu.
+[52:49] Lật tiếp lên xem doanh thu phát sinh. doanh thu phát sinh. So sánh với nợ phải
+[52:57] thu phát sinh thì biết ngay liệu rằng nó bán ra ngoài
+[53:03] hay là nó bán cho các công ty nội bộ để tạo ra dòng doanh thu giả mà thôi.
+[53:11] Tiếp tục đánh giá lợi nhuận và thặng dư tiền cuối kỳ.
+[53:17] Lợi nhuận thì tăng mấy chục phần trăm nhưng dòng tiền thì sụt giảm dẫn đến
+[53:22] việc tiếp tục phải đi vay. Vậy doanh nghiệp đấy là mọi nỗ lực đi vay về trả
+[53:27] lãi xong thằng khác nó tiêu hoặc trả lãi xong gì ném vào hàng tồn kho hoặc trả
+[53:32] lãi xong ném vào tài sản. Đó thì đấy là một số cái biện pháp để kiểm tra chéo
+[53:39] cái số liệu có liên quan đến các báo cáo tài chính với nhau là các kiểm tra sơ bộ
+[53:45] thôi nhé. À sơ bộ. Thế bây giờ chúng ta cùng có
+[53:50] trong tay một cái bộ số liệu làm điển hình
+[53:56] là bảng cân đối kế toán kết quả sản xuất kinh doanh và thuyết minh báo cáo tài
+[54:01] chính của một cái cây study rất là nóng trong thời gian qua. Đó là công ty
+[54:06] khoáng sản Bình Thuận. cái đơn vị mà vốn ngàn tỷ mà vừa rồi đến kiểm tra là chỉ
+[54:12] có mỗi cái nhà hoang ven biển đấy. Bây giờ mình thử đọc với nhau xem liệu
+[54:22] rằng nhìn trên báo cáo tài chính này có đọc vị được gì hay không hay phải đợi
+[54:26] đến lúc đi kiểm tra mới biết để khẳng định rằng à báo cáo tài chính
+[54:31] nó thực sự biết nói hay không biết nói. Đây ha.
+[54:35] Bây giờ ta nhìn thử nhé. Chỉ tiêu đầu tiên này, đầu tiên tôi nói
+[54:39] về kết cấu đã này anh chị là bảng cân đối kế toán phần a là tài sản ngắn.
+[54:45] Chúng ta nhìn thấy không ạ? Phần A tài sản ngắn được cấu thành bởi các mục một
+[54:49] năm mã, hai năm mã, ba mã, bốn năm mã cho đến năm
+[54:56] mã bao gồm có tài sản và tương đương tiền.
+[55:04] Về mật thuật gỡ tương đương tiền là những khoản đầu tư tài chính hoặc những
+[55:10] tài sản khác có khả năng chuyển đổi thành tiền nhanh nhất với chi phí thấp
+[55:15] nhất gọi là tương đương tiền. Bây giờ chỉ tiêu đầu tiên mình nhìn này.
+[55:22] Tiền tức là tiền mặt và tiền gửi ngân hàng của công ty này. Cuối năm trước nó
+[55:27] bằng 40 tỷ nhưng đến cuối quý này cuối đây chỉ là
+[55:33] báo cáo quý một thôi nhá. Đến cuối quý một tức là chỉ sau có 3 tháng thôi. Bây
+[55:38] giờ còn lại chỉ có 145 triệu. Vậy có một lượng tiền rất lớn được xả ra
+[55:44] là mấy chục tỷ. Nhưng mấy chục tỷ này bây giờ mình sẽ
+[55:49] nhìn này, tài sản khác gần như không tăng.
+[55:53] Ví dụ tài sản cố định gần như không tăng, hàng tồn kho gần như không tăng.
+[55:57] Vậy tiền xả ra không phải để mua hàng, tiền xả ra cũng không phải đầu tư tài
+[56:01] sản cố định mà tiền xả ra vì một nguyên nhân khó giải thích nào đó.
+[56:08] Bây giờ kết hợp thêm nhìn này, nhìn xuống dưới một chút, chúng ta sẽ nhìn
+[56:12] thấy là phải thu ngắn hạn của khách hàng cũng gần như không biến động.
+[56:17] từ 189 tỷ của cuối năm trước thành 22 mấy
+[56:23] tỷ 224 tỷ của của năm nay đó ở phần giữa đấy chúng ta nhìn thấy phải thu của
+[56:31] khách hàng và đồng thời nhìn tiếp chỉ tiêu xuống phía dưới là trả trước cho
+[56:36] người bán ngắn hạn gần như không biến động hai con số gần như bằng nhau
+[56:42] vậy là có hoạt động doanh thu nhưng gần như không có hoạt động mua vào.
+[56:46] Trong khi tồn kho của năm trước chỉ còn có bao nhiêu thôi 1 tỷ ở phần cuối của
+[56:50] báo cáo đúng không? À vậy chúng ta bắt đầu nghi
+[56:54] vấn về điều này. Vì nếu không tin chúng ta
+[56:58] lật tiếp sang cái báo cáo kết quả sản xuất kinh doanh ở dòng đầu tiên doanh
+[57:03] thu nó báo ở quý 1 là 32 tỷ. Dường như mang cộng con số 32 tỷ này với con số
+[57:09] công nợ phải thu cũ thì nó sẽ thành cái công nợ phải thu mới. Nghĩa là bán mà
+[57:13] không hề thu hồi tiền. và không có hoạt động mua vào. Bán hàng
+[57:24] ra chỉ một khoản là 30 mươ ha mấy tỷ nhưng lại không thu hồi tiền. Bây giờ
+[57:29] lật tiếp sang cái báo cáo là thuyết minh báo cáo tài chính để tôi xem ở trang thứ
+[57:33] mấy
+[57:39] >> rồi phải thu của khách hàng đây này ở trang số 14 giúp tôi
+[57:50] phải thu khách hàng và trả trước cho người bán ở cái trang đó xin lỗi không
+[57:53] phải trang 14 như phải là trang ngang cơ đây đây đây đây cũng là trang 14 đây.
+[58:02] Thì ở cái dòng là ở cái phần mà phải thu của khách hàng ở
+[58:07] cái dòng tương ứng với công ty tư vấn kiến trúc xây dựng Phú Hòa
+[58:15] dòng dưới là công ty trách nhiệm hữu hạn thép Việt Long
+[58:19] có một khoản là 35 tỷ mấy đó thấy không? 35.
+[58:26] >> Dạy. Vậy nghĩa là cái doanh thu nổi lên mà trong cái kỳ này chưa hề thu tiền
+[58:32] đúng không? Tiếp tục nữa này. Toàn bộ phải thu phải trả khác không biến động.
+[58:37] Nghĩa là không có giao dịch kinh doanh nào hết ngoài cái hợp đồng này ra.
+[58:42] >> Vậy là nó gần như nằm im rồi còn gì nữa phải không? À thế mà quý ba quý hai nó
+[58:47] vẫn làm thêm mớ nữa của các bố. Bây giờ xem tiếp nha. Lật về trang đầu
+[59:03] tiên. Phải thu ngắn hạn khác. Cái thứ mà phải
+[59:14] thu khác mà lên đến mấy mấy trăm tỷ là đầu tiên là cứ đặt nghi vấn cái đã rồi
+[59:20] mới xem đến chi tiết của nó. phải thu ngắn hạn trước năm trước là 160 tỷ nhưng
+[59:25] sang năm nay là lên đến hơn 200 tỷ. Vậy có vẻ như anh ghi tăng vốn mà chưa
+[59:30] nộp tiền vào hoặc làng ngoằng trong giao dịch gì ạ? Bất minh trong nội bộ với
+[59:35] nhau mấy chục tỷ lần. Hoặc dường như chúng ta thấy có sự hoán đổi từ nợ phải
+[59:40] thu sang đến việc tăng vốn mà phải thu đó không rõ ràng.
+[59:46] Tiếp tục các khoản khác chúng ta nhìn nha.
+[59:49] Thuế giá trị gia tăng được khấu trừ gần như không biến động.
+[59:54] Vì hoạt động gì ạ? Gần như không có hoạt động mua vào. Chắc chỉ có mua bán một
+[59:58] chút xíu thôi. Chỉ tiêu tiếp theo chúng ta cần phải xem

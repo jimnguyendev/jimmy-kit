@@ -8,7 +8,7 @@ user-invocable: true
 license: MIT
 compatibility: "Stack-agnostic; designed for AI coding agents."
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 allowed-tools: Read Edit Write Glob Grep Bash(git:*) Agent WebFetch WebSearch AskUserQuestion
 ---
 
@@ -44,13 +44,16 @@ Inspect relevant code, data flow, dependencies, recent history, deployment const
 
 - `[VERIFIED]` current evidence;
 - `[ASSUMPTION]` claims with a way to check;
-- conventions or patterns that are useful precedent but not proof.
+- conventions or patterns that are useful precedent but not proof;
+- `[CLAIMED]` runtime behaviour in documents (a job schedule, a health check, a lease): not verified until a check runs it. Say which guarantee is meant (for a scheduled job: mutual exclusion while a lease is valid, once per period, idempotent effects) and route the check to `reality-gate`.
+
+Count the **reading cost** of the area you are designing for: trace one real flow and list the files a newcomer opens. Fragmentation across many small packages is a cost, not a neutral choice; compare options on it.
 
 If architecture health or ownership is unknown, route a bounded evidence question to `improve-codebase-architecture`. Do not invent the missing map.
 
 ## 3. Gate 3 — Derive and compare options
 
-List at least two materially different options. If analogy or convention is doing the reasoning, switch to [first-principles.md](references/first-principles.md) and rebuild the options from fundamentals and interactions.
+List at least two materially different options. When the question is how modules, boundaries or permissions should work and an accepted local ADR does not settle it, do bounded **prior-art research**: read how one or two mature frameworks solve it, yourself or through a subagent, timeboxed, citing primary sources. Record what applies, what you skip and why, and which of your assumptions it rejected. Skip this when local precedent already settles the question. If analogy or convention is doing the reasoning, switch to [first-principles.md](references/first-principles.md) and rebuild the options from fundamentals and interactions.
 
 Compare each option using:
 

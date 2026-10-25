@@ -1,0 +1,685 @@
+[0:06] Hoạt động của doanh nghiệp. Dòng tiền như dòng máu, thông tin như hơi thở.
+[0:12] Thông tin có hai phần thông tin. Phân tin thông tin trong và thông tin ngoài.
+[0:16] Tức là luân chuyển thông tin truyền thông trong nội bộ công ty là một dòng
+[0:20] thông tin. Trong đó có thông tin về kinh tế, thông tin về truyền thông, thông tin
+[0:24] về chủ trương từ trên xuống dưới. Thứ hai là dòng tiền. Sáng nay nói rồi,
+[0:30] kinh doanh là dòng tiền, dòng tiền là kinh doanh. Mở công ty 10 năm hay 3 năm
+[0:34] không quan trọng. Lúc nào anh bắt đầu thu tiền và vận hành dòng tiền, đó là
+[0:38] lúc anh kinh doanh. Đó, đó mới thực sự là lúc kinh doanh.
+[0:42] Cho nên là chỉ số phải thanh toán đương nhiên nó là quan trọng. Quay trở lại nói
+[0:48] chung về các chỉ số tài chính. Chúng ta có quá nhiều chỉ số tài chính theo các
+[0:52] quan điểm khác nhau. Quan điểm của ta, quan điểm của Tây. Sách quản trị thì
+[0:56] viết nhiều. Xin thưa là có hàng trăm nhưng nói tóm
+[1:00] lại nó cũng chỉ có khoảng chia thành sáu nhóm mà thôi. Mà trong sáu nhóm đấy thì
+[1:05] không phải lúc nào chúng ta cũng dùng toàn bộ. Chúng ta dùng khoảng bốn nhóm
+[1:10] mà đại diện bốn nhóm đó là có một số cái chỉ tiêu mà thôi. Thì bốn nhóm đó cụ thể
+[1:16] đầu tiên của đầu tiên là nhóm các chỉ số mà phản ánh cái tình hình thanh toán,
+[1:23] khả năng trả nợ của doanh nghiệp. Nhóm thứ hai đó là các chỉ số nó biểu
+[1:30] thị cái hiệu quả hoạt động của doanh nghiệp thông qua chỉ tiêu gọi là lợi
+[1:35] nhuận. Người ta còn gọi đó là các chỉ tiêu biên. Chỉ số biên ví dụ biên lợi
+[1:41] nhuận thuần hay còn gọi là tỉ suất lợi nhuận thuần hay là biên lợi nhuận dòng
+[1:47] hay là tỷ suất lợi nhuận trên doanh thủ. Biên có nghĩa là cái tỉ suất tính trên
+[1:53] cái doanh thu bán hàng để anh biết rằng à cứ một đồng anh bán hàng ra thì anh
+[1:58] đạt được bao nhiêu đồng lợi nhuận ở trong đó
+[2:03] để anh biết rằng là chừng nào thì anh nỗ lực tăng doanh thu và chừng nào thì
+[2:07] không nên nữa. Vì trong lý thuyết về quản trị chúng ta biết rồi, mỗi một
+[2:11] doanh nghiệp nó có một cái điểm tối ưu của doanh thu và sản lượng.
+[2:17] Vậy thì lợi nhuận của anh còn tăng chừng nào anh chưa đạt đến điểm tối ưu đó tiếp
+[2:22] tục tăng. Nhưng khi nó đã đạt đến điểm tối ưu rồi anh cố gắng tăng doanh thu,
+[2:26] lợi nhuận của anh nó bắt đầu giảm. Cho nên trong nhiều trường hợp người ta buộc
+[2:29] phải dừng lại đừng bán nữa em ơi. Vì mày bán thêm nữa hoặc yêu cầu mở rộng hơn
+[2:34] nữa công ty lỗ. Nhất là mô hình chuỗi lúc nào chuỗi là
+[2:38] tối ưu nhé. Đừng cố gắng tìm cách mở điểm cho bằng được.
+[2:44] Đừng cố gắng tăng doanh thu cho bằng được vì năng lực phục vụ của anh chỉ đến
+[2:49] một cái điểm đó thôi. Nếu kịch cái điểm này rồi anh không khả năng phục vụ nữa.
+[2:53] Muốn tăng anh phải tăng thêm cơ sở chứ. Mà cái lợi nhuận và doanh thu tăng thêm
+[2:57] từ việc tăng cơ sở đó nó chưa đủ để bù đắp. Vậy thì lúc đó lợi nhuận của anh nó
+[3:02] bắt đầu cắm xuống. Thì đây nhóm chỉ số thứ ba là hiệu suất
+[3:09] sử dụng vốn và hiệu quả sử dụng tài sản. hiệu suất vốn và hiệu quả tài sản. Nghĩa
+[3:15] là đánh giá xem là cái sự vận hành của nguồn vốn và tài sản trong quá trình
+[3:20] kinh doanh và bán hàng nó mang lại hiệu quả đến đâu cho hoạt động tài chính của
+[3:25] công ty. Nhóm chỉ số cuối cùng là các rủi ro về tài chính và khả năng thanh
+[3:29] toán các lãi vay chứ không phải lúc nào thấy vay được
+[3:33] tiền cũng cắm đầu vào vay. Nhưng nói thật là bây giờ trong bối cảnh thị
+[3:36] trường nó khó khăn, nhất là các doanh nghiệp làm về thương mại và sản xuất thì
+[3:39] có đúng là cứ vay được là tốt rồi, còn lại ngồi lại cân nhắc xem có vay được
+[3:43] hay không. Thì đôi khi chuyện đó là không cần thiết. Mặc dù lý thuyết thì là
+[3:48] như vậy nhưng đôi khi cái bức xúc về vốn nó dẫn đến một cái yêu cầu cao hơn rằng
+[3:52] cứ giải ngân được cái đã. Nhưng khi một khi đã dùng được vốn tín dụng một khoảng
+[3:57] thời gian rồi thì lại cần phải quay lại để phân tích lúc nào nên vay và lúc nào
+[4:02] thì không vay. Cụ thể, nhóm chỉ tiêu về chỉ số thanh
+[4:06] toán có ba cái chỉ số quan trọng. Một là khả năng thanh toán hiện hành, hai là
+[4:12] khả năng thanh toán nhanh. Thứ ba là chỉ số à thanh toán của tiền mặt gọi là chỉ
+[4:18] số thanh toán tức thở. Vậy bây giờ bản chất mọi người thử nghĩ
+[4:24] xem khả năng thanh toán hiện hành bản chất
+[4:27] của nó là gì ạ? bản chất sâu sắc của nó là gì?
+[4:44] >> Khi nợ đến hạn đến hạn là có khả năng trả nợ.
+[4:47] >> Khi nợ đến hạn là có khả năng trả nợ. đấy là đấy là chức năng của nó thôi.
+[4:55] Thực sự bản chất của vấn đề ở chỉ tiêu gọi là khả năng thanh toán hiện hành
+[5:02] nghĩa là nếu tôi mang hết toàn bộ tài sản ngắn của tôi ra bán hết đi, dồn hết
+[5:08] tiền vào có đủ trả nợ đến hạn à có đủ trả nợ ngắn hạn hay không? Không tính
+[5:15] đến nợ dài. Vì sao? Vì ở góc độ điều hành vốn, ở góc độ về quản trị tài
+[5:19] chính, vốn vay dài người ta cũng coi là vốn chủ sở hữu.
+[5:26] Huy động vốn cổ đông cũng là vốn giải. Vậy tạm thời không xét vì doanh nghiệp
+[5:30] nó không chết vì cái giải đó, nó chết vì cái nợ ngắn mà nợ ngắn là trong vòng
+[5:34] tính trong năm tài chính hoặc 1 năm tùy điều kiện nào đến trước. Vậy thì khả
+[5:38] năng thanh toán hiện hành có nghĩa là đây nhà cửa máy móc à xin lỗi hàng tồn
+[5:44] kho vân vân tiền đây. Nếu cần thiết bây giờ hoán đổi hết chỗ này thì có đủ trả
+[5:49] nợ hay không? Nếu không đủ có nghĩa là gì? Nếu nó kiện
+[5:54] là anh chết coi. Có thế thôi. Thì đó là khả năng thanh toán hiện hành.
+[6:02] Công thức tính của nó được tính bằng tài sản ngắn chia cho nợ ngắn. Rồi nhìn trên
+[6:07] bảng kết nối kế toán tài sản ngắn ở đâu? Trong phần tài liệu buổi sáng ở bảng cân
+[6:12] nối kế toán. Tài sản ngắn hạn phần A trên bảng cân nối kế toán
+[6:20] suốt từ 1 năm mã cho đến tận 5 năm mã. Nó bao gồm tiền và các khoản tương đương
+[6:25] tiền. Đúng chưa? Cộng với các khoản đầu tư tài chính ngắn cộng với lại gì? Phải
+[6:30] thu ngắn cộng hàng tồn kho, cộng tài sản ngắn khác.
+[6:35] Bây giờ mang so với nợ phải trả ngắn nợ bên phần nguồn vốn.
+[6:48] Nợ phải trả ở phần nợ phải trả nhưng chỉ là một l mã
+[6:52] thôi. Nợ ngắn. Bây giờ nhìn luôn ở công ty này xem
+[6:58] tài sản ngắn của nó bằng bao nhiêu? Ở cuối kỳ tài sản ngắn của nó bằng 853.
+[7:05] 853 tỷ mà mang chia cho nợ ngắn
+[7:14] >> 184
+[7:15] >> 184 tỷ rồi
+[7:21] như vậy là được mấy lần? Hơn bốn lần gì đó đúng không?
+[7:25] Như vậy rõ ràng nếu như nói trong trường hợp này, nói trong trường hợp này thì
+[7:31] chúng ta tính thử xem hệ số của nó tính ra bằng 4 phẩy mấy.
+[7:35] Về mặt lý thuyết là tốt phải không? Nhưng sao nó vẫn là công ty bỏ trốn?
+[7:41] Là vì cái cấu thành tài sản ngắn của nó không có chất lượng.
+[7:47] Nghĩa là trong cái cấu thành của tài sản ngắn ở đấy, tiền để có thể mang ra trả
+[7:53] rất ít, hàng tồn kho để có thể mang trả là rất ít mà trong đó cái nợ ngắn à xin
+[7:58] lỗi cái tài sản ngắn của nó bao hàm là hơn 200 tỷ của cái phải thu mà phải thu
+[8:04] này rất có thể là phải thu khó đòi hoặc không xác định được ai. Tiếp tục là gì
+[8:07] ạ? Các tài sản ngắn hạn khác à vân vân. Rồi là thuế được khấu trừ của nhà nước.
+[8:15] thuế đã nộp nhà nước rồi mà bây giờ không có chính sách hoàn bao giờ mới đòi
+[8:18] được về để mà cấu thành những cái khả năng trả nợ đấy đúng không ạ? Cho nên
+[8:24] chỉ tiêu này gần như nếu như chỉ xem xét đơn thuần về mặt số liệu
+[8:30] nó cũng chẳng nói đến chuyện gì cả. Nó chỉ nói nên đúng một trường hợp là
+[8:35] nếu anh là công ty thương mại hàng hóa sản phẩm vật chất và doanh nghiệp sản
+[8:40] xuất thì chỉ số này có vẻ còn phản ánh được. Còn nếu ở cái giai đoạn anh đang
+[8:46] đầu tư xây dựng cơ bản mà vác chỉ số này ra nói với nhau chẳng nói chuyện gì cả.
+[8:51] Rõ chưa? Cho nên không phải cứ đọc sách tài chính là gì? Ồ tài khả năng thanh
+[8:56] toán hiện hành của em là bốn phẩy mấy lần ngon không có vấn đề gì. Nhưng xin
+[9:00] lỗi thằng này lấy đâu ra tiền mà giảm? Lấy đâu ra hàng tồn kho mà trả đúng
+[9:04] không? Vậy muốn biết nó cụ thể thế nào thì ở vai trò của người phân tích chúng
+[9:08] ta còn phải xem cái cấu thành của tài sản ngắn kia kìa nó là những thứ gì đã.
+[9:14] Được chưa? Thế thì để hạn chế bớt đi, để nhìn nhận rõ hơn cái tính thanh khoản
+[9:20] của tài sản, người ta mới rút ra. À vậy tôi không dùng cái chỉ số kia nữa. Tôi
+[9:25] dùng một chỉ số tốt hơn. Khả năng thanh toán nhanh.
+[9:30] Khả năng thanh toán nhanh ở công thức này
+[9:34] nó bằng tiền cộng đầu tư ngắn chia cho nợ ngắn.
+[9:38] Đến công thức này thằng này chết liền nh. Bây giờ tiền nó có 145 triệu đúng
+[9:43] không ạ? Đầu tư ngắn, đầu tư ngắn hoàn toàn không có xu nào.
+[9:49] Vậy nếu trong trường hợp này trong ví dụ của bảng cân đối kế toán này, chúng ta
+[9:54] sẽ lấy là 145 triệu mà mang chia cho nợ ngắn ở bên kia xem nó bằng bao nhiêu. Vô
+[10:00] cùng thậm nghĩa là nó gần như không có khả năng
+[10:04] thanh toán bất kỳ một khoản nào cả. Có đúng không ạ? 184.
+[10:09] Đấy nhưng đây lại là một trường hợp cụ thể thôi. Trường hợp này là nó không có
+[10:13] hàng tồn kho. Chứ nếu nó có hàng tồn kho hoặc có nợ phải thu ngắn
+[10:20] mà cái cái tính thanh khoản của nợ phải thu tốt thì ta sẽ thấy rõ ràng công thức
+[10:24] này cũng lại có vấn đề đúng không ạ? Bởi vì rõ ràng rằng nếu hàng tồn kho của
+[10:31] nó là xe là cổ là thứ hàng có thể bán liên tục và khả năng luân chuyển hàng
+[10:35] rất là nhanh trong tháng thì rõ ràng nó còn có một cái cơ hội nữa là nó luân
+[10:39] chuyển cái hàng đấy để có được dòng tiền về. Và hơn nữa là gì ạ? Nếu nó có một
+[10:43] khoản nợ phải thu nhưng mà khả năng thu nợ là chỉ trong tuần tới thôi thì rõ
+[10:48] ràng công thức này cũng lại có vấn đề. Vì công thức này người ta loại bỏ gần
+[10:52] hết này. Hoàn toàn không có sự tham gia của hàng tồn kho, hoàn toàn không có sự
+[10:57] tham gia của nợ phải thu. Hoàn toàn không có sự tham gia của bất kỳ một chỉ
+[11:01] tiêu nào khác mà chỉ có là tiền cộng đầu tư ngắn thôi, đầu tư tài chính ngắn mà
+[11:06] mang cân đối với lại nợ ngắn. Đành rằng nó loại trừ cái kia nhưng nó phản ánh
+[11:11] tốt hơn cái khả năng của các khoản đầu tư và tiền để huy động ngay lập tức sẵn
+[11:16] sàng để ứng phó với nợ ngắn khi nó đến hạ.
+[11:20] Đấy. Và cái ứng phó đấy ở một cấp độ tốt hơn, người ta mới tính tiếp cái chỉ số
+[11:26] thứ ba là chỉ số thanh toán tức thời hay còn gọi chỉ số thanh toán của tiền là
+[11:32] người ta chỉ lấy tiền cộng với chứng khoán khả mại thôi. Chứng khoán khả mại
+[11:36] là trái phiếu chứng khoán mà ngay lập tức anh có thể bán đi với một cái giá
+[11:40] trị tương đương với giá anh đã ghi rồi. Với một chi phí thấp nhất trong thời
+[11:44] gian nhanh nhất nó có tính chất của tương đương tiền để mang cân đối ngăn
+[11:49] nhanh ngay với cái nợ ngắn đó. Thế thì nó tạo ra một cái chỉ số gọi là chỉ số
+[11:55] thanh toán tức thời, nghĩa là ngay lập tức bất cứ lúc nào đòi nợ cái có tiền
+[11:58] ngay. Không quan trọng được không ạ? Đấy. Thế thì chúng ta nên xem xét bắt
+[12:04] đầu từ khả năng thanh toán nhanh và khả năng thanh toán tích hợp để ứng phó với
+[12:10] nợ ngắn và đến hàng. Thì đấy ý nghĩa của nó là như vậy. Về mặt bản chất kinh tế
+[12:16] buổi sáng hôm nay chúng ta nói với nhau câu chuyện về cân đối kế toán. Đây cân
+[12:21] nối kế toán bằng tài sản ngắn cộng tài sản dài. Nguồn vốn bằng vốn chủ cộng nợ
+[12:26] ngắn cộng nợ dài. Thì cái nguồn này nó tạo nên tài sản ngắn hoặc tài sản dài.
+[12:36] Ở công thức thứ hai là khả năng thanh toán nhanh thì bằng tiền cộng đầu tư
+[12:39] ngắn chia cho nợ ngắn là loại bỏ vai trò của hàng tồn kho và nợ phải thu cộng với
+[12:44] các tài sản ngắn khác bao gồm kể cả nợ thuế của nhà nước với mình vân vân.
+[12:48] Nhưng ở công thức thứ ba thì nó tính toàn bộ thìế đây nó loại chộp bỏ bớt cái
+[12:52] vai trò đi. Thì rõ ràng trong thực tế chúng ta phải ứng dụng một cách linh
+[12:56] hoạt thôi. Nếu công ty chúng ta mà chúng ta phân tích thế rằng hàng tồn kho của
+[13:00] mình có khả năng luân chuyển rất là tốt hay là phải thu của mình đều thuộc dạng
+[13:05] rất ngắn hạn hoặc sắp đến hạn rồi à thì cũng cần phải cân nhắc đưa nó vào cái cơ
+[13:10] cấu để tính toán cái chỉ số để mà trả lợi. Hay ở góc độ em đầu tư chứng khoán
+[13:14] em cũng phải nhìn nhận như vậy. Nếu là công ty làm dịch vụ nó khác ấy. Nhưng mà
+[13:19] nếu mà công ty làm mà sản xuất như là Vinamil thì hàng hóa của nó đẩy đi hàng
+[13:23] ngày thông qua một cái hệ thống bán hàng khổng lồ trên toàn quốc đúng không? Đó
+[13:27] cho nên cho nên đó là những yếu tố cần phải cân nhắc. Tuy nhiên đó là những
+[13:32] quan điểm hết sức mới. Còn trước kia trong sách về quản trị tài
+[13:37] chính hoặc trong sách dạy về tài chính người ta lại viết khác. Người ta viết
+[13:41] thế này là cái khả năng thanh toán ngắn thì nó bằng
+[13:45] tài sản lưu động trừ hàng tồn kho. Còn gì ạ? Khả năng thanh toán chung.
+[13:53] Khả năng thanh toán chung thì người ta tính bằng tài sản lưu động trên nợ ngắn.
+[13:58] Vậy nhưng bây giờ người ta rất hạn chế dùng cái từ là lưu động. Vì nếu nói là
+[14:02] tài sản lưu động thì bản chất là hàng tồn kho, tức là hàng hóa nguyên vật liệu
+[14:06] ấy, thành phẩm ấy nó cũng là lưu động chứ. đúng không? À nếu phân định nhưng
+[14:12] thực chất nó có lưu động không thì chưa chắc. Nó còn tùy từng công ty ở
+[14:19] công ty tôi hàng tôi vừa mới nhập về để chuẩn bị cho một chương trình bán hàng
+[14:24] mới được lên kế hoạch rất rõ ràng và kỳ vọng chỉ trong 2 tháng tôi bán hết liền.
+[14:29] Thế thì nó là lưu động. Nhưng mà ở công ty tôi rơi vào cái loại là gì ạ? thành
+[14:34] phẩm bán ra không được nhưng mà tôi chót đầu cơ một cái lượng lớn nguyên vật liệu
+[14:38] chứa ở trong kho mà bây giờ thực lòng không biết xử lý thế nào cả thì đó cũng
+[14:43] là hàng tuồn kho nhưng không hề lưu động một tí nào đang chết dắt ở đó
+[14:48] chúng ta hình dung không ạ đó thế thì đấy bản chất nó sẽ phụ thuộc vào từng
+[14:54] đơn vị cho nên chúng ta đọc sách chúng ta cũng cần phải cân nhắc đây là các
+[14:58] quan điểm cũ hơn người ta nói như vậy thế còn là tiền cộng tương đương tiền
+[15:02] trên nợ ngắn à thì nó cũng tương đương với khả năng thanh toán tức thời cái
+[15:07] quan điểm mới bây giờ thôi. Vậy bây giờ mình nhìn vào công thức này.
+[15:11] Thực ra ở trên tỉ số là tất cả những gì có thể chuyển đổi thành tiền trong một
+[15:17] khoảng thời gian ngắn với chi phí thấp nhất. Còn phần mẫu số là tất cả nợ ngắn
+[15:23] của công ty. Thế thì ứng dụng thực tế sẽ là trong
+[15:29] từng trường hợp ở công ty, tôi sẽ cân nhắc xem đâu là những thứ có thể chuyển
+[15:35] đổi thành tiền để đáp ứng cho yêu cầu thanh
+[15:40] toán nợ ngắn và nợ đến hạn. Thế thì rõ ràng nó có thể được cộng thêm
+[15:47] hàng tồn kho, nó có thể được cộng thêm nợ phải thù. Nhưng nếu bao hàm cả nợ
+[15:54] phải thu ở trong đó thì lại chứa đựng một nguy cơ.
+[15:58] Đó là nguy cơ nợ phải thu. Nhưng mà ở mỗi công ty thì tính chất nợ này khác
+[16:02] nhau. Bên kia làm kiến trúc nợ phải thu có khi hàng năm mới thu được đúng không?
+[16:06] À nhưng mà bên bên chỗ mà nha khoa mà anh khám bệnh cho công ty chẳng hạn thì
+[16:11] có thể chỉ trong vòng 30 ngày. Thế rồi là cái quan hệ giữa công ty ta với công
+[16:17] ty khách hàng cũng lại là một yếu tố để cần phải xé xé. Vậy thì mỗi một mô hình
+[16:23] công ty nó cần phải ước định cho bằng được cái xác suất thu hồi nợ phải thu
+[16:31] ngắn hạn. Xác suất thu hồi nợ phải thu ngắn hạn.
+[16:35] hoặc chúng ta bằng cái hiểu biết kinh tế xã hội thông thường của mình dự báo rằng
+[16:40] cái loại hình công nợ của từng nhóm công ty à là có rủi ro cao
+[16:47] hay rủi ro thấp, chu kỳ ngắn hay chu kỳ dài thì lát nó sang đoạn sau ta nói về
+[16:52] chu kỳ thu hồi nợ ta sẽ nói. Vậy thì trên cơ sở tất cả những cái thứ
+[16:58] tôi phân tích như vậy, tôi mới đề xuất một cái công thức mà tính cái tỉ số
+[17:04] thanh toán mà cái này là quan điểm của cá nhân tôi
+[17:09] và tôi tin rằng là mọi người sẽ ấp dụng áp dụng một cách xác thực nhất à với cái
+[17:14] công việc phân tích tài chính của mình. Đó là thế này. Chỉ số thanh toán tức
+[17:18] thời của tiền thôi thì nó giống nhau rồi. Cùng một quan điểm ta không nói
+[17:22] nhưng chỉ số thanh toán nhanh tôi muốn tính bằng tiền cộng đầu tư ngắn cộng nợ
+[17:28] phải thu đến hạng đ mà nhân với xác suất thu hổi.
+[17:32] Thí dụ bây giờ tất cả các ông đang nợ tôi là 1 tỷ đồng
+[17:37] nhưng mà trong số này thì một nửa là chắc chắn tôi sẽ thu được. Có confirm
+[17:40] rồi anh em bạn bè tin cậy. Vậy 500 triệu là chắc chắn. Vậy 500 triệu đây xác suất
+[17:45] thu hồi bằng 1. Thế còn số còn lại có hai ông mà gọi mái không được đúng không
+[17:50] ạ? Nghe Phong Thanh đâu thấy là tra cứu thông tin hóa đơn hình như bị cưỡng chế
+[17:53] hóa đơn chắc chắn mất rồi. Đấ thế thì tự chung lại cả cái nhóm khách hàng công nợ
+[17:59] của tôi tôi mới dự báo được bằng các cái thông số hết sức cụ thể ở công ty tôi
+[18:05] rằng đâu đó tôi chỉ thu hồi được 70% trong kỳ này là cao nhất đúng không ạ?
+[18:12] Vậy thì 1 tỷ đó tôi có quyền tính và xác suất là 0,7 tương ứng với 700 triệu. Đó
+[18:19] thì cái đấy người ta gọi là xác suất thu hồi. Đó thì đây là đây là cái mà khi tôi
+[18:26] triển khai thực tế xây dựng các KPI tài chính cho các công ty với tư cách là
+[18:30] giám đốc tài chính thuê thì tôi có xây dựng lên và khuyến cáo các công ty nó áp
+[18:34] dụng à chứ sách về tài chính thì không có công thức này. Đấy thì tôi cũng
+[18:39] khuyến cáo đây các anh chị dùng và tôi tin rằng là nó rất xác thực nhá. Là ngắn
+[18:45] thì bằng tiền cộng đầu tư ngắn vì đầu tư ngắn ngắn cái khả năng về về à rủi ro nó
+[18:51] ít hơn. Rồi nợ phải thu đến hạn đấy nhân với xác suất tu hồi mang chia cho nợ
+[18:57] ngắn. Đấy. Thế còn đối với lại khả năng thanh toán chung thì cũng như vậy nhưng
+[19:02] cộng thêm cái hàng tồn kho nhưng tôi gắn thêm chữ khả mại.
+[19:07] Nghĩa là nếu hàng tồn kho của ông còn 100 tỷ trên sổ sách nhưng ông biết chắc
+[19:12] rằng chỉ có khoảng 20 tỷ trong đó có thể tiếp tục bán. Phần còn lại là chờ thanh
+[19:16] lý ra để vậy thì anh chỉ tính cái phần khả mại thôi. Còn cái phần kia thậm chí
+[19:21] đôi khi tôi nói là các anh phải trả thêm tiền phí môi trường để hủy đi chứ đừng
+[19:25] nói là có thể mang đi để mà trả nợ. hình dung không nào? Đấy, thế thì chúng ta
+[19:30] đừng quá cứng nhắc bằng các cái sách lý thuyết quản trị thông thường. Chúng ta
+[19:35] phải căn cứ vào tình hình rất cụ thể của cái công ty và ngành hàng mà mình biết
+[19:40] được đó để đưa ra cái phân tích làm thế nào đó cho nó xát thực nhất thì đó là
+[19:46] gì? Chỉ số thanh toán. Nhắc lại bản chất của chỉ số thanh toán là hoán đổi toàn
+[19:53] bộ tài sản ngắn với nợ ngắn có đủ hay không? Vậy một câu hỏi đặt ra. Thế thì
+[19:59] cái chỉ số này trong các doanh nghiệp nó là chỉ số KPI của tài chính. Vậy thì cần
+[20:05] phải tính xem là giá trị của nó bằng bao nhiêu là tốt, là an toàn cho công ty.
+[20:11] Thì nói chung nếu như nó nằm từ 1 giở xuống là anh đối
+[20:17] về mặt thanh toán. Nếu nằm dao động từ khoảng 1 cho đến 2
+[20:24] thì đó là trường hợp gì ạ? Đó là ở khoảng tốt nhất.
+[20:28] Thế còn nếu nó nằm ở khoảng từ trên2 cho đến 3, đó là dư thừa nguồn lực,
+[20:35] tức là dư thừa tài sản ngắn hoặc dư thừa tiền. Nhưng từng chỉ tiêu cụ thể một thì
+[20:40] tôi sẽ nói. Nhưng trong bối cảnh của Việt Nam thì liệu rằng chắc chắn đến 2
+[20:45] hay 2,5 1 hay 1,5 à thì tôi khuyến cáo các tỉ lệ như sau.
+[20:52] Đối với chỉ số thanh toán nhanh à xin lỗi thanh toán tức thời của tiền thì
+[20:56] chúng ta nên duy trì cái chỉ số này dao động từ 0.8 đến 1.2.
+[21:01] Nghĩa là tiền cộng tương đương tiền tức là cái chứng khoán khả mại đó so sánh
+[21:05] với nợ ngắn đấy mà nó dao động từ 0.8 đến 1.2 là ok.
+[21:12] Vì tỉ lệ chuẩn của nó là bằng 1 0.8 là chịu đựng được vì theo quy tắc
+[21:17] Pareto ok tôi cũng đáp ứng được 80% nợ phải trả của mình.
+[21:22] Nhưng đến 1.2 nó dư một chút cũng không sao. Vậy câu hỏi là lúc nào công ty thừa
+[21:27] tiền và bây giờ tôi đang có trăm tỷ trong tài khoản thừa chưa? Không biết vì
+[21:31] nó phụ thuộc thừa hay không? Nó phụ thuộc vào nhu cầu tiền và khả năng và
+[21:35] nhu cầu trả nợ của anh chứ. Nhưng cứ khi nào tôi tính được một cái chỉ số thanh
+[21:40] toán của tiền thanh toán tức thời này vượt quá 1.2 đó là lúc doanh nghiệp bắt
+[21:45] đầu dư tiền. Vậy tư tưởng tài chính là nếu dư thì
+[21:51] phải bắt tiền tiếp tục làm sao? Tạo ra lợi ích. Vậy tạo ra lx bằng cách
+[21:57] nào? Vậy tôi sẽ rút ra một lượng tiền mặt
+[22:01] làm sao đó để kéo lại cái chỉ số thanh toán nó về đến 1.2 thôi. Vậy tôi rút ra
+[22:06] bao nhiêu đó? Tôi có những lựa chọn sau đây. Trái phiếu chính phủ, trái phiếu
+[22:10] công ty uy tín, sổ tiết kiệm được không? Vàng đô tích trữ.
+[22:16] Nhưng này khuyến cáo này đừng mang đi đầu tư dài. Vì tại sao nếu mang đi đầu
+[22:21] tư dài nó khó có thể quay trở về thành tiền. Vậy hãy chỉ đầu tư ngắn mà thôi
+[22:26] hoặc đầu tư vào chứng khoán tiền vàng gì đó. Bảo nhưng mà tôi cũng chả thích mấy
+[22:31] thứ đó. Có cách nào hay hơn không? Nếu muốn có cách nào hay hơn không thì
+[22:36] chúng ta tiếp tục vận dụng thế này. Nếu mà khi chúng ta tạm dư tiền trong một
+[22:40] khoảng thời gian mà chúng ta tính toán rằng nhu cầu tiền trong 3 tháng liên
+[22:44] tiếp chưa dùng đến nó đâu thì chúng ta có quyền này để một phần sang các dạng
+[22:50] tương đương tiền để bất kỳ lúc nào tôi lật mặt một phát có tiền mặt mang ra
+[22:55] dùng ngay. Một phần còn lại mang đi thương thảo với
+[22:59] nhà cung cấp. Bình thường tôi mua hàng của anh là giá
+[23:02] 10 này. Tháng sau ta cũng vẫn đặt hàng với
+[23:07] dung lượng như vậy. Nhưng hôm nay ta muốn thương thảo hợp đồng trước và để
+[23:11] lấy lòng tin. Bình thường tôi cắm cọc 30% hôm nay lấy lòng tin gì cắm cho ông
+[23:17] 5% 3%. Nhưng với điều kiện giá nào? Vì về mặt nguyên tắc nếu chúng ta đặt hàng
+[23:23] trước nhà cung cấp có kế hoạch sản xuất và cung ứng trước. Và nếu chúng ta tạo
+[23:27] thêm niềm tin bằng cách là ứng trước cho họ một chút tiền thôi để coi như giữ chỗ
+[23:33] thì chúng ta có quyền đàm phán một điều khoản giao hàng tốt hơn, đàm phán giá
+[23:37] trị chiết khấu tốt hơn, đàm phán về giá mua vào tốt hơn. Nghĩa là trong trường
+[23:43] hợp đấy anh sử dụng cái rôi dư tiền tạm thời để hạ cái giá vốn hàng bán xuống
+[23:48] tăng cái tỉ suất lợi nhuận lên. Rõ không nào? Thì đấy là tư tưởng cái người quản
+[23:53] trị tài chính trong doanh nghiệp, cái người làm giám đốc tài chính là người ta
+[23:56] phải nhìn ra cái chuyện đó. Một mặt người ta vận hành sau đó cho các chỉ số
+[24:01] tài chính nó trở về trạng thái tốt. Và thứ hai người ta đưa cái tiền dư để khai
+[24:06] thác sao có lợi nhất cho công ty. Không chỉ là về lợi nhuận mà còn câu chuyện
+[24:11] của khách hàng, của hệ thống sao cho nó tốt nhất. Cho nên thằng giàu là gì? Nó
+[24:16] cứ càng ngày càng giàu. Nó có nguyên một ban của nó như thế này. Tiền nó dư một
+[24:21] cái là gì ạ? Về giám đốc hỏi tình hình nào rồi cuối tháng này thế nào? Dạ thưa
+[24:25] anh đang dư vào khoảng độ 20 tỷ. Ok. Ý kiến chú thế nào? Dạ em đề xuất là 20 tỷ
+[24:31] này là 10 10 tỷ là tương đương tiền. 10 tỷ còn lại là em thương thảo với 5 tỷ
+[24:36] còn lại thương thảo với nhà cung cấp đúng không? À còn 5 tỷ thôi. Chứng khoán
+[24:40] đợt này cái chỗ kia hơi ngon. Em quảng sang đấy 3 tháng.
+[24:44] Đồng ý. Tính ngôn cho anh cái lợi ích mang lại cho công ty bằng bao nhiêu.
+[24:48] Thế thằng thằng to nó sướng là vì thế đúng không? Ok. Vậy viết phương án đi.
+[24:53] Anh ký kế hoạch xong g mình chưa bao giờ đi đánh g được đúng không? Đó.
+[25:02] Thứ hai, đối với khả năng thanh toán nhanh thì vì nó chứa đựng thêm một số
+[25:09] yếu tố rủi ro của công nở nữa. Cho nên nó cần phải dao động ở một tỉ lệ
+[25:15] cao hơn từ 1.2 cho đến 1.5. Còn khả năng thanh toán hiện hành tốt nhất là chúng
+[25:21] ta duy trì nó lên đến 2.5 2 chấm đến 2.5. Đấy, đối một tí là xuống đến 1.8.
+[25:28] Vậy vượt qua khoản đó thì vai trò của kế toán trường và người quản trị tài chính
+[25:32] là đề xuất các biện pháp đề xuất đi làm thế nào để kéo lại các chỉ số cho nó đ
+[25:36] chuẩn đúng không? Ví dụ anh ơi, tháng vừa qua là liên hoan hải sản nhiều quá
+[25:41] huyết áp bắt đầu tăng. Vậy tháng này cơ cấu a cơ khẩu phần ăn
+[25:45] là rau phải tăng lên, tập thể dục nhiều hơn là kéo nó xuống được chưa? Mua trà
+[25:49] hoa quốc về cho anh. Đấy kiểu nó phải thế chứ không phải là ngồi ghi chép
+[25:53] tiền. Ngồi ghi chép tiền xin thưa rằng các bố cứ hoạch định cho tôi cái quy
+[25:57] chuẩn ra thuê mà em học lớp 12 về huấn luyện hai tuần ghi liệt.
+[26:02] Công ty lúc nào cũng sĩ diện. nhân viên công ty em là cứ phải đại học với lại
+[26:06] cao học cơ. Một người đại học cao học cao học thôi, còn lại cứ trung cấp
+[26:14] giá rẻ hơn, trung thành hơn ít nhảy việc hơn đúng không? Đại học nhiều khi xin
+[26:19] lỗi các vị, các vị các em nó bây giờ mới ra trường nó không biết mình là ai đâu.
+[26:24] Đấy nhiều khi mình chẳng k biết ai là mình đâu.
+[26:29] Thì đấy là bản chất của các ba chỉ số thanh toán nhá. Và trọng yếu là cái này
+[26:35] luôn luôn đưa ra ít nhất hai trong ba chỉ tiêu này thành KPI để đo lường tài
+[26:41] chính công ty, khả năng thanh toán của công ty. Và nhắc lại
+[26:46] dòng tiền như dòng máu vậy luôn luôn đảm bảo rằng tỉ suất thanh toán tốt.
+[26:52] Nếu có tỉ suất thanh toán tốt mà lợi nhuận tốt thì đó là công ty vững vàng về
+[26:57] tài chính. Tôi chỉ nói vững vàng về tài chính chứ chưa nói vững vàng tổng thể.
+[27:01] Vì vừa nãy ta nói rồi balance qu cả nhé. Vững vàng tổng thể bốn cái trụ cầ. Đây
+[27:07] chỉ mới chỉ là câu chuyện của tài chính mà thôi.
+[27:10] Rồi vậy một ứng dụng tốt hơn là thế này. Như vừa rồi tôi nói là nhân với xác suất
+[27:17] thu hồi cũng đã là tốt rồi đúng không? Nhưng một lời khuyên xác thực hơn nữa là
+[27:22] chúng ta phải làm đến cỡ này cơ. Chỉ số thanh toán nhanh nhưng chỉ số thanh toán
+[27:28] nhanh cá biệt tính theo từng tháng. Quý nằm
+[27:33] được tính bằng công thức tiền và tương đương tiền cộng đầu tư ngắn cộng phải
+[27:37] thu đến hạn phải thu ngắn. Nhưng xin lỗi các vị bây
+[27:43] giờ doanh nghiệp 3 tháng không có tiền là hết hơi rồi mà ngắn của mình trong
+[27:48] quản trị tài chính là 1 năm phải không? Dài lắm
+[27:52] không được đâu. Phải tính rất ngắn mà cụ thể 3 tháng không có tiền là là xỉu rồi
+[28:00] đúng không chết lâm sảng. Cho nên người ta phải tính đấy là gì ạ?
+[28:05] Là nợ phải thu nhưng phải là phải thu đến hạn mà lại phải được nhân với xác
+[28:09] suất thu hổi. Vậy bây giờ ông không ký nghiệm thu, ông không ký đối chiếu, ông
+[28:15] không confirm với khách hàng liên tục và không có sự cam kết nào đó thì khó lòng
+[28:20] có thể tính được ra cái xác suất có thể thu hồi. Ví dụ bên chỗ bố kia mà làm
+[28:25] kiến trúc mà anh làm cho cái khu vực nhà nước mà trong khoảng độ toàn ký hợp đồng
+[28:30] lớn. Hàng vài chục tỷ làm xong tôi nói 3 4 năm rồi vẫn chưa thu được đồng nào
+[28:34] đúng không? Mặc dù trên sổ kế toán của anh nó vẫn phản ánh đó là phải thu ngắn
+[28:39] nhưng nếu anh váp vào đây để tính được sự vững vàng cho tài chính công ty là
+[28:43] anh chết liền chết đầu nước rõ chưa? Cho nên chỗ này nó phải là phải thu nhưng
+[28:50] đến hạn cơ. Rồi lại nhân mới xác suất để làm cái đối trọng mang ra so với lại nợ
+[28:56] phải thu à xin lỗi nợ phải trả. Nhưng mà nợ phải trả
+[29:02] ngắn cũng có nghĩa là phải trả trong 1 năm. Nó cũng chưa thể hiện rõ được cái
+[29:08] nhu cầu dùng tiền để trả nợ cho mình. Cho nên phải tính là nợ nhưng nợ quá hạn
+[29:13] cộng với nợ đến hạn trong kỳ. Nghĩa là nếu công thức này được tính là gì? Nợ
+[29:18] phải thu đến hạn trong tháng thì đây cũng chỉ tính nợ phải trả đến hạn trong
+[29:22] tháng mà thôi. Thì nó cân đối một cách tốt hơn. Đấy. Thế thì đây là cách người
+[29:28] ta chi tiết hơn nữa là gọi là chỉ số thanh toán cá biển. Thực ra tôi nghĩ mãi
+[29:33] về cái tên cho nó mất mấy ngày nghĩ là bây giờ đặt cái tên của cái thứ mà vận
+[29:38] dụng cụ thể này là cái tên là cái gì. Tôi cũng không biết đặt là cái gì cả.
+[29:42] Tại vì trong tiền lệ sách nó chưa có. thì thôi tôi đành gọi nó là chỉ số thanh
+[29:46] toán cá biển. Nghĩa là nó được vận dụng cá biển trong từng trường hợp cụ thể của
+[29:51] từng năm của từng công ty khác nhau ở từng thời kỳ khác nhau. Nên tôi dùng từ
+[29:57] cá biển. Hai chỉ số thanh toán nhanh. À đây là
+[30:02] chỉ số thanh toán nhanh. Đây là chỉ số thanh toán ngay nhưng ngay cũng là cá
+[30:05] biển được tính bằng tiền tương đương tiền cộng nợ phải thu đến hạn nhân với
+[30:11] xác suất thu hồi chắc chắn. chia cho nợ quá hạn cộng với đến hạn trong kỳ. Như
+[30:18] vậy cùng là khả năng thanh toán tức thời nhưng tức thời như vậy phải chia ra nhá.
+[30:23] Cái biển tiếp ra thì nó sẽ phản ánh tốt hơn cái sự dùng tiền để bù đắp cho nợ
+[30:29] phải trả. Tiếp tục thì tôi tự nhận xét rằng với cách tính và nhìn nhận như thế
+[30:35] này nó chính xác hơn về tính chất và khả năng chi trả thực sự của công ty. hay là
+[30:41] nó xác định đúng hơn cái nhu cầu tiền và loại bỏ các rủi ro của nợ phải thu khó
+[30:46] đổi. Nó không loại bỏ được hoàn toàn vì cái xác suất thu hồi đây là cũng do
+[30:50] chúng ta tự định ra mà thôi. Nhưng ít ra là có định ra còn hơn là gì? Có khi nó
+[30:55] lợ khó đòi đến vài năm rồi đúng không? Đấy. Thế thì cái này nếu như trong
+[31:01] trường hợp của em thì khó vì em không nằm ở công ty người ta, em chỉ nhìn nhận
+[31:05] sơ bộ mà thôi. Đấy thì phải đọc thêm kỹ nữa những cái thứ này. Muốn có được
+[31:10] những cái cái cái này thì chúng ta phải đọc thêm nữa trong cái báo cáo nó gọi là
+[31:14] báo cáo thuyết minh báo cáo tài chính thì mới có thêm được các thông tin mà
+[31:18] nhận định thêm về cái này. Đó thì trong tất cả các chỉ số thanh toán tôi sẽ nói
+[31:23] thật sâu về chỉ số thanh toán. À trong các chỉ số tài chính tôi nói nhiều nhất
+[31:28] về chỉ số thanh toán vì nó là quan trọng nhất.
+[31:33] Lợi nhuận tôi nói lại tính sau. Dòng tiền phải tính trước nhé.
+[31:40] Các chỉ số liên quan đến khả năng thanh toán và luân hồi tiền cũng như hàng tồn
+[31:45] khọp nó gồm có ba cái nhóm. Nhóm thứ nhất có hai chỉ số là chỉ số
+[31:50] vòng quay của các khoản phải thu được tính bằng công thức là doanh thuần mà
+[31:55] mang chia cho các khoản phải thu trung bình.
+[31:59] Nhìn vào công thức này, bản chất của nó là gì? Bản chất của nó là cứ 1 đồng
+[32:05] doanh thu bán ra thì anh bị nợ mấy đồng? Được chưa? Bản chất cách đọc là như vậy.
+[32:13] Cứ 1 đồng bán hàng ra thì anh bị nợ mấy đồng? Tiếng Anh nó gọi là credit sale,
+[32:19] nghĩa là nó bao hàm cả doanh thu đã thu tiền và gồm cả doanh thu chưa thu tiền.
+[32:25] Mang chia cho cái nợ phải thu trung bình. Nợ phải thu trung bình bằng giá
+[32:31] trị nợ phải thu đầu năm chia cho nợ phải thu à cộng với nợ phải thu cuối năm chia
+[32:36] làm 2 thì gọi là nợ phải thu trung bình. Vậy nếu tính trong 1 năm chúng ta cộng
+[32:42] suốt doanh thu của 1 năm là mang gì ạ? chia cho nợ phải thu đầu cộng nợ phải
+[32:47] thu cuối trên mặt 2. Đó thì nó ra cái gọi là vòng quay
+[32:53] khoản phải thù. Rồi ta lấy 365 ngày chúng ta chia cho
+[32:59] cái vòng quay vừa mới tính ra được nó sẽ ra số ngày bình quân anh thu hồi một
+[33:03] khoản phải thù. Vậy nhiệm vụ của chúng ta là ở hai công thức trên chúng ta tính
+[33:08] được ra số ngày bình quân của một khoản phải thu. Ở hai ở cái công thức tiếp
+[33:12] theo chúng ta sẽ tính ra số ngày bình quân của một khoản phải trả. Nguyên tắc
+[33:17] về quản trị dòng tiền đó là nợ phải trả. Phải có thời gian trả dài hơn nợ phải
+[33:22] thôi đúng không ạ? thì nó mới khỏe về dòng tiền. Còn nếu chúng ta cứ phải trả
+[33:27] thì nhanh nhanh chóng chóng trong vòng nửa tháng trả rồi mà phải thu thì hai ba
+[33:31] tháng sau là mệt lắm. Chỉ cự được một thời gian thôi là sẽ lại yếu tiếp với
+[33:36] dòng tiền. Vậy một cách lập luận hoàn toàn tương tự như thế
+[33:41] ở chỉ tiêu thứ hai, nhóm chỉ tiêu thứ hai, cặp thứ hai là chỉ số vòng quay
+[33:45] khoản phải trả nó được tính bằng doanh số mua.
+[33:49] Nghĩa là trong năm vừa qua tổng số hàng mua của anh chỉ số phải thu là là hàng
+[33:55] bán nhé. Còn bây giờ phải trả thì tổng số anh mua vào trong năm là bao nhiêu?
+[34:01] Anh mang chia cho giá trị phải trả bình quân, phải trả nhà cung cấp ấy thì nó sẽ
+[34:07] ra được là vòng quay khoản phải trả. Rồi lại lấy 365 ngày chia cho cái vòng quay
+[34:14] ta vừa mới tính ra như vậy. Nó sẽ tính ra được số ngày bình quân trong một
+[34:18] khoản phải trả. Thế thôi. Quy tắc của nó học hiểu một
+[34:22] cách vô cùng đơn giản như thế. Đấ nhắc lại cứ ở đây là một đồng mua vào thì có
+[34:30] bao nhiêu phần trăm trong đó là anh mua chịu? Hay là trong 100 đồng mua vào thì
+[34:35] có mấy đồng mua chịu? Còn ở trên là cứ 100 đồng bán ra thì có
+[34:40] bao nhiêu đồng là bị người ta chịu. Đó chưa nào? Nó đơn giản vậy thôi. Vậy có
+[34:46] những sách quản trị người ta không vi chỗ này là 365 ngày. Sách của chúng ta
+[34:50] phần lớn ghi là 360 ngày. Thì xin thưa là bây giờ mới cãi nhau là 365 hay 360.
+[34:57] Vì năm tài chính là tính theo năm dương lịch. Mà đã là năm dương là năm mặt trời
+[35:02] phải không? 365. Chừng nào tính năm mặt trăng thì mới là 360. Rõ chưa? Và năm
+[35:08] tài chính thì không tính theo năm mặt trăng nhé. Tính năm phần mặt trời. Vì
+[35:11] thế nó phải là 365 nên khỏi cần cãi nhiều được không? Chúng ta phải lý luận
+[35:16] nó phải đủ đủ các góc nhìn như thế chứ. Cuối cùng xem xem là thành phẩm hàng hóa
+[35:22] vật tư của anh 1 năm quay được mấy vòng? À thì nó có cái chỉ số gọi là chỉ số
+[35:27] vòng quay của hàng tồn kho nó bằng giá vốn hàng bản lấy giá trị trên sổ 632
+[35:33] hoặc lấy giá trị trên bảng nhập số tồn. mà anh mang chia cho hàng tồn kho bình
+[35:38] quân. Hàng tồn kho bình quân có nghĩa là giá trị tồn kho đầu kỳ cộng với tồn kho
+[35:43] cuối kỳ mang chia đảm đồ thì nó ra xem là 1 năm anh Luân chuyển hàng được mấy
+[35:48] vòng? Tức là hoàn thành được mấy chu kỳ kinh doanh đúng không ạ? Vì chúng ta thế
+[35:53] này chúng ta kinh doanh là cứ nối tiếp nhau chúng ta cứ nối tiếp nhau chúng ta
+[35:57] khó lòng có thể ước định được một cái vòng quay cụ thể nào đó thì đây là
+[36:01] phương pháp người ta tính ra. Tiếp tục số ngày bình quân của một vòng quay đỏ
+[36:06] anh lấy 365 ngày anh chia số vòng vừa ra. Vậy ở đây nó là ba cặp tính.
+[36:12] Ba cặp tính số vòng quay và số ngày của một vòng của ba giá trị phải thu, phải
+[36:19] trả hàng tuần kho. Đấy. Tiếp tục.
+[36:27] Tiếp tục là các chỉ số nó phản ánh cái hiệu quả của lợi nhuận. Lợi nhuận thì
+[36:32] tốt rồi nhưng không, cái tính chất hay còn gọi là cái chất lượng của lợi nhuận
+[36:38] còn quan trọng hơn lợi nhuận. Đó là các chỉ số biên.
+[36:44] Ví dụ chỉ số thứ nhất người ta gọi là viết tắc của chữ earning before interest
+[36:49] and tax nghĩa là lợi nhuận trước thuế và lãi vay.
+[36:55] Lợi nhuận trước thuế và lãi vay. Chỉ tiêu thứ hai là EBT.
+[37:00] EBT là gì ạ? lợi nhuận trước thuế. Tức là nhìn trên bảng kết quả sản xuất
+[37:05] kinh doanh thì cái thằng trên này này nó bằng cái thằng dưới này cộng thêm với
+[37:09] lãi suất ngân hàng. Thế còn cái thằng dưới này là lợi nhuận trước thuế chính
+[37:14] là lợi nhuận kế toán trước thuế. Đấy. Vậy chỉ tiêu đầu tiên về biên người ta
+[37:19] gọi là biên EBT tức là nô na chúng ta hiểu đó là tỉ suất lợi nhuận trước thuế
+[37:25] chia cho trên doanh thuật. Ý nghĩa của nó là cứ một đồng doanh
+[37:31] thuần anh có được thì tạo ra được bao nhiêu đồng lợi nhuận trước
+[37:38] đúng không ạ? Vậy thì khi nào thấy cái này nó bắt đầu
+[37:44] giảm đó là cái ngưỡng hoặc anh quản trị chi phí không tốt hoặc là gì ạ sự tăng
+[37:49] doanh thu của anh không còn nhiều giá trị nữa. Chỉ số tiếp theo biên lợi nhuận
+[37:55] dòng. Dòng tức là sau thuế. thì người ta được tính bằng lợi nhuận
+[38:00] sau thuế chia cho doanh thu thuần. Điều đó có nghĩa rằng cứ một đồng doanh thuần
+[38:07] anh tạo ra thì có bao nhiêu phần trăm trong đó là lợi nhuận sau thuế.
+[38:13] Đấy có bao nhiêu phần trăm đó là lợi nhuận sau thuế. Vậy có công ty nó bảo
+[38:17] bây giờ cái tỉ suất lợi nhuận cho doanh thu của tôi thấp lắm. Nó chỉ được có 2
+[38:21] 3% thôi. Tính ra thì thấp hơn lãi suất ngân hàng. Vậy tôi có nên làm nữa hay
+[38:25] không? Không biết được. Vì nó muốn làm hay không nữa là thứ nhất này anh còn
+[38:29] đang có lợi hay không. Thứ hai là cái vốn thực tế anh bỏ vào kinh doanh là
+[38:33] nhiêu đúng không? Ông bỏ ra có 50 triệu set up
+[38:37] cái văn phòng xong ông đi thương thảo với thằng bán ông nhận hàng lại bán cho
+[38:40] thằng mua. Vậy ông bỏ cái quái gì ra đâu? Vậy thì 0,5% cũng là quý rồi chứ.
+[38:46] Có đúng không? Vậy muốn biết rằng là cái đó có nên tiếp
+[38:50] tục làm nữa hay không là phải so sánh cái lợi nhuận, cái khả năng sinh lợi ở
+[38:54] trên vốn đầu tư. nhá. Còn ở đây là lợi nhuận trên doanh
+[38:59] thuần nó m nhắm ý cái gì? Cái biên độ lợi nhuận của doanh thu nó cao hay thấp.
+[39:05] Cuối cùng là biên lợi nhuận thuần người ta tính bằng là gì? Lợi nhuận thuần chia
+[39:10] cho doanh thuần. Đó. Tương tự như thế này, chúng ta có thể
+[39:15] vận dụng cái cách tính như vậy trong việc quản trị
+[39:19] chi phí theo doanh thu. Việc vận dụng quản trị chi phí theo doanh thu nó đặc
+[39:24] biệt hữu dụng trong các trường hợp chúng ta hoạch định một kế hoạch kinh doanh,
+[39:29] ước đoán trước doanh thu và khống chế các tỉ lệ chi phí dựa vào lịch sử và
+[39:34] phân tích dữ liệu thực tế của công ty. bao gồm các chỉ tiêu tỉ suất giá vốn,
+[39:40] nghĩa là chúng ta sẽ lấy giá vốn chia s doanh thuần. Tiếp theo là tỉ suất chi
+[39:44] phí bán hàng là lấy chi phí bán hàng chia doanh thuần. Thứ ba là tỉ suất các
+[39:48] chi phí bất kỳ nào khác chúng ta muốn thì lấy chính cái chi phí đó chia cho
+[39:51] doanh thuần. Vậy lời khuyên chúng ta về tính thử trong quá khứ của mình là bao
+[39:56] nhiêu? Đấy
+[40:00] ở trong quá khứ là bao nhiêu? và tự hỏi với mình rằng là trong quá khứ tôi chi
+[40:04] tiêu cái giá vốn như vậy là cao hay thấp?
+[40:07] Mục tiêu năm nay có hạ được tỉ lệ giá vốn trên doanh thuần hay không? Mục tiêu
+[40:12] năm nay có gì hạ được chi phí bán hàng xuống hay không? Hay có biện pháp nào
+[40:17] nữa hay không? để tôi đưa ra một cái tỉ lệ này mang tính chất khống chế để tôi
+[40:21] bắt các bộ phận phải theo. Ví dụ bây giờ marketing bảo anh ơi tháng này em muốn
+[40:26] tăng 1 tỷ tiền quảng cáo em ơi 1 tỷ tiền quảng cáo tính ra cho anh cái cộng cả
+[40:31] với lương nhân viên cộng cả lương bán hàng như vậy bằng bao nhiêu phần trăm
+[40:34] doanh thuần rồi bảo dạ thưa anh là tính ra là bằng 12% không mày ơi mấy năm
+[40:39] trước căng lắm hoặc là gì ạ thông thường trong ngành này hoặc là gì ạ tao tính
+[40:44] toán ra chỉ 8% thôi tính toán cho anh xem hạ xuống 4% đi để còn có 8 thí dụ
+[40:49] như vậy nhá thứ hai bảo thôi 12% cũng được nhưng doanh thu sẽ tăng bao nhiêu?
+[40:56] Nó bảo doanh thu tăng 30% ok mình tính nhẩm ngay. Với tỉ lệ như thế 12% doanh
+[41:01] thu 30% nó mang lợi cho công ty bao nhiêu? Có làm hay không? Và khi đã chốt
+[41:05] vào rồi, các công ty của nước ngoài nó fix gần như rõ ràng ngay từ đầu năm các
+[41:11] tỉ lệ này và trong kỳ cứ khoản nào gì chạm đến ngưỡng đỏ một cái. Em ơi dừng
+[41:17] lại, dù em có đưa văn bản lên cũng không ai
+[41:21] duyệt cho em đâu. Nhưng ở mình có các công ty mà vừa vừa một tí, có ban bệ một
+[41:26] tí là đôi khi gì? Đôi khi chạm đến trần rồi là mấy em thư ký nó mặc áo đây nè.
+[41:35] xuống anh thế là ký cái rẹt đấy là vô kỷ luật tài
+[41:41] chính rõ thế rồi thì đó là các chỉ số biên thực chất
+[41:48] bản chất của nó là tính ra cái tỉ suất lợi nhuận thuần hoặc dòng hoặc trước
+[41:54] thuế so với doanh thuần vận dụng tương ứng của nó là quản trị các tỉ suất về
+[42:00] chi phí phần cuối cùng phần cuối cùng nên là các chỉ số tài chính mà đánh giá
+[42:06] cái hiệu quả sử dụng vốn và sử dụng tài sản của doanh nghiệp.
+[42:12] Cụ thể nó bao gồm các chỉ số như sau. Chỉ số thứ nhất viết tắt là chữ ROA tức
+[42:20] là return on access nghĩa là tỉ suất sinh lợn trên tài sản.
+[42:29] Biểu thị của nó được tính bằng công thức là bằng lợi nhuận sau thuế mà chia cho
+[42:34] tổng tài sản bình quân. Công thức tính vô cùng dễ dàng bằng cách
+[42:40] chúng ta lấy lợi nhuận sau thuế trên bảng kết quả kinh doanh mà chia cho cái
+[42:46] cái chỉ số là tổng tài sản trên bảng cân đối kế toán để biết rằng cứ một đồng tài
+[42:52] sản có khả năng mang lại bao nhiêu đồng lợi nhuận.
+[42:58] Để biết rằng tiền chúng ta ném vô công ty,
+[43:02] vay huy động đưa vào công ty để hình thành tài sản có khả năng tạo ra một tỷ
+[43:08] suất lợi nhuận bằng bao nhiêu phần trăm. Để so với cái chi phí sử dụng vốn thông
+[43:14] thường ở ngoài xã hội trong cái quan hệ giao dịch là vay vốn thì để xem xem là à
+[43:21] như vậy việc vận hành tài sản thì có tốt hay không, vận hành nguồn vốn có tốt hay
+[43:26] không? Vì bản chất là tổng tài sản bình quân thì nó chính là tổng tổng vốn bình
+[43:30] quân đúng không? Vì tài sản bằng vốn mà. Đó. Thế thì tài sản bình quân thì nó
+[43:35] bằng giá trị tổng tài sản đầu kỳ cộng với giá trị tài sản cuối kỳ chia làm 2.
+[43:40] Đấy là tài sản bình quân. Vậy công thức tính của ROA sẽ bằng lợi nhuận sau thuế
+[43:46] chia cho tổng tài sản bình quân. Tóm lại nó cho biết rằng khả năng sinh lợi nhuận
+[43:52] sau thuế tính trên tổng tài sản là bao nhiêu phần trăm.
+[43:57] Chỉ số thứ hai RCE là tỉ suất lợi nhuận trên vốn cổ phần
+[44:03] thưởng. Vốn cổ phần trong công ty nếu là công ty
+[44:08] trách nhiệm hữu hạn thì tất cả đều là vốn cổ phần thưởng. Nhưng nếu là công ty
+[44:13] cổ phần thì nó lại có hai cái loại. Một là vốn cổ phần thường và
+[44:18] hai là vốn cổ phần ưu đãi. Cổ phần ưu đãi có bốn loại theo luật bây giờ. Một
+[44:25] là ưu đãi cổ tức, hai là ưu đãi gì? Hoàn lại, thứ ba là ưu đãi biểu quyết, thứ tư
+[44:29] là ưu đãi khác vân vân. Đó. Thế thì ở đây người ta chỉ tính là cái lợi nhuận
+[44:36] sinh ra từ cái vốn cổ phần thưởng công thức tính bằng lợi nhuận sau thuế trừ đi
+[44:42] cổ tức ưu đãi mà mang chia cho vốn cổ phần thường bình
+[44:48] quân. Vốn cổ phần thường minh quân tức là vốn cổ phần tính theo những thằng mà
+[44:53] có quyền biểu quyết ấy nhỉ. Thế còn ví dụ như là cổ phần ưu đãi cổ tức là thôi
+[44:57] thằng đấy không biểu quyết gì hết ấy. Nó chỉ đầu tư vào công ty với tư cách cổ
+[45:01] đông nhưng để giữ một cái thế an toàn hơn về mặt tài chính. Nghĩa là nó có
+[45:05] quyền rút, có quyền gì ạ? Có quyền chỉ hưởng cổ tức thôi chứ không quan tâm đến
+[45:09] những cái chuyện khác. Đó thì người ta muốn loại bỏ các yếu tố đó ra. Vậy thì
+[45:14] chỉ số này là ROCE là tỉ suất lợi nhuận trên vốn cổ phần
+[45:18] thưởng thì được tính bằng lợi nhuận sau thuế trừ cổ tức ưu đãi mà chia cho vốn
+[45:24] cổ phần thường. Điều này có nghĩa là có nghĩa là khả năng sinh lợi trên vốn
+[45:31] nhưng chỉ tính với vốn cổ phần thường là bao nhiêu phần trăm. Nếu cái này thấp
+[45:36] hơn tỉ suất ngân hàng là khả năng sử dụng vốn vô cùng yếu kém. Vì so sánh
+[45:41] tương đương nghĩa là thà đừng làm nữa toàn bộ tiền đó ném ngân hàng đi có phải
+[45:44] không? Trừ trường hợp anh có một mục tiêu khác là anh phát triển thị trường
+[45:48] và tăng các giá trị khác của công ty anh chấp nhận tỉ suất sinh lợi thấp hơn. Chỉ
+[45:53] số thứ ba ROE là tỉ suất sinh lợi trên tổng vốn cổ phần. Đấy tổng vốn cổ phần
+[46:01] lúc này là nó bao gồm cả gì ạ? cả cổ phần ưu đãi phạm vi nó nhỏ hơn à
+[46:08] phạm vi nó lớn hơn cái chỉ số là RCE nhé thì công thức tính bằng lợi nhuận sau
+[46:14] thuế trên tổng vốn cổ phần thường tỉ suất thứ tư là tỉ suất trên lợi sinh lợi
+[46:19] trên tổng vốn ROTC bằng lợi nhuận sau thuế cộng với chi phí lãi vay mà chia
+[46:25] cho gì ạ? Chia cho tổng vốn bình quân. Thế thì tất cả các chỉ số này là nó phản
+[46:31] ánh cái sức sinh lợ trên vốn. trên vốn của doanh nghiệp và
+[46:38] cuối cùng thì cái tỉ suất được đặc biệt quan tâm là EPS.
+[46:43] EPS tức là gì ạ? Lợi nhuận tính trên vốn chủ sở hữu, lợi nhuận tính trên một cổ
+[46:50] phần nhá. Thế thì nó sẽ được tính bằng lợi nhuận sau thuế trừ cổ tức ưu đãi
+[46:56] nhưng chia cho cổ phiếu phổ thông đang lưu hành của công ty cổ phần.
+[47:04] Nghĩa là lấy lợi nhuận sau thuế trừ đi cái cổ tức ưu đãi đây. Ví dụ lợi nhuận
+[47:08] 100 tỷ, cổ tức ưu đãi mất 15 tỷ trừ đi còn 85 mang 85 chia cho bao nhiêu nhiêu
+[47:14] chục triệu cái cổ phiếu đang thực sự lưu hành trên thị trường thì nó ra một cái
+[47:19] gọi là earning per là cái thu nhập tính trên một cổ phiếu và cuối cùng là cái
+[47:25] chỉ số tham khảo là chỉ số giá thị giá cổ phiếu trên EPS gọi là chỉ số P/E. Đây
+[47:32] là hai chỉ số mà ở trong cái phân tích đầu tư chứng khoán luôn luôn được đưa ra
+[47:37] để xem xem là à cái thị giá cổ phiếu hiện nay tính trên cái lợi nhuận kiếm
+[47:42] được của thị giá đó là bao nhiêu để biết rằng là tham chiếu xem việc đầu tư đó là
+[47:48] đắt hay rẻ. Đấy thì thực sự đây là góc độ gọi là các chỉ số để đánh giá cái khả
+[47:55] năng sinh lợi trên vốn. Khả năng sinh lợi trên vốn thì trong này đặc biệt quan
+[47:59] tâm đến chỉ số gọi là tỷ. Chúng ta cứ gọi nô na gọi là cái gì cũng được. Nhưng
+[48:04] trong phân tích hoặc trong quản trị tài chính các anh không cần phải nhớ rằng
+[48:08] ROA hay ROE hay R gì thì R. Cứ đọc nguyên bản cho tôi một tỉ số gọi
+[48:14] là tỉ suất sinh lợi trên vốn chủ sở hữu nhá. là lấy lợi nhuận sau thuế mà chia
+[48:22] cho vốn chủ sở hữu. Vậy lợi nhuận sau thuế chúng ta sẽ lấy trên bảng kết quả
+[48:26] sản xuất kinh doanh trong bảng báo cáo gì ạ? Kết quả kinh doanh. Còn vốn trụ sở
+[48:32] hữu là chúng ta lấy cái chỉ số đó ở chỉ tiêu ạ.
+[48:38] Chỉ tiêu gì ạ? Chỉ tiêu 410 ạ. ở trên bảng kết quả sản xuất kinh doanh à xin
+[48:44] lỗi trên bảng cân nối kế toán nhắc lại là tỉ suất sinh lợi trên vốn
+[48:49] chủ thì bằng lợi nhuận sau thuế lấy trên kết quả kinh doanh mà chia cho cái giá
+[48:54] trị là vốn chủ sở hữu trên bảng cân đối kế toán xem nó ra bao nhiêu phần trăm
+[49:03] nếu nó thấp hơn tỉ suất ngân hàng điều đó là việc sử dụng vốn chủ
+[49:10] là kém hơn việc đi gửi ngân hàng lấy lãi. Trừ trường hợp anh có một mục tiêu
+[49:14] khác về phát triển thị trường, có mục tiêu khác về phát triển hệ thống công
+[49:18] ty, còn nếu không được hiểu đó là sử dụng vốn kém hoặc tỉ suất ngành quá
+[49:26] thấp. Rõ chưa ạ? Nhưng mà vốn chủ sở hữu thì ta phải hiểu
+[49:39] rằng nó không chỉ là vốn góp của các thành viên.
+[49:43] Vì vốn góp và các thành viên như sáng nay đã nói rồi, nó chỉ đúng cái giá trị
+[49:48] khi lần đầu góp thôi. Còn đã hoạt động có lịch sử rồi thì vốn chủ sở hữu nó sẽ
+[49:53] bằng cái vốn góp ban đầu cộng với cái lợi nhuận để lại tích lũy đến thời điểm
+[49:58] hiện tại mà anh chưa chia thì đó là vốn chủ sở hữu. Vì là lợi nhuận của anh như
+[50:04] anh chưa lấy ra, chưa chia cho các thành viên thì nó vẫn là vốn chủ. Rõ không ạ?
+[50:09] Đấy. Thế thì thông thường nếu mà quản trị
+[50:14] dòng tiền yếu kém, nghĩa là có lợi nhuận nhưng không thể chia thì lợi nhuận nó cứ
+[50:17] tích lũy lại. Tích lũy lại và đến một ngày nào đó sau 3 năm đến 5 năm thì cái
+[50:24] giá trị vốn chủ sở hữu nó sẽ khuếch khuếch đại nó rất lớn đúng không?
+[50:28] và tỉ suất lợi nhuận ở trên doanh thu thì không đổi. Cái tỉ suất ngành nó cũng
+[50:32] gần gần như là nó báo hòa cố định rồi thì tính ngược trở ra nó sẽ ra một cái
+[50:36] tỉ suất là tỉ suất sinh lợi trên vốn chủ là rất thấp. Đó trong trường hợp đó mà
+[50:41] mang so sánh với cái tỉ suất chi phí trà chi phí vốn tức là tỉ suất lãi trên ngân
+[50:45] hàng thì nô na rằng đừng làm nữa vác số tiền nó đi gửi ngân hàng. Thế nhưng tại
+[50:51] sao doanh nghiệp vẫn duy trì là vì vốn chủ sở hữu không hẳn là đã có tiền. Đó
+[50:56] chỉ là giá trị lợi nhuận tích lũy mà lợi nhuận đó thì lại chưa chắc đã phải tiền.
+[51:01] Rõ không? À đấy chứ còn nếu bảo bây giờ dễ quá bây giờ tỉ suất lợi nhuận trên
+[51:06] vốn có 2% thì thôi em vác nguyên cái số tiền này em gửi ngân hàng nhưng thực ra
+[51:09] có tiền đếch đâu. Rõ không anh chị? Các chỉ số về rủi ro tài chính nó gồm có
+[51:17] một là nợ trên tổng vốn. Nó sẽ bằng tổng nợ trên tổng vốn.
+[51:22] Chỉ số này cho biết rằng à trong giá trị của tổng vốn của anh ví dụ là 100 tỷ thì
+[51:29] anh đi nợ người ta bao nhiêu tỷ? Có thế thôi.
+[51:34] Bây giờ các doanh nghiệp như là bất động sản tỉ lệ này có khi lên đến 90%.
+[51:40] Bảo tại sao nó vẫn chưa chết? Là tại vì bản thân cái hàng hóa của nó là hng hàng
+[51:46] hóa bất động sản. Nó lại có giá trị của thế chấp. nó lại có giá trị kêu gọi đầu
+[51:51] tư vốn ngay từ khi nó lập dự án vân vân. Đấy cho nên nó chưa chết. Hay là một số
+[51:57] hãng về phân phối xe. Cái tỉ lệ nợ ở trên gì ạ? Trên vốn chủ hoặc trên tổng
+[52:03] vốn nó cũng tương đối lớn. Nó toàn trên 70% thôi.
+[52:07] Nhưng cũng không sao cả là vì hàng hóa của nó có giá trị lớn và dễ thanh khoản,
+[52:14] dễ thanh khoản hơn. Còn nếu hàng hóa của anh là vật liệu xây dựng hoặc một số cái
+[52:18] loại hàng hóa khác nữa mà tỷ luận tỉ lệ chiếm dụng vốn lớn như vậy thì đôi khi
+[52:23] đôi khi anh sẽ gặp rất gặp khó khăn trong cái câu chuyện mà thanh toán. Vậy
+[52:27] thì cái cái tỉ số này nó cho chúng ta một một cái câu trả lời rằng bây giờ một
+[52:33] ông ống bảo công ty tôi tổng vốn là 100 tỷ thì xin thưa ông là từ từ đã hãy khoe
+[52:39] tr tỷ. Tôi phải xem xem là à vậy thì cái tỉ lệ nợ vay tỉ lệ nợ trên tổng vốn của
+[52:45] ông là bao nhiêu phần trăm đúng không? À nếu như nếu như 100 tỷ của ông mà tỷ tỷ
+[52:51] lệ mà ông đi nợ người ta chỉ 2 30% thì tương đối rất là ngon đúng không? Vì
+[52:55] phần lớn là của ông nhưng mà vượt quá 50% là 50% hơn 50% đó là anh lệ thuộc
+[53:02] vào việc sử dụng vốn ngoài. Thì chỉ số tiếp theo là nợ trên vốn cổ
+[53:09] phần nó được tính bằng tổng nợ trên vốn cổ phần.
+[53:14] Tổng vốn thì bao gồm cả nợ phải trả được không ạ? Vốn cổ phần ở đây được hiểu là
+[53:19] vốn chủ sở hữu đó thì nó cắt bỏ đi cái phần nợ phải trả.
+[53:25] Tiếp tục là khả năng thanh toán của lãi vay nó sẽ bằng EBIT chia cho lãi vay.
+[53:33] Ebit là lợi nhuận trước thuế và lãi vay. Nghĩa là bằng lợi nhuận trước thuế cộng
+[53:40] với lãi vay phải trả mang chia cho chính lãi vay.
+[53:45] Điều này, chỉ số này ý nghĩa của nó cho biết rằng ví dụ doanh nghiệp làm ra được
+[53:52] 10 đồng thì phải trả lãi mấy đồng?
+[53:59] Ở các công ty, ở các công ty có uy tín ở trên thị trường hiện nay, chỉ số này của
+[54:04] nó không bao giờ dưới 30. Có nghĩa là nó phải làm ra 30 đồng mới
+[54:11] bỏ ra 1 đồng để trả lãi vay. Như vậy nếu trong trường hợp ebit chia
+[54:16] cho lãi vay bằng 1 nghĩa là ông làm được 1 đồng thì trả lãi đúng 1 đồng
+[54:21] đúng không? Vậy làm cho thằng khác nó sơi thôi ông chưa được gì. Nếu làm nếu
+[54:26] chỉ số này bằng 2 nghĩa là ông làm được 2 đồng lợi nhuận 2 đồng thì mang trả lãi
+[54:31] 1 đồng. Như vậy nếu tỉ suất này bằng 10 là làm được 10 đồng thì mang trả mang
+[54:36] trả 1 đồng. Nó còn tùy vào ngành hàng cơ. Nhưng ví dụ chúng ta thử lấy báo cáo
+[54:41] của Vinamil mà xem. không bao giờ dưới 26, lúc nào cũng từ 26 đến dao động cho
+[54:47] đến khoảng 35 40. Tức là cái tỉ suất nó khi nó sử dụng cái vốn vây nó tương đối
+[54:51] là hiệu quả là gì ạ? Họ tạo ra một cái lợi nhuận rất lớn trong đó một phần rất
+[54:56] nhỏ được mang để chi trả cho lãi vành. Thì đó là cái giá trị này có ý nghĩa hơn
+[55:02] của các cái tỷ số bên kia. Các tỷ số trên thì cũng cho biết rằng anh chủ động
+[55:06] về nguồn vốn hay anh đi lệ thuộc ở bên ngoài. Nhưng cái sử dụng hiệu quả hay
+[55:10] không của vốn vay ở đây để đóng góp cho cái lợi nhuận công ty thì phải tính là
+[55:15] ebit chia cho lãi vay. Tức là khả năng thanh toán lãi vay. Ok.
+[55:22] Chỉ số cuối cùng đề cập đến việc gọi là đòn bảy tài chính. Thế nào là đòn bảy
+[55:29] tài chính đã? Việc doanh nghiệp sử dụng vốn vay, vốn
+[55:33] nợ của người khác để thúc đẩy hoạt động kinh doanh của mình tạo ra lợi nhuận gọi
+[55:38] là sử dụng đoàn bảy. Vậy những công ty trong thời gian vừa qua nó sụp đổ người
+[55:44] ta gọi là gãy đoàn bảy tài chính. Nghĩa là anh vay nợ và chịu thiếu nợ quá mức
+[55:50] anh chịu đựng được để anh theo đuổi mục tiêu tăng trưởng và
+[55:55] đạt được cái lợi nhuận mục tiêu anh đạt ra từ trước. Đến lúc anh theo đuổi quá
+[55:58] mức anh không đủ khả năng thanh toán nợ và gốc. Thế là gì? Nó sập xuống một cái.
+[56:03] Người ta gọi là gãy đòn bảy tài chính gọi là sập bẫy đòn bảy tài chính.
+[56:08] Theo đuổi mục tiêu tăng trưởng sử dụng đòn bảy tài chính quá cao đúng không ạ?
+[56:13] Tiếng Anh gọi là leverage công thức tính của nó, ý nghĩa của nó cho biết rằng 1%
+[56:20] thay đổi tăng hoặc giảm với lợi nhuận dòng trên vốn trụ
+[56:25] mà cân đối với tăng giảm lợi nhuận trước thuế và lãi vay tức là EPIT. Công thức
+[56:31] tính đơn giản nó được tính bằng DFL. À DFL tức là gì ạ? Độ lớn của đoàn bài tài
+[56:36] chính thì bằng EBIT mà chia cho EBIT trừ interest. có nghĩa là nó bằng ebit mà
+[56:42] trừ đi ebit trừ lãi vay trên chia cho ebit trừ lãi vay thôi. Công thức tính
+[56:46] rất là đơn giản. Vậy thì cái này nó cho biết là gì ạ?
+[56:53] nó cho biết rằng là nếu tôi tăng hoặc giảm
+[56:58] cái việc sử dụng vốn vay để tài trợ cho hoạt động sản xuất kinh doanh thì có đủ
+[57:05] để tác động lớn hơn vào cái lợi nhuận mà công ty sẽ đạt được hay không? Nôm na là
+[57:11] như thế. Thế thì đó là trong trường hợp công ty không sử
+[57:17] dụng đến vốn à cổ phần ưu đãi. Còn nếu doanh nghiệp mà có sử dụng đế cổ
+[57:24] phần ưu đãi thì công thức tính đầy đủ của nó là DFL bằng Ebit chia cho EBIT
+[57:28] trừ đi lãi suất trừ tiếp đi D chia cho 1 - T. Trong đó D
+[57:35] là cổ tức ưu đãi và T là thuế suất thuế thu nhập doanh nghiệp. Công thức này nó
+[57:41] gợi ý cho chúng ta rằng ví dụ hai công ty, một công ty là không sử dụng vốn cổ
+[57:48] phần ưu đãi mà sử dụng biện pháp vay ngân hàng. Một công ty khác thì không
+[57:53] vay ngân hàng mà phát hành cổ phần ưu đãi. Vậy trong hai bàn bài toán đấy, lựa
+[57:58] chọn bài toán nào có độ lớn của đoàn bảy tài chính lớn hơn? Độ lớn của đoàn bảy
+[58:05] tài chính lớn hơn. Ví dụ một công ty có độ lớn của đoàn bảy tài chính bằng 1
+[58:10] nhá, bằng 1 thì khả năng khuếch đại lợi nhuận của anh bằng đúng một cho dù anh
+[58:15] có vay thêm hay không. Nhưng mà một công ty có độ lớn của đoàn bảy tài chính ví
+[58:20] dụ bằng 1.2 mà lợi nhuận của công ty tăng trưởng qua 2 năm là 5% chẳng hạn
+[58:26] thì điều đó được hiểu rằng việc vay thêm vốn để sử dụng thêm về đoàn bảy tài
+[58:30] chính của cái công ty đó có khả năng tạo ra 5% nhân với 1.2.
+[58:36] thành ra là 6% nghĩa là khả năng sử dụng vốn vay tốt hơn công ty còn lại. Đó thì
+[58:43] đây là một phạm trù tương đối khó. Xin thưa rằng rất khó. Nhưng ít nhất tôi
+[58:49] muốn quý vị nhìn nhận được một góc độ rằng độ lớn đòn bảy tài chính tóm lại nó
+[58:55] cho biết khả năng khuếch đại lợi nhuận khi có sự thay đổi của Ebit nhờ vào việc
+[59:01] sử dụng vốn vay hoặc cổ tức ưu đãi. Đó để trong một số trường hợp ví dụ bây giờ
+[59:06] công ty đang hoạt động bình thường tôi cần mở rộng quy mô vậy tôi phải đứng
+[59:11] trước hai bài toán lựa chọn. Bài toán một, phát hành cổ phần thường hoặc cổ
+[59:16] phần ưu đãi. Bài toán hai, vay vốn của ngân hàng và trả lãi. Thế bây giờ trước
+[59:21] đế giờ có một số quan điểm bảo là việc quái phải vay ngân hàng. Tôi kêu anh em
+[59:26] cổ đông vào đây là ờ đầu tư ưu đãi vào đây một cái là tôi sử dụng vốn coi coi
+[59:31] như là vốn cổ đông để tôi không phải trả tiền lãi. Ông không phải trả tiền lãi
+[59:34] thì ông phải trả cổ tức ưu đãi. Vậy góc độ nào ông cũng phải trả gì? Chi phí vốn
+[59:39] chứ gì? Chúng ta phải dùng đúng cái từ là chi
+[59:42] phí vốn vì đôi khi chỉ đề cập đến lãi suất thôi. Nó không đề cập đến cái gọi
+[59:47] là thực tế của bản chất vấn đề là chi phí vốn.
+[59:51] Nhưng mà anh phát hành thêm cổ phần ưu đãi thì cũng là anh phải trả chứ gì. Vậy
+[59:54] góc độ nào anh cũng phải trả cái chi phí vốn đó cả. Vậy đôi khi đứng trước hai
+[59:58] cái lựa chọn hoặc là phát hành thêm cổ phần ưu đái hoặc là vay vốn ngân hàng về

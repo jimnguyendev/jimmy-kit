@@ -1,0 +1,639 @@
+[0:09] Mời các anh chị ra ngoài để ạ. Chúng ta sẽ
+[0:14] >> à chúng ta tiếp tục nhá. Phần tiếp theo thì sau cái bài giảng vừa rồi, các anh
+[0:20] chị có thêm câu hỏi nào? Có cái chỗ nào mà thầy nói nhanh anh chị chưa rõ thì đề
+[0:27] nghị các anh chị đặt câu hỏi để thầy giải quyết luôn.
+[0:33] Dạ. Mời anh Tuấn trước, mời anh kia sau. Em thưa thầy, thưa các lớp thì để cho
+[0:46] cái việc nó hiểu nó rõ hơn một chút thì thầy mời thầy lấy một cái ví dụ về một
+[0:51] cái công ty mà có một cái mô hình kinh doanh nó rất là hiểu thầy ví dụ đấy là
+[0:58] phân tích từ những cái mà này hiểu ở công ty đến nó như thế nào.
+[1:05] >> Vâng vâng. lấy một ví dụ cụ thể hơn về một cái mô
+[1:11] hình kinh doanh tiêu biểu đạ còn mời mời bạn ở phía dưới.
+[1:23] Dạ vâng chào thầy. Thì em có một câu hỏi là cái mô hình kinh doanh của bên em bây
+[1:27] giờ đang muốn về thương mại từ
+[1:29] >> thì cái khách hàng của bên em thì cũng em em cũng đang hiện tại đang có
+[1:35] hai cái phân thúc khách hàng một là bà mẹ bỉm sữa hai là về đồ chơi ô tô cho
+[1:44] đàn ông
+[1:46] >> theo thầy thì khi mà có hai tiếng học khách hàng này thì nên nên làm setup
+[1:52] thầy hai cái mô hình kinh doanh khác nhau đúng không ạ?
+[1:54] Nhưng mà bọn em thì đang có cùng một cái cái kênh kênh tiếp vợ khách hàng trên
+[2:03] các sàn điện thử ấy thì có nhất thiết phải là tạo thành hai cái môn đi cho
+[2:07] riêng biệt không?
+[2:08] >> Vâng.
+[2:14] >> Hai câu hỏi. Câu hỏi thứ hai là có hai phân khúc thì có nhất thiết là không?
+[2:24] giải quyết hai câu này trước đã nha. Thứ nhất là thế này. Hỏi thêm anh một
+[2:32] chút nữa là với hai cái nhóm khách hàng và hai cái dòng sản phẩm nó tương đối
+[2:37] khác biệt như vậy. Một là đồ chơi xe hơi, hai nữa là đồ cho bà bà bà mẹ bỉm
+[2:43] sữa. Ok. Thì hiện nay nhân viên bán hàng của anh, nhân viên bán hàng của anh là
+[2:49] anh tổ chức chung một đội hay mấy đội? Thưa thầy là cái đội của
+[2:57] >> bên em thì có hai cái đội riêng
+[3:00] >> rồi
+[3:04] >> nhưng mà vẫn đang chung là thứ nhất là chung chung về bộ phận ninh,
+[3:09] >> thứ hai là bộ phận về kế toán.
+[3:11] >> Vâng.
+[3:12] >> Và vận hành thì về kho bãi hứa chung chỉ tách riêng về à về phộ
+[3:19] t chính.
+[3:20] >> Ok. Câu hỏi của bạn ấy là hai như chúng ta
+[3:26] nghe rõ rồi là hai phân khúc khách hàng riêng biệt. Thầy có đặt vấn đề là nếu
+[3:31] công ty có từ hai phân khúc khách hàng trở lên thì phải thiết lập thành các mô
+[3:35] hình kinh doanh khác nhau thì câu trả lời vẫn nhất quán là bắt buộc bạn phải
+[3:39] tách thành hai mô hình kinh doanh khác nhau. Tách hai mô hình kinh doanh khác
+[3:44] nhau nó có hai phần tách. Một là tách mềm và hai là tách cứng. Tách mềm có
+[3:49] nghĩa là chúng ta dựng lên hai mô hình kinh doanh để nhìn thấy cái thế chiến
+[3:53] đấu, cái thế kinh doanh của từng phân khúc và từng nhóm sản phẩm dịch vụ.
+[4:00] Thí dụ đối với lại cái nhóm mà đồ chơi xe hơi, bạn có các dòng doanh thu. Một
+[4:05] là bạn bán phụ kiện, hai là bạn cung cấp dịch vụ cái việc đó. Đúng chưa? Thế còn
+[4:13] đối với cái sản phẩm còn lại dành cho bà mẹ bỉm sữa thì chủ yếu là bạn bán sản
+[4:17] phẩm đành rằng đều là bán trên kênh thương mại điện tử nhưng việc bán đồ
+[4:22] chơi xa hơi nó khác với bán các đồ kia có đúng không? Bản thân chưa cần phải
+[4:28] nói thì bạn cũng đã thực hiện tách rồi đấy. Đó là phòng kinh doanh bạn có hai
+[4:34] đội sale khác nhau. Hai đội sale có hai quy trình bán khác
+[4:39] nhau đúng không? À vì hai mô hình kinh doanh
+[4:43] nó đòi hỏi hai phân khúc khác nhau nhá. Nó theo hai phân khúc khác nhau thì nó
+[4:46] đòi hỏi hai quy trình bán khác nhau. Như vậy nó đòi hỏi tiếp là hai chính sách
+[4:51] chăm sóc khách hàng khác nhau. Nếu sau này bạn có soạn thảo quy chế bán thì nó
+[4:57] cũng được tách thành hai phần. Nếu bạn có thiết kế chính sách chăm sóc khách
+[5:02] hàng nó cũng được thiết kế thành hai phần.
+[5:05] Đúng chưa nào? Cho dù chỉ có một bộ phận truyền thông quảng cáo và marketing
+[5:10] nhưng nó vẫn đòi hỏi hai chiến dịch hoặc hai chiến lược khác nhau chứ không thể
+[5:15] cùng. Thông điệp khác nhau này được chưa? Kênh tiếp cận là khác nhau này.
+[5:20] Đành rằng tất cả khối công việc đó thì vẫn do chung một phòng họ làm
+[5:26] nhưng mà phận sự công việc đang là riêng. Và thêm nữa, về mặt tài chính,
+[5:32] cho dù ở một bộ máy kế toán vì nó chỉ có một pháp nhân thì bạn cũng vẫn phải yêu
+[5:38] cầu kế toán tách thành hai dòng doanh thu khác nhau. Đó là doanh thu từ bán gì
+[5:43] ạ? Đồ chơi xe hơi và doanh thu từ bán sản phẩm cho bà mẹ bỉm sữa. Điều đó
+[5:48] nghĩa là bạn tiếp tục phải tách chi phí cho gì? Chi phí riêng được cho hai cái
+[5:54] hoạt động kinh doanh đó. Đặc biệt là tách được chi phí của phần gì ạ? Giá vốn
+[6:00] và các phần liên quan đến logistic có thể tách được. Cái thuận lợi của hai mô
+[6:05] hình kinh doanh trong cùng một công ty là bạn tận dụng được nguồn nhân lực làm
+[6:09] hai việc, tận dụng được hạ tầng làm hai việc thôi. Cho nên nó sẽ có những chi
+[6:15] phí không thể tách được thì sau này kế toán của bạn phải phân bổ theo tỉ lệ của
+[6:19] doanh thu. Điều đó nghĩa là bộ báo cáo tài chính, đặc biệt là báo cáo kết quả
+[6:25] sản xuất kinh doanh, bạn phải có ba bản. Một là báo cáo kết quả lỗ lãi của đồ
+[6:31] chơi xe hơi. Thứ nhì là kết quả lỗ lãi của bán đồ cho bà mẹ bểm sữa. Và thứ ba
+[6:37] là gộp hai cái đó lại. Đó chưa? Như vậy nếu sử dụng một phần
+[6:42] mềm kế toán nào đó mà họ có chức năng của gì ạ? của tách đơn vị cơ sở hoặc là
+[6:47] nó tách tiểu khoản để hạch toán thôi thì cũng phải tách cái tài chính riêng ra
+[6:51] như vậy. Đấy thì đó là câu trả lời kiều gì cũng phải tách cũng phải lập thành
+[6:57] hai mô hình mặc dù nó chỉ tồn tại trong cùng một công ty và dưới sự điều hành
+[7:01] của cùng một người. Nếu sau này nó lớn lên, nó lớn lên thì có thể bạn thành lập
+[7:07] hẳn thành hai phòng kinh doanh, có hai trưởng phòng hoặc là gì ạ? Nếu như ở
+[7:13] trong một cùng một công ty đến phần mà liên quan đến thiết kế tổ chức thì tôi
+[7:16] sẽ nói nếu nó lớn hơn nữa mà bạn cần có các người trợ giúp phụ trách cho các
+[7:20] mảng thì bạn sẽ cần một phó phụ trách về một mảng này, một phó phụ trách cho mảng
+[7:25] kia và một phó phụ trách cho gì ạ? Phần quản trị nội bộ chẳng hạn. Ví dụ thế thì
+[7:30] đấy là tại sao phải thiết lập như thế? Bởi vì nếu bạn ghi vào đây cả khách hàng
+[7:35] đồ chơi xe hơi, cả khách hàng bài mẹ bỉm giữa thì nó hơi mắc cười có đúng không?
+[7:39] Mà bởi vì và hơn nữa này hơn nữa là cái này nó khác nhau này. Cái lõi này nó
+[7:44] khác cái lõi này nó khác và rõ ràng cái đầu tư hạ tầng cho nó cũng khác đúng
+[7:49] không? Đầu tư vốn liếng cơ sở hạ tầng trang thiết bị cho đồ chơi xe hơi nó
+[7:54] khác với cái kia. Đấy thì đấy là câu trả lời câu hỏi thứ
+[8:00] hai liên quan đến là hai phân khúc khách hàng. Hai dòng sản phẩm rất khác nhau
+[8:05] thì phải tách thành hai mô hình kinh doanh. tách để nhìn thấy cái thực lực
+[8:10] chiến đấu của từng mô hình. Đó. Nhân đây tôi nói thêm một ý.
+[8:18] Đối với những công ty mà kinh doanh đa cơ sở
+[8:22] như là nhiều cửa hàng, nhiều chi nhánh và nhiều mảng hoạt động trong cùng một
+[8:28] công ty giống như bạn vừa ấy nói thì các bạn phải giữ cho nguyên tắc là thế này
+[8:33] này. Nguyên tắc là mỗi thằng phải tự động
+[8:39] phải phải độc lập sống được. Mỗi một cái mảng hoạt động hoặc một cơ
+[8:45] sở phải tự động và độc lập sống được. Chúng ta tuyệt đối không được bắt một
+[8:54] thằng gò lưng kiếm tiền đi nuôi thằng khác.
+[9:00] bảo nhưng mà trong cùng một công ty, trong cùng một công ty chừng nào bạn rút
+[9:03] được về cái quỹ đầu tư của bạn, bạn có thể dùng quỹ đầu tư đó tích lũy đầu tư
+[9:08] hoặc dự phòng để bạn đài thọ tạm thời. Còn nguyên lý là thằng nào chết thì cho
+[9:13] chết luôn chứ không được để chết cả giây.
+[9:19] Đành rằng cắt bỏ đi một mảng kinh doanh là vô cùng đau đớn. Nhưng trên thị
+[9:25] trường vừa rồi nó chứng minh cho chúng ta một câu chuyện khi mà Vincom nó cắt
+[9:29] bỏ toàn bộ Vin Pro và Vinm. Trước đó nữa nó cắt bỏ nguyên một bộ gồm
+[9:38] có công ty tài chính, công ty chứng khoán và công ty bảo hiểm.
+[9:41] Setup hàng năm trời, quân tuyển mấy trăm người, bỏ một phát
+[9:46] là bỏ cả ba. Bởi vì nó thấy là không còn cửa chơi, mô
+[9:50] hình kinh doanh và biến động thị trường không còn cửa. Hay là bây giờ bố bán gì
+[9:56] ạ? Điện thoại mà kênh phân phối cái hệ thống phân phối lớn nhất nó thuộc về Thế
+[10:01] Giới Di Động và FPT. Ông còn giữ Vin Pro thì đời nào ông gì ạ? Ông còn làm nào
+[10:06] đối thủ chúng nó thì đời nào sản phẩm của ông Lan tỏa rộng hơn ở hai kênh kia
+[10:10] vân vân. Và cái quan trọng hơn là họ tập trung vào cái lõi của họ là công nghệ và
+[10:14] xe hơi. Cho nên họ dứt bỏ đi tất cả những gì không đi theo lõi nữa.
+[10:21] Thì trở lại câu chuyện nhỏ của chúng ta, chúng ta cũng nên có những quyết sách
+[10:26] như thế. Bởi vì một người làm kinh doanh thành công hoặc một công ty thành công
+[10:32] là họ luôn luôn xác định một cái trục lõi của mình và họ đi thật sâu với cái
+[10:37] lõi đó chứ họ không dàn trải. Và họ không dàn trải nó không những thể
+[10:44] hiện ở mảng miếng kinh doanh mà nó còn thể hiện ở những việc rất nhỏ. Đó là khi
+[10:50] lập kế hoạch người ta đưa ra mục tiêu thì chúng ta cứ sợ là đưa ra cái này
+[10:54] không đưa ra cái kia thì nó bị thiếu. Nên là hay tham và ôm đồm.
+[11:01] Cho nên là đọc báo cáo thấy rằng cái gì cũng là quan trọng, cái gì cũng là trọng
+[11:04] điểm cả. Thế là cuối cùng là như cái vỏ mít vậy. Gọi là chiến lược vỏ mít. Cái
+[11:10] gì cũng nhọn cũng sắc. Người ta làm là
+[11:15] ít nhất có thể. Và nếu người ta gạch ra bảy cái cái mục
+[11:20] tiêu, người ta sẽ tìm cách loại bỏ đi bốn giữ lại ba. Người ta hỏi tiếp là ba
+[11:25] cái này còn co gọn được nữa hay không? Nếu co được lại về một thì tốt quá.
+[11:30] Và nếu đã co đi rồi thì những thứ kia bỏ là bỏ vĩnh viễn bỏ không nhìn lại
+[11:37] chứ không phải là bỏ là cất đi. Lúc nào lại mở ra xem xong lại làm tiếp không
+[11:41] được. Dứt là dứt thẳng cánh cò bay. Rất không
+[11:45] thương tiếc. Đuổi không bàn dao nhỉ? Đuổi người cũng thế nhỉ. Phải xây dựng
+[11:53] chính sách để đuổi không cần bàn giao. Bởi vì nó trầy nó không bàn giao thì
+[11:57] sao? Ok. Câu hỏi thứ hai.
+[12:04] Câu hỏi thứ hai là lấy một ví dụ. Bây giờ tôi hỏi anh nào tình nguyện lấy công
+[12:10] ty của mình? Chúng ta phân tích luôn.
+[12:26] Mời anh Tuấn. Bây giờ hỏi tiếp này. Công ty của anh
+[12:33] anh đứng đấy anh giới thiệu sơ bộ một tí. Công ty của anh làm về ngành nghề
+[12:36] gì, ở đâu, quy mô ra sao, thành lập lâu chưa? Dạ cảm ơn thầy. Thì thực ra thì
+[12:42] cũng đang bọn em cũng đang ra bắt một cái sản phẩm mới coi như là đây là cái
+[12:46] kênh chính của bọn em nhờ thầy cũng chia sẻ của các anh chị em có thể cho thứ.
+[12:51] >> Ừ.
+[12:52] >> Thì bên em là công ty cộc phần Đông Á. Bên em a có một nhà máy sản xuất hóa
+[12:57] chất công nghiệp
+[12:58] >> tại Việt Nam. Quy mô thì khoảng 20.000 súc một năm.
+[13:02] >> Ừ. Thì với cái sản phẩm sút và axit HCl thì nó có một cái a khi mà hai sản phẩm
+[13:09] này nó điện phân từ muối NaCl thì nó sẽ ra sốt của axit và cái gốc clo thì do
+[13:16] cái ngành ngành công nghiệp của Việt Nam thì họ không hấp thu hết được cái sản
+[13:19] phẩm clo thì clo trong hành tẩy và dùng Pc rồi rất là nhiều nhưng mà hiện nay
+[13:24] thì nó không tiêu thụ được cái gốc đấy thì chúng em sẽ phải nghĩ ra những sản
+[13:27] phẩm mới để có thể tiêu thụ cái gốc clon này được nhiều hơn. Ừ
+[13:31] >> thì hiện nay trong cái quá trình phát triển công nghiệp thì cái ngành xử lý
+[13:34] nước rất là một vấn đề rất là đan giải cần rất là nhiều. Thì trong tháng năm
+[13:40] 2020 thì bên em sản xuất ra được một cái sản phẩm từ gốc CL. Thì cái sản phẩm này
+[13:44] là sản phẩm chất keo tụ PAC là chất để dùng để xử lý nước cho các
+[13:49] nhà máy xử lý nước cấp giống như là sông Đà, sông Đuống và nước chúng ta dùng
+[13:53] sinh hoạch và cũng là cái sản phẩm dùng cho các nhà máy xử lý nước thải trước
+[13:57] khi họ đạt tiêu chuẩn để mà đưa ra các trạm xử lý và khu công nghiệp.
+[14:03] xử lý nước
+[14:06] >> nó cũng là một cái sản phẩm mà đúng là B là một sản phẩm thực tế.
+[14:09] >> Ok. Ok. Bây giờ hỏi tiếp này. Cái sản phẩm kia anh dự định nhắm đến
+[14:16] phân khúc khách hàng nào? Gợi ý? Phân khúc khách hàng ở đây chúng ta có thể
+[14:21] dùng là đơn vị tổ chức. vị tổ chức,
+[14:29] đơn vị tổ chức hoặc xí nghiệp nhà máy cần
+[14:36] hóa chất để xử lý nước
+[14:44] tại đâu ạ? Tại toàn bộ thị trường Việt Nam hay có xuất khẩu hay không? Hay là
+[14:50] chỉ phía Bắc hay chỉ tại gì ạ? Vĩnh Phúc.
+[14:55] sản phẩm của bên em thì em muốn là bọn em sẽ bán của nhà thương mại rồi đến với
+[15:00] user thì cái khách hàng của em là user thầy đang nói là phân khúc là hay là đã
+[15:05] sản phẩm cuối cùng sẽ phục vụ cho ai?
+[15:08] >> Dạ sản phẩm cuối cùng sử dụng cho các
+[15:10] >> kia đúng không? Đơn vị tổ chức xí nghiệp mà cần đến hóa chất xử lý nước
+[15:15] >> đúng chưa? xử lý xử xử lý nước này. Thế thì bây giờ chia nhóm này. Chia nhóm ra
+[15:21] trong đó gồm một là xử lý cái nước thải đúng không?
+[15:29] >> Tôi không hiểu nước cấp là nước gì.
+[15:33] >> Ok.
+[15:34] >> Xử lý nước gì ạ? Nước sạch là hai cái thổ đúng không? Tức là tất cả
+[15:39] các công ty xí nghiệp tổ chức cần đến hóa chất thông qua cái công nghệ gọi là
+[15:44] chất kêu tụ PAC kia. để xử lý một là cái nước thải, hai là cái nước cấp. Đúng
+[15:50] chưa? Bây giờ tiếp anh xác định tiếp này. Phần nào lớn?
+[15:55] >> Chủ yếu nước sạch hay là chủ yếu nước thải?
+[15:58] >> Cái sản phẩm ở Việt Nam thì đa số là sẽ dùng cho nước cấp.
+[16:01] >> Ok.
+[16:02] >> Nhưng mà cái so với nước thải và nước cấp thì là nước cấp cái bánh thị trường
+[16:07] nó nhỏ hơn nước thải rất là nhiều.
+[16:09] >> À chủ yếu lại dùng cho cái này nhưng quy mô thằng này thì lại lớn hơn. Đúng rồi.
+[16:16] >> Đúng không?
+[16:22] khác.
+[16:25] >> Em lại thích chút là cái sản phẩm nước thải á thì nó lại cũng rất là nhiều loại
+[16:29] doanh nghiệp khác nhau.
+[16:31] >> Trong cái nước thải đấy thì nó lại có những cái thải mà nó lại cần đặc tính
+[16:35] nào đấy thì họ dùng cái sản phẩm của Trung Quốc thì nó sẽ gắn nhanh và tốt
+[16:38] hơn. Ờ
+[16:42] xuất ví dụ như bột giấy thì họ lại tận dụng cái bột sau khi lắm họ lại cho vào
+[16:45] tiếp thì họ lại dùng lại cái sản phẩm mà dành cho nước của bên em.
+[16:49] >> Ok bây giờ tiếp nhá. Thế thì bây giờ nói tóm lại là bây giờ ở vùng thị trường là
+[16:53] em xác định là đầu tiên bây giờ là em bán ở miền Bắc hay toàn quốc?
+[16:56] >> Toàn quốc.
+[16:57] >> Toàn quốc luôn. Tức là toàn bộ câu chuyện này là tại Việt Nam. Đấy. Bây giờ
+[17:02] cái này xử lý tiếp này. Ở cái nhóm mà xử lý nước thải bây giờ em lại tách thành
+[17:06] hai phần. Được chưa nào? Phần là em chỉ xác định
+[17:10] là những thằng có khả năng dùng nhưng không chắc chắn có dùng hay không. Tốt
+[17:15] nhất em loại bỏ nó đi. Em chỉ giữ lại gì ạ? Những thằng chắc chắn sẽ dùng cộng
+[17:22] với thằng này nữa. Được chưa? Vậy thì cái mô tả chung chung ở đây phân khúc
+[17:27] khách hàng là bao gồm đơn vị tổ chức nhà máy mà sử dụng cái chất keo tụ PAC kia
+[17:34] để xử lý nước cấp và nước thải. Đấy, mở ngoặc của phần nước thải là chủ yếu như
+[17:40] là các nhà máy giấy hay là các cái đơn vị tương tự như vậy. Được chưa? Nhưng
+[17:45] đấy là mô tả tổng quan bằng một dòng ở đây. Còn cụ thể thì em phải chia
+[17:52] đây là một nhóm khách hàng. Đây là một nhóm khách hàng lớn nhưng
+[17:57] nhóm khách hàng này em phải chia tiết ra vì có thể văn hóa mua bán kinh doanh
+[18:01] miền Bắc nó khác, miền Trung nó khác và miền Nam nó khác. Thì cân nhắc xem để
+[18:05] chia tiếp ra thì cái phần chia tiếp và mô tả chi tiết những thằng này quy mô
+[18:09] bao nhiêu, nó dùng ở công đoạn nào, hiện nay nó đang dùng sản phẩm của thằng khác
+[18:14] và nó bị vấn đề gì thì cái đấy chúng ta sẽ làm nó ở trong cái bản gọi là bản mô
+[18:18] tả gì ạ? Bản mô tả khách hàng. Được chưa?
+[18:23] Đấy là cái phần thứ nhất được chưa? Là cái phân khúc khách hàng. Bây giờ tiếp
+[18:28] này. Bây giờ mình sẽ chuyển cái sản phẩm kia của mình đến khách hàng thông qua
+[18:34] kênh phân phối. Kênh phân phối thứ nhất bạn xác định bạn sẽ truyền thông sản
+[18:39] phẩm này như thế nào. Tài liệu in ấn website, mạng xã hội. Được chưa? Liệt kê
+[18:46] ra. Rồi quảng cáo rồi chào hàng trực tiếp.
+[18:53] Đấy thì là cái gì? Cái phần thứ nhất của kênh phân phối. Thứ hai là bạn sẽ phương
+[19:00] thức bán, chiến lực bán là có hai cách thôi. Một là bán trực
+[19:07] tiếp, hai là bán gián tiếp. Thì cái đơn vị mà bạn nói là đại lý thì đó là cách
+[19:12] gì ạ? Xác định là gì ạ? Bán chiến lược bán là bán gián tiếp.
+[19:16] >> Vâng.
+[19:17] >> Được chưa? Nhưng bán gián tiếp phải cụ thể hai chấm là nhà phân phối hay đại lý
+[19:22] độc quyền hay chỉ là đại lý bán thông thường.
+[19:27] Vâng. Đây cái mà em cũng muốn hỏi thầy á thì bọn em cũng đang phân vân giữa là
+[19:31] đại lý độc quyền hay là nhà phân phối thì có một vài cái ưu điểm hay điểm gái
+[19:35] như
+[19:36] >> tôi không biết. Tôi không biết và ở đây cũng không ai
+[19:39] biết là bởi vì thế này này là bởi vì thứ nhất
+[19:45] là đối với cái sản phẩm này và sản phẩm tương tự thì hiện nay lực
+[19:50] lượng các nhà phân phối trung gian bạn đã có danh sách chưa?
+[19:54] Có.
+[19:55] >> Ok. Có danh sách rồi. Thứ hai bạn phải hỏi cái thằng này đi nghiên cứu để hỏi
+[20:00] thằng này xem là bây giờ thứ nhất nó mua là nó chỉ
+[20:05] cần gọi nó mua. hay nó cần thêm tư vấn từ nhà sản xuất
+[20:11] hay là giải quyết một bài toán là nếu bạn bán trực tiếp thì nhanh hơn hay bạn
+[20:16] bán qua nhà phân phối nhanh hơn. Câu chuyện nữa của bạn là nếu bạn bán
+[20:21] trực tiếp so với bán phân phối thì vấn đề giao nhận và công nợ nó thế nào?
+[20:26] Vậy chúng ta phải cân nhắc này. Một là tốc độ phục vụ được chưa? Hai là vấn đề
+[20:31] về một là tốc độ phục vụ khách, hai là lợi nhuận,
+[20:40] thứ ba này xử lý rủi ro nhá. Nhắc lại một là tốc độ phục vụ,
+[20:50] hai là lợi nhuận, ba là xử lý rủi ro và bốn là công nợ. Cân nhắc bốn vấn đề đó.
+[20:56] Nếu bốn vấn đề đó theo hai phương án, phương án một bán gián tiếp, phương án
+[20:59] hai bán trực tiếp. Nếu như những thằng này nó mua hàng nó
+[21:05] bảo tao cần ăn hoa hồng đậm cơ mà nếu bạn đã chia hoa hồng cho đại lý rồi liệu
+[21:10] bạn còn đủ để chia cho nó không? Ví dụ như vậy vân
+[21:16] vân và vân vân. hoặc bạn xác định lợi nhuận thấp thời kỳ này bạn đẩy thị
+[21:19] trường ra à bạn đẩy kh đẩy sản phẩm ra thị ra thị trường thì muốn đẩy sản phẩm
+[21:24] ra thị trường thì dùng chiến lược đẩy là gia tăng lợi ích cho thằng bán trung
+[21:28] gian để nó đẩy cho. Thì đấy, trên tất cả năm cái yếu tố đó,
+[21:35] bạn sẽ quyết định là tôi sẽ chọn kênh bán là kênh nào. Tiếp tục, nếu bạn bán
+[21:41] trực tiếp thì bạn sẽ xây dựng chính sách chăm sóc khách hàng của mình bằng cách
+[21:44] là trực tiếp xây dựng chính sách. Nhưng nếu bạn bán thông qua kênh gián tiếp thì
+[21:47] bạn sẽ quản lý khách hàng cuối thế nào và quản lý cái thằng trung gian thế nào?
+[21:52] Thì đây là gì ạ?
+[21:55] >> Quản lý và quan hệ khách hàng với bên phân phối và với người dùng của ghi vắn
+[22:01] tắt ra. Còn trong quy chế bán hàng sau này nó phải được soạn thành gì ạ? Điều
+[22:05] khoản quy chế hẳn hoi. Đó là kênh phân phối.
+[22:10] Nhưng quan trọng nhất là vì ở đây nói về quan hệ khách hàng thì bạn có một nhóm
+[22:15] khách hàng thực hụ là thằng tiêu dùng. Nhưng một nhóm khách hàng gì ạ?
+[22:20] Một nhóm khách hàng nó chỉ tham gia với tư cách khách hàng nhưng thực ra nó là
+[22:25] một cấu phần của kênh phân phối chính là thằng phân phối. Vậy thì bạn phải thiết
+[22:29] lập hai hai cái nhóm quan hệ. Một quan hệ với nhà phân phối hai chấm
+[22:36] là chính sách với nhà phân phối là thế nào thế? và chính sách quan hệ với lại
+[22:40] khách hàng cuối. Gạch ra hai gạch đầu dòng ở đây. Nhưng trong chính sách bán
+[22:44] phải nói rõ với nhà phân phối chúng ta sẽ đối xử thế nào, thăm hỏi thế nào, quà
+[22:48] tặng thế nào, chiế khấu thế nào, ưu đãi thế nào, hội nghị ra sao, được chưa? Tư
+[22:52] vấn, đào tạo và thiết lập tiêu chuẩn cho họ như thế nào
+[22:56] và hỗ trợ họ những gì khi mà khách hàng người dùng cuối kia nó có yêu cầu?
+[23:02] Thì đấy là gì? Quan hệ khách. Ở phần sản phẩm thì dễ rồi đúng không?
+[23:09] Về mô tả sản phẩm, so sánh cái công nghệ này so với các sản phẩm tương tự hoặc
+[23:14] sản phẩm lỗi thời hơn, nó có cái gì ưu việt hơn? Nó ưu việt hơn về giá, nó ưu
+[23:19] việt hơn về gì ạ? Kết quả xử lý, nó ưu việt hơn về môi trường hay nó ưu
+[23:24] việt hơn về cái gì? Hay nó giải quyết được một vấn đề gì đó mà trước kia khách
+[23:29] hàng người ta phải dùng một cái hóa chất khác mà nó chưa giải quyết được.
+[23:34] Nếu như cái việc mô tả đó nó không thắng nổi các sản phẩm truyền thống thì sản
+[23:40] phẩm của bạn không có cơ hội được chưa? Trừ trường hợp giá phải rất
+[23:44] rẻ hoặc gia tăng công nợ. Ok. Làm việc đó
+[23:50] đối tác chính một là nhà cung cấp của bạn. Thứ hai là gạch gì ạ? Liệt kê danh
+[23:55] sách. liệt kê danh sách các đơn vị phân phối.
+[24:00] Lúc này là liệt kê danh sách đơn vị phân phối. Còn bên kia là chính sách với đơn
+[24:03] vị phân phối. Nguồn lực bây giờ bạn phải đầu tư vào hệ
+[24:08] thống truyền thông marketing bán hàng là bao nhiêu? Vốn cho dự án sản phẩm mới
+[24:14] này là bao nhiêu, nguồn nhân lực mới cho dự án này là bao nhiêu?
+[24:18] Bao nhiêu người ở trình độ nào tổng quỹ lượng
+[24:23] thế? Thôi có được toàn bộ phần bên này rồi. À chỗ này hành động chủ chốt.
+[24:28] Hành động chủ chốt bạn có mấy loại? Có hai loại hành có ba loại hành động chủ
+[24:32] chốt. Một là hỗ trợ đào tạo, hỗ trợ và chăm sóc gì ạ? Nhà phân phối nếu bạn lựa
+[24:39] chọn kênh gián tiếp. Thứ hai là gì ạ? tư vấn kỹ thuật và hướng dẫn tiêu dùng
+[24:45] đối với khách hàng cuối. Và hành động chủ chốt thứ ba
+[24:52] là cải tiến sản phẩm hoặc quy trình sản xuất để tiết kiệm hơn,
+[24:58] giảm tỉ lệ sai học, ổn định chất lượng thì đấy là các hành động chủ chốt. Còn
+[25:04] cơ cấu chi phí thì rõ rồi đúng không? Dự kiến dòng doanh thu về được bao nhiêu?
+[25:09] Chi phí bao gồm hai cái chi phí chính cho nó là giá vốn và chi phí bán.
+[25:15] Thầy
+[25:17] >> rồi rõ chưa ạ? Cảm ơn. Mời bạn
+[25:24] >> phép thầy cho em được ngồi để đặt câu hỏi
+[25:27] >> bạn cứ ngỏi
+[25:28] >> à em có một cái câu hỏi này là trong cái bốn chủ cột với chính thành tố để xây
+[25:33] dựng lên một cái mô hộ kinh doanh thì à với một doanh nghiệp chuẩn bị à được
+[25:39] thành lập thì cái trụ cột nào là trụ cột được quan trọng nhất và được xây dựng
+[25:44] đầu tiên với một doanh nghiệp đang hoạt động muốn tái cấu trúc lại một cái mô
+[25:48] hình kinh doanh thì cái a trụ cột nào thì là cái trụ cột
+[25:53] được xem xét để mà giá cấu trúc bởi vì em được biết là với một người mà chuẩn
+[25:58] bị mà bước vào cái lĩnh vực kinh doanh thì thông thường người ta sẽ đặt câu hỏi
+[26:01] là bán cái gì thì có nghĩa là như vậy là người ta đã hình thành trong đầu rằng
+[26:06] cái sản phẩm và dịch vụ là cái đầu tiên để người ta nhắm tới. Thì vậy theo thầy
+[26:10] cái quan điểm đó có đúng hay không ạ? Xin phép
+[26:14] >> nếu nói về quan điểm thì mỗi người có một quan điểm.
+[26:18] đó. Khi người nào đó nhận diện rằng là bán cái gì cho ai thì đó là một quan
+[26:25] điểm. Họ sẽ bảo vệ đến cùng. Quan điểm đó là
+[26:30] đúng. Nhưng quan điểm về kinh doanh nhá, quan điểm về kinh doanh thì nó luôn
+[26:36] bắt đầu từ đây. Luôn bắt đầu từ đây. Vì rất nhiều khi
+[26:42] chúng ta có sản phẩm rồi mà không thể bán được. Phần lớn là như thế.
+[26:47] Vậy thì kể cả là anh có một cái cách từ ban đầu, tức là sự chuẩn bị ban đầu là
+[26:54] anh định hình cái sản phẩm thôi. Nhưng để bắt tay vào xây dựng mô hình
+[26:59] kinh doanh thì luôn bắt đầu từ khách hàng.
+[27:03] Luôn bắt đầu. Ví dụ em có ý định mở quán cà phê thì câu đầu câu kế tiếp ngay sau
+[27:11] đó em phải hỏi luôn là tôi bán cà phê cho ai?
+[27:16] Tôi bán cà phê cho ai? Là tôi bán cà phê cho học sinh sinh viên hay tôi bán cà
+[27:20] phê cho công nhân ở chân công trường? Hay tôi bán cà phê cho dân công sở hay
+[27:26] tôi bán cà phê doanh nhân hay tôi bán cà phê ở khu vực dân cư
+[27:31] tức là hoặc là tôi bán cà phê theo phong cách phục vụ cho giới sảnh điệu về mỹ
+[27:36] thuật hay tôi bán cà phê đại chúng. Thế thì đầu tiên luôn luôn phải hỏi đầu
+[27:45] tiên là gì ạ? Tức là anh có ý nghĩ về sản phẩm dịch vụ nhưng để xây dựng mô
+[27:50] hình luôn bắt đầu từ khách hàng. Được chưa? Bởi vì từ khách hàng này thì
+[27:57] đôi khi nó quay lại nó quyết định bỏ bố nó sản phẩm dịch vụ này đi làm cái khác.
+[28:03] Rất nhiều khi là như thế. hoặc có ba bốn sản phẩm bỏ bớt đi tập
+[28:08] trung vào một cái. Vậy thì nó không có sự khác biệt giữa một công ty khởi
+[28:13] nghiệp kinh doanh SMI với một doanh nghiệp đang hoạt động để
+[28:18] tái cấu trúc. Nó luôn bắt đầu từ khách hàng. Bởi vì có
+[28:24] thể có những sản phẩm là con cưng của chúng ta nhưng dung lượng khách hàng thị
+[28:29] trường hoặc đã bị thay thổ đổi bởi sản phẩm khác, thay thế bởi sản phẩm khác
+[28:33] thì chúng ta cũng vẫn phải quyết tâm mà cắt đi thôi.
+[28:37] Cho nên nó luôn bắt đầu từ dung lượng khách. Thế thì muốn tái cấu trúc gì thì
+[28:42] tái. Cái việc đầu tiên các anh cần tái là nghiên cứu lại thị trường. Tôi xin
+[28:46] thưa các anh, hai chuyên gia bọn tôi,
+[28:51] sáu đứa nhân viên kinh doanh kỳ cựu, kinh nghiệm bán hàng ít nhất 3 năm,
+[28:58] mất khoảng độ 3 tháng rưỡi mới trả lời được cho câu hỏi là công ty này đang
+[29:05] chiếm bao nhiêu phần trăm thị phần hóa chất tại khu vực phía Nam.
+[29:10] Ngày trước chúng nó cứ tưởng nó đã bán được hơn 20% không ạ?
+[29:15] Nhưng khi bọn tôi yêu cầu không được, mày phải đi thống kê từng thẳng.
+[29:19] Khối FN à khối FDI có bao nhiêu doanh nghiệp dùng đến cái đó? Khối doanh
+[29:25] nghiệp trong nước có bao nhiêu thằng trong các khu công nghiệp dùng đến cái
+[29:28] đó? Cái khối ngoài khu công nghiệp dùng đến cái đó và quy mô sản lượng từng
+[29:33] thằng thì ước tính với quy mô công nhân và như
+[29:38] thế thì nó dùng đến bao nhiêu? Sản lượng của nó thì nó dùng đến bao nhiêu sản
+[29:41] phẩm. Vậy tính tổng sản phẩm, tổng nhu cầu của thị trường ở khu vực phía Nam gì
+[29:48] ạ? Sau đó lại cộng tổng sản lượng chúng ta bán được trong 1 năm
+[29:52] ra được chưa đầy 3%. Thế thì từ cái chuyện ra chưa đầy 3% như
+[29:59] thế và mới phát hiện ra tiếp một vấn đề là
+[30:03] có những sản phẩm cứ cố bán bằng được nhưng lợi nhuận gần như bằng không mà
+[30:07] rủi ro công nợ thì lại lớn. dẫn đến một quyết định là sau này sản
+[30:12] phẩm đó vẫn giữ nhưng xác định luôn sản phẩm đó bán sẽ không có lời, chỉ làm sản
+[30:18] phẩm dẫn cho sản phẩm khác. Nhưng còn một vấn đề rất đau đầu nữa là
+[30:24] đã là không có lời lại còn bị công nợ. À vậy giải pháp kinh doanh lúc đấy là
+[30:34] có cơ hội mua một công ty khác mà công ty đấy thì lại tiêu thụ đầu da của những
+[30:40] thằng mua hóa chất. Thế là thực hiện cái việc mình bán hàng
+[30:45] cho nó xong nhận lại hàng của nó chuyển sang bên này sản xuất thứ khác.
+[30:52] Vậy là đáng nhé là hai chiều công nợ thì bây giờ rút ngắn lại còn có một nửa
+[30:58] đấy. Thì nó bắt đầu từ khách hàng đôi khi nó ra được những giải pháp như thế.
+[31:04] Thứ hai nữa là sau đó mới xuống dưới gì? sản phẩm dịch
+[31:09] vụ thống kê lại khách hàng xem tỉ lệ sai hỏng đổi trả là bao nhiêu, xuống xưởng
+[31:15] xem là cái tỉ lệ về KCS rồi sản phẩm sai hỏng là bao nhiêu. Thắt thật chặt lại
+[31:20] chỗ này. Dứt điểm bỏ đi từ máy móc thiết bị dư thừa,
+[31:27] từ mọi thứ không còn dùng nữa, bỏ đi cho bằng sạch.
+[31:33] Tôi từng đến một công ty làm sản xuất về nhựa, họ làm vật liệu chống thấm.
+[31:39] cho các cơ công trình lớn. Thế nhưng mà ông chủ vô cùng đam mê. Ông ấy đam mê
+[31:45] với cái nghề tái chế và ông ấy đam mê với cái nghề nhựa và khuôn mẫu. Cho nên
+[31:51] là cứ lòi tiền ra được từ bán vật liệu chống thắm thì bố đi mua nào thì công
+[31:55] nghệ xử lý giác thải để thành vật liệu nào thì cái nọ cái kia về chất đầy trong
+[31:59] xưởng như vậy chứa hết bên ngoài đến bên trong. Thế xong hôm ông bảo thầy về công
+[32:04] ty em tí về. Về đến nơi ông bảo em dẫn thầy đi tham quan. Ông ấy giới thiệu cho
+[32:08] tôi suốt một buổi sáng. Ông vô cùng tự hào với tất cả những công trình của ông
+[32:12] ấy. Thế nhưng mà tất cả nó mới chỉ đều dừng lại ở sản phẩm mẫu chứ không thể
+[32:16] thước mại hóa. Sau đó ngồi vào bàn trà uống nước ông bảo thầy tư vấn cho em xem
+[32:21] bây giờ làm gì. Tôi bảo ông ông bán mẹ hết đi.
+[32:27] Ôi sao bán được 18 năm của em? 18 năm cũng bán vì đó là thứ ông làm vì niềm tự
+[32:33] hào để ông tiêu tiền. Tự hào kỹ thuật. Nhưng rồi nói mãi cuối cùng ông ấy bán
+[32:40] thật, gọi bọn Thái Bình, Hải Phòng bán hết.
+[32:44] Bán xong rồi còn một phần nữa cái dây chuyền làm khuôn mẫu đấy thì ông giao
+[32:47] khoán cho cái xưởng cơ khí đấy. Mỗi tháng nộp lại cho ông ấy bao nhiêu. Chỉ
+[32:51] còn tập trung bán một sản phẩm duy nhất và một dự án nữa đặt điều kiện lúc nào
+[32:58] có đủ 18 tỷ đầu tư mà không ảnh hưởng đến dòng kinh doanh chính mới được làm.
+[33:05] thì đấy là kết hợp giữa khách hàng với cái chỗ này. Phần thứ hai là đến chỗ
+[33:09] này, đến sản phẩm dịch vụ. Bởi vì thông thường các công ty khi mà tái cấu trúc
+[33:16] thì lại cứ hay nhăm nhăm vào cái việc mà quản lý nhân sự với tài chính. Cái đấy
+[33:20] nội bộ của ta từ đúng không ạ? Khách hàng ông phải giải quyết trước, tức là
+[33:25] chính sách bán hàng phải làm trước. Xong rồi đến gì ạ? Tinh gọn sản phẩm dịch vụ
+[33:30] đã. là cái tái thứ hai. Bởi vì tái cái này là nó tái tư duy, tư
+[33:35] duy cả ông chủ, tư duy nhân viên xong tái đến sản phẩm dịch vụ để giữ cho bằng
+[33:40] được giá trị lõi nhất định cắt bỏ đế những sản phẩm không có lợi thế. Hoặc
+[33:44] nếu như xác định giữ lại nó thì chỉ xác định làm sản phẩm dẫn sau đó mới đi tái
+[33:49] câu trúc cái chỗ này. Cái gì không cần cắt bỏ. Nhân sự thì tái
+[33:55] theo kiểu là sử dụng ít hơn, trả lương cao hơn.
+[34:00] Tài chính thì chắc chắn rồi. Câu chuyện về dòng tiền, câu chuyện về cơ cấu chi
+[34:05] phí, quy chế tài chính, hạch toán kế toán và khai báo cáo thuế
+[34:11] thì đấy, trình tự luôn luôn từ khách hàng rồi đến sản phẩm rồi đến hạ rồi đến
+[34:17] hạ tầng và tài chính thì làm cái nào trước cũng được.
+[34:21] Nhưng có một việc thì tôi lúc nào cũng yêu cầu các giám đốc làm đó là các anh
+[34:26] phải thiết lập quan hệ khách hàng ba lớp.
+[34:30] Đó là mình bán cho ai thì mình phải chơi với chủ nhà kia.
+[34:37] Bởi vì sản phẩm của tôi với dịch vụ với các anh nó khác. Nhưng sản phẩm B2B của
+[34:41] các anh B2B nó lặp lại rất nhiều ạ. Tháng này nó lấy hàng của mình, tháng
+[34:46] sau nó lại lấy. Mà có những công ty bán hàng cả năm rồi, cái thằng bên khách
+[34:49] hàng nó vẫn không biết giám đốc bên mình là ai. Mình đã to đến mức tập đoàn đâu
+[34:53] mà như vậy phải không ạ? Một năm một vài trăm tỷ đáng nhiêu?
+[34:58] Cho nên với những không đi được hết thì ít nhất anh lọc ra cho tôi 20% khách
+[35:04] hàng chủ chốt là những thằng nó nắm đến 80% doanh số
+[35:08] ấy thì anh phải thiết lập cái quan hệ thân tình về mặt con người với con người
+[35:12] với nó chứ. Cái lớp thứ hai là bọn sale với bọn ký
+[35:17] thuật với nhau. KPI giao với chúng nó là cũng phải đi
+[35:21] thăm hỏi khách hàng. Và cái lớp thứ ba là kế toán với chăm sóc khách hàng nhé.
+[35:27] Bởi vì chỉ khi lập ba lớp như thế, các anh cứ làm thật tốt đi, tin tôi đi. Chỉ
+[35:32] sau 2 năm các anh cắt đi được một thứ vô cùng quan trọng
+[35:37] đối với là gì đấy? Hoa hồng.
+[35:43] Bởi vì chỉ có giới chủ mới không thích nhân viên của mình được nhận hoa hồng từ
+[35:48] phía người bán và từ phía khách hàng. Có đúng không?
+[35:52] Vậy chỉ khi nào quan hệ đủ ba lớp như thế thì thông tin mới đủ minh bạch. và
+[35:56] không sợ cái đứa phụ trách mua hàng ở bên kia nó lật kèo vì bây giờ chúng ta
+[36:01] bán cho chúng ta không nhìn mặt chủ bên kia cho nên cái thằng thậm chí cái thằng
+[36:05] quản lý kho thôi nó có quyền hoạnh họ với mình phải không
+[36:10] là do mình đấy. Tôi xin thưa anh chị Samsung nó vào Việt
+[36:17] Nam nó to không? Quá to.
+[36:22] cái hoạt động chăm sóc khách hàng của nó nó không làm,
+[36:26] nó thuê một vài công ty khác làm cho nó nhưng nó thăm hỏi rất thường xuyên và
+[36:33] cuối năm nó tổ chức hẳn một cái lễ nó gọi là lễ vinh danh các nhà cung cấp.
+[36:40] Nó trao cúp trao thưởng nó nên nó cảm ơn cảm tạ nó cúi rạp mặt xuống thế này này
+[36:45] nó cảm ơn anh năm vừa qua là đã thúc đẩy sản phẩm dịch vụ hỗ trợ khách hàng
+[36:54] hỗ trợ khách hàng trên toàn lãnh thổ Việt Nam này chúng ta nghĩ là người của
+[36:57] Samsung sao không phải. Người Việt mình làm hết do một công ty dịch vụ làm hết
+[37:03] trong một cái phòng lớn như thế này nó trưng bày đủ sản phẩm dịch vụ của nó.
+[37:07] Nhân viên chăm sóc khách hàng không những biết về công năng còn phải biết
+[37:10] cách sử dụng, biết luôn cả cách sửa sơ bộ.
+[37:13] Nó thuê đến thế cơ mà. Nhưng tôi chỉ nhấn cái chỗ là nó tổ chức hẳn một cái
+[37:18] lễ là vinh danh các nhà cung cấp. Còn chúng ta chỉ làm cái lễ là lễ gì? Hội
+[37:23] nghị khách hàng. Nhưng cái hội nghị khách hàng của mình thì dăm câu ba điều
+[37:27] xong rồi thì ngồi tập trung tập thể xong rồi là vỗ tay khen nhau nhậu là chính
+[37:33] phải không? Hãy đi vào thực chất hơn. Có thể bỏ bánh
+[37:38] trung thu ha, có thể bỏ gói quả tết
+[37:43] thay vào một bằng một hình thức khác. Đã bao giờ chúng ta tìm hiểu được rằng
+[37:50] khách hàng của mình muốn quan hệ thế nào với mình chưa? Hay chúng ta cứ phải theo
+[37:55] thông lệ của thị trường đến dòng trung tư thì lũ lượt mua cả trăm gói về mang
+[37:59] đi biếu. Tôi đảm bảo các anh chị ra thùng giác là
+[38:03] chính. Có đúng không? Da thùng giác là chính, không đứa nào
+[38:08] dùng đâu. Thì đấy là ý nghĩa của việc đây này.
+[38:14] Phân khúc khách hàng đừng lờ lợ nước hến. Phải làm thật đặc sắc vào. Mà muốn
+[38:21] thật đặc sắc vào chỉ khi anh hiểu được phân khúc của anh, anh phục vụ cho ai?
+[38:27] Tư duy kinh doanh là hãy phục vụ thằng này thật tốt vào và hãy giúp nhân viên
+[38:33] của mình kiếm tiền ở chính công ty của mình. Thằng này kiếm được, thằng kia
+[38:37] kiếm được, nó chia cho mình. Thế là mình thành ông chủ giàu nhé.
+[38:42] Ông chủ là tích lũy mỗi thằng một ít. Ăn của nhiều thằng, ăn của thằng nhà
+[38:48] cung cấp một tí, ăn khách hàng một tí, ăn của nhân viên một tí.
+[38:53] Ba đầu như thế càng nhiều giàu càng nhanh.
+[39:00] Thì nhân tiện hai câu hỏi thì tôi phân tích mở rộng ra thêm một chút như vậy để
+[39:05] anh chị nắm được vấn đề cái ý nghĩa của khung mô hình kinh doanh.
+[39:10] Vâng, xin cảm ơn thầy.
+[39:12] >> Vâng, mời anh.
+[39:23] Anh cứ bình tĩnh ngồi đấy. Em nó mang tận hơi phục vụ anh.
+[39:35] Chào giả cả lớp. Thầy bên em thì là đang làm về sản phẩm
+[39:40] trong ngành ăn uống cái mì ngon. À em muốn hỏi thầy ở đây là với cụ thể về cái
+[39:46] sản phẩm của em hiện tại thì bây giờ coi như là nó cũng chỉ có một sản phẩm cụ
+[39:51] thể đó là cái nhìn nhưng mà sẽ có nhiều các đối tượng khách hàng khác nhau.
+[39:56] Có khách hàng cao cấp hơn và có khách hàng trục cấp hơn. Thì như thầy em muốn
+[40:00] hỏi đến thầy là với cái mô hình như thế thì là liệu là sẽ phải lập những cái mô
+[40:05] hình kinh doanh khác nhau không hay là mình gồm vào cùng một cái có những cái
+[40:11] chiến lược hay có tư vấn gì thầy có thể tư vấn cho em.
+[40:19] Sản phẩm bánh mì bánh ngọt bán cho nhiều đối tượng khác nhau. Như lúc đầu tôi đã
+[40:24] nói đành rằng ai mua thì tôi cũng bán. Chứ người ta bước vào cửa hàng mình cũng
+[40:30] khó để phân biệt được đâu là người giàu, đâu là người nghèo. Hay là mày ở Hải
+[40:35] Dương thì tao không bán, mày phải ở Hà Nội tao mới bán.
+[40:38] Thì chuyện đó là không cần thiết. Nhưng cái quan trọng là thế này này. Em phải
+[40:43] xác định được cái sản phẩm đấy em làm ra là phần lớn phục vụ cho nhóm dân cư nào.
+[40:52] Bởi vì sản phẩm của em là sản phẩm tiêu dùng mà tiêu dùng tính đến tiêu dùng
+[40:57] hàng ngày. Thế thì em phải xác định được là phần lớn nhá. Phần lớn là phục vụ cho
+[41:03] nhóm nào? Cho nhóm dân cư đại chúng hay là cho nhóm cao cấp? Bởi vì chắc là cao
+[41:09] cấp thì phải vào nhà hàng. ở một vị trí nào đó
+[41:13] bằng một chất liệu sản phẩm nguyên liệu tốt cao cấp
+[41:18] chứ còn đành rằng là nhiều nhóm mua người trẻ có, người già có, người giàu
+[41:22] có, người nghèo có nhưng mình phải xác định là à phần lớn là nhóm nào.
+[41:28] Còn nếu mình không xác định được phần lớn là nhóm nào thì đứng mà đếm.
+[41:36] Cái siêu thị lớn như là Aon Big C kìa chúng nó đếm hết đấy.
+[41:40] Nó biết là một ngày á bao nhiêu đàn ông, bao nhiêu đàn bà, bao nhiêu trẻ con vào
+[41:45] đấy nó kết hợp với chính sách cái thẻ thành viên đấy. Anh chị
+[41:51] đủ thứ và đủ thứ. nó biết chính xác phân khúc khách hàng
+[41:56] của chúng nó ở đâu, đàn ông bao nhiêu, đàn bà bao nhiêu và
+[42:00] lưu lượng khách cao điểm thấp điểm vào giờ nào. Những cái trụ an ninh mà nó gắn
+[42:04] ở gần chỗ cửa ra vào với lại cái chỗ ấy đấy anh chị cái chỗ tính tiền đấy. Không
+[42:08] phải an ninh đâu, nó đếm khách đấy. Chúng nó tinh tế lắm.
+[42:15] Mình cứ nhìn thế thôi chứ không phải thế.
+[42:18] Cho nên là đối với của em một mô hình thôi nhưng em nhất định phải tìm hiểu
+[42:24] cho bằng được khách nhóm khách nào là chính. Được chưa?
+[42:44] Còn câu hỏi nào không? thầy ạ.
+[43:12] >> Vâng. À thưa thầy là mình thì có một cái công ty và công ty của mình đang có ba
+[43:17] cái mô hình kinh doanh.
+[43:19] >> Vâng. ba cái mô hình này của mình thì là đang
+[43:21] a liên quan a nó là m ba mô hình nhưng mà nó có liên quan đến nhau. Thứ nhất là
+[43:28] mình có cái sản phẩm nhập khẩu từ nước về
+[43:31] >> và phân phối cho các cái sản phẩm này thì vừa chủ yếu khách hàng mục tiêu chủ
+[43:37] yếu của chúng mình ấy là các cái hệ thống các cái spa thật Mỹ
+[43:41] >> trong địa bàn toàn quốc.
+[43:42] >> Vâng. À cái thứ hai nữa là mình có một chuỗi các cái hệ thống spa tại địa bàn
+[43:48] Hà Nội.
+[43:49] >> Và mô hình thứ hai và mô hình thứ ba là mình có một cái học viện để đào tạo cho
+[43:54] các cái nhân viên spa.
+[43:55] >> Vâng.
+[43:59] >> Thế thì ba cái mô hình người của mình thì nó đang có liên quan đến nhau, hỗ
+[44:03] trợ lẫn nhau.
+[44:08] thì mình cung cấp cho chính các cái đại lý của mình. Ừ.
+[44:11] >> Đấy chủ spa thì họ cũng sẽ là những cái khách hàng của cái mỹ thuật tương lai
+[44:15] của mình.
+[44:16] >> Thế còn cái hệ thống spa bán lẻ thì được làm một cái nơi để
+[44:20] thứ nhất là là show của cái sản phẩm của bên mình
+[44:25] >> sâu mẫu cho cái sản phẩm cũng đồng thời là cái nơi mà mình trải nghiệm cái sản
+[44:29] phẩm cho cái khách hàng trực tiếp.
+[44:31] >> Vâng.
+[44:36] thống chuỗi spa bây giờ nó đang hoạt động yếu nhất.
+[44:38] >> Vâng. nó kém nhất đấy và cái cái cạnh tranh cũng rất là lớn và mà cái nguồn
+[44:44] ngực thì nó cũng yêu cầu cũng khá là cao. Tuy nhiên cái chuỗi spa thì là mình
+[44:47] lại là cái cái đã hoạt động lâu năm rồi thì trong cái chuỗi đấy nó cũng có cái
+[44:53] chỗ cái tốt cái không tốt. Đấy thì thì à à qua các cái cuộc họp về các cái quản
+[44:59] lý ấ thì là mọi người có cái mong muốn là bỏ cái chuỗi spa đi và tập trung vào
+[45:04] hai cái mô hình kia thôi. Đấy. Thế thì theo thầy thì là mình để à trong cái
+[45:09] trường hợp này thì nên có những cái đánh giá như thế nào để mình loại bỏ hay là
+[45:13] mình giữ lại?
+[45:16] >> À thứ nhất phải có một cái báo cáo trọng thể là cái chuỗi spa nó yếu kém. Nó xuất
+[45:22] phát từ nguyên nhân nào? Bây giờ nguyên nhân của một cái chuối
+[45:27] hoạt động dịch vụ nó yếu kém. Đặc biệt là dịch vụ về spa nó có mấy nguyên nhân.
+[45:32] Nguyên nhân đầu bảng là truyền thông chưa tới. Nguyên nhân thứ nhì là quản lý
+[45:37] yếu kém. Nguyên nhân thứ ba là mất cân bằng chi phí.
+[45:42] Cái nguyên nhân thứ tư đó là sự cạnh tranh của những đối thủ.
+[45:48] Đấy. Bốn cái nguyên nhân. Nhắc lại nhỉ
+[45:50] >> nào bạn nhắc lại hộ nào.
+[45:52] >> Nguyên nhân thứ nhất là liên quan đến
+[45:55] >> truyền thông quảng cáo chưa tới.
+[45:56] >> Chưa tới.
+[45:57] >> Ừ.
+[45:58] >> Thứ hai là về năng lực quản lý.
+[45:59] >> Năng lực quản lý. Cái thứ ba nữa là cái cạnh tranh đối thủ
+[46:03] >> mất cân đối chi phí đối phí.
+[46:05] >> Tức là cái dòng doanh thu
+[46:08] >> có thể không được lớn nhưng mình lại đặt ở một địa điểm quá mắc tiền.
+[46:12] >> Vâng
+[46:13] >> và chi phí đầu tư cho spa thì quá lớn.
+[46:16] >> Đấy. Trong khi đó thì theo như mà tôi được trải nghiệm cái thực tế của ngành
+[46:21] này thì có những spa nó không cần thiết phải ở một vị trí quá trang trọng hoặc
+[46:26] ngoài mặt đường. Thậm chí còn phải ở trong hẻm nhưng mà hẻm lớn một tí là tốt
+[46:31] đúng không? À kín đáo một tí có khi lại hay. Ví dụ như vậy vân vân và vân vân.
+[46:36] Thế thì bây giờ mình phải có cái báo cáo là trong bốn cái nhóm nguyên nhân đó đâu
+[46:40] là cái gì. Thứ hai nữa là không được vơ đũa cả nắm. Chuỗi bây giờ có bao nhiêu
+[46:44] cái?
+[46:45] >> Năm cái. Năm cái. Trong năm cái thì cái nào yếu, cái nào chấp nhận được, cái nào
+[46:52] mà đang tốt chứ không thể v chắc chắn nó khác nhau. Có đúng không nhỉ? Tức là có
+[46:57] cái cầm cự được, có cái không. Thế thì theo tôi thì có hai cái cân nhắc. Cân
+[47:03] nhắc thứ nhất là cái nào yếu quá thì thôi chết đi.
+[47:08] Tinh gọn lại để tập trung làm truyền thông quảng cáo, nâng cao quản lý, đào
+[47:14] tạo thái độ dịch vụ nhân viên rồi là thậm chí là thay gì ạ? Thay kỹ thuật
+[47:19] viên. Làm cho thật tới. Đầu tiên xác định một
+[47:23] cái ở chỗ nào trọng điểm nhất, tập trung cho nó.
+[47:27] trong vòng ví dụ 6 tháng hoặc 9 tháng nữa xem nó có lên hay không.
+[47:32] Còn những cái chỗ nào mà thể cảm thấy rằng là cái cơ hội nó mong manh rồi thì
+[47:35] thôi đừng tiếc nữa, giải tán luôn. Như vậy lời khuyên là nếu bạn đang có năm
+[47:40] thì bạn sẽ thực hiện chế chiến lược rút lui cho khoảng hai hoặc ba, giữ lại hai
+[47:45] hoặc ba và tập trung trọng điểm cho một cái trọng điểm nhất. Bởi vì rõ ràng ở
+[47:50] đây là tại sao thế? Tại vì nếu như trong trường hợp ở một mô hình khác thì tôi sẽ
+[47:54] khuyên khác. Nhưng ở mô hình của bạn này nó tạo ra một cái sinh thái ba lớp. Một
+[47:59] cái lớp đào tạo, một cái lớp trực tiếp cung ứng dịch vụ và một cái lớp nữa là
+[48:03] cái lớp bán thuốc, bán vật tư tiêu hao đúng không? Thế thì bây giờ cái chiến
+[48:09] lược rút lui có mấy cách? Cách một sang nhượng toàn bộ, cách hai là bán phần lớn
+[48:14] cổ phần, cách thứ ba mới phải giải thể.
+[48:19] Thế cho nên là ngay cả khi chúng ta rút lui hoặc đập bỏ thì chúng ta cũng không
+[48:24] nhất thiết phải giải thể hoặc phá dỡ hạ tầng. Hãy lập một kế hoạch
+[48:29] ngay từ khi bắt đầu kinh doanh thì phải dự phòng luôn. Nếu trong trường hợp rút
+[48:33] lui, đặc biệt là cái khối cửa hàng cửa hiệu thì phải có kế hoạch rút lui rõ
+[48:38] ràng thì tôi khuyên vậy.
+[48:43] >> Vâng. Mời anh.
+[48:52] Dạ. Thưa thầy cũng nhân cái câu hỏi của chị thì có thể là liên hệ một chút đến
+[48:57] với công ty là công ty em về kinh doanh về đèn lá hiện nay thì trường hợp lệnh
+[49:02] rồi. Tuy nhiên ấy là công ty cũng muốn là có mở rộng thêm
+[49:08] những kinh doanh à để mà có thể tạo cái cơ hội tăng trưởng.
+[49:14] Thì bây giờ là đang cân nhắc ấy là mở rộng cái thêm cái mô hình kinh doanh làm
+[49:18] sao có thể tận dụng những cái những cái mình hiện có của mô hình kinh doanh cụ.
+[49:24] Ví dụ hiện nay em đang kinh doanh led thì em đang muốn cân nhắc thêm là có nên
+[49:27] mở rộng thêm cái lĩnh vực về thích thực kiện hay không. Ví dụ thức kiện thông
+[49:31] minh chẳng hạn. Thế thì theo thầy là để cân nhắc là có nên hay không ấy thì nên
+[49:36] cân nhắc những yếu tố gì để mình quyết định là có nên mở thêm một mô hình kinh
+[49:41] doanh mà tận dụng được cái lợi thế hiện có của cái mô hình ký cũ.
+[49:53] Để mà tư vấn nhanh thì chắc chắn thầy không tư vấn được.
+[49:57] Bởi vì để quyết định được chuyện đó, câu hỏi đầu tiên là
+[50:03] vị thế cạnh tranh của sản phẩm đèn LED của anh hiện nay nó đang đứng vị trí thứ
+[50:08] mấy ở vùng thị trường trọng điểm mà anh chơi.
+[50:12] Đấy là câu hỏi thứ nhất phải trả lời. Câu hỏi thứ hai là tỉ lệ phần trăm thị
+[50:16] phần anh đang nắm giữ và tính bền vững của tỉ lệ phần trăm đó.
+[50:22] Bởi vì thế này này, nếu chúng ta giữ được một tỉ lệ phần
+[50:27] trăm thị phần nhất định nào đó thì chúng ta được tham gia vào nhóm một trong
+[50:31] những người quyết định cuộc chơi trên thị trường.
+[50:37] Cho nên là nhất định công ty cần phải biết được rằng hiện nay thị phần của
+[50:41] mình là bao nhiêu và mình đã đạt được cái cái cái thị phần mà mình mong muốn
+[50:48] chưa? Và cái thứ ba
+[50:52] là hệ thống quản lý ở công ty hiện thời đã thực sự vững vàng chưa? Ba cái đó là
+[50:58] phải cân nhắc trước. Thứ tư,
+[51:02] nếu đầu tư thêm một mảng mới thì nguồn tài chính lấy từ đâu và nguồn nhân lực
+[51:09] xây dựng thế nào? Nếu anh có phương án cho nguồn tài chính và tự tin với phương
+[51:15] án của nguồn nhân lực trong vòng khoảng 1 năm,
+[51:19] tất nhiên là có cân nhắc yếu tố của khách hàng và thị phần vì hai cái này nó
+[51:22] sản phẩm hỗ trợ đúng không? thì anh có thể có cơ hội là anh bước
+[51:26] chân vào với sản phẩm thứ hai. Nhưng nếu anh anh đảm bảo rằng là nguồn tài chính
+[51:30] và nguồn nhân lực nó không ảnh hưởng đến các hoạt động hiện tại
+[51:35] và nó làm cho cả hai thằng cùng tốt lên thì chớ
+[51:39] quan điểm là thế thôi. Tức là nếu anh nhìn thấy có khách hàng ấ anh có nguồn
+[51:43] lực anh có sản phẩm và nó không ảnh hưởng đến cái hiện thời
+[51:48] thì chơi. Còn chơi có nhiều kịch bản chơi đúng không ạ? Một là tôi tự tôi
+[51:53] ghép tôi mở thêm ngành trong cùng một công ty. Tôi mở ra một pháp nhân khác.
+[51:58] Pháp nhân đấy gì ạ? Có thể là công ty trách nhiệm hữu hạn hoặc hai thành viên
+[52:02] hoặc một thành viên do chính công ty cũ nó làm chủ. Cách thứ ba là cổ đông với
+[52:07] những thằng khác. Cách thứ tư là cổ đông với nhân viên mà làm.
+[52:11] Tức là có nhiều cách để làm. Còn cách nào đó thì nó phải trong bối cảnh rất cụ
+[52:17] thể. Người ta quyết định trên số liệu chứ không thể quyết định trên một lời mô
+[52:20] tả. Nhưng hướng đi là đi theo hướng đó.
+[52:31] Ok. Chắc bằng đó câu hỏi nó minh họa thêm cái nội dung kiến thức về mô hình
+[52:38] kinh doanh. Đặc biệt tôi cứ nhấn đi nhấn lại phân
+[52:43] khúc khách hàng và gì? Sản phẩm mọi thứ khác gì ạ? Còn xếp đằng sau
+[52:50] thì đó là nội dung. Bây giờ chúng ta ứng dụng. Yêu cầu ứng dụng như tôi đã nói
+[52:55] rồi. Chúng ta phải viết gì ạ? Xác nhận một câu để viết ra được phân khúc khách
+[53:01] hàng của mình. Sau đó lập một bản mô tả khách hàng mục tiêu
+[53:09] khách hàng tiêu biểu một cách chi tiết. Nếu như phân khúc khách hàng này có thể
+[53:14] chia thành từng nhóm khác nhau hoặc nhóm được chia theo vùng địa phương khác nhau
+[53:21] thì chia thành các nhóm khác nhau viết trong bản mô tả theo mẫu mà thầy đã in
+[53:27] cho các anh chị, đồng thời đã gửi file mềm cho các anh chị. Nhưng nói thì nói
+[53:31] thế thôi, nghe thì tưởng mình viết rồi nhưng đặt tay vào viết không viết chưa
+[53:35] chắc viết được đâu. Bây giờ viết thử xem nha. Chúng ta sẽ
+[53:40] dành thời gian còn lại của buổi sáng viết thử luôn đi rồi sẽ thấy vấn đề.
+[53:46] Đầu tiên bây giờ chúng ta viết là chúng ta viết nháp thôi nhá. Về công ty mình
+[53:51] cùng với nhân viên đặc biệt là đội sale chúng ta mới lấy file mềm ra để viết một
+[53:55] cách chi tiết. Nhất định phải làm xong. Xong trước khi chúng ta học trên đề
+[54:05] 0:18 /

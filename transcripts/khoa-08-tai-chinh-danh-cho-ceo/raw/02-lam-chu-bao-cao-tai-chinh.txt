@@ -1,0 +1,555 @@
+[0:09] vẫn trong cái mạch của hóa à của thuế giá trị gia tăng nhé. Thì chúng ta phải
+[0:15] biết đến vấn đề tiếp theo thuế suất thuế giá trị gia tăng.
+[0:28] Thuế suất thuế giá trị gia tăng thì tùy thuộc vào hai phương pháp. Hai
+[0:33] phương pháp là gì ạ? Trực tiếp với khấu trừ.
+[0:37] Thì đối với lại phương pháp trực tiếp này, đối với phương pháp trực tiếp
+[0:43] thì chúng ta có các loại thuế suất là không chịu thuế.
+[0:51] Chúng ta có 0% xin lỗi không chủ thuế
+[0:57] 1% 2%
+[1:01] 3% và 5%. Đấy là các loại thuế suất theo phương
+[1:07] pháp trực tiếp. Còn theo phương pháp khấu trừ
+[1:13] thì chúng ta cũng có không chịu thuế. Cái thứ hai à là 0%,
+[1:22] thứ ba là 5%. Thứ tư là 10%. Có thế
+[1:28] mà cái 10% này dự kiến như là lúc trước có cái dự thảo người ta đề nghị là muốn
+[1:34] tăng lên 12%. Thì ở đây nó có cái ý này,
+[1:42] không chịu thuế và thuế 0% là hai chuyện khác nhau
+[1:46] chứ đừng nhầm lẫn nhé. Không chịu thuế là hàng hóa dịch vụ đó thuộc diện không
+[1:52] chịu thuế giá trị gia tăng do ưu đãi hoặc do đặc thù của hàng hóa dịch vụ đó.
+[1:57] Loại thứ hai là có chịu thuế nhưng chịu thuế 0%.
+[2:02] Vậy thì cái 0% này chủ yếu nó là cái anh xuất khẩu này anh em. tát hộ
+[2:08] >> chủ yếu là xuất khẩu còn không chịu thuế là một số sản phẩm
+[2:12] dịch vụ đặc biệt
+[2:15] >> đấy. Thế còn là 5% với 10% muốn biết được thì chúng ta tra cứu.
+[2:22] Tra cứu tại đâu? Tại thông tư số 2019 và các văn bản bổ sung thì tài liệu của
+[2:29] thuế suất đó có được gửi cho các anh chị qua email. Anh chị nào thường thì cái
+[2:33] này là kế toán làm thì biết rồi nhưng mà giám đốc ấy thì biết rằng có cái tài
+[2:37] liệu chúng tôi đã biên tập sẵn là hàng gì chịu 5% hàng gì chịu 10% thì chúng ta
+[2:42] tra cứu để chúng ta áp dụng. Nhưng nhớ cho tôi rằng
+[2:46] ứng xử về mặt hóa đơn đối với cái hàng
+[2:54] và hàng không chịu thuế là nó khác nhau
+[3:01] nhé. Tôi nhắc lại là ứng xử hóa đơn đối với
+[3:08] hàng không chịu thuế và hàng chịu thuế 0% là khác nhau. Hàng chịu thuế 0%
+[3:15] thì tại cái ô thuế suất ghi 0% tại cái ô giá trị tiền thuế ghi 0 đồng.
+[3:24] Được chưa ạ? Còn hàng không chịu thuế thì trên hóa đơn gạch bỏ hai cái ô đó.
+[3:30] đấy là cái ứng xử khác nhau chứ không thì cứ nhầm lẫn giữa cái 0%
+[3:36] với lại không chịu thuế nó khác nhau tiếp ở cái này này.
+[3:40] Nếu trong trường hợp là hàng 0% anh bán ra hàng 0%
+[3:47] thì đầu vào anh vẫn được khấu trừ. Nhưng nếu anh bán ra là hàng không chịu
+[3:53] thuế thì đầu vào của anh không được khấu trừ.
+[3:56] Nhưng nếu doanh nghiệp vừa có hàng chịu thuế, vừa có hàng không chịu thuế thì
+[4:00] đầu vào được khấu trừ kiểu gì ạ? Theo tỷ lệ doanh thu.
+[4:07] Ví dụ doanh thu tháng đó là 1 tỷ, trong đó có 600 triệu tiền hàng có chịu thuế
+[4:16] và 400 triệu là tiền hàng không chịu thuế mà đầu vào là 800.
+[4:20] Thì anh phải giải quyết một trong hai tình huống. Tình huống một là nếu anh
+[4:25] tách bạch được rõ là hàng mua vào phục vụ chịu thuế hay không chịu thuế. Còn
+[4:30] nếu anh không tách bạch được thì anh buộc phải thực hiện biện pháp là phân bổ
+[4:34] theo tỉ lệ của doanh thu. Thì đấy nó khác nhau chứ đừng nhầm lẫn
+[4:40] giữa cái đó. Thứ hai nữa này. Nhưng đôi khi hàng không chịu thuế nó do
+[4:46] tình huống nó tạo ra. Tình huống
+[4:51] tình huống nó tạo ra. Ví dụ bây giờ ông Tuyến Ham ông bảo
+[4:58] là tháng ông sẽ thực hiện khuyến mãi. Khuyến mãi là cứ mua đủ một tạ thịt bò
+[5:06] à thì sẽ khuyến mại cho 50 kg rau. Vậy mặc dù rau của ông bán ra cho người
+[5:15] ta á là hàng chịu thuế hay là gì ạ? Sản phẩm khác ông bán ra cho người ta là có
+[5:20] chịu thuế. Nhưng vì lúc này nó trở thành hàng khuyến mãi không thu tiền thì về
+[5:26] mặt thủ tục chúng ta phải làm cái thủ tục là thông báo với Sở Công Thương.
+[5:35] Sở Công Thương và một khi đã thông báo này thì hàng khuyến mãi không thu tiền
+[5:40] là hàng không chịu thuế. Cho nên trên hóa đơn ghi rõ là hàng
+[5:44] khuyến mãi không thu tiền, không chịu thuế giá trị gia tăng và được
+[5:50] ghi nhận toàn bộ giá trị hàng khuyến mãi vào chi phí bán hàng.
+[5:56] Nhưng nếu ông thực hiện khuyến mãi nhưng lại không thông báo Sở Công Thương thì
+[6:01] nó phải chịu doanh thu và chịu thuế như hàng bán ra thông thường mặc dù ông
+[6:05] không thu được tiền. Ý tiếp theo đấy là thuế suất nhá.
+[6:15] Hai câu chuyện này lại hay nhầm lẫn lẫn nữa này. Khấu trừ
+[6:23] và hoàn thuế. Bây giờ chúng ta hiểu bản chất này. Khấu
+[6:31] trừ lúc trước giải thích rồi là do ta có cái hoạt động tạm trả ở khâu mua vào.
+[6:38] Rồi đến lúc ta bán ra ta thu được tiền thuế. Lấy hai cái đó trừ cho nhau. Nếu
+[6:43] âm thì để kỳ sau trừ tiếp. Tức là nếu đầu vào lớn hơn đầu ra thì kỳ sau trừ
+[6:48] tiếp. Nếu đầu ra lớn hơn đầu vào thì nộp luôn không bàn cãi.
+[6:53] Nếu chậm nộp thì làm sao? Tính tiền nộp chậm. Đó là hoạt động khấu trừ. Khấu trừ
+[6:58] chẳng qua là hoạt động đòi lại tiền thuế đã trả trước đó. Bằng cách bù trừ gọi là
+[7:05] khấu trừ. Nhưng nếu tôi bù trừ không hết mà công ty tôi lại kinh doanh dưới dạng
+[7:12] xuất khẩu hoặc bán cho khu phi thứ quan thì trong trường hợp bù trừ không hết
+[7:18] với khoảng thời gian là mấy tháng ạ? 3 tháng. Và giá trị từ 300 triệu đồng
+[7:25] trở lên. thì doanh nghiệp được làm đơn đòi tiền
+[7:29] đó của nhà nước về. Vì về nguyên lý là tôi trả thuế là trả
+[7:35] thông qua thằng nhà cung cấp. Về mặt lý thuyết thằng nhà cung cấp đấy đã kê khai
+[7:39] nộp thuế nghĩa là nhà nước cầm tiền của tôi mà bây giờ một khoảng thời gian đủ
+[7:43] dài với giá trị đủ lớn và với điều kiện là tôi được hoàn về trong trường hợp là
+[7:49] gì ạ? dự án đầu tư mới hoặc xuất khẩu thì tôi được làm thủ tục đề nghị hoàn
+[7:55] cái tiền thuế đó về. Nghĩa là tôi đòi tiền nhà nước về thì hoạt động đấy gọi
+[8:00] là hoàn thuế chứ không rồi là bây giờ chúng ta thấy
+[8:04] là ngồi đầy với nhau ngoài quán cà phê kia kìa cứ nói chuyện với nhau là ừ phải
+[8:09] lấy hóa đơn tá trị gia tăng đầu vào vào để đầu ra còn được hoàn
+[8:13] phải phân biệt rõ về mặt thuật ngữ cái đó là khấu trừ nhưng khấu trừ không hết
+[8:19] thì mới được hoàn ngày xưa là thằng nào cũng được hoàn nó mới xảy ra cái nạn là
+[8:24] buôn bán hóa đơn để hoàn thuế Sau này nó cắt bỏ luôn kinh doanh trong
+[8:28] nước không có hoàn, chỉ còn hoàn thuế trong hai trường hợp dự án mới
+[8:37] và hai là xuất khẩu kể cả bán vào khu phi phế quản
+[8:42] là sẽ được hoàn. Mà trình tự của thủ tục hoàn chúng ta
+[8:49] phải làm cái việc là cắt hoàn trên tờ khai.
+[8:54] Cắt hoàn trên tờ khai tức là ở trên tờ khai thuế nó có ba cái
+[9:00] chỉ tiêu cuối cùng. Chỉ tiêu thứ nhất là tiền thuế phải nổ là trong trường hợp
+[9:05] đầu ra lớn hơn đầu vào. Cái chỉ tiêu cuối cùng là tiền thuế còn được khấu trừ
+[9:11] chuyển kỳ sau. Đó là trường hợp mà gì ạ? đầu vào lớn hơn đầu ra. Vậy khi đầu vào
+[9:17] lớn hơn đầu ra mà đủ điều kiện hoàn thì kế toán nó phải làm một cái biện pháp,
+[9:21] một cái nghiệp vụ thôi là bốc cái số tiền còn được khấu trừ đấy là không đợi
+[9:24] khấu trừ nữa mà chuyển đế là thuế đề nghị hoàn trong kỳ này thì cái đấy người
+[9:30] ta gọi là cắt hoàn. Cắt hoàn xong làm cái gì ạ? Cái đơn đề nghị theo mẫu
+[9:39] đơn nghị nếu là hoàn lần đầu kiểm cái đã rồi hoàn sau.
+[9:45] Kiểm sau đó hoàn. Trong trường hợp kiểm này mà phát hiện
+[9:52] sai thì nó thu hồi hoàn. Thế là hoàn trả được phạt một mở.
+[10:04] Còn nếu chúng ta hoàn nhiều lần rồi mà lần nào cũng thành công, doanh nghiệp
+[10:09] lại uy tín một tí và kiểm sau. Nhiều doanh nghiệp đạt đến điều kiện là cứ để
+[10:15] đơn hoàn ok nó hoàn cho cái đã xong kiểm sau.
+[10:20] Đấy là tuyệt vời đúng không? Nhưng về mặt bản chất thì cái thuế mà
+[10:26] chúng ta động ở khâu mua vào này nó là vốn lưu động của doanh nghiệp.
+[10:34] Vốn lưu động, tức là vốn quay vòng, vốn để lấy hàng, để làm hàng, để sản xuất,
+[10:40] để lấy hàng vào. Vậy thì ở đây nó liên quan đến câu
+[10:44] chuyện là muốn quản trị cái thuế này tốt thì anh phải quản trị cái vốn lưu động
+[10:49] này tốt. Mà quản trị vốn lưu động này tốt về mặt bản chất là đếch phải giữ
+[10:53] tiền đâu mà ở cái chỗ quản trị cái nhập kho.
+[10:58] Mà muốn nhập kho tốt thì phải có kế hoạch mua.
+[11:02] Mà muốn có kế hoạch mua tốt thì anh phải có hai cái kế hoạch thành phần là kế
+[11:06] hoạch bán và kế hoạch tiền. Vậy phải quay về quản trị nội bộ.
+[11:13] Vì nếu không thì sao? Anh chị chúng ta đang đi vay vốn nha, vay ngân hàng để mà
+[11:20] kinh doanh nhưng mà gặp phải quân mua hàng nó tiêu tiền như phá mả. Thế là gì
+[11:25] ạ? Nó đóng hàng vào nó mua cho bằng được. Tại sao nó thích mua thế?
+[11:29] Không nói các anh chị cũng biết rồi. Trong công ty cái vị trí ngon ngọt nhất
+[11:33] là cái thằng mua hàng phải không? Ở cơ quan nào cũng thế thôi.
+[11:38] Thằng mua hàng là lúc nào chẳ có bổng lộc cho nên nó thích mua lắm
+[11:43] đúng không? Kể cả không có hoa hồng thì kiểu gì cũng có vâu trở, cũng có ăn tối
+[11:48] ăn trưa cũng có đủ thứ đúng không? Cũng được thằng nhà cung cấp kia cung phụng.
+[11:54] Mà kể cả anh chị có cấm đi chăng nữa thì thằng nhà cung cấp nó vẫn đẩy tiền cho
+[11:57] đó là chuyện bình thường. Đố các anh chị cấm được.
+[12:01] >> Vậy thì cái người ta muốn quản được là người ta quản hạn mức mua
+[12:05] >> thông qua kế hoạch mua trước
+[12:07] >> mà kế hoạch mua này nó dựa trên cái hạn mức của tồn kho.
+[12:13] Công ty ta cần dự trữ hạn mức tồn kho đến bao nhiêu lượng là đủ và trong thời
+[12:17] gian bao lâu không được quá. Đó là một cây pi cho phòng mua hoặc kế toán mua.
+[12:23] Chứ đừng bao giờ thả phanh ra. Vì chúng ta đi vay tiền ngân hàng để mua hàng
+[12:28] trong đó gì ạ? Chín phần là trả tiền hàng, một phần là trả tiền thuế. Thế là
+[12:34] thuế nhiều quá đắp vào đâu ạ? Đợi kỳ sau chửi tiếp.
+[12:40] Nhà nước họ nợ ta họ có trả cho chúng ta đồng lãi nào đâu. Trong khi chúng ta
+[12:44] đang vay trả lãi ngân hàng để đưa vào đó.
+[12:49] Thế thì cái này nó yêu cầu cái kiến thức về tài chính cơ bản của giám đốc này
+[12:54] chứ không phải cái chuyện đơn giản đâu nhé.
+[12:58] Vậy nhớ rằng muốn quản trị được tốt cái này ít rủi ro đi thì nó phải gắn cái
+[13:02] công tác kê khai báo cáo thuế với cái chuyện quản lý hàng tồn kho. Mà đã muốn
+[13:06] quản lý hàng tồn kho thì nhất định phải do định mức và hạn mức hàng tồn. Mà muốn
+[13:10] có định mức hạn mức hàng tồn thì nhất định phải có kế hoạch bán. Mà muốn xác
+[13:14] định được cái này tiếp theo nó phải ra được cái nữa là cái định mức tiêu hào.
+[13:18] Nghĩa là bằng một cách nào đó anh giám đốc phải yêu cầu kế toán hoặc kinh doanh
+[13:21] tính cho anh cái gọi là chu kỳ kinh doanh.
+[13:25] Từ lúc em mua hàng về và tư về triển khai cái biển đến lúc giao xong trong
+[13:30] thời gian 15 ngày hay 20 ngày. Đó là một chu kỳ kinh doanh. Vậy ông dự trữ cho đủ
+[13:35] cái lượng của chu kỳ trong thời gian của chu kỳ với cái lượng của kế hoạch bán ra
+[13:39] thôi chứ. Nói thêm một chút nữa về tài chính thì
+[13:43] câu chuyện này có nghĩa là nếu chúng ta để tồn kho quá nhiều thì vốn động trong
+[13:46] tồn kho và động trong thuế là thuế đầu vào. Đấy mà tôi xin thưa đến một bối
+[13:53] cảnh khó khăn nào đó nhé. Các anh có tạm ngưng hoạt động thì ít nhất các anh cũng
+[13:58] còn nguyên tạm ngưng hoạt động hoặc giải thể thì các anh còn nguyên một cục thuế
+[14:01] nằm trong nguyên sách. đố lấy được ra đấy khó lắm không lấy được đâu. Vậy thì
+[14:08] cái đấy là cái mà khâu nối giữa cái gọi là quản lý thuế với cái quản lý tài
+[14:14] chính doanh nghiệp. Vậy quản lý tồn kho là quản lý tài chính chứ không đơn giản
+[14:18] là cái chuyện em quản lý cái sự mất mát đâu nhá.
+[14:23] năm nay rồi nhưng mà
+[14:24] >> kế toán không không tư vấn chỗ này à
+[14:25] >> không cứ suất 10% xong họ đàm phám họ trả đủ cả 10% tiền thuế xong rồi
+[14:32] >> nếu em giải quyết được câu chuyện 0% thì thứ nhất em vô tình tăng cạnh tranh về
+[14:37] giá lên thứ hai cái quan trọng đây nè em hoàn được cái thuế đồ vào về
+[14:44] >> lợi đơn lợi kép đúng chưa kế toán không biết tư vấn chuyện này đuổi
+[14:56] Thầy Long giải nghệ rồi chỉ còn đi trao đổi thôi chứ không giải quyết thủ tục
+[14:59] thuế nữa.
+[15:04] >> Thầy khi mà nhập khẩu mà về sau mình mới biết bán các cái việc F thì làm sao mà
+[15:10] thể làm thủ tục với ban nữa? Tức là
+[15:12] >> không đến lúc bán thì anh mới làm thủ tục chứ.
+[15:16] Giống như một đơn hàng anh làm cho từng đơn chứ không nhất thiết phải làm trước.
+[15:19] Thế còn nếu trong trường hợp người ta gọi là khi anh nhập về mà anh biết trước
+[15:24] được cái chuyện là anh sẽ bán vào khu chế xuất nhưng mà sau đó anh chỉ làm gia
+[15:27] công ở Việt Nam thôi rồi anh xuất trả lại thành phẩm cho người ta thì cái
+[15:30] trường hợp đấy người ta gọi là tạm nhập tái suất. Và tạm nhập tái suất nó cho
+[15:33] phép lưu trú ở Việt Nam 6 tháng. Và trong 6 tháng này thì anh tạm thời không
+[15:37] phải nộp cái thuế nhập khẩu. Nhưng sau 6 tháng này ông chưa xuất được hàng ra. Ok
+[15:41] người ta tính luôn cái này là tính tiền thuế nhập khẩu cho ông luôn.
+[15:44] Đấy thì đối với doanh nghiệp nhập khẩu thì chú ý cái chỗ đấy cho cho tôi là cái
+[15:47] thuế giá trị sẽ tăng ở khâu nhập khẩu nhưng nó phải có cái hợp đồng tạm nhập
+[15:54] tái suất nhá. Nó phải có cái hợp đồng gia công nào đó để ông chứng minh được
+[15:57] cái tính tạm nhập tái suất. Em hỏi thầy thêm một cái nữa. Tức là ví
+[16:01] dụ như em ký hợp đồng với một công ty của Singapore
+[16:04] >> nhưng mà lại thực hiện cái dự án ở Việt Nam.
+[16:07] >> Rồi.
+[16:12] >> Nhưng bên kia nó chẽ sẽ làm cái thủ tục cho em là họ chỉ định hàng của em xuất
+[16:16] tới đâu thôi. Còn thủ tục em vẫn làm với thằng Singapore.
+[16:19] >> Ừ thì vẫn là xuất khẩu.
+[16:20] >> Vâng. Vẫn là xuất khẩu.
+[16:21] >> Ừ. Nó căn cứ vào cái việc là cái chuyện đấy
+[16:26] em làm thủ tục với thằng nào và em thằng nào trả tiền cho em. Còn nó chỉ định gì
+[16:30] ạ? Cái đấy là xuất khẩu tại chỗ.
+[16:32] >> Chú đúng xuất khẩu tại chỗ.
+[16:34] >> Dạ.
+[16:38] >> Ok. Khấu hoàn tiếp. Thuế giá trị gia tăng của dự án đầu tư.
+[16:49] Cái này phải nói thêm chút nữa chứ không thì bỏ qua. Sau này doanh nghiệp nó phát
+[16:51] sinh không có gì làm. Ví dụ tôi đang kinh doanh ở Hà Nội, đang
+[16:57] sản xuất kinh doanh ở Hà Nội là bình thường.
+[16:59] Nhưng tôi mở rộng quy mô bằng cách bây giờ tôi mở thêm một cái nhà máy ở phố
+[17:03] nối A xuống Hưng Yên. À tức là mở thêm mở thêm dự án dự án đầu tư
+[17:15] sản xuất, kho bãi hoặc cái gì đó ở ngoài. Thì cái về mặt thủ tục đầu tư nó
+[17:22] cần có gì ạ? Cần có thủ tục chấp thuận đầu tư đúng không?
+[17:27] Thì trong trường hợp đấy cái dự án đầu tư này được hiểu là nó tách biệt.
+[17:33] tách biệt khỏi cái hoạt động kinh doanh thông thường,
+[17:38] khỏi kinh doanh hàng ngày mà ta đang tiến hành đây.
+[17:41] Vậy thì lúc này doanh nghiệp phải đồng thời tiến hành hai cái tờ khai thuế hàng
+[17:46] hàng định kỳ đấy, hàng tháng hàng quý đấy. Một là anh phải khai thuế cho hoạt
+[17:50] động, hai là anh khai thuế cho dự án. Mà khai thuế cho dự án này hoạt động thì ta
+[17:56] dùng mẫu 01 GTGT. Còn nếu trực tiếp thì là 04 GT GT còn dự
+[18:05] án là 02 GT
+[18:09] GT đó
+[18:14] là chúng ta phải kê khai thuế giá trị gia tăng vì ví dụ bây giờ tôi đang hoạt
+[18:18] động thông thường ở Hà Nội, tôi mở thêm một nhà máy ở dưới phố nôi A Hưng Yên.
+[18:22] Thế là tôi a sau khi thuê đất giải phóng mặt bằng xong tôi phải thuê người ta
+[18:26] thiết kế tôi mua đồ vào để tôi xây dựng ở dưới đó. Vậy thì ở cái đoạn thời gian
+[18:31] mà tôi xây dựng đó nó chưa phát sinh doanh thu nhưng nó phát sinh rất nhiều
+[18:35] tiền đầu vàng. Có đúng không? Vậy thì trong trường hợp chúng ta khai riêng
+[18:41] biệt thế này ra này để đến khi cái dự án này nó được nghiệm thu đưa vào hoạt động
+[18:47] thì từ từ hãy hoạt động làm cái hoạt động hoàn cái thuế đầu vào này về đã.
+[18:54] Vì bây giờ người ta chỉ còn hoàn cho hai trường hợp thôi là dự án đầu tư có giấy
+[18:58] phép đầu tư. và hoạt động xuất khẩu. Vậy thì phải
+[19:02] ngừng lại cái đã. Sau khi hoàn thành xong hết nghiệm thu xong rồi đóng hồ sơ
+[19:06] vào hoàn tiền thuế đầu vào đã. Bởi vì khi bước vào kinh doanh chúng ta lại có
+[19:11] hoạt động mua bán thông thường, nó lại bù trừ rồi. Còn nếu ông quên thủ tục này
+[19:16] có nghĩa là thuế đầu vào trong quá trình xây dựng nhà máy ví dụ hết 10 tỷ là 1 tỷ
+[19:20] tiền thuế nằm đấy. Đã rõ ý không? Đấy cho nên cho nên rất nhiều công ty ở
+[19:27] thời gian vừa qua không tiến hành thủ tục đầu tư dự án mới và không khai thuế
+[19:32] riêng biệt. Đến lúc dự án đi vào hoạt động thứ nhất
+[19:37] là bị phạt. Phạt cho cái tội là không nộp tờ khai
+[19:43] cho dự án đầu tư. không nộp tờ khai mà tội không nộp tờ
+[19:50] khai quá 90 ngày thì người ta luật quy định phạt từ 2 cho đến gì 5 triệu cho
+[19:57] một lần cho một tờ. Thế cơ quan thuế họ sẽ lấy 2 triệu cộng
+[20:03] 5 triệu là 7 triệu chia làm đôi là 3,5 triệu. Nếu dự án đó xây dựng trong thời
+[20:08] gian 1 năm mà kỳ kê khai theo quý thì nhân lên mấy
+[20:12] lần đó. Và thứ hai đã vi phạm hành chính phần thuế của dự án đầu tư này không
+[20:17] được xét hòa nữa để đấy bù trừ cái hoạt động kinh doanh.
+[20:23] Nó đơn giản thế thôi nhưng đôi khi chúng ta chủ quan, chúng ta dính cái lỗi này
+[20:27] tức thời mà nhiều doanh nghiệp dính rồi. Thằng to cũng dính chứ đừng nói là kế
+[20:31] toán trưởng to mà ngon đâu. Hoặc là bây giờ tôi mách là chị chị ở
+[20:36] địa bàn tỉnh là Hà Nội hay là đâu?
+[20:37] >> Hà Nội ạ.
+[20:38] >> Hà Nội hả? Chỉ hy vọng là đối với nhà ở xã hội thì
+[20:42] nó có cơ chế riêng vì nó có một số cơ chế riêng. Ví dụ như 20% đất là các chị
+[20:47] cắt bán liền mà không cần phải ấy đúng không?
+[20:49] >> Thí dụ như thuế má là được cũng có ưu đãi
+[20:52] >> cũng có thuế ưu tiên
+[20:53] >> cho vấn đề về thuế xuất
+[20:55] >> đấy thì chị cứ cứ làm văn bản hỏi thẳng Cục Thuế Hà Nội, Cục Thuế quản lý đúng
+[20:59] không?
+[21:00] >> Vâng. Chị cứ hỏi thẳng Cục Thuế đi xem quan điểm của họ thế nào vì tôi không
+[21:05] dám chắc nên tôi không dám nói thật đấy
+[21:08] >> nhỉ. Tại vì là đâu đó thì tôi biết là nhà ở xã hội các chị đã được hưởng vài
+[21:13] cái ưu đãi rồi. Trong đó có ưu đãi về thuế suất này, trong đó có ưu đãi về 20%
+[21:18] đất cắt ra bán cái đã. Riêng tờ tiền tấn bán đâ là đủ tiền xây dự án rồi đúng
+[21:21] không?
+[21:26] >> Ok. Dự án đầu tư. Bây giờ câu chuyện cuối cùng tự thủ tục.
+[21:36] Trình tự thủ tục. Trình tự thủ tục của doanh nghiệp đối
+[21:41] với thuế giá trị gia tăng. Bước một, đăng ký thuế.
+[21:49] Tôi nghĩ trong một ngày nào đó trong tương lai cần phải bỏ luôn cái đăng ký
+[21:52] thuế. Thành lập doanh nghiệp không xong một cái nghiễm nhiên ép nó vào cái gì đó
+[21:56] cho doanh nghiệp làm luôn đỡ phải mất thì giờ. Cái này chúng ta phải làm trong
+[22:00] mười mấy ngày. 15 ngày đầu tiên. Không làm là phạt. Sau này rất khó khăn.
+[22:07] Đăng ký thuế xong, việc thứ hai anh phát hành hóa đơn.
+[22:15] Đăng ký thuế thì phải làm thủ tục gì? Làm tờ khai đăng ký thuế. Khai thuế theo
+[22:18] phương pháp nào? Khấu hao tài sản theo phương pháp nào? Chính độ chế toán làm
+[22:23] theo phương pháp nào? Thì cái đấy gọi là đăng ký thuế. Rồi phát hành hóa đơn. Thế
+[22:28] thôi. Sau đó này, việc thứ ba là anh xác định xác định cái kỳ khai thuế.
+[22:38] Và việc thứ tư là anh tiến hành thực hiện.
+[22:43] Và trong cái thực hiện như thế này thì có mấy cái điểm mà các anh là giám đốc
+[22:46] phải nhớ. Một, tự khai tự nộp, tự khai tự nộp. Thứ hai là tự do điều
+[22:57] chỉnh. Tự do điều chỉnh khi chưa kiểm tra.
+[23:10] Tự khai tự nộp có nghĩa là cứ đến kỳ thì ông khai. Nếu phát sinh tiền thuế thì tự
+[23:14] ông nộp. Không ai xem xét quản lý cả. Ngày xưa
+[23:18] người ta còn xem cái tờ khai thuế của chúng ta xem khai đúng khai sai thế nào
+[23:22] người ta bảo là không có. Cứ đúng mẫu là nó đẩy qua hệ thống online xong nộp tiền
+[23:27] thế thôi. Nhưng mà nếu trong quá trình tôi khai như thuế như vậy, tôi phát hiện
+[23:32] rằng tôi sai sót thì đừng cuống lên được không ạ? Tự điều chỉnh nộp lại. Và khi
+[23:38] tự do điều chỉnh để nộp lại trước khi kỳ kiểm tra thì có hai trường hợp của điều
+[23:43] chỉnh. Một là điều chỉnh trong hạn và hai là điều chỉnh ngoài hạn.
+[23:49] điều chỉnh trong hạn có nghĩa là ví dụ hạn nộp tờ khai của cái tháng này là
+[23:52] ngày 20 của tháng kế tiếp. Tôi nộp tờ khai thuế lên trước ngày 20
+[23:58] và sau đó tôi phát hiện sai sót thì tôi chỉ việc làm một tờ khai thác khai khác
+[24:02] mà thay thế cái tờ khai cũ tôi nộp lên là xong. Thì cái trường hợp đấy là điều
+[24:06] chỉnh trong hạn. Trường hợp thứ hai là cái thời hạn mà tôi phát hiện sai sót nó
+[24:12] quá cái hạn nộp thuế rồi thì tôi buộc phải làm cái tờ khai điều chỉnh theo mẫu
+[24:17] điều chỉnh người ta gọi là KHBS. KHBS là làm mẫu điều chỉnh.
+[24:30] Vậy nó đẻ ra một trường hợp nữa là nếu ở hiện tại tôi phát hiện trong năm trước,
+[24:37] năm trước nữa, các tháng trước, các quý trước tôi khai sai hoặc tôi phát hiện ra
+[24:42] các hóa đơn kỳ đó bây giờ nó không về hoặc hóa đơn bị sai sót điều kiện về
+[24:47] thanh toán thì doanh nghiệp cũng được phép tự điều chỉnh lại cái tờ khai của
+[24:51] cái kỳ trước đó. Miễn là cứ cơ quan thuế chưa công bố
+[24:55] quyết định kiểm tra thì các anh còn được điều chỉnh.
+[24:58] Vậy khi điều chỉnh ở trong quá khứ, quá khứ thì phải ghi nhận lại cái giá
+[25:05] trị điều chỉnh vào báo cáo thuế
+[25:12] của kỳ hiện tại. Về mặt nghiệp vụ, cái này nằm ở chỉ tiêu
+[25:19] 37 hoặc 38
+[25:25] trên tờ khai thuế giá trị gia tăng. nó chỉ nằm một trong hai chỉ tiêu này
+[25:30] thôi. Thì vì mặt nguyên lý này, nếu tôi phát
+[25:33] hiện sai trong quá khứ, ví dụ hồi tháng 1 nếu tôi khai thuế theo tháng thì có
+[25:38] phải là tôi điều chỉnh tờ khai của tháng 1 thì nó sẽ ảnh hưởng đến số dư của
+[25:41] tháng 1 chuyển tháng 2? Thì về mặt lý thuyết là tôi phải điều
+[25:45] chỉnh tháng 1 trong tháng 2, xong lại tháng 3, tháng 4, tháng 5 tôi điều chỉnh
+[25:47] chút đến bây giờ đúng không? thì người ta không cần chúng ta làm thế, chỉ cần
+[25:51] sửa đổi cái kỳ tức ta phát hiện sai và bỏ cóc cao qua toàn bộ các kỳ ở giữa,
+[25:56] ghi nhận giá trị sai đó ở kỳ hiện tại là xong.
+[26:03] Đấy là một trường hợp nữa. Nhưng nếu ở tại kỳ kiểm
+[26:08] tra, tại kỳ kiểm tra thuế
+[26:13] chúng ta bị cơ quan thuế xử lý mấy cái việc này. Xử lý cái việc
+[26:19] là người ta loại bỏ loại bỏ tiền thuế
+[26:25] thì chúng ta phải cho xử lý rồi chúng ta nổ.
+[26:33] Nhưng nếu người ta làm một cái việc nó gọi là nó gọi là xuất toán,
+[26:40] xuất toán. Xuất toán có nghĩa là đối với thuế thu nhập doanh nghiệp mà trước kia
+[26:45] tôi ghi nhận chi phí của tôi là ví dụ 1 tỷ nhưng cơ thuế chỉ chấp nhận cho tôi
+[26:49] 600 người ta loại trừ của tôi 400. Ngoài cái tiền phạt cho các cái chuyện
+[26:53] khác nữa thì còn 400 người ta nói rằng là nhá xuất toán 400 để trừ vào kỳ sau
+[26:57] kiểm tra. Thì ở tại cái thời điểm nó có cái biên bản và cái quyết định kiểm tra
+[27:02] đấy xong thì kế toán phải làm ngay cái thủ tục là điều chỉnh cái số bị xuất
+[27:07] toán này vào đúng cái thời điểm mà họ hoàn thành kiểm tra.
+[27:12] Nhiều doanh nghiệp bị quên cái đó đến lúc kiểm tra kỳ sau nó lôi ra một mớ cứ
+[27:18] nhân cái đó với 20 hoặc 25% cộng với tiền phạt nộp trợ kinh khủng.
+[27:26] Cái này về mặt kỹ thuật thì nói thêm với kế toán tí nhá. Chứ không nhiều khi các
+[27:29] chị sướng quá là kiểm tra xong rồi. Ăn chơi nhảy múa thế là quên bén mất quả
+[27:33] này. Thì đấy là trình tự thủ tục thứ tư là
+[27:37] thực hiện. Được chưa?
+[27:39] >> Thì nhớ cho tôi này. Đối với thuế giá trị gia tăng là tự khai tự nộp và nó
+[27:43] quản lý được xem là thằng nào phải nộp thuế và nó quản lý cái đối tượng phải
+[27:48] trả tiền thuế. Cho nên về cái bản chất đó nó dẫn đến cái yêu cầu rằng dù không
+[27:54] phát sinh cũng phải nổ báo cáo. Nghĩa là nếu không phát sinh thì tích
+[28:02] vào cái ô là không phát sinh trong kỳ nộp báo cáo trắng.
+[28:07] Rõ chưa ạ? Cho nên những doanh nghiệp thời kỳ đầu mới thành lập ra chưa muốn
+[28:10] kê khai, chưa phát sinh thì nhớ cho rằng đừng bỏ qua cái này chứ rất nhiều doanh
+[28:15] nghiệp là bỏ qua luôn không khai thuế vì em chưa phát hành hóa đơn rồi em chưa có
+[28:18] đi vào hoạt động chưa mua bán rồi chưa xuất tờ hóa đơn nào phát hành xong rồi
+[28:22] để hóa đơn chưa xuất xong không cây khai nó phạt cho nhấc người lên luôn đấy nhé
+[28:27] thì nhớ cho rằng cho dù không phát sinh cũng phải khai thuế bằng cách khai tờ
+[28:33] khai trảng hóa đơn đã phát hành rồi chưa xuất cũng phải báo báo cáo đó là báo cáo
+[28:38] trắng thì đấy một số cái trình tự thủ tục liên
+[28:46] quan đến thuế giá trị gia tăng là như vậy.
+[28:50] Thì đấy là nội dung đầu tiên liên quan đến xác thuế và cái chế độ hóa đơn là
+[28:55] cái thứ phức tạp và nó diễn ra hàng ngày trong doanh nghiệp. Thì xin được trao
+[28:59] đổi với các anh chị những cái điểm chính như vậy để ở góc độ ở góc độ của người
+[29:05] quản lý doanh nghiệp các anh chị nắm được mà có cái phối hợp trao đổi với các
+[29:10] kế toán và hoặc là đơn vị cung cấp dịch vụ kế toán thuế cho mình. Lời khuyên lời
+[29:15] khuyên chân thành nhất ở đây là đừng nghĩ rằng mở doanh nghiệp ra thì em chỉ
+[29:20] cần tập trung bán hàng kinh doanh là xong. Không có đâu. Cái tiền anh có được
+[29:24] trong hiện tại đấy chưa chắc anh nuốt nổi đâu. Nếu những cái câu chuyện này
+[29:28] anh để hồng rõ chưa? Vì rất có thể 3 4 năm sau mới bán nhà cơ.
+[29:35] Cho nên là hãy quay về tổ chức quản lý việc này cho tốt vào nhé. Nếu không thì
+[29:42] tưởng rằng ăn được căn nhà trong năm nay và 3 năm sau thì bán đi nộp nộp tiền
+[29:47] phạt. Vậy thì để quản lý được nó có một số việc sau đây doanh nghiệp phải kiểm
+[29:53] tra xem nếu đã làm đúng thế này rồi thì xin chúc mừng còn nếu chưa làm được như
+[29:57] thế này thì cho làm như thế này. Cái thế này ấy nó thế này này.
+[30:07] Một nếu mà thuê dịch vụ thì chỉ giao chứng từ photô, đừng giao
+[30:15] chứng từ gốc. Tại sao thế? Bây giờ nó đi đường nó đánh
+[30:20] rơi nó đánh mất hóa đơn. Ai biết đấy ở đâu đúng không?
+[30:25] Nó mất xong bắt đầu nó nó phi xe phập đến có đứa gì ạ? Nó ỉm đi. Có đứa nó phi
+[30:29] đến nhà mình xong nó khóc mếu mếu. Anh ơi
+[30:32] em bị rủi ro mất cóc ngập nước nhà em bị cháy đúng không? Thằng bồ em nó bực nó
+[30:38] vứt đi đủ các thứ loại rủi ro. Vậy mất hóa đơn
+[30:42] gốc thằng nào chịu? Giám đốc chịu. Vậy cho nên chỉ giao
+[30:47] chứng từ photo không được giao chứng từ gốc.
+[30:51] Vậy thuê dịch vụ kế toán cũng đừng phó mặt theo kiểu đấy. Mày cần phải lẻm làm
+[30:55] hết cho anh đi. Đúng không? kinh nghiệm quen thân cũng không chơi. Chuyện thứ
+[30:59] nhất. Chuyện thứ hai là khi bàn giao là bắt phải lập bảng kê.
+[31:11] Lập bảng kê khi bàn giao. Ý thứ ba, yêu cầu của việc đánh dấu
+[31:28] hóa đơn. Hóa đơn nào khai rồi thì đánh dấu vào đấy là đã khai thuế.
+[31:34] Cái này ít thì không sao chứ nhiều hóa đơn mà xem. chắc chắn đến một thời điểm
+[31:38] nào đó ngồi cầm cái hóa đơn mặt đần thối không biết cái này khai chưa vì có khi
+[31:42] bây giờ hóa đơn nó vừa vào một cái giám đốc bảo em làm cái thủ tục giải ngân thế
+[31:46] là kế toán làm thủ tục giải ngân vốn lưu động ấy cầm ra ngân hàng 2 tháng sau
+[31:50] ngân hàng trả về 2 tháng sau nó quá cái kỳ hạn kia khai trước rồi không biết
+[31:54] khai hay chưa mà đáng nhẽ hóa đơn đó nó phát sinh một cái thì ngay lập tức phải
+[31:58] khai đúng kỳ nhưng vì nó đi ngân hàng nó chưa về nên là không có cái gì giao
+[32:02] không khai thế là thuế lộn tùng bệnh cả Rõ chưa? Nên nhất định phải lập bảng kê.
+[32:09] Cho dù hóa đơn gốc có đi ngân hàng thì hóa đơn photo ở lại để khai thuế. Được
+[32:15] chưa? Cho nên bắt buộc phải yêu cầu lập bảng kê và đánh dấu. Đấy là chuyện thứ
+[32:20] hai. Chuyện à chuyện thứ ba. Chuyện thứ tư. Cho dù ngày nay cơ quan thuế không
+[32:26] còn yêu cầu doanh nghiệp phải lập bảng kê mua vào bán ra, nhưng các anh nhất
+[32:31] định vẫn phải yêu cầu kế toán hoặc đơn vị cung cấp dịch vụ lật bảng kê.
+[32:38] hóa đơn tờ khai thuế. Theo tờ khai thuế để làm gì? Để quản
+[32:47] được rằng là giá trị số lượng của hóa đơn thực hiện kê khai trong cái kỳ đó.
+[32:54] Bởi vì xin thưa đến lúc kiểm tra thuế đằng nào họ cũng đòi.
+[32:59] Ông nào kiểm tra rồi thì biết. Việc đầu tiên hỏi bảng kê mua vào bán ra đâu đúng
+[33:04] không? Việc thứ hai hỏi hồ sơ tài sản, hồ sơ nhân công và bảng và nhập số tồ
+[33:08] đâu? Chuyện thứ ba mới hỏi đến sổ. Đằng nào họ cũng đòi vậy tốt nhất cho
+[33:14] làm ngay từ đầu nhé. Việc thứ thứ năm là đừng
+[33:21] giao chữ ký số cho nó.
+[33:27] Vì chữ ký số bây giờ liên quan đến cái việc là nộp tờ khai, phát sinh nghĩa vụ
+[33:31] pháp lý và nộp tiền thuế. Nghĩa là người ta cầm chữ ký số là ngay
+[33:37] lập tức người ta có thể nộp thuế. Nếu các anh không rành về mặt kỹ thuật là
+[33:40] thông qua hai bước mà bước lập, bước duyệt rồi mới ký đúng không?
+[33:46] Vậy thì ít nhất phải học cái cách sử dụng cái chữ ký số này để ký để mà nộp.
+[33:49] Còn nếu không thì bảo nhân viên của mình phải phối hợp với bên dịch vụ làm chuyện
+[33:52] này. Đừng để họ làm tất cả. Đấy là chuyện thứ năm.
+[33:58] Chuyện thứ sáu, khi thuê thì phải thỏa thuận cho rõ.
+[34:07] Thỏa thuận cho rõ là em ơi, thế mày làm báo cáo thuế cho anh thì phải làm đủ các
+[34:13] việc sau đây nhé. Việc một là mày phải kiểm soát hóa đơn
+[34:17] cho anh. Tức là hóa đơn nào được hay không được,
+[34:24] đúng hay không đúng mày phải biết chứ không có chuyện. Đến lúc đấy mày bảo với
+[34:27] anh rằng cái này là hóa đơn anh đưa, em chỉ biết làm em biết đường nào. Không
+[34:32] chấp nhận dịch vụ kiểu đó. Rõ chưa? Chứ đầy ra đấy nhá. Nó sẵn sàng chác vào mặt
+[34:38] chúng ta luôn. Anh đưa thế nào em làm thế?
+[34:40] >> Đúng
+[34:41] >> đúng không?
+[34:42] >> Đấm chưa? Một là kiểm soát hóa đơn. Hai là em phải
+[34:49] làm khai thuế. Khai thuế. Nhưng khai thuế đủ cho anh là
+[34:55] thuế giá trị gia tăng, thuế thu nhập cá nhân, thủ tục hóa đơn
+[35:01] định kỳ. Đó là ba việc phải làm định kỳ hàng
+[35:05] tháng hàng quý. Việc thứ tư em phải làm cho anh là hoàn
+[35:11] thiện hồ sơ và sổ sách kế toán. Hồ sơ chứng từ và sổ sách kế toán.
+[35:19] Và việc thứ năm em phải hoàn thiện à việc thứ tư em phải hoàn thiện lập báo
+[35:24] cáo tài chính và báo cáo quyết toán thuế cuối năm.
+[35:29] Đấy là việc thứ tư. Việc thứ năm chừng nào cơ quan thuế đến
+[35:33] kiểm tra cho người đến mà hầu và mà giả mà mà giải chỉnh chứ không thì gì ạ? Đầy
+[35:41] doanh nghiệp có thuê dịch vụ kế toán ấy. Ham giá rẻ trên giờ nó giao đầy. Dịch vụ
+[35:46] khai thế giá rẻ 300k. Các con rời sướng click vào đây phát gọi liền. Yên tâm đi
+[35:53] 300k nó khống chế cho dưới bao nhiêu hóa đơn đấy. Và cứ định kỳ nó đến gì ạ?
+[35:59] lấy cái hoa đơn về nó ngồi khai thuế nộp cái rẹt ở đây cô nào làm kế toán thì
+[36:04] biết rồi nếu doanh nghiệp nó phát sinh và khoảng có cho doanh nghiệp một tháng
+[36:07] nó khoảng độ ba mấy chục cái hóa đơn thôi việc này làm này hết bao nhiêu thời
+[36:10] gian các cô nói thử xem
+[36:15] thực lòng đi cho các giám đốc cùng biết cá
+[36:19] 30 phút nó vừa nói xong mỗi tháng 30 phút cho khai thuế giá trị
+[36:26] gia tăng và lập tờ khai lập cái báo cáo hóa đợi.
+[36:30] Vậy 300.000 là đắt chứ có đúng không? Tại sao lại là giá rẻ?
+[36:37] Nhưng mà có đứa nó giao 5 triệu thì chê sao mà bên mày đắt thế? Thị trường bây
+[36:41] giờ có 2 triệu à? Có 1 triệu mấy trăm nghìn mấy trăm nghìn nó chỉ khai cái này
+[36:45] cho ông thôi này. Còn nếu làm đủ này hồ sơ chứng từ nó
+[36:49] biết tự kiện toàn hoàn thiện và làm sổ sách in ấn cho ông ký. Cuối năm nộp báo
+[36:53] cáo quyết toán không có giá 1 2 triệu đâu. Đừng có mơ. được chưa? Nhưng phải
+[36:58] ràng buộc điều kiện hợp đồng là đến lúc nào Thanh kiểm tra thuế em đến mà giải
+[37:02] trình và thỏa thuận cho rõ này,
+[37:07] thỏa thuận cho rõ này, điều điều khoản hợp đồng để nghiệm thu dịch vụ này là
+[37:11] nếu em làm báo cáo thuế cho anh ở cái phần thuế thu nhập doanh nghiệp đấy thì
+[37:17] em phải bảo vệ được bao nhiêu phần trăm chi phí được trừ?
+[37:23] Nghĩa là nếu 1 năm anh phát sinh 120 tỷ tiền doanh thu và khoảng độ 110 tỷ tiền
+[37:33] chi phí, tức là anh ăn lãi 10 tỷ thì trong 110 tỷ này em phải bảo vệ cho anh
+[37:39] 99,9% chi phí. Được chưa?
+[37:46] Còn nếu dưới chỗ này em bỏ tiền ra mà đền xem đứa nào dám ký.
+[37:53] >> Nếu giá nếu nó dám cam kết chuyện này và làm đủ thế này 10 triệu cũng thuê nhỉ?
+[37:59] Vì đó là đứa biết làm. Và nếu như ở doanh nghiệp của chúng ta
+[38:05] một đứa kế toán biết làm những chuyện này và như thế này 10 triệu mời về luôn
+[38:11] được chưa? Vì thông thường phải trả cỡ 12 triệu trở lên, may ra tìm được một
+[38:15] đứa biết làm những chuyện này. Còn thông thường hiện nay các cháu nó
+[38:21] mới ra trường nó biết làm mỗi cái này thôi. Khai thuế 30 phút trả nó gì thế mà
+[38:26] trả lương 5 triệu nó vẫn cổ nó chê lương thấp.
+[38:31] Ơ kìa, lương tôi trả theo kết quả công việc cơ mà.
+[38:37] Khi đó được chưa nào? Thỏa thuận cho rõ nhưng thỏa thuận vẫn là chưa đủ. Việc
+[38:42] thứ bảy làm cho tôi việc này nữa chết liền.
+[38:57] Trước khi nộp tờ khai thuế giá trị gia tăng phải lập báo cáo kiểm tra.
+[39:06] Kiểm tra có nghĩa là một đứa làm, một đứa kiểm. Bên dịch vụ làm bên mình phải
+[39:11] có người kiểm. Nhất định không được tin nhau toàn bộ.
+[39:15] Yêu nhau cứ rào dậu cho kín vào nhé. Cứ một đứa làm, một đứa kiểm. Kiểm bằng cái
+[39:20] mẫu. Thầy Long cho
+[39:27] gửi email các anh chị nhá. Thứ nữa là định kỳ hàng quý
+[39:32] thì phải có cái hoạt động báo cáo nhanh doanh thu chi phí. lợi nhuận và dự kiến
+[39:41] tiền thuế. Đó từng quý một phải báo cho tôi biết
+[39:48] là dự kiến quý này và lũy kế từ đầu năm đến nay doanh thu, chi phí lợi nhuận và
+[39:54] tiền thuế phải nộp bằng bao nhiêu rồi? Để lỡ có thủng có sai, có sót gì thì
+[40:00] nhìn thấy luôn. Để cân đối luôn, tránh trường hợp ăn tiết xong rồi mới đi chạy
+[40:05] hóa đơn. Phải không?
+[40:13] Thì đấy là bảy việc được chưa? Bảy công việc có liên quan đến tổ chức,
+[40:20] công tác kê khai báo cáo thuế tác thị gia tăng nhưng có liên quan đến một số
+[40:24] việc của thuế thu nhập doanh nghiệp. Và đối với câu chuyện về hạch toán và kê
+[40:29] khai báo có thuế, anh chị nhớ cho tôi án tại hồ sơ
+[40:33] nghĩa là cứ hoàn thiện hồ sơ chứng minh được tính có thật và chắc chắn của chi
+[40:38] phí, của hồ sơ chứng từ, của hóa đơn thì mới được.
+[40:47] Và về mặt nguyên lý, về mặt nguyên lý thì các giám đốc xin
+[40:51] thuộc cho tôi cái bài này. Các giám đốc cần phải thuộc cái bài này.
+[41:00] Đó là cái bài gọi là bắt đầu từ các gì ạ?
+[41:04] Giao dịch gốc. Từ giao dịch gốc nó tạo ra hồ sơ gốc.
+[41:15] Từ hồ sơ gốc nó tạo ra chứng từ gốc. Từ chứng từ gốc nó tạo chứng từ kế toán.
+[41:26] Từ chứng từ kế toán nó mới ghi vào sổ gọi là ghi sổ kế toán.
+[41:33] Từ ghi sổ kế toán nó mới lập báo cáo tài chính. Từ báo cáo tài chính nó mới lập
+[41:39] báo cáo quyết toán thuế hàng năm. Quyết toán thuế và kết quả của báo cáo
+[41:46] tài chính và quyết toán thuế làm cơ sở để cơ quan thuế họ tiến hành đánh giá
+[41:52] cái nghĩa vụ độc thuế và kiểm tra thuế. Bây giờ phân tích một chút.
+[42:01] Giao dịch gốc có nghĩa là lúc chúng ta đi nhậu với nhau ấy nha. Cộng với lại hồ
+[42:06] sơ của công ty, hồ sơ gốc của công ty. thì cái này nó mới tạo ra hợp đồng, nó
+[42:15] mới tạo ra quyết định các thứ này kia thì đó là hồ sơ gốc.
+[42:20] Được chưa nào? Từ hồ sơ gốc này anh mới tiến hành phát hành cái câu chuyện là
+[42:25] khi mua bán với nhau, ký tá với nhau, hóa đơn đây này
+[42:31] thì đó là chứng từ gốc. Được chưa? Ví dụ hóa đơn tiền điện, tiền nước,
+[42:38] hóa đơn tiền hàng mua vào bán ra thì đó là chứng từ gốc. Vậy lúc đó căn cứ vào
+[42:44] hóa đơn đầu vào đầu ra nó mới lập phiếu thu, phiếu chi, phiếu nhập, phiếu xuất,
+[42:47] báo nợ, báo có và phiếu khác. 1 2 3 4 5 6 sáu loại thu, chi, nhập, suất, nợ có
+[42:55] khác. bảy loại thì doanh nghiệp dù có lớn đến
+[43:01] cỡ nào nó cũng chỉ có bảy cái loại chứng từ này thôi. Phiếu thu để thu tiền,
+[43:05] phiếu chi để chi tiền, phiếu nhập để nhập hàng, phiếu xuất để xuất hàng. Được
+[43:08] chưa? Báo nợ để mà trả tiền đi qua ngân hàng, báo có là nhận tiền về qua ngân
+[43:14] hàng. Đấy, thu chi nhập suất, báo nợ, báo có.
+[43:19] Vậy thì còn tất cả những cái thứ khác như bảng kê, như tính giá thành, như ghi
+[43:23] nhận lương, trả lương vân vân thì toàn bộ cái đấy gọi là chứng từ kế toán khác
+[43:29] hay còn gọi là phiếu kế toán. Thì cái đấy gọi là gọi chung là chứng từ kế
+[43:33] toán. Như vậy người ta ghi sổ bằng chứng từ kế toán chứ không ghi sổ bằng gì?
+[43:39] Bằng hóa đơn. Từ ghi sổ kế toán nó mới lập được báo cáo tài chính chứ không
+[43:43] thằng nào tự lập được báo cáo tài chính từ hóa đơn.
+[43:47] Vậy thì bây giờ nó lại có cái chuyện là cuối năm các bố thuê dịch vụ kế toán giá
+[43:51] rẻ 300k. Xong bắt đầu thầy bảo em ơi sẽ bây giờ cuối năm khuyết toán thế nào để
+[43:55] em đến em bốc cho. Thế là nó đến nó cầm order nó xào xào xào xào cái nó ra cái
+[43:59] báo cáo quyết toán với báo cáo tài chính. Đây anh học xong rồi. Xong một bộ
+[44:02] rồi đổ phải hỏi nó sổ đâu mày. Vì nếu em không làm sổ nghĩa là không
+[44:09] hạch toán. Mà nếu doanh nghiệp không hạch toán khỏi xét báo cáo được chưa? Áp
+[44:14] luôn theo hóa đơn bán ra. Nghĩa là nếu không tổ chức sổ kế toán
+[44:19] khi cơ quan con thuế kiểm tra là họ không xem xét nữa, họ áp luôn theo tỉ lệ
+[44:24] doanh thu tính trên hóa đơn bán ra ở các tờ khai thuế đã lập trước đó.
+[44:29] Ơ kìa, làm gì có chuyện đơn giản. Nói thế này để các ông giám đốc đừng lơ là
+[44:35] và đừng coi cái chuyện kế toán thuế nó nhẹ đi. Các anh trả giá lớn lắm đấy. Vậy
+[44:40] thì bắt làm này chứng từ kế toán ghi sổ lập báo cáo xong mới lập quyết toán.
+[44:46] Rõ chưa? Lập quyết toán mới là xác định cái giá trị mà do ta tự chủ động lập.
+[44:52] Còn lúc nào cơ quan thuế kiểm tra xong mới hết nghĩa vụ. Nhưng kiểm tra xong
+[44:57] đôi khi chưa chắc hết vì còn kiểm tra lại
+[45:02] gọi là hoạt động kiểm tra nội bộ. Thì đó chúng ta hình dung cái này là
+[45:07] chúng ta biết là à ở khâu nào quản thế nào. Ở khâu nào quản thế nào? Điều này
+[45:12] có nghĩa là nếu doanh nghiệp nào còn xác định rằng không cần phải hạch toán, cứ
+[45:16] thuê bọn dịch vụ kế toán nó làm thôi thì yên tâm đi, công ty của các anh còn lẹt
+[45:21] đẹt và chiều hướng phát triển thế này, kể cả có tiền, tôi khẳng định luôn.
+[45:29] Nhưng tiền này rất có thể là tiền nợ. vayh ngân hàng về tiêu như đúng rồi
+[45:38] đấy. Thì vì cái nguyên lý thế kia chúng ta sẽ phải biết rằng nếu việc của kế
+[45:43] toán họ làm thì giao cho họ việc đến đâu, kiểm thu nghiệm kiểm tra đến đâu.
+[45:47] Nếu giao dịch vụ kế toán làm cũng phải kiểm tra đủ như thế kia chứ không có
+[45:51] chuyện làng nhạc. Không có chuyện là đấy. Em cầm hóa đơn
+[45:55] về em làm cho anh. Tháng này ít có thế này thôi. Không được, không dễ giãi
+[45:59] được. Đây là nghĩa vụ pháp lý. của doanh nghiệp với nhà nước và ở cương vị ở
+[46:06] cương vị là giám đốc doanh nghiệp là thành viên hội đồng thành viên và hội
+[46:10] đồng quản trị. Tôi có một lời khuyên chân thành với tất cả các anh đã bước
+[46:14] chân vào làm kinh doanh, việc đầu tiên các anh cần phải xác định được là an
+[46:18] toàn pháp lý cho bản thân. kế đến là an toàn pháp lý cho tổ chức,
+[46:25] còn nếu không là ngủ không ngon đâu. Đấy, vậy bảo nhưng vẫn có một câu hỏi vô
+[46:31] cùng lớn là nếu trong trường hợp minh bạch em không có lời hoặc không cạnh
+[46:37] tranh được, vậy thì hàng đêm không phải nghĩ về câu chuyện thuế mà phải nghĩ về
+[46:42] câu chuyện là rõ ràng mô hình kinh doanh của mình không có cửa để cạnh tranh trên
+[46:45] thị trường vì nó đang tạo ra cái lợi nhuận thực. mà
+[46:50] nó tạo ra được cái lợi ích về mặt kinh tế dựa trên cái sự không thực và không
+[46:55] minh bạch thì đó là một tư duy chúng ta phải đập lại với chính cái mặt mình này
+[47:00] xem xem mô hình kinh doanh này còn tiếp tục được đầu tư vào và theo đuổi hay
+[47:03] không. Đấy thì đó là cái mà chúng ta phải tự
+[47:07] phản biện chứ còn là tại sao ạ? Đôi khi đôi khi chúng ta thành lập doanh nghiệp,
+[47:13] chúng ta tâm huyết với nghề, chúng ta gánh nặng trên vai với gia đình và anh
+[47:17] em nhân viên, chúng ta như ngồi trên lưng cọp, chúng ta nhận không ra đâu.
+[47:23] Và vì nhận không ra cho nên là cứ càng làm càng thấy khó. Làm nhỏ thì nợ ít mà
+[47:29] làm càng lớn thì nợ càng nhiều. Nhưng nợ nhiều thì đương nhiên vì bao giờ trong
+[47:35] kinh doanh nguồn vốn cũng có một phần của nợ phải trả. Nhưng cái đáng đau xót
+[47:39] nhất ở chỗ là cái tính chất của công nợ mỗi một ngày nó càng kém đi.
+[47:46] Nghĩa là khả năng thực thi và đòi nợ càng ngày nó càng kém đi. Đó là những
+[47:50] dấu hiệu chết lâm sàng.
+[47:55] Nếu tính chất của công nợ càng ngày càng kém đi thì đó là dấu hiệu của chết lâm
+[48:01] sàng. Vậy nhớ cái đó lại cho tôi để buổi chiều
+[48:06] khi chúng ta nói hết đến thuế thu nhập cá nhân và thuế thu nhập doanh nghiệp
+[48:10] chúng ta quay lại. Vậy thì bây giờ nếu tuyển một thằng kế toán trưởng, nếu giao
+[48:15] trách nhiệm về tài chính kế toán cho phòng kế toán thì những cái nội dung cái
+[48:20] ky nào cần phải giao lại là cây pi trong tháng cho nó chứ không phải ba cái
+[48:26] chuyện sắp xếp ký chứng từ chạy suốt ngày nhưng cuối cùng việc chính không
+[48:30] làm mà đứa nào cũng kêu việc nhiều.
+[48:43] Ok. Đấy, buổi sáng nói bằng ấy câu chuyện thôi.
+[48:47] >> Hay quá thầy ạ. Thầy khỏi trưa. Hỏi nghị chưa?
+[48:55] >> Thế mà lúc thầy dạy tài chính không đi mà học.
+[49:02] >> Ok. Cảm ơn mọi người. À chúng ta đã có một phiên làm việc. Tôi nghĩ là rồn giả.
+[49:08] Vậy bây giờ mời mọi người nghỉ trưa. Ah
+[49:42] 0:00 /

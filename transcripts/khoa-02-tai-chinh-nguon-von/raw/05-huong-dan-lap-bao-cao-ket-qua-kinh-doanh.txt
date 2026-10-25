@@ -1,0 +1,165 @@
+[0:09] Lật báo cáo kết quả sản xuất kinh doanh. Mời các anh chị mở số liệu sang bảng kết
+[0:15] quả sản xuất kinh doanh. Tôi sẽ nói kỹ ở bảng này và không chỉ nói ở góc độ tài
+[0:19] chính doanh nghiệp, tôi sẽ nói kỹ bảng này so với báo cáo quyết toán thuế. Trên
+[0:23] bảng số liệu chúng ta đang mở ra đây thể hiện báo cáo kết quả sản xuất kinh doanh
+[0:28] nhưng ở dạng rất chi tiết, tức là chi tiết từ các cái số liệu để hình thành đế
+[0:32] các chỉ tiêu có thể hiện trên mẫu báo cáo. Chẳng hạn như nhìn một cái báo cáo
+[0:36] mà đã được lập ra thì chúng ta sẽ không nhìn thấy à các cái khoản cụ thể. Ví dụ
+[0:41] như là hàng bán bị trở lại, thuế thư thụ đặc biệt hoặc là thuế xuất nhập khẩu,
+[0:45] thuế giá trị gia tăng trực tiếp. Đ nhưng ở đây để chúng ta lập được thì cần phải
+[0:50] thể hiện rõ ra như vậy. Cái kết cấu của báo cáo kết quả sản xuất kinh doanh thì
+[0:54] chúng ta biết rồi. Và khi trình bày trên báo cáo thì nó
+[0:58] được trình bày như sau. Và đối với hướng dẫn bảng này thì chúng ta tôi hướng dẫn
+[1:02] cái cách đọc hướng dẫn trước đã này. Ví dụ chỉ tiêu thứ nhất doanh thu bán hàng
+[1:08] và cung cấp dịch vụ mã số 01 số thứ tự thứ nhất thì ở chỉ tiêu này không có
+[1:14] công thức gì. Ở hai cột tiếp theo là cột F và cột G
+[1:20] là chỉ dẫn cho chúng ta biết là số liệu lấy từ tài khoản nào vào đây.
+[1:27] Thì trước khi các anh chị lập, các anh chị nhớ cho này, khi lập báo cáo cân đối
+[1:31] kế toán thì chúng ta lấy số dư các tài khoản từ 1 đến 4 đúng không?
+[1:38] Nhưng khi lập báo cáo kết quả sản xuất kinh doanh thì chúng ta lại lấy số phát
+[1:42] sinh các tài khoản từ 5 đến 9. Một cái là lấy số dư bởi vì nó là báo
+[1:49] cáo thời điểm. Một cái là lấy số phát sinh vì nó là gì ạ? Báo cáo thời kỳ. Chỉ
+[1:54] tiêu thứ nhất là doanh thu bán hàng và cung cấp dịch vụ thì chúng ta sẽ lấy số
+[1:58] liệu phát sinh của tài khoản gì ạ? 511. Vì 511 là doanh thu bán hàng và cung cấp
+[2:06] dịch vụ. Nếu không có khoản chênh lệch điều chỉnh
+[2:15] tăng doanh thu hoặc giảm doanh thu thì chỉ tiêu này nó còn phải khớp với gì ạ?
+[2:22] nó còn phải khớp với lại tổng giá trị hàng hóa bán ra trên các tờ khai thuế
+[2:27] trong năm cộng lại. Rồi chỉ tiêu thứ nhất là doanh thu bán
+[2:33] hàng và cung cấp dịch vụ lấy nguyên tổng phát sinh bên có của tài khoản 511 được
+[2:37] không ạ? Thứ hai là các khoản giảm trừ doanh thu. Chúng ta lấy số phát sinh
+[2:42] tương ứng với ba tài khoản là 5211, 5212 và 5213. tương ứng với ma khoản là chiết
+[2:48] khấu thương mại giảm giá hàng bán hàng bán trả lại.
+[2:53] Chỉ tiêu tiếp theo là thuế tư thụ đặc biệt thuế xuất nhập
+[2:57] khẩu phải nổ thì nó được tính bằng ba chỉ tiêu chi tiết với số thứ tự là 40
+[3:01] cộng 47. Tôi sẽ nói kỹ hơn cái này một tí. Thứ nhất là thuế thu thụ đặc biệt ở
+[3:07] khâu bán hàng. Thứ hai là thuế xuất nhập khẩu phải nộp cũng ở khâu bán.
+[3:13] Nó còn tùy thuộc vào cái cách tổ chức hạch toán trong doanh nghiệp.
+[3:17] Thứ nhất này, nếu khi ghi nhận doanh thu các anh đã bóc tách ra cái thuế tiêu thụ
+[3:23] đặc biệt và thuế phất suất nhập được khẩu của chúng thôi. Được không? Thứ hai
+[3:27] nữa là khi hạch toán doanh thu đối với đơn vị sử dụng hóa đơn bán hàng thông
+[3:31] thường chứ không phải sử dụng hóa đơn giá trị gia tăng mà ghi nhận vào tài
+[3:36] khoản 511 là đã bóc tách tiền thuế giá trị gia tăng
+[3:42] chứ không ghi theo tổng giá trị của hóa đơn.
+[3:45] thì chỗ này khi lập báo cáo này không bỏ nữa nhưng nếu không có bóc cách gì cả vì
+[3:50] chúng ta biết là đối với đơn vị thực hiện thuế giá trình gia tăng theo phương
+[3:54] pháp trực tiếp thì xuất cho khách hàng cái hóa đơn bán hàng là trong đó có cả
+[3:59] tiền hàng cả tiền thuế trong đó được hiểu như vậy đúng không?
+[4:02] Đó. Thế nếu chúng ta hạch toán nguyên cái giá trị hóa đơn đó vào tài khoản
+[4:06] doanh thu thì đến đây chúng ta phải loại trừ cái thuế giá trị gia tăng phương
+[4:09] pháp trực tiếp ra. Thì số liệu tương ứng được lấy ở các tài
+[4:18] khoản là 33 32 331 331.
+[4:24] Rồi sau đó này mình lấy tổng doanh thu số thứ tự thứ nhất mình trừ các khoản
+[4:30] giảm trừ doanh thu số thứ tự 15 thì sẽ tạo ra được một giá trị là gì ạ? Doanh
+[4:36] thuần. Cái này chỉ đơn thuần là cộng trừ thôi.
+[4:42] Chúng ta ẩn các chỉ tiêu chi tiết đó đi thì chúng ta thu được giá trị là doanh
+[4:47] thu thuần. Ở đây công thức là 1 -1.
+[5:13] Tiếp theo, giá vốn hàng bán. Giá vốn hàng bán là chỉ tiêu quan trọng.
+[5:23] Số liệu để lập ở chỉ tiêu này là số phát sinh ở tài khoản giá vốn 632.
+[5:33] Số phát sinh ở tài khoản 632. Nhưng bây giờ tôi hỏi là liệu chúng ta
+[5:40] sẽ lấy tổng phát sinh bên nợ của tài khoản 632 hay là chúng ta lấy đối ứng
+[5:46] của 632 với 911? Thì câu trả lời là chúng ta phải lấy số
+[5:56] liệu đối ứng tức là bút toán kết chuyển từ 632 sang 911.
+[6:00] là vì thế này. Tài khoản giá vốn hàng bán 632 đây,
+[6:08] toàn bộ phát sinh về giá vốn, hàng bán, thành phẩm, dịch vụ trong kỳ nó được tập
+[6:13] hợp hết vào bên nợ. Cái này là tổng phát sinh đúng không? Cô tài khoản 632.
+[6:20] Nhưng trong suốt 1 năm hoặc một quý để làm báo cáo như vậy có thể xảy ra một số
+[6:26] trường hợp là điều chỉnh giá vốn hoặc có các bút toán điều chỉnh chi phí.
+[6:35] Cho nên nếu chúng ta lấy nguyên phát sinh tiên động
+[6:38] của tài khoản 632 cũng được nhưng nó chỉ đúng trong trường hợp chúng ta không có
+[6:43] nhiệm vụ điều chỉnh 632. Thế còn nếu không thì chúng ta phải lấy
+[6:48] gì ạ? Ví dụ phát sinh của nó là 8 tỷ nhưng mà trong kỳ tôi lại có một số hoạt
+[6:54] động gì đó điều chỉnh mất 0,5 tỷ ở biến cố. Như vậy thực chất số liệu phát tính
+[7:00] cho 632 chỉ còn 7,5 tỷ thì cuối kỳ tôi mới kết chuyển như 7,5 tỷ này đi xác
+[7:05] định kết quả sang tài khoản 911. Vậy thì lúc này chúng ta phải lấy giá trị là 7,5
+[7:10] tỷ chứ 0,8 tỷ. Cho nên chỗ này nhấn mạnh lại là chúng
+[7:15] ta sẽ sử dụng số liệu đối ứng của 632 sang 911.
+[7:26] Sau khi tính được giá vốn hàng bán xong, chúng ta lấy giá vốn hàng bán giỡn lấy
+[7:33] doanh thuần trừ giá vốn hàng bán thì tạo ra chỉ tiêu tiếp theo là lợi nhuận gồm.
+[7:45] Chỉ tiêu kế tiếp là doanh thu hoạt động tài chính. Chúng ta lấy tổng phát sinh
+[7:50] bên có của tài khoản 515. Chi phí tài chính chúng ta lấy đối ứng
+[8:00] của tài khoản 635 sang 911. Trong đó chúng ta phải bóc tách chi tiết
+[8:12] ra phần chi phí lãi vay là bao nhiêu. Thế thì như trong hệ thống tài khoản của
+[8:17] cái báo cáo này tôi đã tách chi tiết ra là tài khoản 6354
+[8:22] là tài khoản để ghi nhận toàn bộ chi phí lãi vay. Vì chi phí tài chính của trong
+[8:25] doanh nghiệp nó không chỉ là lãi vay, nó còn bao gồm chi phí về thuê mua tài
+[8:29] chính, chi phí đầu tư chứng khoán, trái phiếu vân vân đúng không ạ? Mà dẫn đến
+[8:33] lỗ hoặc là hụt về mặt chi phí tài chính. Thì trong đó chúng ta phải tách riêng
+[8:36] cái phần chi phí lãi vay ra. Tiếp theo là chi phí bán hàng và chi phí
+[8:43] quản lý doanh nghiệp. Chúng ta lần lượt lấy số liệu là đối ứng của 641, 642 với
+[8:48] 911. Rồi
+[8:54] kế tiếp là mình lấy lợi nhuận gộp mình cộng với doanh thu tài chính
+[9:02] trừ chi phí tài chính, trừ chi phí bán hàng, trừ tiếp chi phí quản lý doanh
+[9:06] nghiệp thì gọi là lợi nhuận từ hoạt động sản xuất kinh doanh.
+[9:15] Tuy nhiên ở đây chế độ kế toán và luật kế toán của mình họ quy định như thế này
+[9:19] à thì mình phải chịu thôi chứ còn đúng ra với cái khái niệm là lợi nhuận
+[9:27] từ hoạt động sản xuất kinh doanh mà đứng ở góc độ đầu tư thì chúng ta nên
+[9:33] loại bỏ cái doanh thu và chi phí hoạt động t à cái cái doanh thu từ tài chính
+[9:37] ra. Các vị biết tại sao không ạ? Bởi vì có những doanh nghiệp trong cái
+[9:42] năm đó nhá, cái hoạt động sản xuất kinh doanh chính của họ là rất bình thường,
+[9:47] thậm chí thua lỗi. Nhưng mà năm đấy ông ấy trúng quả chứng khoán chẳng hạn. Thế
+[9:52] là tự nhiên gì ạ? Cái cái lợi nhuận mà nó không phải từ chính, nó chỉ là cái sự
+[9:56] may mắn bất thình lình trong một cái năm đó thôi. Nó lại đóng góp rất nhiều vào
+[10:01] cái cái lợi nhuận chung. Mà chúng ta nhìn vào tổng số đó mà chúng ta bảo rằng
+[10:05] ok doanh nghiệp này làm ăn nó rất là có hiệu quả thì chưa chắc đâu ạ. Bởi vì
+[10:09] sang năm câu chuyện tài chính có thể nó không còn như vậy nữa nhỉ. Thì khi mà
+[10:13] đứng ở góc độ nhà đầu tư thì các anh chị hết sức tỉnh táo cho cái chỗ này.
+[10:18] Rồi thu nhập khác chúng ta lấy đối ứng từ 711 sang 911 và chi phí khác thì lấy
+[10:22] đối ứng từ 811 sang 911. Sau đó lấy thu nhập khác trừ chi phí khác thì tạo ra
+[10:28] được lợi nhuận khác. Lấy lợi nhuận từ hoạt động sản xuất kinh
+[10:34] doanh cộng với lợi nhuận khác thì ra được gì? Tổng lợi nhuận kế toán trước
+[10:38] thuế và quen tay thì nhiều kế toán là cứ lấy
+[10:45] luôn tổng lợi nhuận kế toán trước thuế nhân với tỉ lệ thuế suất thuế thu nhập
+[10:50] doanh nghiệp để tính ra cái thuế chi phí thuế thu nhập doanh nghiệp
+[10:55] thì xin thưa là như vậy là không phải đâu nhé.
+[10:58] Vì thuế thu nhập doanh nghiệp phải được tính trên báo cáo quyết toán thuế chứ
+[11:01] không tính ở đây. Tính được bao nhiêu ở báo cáo quyết toán thuế mới quay lại
+[11:06] điền vô đây chứ không tính ở đây. Điều đó có nghĩa là lợi nhuận kế toán
+[11:13] trước thuế này cùng với cái báo cáo kết quả kinh doanh
+[11:17] từ dưới này từ từ đây lên đế trên đầu mới là cái căn cứ để mang đi xác định
+[11:21] thuế phải nổi. Bởi vì luôn có sự chênh lệch giữa chi
+[11:26] phí của doanh nghiệp ở góc độ quản lý tài chính doanh nghiệp và chi phí tính
+[11:31] thuế hợp lý hợp lệ. Vì doanh nghiệp chỉ theo luật kế toán chỉ cần trung thực hợp
+[11:35] lý hợp lệ, chủ doanh nghiệp đã phiên duyệt là ok. Nhưng mà đối với cơ quan
+[11:39] thuế thì không ạ. Anh phải có đủ hồ sơ chứng tường hay không? Anh có nằm trong
+[11:42] định mức thuế cho phép hay không? Thậm chí anh có giải trình được hay không?
+[11:50] Và sau khi xác định được thuế thu nhập doanh nghiệp hiện hành
+[11:55] final thì chúng ta điền vô đây thì chúng ta sẽ
+[11:59] tính ra tiếp được là lợi nhuận sau thuế. Thì đây là giá trị mà gì ạ? gọi là lợi
+[12:06] nhuận dòng. Đây giá trị lợi nhuận dòng này
+[12:11] nếu như không có số liệu tích lũy từ các năm trước thì nó phải bằng với lợi nhuận
+[12:16] chưa phân phối trên bảng cân nối kế toán.
+[12:20] Và để làm rõ hơn về mặt số liệu một tí thì ở ngay cái trước khi lập cái báo cáo
+[12:25] kết quả sản xuất kinh doanh này à các anh chị thấy có một cái bảng có tên là
+[12:28] kết chuyển. Nhìn thấy không ạ? Chúng ta click sang cái bảng đó để chúng
+[12:32] ta xem là kết chuyển là thế nào. Ở đây tôi dựng lại một cái lưu đồ kết
+[12:59] chuyển toàn bộ các tài khoản doanh thu, chi phí và thu nhập sang tài khoản 911.
+[13:05] Ai làm kế toán thì hình dung được rồi. Ai làm kế toán thì hình dung rằng tài
+[13:08] khoản 911 nó giống như cái cân để cân đối lợi nhuận và lỗ của doanh nghiệp ở
+[13:13] thời điểm là báo cáo. Cái cân đó một bên nó chứa đựng doanh
+[13:17] thu và thu nhập và một bên nó chứa đựng chi phí.
+[13:22] Thì trình tự thực hiện sẽ như sau. Chúng ta sẽ thấy là tài khoản 5211 5212.
+[13:27] phát sinh bao nhiêu được mang kết chuyển sang tài khoản 511 bấy nhiêu.
+[13:32] Sau đó còn lại của 511 là bao nhiêu mới mang kết chuyển gì ạ? Sang tài khoản
+[13:37] 911. Tương tự như vậy thì toàn bộ các tài
+[13:40] khoản chi phí kể cả chi phí thuế thu nhập doanh nghiệp được mang kết chuyển
+[13:44] vào bên nợ của tài khoản 911. Thế thì nếu ai dựng sơ đồ thì sẽ lấy
+[13:52] chính cái số liệu này để lập bảng kết quả sản xuất kinh doanh. Còn nếu không
+[13:55] dựng sơ đồ thì chúng ta sẽ căn cứ vào sổ nhật ký chung hoặc sổ cái của các tài
+[13:59] khoản từ loại 5 cho đến loại 9 để chúng ta tiến hành lấy số liệu để chúng ta lập
+[14:03] thô nhá. Thế thì trong cái bộ báo cáo ứng dụng này tôi cũng đã đặt sẵn công
+[14:08] thức để lập cái kết quả sản xuất kinh doanh này với số liệu được lập sẵn ở đây
+[14:16] là lấy số liệu ở đâu. Thì trong trường hợp này có hai cái lựa chọn. Một là lập
+[14:21] tự động từ các bút toán kết chuyển. Hai là lập thủ công. Lập thủ công thì chúng
+[14:27] ta sẽ chỉ việc điền số liệu vào các à trong hai cột T và U đây.
+[14:34] Và đồng thời chúng ta chọn trong cái mục này này. Ở cái cột M và N có chữ tự động
+[14:40] hoặc là thủ công. Ở đây nếu chúng ta nhập vào đây là thủ công
+[14:46] thế này thì nó sẽ lấy số liệu ở bên này. Lấy số liệu và cột T và cột U. Còn nếu
+[14:52] chúng ta nhập số liệu là tự động thì nó sẽ lấy số liệu ở đây ở các cái
+[14:59] bút toán kết chuyển và tự động lập sang bảng kết quả sản xuất kinh doanh.
+[15:04] Thì trong phần thực hành sẽ yêu cầu các anh chị lấy chính cái số liệu trên cân
+[15:07] nối phát sinh và các bút toán kết chuyển đó để chúng ta lập lên một giá trị ở cột
+[15:13] K trong mẫu báo cáo này. Lập xong thì thấy rằng là nó khớp với số liệu mẫu ở
+[15:17] đây là được. Được không? Trên đây tôi đã hướng dẫn cái việc mà
+[15:24] lập báo cáo kết quả sản xuất kinh doanh cũng như thực hiện một số cái phân tích
+[15:28] rất là cơ bản. M.
+[15:35] 0:00 /

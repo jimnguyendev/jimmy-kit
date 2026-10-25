@@ -1,0 +1,285 @@
+[0:05] Thì à trong cái phần tài liệu hướng dẫn chúng ta có sáu file. File thứ nhất là
+[0:10] lập và phân tích báo cáo tài chính nhập liệu chi tiết. File thứ hai là hướng dẫn
+[0:15] lập cân đối kế toán chi tiết. Thứ ba là hướng dẫn lập kết quả sản xuất kinh
+[0:21] doanh chi tiết. Thứ tư là hướng dẫn lưu chuyển tiền tệ trực tiếp. Thứ năm là
+[0:28] hướng dẫn lưu chuyển tiền tệ gián tiếp. Và thứ sáu là báo cáo kết quả kinh doanh
+[0:31] theo thời gian là một cái mẫu thêm vào thôi để ai muốn quản trị cái kết quả
+[0:35] kinh doanh theo thời gian thì chúng ta thực hiện. Bây giờ chúng ta sẽ mở hai
+[0:40] file. File thứ nhất là file Excel lập và phân tích báo cáo tài chính nhập liệu
+[0:45] chi tiết và file kế tiếp nó đấy là hướng dẫn lập báo cáo bằng file PDF. Đầu tiên
+[0:51] nói về cái tài liệu đọc đã này là chúng ta có một cái file ở định dạng PDF là
+[0:55] hướng dẫn lập cân đối kế toán chi tiết. Thì file này là file hướng dẫn chi tiết
+[0:58] đối với từng chỉ tiêu có thuyết minh có mô tả. File thứ hai là cái file Excel
+[1:03] như thế này phải không ạ? File Excel đây là gồm có bản bảng cân
+[1:08] đối tài khoản, các mũi toán kết chuyển, bảng cân đối toán để chúng ta lập.
+[1:16] Kết quả sản xuất kinh doanh hướng dẫn chi tiết để chúng ta lập.
+[1:21] Phân tích bảng cân nối kế toán theo chiều ngang và phân tích tỉ trọng.
+[1:25] Phân tích bảng kết quả sản xuất kinh doanh theo chiều ngang và so với doanh
+[1:29] thuần cũng như đánh giá cơ cấu các khoản chi phí.
+[1:34] Bảng tiếp theo là các chỉ số tài chính. Bảng tiếp theo nữa là biểu đồ
+[1:42] vân vân. Thì chúng ta bắt đầu làm việc với bảng
+[1:47] cân đối kế toán là tôi đã mô tả chi tiết
+[1:52] cái nguồn hình thành số liệu cho từng chỉ tiêu kể cả các chỉ tiêu chi tiết mà
+[1:56] không được hiển thị trên báo cáo tài chính. Với cái tài liệu này, ví dụ
+[2:02] phần đầu tiên là tài sản ngắn hạn, trong đó khoản mục thứ nhất một La Mã
+[2:09] tiền và các khoản tương đương tiền. Thì tiền và các khoản tương đương tiền
+[2:15] sẽ được tính bằng tiền cộng với các khoản tương đương tiền, tức là bằng mã
+[2:20] số 111 cộng với mã số 112 hay bằng số thứ tự số 15 cộng với số thứ
+[2:27] tự số 35. Thì mọi người lưu ý cho mã số trên bảng
+[2:32] cân đối kế toán này không phải số tài khoản đâu mà đây là mã số của chỉ tiêu
+[2:38] trên báo cáo. Và trong tài liệu hướng dẫn này phần nào mà chúng ta thấy cái
+[2:44] nền nó màu xanh là nó chỉ là hướng dẫn thôi. Đấy. Tức là khi lập lên báo cáo nó
+[2:49] không hiển thị trên mẫu báo cáo. Nhưng để lập thì phải cần có các chỉ tiêu này
+[2:54] rồi tới khi hiển thị lên báo cáo thì ẩn nó đi. Thứ hai là tất cả những phần nào
+[3:00] mà nền được đánh dấu màu vàng. Nghĩa là đó là chỉ tiêu cộng và cộng
+[3:07] tổng hợp. Tức là nó được tính bằng cách cộng các chỉ tiêu khác.
+[3:14] Và mã số các chỉ tiêu cộng ở đây là của số thứ tự. Tôi nói ví dụ
+[3:20] tiền và các khoản tương đương tiền thì nó bằng gì ạ? Số thứ tự 15 cộng với số
+[3:25] thứ tự số 35. Như vậy thì cứ chỗ nào nền màu vàng thì chúng ta cộng các chỉ tiêu
+[3:31] chi tiết. Chỗ nào nền không màu vàng mà người ta ghi là gì ạ? Số dư từ tài khoản
+[3:38] thì có nghĩa là chúng ta sẽ phải lấy số liệu từ bảng cân đối số phát sinh chúng
+[3:41] ta điền qua. Ví dụ khoản mục tiền thì nó bằng ba khoản mục nhỏ cộng lại. Tiền thì
+[3:48] bằng tiền mặt cộng tiền đang chuyển cộng tiền gửi ngân hàng. Trong đó tiền mặt
+[3:53] thì lấy số dư bên nợ của tài khoản gì đây ạ?
+[3:57] 111. Tiền đang chuyển thì chúng ta lấy số dư
+[4:00] bên nợ của tài khoản 113 trên bảng cân đối tài khoản hoặc sổ cái kế toán. Tiền
+[4:05] gửi ngân hàng thì chúng ta lấy số dư bên nợ của tài
+[4:10] khoản 112 trên bảng cân đối tài khoản hoặc sổ cái
+[4:15] kế toán. Cái quy tắc tôi thể hiện hướng dẫn cách lập báo cáo là như vậy. Thì
+[4:20] trước khi bắt tay vào lập bảng cân đối kế toán, ở đây nó có một số cái chỉ tiêu
+[4:24] rất đặc biệt thì tôi xin nói trước các chỉ tiêu đặc biệt đó là gì? Chỉ tiêu thứ
+[4:28] nhất là phải thu ngắn hạn của khách hàng. Trong nghiệp vụ kế toán chúng ta
+[4:34] biết là phải thu ngắn hạn là tài khoản nào?
+[4:37] 131 đúng không ạ? Nhưng thông thường trong các doanh
+[4:41] nghiệp là các anh để nguyên cái tài khoản 131 như vậy để các anh ghi nhận số
+[4:46] liệu thôi thì ngắn hạn cũng vào đây mà trung hạn cũng vào đây, dài hạn cũng vào
+[4:49] đây. Thì đến khi lập báo cáo kế toán, bảng cân nối kế toán này các anh không
+[4:55] có cách gì mà xác định được đâu là phải thu ngắn
+[4:59] hạn, đâu là phải thu dài hạn. Trừ trường hợp có một sổ theo dõi về thời hạn nợ
+[5:04] riêng. Như vậy lời khuyên là để chuẩn bị cho việc lập báo cáo cân đối kế toán cho
+[5:10] nó tốt thì chúng ta phải tiến hành chia tách tài khoản chi tiết khi hạch toán
+[5:14] trước. Cụ thể ở tài khoản 131 thì nên chia tách thành hai tiểu khoản là 131
+[5:22] ngắn hạn tức là phải thu ngắn hạn và 131 dài hạn tức là phải thu dài hạn. Có
+[5:29] những doanh nghiệp thì lại chia tách tài khoản này theo nhóm đối tượng công nợ
+[5:33] hoặc có những doanh nghiệp lại chia tách theo vùng của nhóm đối tượng hoặc đối
+[5:37] tượng công nợ thì tùy các anh chia tách thế nào cũng được thôi. Tuy nhiên phải
+[5:42] có cách gì đó để quản lý được đâu là nợ phải thu ngãn hạn và đâu là nợ phải thu
+[5:47] dài hạn. Chỉ tiêu ngay ở dưới đó là trả trước cho người bán ngắn hạn mã số 132
+[5:56] số thứ tự số 95. Số liệu được lấy chi tiết ở bên nợ của
+[6:02] tài khoản 3311. Tại sao tôi nói đây nó là tài khoản đặc
+[6:06] nó là cái chỉ tiêu đặc biệt ạ? Vì lúc trước ta phân tích trong phần cấu trúc
+[6:10] của bảng cân nối kế toán, chúng ta bảo rằng toàn bộ tài sản à tài khoản loại
+[6:14] một là tài khoản ngắn hạn đúng không? Là tài sản ngắn hạn đúng không? Loại hai là
+[6:19] dài hạn. Mà để lập được lên phần tài sản trên bảng cân đối kế toán thì chúng ta
+[6:24] lấy tài khoản tài sản. Nhưng rõ ràng ở đây 3311 là tài khoản nguồn vốn mà lại
+[6:29] lấy về phần là tài sản. Vì thế này, 331 là tài khoản công nợ, tức là nó là tài
+[6:36] khoản lưỡng tính. Tài khoản lưỡng tính có nghĩa là nó có thể dư nợ, có thể dư
+[6:40] có, có thể dư cả nợ cả có, tức là số dư hai bên. Vì chúng ta không thể bù trừ
+[6:45] được công nợ của những đối tượng khác nhau cho nhau. Và nên nhớ rằng nếu số dư
+[6:51] nợ của tài khoản phải trả thì đó là một khoản phải thu.
+[6:56] Nhắc lại số dư nợ của tài khoản phải trả thì là một khoản phải thu. Ngược lại số
+[7:04] dư có của tài khoản phải thu là một khoản phải trả. Cho nên để tính được
+[7:10] toàn bộ cái nợ phải thu thì chúng ta phải tính cả gì ạ? Cái phải thu của
+[7:15] khách hàng và phần trả trước cho nhà cung cấp hoặc trả thừa nhà cung cấp. Và
+[7:20] ứng dụng tài khoản 331 chúng ta cũng nên chia tách giống như tài khoản 131. 331
+[7:25] cũng nên chia tách thành hai tiểu khoản là 3311 là phải trả ngắn hạn, 3312
+[7:32] là phải trả dài hạn. Để đến khi lập báo cáo này, chúng ta mới lấy phần ngắn hạn
+[7:37] đưa vào gì? Chỉ tiêu ngắn hạn. Lấy phần dài hạn đưa vào chỉ tiêu dài hạn. 131 và
+[7:42] 331 là hai tài khoản điển hình của tài khoản lưỡng tính. Còn trong danh mục tài
+[7:47] khoản kế toán mà doanh nghiệp chúng ta áp dụng còn nhiều tài khoản có tính chất
+[7:51] tương tự như vậy. Ví dụ 141 cũng là tài khoản có tính chất công nợ, 334 cũng có
+[7:57] tính chất công nợ. Ví dụ như là 334 là phải trả công nhân viên đúng không ạ? Vế
+[8:00] thì nếu nó dư bên có là phần tiền lương mà ta chưa trả cho người lao động. Nhưng
+[8:04] nếu nó dư nợ có nghĩa là gì ạ? Ta trả thừa cho người lao động. Nếu trả thừa
+[8:09] thì phải thu hồi còn trả thiếu thì phải trả đi. Tức là để lập cho nó không sót
+[8:12] các chỉ tiêu nào, không sót một số liệu nào thì toàn bộ phần phải thu, chúng ta
+[8:17] sẽ lấy tất cả số dư bên nợ của tất cả các tài khoản phải thu và phải trả. Còn
+[8:23] phần nợ phải trả thì chúng ta phải lấy số dư bên có của cả tài khoản phải trả
+[8:27] và tài khoản phải thu. Thì đấy cái cách đọc tài liệu này là như vậy. Nếu chúng
+[8:31] ta trong quá trình lập mà chúng ta quên chỉ tiêu nào đó thì chúng ta mở tài liệu
+[8:34] này ra chúng ta xem chi tiết chỉ tiêu đó được tính như thế nào. Lấy số liệu từ
+[8:37] đâu. Trong bản hướng dẫn này chúng ta còn phát hiện ra thấy là ở một số chỉ
+[8:43] tiêu mà cái tài khoản để lấy lấy số liệu á tôi đánh dấu màu đỏ thì cũng hết sức
+[8:48] lưu ý cho. Nếu một tài khoản nào đó được chỉ dẫn lấy số liệu được đánh dấu màu
+[8:53] đỏ, nghĩa là tài khoản này không chia tách ngắn hạn và dài hạn mà phải theo
+[8:59] dõi riêng ngắn hạn và dài hạn ở bên ngoài. Do đó khi lập ở các chỉ tiêu ngắn
+[9:04] hạn, chúng ta đã lấy một phần số liệu lập ở phần ngắn hạn rồi. Cái phần màu đỏ
+[9:08] còn lại này là phần số liệu còn lại khi lập dài hạn. Cho nên chỗ này hướng dẫn
+[9:14] lấy số liệu người ta mới ghi là số dư nợ còn lại. Ví dụ tài khoản 141 hoặc ví dụ
+[9:20] như là 244 số dư nợ còn lại hoặc là ví dụ như là 2293
+[9:26] số dư có còn lại. 2293 là tài khoản dự phòng phải thu giải hạn khó đòi. Và cứ
+[9:31] tương tự như vậy. Tài liệu này có tám trang tất cả chúng ta nên in nó ra nha.
+[9:37] và để bên cạnh bàn của mình. Khi chúng ta lập báo cáo tài chính thì chúng ta dò
+[9:41] chỉ tiêu. Chúng ta trở lại với bảng số liệu ở trên Excel bắt đầu bằng bảng cân
+[9:46] đối tài khoản. Bảng này thì quá quen thuộc rồi đúng không ạ? Tất cả những ai
+[9:50] làm kế toán thì bảng số liệu này đều quá quen thuộc rồi. Để chuẩn bị số liệu cho
+[9:54] việc lập bảng cân đối kế toán và báo cáo tài chính khác, các anh chị nhớ cho các
+[9:58] tài khoản trực từ cấp hai, cấp ba thậm chí cấp 4, chúng ta muốn chia tách chi
+[10:03] tiết đến bao nhiêu thì chia tách. Nhưng chúng ta phải tuân thủ nguyên tắc
+[10:07] là các tài khoản chia tách chi tiết ở cấp ba chẳng hạn thì phải được cộng dồn
+[10:12] lên tài khoản cấp hai và các tài khoản chi tiết ở cấp hai thì phải cộng dồn lên
+[10:17] tài khoản cấp một. Hạch toán thì hạch toán ở tài khoản chi tiết trên sổ kế
+[10:21] toán nhưng khi lập báo cáo thì phải lấy số liệu của tài khoản tổng hợp. Ví dụ
+[10:27] tiền mặt là tài khoản cấp một là tài khoản tổng hợp có ba tiểu khoản là tiền
+[10:32] Việt Nam ngoại tệ vàng tiền tệ. Tài khoản tiền gửi ngân hàng thì cũng có các
+[10:37] tiểu khoản là tiền Việt Nam, tiền ngoại tệ và vàng tiền tệ trong ngân hàng. Có
+[10:41] thể doanh nghiệp cùng một lúc mở nhiều tài khoản ở nhiều ngân hàng khác nhau
+[10:45] thì chúng ta lại tiếp tục chia tách tài khoản 1121 thành các tiểu khoản tương
+[10:49] ứng với từng ngân hàng. Nhưng phải nhớ một quy tắc là các tiểu khoản chi tiết
+[10:53] đấy phải được cộng dồn vào gì ạ? Tài khoản cấp hai này. Rồi các tài khoản cấp
+[10:57] hai lại cộng dồn vào tài khoản cấp ba à xin lỗi cấp một. Cứ như vậy. Sau khi có
+[11:01] được bảng số liệu như thế này rồi và ở đây là bảng số liệu tôi chưa thực hiện
+[11:05] kết chuyển thì các vị sẽ thấy là số dư cuối kỳ ở trên bảng kết nối số phát sinh
+[11:09] này chúng ta nhìn thấy là nó chưa cần không có vấn đề gì. Vì khi nào chúng ta
+[11:14] kết chuyển và xác định kết quả xong nó mới cân. Nhưng số đầu kỳ thì chắc chắn
+[11:18] phải cân nhha. Rồi bây giờ chúng ta bắt đầu lập nhá. Bảng thứ nhất cân đối kế
+[11:24] toán. Chúng ta mở bảng cân đối kế toán ra. Ở đây tôi sẽ hướng dẫn hai phương
+[11:27] thức là lập thủ công. và sử dụng công thức hàng. Tôi để sẵn cái số liệu mẫu ở
+[11:33] đây để các vị tham khảo. Bây giờ chúng ta bắt đầu lập thủ công trước này. Cột
+[11:37] thứ nhất là số dư đầu kỳ thì chúng ta lấy số liệu ở cột thứ nhất và cột thứ
+[11:43] hai, tức là cột F này và cột G trên bảng cân đối tài khoản. Tức là số dư đầu kỳ
+[11:51] trên bảng cân đối số phát sinh. Còn số liệu quỹ kỳ ở cột K trên báo cáo
+[11:58] này thì chúng ta lấy số liệu quỹ kỳ trên bảng gì?
+[12:04] Cân đối tài khoản. Đây là cột F và cột G. Đây chúng ta lập chỉ
+[12:10] tiêu chi tiết trước này. Xong rồi cộng lên chỉ tiêu tổng hợp này. Chỉ tiêu đầu
+[12:14] tiên ở dòng số 8 tiền. Tiền được tính bằng tiền mặt cộng tiền đang chuyển cộng
+[12:20] tiền gửi thì chúng ta đặt công thức tính vào đây thôi. Chúng ta tính trực tiếp
+[12:24] thủ công thế này. Để tính được số liệu và ô tiền chúng ta
+[12:28] nhấp dấu bằng để cộng số liệu bằng thứ tự số 20 tức là dòng kế tiếp này
+[12:37] cộng với gì ạ? Tiền đang chuyển ở dòng kế tiếp cộng với
+[12:43] tiền gửi ngân hàng. Đây là tôi dùng công thức cộng thủ công.
+[12:50] Xong rồi nhấn enter là được. Ở trong cái bảng tôi gửi cho quý vị ở
+[12:54] đây tôi có ẩn đi một số cái cột đúng không? Ví dụ ở đây chúng ta nhìn thấy nó
+[12:59] từ cột C nó sang cột H ngay đây này. Đúng không? Tức là tôi ẩn thấy rất nhiều
+[13:02] cột ở trong đó. Thế bây giờ chúng ta muốn hiển thị các cái cột ra thì nó nhìn
+[13:06] nó hơi rắc rối nhá. Nhưng cứ hiển thị ra xem nó là cái gì đã. À chọn từ cột C đến
+[13:13] cột H này. Click phải chuột này. Xong chọn 2
+[13:20] thì nó sẽ hiện cho chúng ta cái phần hướng dẫn giống như
+[13:25] phần hướng dẫn giống như là trong cái bảng tài liệu hướng dẫn kia thôi.
+[13:30] Cách thứ hai, nếu ai biết sử dụng hàm xăm, chúng ta nhập bằng xăm, tức là phép
+[13:36] cộng của 3 ô ngay phía bên dưới. Tức là hàm xăm từ J9 đến J số 11.
+[13:47] Thế đã. Bây giờ tiếp theo này,
+[13:52] trong đó ở dòng số 9, số thứ tự số 20 khoản mục
+[13:58] tiền mặt. Tiền mặt thì chúng ta biết rằng chúng ta
+[14:03] phải lấy số dư bên nợ của tài khoản tiền mặt trên bảng cân đối số phát sinh.
+[14:09] Chúng ta làm thế này vì ở đây chúng ta có các bảng số liệu liên hoàn
+[14:14] thì chúng ta sẽ link trực tiếp số liệu qua nhau bằng cách này. Chúng ta đặt con
+[14:19] trỏ chuột ở ô cần lập báo cáo lấy số liệu. Cụ thể ở đây là tiền mặt. Chúng ta
+[14:24] nhấ dấu bằng. Xong rồi chúng ta chọn vào cái bảng cân
+[14:33] đối tài khoản. Chúng ta tìm đến số dư nợ của tài khoản
+[14:42] tiền mặt. Ở đây số dư nợ của tài khoản tiền mặt
+[14:49] bằng 4 tỷ17 đúng không? Chúng ta click vào ô này.
+[14:57] Như vậy là xong. Bây giờ chúng ta nhấn enter
+[15:02] thì số 4 tỷ nó được cộng vào
+[15:08] ở cái ô mà chúng ta vừa mới muốn lấy số liệu. Chỉ tiêu kế tiếp là tiền đang
+[15:13] chuyển. Chúng ta làm tương tự đặt dấu bằng vào đây rồi chuyển sang gì ạ? Bảng
+[15:19] cân đối tài khoản tìm đến tiền đang chuyển.
+[15:24] Tiền đang chuyển hiện tại số dư đang bằng gì ạ? Bằng 0. nhưng chúng ta vẫn
+[15:28] chọn để lỡ sau này chúng ta có số liệu thì nó sẽ tự tính qua.
+[15:37] Chi tiêu thứ ba là tiền gửi ngân hàng. Đây
+[15:44] tiền gửi ngân hàng được lấy số dư nợ của tài khoản 112. Chúng ta lại đặt con trỏ
+[15:49] chuột vào đây. Nhấn dấu bằng. Sau đó sang bảng cân đối tài khoản.
+[15:56] Chúng ta chọn vào số dư bên nợ của tài khoản tiền gửi ngân hàng. Chỗ này tôi có
+[16:00] số liệu là 277 đúng không? Click vào ô này. Enter. Rồi thì bây giờ chúng ta vừa
+[16:07] mới lập được gì ạ? Khoản mục thứ nhất là tiền
+[16:15] trên bảng cân nối kế toán gồm có hai khoản là tiền mặt và tiền gửi ngân hàng.
+[16:21] Trong đó tiền mặt bằng 4 tỷ ở đây, tiền gửi ngân hàng bằng 27 tỷ cộng dồn lên là
+[16:26] 7588. 7 tỷ 588.
+[16:31] Cứ như vậy chúng ta chọn tất cả các cái phần nền màu xanh này, các cái phần mà
+[16:35] người ta ghi ở cái dòng hướng dẫn là là hướng dẫn lấy số liệu này. Thì chúng ta
+[16:39] cứ lấy số liệu chi tiết từ bảng cân đối tài khoản sang theo nguyên tắc như vậy
+[16:43] nha. Chúng ta lấy tuần tự ở tất cả các tài khoản. Lấy hết vào đã.
+[16:48] Chỉ tiêu kế tiếp này các khoản tương đương tiền
+[16:52] thì ở đây các khoản tương đương tiền người ta hướng dẫn bằng mã số 40 cộng mã
+[16:56] số 45 tức là đây mã số 40 đây 45 đây thì tại ô này tôi sẽ đặt công thức tính
+[17:05] bằng 40
+[17:09] cộng với 45 nhưng vì nó không có số liệu chi tiết
+[17:15] cho nên giá trị thể hiện của nó bằng Mà số liệu chi tiết thì bằng hai khoản ở
+[17:21] tài khoản 12881 và 12811.
+[17:28] Cụ thể như sau. Các khoản đầu tư nắm giữ đến ngày đáo
+[17:33] hạn không quá 3 tháng. Nhấn dấu bằng. Chuyển sang bảng cân đối tài khoản.
+[17:43] Tìm vào cái tài khoản đó. Đây
+[17:49] tài khoản thứ nhất là 12881. Khoản thứ hai, tiền gửi có kỳ hạn không
+[18:02] quá 3 tháng. Chúng ta lấy số liệu ở số dư biên nợ của
+[18:09] tài khoản 12811 bằng
+[18:14] 12811 đâu đây? 12811
+[18:23] tiền gửi có kỳ hạn không quá 3 tháng số liệu đang là 10 chiều rồi
+[18:30] tiếp theo chứng khoán kinh doanh lấy số liệu ở tài
+[18:35] khoản 121 chúng ta đặt con trỏ chuột vào đây bằng
+[18:43] cân đối tài khoản số liệu ở 121 Chúng ta tìm đến tài khoản
+[18:49] 121 đây. Chứng khoán kinh doanh có giá trị 200
+[18:54] triệu. Ok.
+[18:58] Chỉ tiêu tiếp theo, dự phòng giảm giá chứng khoán kinh doanh. Lấy số liệu ở
+[19:02] bên có của tài khoản 2291. Dự phòng giảm giá chứng khoán kinh
+[19:09] doanh. Đây ở trên báo cáo tài chính, chúng ta lưu ý
+[19:25] tất cả các khoản mục được đánh dấu có dấu sao
+[19:32] là các khoản mục ghi số liệu âm. Thì trên báo cáo có hai loại khoản mục
+[19:38] ghi số liệu âm. Một là các khoản khấu hao.
+[19:43] Hai là các khoản dựng phỏng.
+[19:48] Bởi vì tài khoản kế toán khấu hao và dự phòng là kết cấu ngược so với tài khoản
+[19:54] cùng loại cho nên khi lập báo cáo tài chính nó thể hiện bằng số âm.
+[20:06] Rồi bây giờ chúng ta cộng dồn hai chỉ tiêu chi tiết này lên.
+[20:10] Mã số thứ tự 50 đầu tư tài chính ngắn hạn
+[20:16] được tính bằng 55 cộng 60 + 65
+[20:22] bằng 50
+[20:27] à xin lỗi 55 cộng 60
+[20:32] cộng 65 là đến đây. Nhưng chúng ta lại tiếp tục phải tính
+[20:40] chỉ tiêu số 65 là đầu tư nắm giữ đến ngày đáo hạn.
+[20:45] Đầu tư nắm giữ đến ngày đáo hạn nó bằng 70
+[20:50] cộng 75 cộng
+[20:55] 80. Bây giờ chúng ta chi tiết lập mã số 70.
+[21:02] Lấy số liệu ở tài khoản 12812 bằng chuyển sang bảng này 12812.
+[21:21] Mã số 75 trái phiếu dưới 12 tháng thì lấy số liệu tài khoản 12821
+[21:28] bằng tìm lấy tài khoản 12821 đây.
+[21:35] Số dư bên n mã số tiếp theo.
+[21:41] Các khoản đầu tư khác nắm giữ đến ngày đáo hạn trên 3 tháng nhưng không quá 12
+[21:45] tháng. Lấy số liệu tài khoản 12 82. 1 2 82 đây.
+[21:55] Rồi như vậy chúng ta đã lập được một số chỉ
+[22:00] tiêu tiền và các khoản tương đương tiền. Bây
+[22:04] giờ ta tính tiếp tiền và các khoản tương đương tiền thì bằng mã số 15 cộng mã số
+[22:09] 35. Mã số 15 đây.
+[22:16] Tiền cộng các khoản tương đương tiền
+[22:20] 35 đây. Tiếp theo ta lập đến phần các khoản phải
+[22:25] thu ngắn hạn gồm có một là phải thu ngắn hạn khách hàng, hai là trả trước cho
+[22:31] người bán ngắn hạn, ba là phải thu nội bộ ngắn hạn,
+[22:37] bốn là phải thu theo tiến độ hợp đồng xây dựng.
+[22:40] Năm là phải thu về cho vay ngắn hạn. Sáu là các khoản phải thu khác.
+[22:46] Bảy là dự phòng phải thu ngắn hạn khó đòi. Tám là tài sản thiếu chờ xử lý. Tài
+[22:52] sản thiếu chờ xử lý tức là nếu thiếu thì phải thu của ai đó. Cho nên nó là một
+[22:55] khoản phải thu. Phải thu ngắn hạn của khách hàng. Lấy số liệu ở tài khoản 131.
+[23:02] Nhưng ở đây tôi có chia tách tài khoản 131 thành hai tiểu khoản là 1311 ngắn
+[23:07] hạn và 1312 là dài hạn. Cho nên sẽ lấy tương ứng ở 1311.
+[23:14] Lấy như sau bằng sang bảng cân đối tài khoản tìm đến số
+[23:20] dư bên nợ của tài khoản 1311. 1311 số dư bên nợ là 22 tỷ 892.393920.
+[23:30] Enter. Khoản thứ hai, trả trước cho người bán
+[23:44] ngắn hạn. Trả trước cho người bán ngắn hạn, chúng ta lấy số liệu ở số dư bên nợ
+[23:50] của tài khoản 3311 bằng
+[23:58] phải trả người bán ngắn hạn, lấy số dư bên nợ là 21 tỷ 598. Ok.
+[24:05] Chỉ tiêu tiếp theo, các khoản phải thu nội bộ. Các khoản phải thu nội bộ ngắn
+[24:11] hạn gồm có phải thu nội bộ về chênh lệch tỉ giá,
+[24:17] phải thu nội bộ về chi phí đi vay đủ điều kiện được vốn hóa, phải thu nội bộ
+[24:21] khác. Thế thì tôi giải thích cái chỉ tiêu phải thu nội bộ.
+[24:25] Chúng ta hay nhầm lẫn giữa việc ví dụ bây giờ chúng ta phải thu của cán bộ
+[24:29] công nhân viên, phải thu của những người mà thành viên gõ vốn cho công ty. Chúng
+[24:33] ta hiểu nhầm rằng đó là phải thu nội bộ, tức là nội bộ trong công ty mình đúng
+[24:36] không? Thì không phải thế. Phải thu nội bộ trên bảng cân đối kế toán là chỉ tính
+[24:41] các khoản phải thu của các thành viên, đơn vị nội bộ như là chi nhánh, văn
+[24:46] phòng, đại diện nhá. Chứ không ví dụ như phải thu của cán bộ công nhân viên thì
+[24:51] không gọi là phải thu nội bộ. Vì đó là tính là phải thu khác đúng
+[24:55] không ạ? Hay là phải thu cái phần góp vốn thiếu của các chủ sở hữu góp vốn mà
+[25:00] công ty thì cũng là phải thu khác. phải thu nội bộ ở đây là chúng ta lấy số
+[25:05] liệu trên tài khoản 136 mà 136 thì chỉ áp dụng cho các đơn vị thành viên nội
+[25:10] bộ. Và cứ tương tự như vậy, chỗ nào ghi công thức cộng thì chúng ta cộng các mã
+[25:14] số, chỗ nào mà lấy số liệu chi tiết thì chúng ta lấy số liệu chi tiết ở bảng tài
+[25:18] khoản đó sang. Mặc dù là có tài liệu hướng dẫn, mặc dù là có gì ạ? Bảng số
+[25:24] liệu, bảng mẫu báo cáo đã được chuẩn bị sẵn nhưng chúng ta thấy rõ ràng cũng
+[25:27] không dễ dàng dễ dàng gì đúng không? Nhưng quan trọng là thế này thôi. Để
+[25:32] thành thạo được kỹ năng thì chúng ta phải làm vài lần. Chúng ta thử thực hành
+[25:37] với nhiều bộ số liệu khác nhau. Chúng ta sưu tầm các cái bộ à cân đối số phát
+[25:41] sinh và làm với nhiều bộ số liệu khác nhau thì chúng ta sẽ thành thạo thôi.
+[25:46] Và việc lập vừa rồi chúng ta thấy nó có thủ công không ạ? Nó quá thủ công mà cứ
+[25:51] làm như vậy thì thực sự là nó rất phức tạp đúng không? Nhưng mà đối với những
+[25:55] người không thành thạo về ứng dụng Excel thì không còn cách nào khác là anh phải
+[25:58] làm thủ công thế thôi. Vì làm gì còn cách nào tốt hơn đâu. Thì ngay sau đây
+[26:02] tôi sẽ hướng dẫn cái việc mà chúng ta lập nó đơn giản hơn.
+[26:12] 0:00 /

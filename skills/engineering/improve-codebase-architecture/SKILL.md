@@ -41,7 +41,8 @@ Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you'r
 
 Then use the Agent tool with `subagent_type=Explore` to walk the codebase. Don't follow rigid heuristics — explore organically and note where you experience friction:
 
-- Where does understanding one concept require bouncing between many small modules?
+- Where does understanding one concept require bouncing between many small modules? Trace one real flow end to end and record the files opened, in order (for example: a request that crosses seven files in four packages to reach one query). That count is the reading cost.
+- Where does a package exist only to connect two modules, or run SQL on a table another module owns? Flag duplicated persistence knowledge and unapproved schema access. Keep adapters that translate meaning between two models; treat strict table ownership as a policy the team selects, with reporting projections as a documented read-only exception.
 - Where are modules **shallow** — interface nearly as complex as the implementation?
 - Where have pure functions been extracted just for testability, but the real bugs hide in how they're called (no **locality**)?
 - Where do tightly-coupled modules leak across their seams?
@@ -50,7 +51,7 @@ Then use the Agent tool with `subagent_type=Explore` to walk the codebase. Don't
 
 Apply the **deletion test** to anything you suspect is shallow: would deleting it concentrate complexity, or just move it? A "yes, concentrates" is the signal you want.
 
-For a cycle, rank remedies in this order: **move responsibility** to its owner; **merge** modules when the boundary is fake; then introduce a small **consumer-owned** contract only when independent ownership is real. Reject a generic `common` extraction or interface-per-implementation proposal unless it improves the dependency DAG and locality rather than relocating coupling.
+For a cycle, rank remedies in this order: **move responsibility** to its owner; **merge** modules when the boundary is fake; then introduce a small **consumer-owned** dependency role only when independent ownership is real. A provider-owned published contract is a different tool, for a real cross-module integration, not a way to make an import compile. Reject a generic `common` extraction or interface-per-implementation proposal unless it improves the dependency DAG and locality rather than relocating coupling.
 
 ### 2. Present candidates as an HTML report
 
