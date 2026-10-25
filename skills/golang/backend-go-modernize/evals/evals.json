@@ -180,6 +180,31 @@
         { "id": "13.1", "text": "Uses errors.AsType[*os.PathError](err) or similar generic form instead of var+errors.As" },
         { "id": "13.2", "text": "Replaces the ptr[T] helper function with new() that accepts an initial value (e.g., new(30 * time.Second))" }
       ]
+    },
+    {
+      "id": 14,
+      "name": "go127-uuid-gofix-vet",
+      "prompt": "The service moves to Go 1.27. Modernize this code and say what else to check after raising the go directive.\n\n```go\npackage ids\n\nimport (\n    \"fmt\"\n    \"sync/atomic\"\n\n    \"github.com/google/uuid\"\n)\n\nvar requests int64\n\ntype NotFound struct{ ID string }\n\nfunc (e NotFound) Error() string { return \"not found: \" + e.ID }\n\nfunc NewID() string { return uuid.Must(uuid.NewV7()).String() }\n\nfunc Count() int64 { return atomic.AddInt64(&requests, 1) }\n\nfunc Lookup(id string) error {\n    return fmt.Errorf(\"lookup: %w\", &NotFound{ID: id})\n}\n\nfunc Last(items []string) {\n    for i := len(items) - 1; i >= 0; i-- {\n        fmt.Println(items[i])\n    }\n}\n```",
+      "trap": "Go 1.27 adds a stdlib uuid package whose NewV7 has no error return, the go fix atomictypes and slicesbackward analyzers, and a vet printf check that flags wrapping a *E with %w. Without the skill the model keeps google/uuid and does not know the new vet failure appears inside go test.",
+      "assertions": [
+        { "id": "14.1", "text": "Replaces github.com/google/uuid with the stdlib uuid package and drops uuid.Must because NewV7 returns no error" },
+        { "id": "14.2", "text": "Replaces atomic.AddInt64 on a plain int64 with atomic.Int64 (go fix atomictypes)" },
+        { "id": "14.3", "text": "Replaces the backward index loop with slices.Backward (go fix slicesbackward)" },
+        { "id": "14.4", "text": "Flags that go vet in Go 1.27 reports %w wrapping a *NotFound where NotFound implements error, and that this now fails go test" },
+        { "id": "14.5", "text": "Mentions that stdversion now runs by default in go test, so symbols newer than the go directive fail the build" }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "go127-json-v2-wire-format",
+      "prompt": "We upgraded to Go 1.27 and want faster JSON. A teammate proposes replacing every encoding/json call in our public API with encoding/json/v2 because it is now stable. Review the plan.",
+      "trap": "encoding/json/v2 is GA in 1.27 and encoding/json now runs on it, but v2 defaults change the output (nil slices as [], case-sensitive names, duplicate keys and invalid UTF-8 rejected). A model that only knows 'experimental' either refuses outright or approves a wire format change.",
+      "assertions": [
+        { "id": "15.1", "text": "States that encoding/json/v2 and jsontext are generally available in Go 1.27, not experimental" },
+        { "id": "15.2", "text": "Warns that v2 defaults change the wire format (for example nil slice marshals as [] instead of null) and that a public API needs the change confirmed before it ships" },
+        { "id": "15.3", "text": "Notes that encoding/json v1 already runs on the v2 implementation with an unchanged API, so a blanket swap is not needed for speed" },
+        { "id": "15.4", "text": "Recommends measuring a real payload first and pinning current behaviour with a test before adopting v2 anywhere" }
+      ]
     }
   ]
 }
