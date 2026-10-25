@@ -560,9 +560,9 @@ import _ "go.uber.org/automaxprocs"
 // GOMAXPROCS is set automatically from cgroup CPU limits
 ```
 
-### `encoding/json/v2` (experimental) _(Go 1.25+, GOEXPERIMENT=jsonv2)_
+### `encoding/json/v2` (experimental in 1.25) _(Go 1.25, GOEXPERIMENT=jsonv2)_
 
-Major JSON revision. **Experimental** — evaluate for new code, don't migrate production yet.
+An experiment in Go 1.25 and 1.26. It graduated in Go 1.27, see the Go 1.27 section.
 
 ---
 
@@ -606,11 +606,87 @@ Hybrid Public Key Encryption (RFC 9180) is now in the standard library.
 
 ### Modernized `go fix` _(Go 1.26+)_
 
-Go 1.26 rewrote `go fix` to apply modernize analyzers automatically:
+Go 1.26 rewrote `go fix` to apply modernize analyzers automatically (Go 1.27 changes the analyzer set, see below):
 
 ```bash
 go fix ./...  # applies safe modernize transformations
 ```
+
+## Go 1.27 Modernizations (August 2026)
+
+Source: <https://go.dev/doc/go1.27>. Check `go doc <pkg>` before relying on an API the release notes only name.
+
+### Methods may declare their own type parameters _(Go 1.27+)_
+
+```go
+type Set[T comparable] map[T]struct{}
+
+// Go 1.27: a method with its own type parameter.
+func (s Set[T]) Map[U comparable](f func(T) U) Set[U] { ... }
+```
+
+Before 1.27 this had to be a package-level function. Limits: interface methods still cannot declare type parameters, and a generic method cannot implement an interface method. `math/rand/v2` uses it: `(*Rand).N[Int intType](Int) Int`.
+
+### `encoding/json/v2` and `jsontext` are GA _(Go 1.27+)_
+
+`encoding/json/v2` (`Marshal`, `MarshalWrite`, `MarshalEncode`, `Unmarshal`, `UnmarshalRead`, `UnmarshalDecode`, all with variadic options) and `encoding/json/jsontext` (token-level `Encoder` and `Decoder`) are normal packages, no `GOEXPERIMENT`.
+
+`encoding/json` (v1) keeps its API but now runs on the v2 implementation. Options exist to restore v1 semantics.
+
+**Do not switch a service's wire format casually.** v2 defaults differ from v1: invalid UTF-8 and duplicate object names are rejected, a nil slice or map marshals as `[]` and `{}` not `null`, field names match case-sensitively. Ask before changing a wire format, pin the behaviour with a test, and measure first: on a 14 KB payload `encoding/json/v2` unmarshalled in 53 us against 68 us for v1 (Go 1.27.3, arm64), so the gain is modest.
+
+During the experiment these were removed or renamed, so code written against the 1.25 experiment breaks: the `format` and `unknown` tag options and `DiscardUnknownMembers` are gone, `inline` is now `embed`.
+
+### `uuid` in the standard library _(Go 1.27+)_
+
+```go
+import "uuid"
+
+id := uuid.NewV7()        // time-ordered, no error return
+s := id.String()
+u, err := uuid.Parse(s)   // also MustParse, New, NewV4, Nil, Max, Compare
+```
+
+Replaces `github.com/google/uuid` for generating and parsing. Note `NewV7` does not return an error, unlike `google/uuid.NewV7`.
+
+### `go fix` modernizers changed _(Go 1.27+)_
+
+- Added (descriptions from `go tool fix help <name>`):
+  - `atomictypes`: `var x int32; atomic.AddInt32(&x, 1)` becomes `var x atomic.Int32; x.Add(1)`.
+  - `embedlit`: drops the redundant nested literal for promoted fields, which Go 1.27 can set directly in a composite literal.
+  - `slicesbackward`: `for i := len(s) - 1; i >= 0; i-- { use(s[i]) }` becomes a `slices.Backward` loop.
+  - `unsafefuncs`: unsafe pointer arithmetic becomes `unsafe.Add` and related helpers.
+- Renamed: `waitgroup` is now `waitgroupgo`.
+- Removed: `fmtappendf`. Do not flag `[]byte(fmt.Sprintf(...))` any more.
+
+```bash
+go fix ./...   # review the diff: it touches many files
+```
+
+### `go vet` is stricter inside `go test` _(Go 1.27+)_
+
+- `printf` reports `fmt.Errorf("...: %w", p)` when `p` is a `*E` and `E` implements `error`. Wrapping the pointer defeats `errors.Is`. Wrap it as `error` if the pointer is intended: `var err error = &E{}`.
+- `stdversion` runs by default: a standard library symbol newer than the `go` directive fails `go test`. Raise the `go` directive or avoid the symbol.
+
+### Testing additions _(Go 1.27+)_
+
+- `synctest.Sleep(d)` is `time.Sleep` plus `synctest.Wait` inside a bubble.
+- `httptest.NewTestServer` serves over an in-memory fake network for use with `testing/synctest`.
+- The `goroutineleak` profile is GA (`runtime/pprof`, `/debug/pprof/goroutineleak`). Use it in tests and staging to find goroutines blocked forever.
+
+### Small additions _(Go 1.27+)_
+
+- `strings.CutLast` and `bytes.CutLast` replace a `LastIndex` plus slicing pair.
+- `net/url`: `URL.Clone` and `Values.Clone`.
+- Struct literal keys may be any valid field selector, so an embedded field can be set as `T{Embedded.Field: v}`.
+
+### Removed GODEBUG settings _(Go 1.27+)_
+
+`asynctimerchan` (timer channels are always unbuffered, remove `asynctimerchan=1` workarounds), `gotypesalias`, `tlsunsafeekm`, `tlsrsakex`, `tls3des`, `tls10server`, `x509keypairleaf`. The `go` command accepts a removed setting only at its final default value.
+
+### Deprecated _(Go 1.27+)_
+
+`crypto/tls.Config.Rand`: use `testing/cryptotest.SetGlobalRandom` for deterministic tests.
 
 ---
 
