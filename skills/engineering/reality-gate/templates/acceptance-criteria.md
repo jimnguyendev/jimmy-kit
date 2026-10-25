@@ -14,6 +14,9 @@ executor prose is not evidence.
   per item changes what a request costs without changing what it returns.
 - Task runner or test setup loads a developer env file (`-include .env` + `export`, dotenv in a
   test bootstrap)? `yes` → AC-008 is required.
+- Registers a loop, scheduler or listener, or changes a documented job schedule? `yes` → AC-009
+  is required: a boot check (every loop alive) AND a due-cycle check through the production
+  scheduler with a controlled clock.
 - Does a test compare an app-minted time with the database clock, or depend on a calendar date?
   `yes` → the two clock lines in the reviewer checklist apply.
 - Behavior change? `yes` → list tests allowed to change + invariant that must hold.
@@ -113,6 +116,21 @@ test "$make_status" -eq 0 && test "$bare_status" -eq 0 && test "$make_pass" -gt 
 # paste: both exits 0 and equal PASS counts; plus the harness line that clears the .env.example keys
 ```
 
+## AC-009 — long-running registrations (required when a loop, scheduler or listener is registered, or a documented job schedule changes)
+
+Four stages, each with its own evidence (mechanism 5). A boot check alone cannot prove a daily job ran.
+
+```
+# registration: the design document's job table against the registered jobs (status, schedule,
+#   activation condition; explicitly deferred entries allowed)
+# survival: boot the real process on the real datastore; every registered loop is alive after N seconds
+go test -tags integration -count=1 -v -run '^Test<Process>BootKeepsEveryLoopAlive$' ./<package>/
+# execution: one due cycle through the production scheduler on a controlled clock, observable result asserted
+go test -tags integration -count=1 -v -run '^Test<Job>RunsWhenDue$' ./<package>/
+# shutdown: cancel, clean stop within the timeout (same boot test)
+# paste: the job-table diff and the --- PASS lines; for a leased job also the contender, expiry and recovery test
+```
+
 ## Reviewer checklist
 
 - [ ] Every AC-002 output pasted, not summarized.
@@ -127,6 +145,7 @@ test "$make_status" -eq 0 && test "$bare_status" -eq 0 && test "$make_pass" -gt 
       lost its bound; no large column was added to a SELECT that also sorts, groups or
       de-duplicates.
 - [ ] AC-008 pasted when an env file is loaded: same PASS count through the task runner and directly.
+- [ ] AC-009 pasted when a loop, scheduler or listener is registered: job-table diff, boot-survival run, due-cycle run on a controlled clock; for a leased job, contender, expiry and recovery on the real datastore.
 - [ ] No exact comparison between an app-minted time and the database's `now()`; rows are made
       due on the database clock, not by sleeping; time assertions state a tolerance.
 - [ ] No test depends on a literal calendar date staying in the future.

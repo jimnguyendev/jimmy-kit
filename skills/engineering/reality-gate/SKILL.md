@@ -11,7 +11,7 @@ user-invocable: true
 license: MIT
 compatibility: "Stack-agnostic rules; bundled audit script counts Go repos in depth and degrades gracefully elsewhere."
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 allowed-tools: Read Edit Write Glob Grep Bash Agent AskUserQuestion
 ---
 
@@ -64,7 +64,7 @@ for an agent: it optimizes for the AC it is given.
 | 2 | Hand-written test schema, invented fixtures | DDL in a test helper "with only the columns readers need"; no fixture came from a real row | DDL dumped from the real read-only DB; fixtures are sanitized real rows/documents |
 | 3 | Tautological fakes at the seam | dozens of `fakeXRepo`; tests assert recorded calls or SQL text | fakes for pure logic only; every DB-owning file gets a container test; ban SQL-text asserts |
 | 4 | Replay suite outside the repo | reports name a script git does not contain | tracked `scripts/certify/`, parameterized by base URL and DSN, named in AC |
-| 5 | Wiring and config untested | many env keys, few in `.env.example`; composition tests pass empty `Deps{}` | one boot test per process; env-example drift check |
+| 5 | Wiring and config untested | many env keys, few in `.env.example`; composition tests pass empty `Deps{}`; scheduled work no test ever started | one boot test per process that also asserts every loop stays alive, a due-cycle test for scheduled work, job-table diff (REFERENCE §5); env-example drift check |
 | 6 | No client contract evidence | zero golden responses; many `omitempty`; OpenAPI never validated | golden pairs captured from the real client; response validated against the schema |
 | 7 | Test engine is not the real engine | container image pinned to a major (`mysql:8`) while the deployed server reports another version; nobody compares them | pin the image to the deployed version from ONE constant; an `engine-parity` script prints both `VERSION()`s side by side (template in REFERENCE §7) |
 | 8 | Cost blindness at the seam | the AC for a seam change states no cost number at all — queries, rows or bytes per request, calls to another service, response size — so a correct-but-expensive change is green on every gate | AC-007: one measured number per seam touched, taken on real-sized data; the reviewer reads a number, not a judgement (REFERENCE §8 lists which number per seam) |

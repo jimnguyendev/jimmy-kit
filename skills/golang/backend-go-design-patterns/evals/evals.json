@@ -247,5 +247,31 @@
       {"id": "18.4", "text": "Add method validates currency match before addition"},
       {"id": "18.5", "text": "Constructor validates input (e.g. currency is required)"}
     ]
+  },
+  {
+    "id": 19,
+    "name": "ddd-published-contract-when-to-add",
+    "description": "A modular monolith where module B must read module A's data; the agent must choose between a consumer-owned interface and a published contract, and must keep transactions and SQL ownership straight.",
+    "prompt": "Our Go service is one binary on one MySQL. The recommendation module needs to know which products a store sells right now, and the loyalty module wants to write a bean count onto the orders row inside its own transaction. Currently a glue package runs SQL against the catalog and order tables for both. How should these modules talk?",
+    "trap": "Passing a transaction handle across modules, leaving SQL on a table with a module that does not own it, or adding a contract package to every module by reflex.",
+    "assertions": [
+      {"id": "19.1", "text": "Puts the products-sold query with the catalog module and exposes it through a published contract package that the catalog Service satisfies, with the SQL staying in catalog's repository"},
+      {"id": "19.2", "text": "Does not pass a database transaction through a contract; the loyalty module publishes an outbox event in its own transaction and the order module applies it in its own"},
+      {"id": "19.3", "text": "States the contract rules: it owns its DTOs and errors, imports no module, takes tenant identity as an argument, and construction order is acyclic as well as the import graph"},
+      {"id": "19.4", "text": "Distinguishes a provider-owned published contract from a consumer-owned dependency role and says when NOT to add a contract, e.g. not merely to make an import compile"},
+      {"id": "19.5", "text": "Keeps adapters that translate meaning and treats strict table ownership as a selected policy, with reporting projections as a documented read-only exception"}
+    ]
+  },
+  {
+    "id": 20,
+    "name": "ddd-do-not-adopt-full-ddd",
+    "description": "The agent is asked to apply full DDD to a small service and must adopt only the minimal useful part.",
+    "prompt": "We want to adopt DDD properly in our Go modular monolith with about twenty small features: aggregate roots, specifications, a repository per aggregate and domain events on entities. Is that what we should do?",
+    "trap": "Adopting the whole DDD toolbox by reflex for a service whose real problem is module coupling and unclear transaction ownership.",
+    "assertions": [
+      {"id": "20.1", "text": "Recommends the smallest pattern that fixes the actual problem (published contracts, SQL with the owner, transaction boundary per module) rather than the full toolbox"},
+      {"id": "20.2", "text": "Describes aggregate roots, specifications, repository per aggregate and a broker for in-process events as not required by that pattern, not as universally bad"},
+      {"id": "20.3", "text": "Makes the adoption conditional on a demonstrated cost and defers to the target repository's own ADRs"}
+    ]
   }
 ]

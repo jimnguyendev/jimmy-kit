@@ -82,6 +82,19 @@
         "Makes the row due on the database clock in the test",
         "States what the skew does in production"
       ]
+    },
+    {
+      "id": 8,
+      "name": "long-running-registrations",
+      "prompt": "Tests are green and the worker process boots, but a scheduled nightly job never produced output and one registered loop returns after a single pass, which makes the whole worker exit a moment after start. Design the evidence you would require before merging a fix.",
+      "expected_output": "Four stages with their own evidence, not a single boot check.",
+      "assertions": [
+        "Separates registration completeness, startup survival, execution of a due cycle and shutdown",
+        "Boots the real process against the real datastore and asserts every registered loop stays alive, and says this does not prove a scheduled job ran",
+        "Drives a due cycle through the production scheduler with a controlled clock and asserts the observable result",
+        "Reconciles the design document's job table against registered jobs by status, schedule and activation condition, allowing explicitly deferred entries",
+        "For a lease-guarded job names the guarantee relied on (mutual exclusion, once per period, idempotent effects) and requires contender, expiry and recovery evidence on the real datastore"
+      ]
     }
   ]
 }

@@ -180,7 +180,7 @@ func (h *PlaceOrderHandler) Handle(ctx context.Context, cmd PlaceOrderCommand) e
 
 ## Bounded Contexts
 
-Each bounded context maps to a top-level package under `internal/` with its own domain, application, and adapters. Contexts communicate through domain events or explicit anti-corruption layers — never by importing each other's internal types directly.
+Each bounded context maps to a top-level package under `internal/` with its own domain, application, and adapters. Contexts communicate through domain events or explicit anti-corruption layers — never by importing each other's internal types directly. In a single binary over one database, a published contract package (below) is a lighter alternative for synchronous reads.
 
 If two contexts constantly need each other's internals, the split is probably wrong. Revisit the boundary before adding more abstraction.
 
@@ -209,6 +209,46 @@ func (s *OrderPlacedSubscriber) OnOrderPlaced(evt events.OrderPlaced) error {
 This prevents billing from depending on order's internal types.
 
 For large systems, each context can be its own Go module in a workspace (`go.work`). See the `backend-go-project-layout` skill for workspace setup.
+
+### Published contracts in a single-binary modular monolith
+
+Optional pattern, for when one module must read another module's data synchronously and the team wants the data's schema, tenant guard and tests to stay in one place. It follows the idea of integration services and contracts in ABP Framework (a module publishes an API package; callers reference only that package). A target repository's own ADRs outrank this section.
+
+**Two different things, do not mix them up:**
+- A **consumer-owned dependency role** is a small interface the consumer declares for something it needs (the Go default; see the circular-dependency order in `backend-go-project-layout`).
+- A **provider-owned published API** is a `contract/` package the owner publishes for real integration requirements. Add one only when an actual integration needs it. Never add one just to make an import compile. For a cycle keep the order: move the responsibility, merge a false boundary, then introduce a contract.
+
+**Shape:**
+
+```go
+// internal/catalog/contract/contract.go — imports no module
+package contract
+
+type Product struct{ ID, Name string; Price int64 }
+
+type StoreShelf interface {
+    SellableProducts(ctx context.Context, tenantID string, storeID string, ids []string) (map[string]Product, error)
+}
+```
+
+```go
+// internal/catalog/integration.go — the owner's Service satisfies it; its SQL stays in catalog's repository
+var _ contract.StoreShelf = (*Service)(nil)
+```
+
+```go
+// composition root: pass the Service straight in, there is no adapter layer
+recommend.New(recommend.Deps{Shelf: catalogSvc})
+```
+
+**Rules that keep it safe:**
+- The contract owns its DTOs, errors and event payloads. It does not alias the owner's internal types and does not import any module, so import cycles cannot form through contracts. Construction order must be acyclic as well: build modules in dependency order.
+- Tenant identity is an explicit argument. A contract carries no database handle and no transaction.
+- Transactions: one use case is one transaction inside the owner, including its outbox and inbox rows. An effect on another module travels as an outbox event the other module applies in its own transaction. Lock the row first, apply the rules, write last, lock tables in one fixed order, and give every use case that takes a lock a concurrent test. Keep the pure rules free of the database. (The boundary and rules-on-the-model points follow threedots.tech "Database transactions in Go", which does not cover deadlocks or retries.)
+- Contract tests live next to the owner and cover tenant isolation and missing or NULL rows (a `LEFT JOIN` filtered with `NOT (a OR b)` silently drops rows whose joined side is NULL).
+- Strict table ownership (a module's SQL names only its own tables) is a policy a team selects, ideally enforced by a lint rule with an owner map. A glue adapter that translates meaning between two models stays valid; one that only runs SQL on a table it does not own is the smell. Reporting that must join several modules' tables is a documented, read-only, bounded exception.
+
+**Not required by this pattern:** aggregate roots, specifications, a repository per aggregate, permission trees, a broker for in-process events.
 
 ## Wiring
 

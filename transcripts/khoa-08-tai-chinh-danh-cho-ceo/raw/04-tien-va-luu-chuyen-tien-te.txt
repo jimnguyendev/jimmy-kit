@@ -1,0 +1,679 @@
+[0:11] Nội dung tiếp theo là thuế thu nhập doanh nghiệp.
+[0:27] thuế thu nhập doanh nghiệp.
+[0:30] >> Hai cái xác thuế vừa qua là thuế tác trị gia tăng và thuế thu nhập cá nhân mà
+[0:35] trao đổi với mọi người. Chúng ta nhận thấy rằng đó không phải thuế của doanh
+[0:38] nghiệp đúng không? Doanh nghiệp chỉ lào làm thay thôi, làm hộ thôi.
+[0:44] >> Đây mới là thuế của ta. Thuế thu nhập doanh nghiệp mới là thuế thực sự của
+[0:50] doanh nghiệp. Vì về mặt bản chất cái này nó tính trên
+[0:54] cái gì ạ?
+[0:56] >> Nó tính trên lợi nhuận của doanh nghiệp
+[1:04] với mức thuế xuất phổ thông hiện nay là bao nhiêu ạ?
+[1:08] >> 20%. Hy vọng theo một lộ trình nào đó trong
+[1:13] vài năm tới có thể xuống đến 17%. đấy là cam kết có lộ trình
+[1:20] trước kia là 32 xong xuống 28 xong xuống 25 xuống 22 bây giờ là 20
+[1:27] ngoài ra thì một số ngành hàng đặc biệt một số loại hình doanh nghiệp và địa bàn
+[1:32] đặc biệt doanh nghiệp có thể được miễn một khoảng thời gian
+[1:36] à và chịu hoặc có những doanh nghiệp chịu 10% 15%
+[1:41] và 5% đây là các mức thuế xuất thuế thu nhập doanh nghiệp ưu đãi
+[1:48] muốn biết ông nào được ưu đãi về cha trong thông tư số 96
+[1:57] và trước đó là thông tư số 78 hướng dẫn thực hiện thuế thu nhập doanh nghiệp.
+[2:04] Cho đến ngày nay thì các quy định về thuế thu nhập doanh
+[2:09] nghiệp vẫn chỉ được hướng dẫn bởi hai văn bản này mà thôi.
+[2:13] Chưa có gì thay đổi. Bây giờ lợi nhuận của doanh nghiệp, lợi
+[2:25] nhuận của doanh nghiệp thì được tính bằng cái gì anh chị? Bằng doanh thu
+[2:30] cộng với lại thu nhập khác. thu nhập khác cộng tiếp với gì? Doanh
+[2:37] thu tài chính mà mang trừ đi tất cả các khoản chi phí.
+[2:44] Đó là công thức tính lợi nhuận. Đơn giản thế thôi.
+[2:47] Bây giờ ta phân tích từng cái một này. Doanh thu có được từ đâu?
+[2:53] Doanh thu có được từ quá trình bán hàng và cung cấp dịch vụ của doanh nghiệp đối
+[2:58] với người mua. Không phân biệt người mua đó là tổ chức hay cá nhân hay là cái gì.
+[3:03] Tuy nhiên, tuy nhiên chúng ta cần phải nhớ cho này, doanh thu này chúng ta cần
+[3:10] phải biết được chính xác cái thời điểm, thời điểm
+[3:16] và điều kiện để ghi nhận.
+[3:24] >> Doanh thu phát sinh thời điểm nào? Ai làm kế toán nói sở hữu hàng
+[3:30] >> ờ nó thuộc bài đúng không? Doanh thu phát sinh tại thời điểm mà
+[3:36] chuyển giao quyền sở hữu hàng hóa dịch vụ giữa bên mua và bên bán
+[3:43] không phân biệt đã thu được tiền hay chưa. À nó chết ở cái ý đằng sau nhé. nó
+[3:50] chết ở cái ý là người mua đã hoặc đã chấp nhận thanh toán, nghĩa là không
+[3:56] phân biệt đã thu tiền hay chưa thì đều được ghi nhận là doanh thụ.
+[4:03] Cho nên kể cả trường hợp ông xuất hóa đơn, ông xuất hóa đơn rồi nhưng ông chưa
+[4:10] thu tiền thì ông đã phải tính và nộp thuế thu
+[4:16] nhập doanh nghiệp chưa? tính rồi
+[4:19] >> và kỳ tính thuế thu nhập doanh nghiệp là tính theo kỳ của năm tài chính
+[4:27] và từng quý quý thì có hoạt động là tạm tính và tạm nộp.
+[4:35] Ngày xưa là phải nộp cả cái báo cáo tạm tính. Bây giờ khỏi cứ tạm nộp thôi.
+[4:42] Tự tính ra xong tự tạm nộp. thì đó là bản chất của thuế thu nhập trậ
+[4:51] doanh nghiệp thì bắt đầu bằng cái gọi là doanh thu.
+[4:55] Vậy về mặt chứng từ vì doanh thu tính tại thời điểm là nó chuyển giao quyệt sở
+[5:01] hữu hàng hóa dịch vụ không phân biệt đã thu tiền hay chưa thì nó thể hiện bằng
+[5:05] chứng trên giấy tờ nào? Hóa đơn hay phiếu thu?
+[5:16] Thế bây giờ tôi ký hợp đồng với ông xong rồi tôi bảo tôi bán cho ông năm cái bảng
+[5:22] này để ông về ông đi dạy phong thủy. Được chưa? Thế xong rồi ông tôi bảo ông
+[5:27] là thôi bây giờ ông trả trước cho tới 50% giao hàng xong thì tôi cho ông nợ 15
+[5:30] ngày. Thế ông lại bảo với tôi là thầy thu tiền cũng được nhưng bên em là dùng
+[5:34] hạn mức ngân hàng có hóa đơn nó mới giải ngân. Thầy xuất hóa đơn trước cho em.
+[5:37] Tôi bảo ừ thế là tôi xuất hóa đơn luôn. Được chưa? Hàng tôi chưa giao
+[5:45] >> nhưng tôi xuất sớm không sao.
+[5:48] >> Xuất sau với phạt thôi. Được chưa?
+[5:51] >> Ờ đấy thì tôi chấp nhận tôi chấp nhận xuất sớm như vậy. Trong trường hợp đấy
+[5:55] trong trường hợp đấy là rõ ràng hóa đơn tôi xuất rồi nhưng vì tôi chưa giao hàng
+[6:00] cho ông là chưa có sự chuyển giao quyền sở hữu. Bây giờ trường hợp thứ hai giao
+[6:05] hàng xong rồi nhưng thằng bên kia nó chưa thanh toán thì doanh nghiệp nó hay
+[6:08] ém hóa đơn lại phải không? chuyên môn làm thế. Nó ém
+[6:13] hóa đơn lại thì đến lúc nào nó trả tiền xong rồi thậm chí hàng giao cả năm rồi
+[6:17] thì bắt đầu lúc đấy ta mới xuất hóa đơn. Như vậy thì rõ ràng hóa đơn không phải
+[6:22] là thời điểm xác lập doanh thu. Rõ chưa nào? Vậy bản chất là hóa doanh
+[6:28] thu được xác lập tại thời điểm giao nhận.
+[6:34] giao nhận. Cho nên trong hoạt động làm về thương mại, bán hàng hóa hữu hình thì
+[6:40] có một thứ giấy tờ doanh nghiệp không bao giờ được bỏ, đó là biên bản hoặc
+[6:45] phiếu giao hàng. Rõ chưa? Hoặc là biên bản giao hàng. Đối
+[6:50] với dịch vụ thì đó là biên bản nghiệm thu dịch vụ hoàn thành. Đối với vận tải
+[6:55] thì đó là gì ạ? Bảng kê đối soát vận tải hoàn thành trong một khoảng thời kỳ nào
+[7:01] đó. Đối với xây lắp thì đó là biên bản nghiệm thu từng hạng mục công việc tuyệt
+[7:07] đối không được bỏ qua. Vì cái này nó không những ảnh hưởng đến thời điểm ghi
+[7:11] nhận doanh thu, nó còn ảnh hưởng đến một cái nữa nó gọi là cái quyền đòi,
+[7:17] quyền đòi nợ đúng không? Trong khi đó chúng ta rất
+[7:23] hay dễ rãi với cái quyền đòi nợ này của chính mình. Nghĩa là cứ anh anh em em mà
+[7:28] thôi giao hàng đấy nhá. Hôm nay anh đến là có mấy thằng đấy anh giao hàng anh để
+[7:31] đấy rồi nhớ thanh toán cho anh đúng hạn nhá. Vâng ạ. Nửa tháng sau gọi lại mà nó
+[7:36] vẫn vâng ạ. Chết liền.
+[7:38] >> Đang bận nhá. Đang đi họp chưa giải quyết được. Cho nên tại thời điểm giao
+[7:43] nhận hàng hóa nó xác lập cái quyền đòi nợ của chúng ta chứ không phải tại thời
+[7:48] điểm xuất hóa đơn. Đấy cho nên doanh nghiệp phải nhớ cho
+[7:51] trong cái bộ hồ sơ mua hàng và bán hàng thì nhất định cái phiếu giao nhận hoặc
+[7:56] phiếu nghiệm thu dịch vụ hoàn thành là điều kiện tiên quyết trong bộ hồ sơ.
+[8:02] Vậy kèm theo là hóa đơn và chứng từ thanh toán hợp đồng là phụng. Vì luật
+[8:07] pháp không có chỗ nào bắt rằng phải ký hợp đồng giấy. Vì bản thân các anh giao
+[8:11] kết với nhau bằng miệng ấy thì cũng là hợp đồng. Nhưng thường giao kết bằng
+[8:15] miệng nó ra thứ khác nhá. Nó không ra nó không ra hợp đồng.
+[8:19] >> Nhưng mà em hỏi tí trong cái hợp đồng thì nó có hạn là ngày bắt đầu và ngày
+[8:22] kết thúc.
+[8:23] >> Ừ
+[8:26] >> Đúng rồi. Nếu muốn điều chỉnh thì phải điều chỉnh thời gian nghiệm thu
+[8:34] chứ đã nghiệm thu rồi thì phải ra hóa đơn
+[8:38] nhỉ. Đã nghiệm thu rồi là phải ra hóa đơn.
+[8:40] >> Thế còn cái hợp đồng không quan trọng. trọng
+[8:42] >> cái khoảng thời gian giữa cái lúc mà nghiệm thu đến cái lúc hóa đơn ấy là
+[8:47] được phép là tối đa bao nhiêu ngày
+[8:49] >> trong ngày
+[8:50] >> trong ngày
+[8:52] >> luôn và ngay nh
+[9:00] >> vậy liên quan đến thu nhập tính thuế thu nhập doanh nghiệp khoản thứ nhất chúng
+[9:03] ta nói với nhau là doanh th khoản thứ hai chúng ta nói với nhau là
+[9:08] doanh thu nhưng mà doanh thu tài chính. Doanh thu tài chính có được từ các nguồn
+[9:15] sau. Nguồn một, anh có tiền anh gửi trong ngân hàng
+[9:21] hoặc tiền tài khoản tại ngân hàng nó tính lãi không kỳ hạn. Cái tiền lời đó
+[9:25] anh nhận được thì gọi là doanh thu tài chính từ tiền lãi. Thứ hai, anh dư tiền
+[9:31] anh cho vay, anh thu được tiền lời. Đúng chưa? thu được tiền lời. Thế nếu
+[9:38] anh là cá nhân anh cho vay thì vừa rồi nói về thuế thu nhập cá nhân nó là 5%
+[9:43] nhưng bây giờ nếu là doanh nghiệp mình dư tiền cho vay thì nó lại không gì ạ?
+[9:48] Nó lại không tính kiểu đấy. Nó gộp vào cái doanh thu tài chính này cơ để cuối
+[9:52] năm ông tính cái thuế thu nhập doanh nghiệp. Được chưa? Cái nguồn thứ ba là
+[9:57] anh mang đi đầu tư vào công ty khác xong anh hưởng cái lợi nhuận.
+[10:06] Nguồn thứ thứ tư là anh đi mua chứng khoán
+[10:11] xong anh bán chứng khoán anh có lời là nguồn thứ tư tạo ra doanh thu tài
+[10:17] chính. Cái nguồn thứ năm tạo ra doanh thu tài chính là chênh lệch có lợi về tỉ
+[10:23] giá. chênh lệch có lợi
+[10:28] về tỉ giá. Đấy là năm khoản thuộc về doanh thu tài
+[10:33] chính. Chênh lệch lợi về tỉ giá là thế này. Ví
+[10:37] dụ bây giờ tôi giao dịch với lại thằng nước ngoài, ngày hôm nay tôi phát sinh
+[10:40] giao dịch với nó là 10.000 đô. Tỷ giá hôm nay ví dụ như 23.500
+[10:45] nhưng mà đến lúc tôi thanh toán cho nó thì tỉ giá nó tụt xuống còn 234.
+[10:51] Thì trong trường hợp đấy là tại thời điểm tôi ghi nhận là tôi ghi nhận với
+[10:54] giá 23.5 nhưng đến lúc tôi thực tế chi trả tôi phải bỏ ra một lượng tiền Việt
+[10:58] ít hơn để trả cùng cho khoảng 10.000 đô đó. Vậy trong trường hợp đó là tôi lợi
+[11:02] tỉ giá. Vậy khoản chênh lệch lợi đó được tính bằng tỉ giá liên ngân hàng tại thời
+[11:07] điểm ghi sổ với thời điểm thanh toán nó gọi là lãi tỉ giá do thanh toán. Trường
+[11:12] hợp thứ hai, hôm nay có một thằng nó nợ tiền tôi 10.000 đô ở nước ngoài nhé.
+[11:18] 10.000 ngà đô nhưng giá đô hôm nay là 23.4 nhưng tại thời điểm nó trả cho tôi
+[11:23] thì tỷ giá lên 23.5 vậy tôi vẫn lợi một giá gì trong trường hợp đấy cũng tạo ra
+[11:28] phát sinh là gì ạ? Chênh lệch lợi tỷ giá thì nó cộng vào thu nhập doanh thu hoạt
+[11:34] động tài chính. Được chưa nào? Khoản thứ ba là khoản thu nhập khác.
+[11:44] Thu nhập khác có được từ các nguồn sau. Nguồn đầu tiên là được cho tặng
+[11:52] khuyến mãi không thu tiền. Thí dụ mình mua hàng nhưng mà được bên kia nó cho
+[11:57] hàng, tặng hàng, khuyến mãi hàng cho mình, mình nhận về rồi sau mình bán thì
+[12:01] đó là gì ạ? Cái giá trị được cho tặng này được tính vào thu nhập khác. Được
+[12:06] chưa? Trường hợp thứ hai là thanh lý tài sản.
+[12:14] Tài sản với mục đích là mua về để dùng. nay không dùng nữa mang bán thanh lý đi
+[12:20] thì cái giá trị chúng ta bán được đó không phân biệt đã thu tiền hay chưa, nó
+[12:26] tạo ra một khoản gọi là thu nhập khác. Khoản thứ ba,
+[12:32] khoản thứ ba đó là trường hợp các khoản đã xóa nợ rồi.
+[12:38] Xóa nợ rồi nhưng bây giờ lại thu được. Các khoản nợ tôi đã xóa rồi nay tôi thu
+[12:46] được thì cũng tạo ra một khoản thu nhập khác.
+[12:54] Các khoản như là tôi phạt bồi thường bên kia, các bên có liên quan với tôi nó vi
+[12:59] phạm và tôi phạt bồi thường thì đấy cũng tạo ra các khoản thu nhập khác. Như vậy
+[13:03] nói về dòng vào thì thuế thu nhập doanh nghiệp được cấu tạo bởi doanh thu, doanh
+[13:08] thu tài chính và thu nhập khác hết. Có ba khoản. Ba khoản đấy tương ứng với ba
+[13:14] mảng màu mà tôi thể hiện ở trên này. Ba mảng màu này đối ứng với nó là các
+[13:21] tài khoản hạch toán này. Xin kế toán lưu lại cho.
+[13:30] Thế đó là phía của gì ạ? Phía của doanh thu và thu nhập.
+[13:38] Bây giờ để tính được thuế thì chúng ta phải tính được ra tiền lãi.
+[13:43] Phải phải tính được ra lãi đúng không? Tức là tính được ra lợi nhuận.
+[13:48] Thế thì để tính được lợi nhuận thì chúng ta có các khoản chi phí sau.
+[13:56] Chi phí chi phí thứ nhất là giá vốn.
+[14:04] Chi phí thứ hai, chi phí thứ hai là chi phí tài chính.
+[14:13] Chi phí thứ ba là chi phí bán hàng. Chi phí thứ tư là chi phí quản lý doanh
+[14:21] nghiệp. Chi phí thứ năm là chi phí khác.
+[14:28] Ở Việt Nam nó hay lắm. Cứ liệt kê một hồi xong không hết còn cái khác.
+[14:34] Kiểu như bạn gái cũng kê khai 1 2 3 4 năm xong còn cái khác. Vợ cũng kê khai
+[14:39] thế sướng nhỉ. Bây giờ chúng tôi mới tôi mới phân tích
+[14:45] này bạn nội hàm của từng cái một nhá. Bây giờ giá vốn là cái gì?
+[14:56] Giá vốn là gì? chi phí cấu thành giá trị của sản phẩm à
+[15:00] >> à giá vốn là những chi phí mà cấu thành cấu thành nên sản phẩm dịch vụ mà ta bán
+[15:10] ra đúng không? Nhưng bây giờ chia theo từng loại doanh nghiệp một nhá. Bây giờ
+[15:16] với ông sản xuất thì sao? Thì đây là giá thành có phải không? Là
+[15:22] giá thành sản xuất. Như vậy nếu ông nào làm sản xuất mà
+[15:26] không tính giá thành có nghĩa là giá vốn của ông tào lao
+[15:30] có đúng không? Đối với ông thương mại thì sao ạ?
+[15:33] >> Nhập
+[15:34] >> à là giá nhập. Đây là nói chung chung thôi nhá. Nhưng
+[15:38] mà thực chất là nhập nó có nhiều lần nhập. Nhiều nhà cung cấp để nhập là
+[15:42] người ta phải tính giá trung bình hoặc giá nhập trước suất trước hoặc giá gì ạ?
+[15:45] Thực tế đích danh cơ. Ba phương pháp tính giá. Mà riêng trung bình thì lại có
+[15:49] trung bình gì? Tức thời di động. Tức là bình quân gia quyền liên hoàn. Thứ hai
+[15:54] là trung bình tháng, trung bình quý và trung bình quý kỳ. Bốn phương pháp tính
+[15:57] trung bình cộng với hai phương pháp kia là sáu cách tính giá khác nhau. Sáu cách
+[16:02] tính giá tạo ra sáu cái giá vốn khác nhau. Không có phương pháp nào tạo ra
+[16:06] được giá vốn trùng khớp như nhau. Đấy. Cho nên lát tôi sẽ nói vận dụng cái đó
+[16:11] thế nào nhá. Đối với anh dịch vụ thì sao ạ? Là toàn
+[16:16] bộ chi phí cấu thành dịch vụ. dịch vụ ví dụ như là vận tải, ví dụ như
+[16:26] là khách sạn, du lịch thì tôi sẽ phân tích trừng trường hợp đối với cái anh gì
+[16:30] ạ? Xây lắp thì sao? Đó chính là giá thành
+[16:36] của hạng mục công trình.
+[16:41] hết rồi. Thế bây giờ nói này
+[16:49] nói về cái dịch vụ này trước này. Hầu hết các doanh nghiệp kinh doanh dịch vụ
+[16:53] hiện nay tính không đúng giá vốn dịch vụ.
+[16:58] Vì xin lỗi các kế toán một cái nhé là các vị thông thường không phân biệt được
+[17:01] cái gì cấu thành lên dịch vụ cả. Cho nên cái thứ chi phí gì phát sinh tại doanh
+[17:06] nghiệp quý vị cũng quất hết nó vào cái này này. Chi phí quản lý doanh nghiệp.
+[17:11] chứ lại không hoạch định rõ. Ví dụ doanh nghiệp kinh doanh về khách sạn, nhà
+[17:16] nghỉ, anh đi nhà nghỉ nhiều anh hiểu đấy.
+[17:23] Là bây giờ cái chi phí để cấu thành cái dịch vụ nhà nghỉ đấy thì nó bao gồm này,
+[17:28] một là khấu hao cái tòa nhà đó, thứ hai là khấu hao cái thiết bị mà cấu tạo lên
+[17:34] phòng đúng không ạ? Cái vật tư tiêu hao mà khách dùng một lần. Đúng chưa?
+[17:40] cái chi phí hầu phòng tức là cái người dọn phòng đấy. Rồi các thứ nào mà trực
+[17:46] tiếp phục vụ cho cái tua họ nghỉ lại đó thôi. Nước uống các thứ này kia tiêu hao
+[17:50] thì cái đó gọi là giá thành của dịch vụ nhà nghỉ.
+[17:55] Nhưng thông thường các cái toán không hiểu được chuyện đó thì mới dẫn đến cái
+[17:59] việc là gì? Cái gì nó cũng đưa hết vào chi phí quản lý doanh nghiệp. Tại vì nó
+[18:02] học đọc trong sách nó bảo giá vốn là giá thành. Thế là gì? Nó không thấy cái chỗ
+[18:07] này là sản xuất dịch vụ ở chỗ nào cả. Nghỉ là một phân trưởng sản xuất ạ.
+[18:11] >> Hả?
+[18:13] >> Đúng rồi. À vậy để hiểu được đúng như em đấy nhé. Nhưng mà phải coi nhà nghỉ là
+[18:17] phân xưởng sản xuất. Nhưng nó sản xuất ra cái gì đấy
+[18:22] chi phí như
+[18:23] >> à đúng thế. Tưởng nói hết
+[18:32] tháng 10.
+[18:33] >> Ừ thì đấy phải coi như một trung tâm sản
+[18:36] xuất ra dịch vụ. Vậy thì cứ cái gì tạo ra cái đó thì đều là cấu tạo nên giá
+[18:42] thành. Vậy thì điều này có nghĩa là ở cái khâu gọi là tổ chức công tác kế toán
+[18:49] người ta phải hoạch định rõ cái cơ cấu chi phí
+[18:53] của từng loại chi phí dưới này. Cùng là lương nhân viên nhưng trả lương cho cái
+[18:59] đứa dọn phòng thì là tính vào giá vốn. Nhưng mà lương trả cho em lễ tân xinh
+[19:03] đẹp mà ngồi nghe điện thoại với nhận lệnh đặt phòng
+[19:08] >> thì nó lại là chi phí quản lý cũng là lương nhưng trả cho cái đứa hàng ngày
+[19:12] đăng Facebook giảm giá đúng không? Thì lại là chi phí gì?
+[19:16] >> Bán hàng. Kế toán nhân sự giám đốc thư ký chân dài tính hết vào chi phí quản
+[19:21] lý. Rõ chưa? Đấy thì cái chỗ này nó chỉ có một nguyên lý duy nhất thôi. Nguyên
+[19:28] lý là cái chi phí đó nó tiêu haoh
+[19:34] >> tiêu hao cho cái gì? Cho mục đích gì? Cho mục đích gì?
+[19:40] cho mục đích là quản lý hay chụ mục đích cấu thành lên sản phẩm dịch vụ thì sẽ
+[19:45] tính vào tương ứng một khoản chi phí thì không bao giờ nó xài.
+[19:48] Đấy. Vậy bài kiểm tra là thế này. Nếu ông nào ở đây kinh doanh dịch vụ thì bắt
+[19:53] đầu về mới hỏi nhân viên kế toán, "Em ơi, bây giờ giá vốn của mình bằng bao
+[19:57] nhiêu phần trăm doanh thu? Nếu thấy nó thấp quá xong lại hỏi tiếp
+[20:03] này, thế em tính bằng như thế nào? Nó ra được bao nhiêu phần trăm?"
+[20:07] Thế bắt đầu nó kể thì nó cứ kể đến đâu anh ngồi anh đánh
+[20:11] dấu lên đấy xem cái gì là cái cấu thành đến dịch vụ này. Còn những thứ như là kế
+[20:16] toán các thứ lễ tân rồi thư ký rồi giám đốc rồi nhân sự thì đó phải là chi phí
+[20:21] quản lý chứ không phải giá vốn. Được chưa?
+[20:24] Bây giờ với anh vận tải thì sao? Vận tải thì này, lương của lái xe này, lương của
+[20:29] phụ xe này, chi phí đi đường này, vé cầu đường này, tiền xăng xe tiêu hoa nguyên
+[20:34] vật liệu nhiên liệu này, rồi là à
+[20:38] >> bến đỗ này, khấu hao tài sản này, khấu hao xe ấy, sửa xe này thì tất cả cái đó
+[20:44] là tạo nên gì ạ? Giá vốn của dịch vụ vận tải chứ không thôi rồi là cái gì nó cũng
+[20:51] quất vào chi phí quản lý hết đấy anh chị nhé.
+[20:54] Vì về mặt hạch toán cái thằng 632 này giá vốn này là 632 này. Cái ông này là 6
+[21:01] gì ạ? Tài chính là 635 này. Chi phí bán hàng là 641 này. Chi phí quản lý là 642
+[21:09] này. Và chi phí khác là 811 này. Cái kìa hạch toán các mã số tài khoản là nó khác
+[21:16] nhau. Thế nhưng
+[21:21] thế còn cái anh x lắ thì sao ạ? xây lắp thì anh phải có cái hoạt động nó
+[21:26] gọi là thống kê công trường, thống kê công trình. Anh phải ghi nhận lại toàn
+[21:32] bộ hôm nay tiêu hao và tư gì, hôm nay chấm công cho đội nào đúng không? Toàn
+[21:38] bộ các tiêu hao đó nó làm cơ sở để tính lên được giá thành của hạng mục công
+[21:43] trình hoàn thành. Vậy thì nói tóm lại là bao trùm lên toàn
+[21:49] bộ các chi phí này nó đều có các yếu tố chi phí sau đây.
+[21:56] Nó đều có các yếu tố và khoản mục chi phí sau đây.
+[22:01] Ta sẽ giải quyết hết tất cả các yếu tố và khoản mục đó là xong.
+[22:07] Trước khi nói đến từng cái yếu tố chi phí để ghi nhận vào chi phí tính thuế
+[22:12] thu nhập doanh nghiệp
+[22:14] >> thì tôi nói trước về một số điều mang tính chất nguyên tắc.
+[22:18] Nguyên tắc một là hồ sơ.
+[22:26] Nguyên tắc một là hồ sơ. Nguyên tắc một hồ sơ có nghĩa là bất kể đó là chi phí
+[22:32] gì. Khi các anh chị kiện toàn hoàn thiện hồ sơ cho nó, nhớ cho tôi việc một các
+[22:38] anh phải làm được là anh chứng minh chứng minh
+[22:44] cái tính hợp lý của nó. Thế nào gọi là hợp lý ạ?
+[22:51] Hợp lý này đôi khi nó phụ thuộc cảm xúc đúng không ạ?
+[22:55] Hợp lý có nghĩa là doanh thu nào thì chi phí đó.
+[23:01] Doanh thu của loại nào thì chi phí của loại đó, doanh thu của kỳ nào thì chi
+[23:06] phí của kỳ đó. Thì cái đó gọi là hợp lý. Thí dụ nếu doanh nghiệp của ông là kinh
+[23:14] doanh dịch vụ tư vấn phong thủy thì giá vốn của ông không thể có gạch ở
+[23:23] trong đó. Đó.
+[23:27] Ông làm gì đến gạch đâu chả nhá. Ông cầm gạch đến ông phang khách hàng à phải
+[23:30] không?
+[23:33] >> Kê chân đúng không?
+[23:36] >> Mẹ sợ trợ lý chân nó dài như mình phải kê mới gạch lên đúng không? Không. Cái
+[23:39] đấy dày cao 5 7 phân giờ có rồi.
+[23:42] >> Ok. Thì đấy là tính hợp lý của doanh thu và chi phí. Rõ chưa? Tức là anh phải
+[23:47] chứng minh được cái tính hợp lý giữa một khoản chi phí mà nó tiêu hao đi góp phần
+[23:52] tạo nên cái doanh thu gì. Vậy muốn hồ sơ gì tôi không biết. Nhưng anh phải khẳng
+[23:57] định rằng anh thấy nó hợp lý đã. Giống như buổi sáng tôi nói là chị có chấp
+[24:00] nhận được không? Chị nói không. Chị nói không thì không đời nào chúng nó chấp
+[24:04] nhận. Được chưa? Thứ hai, anh chị phải chứng minh cho bằng được tính có thật
+[24:12] của nó.
+[24:15] >> Tính có thật tức là gì? Trung thực ấy. Nhân chứng, vật chứng rõ ràng.
+[24:22] Cái thứ ba anh phải đảm bảo cho tôi này là nếu
+[24:26] nếu có định mức nếu có định mức bị khống chế
+[24:34] thì phải trong định mức. Rất may là ngày nay còn rất ít định mức
+[24:43] loại bỏ hết rồi. Gần loại bỏ gần như hết trừ một số ngành hàng mà có quy định mức
+[24:48] của nhà nước. Ví dụ xây dựng xây lắp thí dụ như là tiêu hao xăng dầu thì còn lại
+[24:53] là còn quy định mức thế còn lại bỏ hết định mức rồi. Thế đấy là nguyên tắc 1 2
+[24:59] 3 cái cái cái nguyên tắc được chưa? Vậy muốn làm thế nào thì làm khi mình
+[25:05] xét trượt hồ sơ hoặc khi kế toán làm hồ sơ thì phải tự hỏi mình bốn câu này. Nó
+[25:11] đã hợp lý chưa? Hợp lý rồi. Ok. Hỏi tiếp. Liệu có chứng minh được tính có
+[25:15] thật của nó không? Có. Việc thứ ba là có trong định mức nào bị khống chế hay
+[25:20] không? Đấy thì cứ hỏi những câu hỏi đấy là biết ngay hồ sơ chứng từ mình làm nó
+[25:26] tốt đến đâu rồi chứ tôi thì tôi tin rằng là nhiều kế toán làm là do người ta kháo
+[25:31] thế thôi chứ bản thân mình làm ra cũng không dám chắc là cái này có được hay
+[25:34] không đúng không? Nghe người ta đồn thế thôi.
+[25:39] Thấy bảo dạo này cái này không làm được thế là gì? Không dám làm. Thấy bảo dạo
+[25:44] này cái này làm được thế là làm nhưng làm không chắc chắn. Vậy nhớ cho tôi ba
+[25:47] nguyên tắc đó. Bây giờ quay trở vào từng thứ này. Cái chi phí đầu tiên luôn luôn
+[25:52] nó phát sinh trong doanh nghiệp đối với doanh nghiệp làm sản xuất hoặc là làm
+[25:56] vận tải đó là chi phí tiêu hao tiêu hao cái nguyên vật liệu
+[26:04] các anh dịch vụ thì nó không có. Cái này có nhưng mà nó ít.
+[26:09] Cái tiêu hao nguyên vật liệu thì hồ sơ các anh chị phải làm cho này. Thứ nhất
+[26:13] là cái bảng kê
+[26:18] bảng kê nhập xuất nhập xuất và báo cáo nhập xuất tồn kho
+[26:28] đối với cái tiêu hào vì anh muốn tính được giá vốn, tính được
+[26:34] giá thành trong sản xuất, trong dịch vụ thì anh phải có bảng kê là à tôi tiêu
+[26:38] hao những gì. Nhưng việc lập bản kê này có hai cách lập. Một là lập theo kỳ, hai
+[26:46] là lập theo hợp đồng hoặc theo dự án. Như bên em làm quảng cáo từng thương vụ
+[26:53] một là phải theo từng hợp đồng. Nhưng mà doanh nghiệp nó sản xuất, cứ sản xuất
+[26:57] xong rồi đóng vào kho xong rồi bán dần thì đấy là phải theo kỳ. Rõ chưa? Cái
+[27:03] này gọi là bảng kê tiêu hao nguyên vật liệu.
+[27:07] Đấy và phải nề. Và phải tiếp này là giá suất kho.
+[27:13] Giá xuất kho thì phải tính thống nhất.
+[27:21] Nghĩa là ví dụ em đã chọn là nhập trước xuất trước hay là trung bình ra quyền
+[27:25] thì em phải áp dụng thống suốt 1 năm chứ không được nay thì giá này mai thì giá
+[27:30] khác. Rõ chưa? Vậy dấu hiệu để kiểm tra cái thứ này mà nó không được thì các anh
+[27:37] chị cứ bảo kế toán là em ơi từng tháng một in cho anh xem cái báo cáo nhập xuất
+[27:41] tồn kho.
+[27:45] >> Nếu thấy lượng tồn nó sai khác với giá trị tồn kho thực tế hoặc nếu thấy cái số
+[27:51] lượng trên cái báo cáo này nó bị âm là nó đang có vấn đề.
+[27:57] Vì nhập xuất tồn anh không thể âm lượng vì nếu anh âm lượng là mất luôn cái giá
+[28:01] vốn của cái đó. Nguyên nhân của âm lượng thì dễ lắm. Thường thì người ta nói là
+[28:05] âm là do nguyên nhân là xuất nhiều hơn cái số mà mình có.
+[28:10] Nhưng thực tế nhầm lẫn thường nó không phải thế nhá.
+[28:15] do xuất nhầm cái mã vật tư hoặc đúng mã vật tư nhưng chọn sai kho
+[28:22] dẫn đến âm kho. Đã âm kho nó không tính được giá vốn là mất chi phí.
+[28:28] Thì đấy là tiêu hao nguyên vật liệu. Loại chi phí thứ à loại yếu tố chi phí
+[28:36] thứ hai là chi phí về nhân công.
+[28:43] Tức là các khoản lương ấy à lương này thì nó ở tất cả các loại chi phí. Giá
+[28:50] vốn cũng có lương, chi phí bán hàng cũng có lương, chi phí quản lý cũng có lương
+[28:56] đúng không? Đối với doanh nghiệp sản xuất hoặc dịch vụ đây này thì có phải là
+[29:00] cái lương mà trả cho cái công nhân sản xuất trực tiếp hoặc nhân sự trả sản xuất
+[29:03] trực tiếp thì đó là tạo nên giá vốn. Nhân sự làm bán hàng, lương trả cho họ,
+[29:09] thưởng trả cho họ thì đó là gì? lương của bộ phận bán hàng, chi phí bán
+[29:14] hàng nhưng lương của giám đốc kế toán thư ký
+[29:19] nhân sự, trợ lý thì nó ra là chi phí quản lý doanh nghiệp. Vậy bất biết là nó
+[29:26] cấu thành nên chi phí nào đối với khoản mục chi phí, xin lỗi đối với yếu tố chi
+[29:31] phí nhân công thì phải làm đủ cho tôi bộ hồ sơ gồm những thành phần sau đây.
+[29:45] Thành phần thứ nhất, hồ sơ nhân sự. Chứng minh nhân dân photo công chứng hay
+[29:58] không công chứng thì thủy nhưng có những đứa nó lại không có cả chứng minh thư
+[30:02] phot thì bảo với nó là em về địa phương xin
+[30:07] cái giấy giấy xác nhận nhân thân. Nghĩa là bảo nó ngồi trước cái ông mà
+[30:15] quản lý hộ tịch ấy. Ví dụ tôi tên là Long. Anh em xin trình báo anh, em tên
+[30:20] là Long và em đến đây chỉnh diện chính xác em là Long.
+[30:28] >> Việt Nam nó kỳ lắm. Đó là nhiều khi con người thật thế này
+[30:32] thì không tin đâu. Nhưng phải tin cái dấu mà có đóng dấu giáp lai
+[30:37] à. Cái ảnh mà có cái dấu giáp lai thì mới tin mới là thằng thật.
+[30:41] >> Thế còn cái thằng thật ngồi đây thì bảo có khi mày giả
+[30:46] còn gì nữa đúng không? Cứ phải có dấu đỏ kia kinh lắm. Vậy hồ sơ nhân sự
+[30:53] là chứng minh được nhân thân của họ.
+[31:01] Còn cái chuyện bằng cấp hay không là tùy vào cái chuyện quản lý nội bộ của các
+[31:04] anh. Được chưa? Nhưng cái hồ sơ để chứng minh được nhân thân là có. Cái việc thứ
+[31:10] hai anh tiếp tục phải làm là tra cứu ngay.
+[31:15] Tra cứu ngay. cái mã số thuế của nó
+[31:22] xem xem nó đang kê khai và xin miễn trừ gia cảnh ở nơi nào thì
+[31:27] phải chuyển đăng ký sang nơi mình kể cả lao động thời vụ kiểm trước được cái đã
+[31:36] nói cái điều này để nhớ rằng nếu doanh nghiệp có thuê lao động thời vụ hoặc
+[31:39] thuê lao động tạm tại công trường thì cái người đi thuê phải hiểu được chuyện
+[31:43] này. Nghĩa là về gọi cái thằng đó lên này em hôm nay đi học về ông thầy ông
+[31:46] bảo thế này này từ nay giờ đi thuê nhân sự phải hỏi rõ nhá đưa chứng minh thư
+[31:51] đây thứ hai tôi sẽ kiểm tra mã số thuế trong trường hợp phải nộp thuế tôi sẽ
+[31:55] trích thuế hoặc bây giờ đàm phán thuế luôn từ đầu đi nó tránh cái trường hợp
+[31:58] là cứ à uông với nhau đành rằng một trong hai bên một thằng nào đó phải nộp
+[32:02] thuế nhưng cái sợ nhất là chúng ta không nói trước với nhau để đến khi trả tiền
+[32:07] rồi kế toán mới sực nhớ ra mới trích thuế của nó thế là làm sao cãi nhau chửi
+[32:12] liền đúng không?
+[32:17] Thì tra cứu ngay mã số thuế. Nếu trong trường hợp người ta chưa có mã số thuế
+[32:23] thì vui lòng đăng ký mã số thuế.
+[32:29] Yêu cầu hồ sơ thứ ba anh chắc chắn phải ký hợp đồng.
+[32:36] Bất biết đó là hợp đồng gì. Ở góc độ của cơ quan thuế cần phải có hợp đồng.
+[32:41] Tiếp tục. Trong nội bộ doanh nghiệp phải có cái
+[32:46] gọi là quy chế lao động tiền lương.
+[32:58] Tiếp tục từng kỳ tức là từng tháng thì anh phải có bảng lương
+[33:06] được ký duyệt và cuối cùng chứng từ
+[33:13] mà anh chứng minh được là đã thực sự trả lương.
+[33:19] đã thực sự trả lương đó. 1 2 3 4 5 6 thành phần hồ sơ
+[33:28] là phải có. Thế thì đỡ phải hỏi nhau là em ơi anh ơi thầy ơi bảng lương bây giờ
+[33:33] có cần phải người lao động ký không? Nếu anh bằng cách nào đó chứng minh rằng
+[33:38] nó đã thực sự nhận tiền thì khỏi ký nhưng vì ông chi tiền mặt mà nó không ký
+[33:42] sao chứng minh vậy? Khỏi cần phải hỏi rõ chưa? Điều đó có nghĩa là nếu trả bằng
+[33:48] tiền mặt thì phải ký trực tiếp vào phiếu lương hoặc bảng lương có danh sách của
+[33:52] nó. Còn nếu trả bằng truyền thản rồi thì thôi khỏi cần. Rõ chưa? Vì tôi chứng
+[33:57] minh được thằng đó có nhận tiền nhưng giám đốc ép nhân viên mở thẻ ATM xong
+[34:04] ông thu mẹ lại xong đến lúc chuyển tiền cho nhân viên
+[34:08] xong tự ông ra rút tiền về. Trong khu công nghiệp đầy anh chị hả?
+[34:14] >> Rút tiền ra một cách hợp pháp thông qua hình thức trả lương giả.
+[34:19] >> Rõ chưa? Xong thực tế thì đưa tiền lương bằng
+[34:22] tiền mặt. Rõ chưa?
+[34:30] >> Con của chủ tịch Samsung mới bị bắt vì cái đó. Đấy,
+[34:36] >> Samsung là tạo các tài khoản
+[34:42] >> khác sau đó chuyển vào bao nhiêu tỷ đô.
+[34:46] >> Mà ở doanh nghiệp Việt Nam nó cũng có cái trường hợp đó nó xảy ra. Nhiều khi
+[34:49] các ông ấy muốn rút tiền ra
+[34:51] >> hoặc là gì ạ? Nâng khống cái gì?
+[34:55] >> Nâng khống cái tiền lương để tính tăng chi phí lên. Thế là mở thẻ cho nhân viên
+[35:00] xong đóng tiền vào đấy xong lại gì? Tự đi rút tiền ra
+[35:04] >> mà không hiểu sao bọn nó phát hiện được. giỏi
+[35:07] >> em thấy bây giờ cái kiểm tra ấ chung là kể cả lương là công nhân rồi ấy nhưng mà
+[35:13] có cái trường hợp có những cái vị trí mà lương cao quá họ không tin họ lấy cái
+[35:18] sao cây của ngân hàng ngân hàng đóng dấu rồi nhưng mà cơ quan thì vẫn là gửi công
+[35:21] văn đến yêu cầu
+[35:22] >> yêu cầu xác nhận xác nhận
+[35:24] >> họ có quyền xác nhận
+[35:26] >> trong trường hợp họ phát hiện được sự vô lý trái với tính có thật thông thường
+[35:31] >> à thì họ sẽ có quyền điều tra được chưa thì nhưng mà tói nói tóm Tóm lại là thế
+[35:36] này này, trong toàn bộ sáu cái thành phần hồ sơ kia thì phải nhớ cho tôi này.
+[35:42] Quan trọng nhất là cái quy chế lương vì đôi khi trong hợp đồng chúng ta không
+[35:48] thể hiện hết các khoản thu nhập. Vậy thì nhớ này, tất cả các khoản thu nhập trả
+[35:56] cho người lao động đều được thừa nhận là chi phí hợp lý hợp lệ. Khi tính thuế thu
+[36:01] nhập doanh nghiệp, miễn là nó có được quy định trong hợp đồng hoặc quy chế lao
+[36:06] động tiền lương. Vậy trong quy chế phải định nghĩa rõ người lao động được hưởng
+[36:12] các khoản nào, khoản đấy được tính thế nào, khoản đấy được tính cho đối tượng
+[36:18] nào, khoản đấy khi nào thì tính, khoản đấy chi trả bằng hình thức nào?
+[36:26] Nhắc lại nhé. Khoản đó tính thế nào? Tức là công thức tính khoản đó được tính cho
+[36:32] đối tượng nào là tính cho những vị trí công việc nào khoản đấy được tính khi
+[36:39] nào là theo tháng theo quý hay theo năm. Tính xong rồi thì trả bằng tiền mặt hay
+[36:44] tiền gì khi nào trả thì đấy là bốn cái giải
+[36:50] trình cho bất kỳ một khoản nào anh trả cho người lao động.
+[36:56] Vậy thì chi phí về nhân sự tiền lương không có pháp luật nào khống chế cả. Anh
+[37:00] chị muốn trả bao nhiêu thì trả rõ chưa? Chỉ cần hài hòa được giữa câu chuyện
+[37:06] thuế và câu chuyện bảo hiểm. Thế thôi. Còn trong giờ ngoài giờ ăn ca
+[37:13] ăn trưa, muốn làm thế nào thì làm. Đối với cái ăn ca ăn trưa khống chế 730.000
+[37:18] ngàn là chỉ khống chế trong trường hợp anh chi tiền mặt thôi chứ còn nếu doanh
+[37:22] nghiệp tổ chức bữa ăn hoặc mua cơm cho người lao động ăn thì anh muốn cho ăn
+[37:26] bao nhiêu thì ăn đúng không? Cứ lấy hóa đơn về là được hoặc có tổ chức bữa ăn
+[37:32] thì xuống Hà Nam kia mà mua thực phẩm mang về bảo nó viết hóa đơn cho. Muốn
+[37:37] bao nhiêu thì muốn đi siêu thị mua
+[37:40] >> siêu thị cũng được đấy chứ còn ra chợ này là không có hóa đơn đâu nhỉ.
+[37:48] Và đối với chi phí nhân sự tiền lương thì chú ý cho tôi mấy câu chuyện sau đây
+[37:55] toàn là chuyện quan trọng. Chuyện một, câu chuyện thứ nhất
+[38:03] là nếu nộp thay
+[38:08] nộp thay thuế thu nhập cá nhân thì được tính vào chi phí.
+[38:16] phần thuế nộp thay đó. Nghĩa là nếu tôi có thỏa thuận với người lao động rằng
+[38:22] khi phát sinh thuế thu nhập cá nhân, công ty sẽ nộp thay cho họ toàn bộ hoặc
+[38:26] một phần thì công ty được phép tính luôn cái tiền nộp thay đó vào chi phí.
+[38:33] Đấy là câu chuyện thứ nhất. Câu chuyện thứ hai.
+[38:38] Câu chuyện thứ hai đó là nếu thuê
+[38:44] nếu thuê lao động theo nhóm,
+[38:51] nếu thuê lao động theo nhóm mà có người đại diện
+[38:58] cái này mấy anh xây lắp làm nhiều đúng không?
+[39:01] Tức là anh thuê qua cai độ dài thì trong cái hợp đồng thuê này nè anh nhớ làm cho
+[39:07] tôi đủ các bước sau đây. Bước một là phải có một cái giấy ủy quyền của nhóm
+[39:12] lao động cho cái người đại diện đó. Thí dụ viết đơn giản thôi đúng không?
+[39:18] Giấy ủy quyền tập thể. Chúng tôi những người có tên và ký xác nhận dưới đây ủy
+[39:24] quyền cho ông A bà C ký hợp đồng công việc với công ty nào đó.
+[39:30] Thế thôi. Thế là lập một cái danh sách ra bắt tất
+[39:33] cả chúng nó ký vào từng đứa một đưa chứng minh nhân dân photo đây. Được
+[39:38] chưa? Sau khi ký cái đó xong anh mới ký hợp đồng của người đại diện với công ty
+[39:45] ta về công việc. Nhưng trong hợp đồng đó phải nêu rõ họ sẽ phải làm công việc gì,
+[39:52] điều kiện nghiệm thu ra sao, đơn giá và khi nào thì chả.
+[39:59] đấy là điều khoản thứ đi việc thứ hai là hợp đồng. Sau khi ký hợp đồng xong đến
+[40:02] khi nghiệm thu công việc thì chúng ta tiến hành trả tiền thì lúc này bắt đầu
+[40:07] phát sinh sai lầm trong các doanh nghiệp hiện nay. Phần lớn các doanh nghiệp khi
+[40:10] trả tiền thế là bê cả cục tiền đưa cho cái thằng đại diện
+[40:15] thế là toi rồi.
+[40:18] >> Đưa cả cục tiền cho thằng đó thì toàn bộ thu nhập đó được tính cho thằng đó.
+[40:23] Cho nên lúc này đưa tiền cho nó một cục cũng được nhưng phải kèm theo bảng kê
+[40:29] lao động là danh sách người lao động nhận tiền theo hợp đồng số bao nhiêu và
+[40:33] giấy ủy quyền bao nhiêu. Từng đứa một phải được chia tiền sẵn mà bắt nó ký vào
+[40:38] đấy. Từng đứa một phải ký đã nhận tiền thì số
+[40:43] tiền đó mới được phân bổ cho từng cá nhân. Còn nếu đưa cả cục cho thằng đại
+[40:47] diện là thằng đại diện ăn đủ. Nhưng khổ nỗi là nó không bắt cái thằng đại diện
+[40:52] ăn đủ, nó cứ trích tiền thuế của mình trước.
+[40:55] Chưa. Đó thì nhớ cho tôi đây là chuyện thứ hai là nếu thuê lao động theo nhóm
+[41:04] >> thì phải làm như thế. Nhớ cho tôi câu chuyện thứ ba
+[41:14] là sau này về mặt pháp lý có quy định rõ hơn đến thế nào thì tôi chưa biết.
+[41:19] Nhưng từ bây giờ trở về trước thì chưa có cái văn bản nào nói rằng là không
+[41:24] tham gia bảo hiểm cho người lao động thì không được tính thuế.
+[41:28] Rõ không ạ? Mặc dù cơ quan thuế và cơ quan bảo hiểm đã có cái văn bản gọi là
+[41:32] cơ chế phối hợp nhưng đó mới chỉ gọi là cơ chế phối hợp
+[41:38] chứ chưa hề có văn bản pháp lý chính thức nào là không nộp bảo hiểm thì không
+[41:43] được tính tiền thuế. Rõ chưa nào? Cho nên nếu vi phạm luật bảo hiểm thì
+[41:51] chỉ phạt theo bảo hiểm
+[41:54] >> mà vẫn được chấp nhận thuế. Đấy là chuyện thứ ba có liên quan đến
+[42:04] nhân sự và tiền lương. doanh nghiệp đóng 100% tiền bảo hiểm cho
+[42:19] nhân viên thì
+[42:21] >> nếu doanh nghiệp nộp 100% bảo hiểm cho nhân viên thì đưa điều khoản đó vào hợp
+[42:25] đồng toàn bộ phần tiền nộp thay như vậy cũng được tính luôn vào chi phí của
+[42:30] doanh nghiệp nó hay ở chỗ là đối với thu nhập của người lao động bất kể một khoản
+[42:34] gì kể cả các khoản trả thay thì đều được ghi nhận là chi phí hợp lý của doanh Để
+[42:44] vậy thì bây giờ chúng ta mới về chúng ta kiểm tra lại toàn bộ chi phí về nhân sự
+[42:49] tiền lương trong những năm vừa qua chúng ta tiến hành quyết toán thuế thì xem đã
+[42:53] đủ các thành phần này chưa. Nếu đủ rồi ok,
+[42:57] còn nếu chưa đủ thì bổ sung. Kể cả trường hợp người ta đến doanh nghiệp
+[43:01] kiểm tra rồi người ta hỏi là quy chế nhân sự tiền lương đâu
+[43:06] >> thì đừng bảo là không có được không? vẫn chế được.
+[43:10] >> Bởi vì thế này này, về mặt nguyên lý giải trình là cứ tại thời điểm kiểm tra
+[43:13] tôi giải trình được là được thôi nhá. Đừng quá nặng nể.
+[43:18] Mà nguyên lý là cái gì em cũng có, anh cứ đợi em đi tìm
+[43:22] thế thôi. Cái gì cũng có, cứ đợi em đi tìm.
+[43:25] >> Thời hạn thì
+[43:26] >> hả? Thời hạn thì cũng cứ đi tìm. chế chế được
+[43:35] >> thế còn những khoản nó dành dành rồi thì thôi không nói làm chi rồi thì đó là chi
+[43:39] phí về nhân sự tiền lương nhớ rằng chỉ cần này người lao động là có thực quy
+[43:46] chế nhân sự tiền lương có quy định về tất cả các khoản chi trả chứng minh rằng
+[43:51] người ta đã nhận tiền sẽ là xong
+[43:58] >> rồi bằng kia vấn đề đủ chưa về vấn đề chi phí
+[44:02] cho nhân sự đủ chưa? Thế ngoài ra này toàn bộ các khoản về an ca ăn trưa đồng
+[44:08] phục được chưa nào? Thì có ghi trong quy chế lương thế là được. Và đến khi phát
+[44:15] tiền thì chúng ta nhớ cho rằng là lập danh sách và ký tá những người đã nhận
+[44:20] tiền. Nhưng liên quan đến người lao động nó còn một loạt các chi phí khác có phát
+[44:26] sinh. Chi phí thứ nhất có liên quan đến xăng xe,
+[44:32] điện thoại, công tác phí, lưu chủ. Thì như lúc tôi nói lúc trước rồi, để
+[44:39] ghi nhận được các khoản này và chi phí của doanh nghiệp, doanh nghiệp phải tạo
+[44:42] cơ chế khoán hoặc coi đó là một khoản thu nhập. Nhưng
+[44:47] tôi khuyên rằng đừng coi là khoản thu nhập vì nó sẽ làm cho người ta phải nộp
+[44:51] thuế trên phần đó mà hãy đưa thành quy chế khoán. Được
+[44:55] chưa? Định mức khoán thì cũng khuyên rằng
+[45:00] doanh nghiệp nên khoán là mức tối thiểu mức tối đa đừng khoán số cố định.
+[45:05] Hiểu không? Tùy từng vùng sẽ được thanh toán từ 500
+[45:09] đến 700 hay là từ 400 đến 650 để nhỡ trong khoảng giữa như vậy nó dễ xử lý.
+[45:14] Được chưa nào? Thứ hai đó là công tác phí thì phải có lệnh điều động công tác
+[45:21] hoặc quyết định cử đi công tác hoặc giấy điều động công tác. Muốn gọi là cái gì
+[45:26] thì gọi, miễn là cái ông có quyền trong cái công ty đấy ông cử nhân sự của ông
+[45:30] đi công tác. Ngày xưa thì người ta yêu cầu là đến cái
+[45:34] chỗ kia là phải xin giấy xác nhận của đối tác
+[45:37] >> về mới được thanh toán đúng không?
+[45:40] >> Đóng dấu đấy.
+[45:43] >> Giấy đi đường đấy.
+[45:45] >> Thì nếu chúng ta có giấy đi đường thì tốt,
+[45:48] >> không có thì trông
+[45:49] >> chênh. Vậy nếu không có thì cử đi công tác về
+[45:55] làm báo cáo công tác xong làm gì ạ? Trước khi đi làm thủ tục tạm ứng, khi về
+[46:00] làm thủ tục hoàn ứng cho đúng. Toàn bộ các chi phí này nhắc lại không
+[46:06] cần phải có hóa đơn chứng từ, chỉ cần chi bằng tiền mặt kể cả công tác nước
+[46:09] ngoài cầm cái bill về và chi bằng thẻ ATM hoặc thẻ Visa đều được nhá.
+[46:15] Đấy thì đấy là các khoản về xăng xe điện thoại lưu chủ.
+[46:20] >> Ăn uống ngủ nghỉ cần
+[46:21] >> ăn ăn uống ngủ nghỉ khoán luôn
+[46:23] >> được không ạ? Ăn uống ngủ nghỉ khoán luôn là ngủ là được bao nhiêu tiền một
+[46:26] tối không kể tiền bo. Nói nói rõ vào được chưa? Vân vân. Đấy
+[46:36] thì là quy định hết thành định mức kể cả này văn phòng phẩm và đi lại di chuyển
+[46:41] tại nơi đi công tác đưa hết vào định mức sau đó thanh toán thành 1 lít. Được
+[46:44] chưa? Ok.
+[46:52] >> Thế còn tiền đồng phục cho người lao động? Nhớ này, tiền đồng phục thì chỉ
+[46:56] khống chế phần chi bằng tiền mặt là không quá 5 triệu đồng cho một năm.
+[47:01] Nhưng mà nếu mà doanh nghiệp tự may quần áo hoặc mua quần áo thì không bạn chế.
+[47:06] Nếu doanh nghiệp vừa có may quần áo, vừa mua quần áo, vừa trả bằng tiền thì chỉ
+[47:11] khống chế phần bằng tiền chứ phần có hóa đơn không khống chế triệu cũng được.
+[47:17] >> Đúng rồi, may cho mỗi thằng bộ lê mỗi thằng 1000 đô rồi đúng không? Đấy
+[47:22] >> thầy nói lại
+[47:25] >> nghĩa là nếu như chi đồng phục nhá, chi đồng phục và bảo hộ lao động thì chỉ
+[47:31] khống chế phần chi bằng tiền thôi. Nếu vừa bằng tiền vừa bằng hiện vật thì phần
+[47:35] hiện vật không khống chế, chỉ khống chế phần bằng tiền. Nói thế cho dễ hiểu.
+[47:39] >> Mua cộ đồng phục về Phát.
+[47:40] >> Đúng rồi.
+[47:41] >> Cộng lá phải đ
+[47:44] >> không cộng gì cả, chỉ khống chế phần chi bằng tiền là không quá 5 triệu đồng một
+[47:48] người một năm. Tại vì cái đó là chúng ta được hưởng lợi bởi mấy thằng lớn. Ví dụ
+[47:52] Viet Nam Airlines đồng phục của nó một năm váy với lại com lê cho đội tiếp viên
+[47:57] nó đắt đúng không? Nếu không chế chúng nó chết.
+[48:01] Đấy cho nên chúng ta được hưởng lợi nhờ cái đó.
+[48:06] Xăng xe điện thoại được chưa? Thế rồi còn các khoản nào nữa không? À còn mùng
+[48:12] 8 tháng 20 tháng 10 tết nguyên đán tết dương
+[48:17] lịch nghỉ mát
+[48:21] >> thưởng cuối năm thì chỉ nhớ cho tôi này nghỉ mát này 8 tháng 20 tháng 10 quà tết
+[48:30] thăm hỏi ốm đau. Tất cả những khoản đó thuộc về phúc lợi.
+[48:37] Tất cả những khoản đó thuộc về phúc lợi cho người lao động. mà đã là phúc lợi
+[48:42] thì được tính không quá phúc lợi
+[48:48] thì nhỏ hơn hoặc bằng 1 tháng lương bình quân
+[48:56] >> cả năm
+[48:57] >> cả năm vậy thế nào là tháng lương bình quân ạ
+[49:02] trong cả cái năm đó chúng ta đã thực tế chi cho người lao
+[49:07] động bao nhiêu tiền thì cộng gộp hết hết vào xong mang chia cho 12 thì nó ra một
+[49:12] tháng lương bình quân. Như vậy thì trước kia nếu có hóa đơn đi nghỉ mát cũng bị
+[49:17] loại có đúng không? Nhưng bây giờ thì được tính nhưng được tính không quá 1
+[49:22] tháng đương bình quân cách mỗi người sẽ có khác nhau
+[49:26] >> nhưng nó tính trên tổng công ty
+[49:28] >> toàn bộ công ty được chưa? được ghi nhận vào thuế thu chi phí tính
+[49:36] thuế thu nhập doanh nghiệp thì đấy nhớ cho tôi cái chỗ này là phúc
+[49:45] lợi bây giờ là được đến thế. Thế còn các khoản thưởng cuối năm về mặt
+[49:50] bản chất vẫn là khoản thu nhập có tính chất tiền lương hoặc thưởng theo kết quả
+[49:55] thưởng sáng kiến đều là một khoản thu nhập có tính chất tiền lương. Chỉ cần nó
+[49:59] có quy định trong quy chế lương thì sẽ được ghi nhận không phân biệt giá trị
+[50:04] bằng bao nhiêu. Chỉ cần đáp ứng điều kiện khi trả cao đến mức nộp thuế thu
+[50:07] nhập cá nhân thì tính nộp thuế. Thế thôi. Quy tắc là đơn giản. Vâng. Em hỏi
+[50:12] cái ý ở đấy thì em thấy là có cái khống thế thì nếu như doanh nghiệp kinh doanh
+[50:17] có lãi thì mới được thưởng ấy. Vậy thì vậy thì có bị ấy không ạ?
+[50:22] >> Đấy là doanh nghiệp kinh doanh có lãi mất được hưởng là do quy chế mình tự quy
+[50:24] định đúng không? quy chế đi trong thế bây giờ người ta cũng khống chế là người
+[50:28] ta không sao đị phí tiền tư nhiều ấyã
+[50:32] >> đấu làm gì
+[50:34] >> quy định của pháp lý thì hiện nay đối với các khoản chi kể cả các khoản chi
+[50:38] thưởng và chi tiền lương chưa có một quy định chính xác nào về việc lỗ thì không
+[50:43] được tính thế thì đấy ok đến cái chỗ kia là phúc
+[50:48] lợi rồi còn khoảng nào nữa không đối với nhân công của người lao động còn
+[50:53] hai khoản nữa anh chị Thôi hai khoản nữa. Khoản thứ nhất
+[51:01] đó là trả các khoản thưởng cuối năm. Thưởng cuối năm thì đương nhiên là một
+[51:10] khoản thu nhập có tính chất tiền lương trong quy chế hoặc hợp đồng có quy định
+[51:15] là được. Nhưng phải nhớ cho tôi cái tính thời điểm của nó.
+[51:21] Tại sao lại tôi cần phải nhắc cái tính thời điểm? Vì thời gian vừa qua có quá
+[51:25] nhiều doanh nghiệp bị loại bỏ hoàn toàn cái chi phí thưởng cuối năm
+[51:30] là do anh hạch toán không đúng kỳ. Thế nào là hạch toán không đúng kỳ?
+[51:35] Nghĩa là năm tài chính nó kết thúc thông thường vào ngày 31 tháng 12
+[51:40] nhưng thường thì cái tiền trả đó là ông thường trả vào dịp Tết luôn cho bọn nó
+[51:43] về ăn Tết đúng không? nó rơi vào tháng 2. Thế là kế toán không
+[51:48] có kinh nghiệm thì tại ngày 31 tháng 12 không trích trước, không ghi nhận trước
+[51:54] mà đợi đến lúc trả tiền xong rồi mới hạch toán thì lúc đấy sổ bên này là 31
+[51:59] tháng 12 nó đóng rồi. Thế là ông ta lại ghi nhận vào năm sau. Tức là ghi nhận
+[52:04] vào tháng hai của năm sau. Thế là loại liền rõ chưa?
+[52:08] >> Chưa quyết toán là sửa vẫn được.
+[52:09] >> Dạ được. Chưa quyết toán thì anh quay lại anh sửa được không? sửa là tại ngày
+[52:14] 31 tháng 12 anh phải trích trước cái tiền thưởng dự kiến chi cuối năm. Nếu
+[52:18] tại thời điểm thực chi anh chi vượt thì anh được tính thêm. Nếu anh chi thiếu
+[52:24] thì anh hoàn nhập lại cái phần mà anh đã trích. Còn nếu chi đủ thì ok. Tốt nhất
+[52:30] là tính trước ra đi, đợi đến ngày chi tiền thôi. Nhưng mà xin thưa là vì đằng
+[52:34] nào quyết toán cũng tận 31 tháng , chỉ cần nhớ được mà làm là được rồi. Được
+[52:40] không? Thường là chúng ta sẽ không bị đóng sổ giống như các doanh nghiệp niêm
+[52:42] yết. Mà kể cả niêm yết thì cũng tận đến 31 tháng cơ mà. Bao giờ nó cũng có cái
+[52:47] thời gian đủ dài để chúng ta làm. Nhưng mà khổ lắm dài mấy thì dài chứ kể cả
+[52:52] người ta có kéo dài thời gian đến 30 tháng 6 độc quyết toán nó chậm là chậm.
+[52:58] >> Nguyên lý là thế. Đi học cũng thế. Thằng nào nhà xa thì đến trước. Tận Hà Nam đến
+[53:02] trước ăn phở xong mới đến. Ở nhà gần thì đi muộn.
+[53:06] Quảng Ninh, Hà Nam. Sáng đ sáng nào cũng 7:00 thầy đâu rồi? cà phê đi. Đấy.
+[53:13] Thứ nhất là cái trả thưởng cuối năm được chưa? Nó còn một khoản nữa doanh nghiệp
+[53:17] được phép thực hiện được phép theo pháp lý nhá. Thông tư 96 nha. Trích
+[53:24] trước quỹ lương. Thế nào là trích trước quỹ lương?
+[53:35] Trích trước quỹ lương tức là kết thúc năm nay nếu doanh nghiệp có lời, nếu có
+[53:42] lời thậm chí lời nhiều thì doanh nghiệp được phép trích tạm một phần
+[53:49] tối đa bằng bao nhiêu ạ? 17%. 17%
+[54:00] cái quỹ lương của năm hiện thời đã thực hiện tính thẳng vào chi phí của năm nay
+[54:07] của năm hiện thời. Ví dụ chuẩn bị năm 2018 là tôi chuẩn bị quyết toán này đúng
+[54:12] không? Năm nay chi chục tỷ tiền lương, cuối năm thấy lời nhiều quá, trích thêm
+[54:18] 17% của chục tỷ là 1 tỷ7. đưa thẳng vào rồi sang năm hoàn nhập
+[54:25] tính hạch toán từ đầu hoặc sang năm khi mà hạch toán chi phí
+[54:29] lương à thì một phần ghi nhận chi phí một phần trừ vào cái khoản trích trước
+[54:36] của năm này thì đây là hoạt động thực ra nó không có lợi gì về mặt lâu dài nhưng
+[54:42] có lợi về mặt trước mắt. Trước mắt đó là doanh thu năm nay nó đ khóa rồi, nó
+[54:48] không thay đổi nhưng nó giảm cái lợi nhuận của năm hiện thời xuống bằng cách
+[54:51] tôi lấy trước chi phí của năm sau tôi bỏ về năm nay. Nhà nước cho phép làm chuyện
+[54:55] đó vì với tài sản cố định và nhân công thì nhà nước khuyến khích hai chuyện.
+[55:01] Chuyện thứ nhất là trả tiền cho người lao động được đều và có quỹ ổn định. Còn
+[55:06] đối với tài sản cố định làm máy móc trang thiết bị thì nhà nước khuyến khích
+[55:11] đổi mới công nghệ. Cho nên nó mới cho phép trích trước cái này là vì thế rõ
+[55:16] chưa? Thì đấy là trích trước quỹ lương. Điều kiện để trích trước quỹ lương này
+[55:23] thì thứ nhất này trong quy chế tài chính công ty phải có quy định rằng cuối mỗi
+[55:28] năm tài chính kế toán căn cứ tình hình kinh doanh thực tế đúng không? Nếu xét
+[55:34] thấy doanh nghiệp kinh doanh có lãi thì đề xuất trích trước quỹ lương
+[55:41] thầy ạ. Cái câu thầy vừa nói là nếu thế kinh doanh có lãi
+[55:45] >> dạ
+[55:46] >> là thấy nó sẽ lãi đ
+[55:47] >> dạ chị ơi ở đây nó khác nhau hai cái chuyện chúng ta vừa mới bàn vớinh nhau
+[55:52] cái chuyện trả thưởng thì không phân biệt nó là lãi hay lỗ
+[55:58] đều được cả vì đó là một khoản có tính chất tiền lương thực tế đã phát sinh
+[56:03] nhưng đây tôi trích trước là sau khi tính cả cái thưởng này rồi tôi lại trích
+[56:07] tiếp một phần nữa thì người ta mới giới hạn điều kiện rằng Sau khi chích xong
+[56:13] tối đa 17% hoặc anh có thể chích thấp hơn 17 6 năm mấy phần tùy anh nhưng sau
+[56:19] khi chích xong doanh nghiệp vẫn phải kinh doanh có lãi. Có nghĩa là chích
+[56:25] xong rồi vẫn phải có lời để nộp thuế thu trọp doanh nghiệp. Đó chưa ạ?
+[56:32] Thì đó là khoản chi phí thứ ba. Thứ hai là chi phí nhân công
+[56:39] nhân sự tiền lực. Tiếp
+[56:54] chi phí tiếp theo là chi phí tài sản cố định
+[56:59] và phân bổ công cụ dụng cụ chi phí trả trước.
+[57:06] Thì bây giờ tôi phân biệt với các giám đốc một tí nhá.
+[57:10] Tài sản cố định là những tài sản không động đậy.
+[57:16] Cứ cái gì không động đậy là cố định thôi. Có giá trị từ 30 triệu đồng trở
+[57:21] lên thuộc quyền sở hữu của doanh nghiệp,
+[57:26] có sử dụng trong hoạt động sản xuất kinh doanh, tạo ra lợi ích trong tương lai.
+[57:31] Nói tóm lại, anh muốn làm thế nào thì làm nhưng anh giải quyết cho tôi khâu hồ
+[57:38] sơ tài sản, nó phải đảm bảo các yêu cầu sau. Yêu cầu
+[57:44] một là giá của nó, giá trị được xác định một cách chắc chắn
+[57:55] từ 30 triệu đồng trở lên. Chuyện thứ hai anh phải chứng minh được
+[58:01] nó thuộc quyền sở hữu của anh. Quyền sở hữu của công ty.
+[58:08] Thứ ba nó có ghi sổ kế toán. Có ghi sổ kế toán. Cái thứ tư là từng
+[58:15] tháng từng quý một thì nó có cái bảng khấu hao.
+[58:20] Bảng khấu hao ngoài ra
+[58:25] ở bộ phận nào thì cũng có tài sản cố định.
+[58:29] Cho nên thông thường thì kế toán họ auto là ghi nhận khấu hao này vào chi phí gì
+[58:35] đúng không? Lời khuyên đừng làm thế. luôn có một biên bản bàn giao hoặc quyết
+[58:41] định đưa vào sử dụng của giám đốc công ty đối với từng tài sản cố định một là
+[58:45] tài sản này được giao cho bộ phận nào dùng vào việc gì
+[58:50] trong thời hạn bao lâu thì đó mới là căn cứ gốc để xác định cái khấu hao đó tính
+[58:56] vào chi phí nào cùng là cái xe nhưng xe dùng để giao
+[59:00] hàng thì đó là chi phí khấu hao của nó là chi phí bán nhưng xe cho giám đốc chở
+[59:05] chân dài đi họp thì là chi phí quản được không? Xe chở vật liệu ở công
+[59:10] trường thì đó là chi phí chung. Không phải chuyện đơn giản đâu. Không
+[59:15] phải cứ khấu hao xe thì em đưa vào đâu đưa đâu. Mà muốn đưa được cái đó nó cần
+[59:18] có cái quyết định của giám đốc đưa tài sản đó vào sử dụng cho bộ phận nào
+[59:24] cùng với các hồ sơ trên đây. Thế thì nó quay trở về cái bản chất là
+[59:29] tài sản cố định trong doanh nghiệp. Nói tóm lại nó được hình thành bởi các cái
+[59:33] nguồn sau. Nguồn một là anh góp vốn. Như tôi nói rồi, góp vốn là các ông tự
+[59:40] ngồi với nhau, tự xác định giá trị của tài sản, xong tự bàn giao cho nhau ghi
+[59:45] là góp vốn. Nếu trường hợp cái giá trị đó các ông tự
+[59:50] xác định với nhau nó không chắc chắn, nó đối với mặt pháp lý thì thuê một thằng
+[59:55] thẩm định giá nó đến nó thẩm định và nó phát hành cho chúng ta cái chứng thư
+[59:59] thẩm định giá. Đấy là trường hợp góp vốn. Nhắc lại tài sản góp vốn miễn tất

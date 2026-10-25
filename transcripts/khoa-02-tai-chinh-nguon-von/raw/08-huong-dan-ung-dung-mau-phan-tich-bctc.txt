@@ -1,0 +1,334 @@
+[0:09] Sau đây xin hướng dẫn các anh chị cái việc ứng dụng sử dụng mẫu theo cái nội
+[0:15] dung hướng dẫn phân tích như vừa rồi tôi đã trình bày. Thì kết cấu của bộ tài
+[0:19] liệu này gồm các phần như sau. Bảng thứ nhất là info cho phép chúng ta ghi nhận
+[0:24] các thông tin cơ bản của công ty mình. Phần thứ hai là bảng thứ hai là input để
+[0:31] chúng ta nhập số liệu chi tiết từ kết quả đã lập báo cáo tài chính của mình.
+[0:36] Phần thứ ba, bảng thứ ba là bảng report. Thì nói tóm lại là bảng report này là nó
+[0:46] tổng hợp tất cả các phân tích cần thiết nhất để đo lường cái sức khỏe và tình
+[0:50] trạng tài chính của doanh nghiệp ở trên cùng một bảng gọi là DASP thế này thôi.
+[0:56] Và sau khi nhập số liệu vào xong, nếu sau này chúng ta cần phải in à để theo
+[1:00] dõi dễ hơn thì các anh chị sẽ cố gắng in thế nào đó để nó nằm trọn vẹn trong một
+[1:06] trang. Ví dụ như thế này thì chúng ta sẽ nhìn thấy là một báo cáo nó thể hiện
+[1:11] được tất cả những gì cần thiết nhất. Tránh dài dọc. Tại vì là một báo cáo lại
+[1:15] đọc mấy chục trang như kiểu như thế này thì chịu rồi nha. Vô cùng ngắn gọn nhất
+[1:19] có thể. Bảng thứ ba, cái bảng thứ ba là phân
+[1:25] tích so sánh bảng cân nối kế toán giữa hai kỳ do mình lựa chọn là hai kỳ liên
+[1:31] tiếp hoặc là hai kỳ à giữa hai năm khác nhau chẳng hạn như là quý 1 năm 2016 so
+[1:37] với quý 1 năm 2017. Bảng tiếp theo là phân tích so sánh cái kết quả sản xuất
+[1:43] kinh doanh giữa hai kỳ. Bảng kế tiếp là phân tích nhiều kỳ cùng một lúc.
+[1:51] Cái này là muốn đánh giá lại toàn bộ cái lịch sử hoạt động của công ty hoặc chúng
+[1:55] ta cứ phân tích dần năm nay sẽ đưa số liệu vào và đưa dần trong vài năm như
+[1:58] thế. Thì ở đây tôi cho phép phân tích đến tận 5 năm. Và trên toàn bộ cái bộ
+[2:03] ứng dụng này chúng ta sẽ thực hiện phân tích là bốn quý trong 1 năm và 5 năm
+[2:08] liên tiếp. Đấy, bảng tiếp theo là bảng cũng phân tích lấy kết quả từ các phân
+[2:15] tích ở trên nhưng nó vẽ thành biểu đồ. Mà biểu đồ này là biểu đồ động. Nghĩa là
+[2:20] mỗi một khi nhập số liệu mới hoặc sửa đổi số liệu thì các anh chị không phải
+[2:24] tự mình vẽ biểu đồ mà nó sẽ tự vẽ lại biểu đồ
+[2:28] là chỉ việc xem thôi chứ bây giờ hướng dẫn các anh chị vẽ biểu đồ nữa thì nó
+[2:33] còn tùy thuộc vào kỹ năng sử dụng máy tính nữa đúng không? Thì bây giờ chỉ
+[2:36] biết là nhập số liệu vào xem kết quả phân tích. Thế rồi nó tự ra biểu đồ luôn
+[2:41] nha. Thế mỗi lần thay đổi số liệu thì biểu đồ nó lại nhảy à nó lại chạy theo
+[2:45] như vậy. Đấy thì ở đây là có tất thể là khá là nhiều các cái loại biểu đồ. Thì
+[2:50] tùy từng cái đặc thù và mục tiêu sử dụng số liệu của chúng ta như thế nào thì
+[2:55] chúng ta lựa chọn cái biểu đồ xem à một vài cái biểu đồ chứ không nhất thiết
+[2:59] phải xem hết. Còn tuy nhiên ai muốn đánh giá thật kỹ lưỡng thì à nên xem hết.
+[3:04] Phần biểu đồ này được chia thành hai nửa. Mé bên trái bên này là phần biểu đồ
+[3:09] so sánh hoặc phân tích kết cấu của hai kỳ. Còn phần bên phải này là phần so
+[3:15] sánh đánh giá như của nhiều kỳ. Nhiều kỳ ở đây có thể là bốn quý trong 1 năm và
+[3:20] có thể trong 5 năm liên tiếp. Bảng cuối cùng là hướng dẫn các chỉ số
+[3:26] tài chính. Ý nghĩa của nó ra làm sao, đọc như thế nào và tính như thế nào. Đấy
+[3:31] là các chỉ số tài chính. Thì lát nữa tôi sẽ có phần phân tích chi tiết các chỉ số
+[3:35] tài chính đó như thế nào. Bây giờ xin hướng dẫn cái việc sử dụng trước.
+[3:41] Chúng ta bắt đầu với bảng đầu tiên là bảng info.
+[3:45] Info này ở dòng tên công ty chúng ta nhập tên công ty của mình vào. Mã số
+[3:49] thuế nhập mã số thuế vào. Địa chỉ ghim một cách ngắn gọn thôi. Số điện thoại
+[3:54] vân vân. Nói chung là các thông tin cơ bản.
+[3:57] Ở dòng là số năm muốn phân tích chúng ta sẽ nhập vào đó là 5 năm. Chúng ta bắt
+[4:02] đầu phân tích từ năm nào? Thí dụ tôi muốn rằng à đánh giá từ năm 2015, 2016,
+[4:09] 17, 18, 19 chẳng hạn thì tôi sẽ đặt vào đây là bắt đầu phân tích từ năm 2015.
+[4:16] Nhưng mà công ty mình mới, mình chưa muốn phân tích từ 2015 thì trong trường
+[4:20] hợp này các anh chị có thể nhập vào là 2016. Chỉ cần nhập như vậy thôi thì ở
+[4:26] tất cả các bảng còn lại nó sẽ lấy năm 2016 làm năm gốc. và bắt đầu tiến lên
+[4:32] cho các năm kế tiếp thì nó tự thay đổi theo. Chỉ làm vậy thôi, không làm gì
+[4:36] hơn. Được chưa? Chu kỳ là phân tích thì chúng ta muốn là phân tích chúng ta đặt
+[4:41] vào đây là phân tích theo năm. Vì ở bản thân ở trong cái bảng phân tích kia đã
+[4:45] có các quý rồi thì không cần phải thay đổi chỉ tiêu này. Ngành nghề kinh doanh
+[4:49] chúng ta ghi tóm tắt chẳng hạn như là bên này là chế tác vàng bảng kim quý đã
+[4:53] quý đúng không? Hay là ở bên kia là gì ạ? Kinh doanh.
+[5:01] thức ăn gia súc. Ví dụ như vậy, đơn vị tính là Việt Nam
+[5:06] đồng. À phương thức nhập liệu. Phương thức nhập liệu ở đây thì có hai phương
+[5:11] thức nhập liệu. Một là chúng ta sẽ nhập liệu theo ba phương thức nhập liệu. Nhắc
+[5:15] lại là phương thức nhập liệu có ba phương thức. Một là nhập theo tháng, hai
+[5:19] là chúng ta nhập theo quý và thứ ba là chúng ta nhập theo năm.
+[5:28] Thì đây là các thông tin cơ bản. Chúng ta chỉ ngừng ng chỉ làm những việc đơn
+[5:31] giản như vậy thôi để lát nữa các thông tin này sẽ đặt lên các tiêu đề báo cáo
+[5:35] của các anh chị. Được chưa? Bảng thứ hai input. Chức năng của bảng
+[5:42] này là để chúng ta nhập số liệu thô. Có thế thôi. Thì ở đây bảng này được
+[5:48] thiết kế rất là rộng. Bắt đầu từ năm 2016. Thì chúng ta chú ý cái kết cấu của
+[5:53] nó này. Các chỉ tiêu chi tiết của bảng cân đối
+[6:01] toán được trải từ trên xuống phía dưới và theo chiều ngang là các tháng quý và
+[6:08] năm. Chẳng hạn năm 2016 thì ở đây chúng ta có
+[6:11] tháng 1, tháng 2, tháng 3, tháng 4, tháng 5. Vậy cách thức ứng dụng như sau.
+[6:18] Nếu tôi nhập liệu theo tháng, nếu các anh chị lựa chọn nhập liệu theo tháng
+[6:23] thì từng tháng một lấy số liệu nhập vào các chỉ tiêu chi tiết ở đây này theo các
+[6:28] cột tháng tương ứng được không? Nhưng chỉ nhập liệu vào những ô nào mà không
+[6:35] có công thức mà thôi. Ví dụ tài sản ngắn hạn thì bằng tiền cộng với đầu tư ngắn
+[6:40] và các tài sản khác. Thì các cái dòng màu xanh này là đã đặt công thức tính số
+[6:45] liệu tổng để khi chúng ta nhập liệu cho nó thật nhanh. Chúng ta chỉ nhập các số
+[6:48] chi tiết mà thôi. Cho nên ví dụ trong mục này chúng ta chỉ nhập tiền và các
+[6:52] khoản tư đương tiền. Ở mục đầu tư ngắn hạn thì chúng ta nhập các cái ô kế tiếp
+[6:57] gồm có chứng khoán kinh doanh, dự phòng giảm giá đầu tư chứng khoán và à đầu tư
+[7:02] nắm giữ đến ngày đáo hạn vân vân. Chỉ nhập các số chi tiết đó thôi. Thế
+[7:07] nhưng nếu tôi lựa chọn nhập liệu theo quý thì sao? Nếu nhập liệu theo quý thì
+[7:12] chúng ta chú ý này ở trên dòng tiêu đề tại dòng số 4
+[7:18] có tiêu đề là quý thì quý một sẽ được đánh dấu màu vàng,
+[7:22] quý hai cũng đánh dấu màu vàng. Tức là tại các cột để nhập số liệu theo quý thì
+[7:26] sẽ được đánh dấu màu vàng ở đây. Vì thế để cho nó dễ nhìn và không bị vướng mắt,
+[7:32] nếu lựa chọn nhập liệu theo quý thì chúng ta ẩn các tháng không cần nhập
+[7:36] liệu đi bằng cách lựa chọn các cột cần phải nhập tương ứng. Click vào đó rồi
+[7:41] chọn 2 đi. Ví dụ như thế này chẳng hạn. Ở đây tôi
+[7:46] đang thực hiện nhập liệu theo quý và tôi ẩn ẩn các cái tháng mà tôi không thực
+[7:52] hiện nhập liệu đi. Còn nếu sau này tôi muốn thực hiện nhập
+[7:56] lại theo tháng để phân tích chi tiết hơn tháng nào tôi nhập vào tháng đấy thì tôi
+[8:01] là gì ạ? Tôi sẽ chọn toàn bộ các cái cột vừa mức bị ẩn và tôi chọn gì? hiện nó ra
+[8:08] bằng việc chọn an2. Thế thôi. Chẳng hạn đây tôi ẩn hết năm 2016 của các tháng
+[8:14] chi tiết thì các anh chị sẽ nhìn thấy là à bảng số liệu bây giờ sẽ là quý 1, quý
+[8:19] hai, quý 3, quý 4. Vì cuối các quý hết quý 1 có nghĩa là hết tháng ba đúng
+[8:25] không? Hết quý hai là đến tháng 6, hết quý ba là đến tháng 9, hết quý 4 là đến
+[8:28] tháng 12. Thế nếu bây giờ tôi lựa chọn theo năm thì sao? thì chỉ nhập ở những
+[8:35] cái cột nào mà có đánh dấu theo năm đây này là cả ô của nó đều màu vàng. Tức là
+[8:40] nếu nhập liệu theo năm thì cứ chọn cái tháng 12 và quý 4 mà nhập thôi. Còn ẩn
+[8:45] toàn bộ các cột theo quý và theo tháng đi được không ạ? Vì cái bảng này nó là 5
+[8:49] năm liên tiếp cho nên nó tương đối lớn. Vì vậy để mà cái bảng lớn như thế này mà
+[8:52] nếu chúng ta không dùng đến thì có thể nó phức tạp thì các anh chị cho ẩn đi
+[8:56] thôi. Rồi và giả định nhập liệu xong như thế này rồi. Bây giờ chúng ta chuyển
+[9:01] sang cái bảng thứ hai là chúng ta xem cái bảng à
+[9:07] report. Thì đây sau khi nhập liệu xong thì nó sẽ
+[9:12] cho chúng ta một cái bảng phân tích chi tiết như thế này với kết cấu phân tích
+[9:16] như sau. Phần thứ nhất là phân tích kết quả sản xuất kinh doanh.
+[9:23] Phân tích kết quả sản xuất kinh doanh với tôi chỉ lựa chọn các chỉ tiêu như
+[9:27] sau. Một là doanh thu, hai là chi phí, ba là lợi nhuận sau thuế hoặc lợi nhuận
+[9:33] trước thuế, bốn là giá vốn hoặc một chỉ tiêu chi phí khác. Năm là chi phí lãi
+[9:38] vay. Thì đây là các chỉ tiêu quan trọng của phần quản trị tài chính đứng ở góc
+[9:44] độ kết quả sản xuất kinh doanh. Và chúng ta có thể thay đổi một số chỉ tiêu như
+[9:49] sau. Những ô nào mà có cái đánh dấu màu đỏ trên góc ô khi chúng ta di chuyển trỏ
+[9:54] đến đó nó sẽ hiện lên dòng chữ là chọn chỉ tiêu.
+[9:59] Chẳng hạn ở đây là tôi đang phân tích chỉ tiêu là doanh thuần nhưng có công ty
+[10:05] nói rằng không. Ở công ty tôi không muốn phân tích doanh thuần mà tôi muốn phân
+[10:09] tích tổng doanh thu cơ. Thì các anh chị lựa đặt vào đây lựa chọn
+[10:15] là tổng doanh thu bảng phân tích sẽ được biến đổi theo.
+[10:20] Chỗ này tôi sẽ chọn lại là doanh thuật. Ở chỉ tiêu thứ hai là tổng chi phí thì
+[10:28] không có lựa chọn nào. Ở chỉ tiêu thứ ba là lợi nhuận sau thuế
+[10:33] thì tôi có thể thay đổi lại lựa chọn ở đây là lợi nhuận trước thuế thì chúng ta
+[10:38] chỉ việc chọn chỉ tiêu muốn phân tích thôi nhá. thì chọn chỉ tiêu nào lập tức
+[10:42] bảng phân tích sẽ tính lại số liệu của chỉ tiêu đó. Thế còn chỗ này là giá vốn
+[10:47] nhưng mà có đơn vị làm về dịch vụ chẳng hạn họ không quan tâm lắm về vấn đề giá
+[10:51] vốn họ quan tâm đến các cái chi phí khác cơ. Thì ở đây này chúng ta có ba cái lựa
+[10:55] chọn một là giá vốn, hai là chi phí bán hàng, ba là chi phí quản trị doanh
+[10:58] nghiệp, quản lý doanh nghiệp. Vậy thì tùy từng đặc thù. Nếu doanh nghiệp mình
+[11:02] quan tâm nhiều đến giá vốn thì phân tích giá vốn. Nếu quan tâm nhiều nhất đến chi
+[11:07] phí bán hàng thì lựa chọn chi phí bán hàng. Nếu quan tâm nhiều nhất đến chi
+[11:11] phí quản lý thì lựa chọn chi phí quản lý tùy ý các anh chị nha. Ở bên này là chi
+[11:17] phí lãi vay nhưng có đơn vị nói rằng là cái hoạt động thuê mua tài chính bên tôi
+[11:21] nhiều lắm. Không chỉ là phân tích lãi vay được mà phải phân tích tổng số chi
+[11:25] phí tài chính cơ. Thì tôi sẽ đặt vào đây và lựa chọn lại là chọn lại cái chỉ tiêu
+[11:30] là tổng chi phí tài chính của công ty chứ không phải ví dụ trong trường hợp
+[11:34] này đây này. Tôi lựa chọn chi phí tài chính một cái nó lên mười mấy tỷ ngay.
+[11:38] Nhưng nếu tôi lựa chọn chỉ là chi phí lãi vay thôi
+[11:43] thì nó giảm từ 18 xuống 12 tỷ đấy thì nó sẽ đưa ra các phân tích khác nhau. Ok.
+[11:50] Ở bên cạnh là hai chỉ tiêu EBIT và EPS. Cụ thể EBIT và EPS là cái
+[11:59] gì thì lát nữa chúng ta sẽ bàn với nhau trong việc phân tích các chỉ số tài
+[12:03] chính. Có người nói rằng là tôi không thích
+[12:08] phân tích ebit mà tôi muốn thực hiện với Ebit DA thì sẽ lựa chọn là Ebit DA.
+[12:15] Rồi thì đấy là phần phân tích thứ nhất chỉ ngắn gọn bởi mấy dòng thôi ạ? Năm
+[12:19] dòng. Năm dòng và cộng với bốn quý nữa là chín dòng tất cả với các số liệu chỉ
+[12:26] tiêu ta đặt ở đây. Phần thứ nhất. Thế nhưng mà thế này ạ, cái báo cáo này nó
+[12:31] tương đối động ở chỗ này nữa. Đó là các anh chị thấy là ở đây nó đang thể
+[12:37] hiện là năm 2016 quý 1, quý hai, quý 3, quý 4 có nghĩa là đây là số liệu của
+[12:43] cùng các chỉ tiêu phân tích này nhưng của bốn quý năm 2016. Nếu bây giờ tôi
+[12:49] vẫn muốn xem gì ạ? Ở trên này tôi đã có đầy đủ 2016, 2017, 2018 đến tận 20,
+[12:55] 2019, 2020 rồi đúng không? Bây giờ tôi cũng xem số liệu nhưng của B quý 2017.
+[13:00] Nếu tôi đã nhập liệu rồi thì sao? Thì ở trên này nó có cái thanh cuộn này các
+[13:03] anh chị. À các anh chị dịch chuyển cái thanh cuộn
+[13:06] này thôi. Thì cái năm 2017 nó nhảy như vậy thì lập tức đây sẽ lại trở thành gì?
+[13:10] Số liệu của bốn quý năm 2017. Tuy nhiên số liệu 2017 thì tôi mới nhập
+[13:16] nháp vào đây nó chưa đủ cho nên nó chưa ra được cái báo cáo phân tích đầy đủ
+[13:20] giống như của năm 2016 khi chúng ta di chuyển vào đây. Và cứ như vậy chúng ta
+[13:23] dịch chuyển cái con trò cái thanh cuộn ở mé bên trái này và số liệu tự nó sẽ chạy
+[13:29] theo. Như vậy nếu như có trong tay một bảng phân tích chi tiết thế này của 5
+[13:33] năm liền thì chúng ta sẽ đánh giá được tổng thể toàn bộ cái tình hình tài chính
+[13:36] của mình. đấy là phần gọi là phân tích kết quả kinh doanh trong 5 năm và bốn
+[13:42] quý của 1 năm. Phần thứ hai cũng trong cùng cái báo cáo
+[13:47] này là phân tích bảng cân nối kế toán các anh chị. Thì đây là phần số liệu mà
+[13:53] phân tích cái bảng cân đối kế toán. Tôi lựa chọn các chỉ tiêu sau đây. Tổng tài
+[13:57] sản hoặc còn gọi là tổng nguồn vốn. Tổng tài sản bằng tổng nguồn vốn mà. Thứ hai,
+[14:04] chỉ tiêu thứ hai là phải thu ngắn hạn. Nhưng có đơn vị bảo không, tôi không
+[14:09] muốn phân tích phải thu ngắn hạn, tôi lựa chọn chỉ tiêu khác. Thì muốn lựa
+[14:12] chọn chỉ tiêu khác trong giới hạn thì các anh chị đặt tên tỏ chuột vào đây, nó
+[14:15] lại ra cái mũi tên ở bên cạnh. Anh chị chọn lại là tôi muốn gì ạ?
+[14:23] Là tôi chỉ lựa chọn phải thu ngắn nhưng phải thu ngắn của khách hàng thôi chứ
+[14:28] không phải tổng phải thu ngắn. Vì tổng phải thu ngắn thì nó có thể khá nhiều
+[14:32] các khoản phải thu nhưng bây giờ tôi chỉ muốn nhìn đúng một chỉ tiêu là phải thu
+[14:35] của khách hàng mà thôi. Thì các anh chị lựa chọn chỉ tiêu ở đây nhá.
+[14:42] Chỉ tiêu thứ ba là tổng phải thu. Chỉ tiêu thứ tư là phải trả ngắn hạn cho nhà
+[14:46] cung cấp. Nếu các anh chị không muốn chỉ đơn thuần
+[14:49] xem là phải trả ngắn hạn cho nhà cung cấp thì chúng ta lại lựa chọn vào đây để
+[14:53] chọn lại là gì? Tổng số của phải trả ngắn hạn.
+[14:58] thì số liệu nó sẽ tự động phân tích và chạy theo.
+[15:01] Rồi đây là tổng phải trả vốn chủ sở hữu. Chỉ tiêu tiếp theo để
+[15:06] phân tích ở đây là nợ vay trên vốn chủ sở hữu. Tỉ lệ của nợ vay trên vốn chủ sở
+[15:12] hữu là chiếm bao nhiêu lần và độ lớn của đòn bảy tài chính.
+[15:19] Thì ở đây cũng có thanh cuộn. Nếu các anh chị muốn dịch chuyển giữa các năm
+[15:23] thì chúng ta cũng gì dịch chuyển theo. Phần phía dưới là các cái biểu đồ cơ
+[15:32] bản. Biểu đồ hình tròn phía trên này biểu thị
+[15:36] cho biết là các chỉ tiêu gồm có là màu đỏ là tổng nợ phải trả. Còn gì ạ? Màu
+[15:42] xanh là vốn chủ sở hữu. Tức là cả cái vòng tròn này là tổng nguồn vốn của công
+[15:49] ty. Mà cái thứ công ty có, phần của công ty có là phần màu xanh. Còn phần chiếm
+[15:55] dụng ở bên ngoài bao gồm có nợ nhà cung cấp, nợ công nhân viên các khoản nợ và
+[15:59] nợ ngân hàng, nợ thuê tài chính là phần màu đỏ. Anh chị hình dung không ạ? Đó
+[16:04] thì chẳng hạn như ở công ty này năm 2016 thì nó là gì? 65% 2017 nó vọt lên 72%
+[16:14] à 2018 72 vân vân tại vì các số liệu 2018 19 nó chưa có nên tôi tạm lấy số
+[16:20] liệu 2017 để cho nó ra cái hình thức chúng ta nhìn thế còn ở trong cùng một
+[16:25] quý ở trong cùng một quý thì nó lại biến động thế này là quý 1 thì nó 69% quý 2
+[16:31] nó 76% quý 3 nó là 64% và quý tư nó 65%. Cái
+[16:38] này nó biểu thị giống như cái biểu đồ hôm qua tôi có trình bày với các anh chị
+[16:41] là trong 1 năm nó có tính mùa vụ của nó đúng không ạ? Có những thời điểm doanh
+[16:45] nghiệp cần nhiều vốn lúc đấy nó sẽ vay nhiều và hoặc là nợ nhiều hơn vậy lúc đó
+[16:49] nó có thể vọt lên đây này 76. Nếu trong trường hợp 3 4 năm liền chúng ta thấy
+[16:53] cái xu hướng của biểu đồ này là quý hai năm nào thì nợ phải trả nó cũng cao thì
+[16:57] có nghĩa là ở các năm kế tiếp cần phải hướng cái trọng tâm về cái việc mà tập
+[17:02] trung vào à huy động tiền ở quý hai. À thí dụ như vậy.
+[17:07] Còn bên này là cũng là biểu đồ nhưng lại biểu đồ so sánh. So sánh giữa ba cái chỉ
+[17:13] tiêu là lợi nhuận sau thuế, tổng chi phí và doanh thuận.
+[17:17] Còn ở phía dưới này nó cho biết được tình trạng tình trạng sức khỏe của các
+[17:23] chỉ số tài chính. Thế mà cái bảng toàn bộ ở phía dưới này chúng ta sau khi nhập
+[17:28] liệu vào mà thấy nó cứ báo màu đỏ thì những chỉ tiêu nào bị báo màu vàng là
+[17:34] chạm đến ngưỡng cảnh báo. Chỉ tiêu nào đạt đến ngưỡng màu đỏ là nguy hiểm.
+[17:40] Mặc dù đây là số liệu của công ty niết hẳn hoi ở trên sàn đấy nhưng cũng không
+[17:45] tốt đẹp gì đâu đúng không ạ? Nhìn thấy th toàn màu đỏ đây này.
+[17:52] Thế thì thì tỷ lệ nào là chuẩn đó là gì? Tới hạn tức là bắt đầu vừa chạm đến màu
+[17:59] vàng từ màu xanh bắt đầu chuyển sang màu vàng. Vì đây cái cái cái cái
+[18:04] biên độ dao động màu là tôi phối giữa cái màu vàng với lại màu xanh. Vậy thì
+[18:09] khi nào nó bắt đầu hơi trớm sang vàng thì đấy là lúc sử dụng tối đa các nguồn
+[18:13] lực. Còn màu xanh là an toàn. Thế còn bước sang màu vàng mà chạm
+[18:18] ngưỡng cảnh báo, bước sang màu đỏ là khá nguy hiểm thì phải tìm mọi cách chuyển
+[18:23] nó về màu xanh. Và cái này nó tự động chứ các anh chị
+[18:27] không không can thiệp gì vào đây được với nó đâu. Được chưa ạ? Và chúng ta
+[18:31] cũng thay đổi giữa các năm và các quý trong năm như vậy. Thì đấy là một bảng
+[18:35] phân tích chung gọi là dashbo phân tích tài chính với đầy đủ các chỉ số tài
+[18:38] chính phân tích số liệu và biểu đồ trên cung một bảng tính. Rồi vậy thì bây giờ
+[18:44] tôi muốn chi tiết để so sánh cụ thể hơn thì báo cáo tiếp theo là phân tích bảng
+[18:50] cân đối kế toán. Thì cái báo cáo này vừa rồi đã đã show
+[18:56] cho các anh chị xem là bảng phân tích kế toán. Thì ở đây nó tôi cũng cung cấp cho
+[19:01] các anh chị một cái công cụ nó động như thế này. Chẳng hạn năm đầu tiên kỳ gốc
+[19:05] tôi chọn là năm 2016. Tôi muốn thực hiện phân tích của quý 1 năm 2016 thì các anh
+[19:10] chị đặt vào đây. Thay vì quý 3 các anh chị click vào đây chọn cho tôi quý 1.
+[19:17] Rồi và tôi muốn phân tích cái quý một đó với quý 1 của năm 2017. Thì trong cột
+[19:24] năm của kỳ phân tích tôi chọn năm 2017 và quý thì tôi chọn là quý 1
+[19:31] thì nó sẽ tự động lấy số liệu bên Q sang và tự động phân tích lại cho các anh
+[19:34] chị. Được chưa nào? Thế ví dụ bây giờ nói rằng tôi chỉ muốn
+[19:38] phân tích quý 1 2016 với quý 2 2016 thôi thì chọn lại cái năm ở đây này là năm
+[19:44] 2016. Rồi chọn quý này là gì ạ? Quý hai
+[19:52] thì nó sẽ ra một cái bảng phân tích giữa hai kỳ so sánh à như thế này. Ok. Bảng
+[19:58] thứ ba cũng là phân tích so sánh. Nhưng mà phân tích so sánh của bảng kết quả
+[20:03] kinh doanh thì phương thức lựa chọn kỳ phân tích cũng giống như vừa rồi tôi đã
+[20:06] chỉ cho các anh chị và bảng phân tích cũng sẽ được lập tự động. Ở đây tôi khá
+[20:10] là open là tôi để nguyên công thức tính ở tất cả các cái ô nên nếu anh chị nào
+[20:15] có khả năng customize, sửa chữa được thì vui lòng cũng cứ sửa đi.
+[20:20] Cái bảng kế tiếp là phân tích nhưng mà phân tích nhiều kỳ. Ví dụ phân tích 5
+[20:26] năm liên tiếp hoặc phân tích bốn quý trên 1 năm nhưng thể hiện trong cùng một
+[20:29] bản báo cáo thì cái này là phân tích quá chi tiết rồi để những người nào mà liên
+[20:34] quan đến hoạch định tài chính hoặc cố gắng tìm mọi giải pháp để kéo lại cái
+[20:39] tình hình tài chính của công ty hoặc đưa lại các chỉ số tài chính về trạng thái
+[20:42] tốt thì mới cần đến bảng phân tích này. Hoặc trong trường hợp nếu như chúng ta
+[20:47] muốn hợp tác kinh doanh có vốn đầu tư chi tiết thì cũng nên phân tích chi tiết
+[20:51] như thế này của đối tác để nhìn vào cách thực sự xem là à cái xu hướng tài chính
+[20:55] của chúng nó trong mấy năm qua là bao nhiêu chứ không phải chỉ đơn giản là cái
+[20:59] việc là đây báo cáo tài chính đây xong nó làm láo tào láo chí khơn nha.
+[21:04] Ở đây cách lựa chọn là như sau. Phương pháp phân tích có hai lựa chọn một là
+[21:09] phân tích các quý trong năm hay phân tích nhiều năm.
+[21:16] hay phân tích năm. Nếu chúng ta lựa chọn là phân tích nhiều năm thì chọn năm ở
+[21:21] đây thì nó sẽ hiển thị chúng ta bắt đầu từ năm 2016. Đúng rồi. Nhưng nếu trong
+[21:26] bảng info lúc đầu chúng ta chỉ thực hiện phân tích từ 2015 thôi
+[21:34] thì khi chọn nhiều kỳ nó sẽ xuất phát từ năm 2015. Rõ không? Mà đó thì cái cái
+[21:40] năm 2015 2016 ở cái bảng đầu tiên này nó có ý nghĩa là như vậy để cái kỳ bắt đầu
+[21:46] chúng ta thực hiện phân tích rồi phân tích nhiều kỳ thì đây là phân tích nhiều
+[21:51] năm với nhau. Thế còn tôi không thích thế này, tôi chỉ muốn phân tích là các
+[21:55] quý trong 1 năm thì lựa chọn lại ở đây là các quý trong năm. Nhưng của năm nào
+[22:00] thì vui lòng lựa chọn cái năm đó. Chẳng hạn đây là năm 2017
+[22:05] hay chọn lại là năm 2016. thì số liệu sẽ chạy theo. Ok. Vậy thì
+[22:11] cái biểu đồ tiếp tục nó sẽ lấy số liệu ở đâu để phân tích? Là nó lấy số liệu ở
+[22:15] cái bảng phân tích này. Phần biểu đồ tiếp theo, nếu chúng ta lựa
+[22:21] chọn là phân tích các quý trong năm thì ở phần biểu đồ này nó sẽ vẽ ra số liệu
+[22:27] của bốn quý trong cái năm đó. Và biểu đồ của hai quý trong phần phân
+[22:32] tích so sánh. hai quý ở trong cái bảng phân tích so
+[22:36] sánh ở đây rõ không ạ? Như vậy ở đây tôi sẽ nhìn thấy là biểu đồ của bốn quý. Vậy
+[22:40] bây giờ tôi muốn xem biểu đồ của 4 năm hoặc 5 năm thì tôi phải quay lại cái
+[22:44] bảng phân tích nhiều kỳ. Tôi chọn vào đây là phân tích theo năm.
+[22:54] Ok. Bây giờ chúng ta sang biểu đồ chúng ta sẽ thấy là gì? Đây là biểu đồ của các
+[22:58] năm 2016 17 18 19. Hình dung không nào? Rồi vậy thì nó
+[23:06] có thể có nhiều sự lựa chọn để xoay chuyển cho các anh chị.
+[23:13] Và phần biểu đồ thì nó gồm các loại biểu đồ sau đây. Và tôi nói sẽ nói ý nghĩa
+[23:18] của từng cái loại biểu đồ mà tôi thực hiện vẽ ra đây cho các anh chị.
+[23:22] Biểu đồ thứ nhất là so sánh tài sản giữa hai kỳ.
+[23:27] Thì vì trong bảng phân tích so sánh cân đối cái toán vừa rồi tôi chọn là quý 1
+[23:32] năm 2016 và quý 2 năm 2016. Thì đây là nó so sánh giữa hai kỳ.
+[23:39] Kỳ bao gồm các chỉ tiêu sau đây này. Tổng tài sản giữa hai kỳ trong đó màu
+[23:44] xanh là quý một, màu đỏ là quý hai. Nó biến động như thế này đây.
+[23:49] Tiền và tương đương tiền giữa hai kỳ. Tức là quý một còn có chút xíu tiền
+[23:53] nhưng quý hai gì có thêm. Chỉ tiêu thứ ba là đầu tư tài chính, chỉ
+[23:58] tiêu thứ tư là nợ phải thu. Chúng ta nhìn vào đây là chúng ta đánh sơ bộ,
+[24:02] đánh giá sơ bộ được cái xu hướng của nó là như vậy. Thế còn về mặt biểu đồ giữa
+[24:06] các quý trong 1 năm thì đây nó tăng dần đều.
+[24:10] Nó tăng dần đều giữa các quý trong năm là biến động các chỉ tiêu tài sản qua
+[24:15] suốt bốn kỳ của cả 1 năm. X hướng của nó như thế này. Phần thứ
+[24:20] hai, biểu đồ thứ hai là biểu đồ cấu trúc vốn chỉ phân tích có ba chỉ tiêu. Chỉ
+[24:25] tiêu một là nợ phải trả ngắn hạn, chỉ tiêu hai nợ dài hạn và chỉ tiêu ba là
+[24:30] vốn sở hữu. Cho biết tỉ trọng trong từng quý các khoản đó là thế nào và so sánh
+[24:35] hai quý với nhau. Còn phần bên phải là cho biết là gì ạ? Xu hướng cấu trúc vốn
+[24:41] của ba cái chỉ tiêu chính đấy nó đang biến động ra làm sao.
+[24:45] Biểu đồ thứ thứ nhóm biểu đồ thứ ba là biểu đồ phân tích so sánh doanh thu
+[24:51] và lợi nhuận. Tôi lựa chọn các chỉ tiêu phân tích gồm có doanh thuần, lợi nhuận
+[24:55] gộp, lợi nhuận kinh doanh, lợi nhuận trước thuế và lợi nhuận sau thuế.
+[25:00] Thì ở mé bên trái là biểu đồ so sánh các chỉ tiêu đó của hai quý. Còn mé bên phải
+[25:06] là so sánh liên tục bốn quý trong 1 năm. Ở dưới đó cũng là các biểu đồ như vậy
+[25:13] nhưng không phải là so sánh mà đồng thời vừa so sánh giữa hai kỳ đồng thời cho
+[25:18] biết tỉ trọng của các chỉ tiêu đó ở mỗi kỳ. Còn mé bên phải bây giờ là thể hiện
+[25:24] cái xu hướng một cách dễ nhìn hơn theo hình dây. Biểu đồ tiếp theo là so sánh
+[25:30] cơ cấu chi phí. Thì đây là một biểu đồ quan trọng trong
+[25:35] việc quản trị tài chính. Nếu tăng doanh thu như tôi đã nói lúc trước mà không
+[25:39] giữ được à cái tỉ trọng chi phí tốt thì chúng ta cũng không có lợi nhuận tốt.
+[25:44] Các chỉ tiêu lựa chọn phân tích ở đây gồm có tổng chi phí, giá vốn, chi phí
+[25:49] tài chính, chi phí bán hàng, chi phí quản lý doanh nghiệp và chi phí khác.
+[25:52] Nói tóm lại là năm khoản mục chi phí chính trên bảng kết quả sản xuất kinh
+[25:57] doanh so với tổng số. Ở mẽ bên trái là so sánh giữa hai kỳ.
+[26:02] Màu xanh là quý một, màu đỏ là quý hai. Nó biến động như vậy. Thế nhưng cái biểu
+[26:08] đồ ở mé bên phải là biểu đồ rất hay. Vì là quản trị chi phí. Nếu chỉ nhìn
+[26:15] riêng chi phí thôi thì nó không có giá trị gì mà phải nhìn trong quan hệ với
+[26:20] doanh thu. Thì chúng ta thấy ở đây là phối kết hợp giữa biểu đồ hình dây và
+[26:26] biểu đồ hình cột. Cái phần chấm chấm này này không phải trang trí đâu, nó là
+[26:31] doanh thu đấy. Doanh thu ở các quý đấy.
+[26:36] Và ở đây là gì ạ? Còn các cái đường hai cái đường đỏ và đường màu xanh và các
+[26:40] cái đường này với các màu khác nhau. Vì ở đây cái lợi nhuận của nó quá ít cho
+[26:44] nên gần như cái đường lợi nhuận nó nằm sát với cái trục ngang này nên ta nhìn
+[26:47] không ra. Còn ở công ty mình có tỉ lệ độ 5% trở lên thì chúng ta sẽ nhìn thấy cái
+[26:52] xu hướng biến động của nó rõ ràng hơn. hoặc những đơn vị nào mà có tỉ suất lợi
+[26:55] nhuận à mà trên 10% thì cái phần ở dưới này nhìn nó sẽ rõ ràng hơn. Còn trong
+[27:00] trường hợp ví dụ cụ thể này là lợi nhuận nó có 1% thôi nó tiến sát về không mà
+[27:05] quy mô doanh thu của nó hàng ngàn tỷ. Thế cho nên là nhìn nó không nó không
+[27:10] đáng là bao nhiêu cả. Thì ở đây chúng ta thấy này, đơn vị này nó quản trị về định
+[27:15] mức chi phí tương đối tốt. Tức là doanh thu và chi phí nó tăng giảm rất tương
+[27:18] đồng. Vậy thì nó sẽ rất là bất thường. Nếu trong trường hợp doanh thu thì tăng
+[27:23] chẳng hạn so sánh quý ba và quý 4 doanh thu tăng mà chi phí gì ạ lại tăng nhanh
+[27:28] hơn chẳng hạn chi phí nó lại vượt lên trên này cơ thì đó là lúc gì ạ rất bất
+[27:32] thường rồi và nếu tuyệt vời hơn nữa trong trường hợp doanh thu thì tăng thế
+[27:36] này nhưng đường chi phí nó lại đi ngang hoặc đi giảm thì đấy cái xu hướng như
+[27:40] vậy chúng ta nhìn để chúng ta đánh giá được cái tình hình của doanh nghiệp của
+[27:44] mình và cuối cùng là với cấu trúc chi phí và đồng thời so sánh giữa các kỳ với
+[27:49] nhau thì có hai cái phần đ đồ nữa là biểu đồ hình so sánh giữa hai kỳ và biểu
+[27:55] đồ thể hiện giữa bốn quý thì đó là toàn bộ tất cả những biểu đồ cần thiết sếp
+[27:59] thích hỏi cái gì thì ta trình cái đó được không ạ thế nhưng mà trước khi
+[28:04] trình là phải dạy các ông ấy cách đọc mà dạy cách đọc thì chúng ta trừ khi
+[28:09] chúng ta phải hiểu được bản chất của vấn đề thì mới hướng dẫn cho ban quản lý
+[28:14] công ty có thể đọc được và cuối cùng là ý nghĩa của các chỉ số tài Đế
+[28:23] 0:02 /

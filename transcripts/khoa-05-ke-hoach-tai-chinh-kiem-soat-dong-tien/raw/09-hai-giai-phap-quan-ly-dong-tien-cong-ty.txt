@@ -1,0 +1,484 @@
+[0:12] Cái nguyên nhân để nó đứt dòng tiền thì đầu bảng là do thằng công nợ, thứ
+[0:18] nhì là do gì? Vung tay quá chán. Có đúng không?
+[0:23] Vậy thì để đưa cái chính sách này ra để kìm cái thằng công nợ lại.
+[0:28] Thế còn để vung tay quá chán thì đưa ra kế hoạch để biết rằng gì? Không có đâu
+[0:33] mà tiêu. Vì nếu có tiền mà chưa có kế hoạch sẵn sàng tiêu. Nhưng nếu có tiền
+[0:38] có kế hoạch rồi thì không tắm tiêm nữa. Thường là như vậy.
+[0:43] Có hai việc đấy thôi. Thì việc thứ nhất là chính sách tín dụng.
+[0:51] Ứng xử với tín dụng phải thu. Ứng xử với tín dụng phải trả. Phương án kịch bản
+[0:57] quản lý thu hồi nợ, định mức hạn mức nợ, trích lập dự phòng, rủi ro nợ.
+[1:05] Làm được năm việc này đưa vào thành một chương trong quy chế tài chính gọi là
+[1:11] chính sách tín dụng công ty. Hãy cố gắng thoát khỏi tình trạng cạnh
+[1:18] tranh bằng công nợ. Và nếu đã cho nợ phải khép thật chặt hồ
+[1:24] sơ và xây dựng một cái tiến trình giao dịch
+[1:28] là đòi nợ từ khi cho nợ. Chứ nếu không rồi thì thôi xin thưa các anh, người ta
+[1:34] gọi là đấng cho nợ và quỳ để thu nợ. Và như hôm qua thầy nói rồi
+[1:41] là cứ thằng nào có tiền thì thằng này cầm tiền thì thằng đấy có quyền. Không
+[1:45] cần biết tiền thằng nào. Rõ chưa? Nó nợ tiền mình thật nhưng nó đang cầm
+[1:50] tiền thì nó là thế chủ động chứ không phải mình đâu.
+[1:55] Cứ ông nào cầm tiền ông ở thế chủ động. Thế bây giờ mà để xây dựng chính sách
+[2:00] tín dụng này thì chúng ta phải làm những việc gì?
+[2:07] Việc một bây giờ ứng dụng việc một này.
+[2:16] Việc một là anh chị ơi vui lòng phân loại khách hàng giúp thầy.
+[2:22] Ở đây ông nào bán lẻ thì khỏi cần. Chỗ nhà em mà làm spa hay là làm răng thẩm
+[2:27] mỹ hay là điều trị nha chu thì chắc là khả năng khách hàng nợ là ít. Thậm chí
+[2:31] còn phải đặt tiền trước đúng không?
+[2:33] >> Nợ nhiều lắm.
+[2:35] >> khách hàng B2C mà mình cho nó nợ à?
+[2:37] >> Vâng. Bọn em chỉ thu hồi được từ 30% luôn.
+[2:40] >> Vì sao thế?
+[2:41] >> Vì quá trình điều trị nó kéo dài ạ. Thì có cái ngạch thẩm lý là xong luôn thôi.
+[2:46] >> À
+[2:48] >> Quá trình điều trị kéo dài thế sao không đi buổi nào thu tiền buổi đó?
+[2:55] >> À nhưng lúc ấy nó chưa khỏi hẳn nhỉ. Ví dụ hôm nay mới đi vệ sinh thôi, hôm sau
+[2:58] mới đi cắm nhỉ.
+[3:02] Anh là làm cả gói đi. Cả gói trả bao nhiêu phần trăm
+[3:06] >> chia liệu trình ra em ơi. Không em chết.
+[3:09] >> Cái ngành của em là có khả năng chuyển thành tiền mặt hoặc thậm chí cầm tiền
+[3:13] trước chứ còn nếu bây giờ em làm nha khoa mà
+[3:17] em cho nó nợ thì em chết rồi. Thực ra bởi vì quá trình của chị nó chưa
+[3:22] kết thúc, tức là sản phẩm của em vẫn chưa đưa hết cho người ta. Cứ thu tiền
+[3:26] trước vào
+[3:28] >> thầy đào tạo đây thầy cứ thui luôn cả gói cả
+[3:32] >> thằng nào bảo sau này em bận kệ ông
+[3:35] >> được không năm sau đi học lại
+[3:37] >> em đưa các cái chính sách nếu mà thu được cả thì em tặng luôn
+[3:42] >> muốn thu được cả thì dịch vụ phải ngon
+[3:44] >> luôn là như thế và có ưu đãi bởi vì nếu thu
+[3:50] lẻ thầy thu hơn trăm triệu mà thu gộp thầy thu có mấy chục triệu nhỉ
+[3:56] phân loại khách hàng. Cái này thường chỉ ứng dụng cho B2B
+[4:00] thôi. Nhưng thông thường thì lại chỉ có B2B nó
+[4:06] mới nợ nhỉ. Chứ B2C thì ít khi nợ. Giống như nhà em kia nó bán xăng thì thằng nào
+[4:11] mua xăng nợ ít lắm. Ở cây xăng là ít nợ lắm. Cũng có xe nó đến nó lấy nhưng mà
+[4:16] tỉ lệ nó ít hơn so với việc là bán xăng B2B. Ok. Vậy thì nếu là bán B2B chúng ta
+[4:22] bắt buộc phải phân loại khách hàng ở chiều vào, ở chiều khách hàng vào, tức
+[4:31] là ở chiều bán bán hàng đi á.
+[4:36] >> Buiness toet được không?
+[4:43] Không thầy thầy phải đọc rõ tiếng Việt thế nó mới biết được.
+[4:47] Buines to buiness đấy. Bines to.
+[5:00] Ở chiều vào của bán hàng thì chúng ta phân loại thành các cấp độ quan tâm của
+[5:04] khách để bán đúng không ạ? Ví dụ khách hàng hơi quan tâm, khách hàng rất quan
+[5:08] tâm, khách hàng đang đàm phán, khách hàng đã từ chối thì đấy gọi là phân loại
+[5:13] lip. Nhưng ở chiều đã bán rồi nhé bạn nhé.
+[5:18] Phân loại là phân hành và phân loại cái khách hàng đã bán rồi thì ít nhất bạn
+[5:24] phải phân loại cho thầy thành ba lớp, tức là ba tổ này. Ai học kinh tế thì
+[5:30] biết là phân tổ thống kê. Phải có tiêu chí để phân tổ. À khách hàng loại A hoặc
+[5:35] thậm chí là A+. Được chưa? Khách hàng loại B và khách hàng loại C.
+[5:47] Sau đó chúng ta phải đưa ra tiêu chí định nghĩa này. Ví dụ ở công ty nào đó
+[5:51] đưa ra tiêu chí là khách hàng loại A là khách hàng có tổng lượng giao dịch một
+[5:57] đơn hàng hoặc cả năm lên đến bao nhiêu tiền? Giá trị của doanh thu.
+[6:03] Được chưa? Có gì ạ? Có các tiêu chí về lịch sử hoạt động thế nào? Và trong
+[6:11] những lần giao dịch thanh toán gần đây thì không có lần nào thanh toán nợ chậm.
+[6:16] Ví dụ như vậy hoặc là gì ạ? Định nghĩa là luôn luôn thanh toán nợ đúng hạn và
+[6:22] luôn luôn hợp tác trong việc ký nhận hồ sơ giao dịch và công nợ. Ví dụ như vậy
+[6:28] thì đó là thằng khách hàng loại A. Tiếp đến cái thằng nào mua cũng vừa vừa
+[6:35] thanh toán thì lúc đúng lúc không tạm gọi nó là khách hàng loại B.
+[6:40] Còn những thằng mua thì nhỏ, yêu sách thì nhiều, lần nào trả tiền nó cũng trả
+[6:46] chậm. Bảo ký thì nó đếch thèm ký. Thì cái thằng đấy là thằng loại C. Nếu
+[6:52] đã C thì phải xuống tận đến C tr- và yêu cầu bộ phận sale mỗi một năm mày
+[6:59] đuổi đi cho tao tất cả những thằng C tr-.
+[7:04] Ở đây tôi đang nói đến chuyện đuổi khách và tại sao phải phân loại và tại sao
+[7:11] phải đuổi khách. Bây giờ chúng ta thường nói chính sách
+[7:20] của bên em là cho nợ 30% đúng không ạ?
+[7:26] Thế là thằng thanh toán tốt ông cũng cho nợ 30, thằng thanh toán dở ông cũng cho
+[7:31] nợ 30. Thằng thanh toán chảy bửa ông cũng cho
+[7:36] nợ cỡ đó. Thế có nghĩa là ông bỏ tất cả trứng vào một giỏ. Ông ứng xử một kịch
+[7:43] bản giống nhau với tất cả các thái độ và khách hàng khác nhau.
+[7:47] Trong khi đó cái thằng loại a kia kìa nó mua nhiều thanh toán đúng. Ông phải có
+[7:53] cơ chế cho nó chứ phải không? Ông có thể phải tính tăng
+[7:58] cái hạn mức cho nó lên hoặc ông phải có chính sách chiết khấu thanh toán cho nó
+[8:03] chứ. Còn với thằng này thì ông phải phạt lãi trả chậm của nó chứ.
+[8:08] Tại sao lại ứng xử giống nhau được? Cho nên mục đích đầu tiên để phân loại khách
+[8:14] hàng ra để đưa ra các kịch bản ứng xử nợ khác nhau với các nhóm khách hàng khác
+[8:21] nhau tuyệt đối không được làm dùng chung. Cái này người ta gọi là cá biệt
+[8:26] hóa theo cái tính chất và điểm tín dụng của khách hàng. Hiện nay ở Việt Nam nó
+[8:34] đang có những cái cổng thông tin, những cái software phần mềm ấy là nó chấm điểm
+[8:38] tín dụng cá nhân, dựa vào những cái tương tác của ta trên mạng xã hội, dựa
+[8:43] vào các thông tin tín dụng ta vay ngân hàng. Rồi tới đây nó cũng sẽ có những
+[8:47] cái phần mềm nó sẽ báo cho chúng ta biết cái điểm tín dụng của doanh nghiệp.
+[8:53] Điểm tín dụng của doanh nghiệp nó không chỉ là cái chuyện mà điểm vay ngân hàng
+[8:56] tra CIC mà nó còn cái điểm uy tín với các đối tác luôn luôn có rồi sẽ có thì
+[9:04] anh chị ạ. Đấy nói như vậy để chúng ta nhất định phải tư duy lại rằng nếu anh
+[9:09] mua của tôi giá trị lớn thanh toán thường xuyên đúng tôi sẽ có chính sách
+[9:12] khác cho anh. Còn nếu anh chầy bừa thì tôi làm cái khác chứ tôi không ứng xử cá
+[9:17] mè một nữa được. Nguyên tắc cuộc đời là như thế. Cái này gọi là đi với bụt là
+[9:22] mặc áo cà sa này. Còn chỗ này là đi với ma là em mặc áo giấy nhá. Chứ không gom
+[9:28] chung vào được. Thì đấy là phát thứ nhất. Phát thứ hai là sau khi phân loại
+[9:33] xong thì phải đưa ra gì ạ? cái hạn mức nợ
+[9:40] là khác nhau, đưa ra kịch bản thu hồi nợ khác nhau. Ví dụ nếu thằng loại A
+[9:49] mà mày bắt đầu trễ đến đơn thứ ba, chị đánh mày tụt xuống loại B. Mà đã đánh
+[9:55] tụt xuống loại B thì trước khi chị chuyển chú sang loại B là chị đến thăm
+[10:01] cơ sở của chú phải đã được không?
+[10:05] để đánh giá lại tình hình chứ tôi nói là không không thì chỗ này
+[10:10] các bố sai lầm lắm ạ. Các bố bán cho nó đến 5 năm rồi nhưng mà không biết công
+[10:14] ty nó ở đâu, chẳng biết giám đốc của nó ở đâu. Tại
+[10:18] sao thế? Đơn hàng lớn mà lười quan hệ khách hàng. Phải tích cực
+[10:25] quan hệ với khách nhá. Nó mới ra tiền. Đấy. Cho nên là gì?
+[10:31] Nếu trong trường hợp này ông này mà chưa thanh toán trễ lần nào chỉ xin là ô tuần
+[10:37] này anh bị trễ mất của chú 5 ngày. Ok. Nhưng thằng này trễ 5 ngày ký giấy
+[10:47] được chưa? Nhưng nếu thằng này trễ 5 ngày cho nhân viên sang vừa ký giấy thu
+[10:52] trước được bao nhiêu thu luôn. Và nếu thằng này tao cho mày nợ tích lũy
+[10:58] đến 2 tỷ thì thằng này chỉ có 1 tỷ thôi. Còn thằng này 500 vượt khỏi 500 ok không
+[11:04] cấp hàng nữa. Nếu không cấp hàng nữa nó sẽ có xu hướng
+[11:09] mà không thì nó đi tao cho mày đi. Những thằng này không nên giữ bởi vì cố
+[11:14] tình bán cho nó là chết đấy. Thà không bán còn hơn. Tỉ suất lợi nhuận
+[11:19] bây giờ xin thưa anh chị nhất là làm thương mại nó mỏng lắm. mình được bao
+[11:23] nhiêu đâu. Trừ chi phí nhân công, trừ chi phí vốn đ không còn bao nhiêu cả mà
+[11:28] lại để nó cầm mất cái đó của mình. Nếu bây giờ mình cố gắng vay tiền, cố gắng
+[11:33] đốc thúc anh em làm việc bán cho người ta nó cầm nợ mà nó nhục một cái là nó nợ
+[11:39] thì nó phải ạ mình chứ. Mẹ đằng này nó nợ mình mình cứ phải ạ
+[11:43] nó. Thì trong trường hợp đấy người ta gọi là
+[11:47] chúng ta cố gắng vay tiền để cho đứa khác nó tiêu.
+[11:51] Rõ không? cố gắng huy động mọi nguồn lực để đáp
+[11:55] ứng cho nó nhưng mà lại để đứa khác nó tiêu. Nhưng phản biện trở lại thì có
+[12:01] người bảo nhưng mà không thế thì nó không mua.
+[12:07] Nếu câu trả lời của anh là nếu thế thì anh không bán được hàng thì anh phải trả
+[12:12] lời một câu hỏi khác cơ chứ không phải câu hỏi này.
+[12:18] Câu hỏi khác đó là sản phẩm của anh hoặc khả năng cung ứng của anh chẳng có giá
+[12:23] trị gì ngoài chuyện cho nó nợ. Có đúng không? Còn tôi tôi đảm bảo với quý vị
+[12:31] bây giờ cũng là hàng gỗ đi. Gỗ gỗ gỗ công nghiệp này nhập khẩu hay
+[12:37] trong nước nợ đìa nhau ra nhưng tôi đố các xưởng hoặc đố các đơn vị thi công nợ
+[12:42] được nợ gỗ của thằng An Cường ấy không có đưa tiền nó mới cấp hàng.
+[12:48] Đấy là nói ở quy mô lớn nhưng ở quy mô nhỏ cũng sẽ có rất nhiều trường hợp nó
+[12:54] gần như không bán nợ. không bắn nợ.
+[12:59] Thế tôi nói ví dụ như tôi có ông ông học viên ông người Vĩnh Phúc nhưng ông đang
+[13:04] kinh doanh ở Sài Gòn ông ấy làm cái băng cả nước dùng cho các cái công trình để
+[13:09] nó chống cái giãn nở bê tông và cả nước công trình.
+[13:13] Thế thì ông ấy cũng không trực tiếp bán, bán qua đại lý nhưng mà nhất định là
+[13:18] không bán nợ. Chuyển tiền là chuyển hàng là cầm tiền
+[13:22] về. Mặc dù đấy là vật liệu xây dựng mà vật
+[13:25] liệu rất ít nhá, rất hiếm. Trong khi đó một thằng sừng sỏ trong ngành đó là
+[13:30] thằng Shik nhưng ông ấy vẫn không bán nợ
+[13:36] bởi vì ông ấy làm được một việc đó là gì ạ?
+[13:40] >> Chất lượng cực ok. Và ông ấy tự đổ khuôn được. Ông ấy tự đổ
+[13:45] từ hạt ra đến thành phẩm cuối cùng. Vì ông ấy là gọi là gì ạ? quá đam mê với
+[13:50] ngành nhựa. Có rất nhiều cái phát kiến trong ngành nhựa
+[13:55] và cái giá sản phẩm ông ấy để cho đại lý ăn được một cái tỉ lệ rất dày.
+[14:02] Ông ấy chấp nhận tao không có thương hiệu nhưng tao không bán chịu. Có thế
+[14:05] thôi. Mày mua thì mua, không mua thì mày sang lấy của Shik đi mà bán.
+[14:10] Nhưng mà mười mấy năm nay chưa có đại lý nào rời bỏ.
+[14:14] Như vậy chúng ta phải nhận thức lại là khi nào khách hàng nó bảo mày không cho
+[14:18] nợ tao không mua nữa. Có nghĩa là ông không có gì tốt hơn ngoài nợ. Hơn nữa,
+[14:24] mỗi một công ty cần phải giới hạn lại cái phân khúc khách để mà phục vụ chứ
+[14:29] không phải phục vụ tất cả. Ok. Tao nhất định sẽ cố gắng đưa sản phẩm lên đến cái
+[14:34] tầm mà thằng nào đòi mua nợ nhiều nợ trầy tao không bán. Vậy thì nhiệm vụ của
+[14:39] bên gì ạ? sản xuất, mua hàng hoặc nghiên cứu phát triển là ông phải cải thiện sản
+[14:43] phẩm lên, ông tăng cường tính chuyên nghiệp trong quá trình phục vụ lên và
+[14:48] đội kinh doanh là mày phải tìm được khách hàng mới thay thế ở loại A loại B
+[14:52] để đuổi bớt thằng C đi cho tao. Chúng ta ngẫm mà xem, khách hàng loại A
+[14:58] này cùng nắm thêm một vài thằng loại B, nó đang chiếm 80% doanh số của chúng ta
+[15:04] hàng tháng. Mà gần như chúng ta không mất công sức
+[15:10] quá nhiều đối với nó. Vì đến ngày là nó gọi hàng
+[15:14] nhưng chúng ta mất 80% công sức và gì? Cái sự bực dọc, khó khăn, hồ sơ, chứng
+[15:20] từ để giải quyết 20 đến 30% giá trị đơn của những thằng nhỏ.
+[15:26] Đấy. Thế cho nên là đừng cố tình bán bằng mọi giá. Hãy bán có lựa chọn. Để
+[15:33] bán được lựa chọn là phải có gì? Cái gì tốt? Nếu anh còn giá trị người ta không
+[15:39] rời bỏ anh đâu. Trừ khi nào anh hết giá trị nó sẽ rời bỏ anh. Và thêm một chân
+[15:45] lý nữa đó là nếu anh cho một thằng khách hàng trung thành nào đó vì nể nang mà
+[15:52] cho nó nợ quá mức lên thì một ngày xì nó lại bỏ anh đi.
+[15:58] Chiều chuộng nó quá đâm ra nó hư. Tại sao thế? Vì trong quá trình kinh
+[16:06] doanh thế nào cũng có lúc nó gặp khó khăn nhất định. Anh nuông chiều và dễ
+[16:12] rãi cho nó nợ quá mức cần thiết lên thì khi trả nợ nó tiếc nợ.
+[16:19] Nó tiếc nợ nó bắt đầu mè nheo và có những thằng nó bẩn cực luôn. nó sẵn sàng
+[16:25] xù nợ và khoanh nợ để đó túc tác trả dàn đi kiếm đầu mối cung cấp mới
+[16:32] thì đấy cho nên là gì ạ? Để quan hệ lâu dài với
+[16:37] nhau, hãy phân loại khách hàng, hãy chuẩn chỉ hồ sơ và hãy đòi nợ bằng biện
+[16:44] pháp là chăm sóc khách hàng chứ không phải nhằm đưa nhau ra tòa. Ra tòa cũng
+[16:49] đích thu được đâu. Tôi nói trước mà chăm sóc khách hàng là chăm sóc như chuyên đề
+[16:54] kinh doanh tôi nói, chăm sóc ba lớp. Ba lớp là ít ạ.
+[17:00] Ba lớp là giám đốc đi mới giám đốc được không? trưởng phòng đi mới cấp trưởng
+[17:04] phòng, cấp trung đi mới cấp trung mà nhân viên đi mới nhân viên.
+[17:10] Kế tiếp là một số cái thực trạng mà cần được khắc phục ngay
+[17:22] thì có hai cái thực trạng phổ biến đó là kỷ luật kém,
+[17:29] kỷ luật tài chính kém. Cái thực trạng thứ hai là áng chừng.
+[17:39] Đây là hai thứ mà doanh nghiệp của mình cần phải khắc phục ngay. Chúng ta kinh
+[17:46] doanh để kiếm tiền nhưng chúng ta lại chưa bao giờ nghĩ đến việc giữ tiền.
+[17:51] Dòng tiền nó thế này anh chị ạ. Bây giờ mình hình dung tôi có một cái ly nước ở
+[17:56] đây. Nếu tôi nhúng tay vào rồi tôi vẩy, nhúng tay vào tôi vẩy, tôi đảm bảo tôi
+[18:03] vẩy hết cả bát nước luôn cũng chưa tạo ra được một dòng chảy nào
+[18:07] đó trên cái sàn này. Tin thử mà xem. Nhúng tay vào cốc nước
+[18:12] của các anh vảy thử đi. Nhưng nếu tôi cầm cả cái ly tôi đổ một
+[18:15] phát thì tiền nó cũng thế.
+[18:20] Nếu như khi tiền nó chưa tích lũy được trở thành một cái giá trị đáng tiêu thì
+[18:26] nó không giải quyết được các cái mục đích đáng giá. Nếu giá trị tiền chưa
+[18:30] đáng tiêu, chưa giải quyết được mục đích đáng giá cho doanh nghiệp đâu.
+[18:34] Cái chuyện này về mặt cá nhân chúng ta từng trải nghiệm rồi. Tôi nói ví dụ các
+[18:38] cô các chị đi làm kế toán làm thuê và lĩnh lương xong nút túi này
+[18:43] mà không chia ra thành từng gói để mà có kế hoạch chi tiêu. Thế là gì ạ? Nay
+[18:48] chiều con đi chơi một tí. Ngày mai chiều chồng mua cho một món
+[18:51] quà, ngày mốt bạn rủ đi ăn ngày mốt nữa gì ạ? Mua hàng giảm giá
+[18:58] xăng cộ đi đường hết lúc nào không biết có đúng không? Nhưng mà nếu chúng ta
+[19:03] chia luôn thành từng gói chỗ này tiêu chỉ có thế này thôi thì tích lũy lại nó
+[19:08] sẽ giải quyết được vấn đề. Ở công ty mình cũng thế, khi tiền về nếu
+[19:13] mọi thứ có kế hoạch thì nó sẽ giải quyết được những việc
+[19:18] trong kế hoạch của công ty. Còn nếu không nó cứ bị xé lẻ. Và hơn nữa nó có
+[19:25] một cái thứ nữa là đôi khi cái kỷ luật này chúng ta cũng bị tác động bởi nhân
+[19:29] viên. Bởi vì ở trong các công ty hiện nay là
+[19:34] chi phí nó cứ phát sinh thì lại trình chứng từ lại phê duyệt phát sinh trình
+[19:39] duyệt phát sinh trình duyệt. Nó cứ hát mãi cái bài cá đó. Và nếu mình duyệt thì
+[19:48] đôi khi cũng rất ấm ức mà không duyệt thì không được.
+[19:52] Cho nên phải cắt ngay cái tâm lý trình duyệt của nhân viên đi.
+[19:58] Mỗi một tháng phải cho mỗi bộ phận nhìn thấy rằng à đây tháng này bộ phận mày
+[20:02] được tiêu bằng này tiền cho những khoản mục này và dần dần phải kéo kéo công ty
+[20:09] về được tình trạng người ta gọi là thanh toán theo lịch.
+[20:14] Thanh toán theo lịch. Ở đây anh nào làm thầu với các công ty lớn chưa?
+[20:21] Tôi đố các anh chị bảo nó thanh toán đơn lẻ được đấy. Đến lịch thanh toán của nó
+[20:26] nó mới trả tiền. Thí dụ anh làm xong trước ngày 15 thì nó
+[20:32] sẽ thanh toán trước cho anh vào ngày trước ngày 30 vào cái kỳ thứ ba thứ ba
+[20:35] của nó. Nếu anh làm xong trước ngày mùng 10 nó sẽ thanh toán cho anh vào kỳ thứ
+[20:39] hai. Ví dụ bọn Honda là như vậy. Nhưng mà một
+[20:44] số các công ty khác là gì? Ông thanh ông làm xong tháng trước thì
+[20:48] nó sẽ thanh toán cho ông ông vào kỳ tháng sau. Và cứ như vậy nó thanh toán
+[20:52] theo lịch có nghĩa là 1 tháng nó chỉ có ba cái lịch thanh toán cho nhà cung cấp
+[20:56] hoặc hai lịch thanh toán nhà cung cấp. Một số thằng gì ạ? Keo kiệt hơn 1 tháng
+[21:00] chỉ có một lần thanh toán nhà cung cấp nhưng nó làm được đến cái mức là gì ạ?
+[21:05] Một là phòng mua của nó làm việc quá tốt. Thứ hai là nó lớn. Thứ ba là nó có
+[21:09] uy tín trong việc thanh toán đạo. Nó không quỵt.
+[21:13] Cho nên đôi khi chúng ta vì chắc ăn vẫn phải chấp nhận bán cho nó.
+[21:18] Vì khi bán cho nó tính luôn rồi. Nó sẽ chiếm dụng của ông bao nhiêu ngày, nó
+[21:22] cho ông ăn bao nhiêu tiền lời. Phòng mua của nó tính cả rồi chứ.
+[21:29] Đó là nhờ cái kỹ thuật và cái tiến trình người ta đi tìm kiếm nhà cung cấp chiến
+[21:34] lược. Còn đôi khi chúng ta quá chủ quan, chúng
+[21:38] ta cứ nghĩ mình là người mua thì cần quái phải đi tìm. Cái chỗ mà chúng ta
+[21:43] phải ạ nhất không phải khách hàng đâu các bố mà là nhà cung cấp chiến lược.
+[21:48] Bởi vì sang đến cái chỗ gọi là chương trình giảm phí tôi sẽ nói cho nghe.
+[21:54] Nếu đội ngũ kế toán và phòng mua của anh 1 năm nó giảm được 3% chi phí mua hàng,
+[21:59] tức là 3% chi phí giá vốn thì nó bằng anh tăm tăng 5 6% thậm chí 10% doanh thu
+[22:07] chứ đừng đùa lợi hại lắm.
+[22:11] Thế thì đây này cho nhân viên thấy rằng các cái hạn mức chi tiêu bằng kế hoạch
+[22:17] rồi từng bước một có thể 3 năm nữa, 5 năm nữa các anh buộc phải kéo công ty
+[22:23] mình về trạng thái thanh toán theo lịch. Không tin thì bây giờ cứ về áp dụng luôn
+[22:29] cái chuyện thanh toán theo lịch cho nội bộ.
+[22:32] Ví dụ 1 tháng chỉ có ba kỳ hoặc mỗi tuần chỉ có một lần tạm ứng và thanh toán tạm
+[22:42] ứng chứ không phải ngày nào tôi cũng ký được. Bởi vì ngày nào nó cũng ký ấy. Một
+[22:47] là nó rất lắt nhắt, hai là khó quản lý, ba là không kế hoạch, bốn là gì? Mẹ mình
+[22:53] đang đi giao dịch đối tác. Anh ơi về về ký cho em cái ký cái gì? Dạ em tạm ứng 2
+[22:59] triệu đi công tác. Thế chiều đến lại kế toán anh ơi về về
+[23:03] ký cho em ký cái gì? Em mới mua cái bộ công cụ vệ sinh cho chị Tạp vụ ấy.
+[23:09] Thế là mình cứ đi một tí nó gọi về. Thế vô tình các bố làm trợ lý cho nó nhỉ.
+[23:14] Ơ kìa trợ lý ký chứng từ cho nhân viên mà.
+[23:18] Thì tôi khuyên tất cả những gì thanh toán nội bộ phải quy về. Đầu tiên là
+[23:24] thanh toán theo tuần. Mỗi tuần có mỗi lần. này trừ trường hợp bất khả kháng nó
+[23:28] phát sinh sự việc rủi ro làm thế nào để làm được làm được ngay ạ
+[23:35] ví dụ phòng kinh doanh mà thế em đi công tác đột xuất
+[23:39] đột xuất lôi quỹ phòng ra mà đi quỹ phòng
+[23:43] >> tôi trích quỹ phòng ch
+[23:46] >> tôi chích trên một khoản quỹ phòng để đấy đột xuất dùng quỹ phòng được không ạ
+[23:50] cứ một tháng thắng tôi quyết toán quỹ phòng một lần đấy là pháp thứ nhất phát
+[23:55] thứ hai này, ông định đi công tác hay ông định làm
+[23:58] gì? Bà định mua văn phòng phẩm hay thanh toán cái thứ gì, vui lòng tính trước đi
+[24:03] rằng cái tuần này nó rơi vào ngày thứ mấy và nó là bao nhiêu tiền?
+[24:07] Tức là gì? Tất cả nhân viên đều phải chuẩn bị sẵn sàng tâm thế kế hoạch, kế
+[24:12] hoạch, kế hoạch, dự liệu trước, tính toán mọi thứ đi. Thế còn nếu không đưa
+[24:16] vào kế hoạch, vui lòng bỏ tiền túi ra mà đi. Về vào tuần sau sẽ được thanh toán.
+[24:21] Cứ thế mà làm. Chẳng qua chúng ta làm không gò và không
+[24:24] cứng thôi. Cứng làm được ngay. Và chỉ khi cái đó cộng với kế hoạch ra, cộng
+[24:30] với cái việc nữa này để chữa cái bệnh vô kỳ luật này anh chị nhé là phải minh
+[24:35] bạch. Minh bạch giữa tiền cá nhân
+[24:41] với tiền công ty. Chừng nào tách bạch được cá nhân với
+[24:46] công ty thì mới minh bạch được kế hoạch dòng tiền
+[24:50] chứ không này đang đi hôm nay đi đâu đây?
+[24:52] Thu nợ trên đường về anh ơi. Tivi đợt này nó đang giảm giá đấy. Có
+[24:59] khi thay cái tivi phòng khách đi. Rẽ vào si thị quất luôn một cái
+[25:06] vân vân. Thế thì mới nói rằng là
+[25:10] nếu chừng nào còn thu tiền bên trái, rút ra tiêu bên phải lẫn lộn giữa tiền công
+[25:16] ty và tiền cá nhân gia đình thì không đời nào làm được kế hoạch dòng
+[25:22] tiền hết và còn lằng nhằng mắc phải cái tính vô kỷ luật. Đấy là những cái nhỏ.
+[25:28] Nhưng cái vô kỷ luật lớn là tiền dùng cho mục đích A nhưng mang dùng cho việc
+[25:33] B vẫn là dùng cho công ty thôi. Nhưng đó là biểu hiện của vô kỳ luật. Cái nữa
+[25:39] này, từ cái vô kỳ luật như thế nó thành ra sự vụ và nó dẫn đến áng chừng. Mà áng
+[25:46] chừng là vỡ gì ạ? Vỡ tiền là thường xuyên. Mình mình biết thừa rồi, chi tiêu
+[25:52] nó hay phát sinh lắm mà chừng nào chưa có định mức hạn mức
+[25:57] thì nó còn xảy ra tình trạng áng chửng. Thế rồi bây giờ bảo nhưng mà bây giờ
+[26:02] công ty của em, tiền của em, em tiêu thế nào thì em tiêu? Nhiều ông tôi nói thẳng
+[26:08] là không cẩn thận là vợ nó còn mắng cho. Anh làm công ty kiểu gì? Anh kiếm tiền
+[26:12] phục vụ gia đình thì em tiêu thế nào em tiêu. Đừng nhầm tiền của ông ông tiêu
+[26:16] thế nào thì ông tiêu nhưng ông giúp tôi ra một khoản ông tiêu.
+[26:20] Hai năm trước tôi làm ở trên hệ thống nha khoa ở trong
+[26:26] Đồng Nai. Tôi bắt ông giám đốc là thôi ông ơi, vợ ông cầm quỹ cũng được. Nhưng
+[26:32] mà cái chuyện mà nay ông đi tiếp khách, ngày mai ông đi giao dịch cứ chốc chốc
+[26:36] ông về ông bảo kế toán đưa tiền là không ổn. Ông cầm luôn một cục đi 50 triệu một
+[26:40] tháng. hay là gì ạ? 100 triệu một tháng ông cầm riêng ra đi được không? Ông chi
+[26:45] tiêu cái gì thì một là bây giờ tôi đưa thêm cho ông cái thẻ tín dụng doanh
+[26:48] nghiệp nhưng gắn cả tên ông vào. Ông đông quẹt. Cái gì là cá nhân thì ông
+[26:52] đền, ông bù, cái gì tiêu cho công ty thì công ty quyết toán. Cứ thế làm.
+[27:00] Cứ thế làm. Thế thì cũng là tiền của mình thôi. Nhưng mà sau đó nó ra gói nào
+[27:05] nó ra gói ấy. Cho nên tổng kết lại có nghĩa là thực ra quản lý tiền là mình
+[27:12] đừng khôn quá thì lập tức sẽ trở thành người quản lý giỏi. Đó là hãy lập kế
+[27:19] hoạch cho nó. Hai là tiền mua mắm thì để mua mắm, tiền mua tương nhớ để mua
+[27:26] tương. Tức là gói nào thì dùng đúng mục đích cho gói đó.
+[27:31] Gói ba, giải pháp thứ ba luôn luôn là chuẩn bị trước.
+[27:41] Luôn luôn chuẩn bị trước. Tôi nói thí dụ thế nào là chuẩn bị trước?
+[27:47] Nếu ông không lập kế hoạch dòng tiền thì có phải là một khoản công nợ đối với một
+[27:53] số nhà cung cấp ông không biết rằng là ông có khả năng trả được họ đúng kỳ hay
+[27:59] không? Trừ trường hợp dòng tiền vào của ông nó
+[28:02] quá mạnh thôi. Thế là ông cứ cố gắng đúng không anh em
+[28:07] ơi? Cố gắng nha, cố gắng nha. Nhưng mà nó đến hạn một phát vẫn không gom được
+[28:10] đủ tiền. Chúng ta vẫn làm sao? Vẫn cố gắng. Khách
+[28:16] gọi thì thôi yên tâm đi. Cố gắng anh em cố gắng thu xếp 3 ngày nữa giả cho ông
+[28:20] chứ cái gì mà gọi lắm thế. Nhưng ba ngày nữa vẫn đếch thu được đủ.
+[28:28] Mặt thì nhăn vào bảo với nhân viên là mẹ phải cố gắng giữ chữ tín. Nhưng cái cố
+[28:33] gắng giữ chữ tín không đúng cách nó làm mất chữ tín.
+[28:38] Bởi vì lúc đấy cái chữ tín người ta cần rằng thà rằng trước đó một tuần ông bảo
+[28:42] với nó là tao không có cách gì đâu mày ơi.
+[28:46] Kiểu gì cũng bị chậm 5 ngày để nó biết đường nó thu xếp. Vì chúng ta biết thừa
+[28:50] rồi bực nhất là đến ngày mình trông vào khoản tiền đó mà nó lại bảo gì?
+[28:55] Nó không có. mà nó bảo không có còn may gọi điện cho
+[29:00] nó thì ò ý e thế ba quý khách vừa gọi hiện không liên
+[29:04] lạc được. Tôi xin thưa nói thật với các bố chứ trong giờ làm việc mà giám đốc
+[29:10] tắt điện thoại thì một là trốn tình mà hai là trốn nợ không có cái thứ gì khác
+[29:15] cả. Gọi thì cứ bảo đi họp với lại không liên
+[29:20] lạc được đừng tin. Thế cho nên là ví dụ như là sắp sửa đến
+[29:26] hạn thanh toán nợ, nếu anh có lập kế hoạch dòng tiền, anh cân thấy rằng không
+[29:31] đủ tiền ở cái ngày đó mà hai tuần nữa đến hạn thanh toán với nó thì ngay từ
+[29:37] hôm nay nếu là đối tác quan trọng anh sang anh gặp hoặc anh gọi cho người ta
+[29:42] anh ơi kế hoạch dòng tiền của bên em tháng này
+[29:46] là có chút nhỡ cho nên khoản của anh em đề nghị là cho em thanh toán thành hai
+[29:52] lần. Hôm nay đang sẵn có đây em trả trước anh một phần.
+[29:58] Phần còn lại em xin lùi lại đúng 10 ngày trả đúng không? Viết giấy, viết tờ với
+[30:03] người ta. Đó là cách anh giữ chữ tín. Đó là cách anh giúp cho người ta cũng chủ
+[30:08] động được cái lịch thanh toán và tiền của người ta chứ không phải em đang cố
+[30:12] đây. Ngày mai vẫn em đang cố đây. Đúng không? Đừng làm thế. Bởi vì nếu không có
+[30:19] kinh nghiệm trong kinh doanh, chúng ta thường làm thế.
+[30:23] Nhưng làm thế là giết cả ta lẫn giết họ. Hãy cố gắng chủ động hơn. Mà để chủ động
+[30:29] được không còn cách nào khác là phải cân dòng tiền từng tháng từng tháng một để
+[30:34] biết khoản gì có thể trả được đúng kỳ, khoản gì không. Và một khi nếu đã có kế
+[30:39] hoạch trước, tiền thì nợ thì mình đang cầm phải không? Nếu mình muốn khất nợ
+[30:44] chắc chắn khất được. Có phải không? Mình cầm tiền cơ mà.
+[30:49] Ngược lại đối tác cũng như thế. Nhưng nhớ nguyên lý này. Nguyên lý là
+[30:55] nếu mình đi khất nợ thì hãy khất từ trước. Hãy khất bằng văn bản, hãy khất
+[31:02] một cách thiện chí và chia nhỏ để khất chứ không anh ơi, em nợ anh 10 tỷ,
+[31:10] em xin khất anh sang năm giả đúng không?
+[31:16] Em khất anh là em có kế hoạch trả cho anh thế này này. Hôm nay trả luôn một
+[31:19] ít. Cái trả luôn một ít đấy. Đừng quan trọng nó nhiều hay ít vì cái đó nó chứng
+[31:25] minh cho cái gì? Cái thiện trí trả nợ của anh.
+[31:29] Cho nhân viên cầm tiền sang ký giấy. Đấy là cái thiện chí số một. Xin đừng nói
+[31:34] phét nữa đi anh em mà. Anh có có rảnh không? Hôm nào em sang anh em mình nhậu
+[31:38] tí. bốc phét tiền còn đang chảy xoắn vó và nhậu nhét đi.
+[31:43] Hãy làm những động tác nào đó nó thể hiện cái thiện trí đó là cầm giấy sang
+[31:48] trả trước một ít sau đó chia nhỏ nợ để khất. Ngược lại nếu bị khất nợ đừng bao
+[31:55] giờ cho khất cả gói vì thằng đó là mông lung lắm.
+[32:01] Nợ 1 tỷ em xin khất hai tuần được thôi. Nhưng mà vui lòng cho nhân viên hoặc chú
+[32:06] sang đây ký cho anh cái giấy hoặc nếu chú bận anh cho nhân viên sang ký cái
+[32:10] giấy hoặc xa quá gì ghi âm lại hoặc là ký cái
+[32:16] giấy gửi chụp dấu má đây gửi qua email còn lại giấy thật gửi qua gì chuyển phát
+[32:20] nhanh. Nhưng nhất định ngày hôm nay vẫn phải trả cho anh một tí vì hôm nay anh
+[32:26] cũng có cái việc rồi trông và khoản của chú.
+[32:30] Đúng không ạ? 1 tỷ gì thôi. Hôm nay tao lấy 50. Anh đang có cái việc này mà anh
+[32:34] không ở nhà, chú có chuyển cho anh trước 50. Thế mình nghĩ mình bảo mẹ nó nợ mình
+[32:38] mình 1 tỷ mà bây giờ lấy 50 làm chó. Xin thưa nó bảo nếu em khó quá 40 cũng
+[32:44] lấy. Hiểu không? Vì thứ nhất này nguyên lý
+[32:49] này công nợ trả dần. Thứ hai là tiền thu được về nhà mình thì tiền làm của mình.
+[32:54] Chứ đừng sĩ diện mà đuổi nó đi. Đừng sĩ diện bảo rằng mày nợ tao 1 tỷ tao lấy 50
+[32:59] năm choi. Đừng bảo thế. Cứ lấy về. Vì thế này ông ơi, nếu mà nó nợ tiền tỷ mà
+[33:06] đến mấy chục triệu nó cũng không xoay được trong 1 hai ngày để giả mình
+[33:10] >> thì có nghĩa là thằng đó khó lắm rồi ông ơi. Người ta thu mấy chục triệu trong
+[33:15] một hai ngày đầu để một là đo cái thái độ và hai là đo cái gì? Đo cái mức độ
+[33:20] khó của nó đến đâu rồi chứ. Tại sao mình lại ngây thơ thế nhỉ?
+[33:27] Xong rồi phần còn lại là chia kế hoạch ra.
+[33:31] Ok. Mày khất hai tuần chứ gì? Anh cho khất 3 tuần cũng được hoặc là 18 ngày
+[33:36] cũng được. Nhưng kế hoạch là thế này. Hôm nay 50, tuần sau 300, tuần sau nữa
+[33:42] bao nhiêu? Một khi đã khất đến lần thứ nhất, thần
+[33:47] lần thứ nhất thì có thể mềm mỏng nhưng lần thứ hai trở đi mà khất nợ. Quý vị cứ
+[33:51] làm rắn đúng như thế cho tôi. Kết hợp với việc nhắc nợ khi chuẩn bị
+[33:56] đến hạn, kết hợp cho kế toán đối chiếu hồ sơ khi chuẩn bị đến hạn.
+[34:03] Kết hợp mấy giám đốc gọi điện hỏi thăm nhau chứ đừng gọi đòi tiền.
+[34:07] làm đủ ba cấp như thế cho tôi. Chúng ta có xu hướng được ưu tiên thanh toán nợ
+[34:12] trước so với những thằng khác đấy. Hôm nay chỉ nói cho mấy người ngồi
+[34:18] đây biết thôi. Mấy hôm nữa đăng lên YouTube là người thằng khác nó mới biết.
+[34:29] Thế còn về kỹ thuật lập thì cũng đã trình bày với các anh chị
+[34:33] nhiều rồi. Chúng ta áp dụng phương pháp là top down kết hợp với lại button up.
+[34:40] Có nghĩa là công ty đưa ra các cái gói tiền trên xuống để phân bổ.
+[34:48] Còn nhân viên các phòng ban bộ phận thì đưa lên các yêu cầu chi tiêu trong tháng
+[34:54] của bộ phận mình. Sau đó ngồi cân ngồi khớp. Khoản gì đẩy
+[34:59] lên tuần một, khoản gì đẩy xuống tuần hai, khoản gì phải đẩy sang tháng sau,
+[35:04] phải đi khất nợ ở chỗ nào? Phải đi đòi nợ gắt ở chỗ nào, chiết khấu cho ai để
+[35:09] nó trả tiền nhanh hơn, đưa tiền gầm bàn cho ai để nó làm hồ sơ cho mình sớm hơn
+[35:15] thì đấy gọi là phương pháp kết hợp. Để lập được ra một kế hoạch dòng tiền.
+[35:21] Và đã lập kế hoạch dòng tiền thì phải thực thi chứ không phải là lập
+[35:28] cho nó đẹp. Và trong kinh doanh liên quan đến tiền thì nhớ rằng đừng cố gắng
+[35:34] theo đuổi xây dựng hệ thống mà làm đứt khả năng thanh toán. Đó là những chú gì
+[35:40] ạ? Ví dụ thích mở nhiều cây xăng, thích mở nhiều cửa hàng, thích mở nhiều điểm
+[35:46] nha khoa em ạ. Nếu mà tiền tích lũy đầu tư chưa đủ thì hãy tối ưu dịch vụ và tối
+[35:53] ưu lợi nhuận cho các cơ sở hiện tại chứ đừng theo đuổi hệ thống. Vì theo đuổi hệ
+[35:59] thống mà lại dùng tiền hàng ngày kinh doanh của các cửa hàng và cơ sở kinh
+[36:04] doanh hiện tại để nuôi thằng mới thì chắc chắn nó gãy dòng tiền. Không bao
+[36:09] giờ được làm thế nhá. Mở một cơ sở kinh doanh mới là một gì? là một dự án tài
+[36:17] chính riêng biệt không có liên quan. Thứ nữa khó mấy thì khó,
+[36:25] trừ trường hợp liên quan đến sự sống còn và tính mạng.
+[36:30] Còn đừng bao giờ đụng vào tín dụng đen. Đừng bao giờ. Tôi khuyên thật.
+[36:36] chúng ta lãi lờ không được bao nhiêu đâu.
+[36:39] Nhưng nếu trường hợp tiền cứ giữ khư khư thì nó giảm cái cơ hội. Cho nên gì ạ?
+[36:46] Nếu có dư tiền thì phải chuyển đổi nó sang tài sản tương đương tiền. Ví dụ
+[36:52] chứng khoán, trái phiếu ngắn, đầu tư ngắn. Nhưng nhớ phải giữ cho bằng được
+[36:57] cái nguyên tắc tiền ngắn thì đừng có dùng giải chứ không lại chết bỏ có ngày.
+[37:05] Còn tại doanh nghiệp hiện nay chúng ta phải làm gì?
+[37:10] Chúng ta phải làm những năm việc sau đây.
+[37:15] Việc một, hãy lập ngay một ban xử lý công nợ phải thu phải trả. Nghĩa là sau
+[37:21] cuộc họp này về, giám đốc đập bàn em ơi thành lập ban xử lý công nợ. Làm cho tôi
+[37:27] mấy việc? Việc một phân loại lại khách hàng, việc hai kiểm kê lại công nợ, việc
+[37:33] ba kiểm chứng lại hồ sơ công nợ. Việc số năm gì bắt đầu tiến trình thuyết phục
+[37:38] nợ, đòi nợ. Thằng nào thiếu giấy bảo kỹ, thằng nào nợ lâu rồi chưa liên hệ bảo
+[37:43] xếp sang thăm. Được chưa? Ơ bây giờ ông kinh doanh ông không đi thăm đối tác thì
+[37:48] thăm ai? Chúng ta thường chỉ có thói quen là đi
+[37:51] thăm đối tác để kiếm nguồn hàng đúng không? Kiếm cơ hội kinh doanh mới
+[37:57] để giao du đúng không ạ? Và cái chỗ đấy thì hay gặp chân dài
+[38:02] mệt lắm mà không mấy ông đi chăm sóc cho gì ạ? Nhà cung cấp.
+[38:08] Định nghĩa rủi ro thu hồi công nợ theo nhóm khách. Xem xem số nợ của mình bây
+[38:13] giờ khoanh lại đi. Chỗ nào vẫn có khả năng đòi bình thường, chỗ nào hơi khó,
+[38:18] chỗ nào khó lắm rồi. Khó lắm rồi. Nó đang nợ tru mày ơi, nếu mày giả luôn tao
+[38:25] chỉ thu 80 và nhưng mà 80 thu về em lỗ. Lỗ còn hận
+[38:29] mất đúng không? Thu về đi.
+[38:35] Lập ngay kịch bản xử lý rủi ro nợ phải thu phải trả. Tức là nếu thì nếu thì nếu
+[38:41] gọi điện thằng này bảo nó trả tiền nó bảo thế kia thì thế nào? Đấy là kính bán
+[38:48] vận dụng triệt để việc trích lập dự phòng phải thu khó đòi. À cái chỗ này
+[38:52] nói cho kế toán biết nhá. Mình bán hàng mình ghi nhận doanh thu,
+[38:59] tiền mình chưa thu được, mình bị những cái thiệt nào ạ?
+[39:04] Tiền chưa thu được là nhưng mà mình đã phải gọi tiền ra nộp tiền thuế giá trị
+[39:08] gia tăng cho nó rồi phải không? Tiền hàng mình phải trả rồi có phải
+[39:12] không?
+[39:14] >> Nếu nợ qua năm thì chúng ta nộp luôn cả thuế thu nhập doanh nghiệp từ cái doanh
+[39:18] thu đó rồi phải không? Trong khi nợ tiền nó vẫn cầm.
+[39:23] Như vậy nó không chỉ là mất nợ đâu ạ. Nó không chỉ là bị chiếm dụng vốn bằng cái
+[39:27] chi phí sử dụng vốn đâu. Nó còn câu chuyện của thuế má trong đó.
+[39:33] khi đó nhưng mà kế toán thì lại không biết cách hoàn thiện cái hồ sơ công nợ.
+[39:40] Cho nên có những thằng nó nợ mình đến 3 năm nhưng bây giờ hỏi hồ sơ đâu là đếch
+[39:44] có bằng chứng. Có mỗi cái hợp đồng với cái phiếu giao hàng mà nó nợ mình 3 năm
+[39:49] rồi. Bây giờ kiện được không?
+[39:51] >> Không. Vì mang hồ sơ ra tòa trả về hết quyền khởi kiện.
+[39:57] Có 2 năm thôi ông ơi. Cho nên là gì ạ? yêu cầu tiên quyết là đối chiếu công nợ
+[40:03] dài nhất là một quý. Còn tháng nào người ta đối chiếu tháng đó chứ làm gì có
+[40:07] chuyện để lâu thế hả? Giải quyết ngay sau đó kiện toàn hoàn
+[40:15] thiện hồ sơ công nợ cái gì đó nợ trên 6 tháng bắt đầu trích lập dự phòng. Trích
+[40:22] lập dự phòng theo thông tư số bao nhiêu nhỉ? Bây giờ theo cái gì Quỳnh ơi?
+[40:29] >> Hả? Th 48.
+[40:32] >> Thông tư số 48 năm 2019
+[40:39] trước kia là thông tư số 2 28 và thông tư số 89.
+[40:48] Thế mà nhưng mà thầy ơi có những khoản nợ là 5 năm nay rồi em vẫn chưa đòi được
+[40:54] thì tôi khuyên là quay lại lập lại dự phòng của 3 4 năm về trước.
+[40:59] Vì khi ông trích lập dự phòng ông được tăng một khoản chi phí đó
+[41:04] được không ạ? Mà tăng chi phí đó nó làm giảm cái thuế thu nhập trong quá khứ
+[41:08] không phải nộp. Nó làm thay đổi cái cán cân nộp thuế
+[41:12] trong những năm tiếp theo. Tiền ở đó chứ ở đâu. Mỗi chỗ mất một ít thì lấy đâu ra
+[41:18] nhỉ. Cho nên là gì? Trích lập dự phòng ngay. Tôi nói lại này, từ 6 tháng trở
+[41:23] lên đã được trích rồi, còn muốn biết mức trích bao nhiêu về xem thông tư 48 2019
+[41:29] về việc trích lập dự phòng tổn thất tài chính, trích lập dự phòng rủi ro khó
+[41:34] đòi, trích lập dự phòng các khoản thiệt hại, một loạt các khoản trích lập dự
+[41:39] phòng. Nhưng khổ nỗi là nếu không kiện toàn hồ
+[41:43] sơ kế toán công nợ là không bao giờ trích được vì không có bằng chứng.
+[41:48] Nó nợ như không ghi nhận bằng chứng. và luôn theo dõi cái cán cân thanh toán
+[41:53] nhanh cá biển giữ cho nó ở khoảng từ 0.8 đến 1.2.
+[41:59] Nghĩa là nếu xác định mục tiêu tài chính năm nay thì phải có một mục tiêu là cải
+[42:04] thiện dòng tiền bằng cách gì? Kéo chỉ số thanh toán cá biệt dần về 0.8 đến 1.2.
+[42:12] Cứ ở chỗ đó tin tôi đi. Mặt của các giám đốc sẽ dạng ngời đi đàm phán một tâm thế
+[42:18] hoàn toàn khác. không so dụi và tôi nói chỉ khi có tiền quý vị mới mua được giá
+[42:24] tốt. Còn nếu đã ngay lập tức nó biết ông rằng mở mồm ra là đòi công nợ thì nó
+[42:30] chèn ông bằng chết luôn là như thế.
+[42:34] Cho nên thằng giàu nó cứ giàu mà thằng nghèo thì cứ mãi nghèo đi. Thế còn biểu
+[42:39] mẫu để chúng ta lập kế hoạch dòng tiền thì nó là cái mẫu kế hoạch dòng tiền
+[42:44] trong bộ kế hoạch tài chính kinh doanh là cái mẫu này thì đến ngày hướng dẫn sử
+[42:51] dụng biểu mẫu thầy sẽ hướng dẫn chi tiết ha. Hôm nay chỉ nói về tầm quan trọng
+[42:57] trình tự cách thức triển khai và ý nghĩa của nó là như vậy. Giờ mời anh chị em
+[43:03] chúng ta nghỉ chiều chúng ta tiếp tục lúc 1:30. Cảm
+[43:08] ơn.
+[43:44] 0:00 /

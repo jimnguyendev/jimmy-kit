@@ -108,6 +108,17 @@ empty `Deps{}`. Check for any test that boots the real process against container
   composition, hit `/healthz` and one real endpoint per feature.
 - Config values that must differ per environment (storage base URL, auth mode) get a
   startup assertion that refuses obviously wrong combinations (prod URL with dev mode).
+- **Long-running registrations** (loops, schedulers, listeners) have four stages, each needs
+  its own evidence: (1) *registration completeness*: diff the design document's job table
+  against the registered jobs by status, schedule and activation condition, allowing
+  explicitly deferred entries; (2) *startup survival*: boot the real process against the real
+  datastore for a few seconds and assert every registered loop is still alive (a loop that
+  returns while the process is live often stops the whole process); (3) *execution*: a boot
+  check cannot prove a daily job ran, so drive one due cycle through the production
+  scheduler with a controlled clock and assert its observable result; (4) *shutdown*: cancel
+  and assert a clean stop. For a job guarded by a lease, state the guarantee you rely on
+  (mutual exclusion while the lease is valid, once per period, idempotent effects) and prove
+  contenders, expiry and recovery on the real datastore.
 
 ## 6. No client contract evidence
 

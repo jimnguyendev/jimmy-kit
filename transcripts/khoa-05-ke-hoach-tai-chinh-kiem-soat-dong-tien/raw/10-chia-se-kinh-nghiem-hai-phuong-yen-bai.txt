@@ -1,0 +1,457 @@
+[0:12] Như vậy là chúng ta đã đi được đến a phần lớn các cái nội dung quan trọng của
+[0:17] chuyên đề xây dựng hệ thống tài chính doanh nghiệp.
+[0:21] À đúng như là ý của học viên chị Phượng có nói à lúc vừa nãy nói về kế hoạch tài
+[0:26] chính kinh doanh thầy cũng có nói thầy đưa ra rằng một bộ đầy đủ là 10 cấu phần
+[0:32] như thế nhưng doanh nghiệp phải lựa chọn ở từng thời kỳ một anh làm cái gì, có
+[0:37] khả năng làm cái gì và áp dụng triệt để cái gì, còn cái gì thì khuyến khích.
+[0:42] Nhưng nếu một ngày nào đó anh chị lớn lên, tức là công ty của anh chị lớn lên,
+[0:48] quy mô tổ chức các thứ nó đầy đủ, trao quyền phân cấp cho nhân viên nó đến nơi
+[0:53] đến chốn thì chắc chắn không thể không làm. Đôi khi những cái bước chuẩn bị như
+[0:59] thế, công tác tổ chức như vậy, chúng ta tưởng rằng nó hơi mất thời gian nhưng sự
+[1:04] chuẩn bị kỹ lưỡng thì vẫn tốt hơn. Thông thường thì trước mỗi một công việc
+[1:09] người ta nên dành ra khoảng 40 đến gần 50% thời gian để chuẩn bị cho nó. Lập kế
+[1:14] hoạch càng kỹ, tính toán càng kỹ, sự chuẩn bị càng kỹ thì khả năng chúng ta
+[1:19] mắc sai lầm càng ít. Kinh doanh nó nhiều cái cạm bẫy lắm nhỉ.
+[1:24] Đấy, nhất là bố nào, ngành nào mà hay phải đi nhậu nhiều thì biết tay, biết
+[1:28] đòn. Thế nhưng tất cả những câu chuyện về
+[1:32] nguồn vốn, về tài chính, về kế hoạch mà thầy thưa với các anh chị từ bữa hôm qua
+[1:37] đến giờ nó hoàn toàn không có ý nghĩa gì hết nếu như chúng ta không có hệ thống
+[1:43] thông tin kế toán tốt. Cho nên là nếu doanh nghiệp nào còn xác
+[1:49] định là thôi kế toán của công ty em kẹ mẹ nó không cần quan tâm, em chỉ làm mỗi
+[1:53] cái việc là khai thuế thôi á. Còn lại thì từ hàng cho đến công nợ em ghi sổ
+[1:58] trợ thì thay đổi đi, thay đổi càng sớm càng tốt. Hãy chú
+[2:04] trọng nhân sự vào làm công tác tài chính cái toán nội bộ của ta nhiều hơn là cái
+[2:09] việc gì ạ? Chú trọng chỉ đến công tác khai thuế. Tôi nói cho quý vị nghe nhé.
+[2:14] Ví dụ không chúng ta kinh doanh mà có lời
+[2:18] 1 tỷ đồng cho dù nộp thuế sòng phẳng đi thì phần của ta là 80%.
+[2:25] Phải không nhỉ? Phần của nộp cho nhà nước theo yêu cầu nộp ngân sách sắc thuế
+[2:31] thu nhập doanh nghiệp là 20%. Thế thì đáng nhẽ ra chúng ta phải dành
+[2:36] công sức nhiều hơn cho cái chỗ 80 chứ nhỉ? Chứ tại sao lại dành công sức nhiều
+[2:40] hơn cho cái chỗ 20? Đấy là cái ý thứ nhất. Cái ý thứ hai này
+[2:46] là nếu như không tổ chức công tác kế toán và hạch toán cho đến nơi đến chốn,
+[2:50] nếu từng tháng không biết được doanh thu chi phí một cách thực tế, nếu không quản
+[2:55] lý được hồ sơ công đợ một cách chặt chẽ thì mọi nỗ lực bán hàng là gì? Bỏ đi
+[3:00] đấy. Không để làm gì đâu. Và còn lâu mới trở thành giám đốc thực sự, còn lâu mới
+[3:08] giải phóng được mình. Tôi nói lại cái ý, giải phóng mình không phải mình bỏ mình
+[3:12] đi chơi. Giải phóng mình là mình làm đúng việc của mình, mình làm cái việc
+[3:17] cốt lõi và mình ra quyết định chứ không phải mình đi thông gì? Thông tắc.
+[3:24] Chứ không phải mình đi thông tác. Thế mà cái hệ thống thông tin của doanh nghiệp
+[3:28] nó như hơi thở vậy. Nó được cấu thành bởi mấy cái cấu phần mà cấu phần thứ
+[3:32] nhất là thông tin kinh doanh và thị trường. Phần thứ hai là thông tin tài
+[3:36] chính. Có thế thôi. Còn lại là các thông tin mang tính chất truyền thông nội bộ
+[3:41] và quản lý hành chính nhân sự thì nó có cái ba cái mảng như thế rồi. Thì thôi
+[3:46] kinh doanh chuyên đề trước thầy đã nói. Bây giờ câu chuyện còn lại là thông tin
+[3:51] tài chính kế toán thì nó không đơn thuần là cái việc chúng ta mở sổ, nó không đơn
+[3:56] thuần là cái việc chúng ta đầu tư mua một cái phần mềm mà nó cần phải được tổ
+[4:00] chức lại. Hãy coi đây là việc tái cấu trúc phòng tài chính kế toán hoặc tái
+[4:06] cấu trúc phòng kế toán nó được chia thành hai mảng công việc mà chúng ta
+[4:11] phải làm. Mảng công việc thứ nhất một là chúng ta tổ chức lại về mặt con người,
+[4:18] tổ chức cơ cấu và bộ máy
+[4:24] của phòng tài chính kế toán. Đấy là mảng việc thứ nhất chúng ta phải
+[4:30] làm. Cái mảng việc thứ hai chúng ta phải làm
+[4:39] trong việc tổ chức công tác kế toán đó là chúng ta tổ chức về mặt nghiệp vụ.
+[4:45] Tổ chức lại về mặt nghiệp vụ và quy chuẩn hồ sơ.
+[4:59] Một là tổ chức lại bộ máy, hai là tổ chức lại về mặt nghiệp vụ. Đấy, nó có
+[5:04] hai việc có liên quan đến tổ chức. Nhưng mà tiếc thay là vì cái tổ chức về mặt bộ
+[5:08] máy thì nó liên quan đến công tác tổ chức và nhân sự. Thì là trong các cái
+[5:12] chuyên ngành về tài chính kế toán thì nó lại không dạy. Thế thành ra các em các
+[5:17] cháu nó học tài chính kế toán về là không biết xây dựng phòng kế toán. Mà
+[5:20] giám đốc mình bảo giám đốc mình xây dựng phòng kế toán đi thì cũng còn lâu mới
+[5:23] xây dựng được. Tại đúng không nhỉ? Bởi vì đôi khi mình còn chưa quan tâm đến nó
+[5:27] cơ mà, một cách thích đáng cơ mà. Và thứ hai là mình rất ít kiến thức nền. Rồi
+[5:32] chia sẻ kinh nghiệm thì nó lại tệ đến mức là thông lệ thị trường nó thế. Bảo
+[5:36] ngu đâu mà cần gì phải kế toán. Khổ lắm mày khai thuế xong mày vứt đấy là được
+[5:40] rồi. Gì nữa đúng không? Khai thuế xong vứt đấy. Nó chỉ dành cho những cái anh
+[5:46] như là hộ kinh doanh khá thể. Những cái anh từ hộ kinh doanh cá thể nó mới lớn
+[5:49] lên một tí. thành lập doanh nghiệp bé xíu xìu xu, doanh thu một tháng vài trăm
+[5:55] triệu ha. Thế thôi. Còn lớn lên thì đừng có đùa. Không hề đùa. Vì nếu không tổ
+[6:02] chức công tác kế toán, tôi hỏi các anh chị hệ lụy gì xảy ra?
+[6:08] Đầu tiên ta nhận diện cái đã, nhận diện cái hệ lụy đã xong rồi thấy sợ đã về mới
+[6:13] làm. Bây giờ thứ nhất này về cái phần mà tổ
+[6:19] chức về con người. Thế thì đôi khi chúng ta tuyển kế toán
+[6:23] là chúng ta tuyển quá là lòng lẻo. Hay là đôi khi chúng ta lạm dụng cái việc là
+[6:29] sử dụng người thân người quen. Có đứa cháu ở dưới quê nó mới học hết
+[6:34] lớp 12 thôi. Cho nó đi học trung cấp xong ra đi làm. Thậm chí có những đứa
+[6:37] không có đào tạo gì cả. Rồi chúng ta gọi nó về thôi mày về làm kế toán cho chú.
+[6:42] Thế là kế toán nó cũng làm phải không? Thế nên lúc hàng nhập về không có đứa
+[6:46] nào bê ra ra bê hàng. Thế xong đến lúc thì chiều cô chưa về
+[6:51] mày đi đón cháu của chú vân vân. Nếu trong cái tình cảnh như thế
+[6:56] thì lấy đâu ra công tác kế toán tốt có phải không?
+[7:00] Đấy. Thế thì thôi bây giờ tôi tạm thời không nói đến cái chuyện đào tạo cả vì
+[7:04] ngay cả khi chúng ta tuyển những nhân sự tốt nghiệp đại học hoặc cao hơn nữa cũng
+[7:09] chưa chắc xây dựng được hệ thống tài chính kế toán tốt. Khi mà rất tiếc là
+[7:14] trong nhiều năm qua thông lệ ở chúng ta nó chưa cho chúng ta một bài học rằng
+[7:21] phòng kế toán cần phải rõ ràng chức năng nhiệm vụ là những việc gì mà nó tạo ra
+[7:25] thông lệ người trước học người sau rằng đơn giản việc kế toán là em tập hợp hóa
+[7:29] đơn chứng tử xong rồi em hạch toán nó chỉ dừng lại ở một góc việc đó thôi đó
+[7:35] là góc việc của hạch toán mà nếu nó hạch toán được thì cũng tốt quá rồi phải
+[7:40] không anh chị mà nó hạch toán không xong cơ thế mới đểu mà bằng chứng của hạch
+[7:45] toán không xong. Bây giờ thử hỏi này, nếu về hỏi em ơi in cho anh xin bảng báo
+[7:51] cáo nhập xuất tồn mà nó đưa luôn. Dạ có ngay đây anh. Em
+[7:56] gửi file qua Zalo hay là em in cho anh? Vậy là ngon rồi đấy. Đúng không? Có
+[8:02] nghĩa là ví dụ anh hỏi lúc 1:00 chiều thì tất cả các lệnh xuất nhập kho buổi
+[8:06] sáng là xong rồi. Ok. Hỏi em ơi công nợ tình hình thế nào? Cho anh xem công nợ
+[8:10] của thằng Trang kia nó in luôn một cái rẹt một phát ra là đối chiếu công nợ
+[8:14] trong tháng vừa này là thằng này lấy mấy đơn? Những đơn nào giao trực tiếp, đơn
+[8:18] nào giao sau tiền đã lấy bao nhiêu đấy. Còn lại bao nhiêu đấy công nợ đấy. Anh
+[8:21] đối chiếu đấy. Nó phải giành mạch thế chứ. Chứ còn nếu không tôi tin rằng thực
+[8:26] trạng ở chỗ chúng ta là gì? Chứng từ về để đấy. Đợi đến kỳ khai thuế xong hạch
+[8:33] toán thì cứ từ từ phải không? Mà tại vì việc kế toán nếu chưa hạch toán
+[8:39] nó không ảnh hưởng đến doanh thu bán hàng ngày mai
+[8:43] hoặc nó chưa tác động gì đến tiền ở ngày hôm nay. Cho nên cả kế toán và giám đốc
+[8:49] rất xem nhẹ chỗ đó. Bởi vì cũng một thứ nữa là xin các anh
+[8:55] chị giám đốc cũng phải rút kinh nghiệm cho là các anh chị ra quyết định kinh
+[8:59] doanh chưa bao giờ dựa trên số liệu mà dựa trên thói quen và cảm tính. Tôi nói
+[9:07] ví dụ mình đưa ra một quyết định khi nhân viên
+[9:11] họ đề xuất. Nếu mình bảo ừ đưa cái báo cáo của vấn đề đó đây, đưa thông tin
+[9:16] chứng từ của vấn đề đó đây, đưa những cái giao dịch có liên quan đây tôi xem
+[9:20] rồi tôi sẽ quyết. Nếu người ta quyết định dựa trên cái phân cấp phân quyền và
+[9:25] số liệu của tài chính thì gọi là quyết định có quy trình.
+[9:29] Còn nếu mình quyết điện định dựa trên sự bực dọc, sự khó chịu, dựa vào cảm xúc
+[9:34] lúc vui lúc buồn, dựa vào cái cách hôm nay cái thằng đối tác kia nó chốt hành
+[9:38] xử với mình cái chỗ đấy, mình rõ ràng đi từ sớm mà nó lại đi muộn thì cái đấy gọi
+[9:42] là quyết định theo gì? Cảm tính. Thì chúng ta phải xóa dần cái quyết định
+[9:46] theo cảm tính đi mà chuyển dần sang cái quyết định có quy trình mà nền tảng của
+[9:50] quyết định có quy trình và ra quyết định kinh doanh đúng đắn là dựa trên số liệu.
+[9:55] Đành rằng có những quyết định anh phải ra ngay lập tức.
+[9:58] Nhưng đấy cũng là có số liệu. Vì nếu anh có một hệ thống thông tin tốt, anh đọc
+[10:03] hàng tháng các báo cáo thì dần dần các thông tin đó nó ở trong đầu anh rồi.
+[10:07] Giống như chị Phượng bảo em có kế hoạch rồi, mỗi tội em để ở đây.
+[10:12] Nhưng nó cần phải được truyền thông ra để người ta hiểu và cùng làm với mình
+[10:16] thì chị còn có thời gian bế cháu nhiều hơn nữa. À bây giờ quay trở về với công
+[10:21] việc của chúng ta. Trước hết, nếu không tổ chức hai việc
+[10:26] này, chúng ta nhận diện lại cho tôi rằng các hệ lụy mà chúng ta sẽ gặp phải gồm
+[10:32] có sáu hệ lụy sau đây. Một là một hệ thống rất lộn xộn giấy tờ, thất thoát và
+[10:38] không thể hạch toán. Đó là không biết cụ thể doanh thu chi
+[10:43] phí từng tháng một là bằng bao nhiêu, công nợ thế nào. Thứ hai, cái tâm lý về
+[10:49] quản lý là chúng ta thường xuyên trong tâm thế là làm đối phó với cơ quan thuế.
+[10:55] Việc đấy rất không tốt, thoát khỏi nó ngay. Thứ ba là công nợ nhùng nhằng, khó
+[11:01] đòi do hồ sơ nó bị thiếu. Biểu hiện của hồ sơ thiếu đó là giao
+[11:07] hàng không ký. công nợ không xác nhận,
+[11:13] thanh toán thì đơn nọ gối đơn kia không tham chiếu hợp đồng.
+[11:18] Mà tôi xin thưa anh chị về mặt pháp lý tôi nói thêm cái chỗ công nợ một tí vì
+[11:21] nó nóng rần rần. Đó là gì? Bây giờ mình cho người ta nợ là mình giữ cái quyền
+[11:26] đòi. Người ta nợ mình là người ta mắc cái quyền trả. Có phải không? Mắc cái
+[11:31] nghĩa vụ trả. Thế thì bây giờ cái chứng minh nghĩa vụ
+[11:35] nó phải trả và chứng minh quyền đòi của chúng ta là giấy tờ chứng minh bằng cái
+[11:38] gì? Hợp đồng có phải không? Không. Hợp đồng chỉ là một phần thôi. Hợp đồng
+[11:44] nhưng mà bây giờ bảo là nhưng mà mày đã giao hàng cho tao đâu.
+[11:48] Mình bảo không tao giao rồi mà nó bảo giao bao giờ.
+[11:53] Đầy chuyện nhà hàng hôm vừa rồi đấy. Chúng nó chạy làng rồi là phá sản đấy.
+[11:57] Nhà cung cấp đến rạch mặt nó ra nó bảo là tao chưa lấy hàng của mày. Nó bảo rõ
+[12:02] ràng tao giao cho nhân viên bếp của mày mà. Không thằng đấy thằng kí bếp tao
+[12:05] thuê ngoài mà. Tao biết nay nó đổi nhân viên, mai nó
+[12:08] đổi phụ bếp đâu. Tao biết đâu. Các cửa hàng tạp vụ nhỏ lẻ ở bên đường
+[12:13] giao hàng cho nó gọi cái phạp cái ra lấy hàng cô.
+[12:17] Thế là một thằng chạy trong nhà ra ký cái phạp. Nhưng hôm sau biết rằng cái
+[12:21] người đấy của mình đâu. Cho nên là hợp đồng thì hợp đồng. Nếu là đơn hàng lớn
+[12:25] anh chị ơi, nó phải kèm theo một cái nữa người ta gọi là phụ lục giao dịch.
+[12:31] Ai là người ký? Ai là người được phép ký vào các đối chiếu công nợ? Ai mới người
+[12:35] được phép ký vào cái cái giấy giao nhận hàng chứ. Và giấy giao nhận hàng là căn
+[12:41] cứ duy nhất để xác định doanh thu, là căn cứ duy nhất để chúng ta xác định cái
+[12:48] quyền đòi nợ của chúng ta. Đừng cần nhìn vào hóa đơn cũng không phải hợp đồng
+[12:52] đâu. Bởi vì hóa đơn với hợp đồng không có giá trị gì nếu chưa có đơn, chưa có
+[12:56] giấy giao nhận. Rõ chưa? Vì vậy lời khuyên là đã là phiếu giao nhận hàng
+[13:02] hoặc biên bản giao nhận hàng phải làm rất rõ ghi vào đấy bên giao bên nhận
+[13:06] lượng giao lượng nhận. Và tôi khuyên luôn ghi luôn vào đấy là nếu có công nợ
+[13:11] thì lũy kế đến đơn này là mày nợ tao bao nhiêu ký vào đỡ mất công đối chiếu.
+[13:18] Thứ tư là việc phân công phân nhiệm lm công cụ thì cùi bắp mua bán hóa đơn đảo
+[13:24] lộn khi thay đổi nhân sự. Cái câu này nó đau sót lắm này.
+[13:29] Phân công phân nhiệm LM đó là kế toán nhưng mà làm rất nhiều việc không phải
+[13:33] kế toán. Đó là kế toán nhưng lại không làm đúng
+[13:37] chức phận của kế toán mà lại đi làm những cái việc chạy hồ sơ
+[13:42] thuần túy. Không phải công cụ cùi bắp. Thôi thì cái này tùy
+[13:48] từng đơn vị rõ không? Nhưng mà tôi ý tôi muốn nói đến cái việc là chúng ta có đầu
+[13:54] tư mua phần mềm thì một là không được chọc phú
+[13:59] chứ tôi nói là đầy bác là doanh nghiệp mình nhỏ lắm nhưng mà toàn đi giao dịch
+[14:05] nói chuyện với mấy anh lớn. Thế là ở ngoài kia các anh ấy toàn nói câu chuyện
+[14:10] về EAP với lại cái gì đó chuyển đổi số nó lớn lắm.
+[14:14] Thế là cũng về sừng sực nên cũng bỏ ra vài trăm triệu, thậm chí hàng tỷ đồng
+[14:19] bảo em làm I. Tôi bảo là cái EAP mềm của bố, bố đã làm
+[14:23] được đâu mà bố đòi EAP. Có phải không? Cái quy trình quy chuẩn
+[14:28] hàng ngày đấy ông làm cũng chưa chuẩn. Ông đã áp dụng cái gì? Thôi ông cứ làm
+[14:33] cho tôi đến 0.4 là được rồi. Từ từ hạng 4.0.
+[14:38] Thế thì đầu tư thứ gì thì đầu tư với doanh nghiệp nhỏ mình vài triệu đến vài
+[14:42] chục triệu là ok rồi nhé. Còn nếu tham vọng tích hợp thêm cả sản xuất quản lý
+[14:48] vận tải vào đấy thì mới đến tiền trăm chứ đừng ham hố chọc phú chỗ này. Tiêu
+[14:53] tiền đến chết đấy mà không giải quyết chuyện gì. Nhất là nếu mà gì ạ? Tôi
+[14:57] khẳng định luôn phần lớn doanh nghiệp ngồi đây. Các anh chị cứ sử dụng các
+[15:01] phần mềm có sẵn là tốt rồi. Không cần phải mời chuyên gia về để viết
+[15:06] theo đặc thù của em đâu. Tôi gặp quá nhiều trường hợp viết theo đặc thù bởi
+[15:11] vì các ông ngồi bắt đầu ông liệt kê ra xong ông ngồi ông phỏng vấn đơn vị viết
+[15:15] phần mềm xong rồi ông gì đưa ra yêu cầu cho nó. Nhưng mà vì ông không biết đưa
+[15:20] ra yêu cầu thành ra những yêu cầu ông tưởng là cao siêu thì hóa ra nó cũng chỉ
+[15:25] là yêu cầu basic. cơ bản mà bắt buộc một phần mềm nào nó cũng phải có. Tôi nói
+[15:31] thí dụ có ông bảo bên em phần mềm nhá phải quản lý chứng
+[15:36] từ cho anh. Đứa nào lập phải ghi đúng giờ lập, đứa nào sửa phải có giờ sửa,
+[15:42] đứa nào in phải có giờ in. Nó chác luôn cho 20 triệu. Trong khi cái chuyện đấy
+[15:47] người ta gọi là ghi nhận lịch sử chứng tử. Một chức năng cơ bản mà bất kỳ thằng
+[15:53] phần mềm kế toán nào đủ tiêu chuẩn nó đều phải có.
+[15:56] Phải không? Thế rồi ông lại bảo bây giờ phải đưa vào cho anh cái tình trạng
+[16:01] chứng từ. Cái này phòng kinh doanh nhập rồi nhưng anh chưa duyệt là phải để treo
+[16:06] để đấy. Ô kìa thì phần mềm cơ toán cơ bản nó cũng phải làm thế mà đúng không?
+[16:11] Thế rồi câu chuyện về tính giá hay là gì ạ? Có những doanh nghiệp làm gia công
+[16:15] sản xuất đưa ra yêu cầu tính giá thành kinh lắm. Nhưng mà xin thưa với ông rằng
+[16:21] tính giá thành trong kế toán nó có mấy phương pháp ạ?
+[16:24] Nó có phương pháp rồi. Một phần mềm kế toán gì ạ? Đủ để đáp ứng yêu cầu. Nó
+[16:30] phải có khả năng tính giá thành. Tức là có khả năng giúp ông nhập liệu để tính
+[16:35] giá thành. Chứ cái đấy nó không có cái gì gọi là customize. Chỉ trừ trường hợp
+[16:41] trong từng công đoạn đấy của anh nó có những bước quá là đặc biệt. Tôi nói thí
+[16:46] dụ thí dụ như ngày xưa cũng là quản lý lắp ráp các đại lý của Honda nhưng mà
+[16:52] khách hàng họ yêu cầu bọn tôi là gì? Ông phải quản lý cho tôi luôn cả số khung số
+[16:56] máy. Hay là ví dụ khi bọn tôi làm cho bên bán
+[17:00] điện thoại nó bảo không anh phải làm thêm cho em phần quản lý số email để em
+[17:06] quản lý luôn cái thông tin máy của khách. Ừ nghe có lý thì đấy mới là những
+[17:10] thứ gì yêu cầu thêm. Nó rất đặc thù và nó ngách của ngách. Còn lại xin thưa anh
+[17:16] chị ơi, cứ gì kiếm kiếm cái nào đó uy tín cái trên thị trường nhé. Rẻ tiền
+[17:23] thôi, dùng được là được rồi. Và một cái điều nữa này là công tác kế
+[17:30] toán nó bị đảo lộn ngay lập tức khi mà có sự thay đổi nhân sự, do luân chuyển
+[17:37] nhân sự hoặc do kế toán họ nghỉ. Chuyện này là bình thường. Tại sao? Vì nếu anh
+[17:43] chưa có một quy chuẩn đặt sẵn để mọi người tuân theo thì mỗi một người người
+[17:48] ta sẽ có xu hướng tổ chức công tác kế toán theo kỹ năng và nghiệp vụ riêng của
+[17:52] họ. Khấu trách họ được. Và bởi vì kế toán nó có các phương pháp
+[17:58] tính khác nhau, nó có các cách áp dụng chính sách nhưng vẫn đúng khác nhau
+[18:05] nhưng đôi khi chúng ta không nhìn nhận rõ. Và tất nhiên công tác kế toán trước
+[18:09] đó đã không tốt. Thành ra khi có sự thay đổi nhân sự thì cứ đứa đằng sau nó bảo
+[18:15] cái đứa đằng trước đách biết làm là cứ cái đứa đằng sau nó chửi được cái
+[18:21] đứa đằng trước. Nhưng yên tâm đi nếu mà cái đứa đằng đứa đằng sau này nghỉ phát
+[18:25] nữa đứa khác vào nó cũng lại chửi bài y choàng. Thế là các bà cứ ngồi chửi hết
+[18:30] thì đời kế toán này đến đời kế toán khác. Chửi thì cứ chửi chứ sau ba đời kế
+[18:34] toán, công tác kế toán chứng từ của doanh nghiệp vẫn lộn xộn thì cuối cùng
+[18:38] ai chịu?
+[18:40] >> Ừ, doanh nghiệp chịu. Thế xong lại nói đến cái chuyện doanh
+[18:44] nghiệp chịu thì nhiều nói chuyện trà đá nhiều bố giám đốc bảo tôi là thầy việc
+[18:48] gì cứ phải cầu toàn nhỉ? Em giao trách nhiệm cho chúng nó mà nó phải chịu trách
+[18:53] nhiệm chứ. Tôi hỏi nó chịu trách nhiệm với ông kiểu gì?
+[18:57] Pháp nhân thì nó không đến tuổi phải không? Ông là đại diện pháp nhân bảo
+[19:01] nhưng mà nó làm sai nó chịu. Ông đại diện pháp nhân nếu nó làm sai với khách
+[19:05] xong nó bỏ nó đi việc đầu tiên nó bắt ông đã đúng không? Cái vụ vừa rồi mà sập
+[19:11] cái nhà cái dàn giáo ở trong Đồng Nai à hay Bình Dương chết mấy đứa đấy. Bắt
+[19:17] luôn cả giám đốc hai công ty đúng không? Đó là trách nhiệm pháp nhân. Ai chịu
+[19:22] trách nhiệm được cho người ta chỉ chịu trách nhiệm được khi ông điền tên nó vào
+[19:27] là một trong những người đại diện trước pháp luật của cái công ty. Ngày xưa pháp
+[19:31] luật không cho phép, bây giờ cho phép. Một công ty có nhiều người đại diện pháp
+[19:35] luật thì đó mới là trách nhiệm. Rõ chưa? Nhưng cái trách nhiệm ở đây là trách
+[19:39] nhiệm của cá nhân họ với tổ chức đấy thì phải giành mạch rõ ra. Cho nên là cái
+[19:45] cuối cùng là anh phải tìm cách anh bảo vệ mình đã. mà muốn bảo vệ mình thì
+[19:49] người ta luôn luôn sử dụng một cái góc nhìn người ta gọi là ngăn ngừa.
+[19:56] Ngăn ngừa mà muốn ngăn ngừa tốt ấy thì làm sao?
+[20:02] Người ta mới đưa ra à quy trình để cho nó làm đúng. Người ta đưa ra quy định và
+[20:07] có chế tài. Quy định rồi có chế tài.
+[20:13] Xong người ta mới đào tạo hướng dẫn. Xong người ta chỉ rõ phạm vi công việc.
+[20:18] Thì nguyên lý tổ chức phòng kế toán cũng như thế để ngược lại thì nó trả cho ông
+[20:22] cái kết quả về mặt thông tin. Trả lại cho ông kết quả về mặt thông tin
+[20:29] để ông giải quyết được gì? Vấn đề thứ năm.
+[20:34] Vấn đề thứ năm là vấn đề là ở nhiều công ty hiện nay không ai dám trả lời số nào
+[20:40] mới là số đúng. Giám đốc điều hành cũng chịu chả biết số
+[20:45] này có đúng hay sai. Doanh thu cũng ghi nhận nhầm nhầm lẫn,
+[20:51] công nợ nhầm lẫn sản xuất thì giá thành không đúng vân vân. Thì đó tất cả cái đó
+[20:57] là hệ lụy. Vậy thì phải tổ chức lại. Thế đại khái là tổ chức lại là thế này thôi.
+[21:04] Ví dụ ở đây tôi vẽ một cái sơ đồ tổ chức phòng kế toán đối với công ty lớn nhưng
+[21:08] đối với công ty nhỏ hơn thì thôi không cần sơ đồ tổ chức cũng được anh chị nhá.
+[21:14] Nếu mà công ty lớn có người làm tài chính, có người làm kế toán hoặc gì ạ?
+[21:19] Có nhiều người làm kế toán nó lớn hẳn ra mới cần xây dựng sơ đồ tổ
+[21:24] chức phòng để xếp cái chỗ ngồi dán cái ảnh nó lên cho nó oách phải không? Nhưng
+[21:29] nếu nhỏ một cho đến ba người thì không xây cần xây dựng gì cả.
+[21:35] Và có một điểm thế này anh chị nhớ chưa? Tôi gặp có những trường hợp tổ chức là
+[21:40] có trưởng phòng kế toán xong lại có phó phòng kế toán
+[21:44] xong lại có phụ trách kế toán thuế thì nó hơi lằng nhằng và phức tạp.
+[21:49] Lời khuyên trong công tác tổ chức tôi từng nói trong chuyên đề số hai rồi.
+[21:53] Chúng ta hạn chế bố trí cấp phó trừ trường hợp phó giám đốc ha. Hạn chế bố
+[21:59] trí cấp phó bởi vì nếu cứ thêm một cấp quản lý,
+[22:05] chúng ta tưởng rằng họ sẽ giúp một mảng nào đó cho trường phòng nhưng thực chất
+[22:10] nó lại gây ra sự phức tạp hơn về mặt thông tin truyền thông. Không tốt. Cắt
+[22:15] đi. Chỉ có mỗi trưởng phòng chịu trách nhiệm và đến nhân viên luôn.
+[22:19] Nên thế như vậy về phần sơ đồ tổ chức đơn vị nào
+[22:24] lớn thì mới cần nhỏ bỏ qua chắc chúng ta bỏ qua
+[22:29] nghĩa thế nào?
+[22:31] >> Số người từ năm người trở lên chia thành ba mảng rõ ràng tài chính, kế
+[22:37] toán và cái khai báo có thuế. Như vậy nếu như của em đạt đến tầm đó về
+[22:44] xây dựng sơ đồ tổ chức nhưng mà xây dựng sơ đồ tổ chức, vẽ sơ
+[22:50] đồ tổ chức nó không quan trọng bằng việc quy định chức năng nhiệm vụ của phòng
+[22:55] tài chính kế toán. Bây giờ ở đây này các doanh nghiệp đều
+[22:59] nhỏ cả, các bạn chỉ có phòng hoặc bộ phận kế toán thì tôi khuyên là về đổi
+[23:04] lại cái tên nó đi thành tài chính kế toán. Ngày xưa thì gọi là tài vụ phải
+[23:08] không? Bây giờ về mặt tổ chức này làm thế này
+[23:16] giúp tôi. Các bố muốn gọi là phòng gọi là bộ phận,
+[23:22] gọi là ban tài chính kế toán thị tủy. Nhưng tên của nó đầy đủ là tài chính kế
+[23:28] toán để bắt đầu giao việc tài chính cho họ làm.
+[23:32] Về mặt nhân sự, nhân sự
+[23:38] nếu chúng ta căn theo các cái phần hành kế toán mà bố trí nhân
+[23:44] sự là chúng ta toi. Nào thì kế toán trưởng, nào thì kế toán
+[23:49] tổng hợp, nào thì kế toán công nợ, nào thì kế toán thanh toán,
+[23:54] >> nào thì kế toán bán hàng, nào thì kế toán tài sản cố định, nào thì thủ quỹ.
+[23:59] Có nhiều công ty làm thế
+[24:01] >> chết chưa?
+[24:04] >> Nhưng mà thấy nhiều công ty
+[24:06] >> ừ
+[24:09] >> to thế nào là to?
+[24:11] >> Năm người.
+[24:17] >> Bây giờ công bà bảo công ty to là thế nào là to? Bây giờ tôi hỏi này,
+[24:23] một công ty 1 năm doanh thu 2000 tỷ là to hay bé?
+[24:29] Chưa chưa chấp.
+[24:32] >> Ừ đúng rồi. 2000 tỷ nhưng mà mỗi hợp đồng của nó 1000
+[24:38] >> đúng không? Vậy cả năm nó xử lý qua hai hợp đồng
+[24:43] >> và chia chia giai đoạn tiến độ ra là hai bộ hồ sơ dự án xong đúng không nhỉ?
+[24:48] Nhưng bây giờ một đơn vị bán như là chỗ chị Phượng Anh Hải đây
+[24:54] một ngày phát sinh bao nhiêu đơn ạ? Hàng trăm đơn
+[24:58] đúng không?
+[25:00] >> Hơn đúng không?
+[25:01] >> Làm bán lẻ như thế một ngày bao nhiêu đơn?
+[25:03] >> 500 đơn.
+[25:04] >> Đấy. Một ngày 500 đơn. Nếu mà hạch toán kế toán tức là 1 ngày 500 chứng từ đầu
+[25:11] ra không kể đầu vào, không kể nội bộ có đúng không?
+[25:16] >> À cho nên khi người ta bố trí nhân sự phòng kế toán ông ơi, người ta phải tính
+[25:21] theo số lượng của giao dịch. Số lượng giao dịch
+[25:29] bao gồm giao dịch bán, giao dịch mua,
+[25:34] giao dịch gì ạ? Tổng hợp, giao dịch chi tiêu nội bộ.
+[25:43] Đấy, bốn loại giao dịch. Thế bây giờ bán này thì chúng ta phải
+[25:48] hình dung là theo cái cách tư duy của mình
+[25:52] là cái thằng kinh doanh bán hàng nó phải tự lo rồi phải không? Như vậy là kế toán
+[25:57] chỉ còn là kiểm soát đơn bán, kiểm soát đơn mua thế thôi. Sau đó anh làm chứng
+[26:03] từ tổng hợp. Vậy thì ở đây hai cái việc này có liên quan đến kiểm soát, còn
+[26:07] những cái việc này có liên quan đến việc làm.
+[26:11] Đấy thì người ta dựa vào số lượng giao dịch
+[26:15] và với công cụ hiện tại á với đặc thù hiện tại thì mỗi một ngày
+[26:22] cần bao nhiêu thời gian để nhập liệu hoặc kiểm soát số liệu cho nó xong hết
+[26:27] chỗ này tổng lượng giao dịch đấy thì nó suy ra được chúng ta cần mấy người ở
+[26:32] phòng kế toán. Bây giờ ví dụ một ngày 500 đơn nhưng mà
+[26:40] trong đó có 300 đơn là kiểm soát thôi. 300 chứng từ là thuộc loại kiểm soát,
+[26:44] 200 chứng từ là thuộc loại xử lý thì chúng ta mới ước tính thời gian rao
+[26:51] đổi với họ để quyết định quy mô của phòng.
+[26:55] Nhưng đôi khi trong nghề kế toán nó có cái nguyên tắc gọi là bất bất chấp nhận.
+[27:00] Nó có những việc anh không thể bố trí được cùng một người làm. hai việc cho
+[27:05] nên là vẫn cần phải một nhân sự khác thì đấy là một số trường hợp đặc biệt nha.
+[27:10] Thì đây là về mặt chúng ta tính toán số lượng nhân sự
+[27:13] và việc bố trí bây giờ chúng ta bố trí này.
+[27:18] Bố trí nói tóm lại thì việc bố trí nhân sự làm kế toán chúng ta luôn cần có cái
+[27:25] người gọi là người tổng phụ trách. Có phải không?
+[27:31] Tổng phụ trách. Có công ty gọi đó là trưởng phòng kế
+[27:34] toán, có công ty gọi là kế toán trưởng. Tôi cũng chả biết nó khác nhau thế nào.
+[27:41] Tôi chỉ biết rằng kế toán trưởng thì có luật quy định chứ trưởng phòng kế toán
+[27:45] chỉ mang tính chất tổ chức. Có những công ty vừa có trưởng phòng kế
+[27:50] toán vừa có kế toán trưởng vì trưởng phòng kế toán chỉ mang tính
+[27:55] chất tổ chức nội bộ. Còn kế toán trưởng là được bổ nhiệm theo pháp luật và chịu
+[28:00] trách nhiệm trước cổ đông và pháp luật về tính trung thực hợp lý của số liệu
+[28:05] tài chính kế toán. Rõ chưa? Cho nên tôi biết thừa đầy doanh
+[28:11] nghiệp nhỏ tuyển kế toán đến với một thỏa thuận em cứ làm cho anh thôi chứ em
+[28:15] đếch ký. Đầy đứa nó như thế. Hoặc là nhận làm kế
+[28:21] toán thuế cho doanh nghiệp nhưng không ký
+[28:25] có không? Ừ có đấy.
+[28:30] Nhận làm nhưng không ký được chưa? Vì nó sợ trách nhiệm. Vì nó có vẻ như nó biết
+[28:34] là doanh nghiệp làm nó hơi bị chỉn chu. Nó sợ
+[28:41] thì bao giờ cũng phải có một cái người tổng phụ trách. Nhưng chúng ta cần cái
+[28:45] người tổng phụ trách về mặt số liệu và nghiệp vụ chứ không cần người tổng phụ
+[28:48] trách về mặt con người. Rõ chưa? Thứ nữa này,
+[28:55] chúng ta chắc chắn cần nhân viên nếu có từ hai người trở lên.
+[29:02] Nhưng nhân viên này thầy nói luôn là chúng ta phải dùng nhân viên kế toán
+[29:07] tổng hợp. Nhân viên kế toán tổng hợp.
+[29:14] Nếu công ty nào đã chót bố trí à người thì thủ quỹ, người thì làm chuyên kế
+[29:19] toán bán hàng, người thì làm chuyên về kế toán công nợ, chuyên về kế toán sản
+[29:23] xuất thì lời khuyên là chúng ta phải có một cái lộ trình đào tạo nội bộ cho
+[29:28] phòng kế toán để tất cả các nhân viên của phòng kế toán đều trở thành kế toán
+[29:33] tổng hợp. bản chất của vấn đề nhá. Ngày xưa khi mà
+[29:39] chúng ta tổ chức phòng kế toán theo theo hệ thống cũ
+[29:45] rồi là ngân sách trả lương nó cao thì người ta mới có kế toán viên và lại có
+[29:51] đến cái nấc kế toán tổng hợp. Kế toán tổng hợp là cái kế toán mà nó chỉ làm
+[29:55] công việc tổng hợp nó soát xét số liệu phải không? Chứ nó không làm chi tiết.
+[30:01] Thế thì mình thì không không có tiền để trả kiểu đó đâu. Mình là yêu cầu tất cả
+[30:05] các nhân viên đều phải trở thành kế toán tổng hợp. Được chưa?
+[30:11] Trở thành kế toán tổng hợp này có nghĩa là bạn phải biết làm đủ các việc và bạn
+[30:18] phải biết làm tổng hợp. Bạn phải biết đến tận lập báo cáo tài
+[30:24] chính và đương nhiên bạn nào cũng phải biết kê khai báo cáo thuế.
+[30:31] Đó là mục tiêu đào tạo nội bộ. Mình thì công ty nó bé thế răng ra làm gì có phải
+[30:39] không? Bởi vì là cái tính nhỏ thì nó cần linh
+[30:43] động. Mà muốn linh động được thì điều kiện cần của nó đó là nhân sự của anh nó
+[30:49] phải đa nhiệm chứ. Có đúng không anh chị?
+[30:54] Nhân sự đa nhiệm có nghĩa là nó phải thạo nhiều cái việc. Bây giờ phòng kế
+[30:59] toán có hai đứaẹạ. Một đứa nó nghỉ đẻ, đứa kia bảo anh ơi
+[31:03] thuê tạm dịch vụ kế toán bên ngoài thôi chứ bọn em chưa làm khai thuế bao giờ.
+[31:07] Con kia nó nghỉ thôi 6 tháng này hoặc 1 năm này anh thuê đi. Làm gì có cái
+[31:12] chuyện đấy đúng không? Em kia nghỉ 50% lương của nó mày lãnh.
+[31:21] Mày làm cả hai việc cần thêm nữa anh tính thêm giờ chứ lại
+[31:26] bắt anh đi thuê thêm dịch vụ 1 năm tạm thời chờ con kia gì hết phép đẻ không
+[31:31] đượcữ
+[31:33] >> ý là như thế nhá. Vậy thì cái đa nhiệm này là trong phòng
+[31:39] kế toán hướng đến là cái việc đa nhiệm. Còn đối với các bạn kế toán ngồi đây,
+[31:45] thầy cũng khuyên thật. Các bạn muốn phát triển nghề nghiệp của
+[31:49] mình lên đến đỉnh cao thì đừng ngại và đừng sợ học. Các bạn cần phải là cái
+[31:55] người đa nhiệm, nghĩa là việc gì em cũng biết làm. Bây giờ nhá, các giám đốc tạm
+[32:00] thời nhắm mắt hết vào và quay mặt đi. Thầy thầy phỏng vấn thử mấy em kế toán
+[32:04] thử mà xem học kế toán có khó không? Không.
+[32:11] Đứa nào hổ không là rất giỏi.
+[32:15] >> Và giả sử đi cho dù nó vẫn khó nhưng làm kế toán ở một doanh nghiệp là không khó.
+[32:22] Bây giờ tôi hỏi kể cả một đứa nó chưa từng học kế toán bao giờ giả định luôn
+[32:28] nó mới chỉ học hết lớp năm. Tôi chứng minh nó có thể làm kế toán cho
+[32:32] vị xem được không?
+[32:36] >> Em có công nhận không?
+[32:37] >> Hoàn toàn công nhận. Thế thì đừng nói rằng là cái nghề này nó
+[32:41] đặc thù lắm cho nên phải mất thời gian đào tạo này kia. Bây
+[32:47] giờ nhá. Ví dụ tôi là cái người mà kinh doanh bán hàng giống như chị Phượng cái
+[32:52] kia. Chị Phượng bán hàng đi. Đúng không? Bây giờ là cháu ơi cháu mày đi giao hàng
+[32:57] ở trong kia. Thế thì giao hàng xong thì mày cho nó ghi vào. Mày ghi vào cái
+[33:01] phiếu này. Cái phiếu này mày biết ghi không? Mày chỉ cần biết chữ viết viết là
+[33:04] được đúng không? Thế thì đây nhá. Cái trước cô đã viết cho mày thế này, cái
+[33:10] sau mày viết đúng thế được không?
+[33:11] >> Được. Thế nó viết xong rồi đây nhá. Bây giờ về mày cầm cái này mày đưa cho con
+[33:15] này. Con này mày cầm cái chỗ này mày nhập vào cái bảng Excel cô đã làm đây
+[33:20] được không? Thế thôi. Nếu đơn vị nào dùng phần mềm
+[33:24] kế toán, ví dụ phần hành bán hàng nó có cái ô là nhập chứng từ bán phải không?
+[33:30] Lập phiếu suất đấy. Nhập chứng từ bán rồi ra hóa đơn. Nếu thao tác trên máy
+[33:35] tính hướng dẫn một đứa trong vòng 30 phút nó biết làm, đưa cho nó luôn 10 cái
+[33:40] đi. Mày ngồi đây mày tập đi. Quen chưa? Ngày mai cho 10 cái nữa đi.
+[33:45] >> Tôi đảm bảo là những công việc đấy thì thợ làm giỏi hơn thầy đúng không? Thế
+[33:52] cho nên là đừng ngại mình hãy làm sao biết làm tất cả các
+[33:57] việc để cho nó tự tin, để cho nó có một cái góc nhìn đầy đủ về câu chuyện tài
+[34:03] chính. kế toán. Sau đó phải phấn đấu đẩy nhanh cái kỹ năng làm của mình lên.
+[34:09] Nghĩa là nếu chúng nó nhập 5 phút một chứng từ thì mình chỉ nhập 1 phút hai
+[34:13] chứng từ. Để làm gì? Để dành thời gian ra để làm kế hoạch tài chính, để dành
+[34:20] thời gian ra để chăm sóc khách hàng. để dành thời gian ra để mà ngó ngàng công
+[34:24] nợ, để dành thời gian mà cập nhật chính sách mới nó mới thay đổi. Chỉ có như vậy
+[34:29] các bạn mới phát triển được cái nghề kế toán của mình lên. Chứ còn nếu không cả
+[34:34] đời bạn cắm đầu với chứng tử. Bởi vì tôi biết thừa có những bạn làm kế toán cả
+[34:38] đời chỉ viết mỗi hai cái phiếu thôi. Thu chi
+[34:43] làm thủ quỹ. Thế mà nhiều bố lại tuyển những bà hơn 20 năm kinh nghiệm làm thủ
+[34:49] quỹ trong cơ quan nhà nước về làm kế toán trưởng cho mình. Mẹ hơn 20 năm nay
+[34:54] bà chỉ viết đúng có hai cái phiếu mà lại tin bà ấy bắt đầu mà mang về để
+[35:01] làm kế toán trưởng cho công ty mình có chết không? đấy là quan điểm sai. Quan
+[35:05] điểm sai thì đấy tôi nói là tôi chỉ phụ tôi chỉ phân cấp ra có thế này thôi là
+[35:12] một đứa tổng phụ trách còn lại tôi gọi hết là kế toán tổng hợp.
+[35:17] Yêu cầu ngày nay nó đòi phải thế. Nếu bảo em xuống khai thuế thì chỉ cần
+[35:21] chuyển đổi trong một ngày em phải biết khai thuế. Cũng lại giám đốc tạm quay
+[35:26] đi. Tôi hỏi kế toán tí mẹ cái việc khai thuế bây giờ nó có dễ không? Mày
+[35:31] >> nhắm mắt mà cũng làm được. Tôi nói thật nó khó là khó do phải luyến
+[35:37] láy chứng từ mà luyến láy chứng từ nó nằm ở bản chất của giao dịch gốc chứ nó
+[35:42] không nằm ở chứng từ đã hình thành rồi. Có đúng không?
+[35:46] Ngày xưa người ta còn bắt các bố phải lập cái bảng kê
+[35:50] chứ bây giờ nó không cần bảng kê. Mày cộng tất cả hóa đơn có bao nhiêu giá trị
+[35:54] cộp một con số xong phải không? Nếu đến ngày chưa kịp nộp tờ khai, chị nộp tạm
+[36:01] tờ khai trắng, ngày mai chị nộp lại. Có sao đâu nhỉ? Dễ thế thôi mà. Vậy thì có
+[36:06] cái gì đâu mà than nhá. Tôi nói như vậy để đây nhé. Ba mặt
+[36:12] một lời có thầy, có giám đốc, có kế toán.
+[36:16] Chúng ta phải cố gắng gì ạ? Thay đổi cái tâm thế của mình đi. Đã làm kế toán thì
+[36:22] ít nhất là kế toán tổng hợp. Được chưa? Thế còn một số công ty có
+[36:27] những cái nghiệp vụ nó đặc thù, anh chị cần bố trí cái người làm thanh toán cho
+[36:31] nó liên tục, bố trí cái người làm thanh toán để theo dõi công nợ cho nó sát thì
+[36:35] mình có thể đặt một cái vị trí là kế toán tổng hợp nhưng phụ trách thanh
+[36:39] toán. Cứ gắn cho nó chữ tổng hợp giúp tôi
+[36:47] được không? Thế xong lại công tác tổ chức thì nhiều
+[36:51] khi là có những công ty là gì ạ? Phòng kế toán thì ở một nơi nhưng mà showroom
+[36:56] bán hàng thì ở dưới kia kìa. Thế là mới bố trí một kế toán ngân hàng nhưng biên
+[37:01] chế nhân sự thuộc phòng kinh doanh. Bố trí như vậy cũng không đúng vì nó
+[37:07] phải chịu trách nhiệm ngành dọc nhá. Nó là đã là nhân viên kế toán thì thuộc
+[37:13] biên chế của phòng kế toán. Nhưng người ta có thể ngồi làm việc tại phòng hoặc
+[37:18] ngồi làm việc ở chỗ của thằng bán hàng. Bởi vì ở nhiều công ty kế toán bán bán
+[37:24] hàng nó phải ngồi phối hợp ở một chỗ để nó ra chứng tử. Đấy. Nhưng tôi nói về
+[37:29] mặt nhân sự quản lý thì nó phải thuộc biến chế của phòng gì? Kế toán nha. Chỉ
+[37:34] là anh bố trí nó ngồi ở phòng kinh doanh thôi chứ đừng thấy rằng thấy nó ngồi ở
+[37:38] phòng kinh doanh thì ông cho thằng kinh doanh quản lý nó. Ông cho kinh doanh mà
+[37:42] quản lý kế toán bán hàng là sai nguyên tắc. Vì kế toán với bán hàng nó phải độc
+[37:48] lập. Rõ chưa? Chứ không ngồi đấy rồi nó thông đồng với
+[37:54] nhau rồi mệt nhỉ. Thì đấy là gì? Đấy là về mặt bố trí con
+[38:00] người nhá. Bố trí con người xong này chúng ta phải làm một cái việc nữa này
+[38:07] là chúng ta mới viết cho họ một cái bản mô tả chức năng nhiệm vụ. À
+[38:13] như thế này thôi. Bây giờ cái bản chức năng nhiệm vụ
+[38:18] này thì cấu trúc của nó thế này là thầy cho mẫu rồi nhá. mà lại thầy lại cho ba
+[38:22] cái cây study nữa. Ah oho
+[38:58] 0:02 /

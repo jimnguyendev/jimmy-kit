@@ -16,3 +16,14 @@
 ## Cycle-discovery extension (written BEFORE the philosophy revision)
 
 When discovery finds a module cycle, it must not reflexively extract `common` or add interfaces. It ranks moving responsibility, merging a fake boundary, and introducing a consumer-owned contract at a real seam, then shows whether locality and dependency direction actually improve.
+
+## Connector-package extension (written BEFORE the revision)
+
+**Sample input:** "Rank the architecture candidates. A package of glue code joins every pair of modules and holds SQL for tables it does not own; a flow needs seven files in four packages."
+
+**Expected behaviors:**
+- [ ] Reports the reading cost with a traced flow (the files opened, in order), not an impression.
+- [ ] Flags duplicated persistence knowledge and unapproved schema access, but keeps adapters that translate meaning between two models.
+- [ ] Treats strict table ownership as a selected policy, names reporting projections as a documented read-only exception, and does not recommend a contract for an import that merely fails to compile.
+
+**Status:** [EXIT 2 — scenario specified; no independent fresh-agent run recorded yet].

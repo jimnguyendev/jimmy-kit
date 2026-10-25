@@ -1,0 +1,294 @@
+[0:15] Mảng nội dung cuối kiểm soát chất lượng công việc kế toán.
+[0:45] Bây giờ chúng ta muốn kiểm soát tốt chất lượng công việc kế toán thì chúng ta
+[0:48] phân kỳ nó ra nà. Phân kỳ
+[0:54] cái phân kỳ ra t thế này là cái chất lượng của công tác kê khai báo cáo thuế.
+[1:04] Cái thứ hai đó là cái quản trị về tài chính chi phí liên quan đến tồn kho công
+[1:11] nợ gì đó và công việc gì ở cuối năm. việc cuối năm.
+[1:21] Thế thì cái quản trị doanh thu, chi phí lợi nhuận nó thông qua cái kế hoạch và
+[1:24] báo cáo rồi. Ok. Nó đi một nhé. Thế thì doanh nghiệp nào cũng phải kê
+[1:33] khai báo cáo thuế có đúng không? Thì nó có hai lựa chọn. Lựa chọn thứ nhất là
+[1:39] anh thuê ngoài người ta làm cho anh. Lựa chọn thứ hai
+[1:43] là nhân viên anh tự làm. nhân viên tự làm
+[1:53] thì cả hai trường hợp này anh đều phải tiến hành cái việc là sao? Kiểm soát
+[1:59] bảo nhưng mà em có học cái toán quái đâu. Học khai thuế quái đâu mà em biết
+[2:03] kiểm soát kiểu gì? Nhiều khi nó nói chuyện em tưởng nó không nói tiếng người
+[2:10] đúng không? Tôi hướng dẫn các anh chị kiểm soát như
+[2:17] sau. Kiểm soát này anh chị yêu cầu như sau.
+[2:26] Yêu cầu một là cái kiểm soát hóa đơn. Hóa đơn khi tiếp nhận hóa đơn đầu vào
+[2:34] hoặc xuất hóa đơn đầu ra. Anh yêu cầu ai là người tiếp nhận hóa
+[2:42] đơn và được giao cái nhiệm vụ kiểm soát tính đúng đủ hợp lệ của hóa đơn đó thì
+[2:49] vui lòng ký nháy vào đấy. Nghĩa là nếu có chữ ký nháy của bà là
+[2:53] hóa đơn đấy đã được kiểm soát. Được chưa? Và nếu sau này nó cứ xảy ra
+[2:59] sai sót mà dẫn đến thiệt hại thì bà phải chịu trách nhiệm với việc đó. Thế bảo
+[3:04] bây giờ hóa đơn điện tử em ký kiểu gì? điện tử thì ông cũng phải in ra bản
+[3:08] chuyển đổi để ông hạch toán chứ, để ông kim kẹp hồ sơ chứ có phải không?
+[3:13] Thì kỹ vào bản chuyển đổi. Đấy là pháp thứ nhất nhá. Cái kiểm soát thứ hai này
+[3:20] là có phải là hàng tháng hoặc hàng quý,
+[3:26] hàng tháng hoặc hàng quý là công ty nó phải thực hiện một cái giao dịch là nộp
+[3:33] tờ khai thuế giá trị gia tăng. Rồi thuế thu nhập cá nhân phải không?
+[3:42] Để nộp tờ khai. Nếu nộp tháng thì 20 hàng tháng nếu nộp
+[3:50] quý thì ngày 30 của quý kế tiếp. Thế thì trước kia là mình thôi mà kệ kế
+[3:57] toán nó nộp lúc nào nộp phải không? Có đúng không nhỉ? Hay là mình thuê dịch vụ
+[4:01] thuê ngoài mình đưa luôn cả toen cho nó. Toen là cái gì? để ký số lên trên đó để
+[4:05] nộp. Thế thì nó nộp lúc nào mình cũng không
+[4:09] biết mà. Bởi vì là cái email thông báo thuế đấy chắc gì mình đã check nhỉ.
+[4:15] Thế thì nó xảy ra rất nhiều rủi ro. Có thể là thế này này. Bà ấy làm không kịp,
+[4:19] bà ấy nộp bén lên cái báo cáo trắng xong là mấy hôm nữa bà ấy làm bù vào bà
+[4:24] thay thể. Đấy là một trường hợp nhá. Trường hợp
+[4:27] rủi ro thứ hai tiếp này. Trường hợp rủi ro là nó có sai sót nhưng không ai là
+[4:31] cái người kiểm chứng còn lại. Thế trường hợp thứ ba là cái số thuế
+[4:37] phải nộp nó vượt khỏi tầm ngân sách của công ty
+[4:42] mà công ty không biết. Hay thậm chí tôi đã gặp những trường hợp
+[4:46] là tháng đó có mấy trăm triệu phải nộp thuế giá trị gia tăng nhưng bán giám đốc
+[4:53] công ty hoàn toàn không biết vì thuê dịch vụ thuê ngoài nhân viên nó
+[4:58] non tay nó nộp thôi nó có báo gì đâu mà đời nó rất dở là ngày xưa người ta
+[5:04] cho có 10 ngày để nó báo cáo thôi thì doanh nghiệp cũng có lúc nộp đúng
+[5:09] nộp chậm người ta cho đến 20 ngày nó vẫn nộp chậm mà tôi đạ đảm bảo nếu có cho 6
+[5:14] tháng kia khai nó vẫn bộc trợ phải không? Đấy.
+[5:19] Thế thì người ta mới tiến hành kiểm soát nó. Đó là cái kiểm soát cái tờ khai bằng
+[5:24] các biện pháp sau đây. Anh ơi, cái chỗ hóa đơn thì thầy nói rồi
+[5:30] được không? Thứ hai này là anh cho kiểm tra gọi là kiểm tra
+[5:38] chéo. Chắc chắn công ty của các bố hơn hai người
+[5:43] phải không? Cho nên cho dù công ty có nhỏ nhất thì cũng có một em kế toán nó
+[5:48] làm cái việc đấy hoặc có một đơn vị dịch vụ nó làm cái đấy. Thế thì yêu cầu một
+[5:52] người còn lại nếu cũng là kế toán thì tốt, nếu không là kế toán thì cũng nghe
+[5:57] tôi đi ai cũng có thể kiểm tra được. Còn giám đốc thì thôi thỉnh thoảng ngó
+[6:03] tí cho nó vui trèo thôi nhá. Chứ đừng rúng sâu vào
+[6:07] chỗ này là ông chết luôn đấy nhá. Cho kiểm tra chéo có nghĩa là cái người
+[6:13] kiểm tra đơn giản chỉ là cái người cầm máy tính hoặc bảng kê Excel.
+[6:18] Anh cộng anh cộng số thôi. Sau đó anh đếm hóa đơn
+[6:24] thôi. Đơn giản thế thôi. Thế cộng số mới đếm
+[6:28] hóa đơn thì có phải đứa lớp 5ă nó cũng làm được không?
+[6:32] Chứ không thì nó lý luận là em làm kinh doanh em biết gì mà đi kiểm tra tờ khai
+[6:36] ai cũng kiểm tra được. Chỉ cần làm giúp tôi là cộng số liệu ở trên các hóa đơn
+[6:41] phát sinh trong kỳ. Đếm số lượng hóa đơn. Sau đó khi mà cộng và đếm thì điền
+[6:48] vào cái bảng số liệu thầy cho. Đó là cái mẫu kiểm tra tờ khai thuế trước khi nổ.
+[6:57] Nhắc lại là mẫu kiểm tra tờ khai thuế trước khi chúng nó nổ.
+[7:07] Nghĩa là phải cho kiểm tra hai đứa ký vào đấy
+[7:11] xong mới cho nộp. Thì cái mẫu đấy đây cái mẫu đấy là hóa
+[7:22] đơn đầu vào. Tổng số chứng từ đầu vào có bao nhiêu tờ, trong đó có bao nhiêu hóa
+[7:27] đơn giá trị gia tăng, bao nhiêu hóa đơn bán hàng, bao nhiêu tờ khai hải quan,
+[7:30] bao nhiêu tem vé thẻ. Thống kê thôi mà nhé. Thống kê thôi.
+[7:38] Sau đó cộng tổng giá trị mua vào bằng bao nhiêu điền vào chỗ này?
+[7:43] Được chưa? Thế còn cái đứa kê khai á thì là tổng cái giá trị cái chỉ tiêu mà giá
+[7:48] trị mua vào trên tờ khai bằng bao nhiêu thì nó điền vào đây. Thế cứ hai cái số
+[7:52] này khớp ấy là nó đúng. Còn hai số này mà lệch
+[7:58] là một trong hai đứa sai. Hoặc cái đứa mà thống kê sai, hai là cái đứa kê khai
+[8:02] sai. Hoặc cả hai cùng sai nhỉ.
+[8:09] không tránh khỏi những trường hợp mà cả hai cùng sai nó dẫn đến giá trị đúng
+[8:12] nhưng thôi có kiểm vẫn hơn ý là như thế được không? Thì đấy là chúng ta dùng
+[8:17] biện pháp thứ nhất là cho kiểm tra chéo. Biện pháp thứ hai này,
+[8:23] chúng ta phải đưa ra quy định đối với người phụ trách khai thuế rằng
+[8:29] trước khi nộp tờ khai thuế ít nhất 10 ngày, tức là nếu kỳ khai
+[8:36] tháng thì chậm nhất là ngày mùng 10 của tháng kế tiếp.
+[8:40] phải thông báo cho chúng ta biết số tiền thuế dự kiến phải nộp nếu có.
+[8:51] Để làm gì? Để nhỡ phải nộp thì tôi còn có 10 ngày để chuẩn bị tiền chứ có phải
+[8:57] không? Tránh trường hợp là 12 gi đêm hôm nay
+[9:01] hết hạn rồi nó mới đẩy tờ khai cái rẹt xong sáng sớm hôm sau nó lên anh ơi
+[9:07] tháng này phải nộp 1 tỷ. tiền đâu một nộp nhỉ?
+[9:14] Thì đấy là cái gì? Chúng ta cho họ làm cái phiếu này. Được chưa? Như vậy thì
+[9:20] mỗi bộ tờ khai thuế giá trị gia tăng khi nộp đi,
+[9:25] khi nộp xong rồi thì yêu cầu họ này in kết quả đã nộp.
+[9:31] Kết quả đã nộp, tức là tờ khai đã được nộp lên và có cái dòng chữ là ký số bởi
+[9:38] Tổng cục thuế. In luôn cả cái thư thông báo rằng là gì?
+[9:45] Tổng cục thuế đã nhận được tờ khai thuế kỳ mấy của công ty này.
+[9:49] Ghim nguyên cái bộ đấy vào và yêu cầu lưu trữ bản cứng. Tôi xin thưa anh chị,
+[9:55] đôi lúc chẳng hiểu về lý do gì. Rõ ràng tờ khai kế toán bảo nộp rồi
+[10:01] nhưng đến lúc kiểm tra lại nó thiếu luên tờ khai. Nó có thể là lỗi phần mềm, nó
+[10:07] có thể là đôi khi là do cái đường truyền nó có chuyện khi nhân viên họ đang
+[10:12] truyền tờ khai nó đã vội đứng dậy rồi. Sau đó cái tiến
+[10:16] trình nó bị hỏng họ không kiểm soát lại dẫn đến việc là tưởng là nộp rồi nhưng
+[10:21] hóa ra là chưa nộp. mà hóa ra chưa nộp thì ngày xưa thì còn có nhân viên chuyên
+[10:26] quản họ nhắc luôn chứ bây giờ nhân viên thuế không chuyên quản nữa họ kể
+[10:32] thế là gì ạ đợi đến kỳ sau mới phát hiện ra thì nộp phạt mất rồi rõ chưa
+[10:38] thế thì cái chỗ đấy là sau khi nộp xong phải bắt in kết quả nộp xong kèm theo
+[10:42] thư thông báo ghim thành một bộ cùng với cái tờ kiểm tra này yên tâm cất đai sót
+[10:48] điều chỉnh sau tính sau nhưng tôi nói cái hồ sơ lần đầu nó cần Phải như thế.
+[10:53] Ok. Thì đấy, kiểm cái này cho nó chắc chắn
+[10:58] ngon nghề. Bây giờ anh yêu cầu tiếp một cái việc
+[11:01] này là
+[11:10] sau sau khi nộp tờ khai sau khi nộp tờ khai anh cộng thêm cho họ
+[11:18] 10 ngày là yêu cầu yêu cầu họ phải gì?
+[11:27] Phải in ấn và ghim kẹp xong chứng tử. Còn sổ sách kế toán cho cuối năm cũng
+[11:31] được. Ghim kẹp xong chứng từ.
+[11:36] Bởi vì kể cả sau này cuối năm anh muốn gì ạ? Điều chỉnh anh chế lại số liệu,
+[11:41] anh điều chỉnh một số chỉ tiêu số liệu thì anh có thể thay thế chứng từ mà anh
+[11:46] ghim kẹp rồi không có nghĩa là không dỡ được ra đúng không? Như vậy để đảm bảo
+[11:51] là kỳ khai thuế nào thì nó được dứt điểm ở kỳ đó ngay.
+[11:57] Đừng để dồn dồn mệt lắm. Nó tránh cái trường hợp là thậm chí là có những công
+[12:03] ty đến lúc nó kiểm người ta ra thông báo kiểm tra thuế rồi mới hỏi chứng từ kế
+[12:09] toán với lại sổ sách ở đâu em ơi? Nó bảo ở trong máy tính anh ạ.
+[12:14] Thế còn chứng từ thì toàn bộ chứng từ gốc gốc này em tập hợp hết rồi. Em đóng
+[12:18] vào cái bề bệc vào cái thùng công em để dưới gầm bàn kế toán ấy. Mẹ ra nhìn thấy
+[12:24] là gì ạ? Toàn bộ chứng tử gốc thôi. Chưa ghim kẹp phiếu nhập phiếu xuất, phiếu
+[12:28] thu phiếu chi, báo nợ báo có gì sất chết không?
+[12:31] >> Riêng được không?
+[12:32] >> Riêng cũng được, làm nào cũng được. Nhưng tôi muốn rằng từng bộ chứng từ một
+[12:36] giống như bộ tiêu chuẩn hồ sơ sáng nên tôi nói là phải được ghim kẹp sẵn để
+[12:40] đấy. Rồi sổ sách có thể chưa cần in vì bà có thể lưu bản PDF. Nhưng đừng để đến
+[12:45] cái lúc mà người ta thông báo kiểm tra thuế rồi thì mới gì? vội vàng đi xem in
+[12:50] chứng từ ở đâu. Tôi nói xin thưa rằng rủi ro máy tính phần mềm là chuyện
+[12:54] thường tình. Rồi chưa kể gì ạ. Mỗi tháng mỗi quý các ông nên ký chứng tử thuế một
+[12:59] lần. Nó tránh cái trường hợp đến lúc kiểm tra thuế 3 năm mẹ nó xếp chứng từ
+[13:04] đầy phòng giám đốc này xong bắt đầu là mệt mỏi ngồi ký đúng không? Ký mệt quá
+[13:10] mẹ khắc bố nó cái dấu tên Đặng Thị Tèo, giám đốc công ty ngồi cứ suốt ngày dập
+[13:15] dập khổ thế.
+[13:21] Thế thì chúng ta nhìn thấy cái thực trạng đó rồi thì đừng có mắc phải nữa.
+[13:24] Và giải pháp là làm thế này thôi nhỉ. Cũng đều vì cái là chúng ta không biết
+[13:31] về tài chính kế toán. Thành ra đôi khi chúng ta sợ quá. Sợ đến mức gì? Không
+[13:36] muốn đả động gì đến nó cả. Nó dẫn đến cái hệ lụy nó đau đớn như vậy nhá.
+[13:43] Kế tiếp này chúng ta kiểm soát cái thứ hai là kiểm soát thuế thu nhập doanh
+[13:50] nghiệp hàng quý.
+[13:58] Có những bố coi như là ăn Tết xong rồi mới hỏi nhân viên em ơi tình hình năm
+[14:02] nay lỗ lãi thế nào, thuế má bao nhiêu vậy?
+[14:05] Thậm chí còn không hỏi cơ gần đến ngày 31 tháng
+[14:10] chuẩn bị đến kỳ nộp tờ khai quyết toán thuế rồi nó mới báo anh ơi chuẩn bị nộp
+[14:14] tờ khai bọn em làm xong rồi đấy năm nay là lời trăm tỷ anh chuẩn bị cho em là 20
+[14:19] tỷ nộp thuế mẹ lúc ấy thì nhục hơn con trùng trục
+[14:26] thế thì người ta mới yêu cầu là một quý một lần
+[14:32] cái người phụ trách công tác kế toán thuế này người Người ta phải thực hiện
+[14:35] một cái báo cáo gọi là báo cáo nhanh. Báo cáo nhanh cái doanh thu, chi phí,
+[14:41] lợi nhuận và dự kiến thuế. Để ông có xử lý chứng từ, ông ông ông có
+[14:48] đẩy doanh thu, kéo doanh thu thì ông phải làm từng quý. Chứ tại sao ông để
+[14:52] đến tận năm sau rồi thì ông còn cơ hội gì mà sửa phải không nhỉ? Đó. Rồi ông có
+[14:58] kế hoạch ví dụ quý ba là ông phải có kế hoạch trích lập dự phòng, tổn thất tài
+[15:02] chính, trích lập dự phòng gì? công nợ rồi vân vân không bao giờ được để nước
+[15:08] đến chân mới nhảy. Còn thậm chí bọn mình bây giờ là đôi khi nước đến cổ rồi chưa
+[15:12] thèm bơi. Thuế thu nhập doanh nghiệp. Các bố báo
+[15:18] cáo nhanh giúp em bằng cái báo cáo này. Mỗi quỹ một lần.
+[15:25] Đây báo cáo nhanh thuế thu nhập doanh
+[15:29] nghiệp. Doanh thu, giá vốn, chi phí lợi nhuận. dự kiến tiền thuế phải nộp quý
+[15:36] thứ nhất bằng bao nhiêu, quý thứ hai bằng bao nhiêu và cột bên này tự lo lũy
+[15:41] kế. Đơn giản là chúng ta cần thông tin đó
+[15:45] trên một tờ giấy trong suốt cả năm cập nhật từng quý để cần điều chỉnh doanh
+[15:51] thu chi phí gì chúng ta xử lý trong quý không bao giờ được để đến kỳ quyết toán
+[15:55] mới nháo nhào đi nha. Không bao giờ được dồn hết việc sang quý bốn. Còn nếu không
+[16:01] tin chúng ta cứ về kiểm lại mà xem. Thông thường thì chi phí của công ty nó
+[16:05] cứ bị dồn hết mẹ vào quý bốn là sao? Có khi đầy lúc chúng ta còn không thèm đòi
+[16:11] hóa đơn đợi đến quý bả đòi một thể. Thứ hai đó là đến tận gì sát nút rồi gần đến
+[16:17] cận ngày 31 tháng 12 rồi mới đi chạy chứng từ chi phí.
+[16:21] Có phải không? Cho nên một mớ chi phí nó sẽ rơi vào các ngày cuối tháng, đặc biệt
+[16:25] là tháng 12 hàng năm. Nghe là biết làm điêu rồi,
+[16:31] không cần phải nói nhiều. Đơn giản thế thôi nha.
+[16:43] Và một việc cuối cùng, một việc cuối cùng đó là chúng ta nghiệm
+[16:53] thu, chúng ta nghiệm thu
+[16:59] kết quả kế toán hàng năm.
+[17:11] Bây giờ mình giao cho họ hàng tháng, em phải quản lý chi phí cho anh, em phải
+[17:15] quản lý công nợ cho anh. Thì đấy là công việc hàng tháng mình chấm KPI mình trả
+[17:19] lương. Thế nhưng mà cái công việc của kế toán
+[17:23] nó rất đặc thù ở chỗ. Nó không chỉ giải quyết các sự vụ phát sinh như thế mà nó
+[17:28] còn phải kiện toàn hoàn thiện hồ sơ. Nó không như thằng kinh doanh nó bán hàng
+[17:32] xong là xong nhỉ. Công việc còn lại của nó là thúc nợ và đòi nợ. Nó phối hợp với
+[17:38] kế toán nó đòi. Nhưng công việc của kế toán không những anh làm xong các sự vụ
+[17:42] và phát sinh đó, anh còn phải kiện toàn hoàn thiện hồ sơ
+[17:47] thì chúng ta sẽ kiểm soát như sau. Nghiệm thu. Nghiệm thu ạ? Chậm nhất.
+[17:57] Chậm nhất vào tháng 3
+[18:02] của năm kế tiếp. Trước khi quyết nộp báo cáo quyết toán
+[18:10] thuế, thầy nhắc lại là chúng ta phải lấy cái
+[18:14] mực màu đỏ mà cái đỏ nào nó thật là đỏ ấy nhá. Gạch vào cái chỗ là trước khi
+[18:19] nộp báo cáo quyết toán thuế là phải nghiệm thu hồ sơ sổ sách
+[18:26] chứng tử. Nếu không nghiệm thu, chuyện gì xảy ra?
+[18:35] Em ơi tình hình quyết toán thế nào rồi? Dạ anh ơi, sắp xong rồi đấy. Ngày mai
+[18:38] nào nộp được thôi. Hóa ra là các bố các bà chạy tiến độ
+[18:43] không kịp là ngày mai bà nộp tạm một bản gì nháp.
+[18:49] Xong tháng 5 tháng sáu rảnh rang thời gian bà nộp lại.
+[18:55] Đấy là cái thứ nhất. Cái thứ hai nữa là gì ạ? ngày mai em cho nộp dưới đấy.
+[19:01] Nhưng mà khổ lắm, hạch toán chưa được chi tiết, chưa có
+[19:06] thời gian kiểm tra và hoàn thiện hồ sơ. Thành ra có thể còn rất nhiều các rủi ro
+[19:11] về số liệu khi ngày mai em nộp. Nhưng nếu chúng ta đã nghiệm thu được
+[19:16] cái chứng từ của từng tháng từng quý giống như bước trước chúng ta tôi đã nói
+[19:21] cộng với việc cuối cuối năm chúng ta nghiệm thu thêm một lần các chứng từ còn
+[19:24] lại và nghiệm thu tiếp sổ sách nữa thì khả năng còn sai sót
+[19:30] là rất ít. Nhiệm thu xong rồi gì không đáng bao nhiêu tiền cả anh chị ra chợ
+[19:37] mua cho họ các cái hòm bằng tôn đúng không? ghim kẹp từng bộ đóng hòm
+[19:43] tôn dán niêm phong khóa lại cất đi. Lỡ may có cháy cũng còn kịp vác cái hòm tôn
+[19:48] mà chạy nhỉ. Vì chứng từ kế toán phải lâu dữ 10 năm
+[19:54] không đùa được. Vậy nghiệm thu thế nào? Nghiệm thu thế này. Phần thứ nhất là anh
+[20:00] chị nghiệm thu cho tôi chứng tử. Trong suốt cả năm tài chính vừa qua,
+[20:07] công ty mình phát sinh bao nhiêu phiếu thu, bao nhiêu phiếu chi, bao nhiêu
+[20:11] phiếu nhập, bao nhiêu phiếu xuất? Có nghĩa là cái bộ chứng từ kế toán cần
+[20:16] phải ghim kẹp bắt đầu từ số nào và kết thúc bằng số nào thì đó chính là số
+[20:21] lượng chứng từ phát sinh. Số lượng chứng tử phát sinh thì cứ liệt
+[20:27] kê hết ra. Tình trạng là ghim kèm chứng tử gốc là
+[20:32] có gì? Có hóa đơn thì bao nhiêu hóa đơn? Cho kiểm tra phần thứ nhất là chứng tử.
+[20:39] Nghiệm thu thứ hai là nghiệm thu sổ kế toán.
+[20:44] Bởi vì thế này, có thể công ty chúng ta nội bộ không cần đến sổ kế toán, chỉ cần
+[20:48] bản mềm là xong. Nhưng mà bây giờ tôi hỏi các anh chị là
+[20:51] đến kỳ kiểm tra thuế con thuế hỏi sổ sách kế toán đâu in lên đây mang đấy chị
+[20:57] đúng không? Đằng nào chả phải in thôi. In bé đi được không? Sổ sách này thì thứ
+[21:03] nhất là sổ tiền, sổ chung, sổ tồn kho, sổ công nợ và sổ cái là phải có. Thì
+[21:10] liệt kê các loại sổ đó ra. Số lượng bút toán là khớp với số lượng chứng tử.
+[21:17] Trên sổ đấy có bao nhiêu bút toán? đã được hạch toán thì ở cái cột đầu tiên
+[21:21] của sổ kế toán bao giờ cũng có số thứ tự bút toán. Vậy nhìn cái số cuối cùng là
+[21:25] biết được chưa? À tiếp theo của cái nghiệm thu cái này là nghiệm thu tiếp
+[21:30] cái phần còn lại là báo cáo và giao dịch công văn giao dịch. Ví dụ trong 1 năm có
+[21:36] mấy lần nộp tờ khai thuế được chưa? Có mấy lần giao dịch với cơ quan bảo hiểm
+[21:41] về thay đổi lao động và bảo hiểm? Có mấy lần là gì? Cơ quan thuế gửi văn bản yêu
+[21:47] cầu giải trình bổ sung số liệu và em đã làm.
+[21:51] Có mấy lần là em đăng ký bổ sung thuế? Có mấy lần là em đi đăng ký thêm cho chi
+[21:56] nhánh? có mấy lần là em gửi công văn cho việc nọ việc kia cho sở công thương hay
+[22:00] là các sở ban ngành có liên quan thì toàn bộ các văn bản giao dịch hành chính
+[22:05] của phòng kế toán với các cơ quan thuế và cơ quan quản lý nhà nước khác thì vui
+[22:10] lòng liệt kê ra đây bao gồm cả các tờ khai thuế nộp kể cả
+[22:15] các tờ khai điều chỉnh liệt kê hết nó ra và cuối cùng là chúng ta nghiệm thu phần
+[22:22] còn lại là nghiệm thu hồ sơ nhân sự và hồ sơ hồ sơ tài sản cố định thì phần
+[22:28] nghiệm thu này không chỉ đối với phòng kế toán mà cả những người phụ trách về
+[22:32] hành chính nhân sự cũng phải tham gia vào định nghiệm thu cái này. Nếu làm
+[22:37] được thế thì ở đây các kế toán ơi, các em đừng nghĩ là thầy đang chỉ cho
+[22:44] chủ doanh nghiệp biết cái cách quản lý để làm khó các em.
+[22:48] Nhưng thầy khẳng định nếu cũng năm nào kết thúc năm em cũng đóng gói được cái
+[22:54] bộ này em ký tá em bàn giao xong rồi em ký đi thì xin thưa là đầu em nó nhẹ tênh
+[23:01] và em làm việc rất tự tin. Còn nếu không bản thân em cũng vô cùng nặng nể. Nhất
+[23:07] là tại cái thời điểm đôi khi em có một cơ hội công việc tốt, em muốn chuyển đi,
+[23:11] đôi khi có những người vì nể chủ doanh nghiệp quá phải ở lại hai ba tháng để xử
+[23:16] lý nốt những cái tồn động rồi mới đi được. Lúc đấy có phải nhục không? Nhục
+[23:21] lắm. Có phải không? Mà bỏ đi thì trong lòng nó không đành.
+[23:26] Cái đạo đức nghề nghiệp nó không cho phép mình.
+[23:29] đó cho nên là muốn làm tốt và giải phóng áp lực đi thì
+[23:35] hãy tạo ra kỷ luật để quản lý chính mình cả giám đốc cả kế toán.
+[23:41] Vậy thì toàn bộ những cái nội dung yêu cầu này, những cái mà thầy viết lên đây,
+[23:47] chúng ta phải gạch đầu dòng lại, đánh dấu xanh đỏ lại để sau này khi chúng ta
+[23:53] ngồi soạn quy chế tài chính hoặc quy định cho phòng kế toán thì phải bỏ các
+[23:58] nội dung mà thầy vừa nói vào trong quy chế,
+[24:02] đúng không? để khi họ không làm công ty mới có chế tài, mới căn cứ vào đó để nói
+[24:08] rằng em đã không hoàn thành công việc hoặc vi phạm quy chế tài chính, quy chế
+[24:13] công ty đến mức nào chứ. Có phải không? Tránh cái trường hợp là với tư cách là
+[24:19] chủ doanh nghiệp mình biết thừa công việc không tốt, mình biết thừa số liệu
+[24:23] lằng nhằng nhưng cứ ngậm đắng nuốt cay, ngậm một cái khối hậm hực.
+[24:29] hậm hực ở trong trong miệng trong cổ họng này
+[24:33] đi nói chuyện với đối tác anh em chả lắm tình hình này, số liệu này em thấy lo
+[24:38] lắng vô cùng không làm thế nào được. Kế toán thì cũng chán lắm. Các phòng ban
+[24:44] bộ phận khác không hợp tác gì cả. Sếp em thì nói mãi không nghe.
+[24:49] Đã bảo rồi chi tiêu cái thứ gì thì nhớ mang về công ty hợp đồng hóa đơn đầy đủ.
+[24:55] Nhưng mà sếp bảo lằng nhà lằng nhà người ta không thích.
+[24:59] Nói chung thì tại anh tại ả và tại cả hai bên từ nay trở đi cố gắng chấm dứt
+[25:06] cái sự tại đấy đi. Đấy
+[25:11] thì đấy là tất thầy những cái hướng dẫn sử dụng biểu mẫu từ tổ chức công tác kế
+[25:18] toán lập kế hoạch tài chính kinh doanh và dòng tiền.
+[25:23] Tôi biết là nó rất dài và khó. Nhưng không làm không được. Cái chỗ nào
+[25:32] thì tôi còn bảo rằng du diài chính kế toán. Anh chị ơi, muốn sống lâu
+[25:38] sống khỏe, sống có ích thì vui lòng làm công tác kế toán cho nó
+[25:44] gìn chu một tí. Nói thì nó nhiều vậy thôi chứ việc ở
+[25:49] doanh nghiệp thì nó không nhiều. Ở quy mô doanh nghiệp mình nó không
+[25:55] nhiều thứ thế đâu. Sở dĩ trong vòng hai ba ngày thầy phải nói tất cả mọi chuyện
+[26:00] chứ bây giờ ví dụ tôi hỏi cái mẫu nghiệm thu công tác này, nghiệm thu kết quả kế
+[26:06] toán này, mỗi năm làm có một lần có phải không? Như vậy anh cất đi trong cái kho
+[26:11] tài liệu của anh đợi đến kỳ tháng ba của năm kế tiếp thì trước khi kế toán báo kế
+[26:16] toán thuế thì rút ra để làm với nhau chứ có phải ngày nào cũng mở ra đâu. Có phải
+[26:21] không ạ? Tôi nói thì nhiều như vậy nhưng mà đối với bộ phận kinh doanh họ có mỗi
+[26:26] cái kế hoạch bán và cái báo cáo bán thôi mà.
+[26:31] Nhưng mà nói ở tính chất của hệ thống thì chúng ta thấy sao nó nhiều thứ thế.
+[26:35] Nhưng khi về chúng ta chia việc ra, phân cấp ra thì nó không đáng bao nhiêu cả.
+[26:40] Vậy thì tôi phải nói thêm cái điều đó để trấn an các anh chị về mạnh dạn để làm
+[26:46] khó lắm chứ còn nếu nó dễ người ta thành doanh nhân hết rồi nhỉ. Đấy và hy vọng
+[26:53] là 3 năm nữa thầy gặp lại các anh chị. Lúc ấy cái mặt của anh chị nó phải giãn
+[26:57] ra chứ. Tại sao lại kinh doanh mà đăm chiêu thế ha? Mà thầy thấy nó ngược đời
+[27:02] một cái là đôi khi nó đếch phải đăm chiêu về về vấn đề thị trường, về vấn đề
+[27:07] bạn hàng mà lại cứ phải đăm chiêu mãi về cái chuyện quản lý nội bộ.
+[27:12] Mà nếu không cẩn thận, nếu không dành thích đáng thời gian và công sức để
+[27:16] triển khai, anh chị sẽ còn năm chiêu dài và 80% thời gian và công sức của anh chị
+[27:22] sẽ dành ra để giải quyết cái sự năm chiêu đó.
+[27:26] Đó là điều rất đáng tiếc. Trong khi đó cái bộ óc thông minh của mình, cái khuôn
+[27:30] mặt dạng ngời của mình này phải để tính toán câu chuyện của thị trường chứ. Tại
+[27:33] sao lại chử đi xử lý bên bên trong nhỉ?
+[28:15] 0:01 /

@@ -1,0 +1,677 @@
+[0:12] Phần thứ hai trong chương trình ngày hôm nay là triển khai kế hoạch tài chính
+[0:17] kinh doanh. Thì sau đây thầy sẽ hướng dẫn cách chúng ta sử dụng biểu mẫu và
+[0:22] trình tự chúng ta triển khai lập kế hoạch tài chính kinh doanh cho công ty.
+[0:28] Bước một. Bước một.
+[0:33] Bước một trong phần hai là chúng ta xác lập mục tiêu.
+[0:38] Xác lập mục tiêu cả năm.
+[0:46] Xác lập mục tiêu cả năm. Ai nói lại cho thầy nghe cái việc xác
+[0:52] lập mục tiêu cả năm này chúng ta làm ở thời điểm nào ạ?
+[0:59] Vào khoảng cuối tháng 11 hàng năm thì chúng ta dự kiến kế hoạch cho năm tới,
+[1:06] trong đó việc đầu tiên là xác lập mục tiêu cho cả năm tới. Dựa trên số liệu
+[1:12] ước đạt của năm này, dựa trên cái phân tích thị trường, khách
+[1:18] hàng, dựa trên các nguồn lực kinh doanh và các mối quan hệ chúng ta có thể xây
+[1:22] dựng được. Thì cách thức làm là thế này, giám đốc hoặc những người nằm trong hội
+[1:28] đồng thành viên, hội đồng quản trị, tức là những người góp vốn vào công ty vào
+[1:32] tháng 11 hàng năm thì hãy tổ chức một cuộc họp để chúng ta dự thảo đưa ra bốn
+[1:38] nhóm mục tiêu. Nhóm mục tiêu thứ nhất là nhóm mục tiêu về gì? Về tài chính. Nhóm
+[1:44] mục tiêu thứ hai là khách hàng và thị phần. Nhóm mục tiêu thứ ba là quản trị.
+[1:49] Nhóm mục tiêu thứ tư là học hỏi phát triển.
+[1:54] Thế thì ở đây nếu bạn nào chỉ tham gia chuyên đề tài chính này thì bạn sử dụng
+[2:00] nguyên mẫu này giúp thầy. Sử dụng nguyên mẫu này vì đây là bốn góc
+[2:05] này, tài chính này, khách hàng thị phần này, bên này là quản trị này, dưới này
+[2:10] là học hỏi phát triển. Thế còn nếu mà bạn nào tham gia đầy đủ
+[2:15] chương trình của thầy thì chúng ta nhớ lại ở chuyên đề số 1 đó là chuyên đề về
+[2:20] chiến lược. chuyên đề chiến lược thì chúng ta có cái
+[2:26] phần hai của bản OPS, phần hai của bản OPS. Chúng ta dùng luôn
+[2:35] cái phần hai của bản OPS để chúng ta triển khai thiết lập mục tiêu cho năm kế
+[2:41] tiếp. Thì cái phần hai của bản OPS nó cũng là cái cấu trúc này thôi nhưng nó
+[2:47] được trình bày theo chiều dọc của cả 12 chỉ tiêu đúng không? Và nó có thêm một
+[2:54] phần nữa đó là gì? Một chiến dịch hành động chủ chốt của năm kế tiếp.
+[3:01] Như vậy chúng ta dùng cái nào cũng được nhé. Dùng cái nào cũng được nhưng dùng
+[3:05] phần hai của bản OPS thì tốt hơn. Thế còn số lượng các chỉ tiêu ở đây? Đây
+[3:11] thầy để ra khá nhiều chỉ tiêu nhưng thầy nhắc lại việc xác lập mục tiêu bằng các
+[3:17] chỉ tiêu có thể đo lường ở năm kế tiếp chúng ta chỉ được lựa chọn dưới không
+[3:25] quá 12 chỉ tiêu. Vì sao thế? Ví dụ tài chính mình đưa ra
+[3:31] ba chỉ tiêu à doanh thuần cả năm, doanh thu theo khu vực hoặc doanh thu bình th
+[3:36] quân tháng quý, lợi nhuận cả năm hoặc lợi nhuận bình quân quý hoặc lợi nhuận
+[3:41] trên gì? Sản phẩm chính. Thế rồi tương tự khách hàng, tương tự như quản trị,
+[3:47] tương tự như là học hỏi và phát triển chúng ta còn phải chia nhỏ chỉ tiêu đấy
+[3:51] ra cho các phòng ban bộ phận họ thực hiện. Thế nếu mà ở cấp độ công ty chúng
+[3:57] ta đưa ra quá nhiều chỉ tiêu thì đến lúc chúng ta chia nhỏ tiếp xuống bộ phận lại
+[4:02] từ bộ phận chúng ta chia nhỏ tiếp cho nhân viên họ thực thi thì số lượng các
+[4:06] tiêu chí đánh giá về mặt hiệu quả kinh doanh, đánh giá về kết quả công việc của
+[4:10] nhân viên nó quá nhiều và một khi quá nhiều như thế thì nó sẽ bị phân tán và
+[4:15] chúng ta không thực hiện được đâu. Hay nói cách khác là ở góc độ quản trị thì
+[4:21] nhiều doanh nghiệp đã triển khai KPI nhưng có những doanh nghiệp đưa ra cái
+[4:26] KPI cho nhân viên và phòng ban bộ phận lên đến mười mấy chỉ tiêu
+[4:31] thì như vậy nó không hiệu quả. Nếu anh giao nhiệm vụ cho người ta mà người ta
+[4:35] còn không nhớ nổi các đầu nhiệm vụ thì làm cái gì? Có đúng không? Cái đấy làm
+[4:40] cho nó vui, làm để tự hào rằng tài liệu hoành tráng chứ hoàn toàn không có giá
+[4:45] trị. Thế thì mục tiêu tài chính anh buộc lòng
+[4:51] buộc lòng phải đưa ra cho tôi một trong ba hoặc cả ba chỉ tiêu sau đây. Chỉ tiêu
+[4:57] thứ nhất là doanh thu chắc chắn. Chỉ tiêu thứ hai là biên lợi nhuận hoặc
+[5:04] tỉ suất lợi nhuận. Chỉ tiêu thứ ba.
+[5:09] Chỉ tiêu thứ ba là tỉ suất lợi nhuận trên cái gì?
+[5:19] Trên doanh thu thì nói rồi. Nhưng mà tỉ suất lợi nhuận trên doanh thu của đơn
+[5:23] hàng của nhóm hàng chính hay là tỉ suất lợi nhuận trên gì?
+[5:28] Trên một cái vùng thị trường chính hoặc trên nhóm khách hàng chính.
+[5:34] Nếu chỉ đưa khơi khơi một chỉ tiêu thôi à doanh thu sang năm là 100 tỷ thì chỉ
+[5:39] tiêu đấy nó chưa lột tả hết được cái mong muốn tăng trưởng hay phát triển của
+[5:44] công ty. Hay thậm chí là gì ạ? Có những doanh
+[5:48] nghiệp không những chỉ đưa ra về mặt mục tiêu doanh thu chung của công ty mà
+[5:53] người ta còn giới hạn luôn là các mục tiêu doanh thu theo vùng thị trường để
+[5:59] người ta muốn tái cơ cấu cái vùng kinh doanh.
+[6:03] Chẳng hạn công ty mình bán hàng cả miền Bắc, miền Trung, miền Nam, cả đồng bằng
+[6:08] trung du phía Bắc à cả cả miền núi trung du phía Bắc thì chúng ta mới thấy rằng
+[6:12] là ở khu vực miền núi khi mà di chuyển lên trên đấy cái tiền cước vận tải nó
+[6:16] quá lớn, chi phí bán hàng quá lớn dẫn đến việc là có thể bán được nhưng càng
+[6:22] bán thì càng lỗ vân vân. Thế thì lúc đấy người ta sẽ đặt
+[6:27] ra một mục tiêu rằng à không những tăng trưởng doanh thu nhưng phải tái cơ cấu
+[6:31] cái cấu trúc doanh thu. Đó là doanh thu tập trung vào những vùng thị trường
+[6:35] thuận lợi hơn. Hiểu không ạ? Thì nó tùy vào cái nỗi đau hiện nay ở các doanh
+[6:41] nghiệp của các anh chị nó là cái gì? Thì chúng ta có một chỉ tiêu đầu tiên là
+[6:44] doanh thuần nói chung để chúng ta thấy được cái quy mô kinh doanh để kế toán họ
+[6:49] dựa vào đó mà tính được cơ cấu chi phí. Nhưng nó phải có một chỉ tiêu doanh thu
+[6:54] nào đó. Và kèm theo đó nữa là chỉ tiêu của lợi
+[6:58] nhuận. Nếu đặt mục tiêu doanh thu mà không đặt mục tiêu lợi nhuận
+[7:03] thì kế toán sẽ không có cái cận dưới để mà tính chi phí. Tôi nói ví dụ công ty
+[7:08] đưa ra mục tiêu của doanh thu trong phần tài chính này là 100 tỷ và chẳng hạn
+[7:14] công ty đưa ra tiếp tỉ suất lợi nhuận dòng. Dòng tức là lợi nhuận sau thuế
+[7:19] phải đạt 12% tức là tối thiểu đâu đó nó phải có gì? 12 tỷ. thì đến lúc kế toán
+[7:26] họ mới nhận các cái bản kế hoạch của bán hàng vân vân. Họ tính ra cái cơ cấu chi
+[7:30] phí họ phải tính để họ giữ được cho anh cái 12 tỷ này
+[7:35] để từ đó tái thiết lập cái gì? Cái định mức và phương pháp quản trị. Và thậm chí
+[7:41] là có những công ty họ đưa thẳng vào quy chế tài chính rằng nếu hợp đồng dưới bao
+[7:46] nhiêu tiền thì nó không ký. Nếu hợp đồng mà cái phần đề xuất hợp đồng của phòng
+[7:51] kinh doanh không mang lại lợi nhuận gộp từ 25% hoặc 18% là nó không ký. Vì nó
+[7:58] biết rằng ký sau khi trừ đi chi phí vốn và chi phí triển khai dự án là nó lỗ.
+[8:06] Ý là như thế. Và đó là cơ sở gốc của việc anh đi đàm phán ký hợp đồng dự án
+[8:12] đặc biệt ở khối xe lắp nhá. Hoặc là các công ty làm sản xuất thương mại nhưng
+[8:16] anh làm theo kiểu gì? hợp đồng giá trị lớn. Ok. Thế đấy là cái phần gì? Phần
+[8:22] thứ nhất là chúng ta xác lập mục tiêu về doanh thu.
+[8:27] Có được doanh thu rồi thì anh nhớ này, anh về anh kiểm lại xem ở công ty của
+[8:33] mình cái công tác về quản trị nội bộ nó yếu chỗ nào thì từng năm một chúng ta
+[8:40] mới xác lập mục tiêu chọc đúng vào cái chỗ yếu đấy. Tôi nói ví dụ.
+[8:47] Ví dụ thời gian làm hàng kể từ lúc đặt hàng đến lúc hoàn thành giao nhận. Công
+[8:51] ty mình đang làm trong thời gian ví dụ 30 ngày
+[8:55] và mình bảo rằng 30 ngày như vậy thực sự là có cải thiện được hay không hay nó
+[8:59] quá lâu, có thể cắt giảm được ở công đoạn ở khâu
+[9:03] nào hay không mà không ảnh hưởng đến chất lượng sản phẩm thì chỉ tiêu gợi ý
+[9:10] của khâu quản trị đó là anh phải rút ngắn thời gian sản xuất hoặc thời gian
+[9:16] thực hiện đơn hàng. Thứ hai, nếu vấn đề công nợ hiện nay mặc
+[9:24] dù chính sách của công ty đưa ra là cho nợ 30 ngày gối đầu nhưng nó cứ nợ gì
+[9:28] trên 90 ngày đấy thì năm nay phải nỗ lực chọc vào một chỉ tiêu là rút ngắn thời
+[9:34] gian nợ bình quân đối với các khoản phải thu. Thì đó là một chỉ tiêu có liên quan
+[9:39] đến quản trị hay là gì ạ? Công ty của mình bây giờ thực hiện sản xuất vấn đề
+[9:44] sai hỏng sản phẩm ở khâu sản xuất nó quá nhiều thì anh phải xác lập ngay một mục
+[9:48] tiêu là gì? giảm tỉ lệ sản phẩm sai hỏng hay đó là vấn đề tồn kho hay đó là vấn
+[9:55] đề gì ạ? Anh không kiểm soát được dòng tiền
+[9:59] thì anh phải đưa vào một chỉ tiêu là tồn kho hoặc dòng tiền vân vân. Thì đây là
+[10:03] thầy đã gợi ý các chỉ tiêu nhưng công ty mình buộc phải lựa chọn ba chỉ tiêu
+[10:07] thôi. Nhưng mà nó khổ một cái là thầy ơi em
+[10:11] nhìn năm sáu cái chỉ tiêu của thầy em mới thấy rằng là gì? Chỉ tiêu nào nó
+[10:16] cũng quan trọng với em. Nhưng có tin không? Nếu thầy gợi ý thêm
+[10:21] gì bốn chỉ tiêu nữa là 10 tất cả thì em cũng vẫn thấy cái này nó quan trọng với
+[10:26] em. Thế thì bây giờ em buộc phải ra quyết
+[10:30] định quản trị. Em chỉ được chọn ba thứ mà em ưu tiên nhất. Những thứ khác không
+[10:36] có nghĩa là không làm. Nhưng nhớ cho thầy,
+[10:41] nguồn lực về tài chính và nhân sự, chúng ta không đủ để cùng một lúc giải quyết
+[10:46] tất cả mọi chuyện đâu. Hãy giải quyết những cái gì là ưu tiên trước và khi
+[10:52] những cái ưu tiên đó nó đạt được gần đến cái đích của nó rồi
+[10:57] thì người những cái thứ khác nó sẽ được kéo theo nó tốt lên mà thậm chí không
+[11:02] cần phải tập trung giải quyết nó, nó vẫn được giải quyết được không? Thứ hai, kể
+[11:06] cả nó không có liên quan liên đới gì cả thì giải quyết xong những cái ưu tiên
+[11:10] chúng ta quay sang giải quyết những thứ khác. Đó là vai trò lớn nhất của người
+[11:15] ra quyết định quản trị trong công ty. Nhưng ông nhớ cho ông muốn giữ cái của
+[11:20] ông thế nào thì ông giữ. Ông muốn rằng tăng doanh thu lợi nhuận của ông thế nào
+[11:25] thì tăng. Nhưng cái chỗ phục vụ khách hàng ông phải giữ được sự phát triển cho
+[11:29] nó. Đó là tôi tăng doanh thu dựa trên tăng trưởng giá trị đơn hàng bình quân
+[11:36] hay tăng trưởng khách hàng mới? Đó là một chỉ tiêu về khách hàng. Năm nay anh
+[11:41] có muốn mở rộng thị trường sang vùng mới hay thu hẹp thị trường lại? Bỏ đi những
+[11:47] thị trường gì mà phân tán nguồn lực về tài chính? Thì đó là một chỉ tiêu về
+[11:53] khách hàng. Tiếp tục. Nếu như ở năm trước anh có thống kê được rằng là cứ 10
+[11:59] đơn thì khách hàng kêu ca phàn nàn sáu đơn
+[12:03] thì năm nay anh phải đặt một chỉ tiêu là gì? Tăng tỉ lệ hài lòng hoặc vui lòng
+[12:09] của khách hàng. Hay là gì? Anh bán hàng B2B nhưng mà anh
+[12:16] lại để cho khách hàng của anh một đi không trở lại, tức là mua lần xong phắn
+[12:22] thì năm nay anh phải đặt một cái chỉ tiêu đó là gì? Tăng tỉ lệ khách hàng lặp
+[12:27] lại hoặc tăng tỉ lệ đơn hàng có được từ
+[12:31] khách hàng cũ giới thiệu. Những điều đấy đều rất quan trọng. Nó
+[12:37] không những giúp cho anh tăng trưởng doanh thu mà nó giúp cho anh phát triển
+[12:40] doanh thu, phát triển công ty một cách bền vững. nhờ vào việc khách hàng nó trở
+[12:45] lại. Cho nên tùy từng công ty nhé, phải lựa chọn cho mình bằng được tối đa ba
+[12:51] chỉ tiêu liên quan đến trải nghiệm và phục vụ khách hàng tốt hơn hoặc gia tăng
+[12:57] thị phần để làm mục tiêu cho năm tới. Cuối cùng
+[13:02] anh đạt được khách hàng, giả định anh đạt được khách hàng, anh đạt được quản
+[13:06] trị và tài chính rồi. Thì bây giờ có mấy? Có hai cái mảng vấn đề ở phần xu
+[13:12] hướng học hỏi và phát triển. Chúng ta phải làm cho bằng được. Đó là kết quả
+[13:17] của công tác đó là anh buộc phải lựa chọn ra một chỉ tiêu về cải thiện sản
+[13:22] phẩm hoặc đưa ra sản phẩm mới.
+[13:28] Nếu công ty nào chỉ đơn thuần là cái việc mua đi bán lại em chẳng có gì để
+[13:32] cải thiện cả thì anh phải cải thiện cái gì?
+[13:36] Chất lượng dịch vụ. Nhưng chất lượng dịch vụ thì nó lại nằm ở đây. Thế thì
+[13:40] phần còn lại nó chỉ còn nhóm chỉ tiêu có liên quan đến cái phần đào tạo và phát
+[13:44] triển nguồn nhân lực của anh. Thế thì ví dụ thu nhập bình quân đầu người là đó
+[13:49] lao động hay là năng suất bình quân đầu người là một chỉ tiêu phải được gia tăng
+[13:54] hay là gì ạ? Lợi nhuận bình quân trên đầu người là một chỉ tiêu. Và nó có một
+[13:59] chỉ tiêu nữa tôi khuyên doanh nghiệp nào cũng phải lựa chọn. Đó là gì?
+[14:04] Đó là đó là điểm hạnh phúc của nhân viên khi làm việc với công ty.
+[14:11] Thống kê dễ lắm ạ. Cuối năm ông cứ phát cho cái phiếu không cần ghi tên, không
+[14:17] cần viết nét chữ, chỉ cần tích vào X hoặc gì V thế thôi.
+[14:22] Thứ nhất, bạn đã hài lòng hoặc là thu nhập ở công ty này đã đủ trang trải cuộc
+[14:27] sống gì ạ? Trung bình của bạn hay chưa? Thứ hai, bạn có cảm thấy vui khi làm
+[14:33] việc ở công ty không? Bạn đã hài lòng với cách ra quyết định và gì? Chỉ đạo
+[14:38] công việc của ban giám đốc chưa? Sự phối hợp giữa các bộ phận như vậy có
+[14:44] làm cho bạn cảm thấy dễ chịu và có được năng suất lao động tốt hay
+[14:48] không? Đại khái ba bốn câu hỏi như thế, chúng ta phải hỏi hàng năm hoặc hàng
+[14:54] quý. Hỏi không cần ký tên. Tại vì của mình nhiều khi cái tâm lý từ ngày còn bé
+[15:00] đi học anh em nó sợ lắm. Khi hỏi những vấn đề để bộc lộ cái quan điểm cá nhân
+[15:05] thì nó cứ mắc phải cái tâm lý là thôi mình chả nói, biết không nói, không biết
+[15:09] cũng không nói. Nói ra đôi khi lại sợ xếp trù ẻo, mệt thì chúng ta phải bằng
+[15:14] cách nào đó chúng ta lắng nghe bằng phiếu hoặc lắng nghe bằng một góc độ nào
+[15:18] khác. Điều đấy rất quan trọng. Khi người lao động người ta làm việc mà người ta
+[15:22] happy với công ty của mình ha thì mọi thứ nó rất dễ. Từ một vấn đề khó
+[15:28] nó trở thành vấn đề dễ. Nhưng một khi nó không happy thì từ chuyện nhỏ nó xé ra
+[15:32] chuyện to mà đã ngồi vào phòng họp là nó công kích nhau rất mệt mỏi.
+[15:37] Nhưng nếu bây giờ phần lớn người lao động nó bảo em làm việc ở đây là không
+[15:41] đủ sống thì anh phải đặt nhiệm vụ cho anh anh
+[15:45] ơi. với tư cách là giám đốc, anh sử dụng người lao động, anh có thể bố trí thêm
+[15:51] việc, anh có thể cải thiện phương pháp làm việc và quản lý nhưng về mặt thu
+[15:56] nhập để đảm bảo cho người ta yên tâm làm việc thì ít nhất nó phải đủ sống nhở.
+[16:01] Đấy thì cho nên là cái chỉ tiêu có liên quan đến đào tạo nhân viên, mức độ hạnh
+[16:06] phúc của nhân viên hoặc tăng thu nhập bình quân cho nhân viên. Đó là gì?
+[16:11] Đó là một trong những chỉ tiêu học hỏi phát triển mà công tác đào tạo nhân sự
+[16:16] trong các doanh nghiệp nhỏ của chúng ta là đôi khi nó ít lắm. Nó ít là bởi vì
+[16:21] chúng ta không có thói quen đó. Chúng ta không có tư duy về việc phải đào tạo đội
+[16:25] ngũ. Chúng ta chúng ta đôi khi quan niệm nó vô cùng cổ hủ rằng à nó học cao đẳng
+[16:30] đại học ra rồi nó vào chỗ mình thì nó phải làm việc chứ mình có phải chỗ thử
+[16:33] việc với đào tạo chúng nó đâu. Ông đừng nhầm. Người ta học tốt nghiệp
+[16:37] cao đẳng đại học nó chỉ học được kiến thức nền thôi mà kiến thức nền nó cũng
+[16:41] không có luôn ông ạ. Nó có được mỗi cái thứ gọi là may ra có là phương pháp tư
+[16:46] duy. Thế còn học đến đấy thạc sĩ chúng ta
+[16:51] cũng phải nhận lại. Nhìn nhận lại là gì? người ta mới có được phương pháp nghiên
+[16:55] cứu. Bảo vệ thành công tiến sĩ là cái người
+[16:59] mới biết nghiên cứu. Thế còn nếu bây giờ anh có cả kiến thức
+[17:05] cả lý luận mà anh biết làm nữa thì mới được dùng đến cái chữ tiếng Anh nó gọi
+[17:10] là master là anh thành thạo trong lĩnh vực đó.
+[17:14] Nhưng mà đôi khi chúng ta nhập nhèm là thạc sĩ ở Việt Nam nó cũng gọi là master
+[17:17] rồi nhưng mà đẩy là không biết làm. Có phải không? Anh
+[17:23] biết thế nhưng anh không biết làm. Thế cho nên là gì ạ? Tôi nói như vậy để
+[17:28] các bố nghĩ rằng là về nghĩ lại đi. Nói chung là cứ phải đào tạo công việc.
+[17:34] Đào tạo hòa nhập văn hóa, đào tạo công việc cho công nhân viên. Đối với công
+[17:39] nhân phải gì? Nhất quyết là đào tạo về nội quy chế và đào tạo vận hành. Đào tạo
+[17:45] thao tác, ký tá kiểm tra trơn chu mới thả ra. Đúng
+[17:50] không? lính tráng trước khi ra trận ông phải dạy nó bắn súng nữa chứ.
+[17:55] Sang chương trình nhân sự tôi sẽ nói rõ hơn. Nhưng ý ở đây nói là như thế nhưng
+[17:58] nó cần các chỉ tiêu đó. Thì bởi vì tại sao tôi phải dành thời gian để phân tích
+[18:02] thêm ở cái chỗ này không ạ? Vì cái chỗ này nó là cái gì? Cái nền tảng để anh em
+[18:08] nó bắt đầu. Thế sau khi nhá có được cái này xong rồi này
+[18:13] thì anh mới gì? Anh tổ chức họp. tổ chức họp để anh thảo luận
+[18:23] về mục tiêu với các nhân sự cấp trung. Bởi vì xét cho cùng nó làm cho ông làm
+[18:28] quái đó. Nhưng nếu mà ở cấp độ của công ty nó lớn hơn thì thầy sẽ nói kiểu khác.
+[18:33] Vì ở cấp độ của công ty lớn hơn là hội đồng quản trị nó ra cái này.
+[18:38] Nó ra cái này xong một cái thì gì nó gọi thằng giám đốc điều hành lên gọi ban
+[18:41] giám đốc lên gọi là ban điều hành lên. Chỉ tiêu năm nay của các chú đây. Nhận
+[18:44] không? làm vụ này lương năm nay là 10 tỷ được không? Thêm cái nhà có bao nhiêu
+[18:50] phần trăm cổ phần nhưng chúng ta nhỏ thì nó không đến mức như vậy thì chúng ta
+[18:54] buộc phải thảo luận với nhân sự cấp trung. Và nếu thảo luận với nhân sự cấp
+[18:57] trung thì nó có thể dẫn đến các chỉ tiêu này nó bị điều chỉnh một chút. Nhưng nhớ
+[19:02] rằng chúng ta phải có cái rắn của chúng ta và thống nhất được rồi thì gì? À
+[19:07] chúng ta mới gì thống nhất xong thì mới giao
+[19:11] giao cho nhân sự cấp quản lý phòng tức là phụ trách bộ phận.
+[19:18] Người ta lập kế hoạch chi tiết. Lập kế hoạch chi tiết
+[19:27] thì khi đó chúng ta chuyển sang bước hai.
+[19:31] Bước hai. Bước hai là anh lập kế hoạch thành phần.
+[19:41] lập kế hoạch thành phần thì cái cái bộ kế hoạch thứ nhất này nó
+[19:49] có hai thứ. Một là kế hoạch bán, hai là kế hoạch về truyền thông quảng
+[19:55] cáo. Kế hoạch này thằng nào làm
+[20:03] kinh doanh. Thì cái file kế hoạch đấy nó như thế
+[20:09] này. Đầu tiên là BSC này. À đầu tiên là thông
+[20:21] tin doanh nghiệp này. Thông tin doanh nghiệp thì cái ô đầu
+[20:25] tiên này anh chị là cái thông tin của công ty mình. Thế thì cái phần này anh
+[20:30] chị có cần thầy tư vấn không? Hả?
+[20:34] >> Có. Có à. Công ty mày tên là gì mày biết không?
+[20:40] Điền nó vào nhá. Đây là thông tin công ty. Tiếp theo này. Công ty mình có những
+[20:45] nhóm sản phẩm nào? Có biết không? Điền nhóm sản phẩm vào đây. Và đây người
+[20:53] ta ghi mẫu cho đây này. Đây là mã nhóm. Được chưa? Và đây là tên gì? Tên nhóm
+[21:01] hoặc là tên tên các cái sản phẩm. Tiếp tục này.
+[21:07] Ở doanh nghiệp nó có thể có các cơ sở kinh doanh như là các cửa hàng, nó có
+[21:14] thể có các vùng thị trường anh phân vùng khác nhau, nó có thể có các kênh bán
+[21:19] khác nhau. Ví dụ vừa có bán lẻ vừa có gì?
+[21:22] vừa có bán xỉ, vừa có bán trực tiếp, vừa có bán online
+[21:27] thì nó tùy vào cái đặc điểm của anh chị. Anh chị liệt kê là các nhóm hoạt động
+[21:32] hoặc cơ sở kinh doanh xuống dưới đây. Thí dụ tôi không thích phân bổ kết quả
+[21:37] kinh doanh theo tuyến, tôi muốn kiểm chứng cho từng cửa hàng thì tôi có thể
+[21:41] liệt kê tất cả các cửa hàng ở đây được không ạ? Hay là ví dụ như là chỗ anh này
+[21:47] anh ấy xây dựng đại lý là ông ấy đại lý theo theo theo tuyến. Một tuyến này là
+[21:51] có mấy đại lý thì anh có thể liệt kê các tuyến bán hàng ở đây được chưa nào? Thì
+[21:57] đây tôi ghi ví dụ như là showroom số 01 đấy vân vân.
+[22:03] Thế thôi. Thì hai cái phần thông tin đấy là hai phần thông tin bắt buộc. Còn phần
+[22:08] thông tin thứ ba là phần thông tin về phòng ban bộ phận là khuyến khích. ghi
+[22:13] vào cũng được, không ghi vào cũng không sao. Thì đó là cái bảng thứ nhất trong
+[22:17] bộ kế hoạch tài chính kinh doanh nằm trong cái file có tiêu đề là
+[22:21] 1b.bitplanok.net gạch dưới VIP
+[22:26] là bộ kế hoạch tài chính kinh doanh dành cho thành viên VIP.
+[22:31] Xong cái bảng đó rồi thì cái bảng BSC là cái bảng ngay kế tiếp đây. Được chưa?
+[22:35] Sau đến bảng FBSC thì nó có hai cái bản kế hoạch thành phần là cái cái bảng có
+[22:40] tên là MKT tức là marketing và một bảng có liên quan đến là gọi là Sale Plan.
+[22:46] Bây giờ tôi nói về cái bảng kỹ thuật ứng dụng cái bảng marketing trước này.
+[22:52] Có những công ty có phòng truyền thông quảng cáo riêng, có những công ty gọi là
+[22:55] bộ phận marketing riêng, có những công ty gọi là nhân viên phụ trách marketing
+[22:58] riêng được không? Thì cái người đấy nó phải làm cái bảng này. Nhưng thằng đấy
+[23:03] làm bảng này không thể làm một mình được.
+[23:05] mà nó phải ngồi họp chung với đội bán để lập ra bảng này. Tại sao phải thế? Tại
+[23:12] vì là thằng bán nó muốn đưa ra kết quả bán là thế nào, nó muốn thu thập conch
+[23:16] ra làm sao thì nó cũng phải dựa một phần vào kết quả của việc anh thu thập thông
+[23:21] tin từ truyền thông quảng cáo. Được chưa? Thế thì nếu mà nó họp xong nó đi
+[23:27] đến quyết định này, thứ nhất này là nó thực hiện cái chiến dịch gì
+[23:33] chẳng hạn như là chiến dịch tiếp cận các doanh nghiệp trong khu công nghiệp
+[23:39] ở vùng đồng bằng sông Hồng. Tôi nói ví dụ thế. Trước đây chúng ta
+[23:44] chưa từng làm việc đó, chúng ta cứ kinh doanh theo kiểu tự phát. Kệ nó nó thằng
+[23:47] nào biết thì nó gọi. Mà bây giờ sản phẩm của chúng ta có thể bán được cho một số
+[23:51] doanh nghiệp trong các khu công nghiệp. Thì bây giờ cái chiến dịch của nó là
+[23:54] chiến dịch đầu tiên là gì? Tiếp cận với lại
+[23:59] các cái doanh nghiệp trong khu công nghiệp gồm những khu công nghiệp nào,
+[24:02] mục tiêu để làm gì? Để đưa hồ sơ năng lực, để có những cái nhận diện thông tin
+[24:07] ban đầu, để xin được cuộc gặp nếu có đúng không? Việc đó dẫn đến yêu cầu kết
+[24:12] quả là phải đi được những khu công nghiệp nào, phải giới thiệu đến bao
+[24:16] nhiêu công ty, được không? Vân vân. Thế rồi chi tiết cái việc đó là chia theo
+[24:22] tuyến đường ai là người phụ trách ngân sách để làm việc đó hết bao bao nhiêu
+[24:26] tiền. Thế rồi bắt đầu làm từ thời gian nào, kết thúc từ thời gian nào? Ví dụ
+[24:31] một chiến dịch tôi đưa ra là tôi bắt đầu thực hiện từ tháng 6 năm nay đến tháng 9
+[24:34] năm nay. Như vậy là ba mấy tháng ạ? 6 7 8 9 4 tháng. 4 tháng thì đây này. Tháng
+[24:41] 6, tháng 7, tháng 8, tháng 9. Anh chị đánh
+[24:44] dấu màu vào và ghi cái giá trị ngân sách chi tiêu ở từng tháng đó vào ô tương
+[24:51] ứng. Anh có thể ghi đơn vị là nghìn đồng hoặc
+[24:55] triệu đồng thì kệ anh. Để biết rằng là sau này bộ phận kế toán họ sẽ tính cái
+[24:59] dòng tiền và tính cái chi phí tương ứng. Ví dụ chiến dịch thứ hai là thực hiện
+[25:06] quảng cáo tìm kiếm hoặc quảng cáo hiển thị trên Google.
+[25:10] Quảng cáo cái đó với website của mình thì để làm gì?
+[25:14] Cụ thể là có những chiến dịch nào bắt đầu làm từ khi nào và cứ tương tự như
+[25:19] vậy. À cứ tương tự như vậy. Bộ phận marketing họ sẽ trình bày hết cái này.
+[25:24] Với bản này thì chúng ta sẽ nhận diện rằng à trong suốt một năm nay họ sẽ chạy
+[25:28] những chương trình gì, in ấn bao nhiêu, đi những kênh nào, tuyến nào, tiêu bao
+[25:33] nhiêu tiền và hiệu quả dự kiến mang lại cái ngân sách anh chi ra nó có xứng đáng
+[25:38] hay không? để sau này người ta mới từ cái này người
+[25:42] ta bỏ ra cho từng tháng để các em nó làm việc để cấp tiền cho từng tháng xong đo
+[25:48] kết quả. Nếu kết quả nó không hoàn thành thì đó là gì? KPI của nó không hoàn
+[25:53] thành. Chấm điểm nó có vấn đề. Người ta chấm như vậy chứ chứ có phải là
+[25:59] chấm KPI sau này là chúng ta đếm xem là hôm nay mày đã chấm công chưa? Hôm nay
+[26:04] mày gặp sếp ở trong nhà vệ sinh mày chào chưa?
+[26:09] Nhiều công ty nó quy định dán cửa nhà vệ sinh là gặp xếp ở nhà vệ sinh không cần
+[26:12] chào. Được chưa? Thì cái bảng này thầy xây
+[26:19] dựng nó ở trên Excel. Chúng ta nhập số vào thôi. Nếu có thể
+[26:24] tính toán thì hoàn toàn là cộng trừ nhân chia.
+[26:28] Và bảng này dễ lắm. Bảng thứ hai còn dễ hơn.
+[26:33] Đó là bản gì? Kế hoạch bán hàng. Bản kế hoạch bán hàng được chia cấu trúc
+[26:44] như sau. Trên này là phần tổng hợp theo nhóm hàng.
+[26:50] Dưới này là chi tiết từng mặt hàng. Nhưng khổ lắm là có những đơn vị
+[26:58] có những đơn vị là cái số lượng mặt hàng của nó lên đến nhiều nghìn
+[27:04] thì không thể nào mà người ta liệt kê chi tiết từng mặt hàng được đâu. Khó
+[27:09] lắm. Ví dụ đơn vị bán lẻ nó vài chung nghìn mắt hàng thì lúc ấy người ta gì
+[27:15] trên này là phân loại theo loại hàng hoặc có nhu doanh nghiệp nó làm phân
+[27:18] phối là nó phân loại theo gì? Theo tiêu chí của loại công nghệ hoặc nhà sản
+[27:22] xuất, nhà cung cấp. Thế còn dưới này thì tiếp tục là gì?
+[27:26] Phân nhóm. Đại khái như anh chị phải dựa vào cái đặc thù của công ty mình để mà
+[27:32] có một cách tổ chức cái phân loại nhóm hàng, mặt hàng thế
+[27:37] nào để có được một cái bảng kế hoạch mà mình nhìn thấy được cái hiệu quả kinh
+[27:42] doanh theo nhóm, theo loại, theo kênh, theo chủng loại theo theo theo tuyến.
+[27:47] Thì cách làm như sau này. Toàn bộ cái phần nào mà có nền màu vàng
+[27:53] hoặc nền màu hồng là chúng ta không nhập liệu. Chúng ta chỉ nhập liệu ở phần chi
+[27:59] tiết nha. Ở đây các bạn về ứng dụng này thì chúng ta chỉ thấy là có cái phần
+[28:04] dưới này là phần chi tiết này. Thì nền màu trắng chúng ta chỉ được nhập
+[28:09] liệu vào đây. Cột thứ nhất các em nhập giúp cho mã hàng hoặc mã nhóm ở phân cấp
+[28:15] nhỏ. Thế cái mã này thì công ty nào cũng có
+[28:19] danh mục hàng hóa phải không? Công ty nào cũng có danh mục. Công ty xe
+[28:25] lắp thì có danh mục gì? Danh mục các công đoạn.
+[28:33] Mã tên cái này công ty nào cũng thế. Về răng cho tôi cái ấy ra cái danh mục hàng
+[28:39] hóa sản phẩm ra. Điền vô đây. Tiếp tục. Cái sản phẩm này nó thuộc vào
+[28:46] nhóm nào? Thì cái nhóm này nó phải đồng nhất với
+[28:50] cái bảng ở cái shit thứ nhất. Đây này. Chỗ này ở trên góc bên phải phía trên
+[28:57] chúng ta đã có mã nhóm. Đó. Thì khi chúng ta nhập mã tên thì
+[29:03] chúng ta phải gắn với cái nhóm mã nhóm hoặc là cái mã gì ạ?
+[29:11] hoặc là cái mã hoạt động. Thì ở chỗ này tôi đã thiết lập công thức
+[29:16] là các bạn chỉ việc làm sao thôi. Click chuột vào cái ô này nó sẽ có một cái mũi
+[29:22] tên trỏ xuống. Các bạn click vào đó và các bạn chọn thôi.
+[29:27] Và khi các bạn chọn đúng thì kết quả nó sẽ được tự động được tổng hợp lên trên.
+[29:31] Ví dụ vậy. Được chưa? Ở đây tôi có một cái cột tôi
+[29:36] để trống ra tại cột E. đang có cái số là 2018. Vì đây là một
+[29:42] cái ví dụ của một đơn vị nó lập kế hoạch cho năm 2019 thì nó muốn đưa cái số liệu
+[29:48] của năm 2018 vào để nó tham chiếu. Tiếp theo,
+[29:54] nếu mà đơn vị có nhiều kênh nhiều tuyến thì chỗ này chúng ta chọn mã của kênh
+[29:58] hoặc tuyến hoặc cửa hàng. Được chưa? Tiếp tục lượng bán. Thì cái
+[30:05] phần lượng bán này chúng ta không nhập số liệu ạ mà chúng ta phải đặt ra công
+[30:10] thức để chúng ta cộng lượng bán ở tất cả các quý lại.
+[30:15] Mà các quý này thì lại được cộng lượng bán là tất cả các tháng ở phía sau. Cứ 3
+[30:20] tháng chúng ta cộng một lần. Vậy công thức ở đây đơn giản chỉ là phép cộng.
+[30:25] Bạn nào chắp bút thì nhớ làm việc đó. Cái giá ở đây là dựa vào chính sách giá
+[30:31] dự kiến trong năm tới, giá bán ấy, chúng ta điền cái giá bình quân dự kiến vào
+[30:36] đây thì từ cái lượng và giá này nó sẽ tính được ra cái doanh thu dự kiến. Và
+[30:42] cái cột kế tiếp là cái cột phần trăm. Ở trên này là phần trăm cơ cấu doanh thu
+[30:47] của nhóm hàng. Dưới này là phần trăm chi tiết doanh thu của từng mặt hàng.
+[30:53] Thế thì với cấu trúc này chúng ta kéo tiếp sang bên phải đó là chia kế hoạch
+[30:58] theo thời gian là từng quý và từng tháng thì chúng ta cứ di chuyển về phía sau
+[31:02] chúng ta sẽ nhìn thấy. Như vậy tôi chỉ nhắc ở đây là nhập mã, nhập tên sau đó
+[31:07] nhập lượng là nhập lượng theo từng tháng. Nếu doanh nghiệp nà bảo khó quá
+[31:11] em không thể lập được theo tháng thì bạn vui lòng nhập số lượng ở các quý
+[31:17] giúp thầy. Chúng ta có thể bỏ qua các tháng cũng được. Tức là toàn bộ phần
+[31:23] phía sau này chúng ta có thể ẩn nó đi. Ý là như thế. Thế có bạn bảo nhưng mà
+[31:29] đặc thù công ty em nó hơi khác, em phải thêm vào một cái chỉ tiêu thì bạn ơi bạn
+[31:34] muốn thêm chỉ tiêu nào cũng được. Bạn cứ insert dòng cột vì file này của thầy nó
+[31:38] không khóa, nó mở thoải mái cho các bạn làm. Ở đây chỉ là gợi ý.
+[31:43] gợi ý rằng một bản kế hoạch nó phải có chi tiết, nó phải có tổng hợp, nó phải
+[31:47] có mã hàng chi tiết, nó phải có thời gian để triển khai. Thế thôi nhá.
+[31:55] Thì đó là bản kế hoạch thứ hai trong bộ của kinh doanh. Được chưa nào?
+[32:02] Xong phần kinh doanh rồi này thì bây giờ chúng ta mới bây giờ chúng ta mới giả
+[32:06] định giả sử là xong được dự thảo của bản
+[32:16] xong được dự thảo của bản thì chúng ta phải tiến hành ngay cái việc là thảo
+[32:20] luận thảo luận trong tiến trình ấy ví dụ như
+[32:26] là mình giao mục tiêu cho nó bảo thôi em nhá tập trung vào trong vòng khoảng nửa
+[32:29] tháng xây dựng cho anh kế hoạch bán Sau khi nó xây dựng xong hoặc mình xây
+[32:33] dựng xong thì phải có cái thảo luận với những người có liên quan tiếp xem là
+[32:37] liệu rằng kế hoạch bán với cái mục tiêu đưa ra kia với các cơ cấu sản phẩm thế
+[32:41] này liệu rằng nó đã ổn ổn chưa? À thế thì thảo luận nếu trong trường hợp
+[32:49] nó ok thì chúng ta chuyển các bộ phận khác
+[32:56] đặc biệt là chuyển cho gì? kế toán hoặc tài chính kế toán. Còn nếu nó chưa
+[33:02] ok thì góp ý cho nhau để tiếp tục gì? Hiệu
+[33:07] chỉnh. Cách làm là như thế. Nó tránh cái trường
+[33:12] hợp là các bố rất là bàng quan, giao kế hoạch cho người ta xong người ta về
+[33:16] người ta triển khai chẳng biết tiến độ lập như thế nào. Xong bắt đầu là một
+[33:21] ngày xì tổ chức họp công ty để thông qua tất cả các loại kế hoạch. Thế là lúc bấy
+[33:25] ra chỉ tiêu nó mới lộ cộ thế này kia bắt đầu ngồi mới cãi vãi nhau trong cuộc
+[33:28] họp. Thế là họp nó không thành đúng không nhỉ? Thế thì nó phải có cái
+[33:33] tiến độ làm của nó. Nếu trong trường hợp bản kế hoạch này đã
+[33:38] ok tiếp sau khi hiệu chỉnh, chuyển cho các bộ phận có liên quan, nếu là doanh
+[33:43] nghiệp nào có sản xuất thì từ kế hoạch bán này anh phải ra được một cái gọi là
+[33:50] yêu cầu sản lượng cho bộ phận sản xuất cho năm tới
+[33:54] được không? Nếu đội nào thi công x lắp thì đưa cho các tổ đội nói dự kiến năm
+[33:59] nay kết hợp quan hệ và khách hàng cũ giới thiệu. Chúng ta có thể có những
+[34:04] công trình này. Đợi các anh chuẩn bị nhé. Có bao nhiêu công trình sẽ nổ trong
+[34:08] quý đầu, bao nhiêu công trình sẽ nổ quý tư. Các anh chuẩn bị luôn đi phương án
+[34:12] của nguồn nhân lực và gì? Biện pháp thi công
+[34:16] thì đó. Thế thì chuyển cái chỗ này bắt buộc phải chuyển chỗ kế toán và các bộ
+[34:20] phận có liên quan là vì thế được không? Thì quan trọng chỗ này là tôi nhắc lại
+[34:23] là nếu là doanh nghiệp sản xuất thì phải chuyển cho bộ phận sản xuất. Nhưng còn
+[34:27] nếu là doanh nghiệp mà chỉ là thương mại thôi thì chỗ này anh chuyển cho kế toán
+[34:31] là được rồi. Nhưng chỉ dựng lên một bảng này đã ok chưa? Câu trả lời là chưa.
+[34:40] Câu trả lời là chưa vì kèm theo bảng này anh phải tiếp tục yêu cầu bộ phận kinh
+[34:47] doanh họ bổ sung cho anh hai thứ nữa. Một là họ phải đề xuất đề xuất toàn bộ
+[34:59] với doanh thu này thì chi phí bán bao gồm cả chi phí truyền thông quảng
+[35:05] cáo là bao nhiêu? Môi giới hoa hồng thương mại, chi phí
+[35:12] quảng cáo thưởng cho nhân viên kinh doanh theo quy chế của công ty thì anh
+[35:16] đề xuất chi phí bằng bao nhiêu? Tiếp tục anh đề xuất về mặt nhân sự.
+[35:23] Đề xuất tiếp về nhân sự có mấy chuyện? Đề xuất về chương trình đào tạo nhân sự,
+[35:29] anh đề xuất về tuyển dụng. Anh đề xuất về luân chuyển, anh đề xuất về thăng
+[35:35] tiến. Đấy
+[35:41] thì riêng cái phần mà đề xuất này này thì cái chỗ đề xuất nhân sự đã chuyển
+[35:46] cho bộ phận phụ trách về nhân sự để họ dự liệu kế hoạch cho ai? Họ chuẩn
+[35:54] bị ngân sách tuyển dụng và đào tạo cho anh.
+[35:59] Và cái đề xuất nhân sự kia là không chỉ phòng kinh doanh đâu mà tất cả các phòng
+[36:05] ban bộ phận khác đều phải gì? Đề xuất. Thí dụ
+[36:13] sau khi tiếp nhận kế hoạch bán, đội sản xuất nó bảo năm trước công suất công ty
+[36:18] hoạt động vào khoảng 70%. Lượng công nhân như vậy là đủ với sản lượng bán dự
+[36:24] kiến như thế này và tăng đột biến từ tháng s ha. Cho nên là khoảng tháng 6
+[36:29] năm nay công ty buộc phải đưa cái công suất sản xuất lên trên 80%
+[36:35] nhà máy. Vậy là nó tính ra được thiếu bao nhiêu công nhân và thiếu bao nhiêu
+[36:39] quản lý. Từ đó nó tiếp tục đề xuất nhân sự cho
+[36:43] nhà máy, cho xưởng, cho vận tải, cho đủ các bộ phận khác thì
+[36:50] khi đó nó chuyển sang một cái bản kế hoạch kế tiếp của những người hoặc bộ
+[36:56] phận phụ trách về hành chính nhân sự. Đó là
+[37:03] kế hoạch nhân sự và chi phí nhân sự. Bản kế hoạch này cấu trúc như sau và làm
+[37:11] cho tôi thế này. Ở phần màu xanh đậm là định biên nhân sự.
+[37:20] Định biên nhân sự tức là số người của từng bộ phận. Ban giám đốc công ty mấy
+[37:26] người, phòng kinh doanh bao nhiêu người, phòng kế toán bao nhiêu người, nhà máy
+[37:31] bao nhiêu người. Cái này gọi là quy mô nhân sự công ty. Được chưa? Thì cái phần
+[37:37] này là phần màu xanh. Mỗi một năm doanh nghiệp cần một quy mô nhân sự khác nhau
+[37:42] phụ thuộc vào quy mô bán. Rõ chưa? Vì quy mô bán nó đòi hỏi tất cả những quy
+[37:48] mô còn lại. Kế tiếp
+[37:53] với chi phí về nhân sự phục vụ cho cái đội này
+[37:58] thì có phải này chúng ta phải trả lương vị trí cho người ta?
+[38:03] Tức là bao gồm lương cơ bản, bảo hiểm rồi là phụ cấp cho họ gọi là lương vị
+[38:08] trí phải không? Chúng ta phải trả thưởng cho họ phải không? Chúng ta phải nộp một
+[38:13] phần bảo hiểm cho họ, chúng ta phải gì? Đào tạo vân vân. Thì bộ phận kế toán
+[38:20] thống nhất với bộ phận hành chính nhân sự chốt các khoản mục về chi phí tiền
+[38:26] lương cho nhân công. Chốt các khoản mục nhá.
+[38:31] Tức là tiêu đề của các khoản mục và mỗi khoản mục đấy
+[38:37] ứng với từng bộ phận trong 1 năm nó bằng bao nhiêu tiền. Muốn biết trong 1 năm nó
+[38:44] bằng bao nhiêu tiền thì ở bên này là chia theo từng tháng. Ví dụ ban giám đốc
+[38:49] bao gồm có giám đốc và phó giám đốc và một em thư ký ba người. Thế thì lương
+[38:55] của ba người một tháng là bao nhiêu? Với kết quả kinh doanh như thế này thì ban
+[38:59] giám đốc có nhận thưởng không? được không nhỉ? Thế thì sẽ tính ra à
+[39:04] riêng ban giám đốc 1 tháng là bao nhiêu? Tháng thứ mấy thì dự kiến đứa nào sẽ quá
+[39:09] 1 năm và trường hợp này có thể được xét tăng lương sau đó mới cộng về. Và cộng
+[39:16] về thì ở dòng trên cùng này là nó tính ra phần trăm. Phần trăm có nghĩa là phần
+[39:22] trăm chi phí nhân công tính theo bộ phận trên tổng chi phí nhân công của cả công
+[39:28] ty. để anh biết rằng anh đang xả tiền cho bộ phận nào nhiều nhất. Và về mặt tư
+[39:35] duy kinh doanh, các anh chị nhớ cho chúng ta tiêu tiền ở bộ phận nào, ở hoạt
+[39:40] động nào nhiều nhất công ty thì đó là chỗ quan trọng
+[39:47] chứ không phải là gì ạ? Có những lúc ngồi phòng hành chính nhân sự mới là
+[39:52] phòng quan trọng vì phòng hành chính lo nguồn nhân lực cho công ty. Không có
+[39:57] phòng hành chính nhân sự thì lấy đâu ra nhân sự để làm. Bà cứ đứng dậy luôn đi.
+[40:03] Tôi với thằng trưởng phòng tự tuyển được.
+[40:08] Lúc phòng kế toán và phòng em là quan trọng nhất công ty này. Vì phòng em là
+[40:13] quản lý tiền bạc, chi phí, hạch toán. Nếu không thì công ty lấy gì ra quyết
+[40:18] định ra thông tin để mà ra quyết định? mà cũng cứ đứng dậy luôn đi,
+[40:26] tôi có thể sắp xếp một bộ máy kế toán khác.
+[40:31] Thế thì cái đó nó ra cho chúng ta một tư duy rằng cứ tiền tiêu ở đâu nhiều thì
+[40:37] chỗ đó quan trọng nha. Kể cả là ban giám đốc thì nó là nhân sự
+[40:42] cốt lõi nhưng anh tiêu tiền ít, nghĩa là cái cái công tác quản trị anh
+[40:49] tập trung ít. Chỗ nào tiêu càng nhiều tiền thì gì? Thì anh tập trung quản trị
+[40:56] nhiều. Bây giờ mới chia chi tiết theo từng bộ
+[41:00] phận này. Bây giờ mới lý giải này. Thế thì với cái bộ phận ví dụ như là ban
+[41:05] giám đốc c gồm có một giám đốc, một phó giám đốc, một trợ lý cộng lại. Cộng lại
+[41:10] thì bây giờ là tiền lương một tháng bao nhiêu, tiền KPI 1 tháng bao nhiêu, tiền
+[41:14] thưởng các thứ các khoản là bao nhiêu thì chỗ này là chi tiết theo từng vị trí
+[41:21] của từng bộ phận nhưng chia theo từng khoản mục.
+[41:27] Nếu đơn vị nào thực hiện việc giao khoán cho chi nhánh và các cơ sở kinh doanh
+[41:34] độc lập về quỹ lương thì đây là cách chúng ta tính toán một cách chi tiết.
+[41:40] Xong đó cứ định kỳ là ông giải ngân cái tiền đó xuống. Cho nên nếu người ta làm
+[41:47] kế hoạch tốt mà không có sự biến động thì gần như kế toán có thể hạch toán
+[41:52] trước luôn các giá trị về gì? lương cơ bản rồi, bảo hiểm rồi có phải không?
+[41:58] Phần còn lại chỉ có mỗi cái biến động hàng tháng là cái tiền thưởng theo kết
+[42:01] quả kinh doanh. Cho nên người ta mới nói rằng là khi anh
+[42:06] lập kế hoạch tốt thì bản điều chỉnh kế hoạch cuối cùng chính là kết quả hạch
+[42:09] toán. Đến ngày là anh chỉnh số thôi đấy. Mà
+[42:15] công tác hạch toán chỗ này thì có mỗi năm làm có một lần. À xin lỗi, mỗi tháng
+[42:19] làm có một lần nhở. Bản kế tiếp này với các yêu cầu về nhân
+[42:25] sự đó, bán hàng đó, các bộ phận và định hướng của công ty năm nay có đầu tư hạ
+[42:30] tầng không? Có sửa nhà xưởng không, có sửa văn phòng không? Có thay điều hòa
+[42:35] cho phòng kế toán không? Vân vân thì cái đấy nó gọi là kế hoạch đầu tư mua sắm.
+[42:41] Đối với kế hoạch đầu tư mua sắm này, cách làm giống hệt như bản kế hoạch về
+[42:45] nhân sự tiền lương. Đó là anh chia ra công ty anh có sáu
+[42:50] loại đầu tư. Loại thứ nhất là anh đầu tư cho
+[42:54] cơ sở hạ tầng. Loại thứ hai là anh đầu tư cho máy, móc, thiết bị và phương
+[42:58] tiện. Loại thứ ba là anh đầu tư cho đồ dùng và phương tiện quản lý làm việc.
+[43:03] Loại thứ đấy là thứ ba. Thứ tư là công nghệ thông tin và phần mềm. Loại thứ năm
+[43:08] là đầu tư dự án, liên doanh, liên kết. Loại thứ sáu là sửa chữa, nâng cấp.
+[43:14] Nói tóm lại doanh nghiệp SMI của chúng ta có sáu kiểu đầu tư như thế để hình
+[43:19] thành tài sản lên thì sáu kiểu như thế anh phải chỉ ra cơ sở hạ tầng là anh làm
+[43:24] kho nào, anh làm đường ở chỗ nào, anh sửa văn
+[43:30] phòng là sửa cái khúc nào. Ví dụ đây người ta ghi mẫu cho nhà kho A1 đường
+[43:35] giao thông nội bộ sửa cầu sửa cầu giao hàng tại kho B1. Ví dụ thế thì đấy là
+[43:41] gì? người ta chi tiết hóa ra để làm gì anh chị? Cái sợ nhất trong kinh doanh là
+[43:46] chúng ta tính cua trong lỗ. Thôi năm nay kết quả kinh doanh thế này là ổn đấy.
+[43:50] Thế thì đến tháng tám nếu mà ổn được thì anh em mình sẽ nâng cấp cái kho.
+[43:58] Nếu ông chỉ áng chừng như thế là thế nào ông cũng có chuyện.
+[44:02] Vậy thì người ta sẽ tránh cái trường hợp đó bằng cách là gì ạ? người ta hoạch
+[44:06] định trước ra và người ta chỉ luôn rằng làm việc này thì bằng nguồn vốn nào?
+[44:14] Bằng vốn góp, bằng vốn tự tài trợ hay bằng vốn vay?
+[44:20] Vốn góp mà các cổ đông tự góp vào, các chủ sở hữu góp vào. Còn với vốn tự tài
+[44:25] trợ có nghĩa là anh phải tính được cái kết quả kinh doanh của anh đến cái thời
+[44:29] điểm anh muốn làm nó lồi ra một khoản tiền để anh làm. Thì để từng tháng một
+[44:33] anh phải chích cái khoản đó ra. Một là anh để riêng, hai là anh có cách
+[44:38] bảo quản, sử dụng nó để đến ngày anh cần đầu tư thì anh lôi ra anh dùng.
+[44:44] Còn nếu anh tính rằng không có thể góp nữa, vốn góp đủ rồi, tự tài trợ năm nay
+[44:49] là kết quả kinh doanh kiểu này thì cũng không có được bao nhiêu. Vì trừ công nợ
+[44:53] đi nữa là gì? Cũng cũng chỉ tài trợ được khoảng 30%. Thì còn 70% là anh phải đi
+[44:59] vay. thì anh phải chuẩn bị luôn phương án vay từ thời điểm đầu năm để đến ngày
+[45:04] anh làm là nó cứ thế nó làm thì sau đó nó tổng hợp được anh chẽ nhìn
+[45:09] thấy gì tổng mức đầu tư ở năm cái tiếp thì đấy là dành cho trường hợp công ty
+[45:15] chúng ta muốn có kế hoạch đầu từ nó tránh đi cái trường hợp là khi chúng ta
+[45:21] đang thui chó là nó hết rơm khi cần đến tiền thì đếch có tiền hoặc đôi khi sau
+[45:26] này chúng ta thuê người quản lý họ cứ đề xuất liên tục anh ơi cho em đề xuất anh
+[45:30] ơi. Cho em đề xuất. Nếu chúng ta thuê người quản lý mà không khoán từ đầu năm,
+[45:34] việc mà họ đề xuất là chúng ta rất dở. Đấy,
+[45:40] cái này thêm nữa là đối với đơn vị nào đi thi công X lắ thì nói cho các tổ đội
+[45:45] biết. Đấy, kế hoạch năm nay tao trang bị cho tụi tụi mày thế này. Đừng có đề
+[45:49] xuất, có phương án trước đi. Thế sau khi có được tất cả các cái
+[45:58] bản kế hoạch thành phần này thì bộ phận kế toán dựng lên hai bản kế hoạch vô
+[46:03] cùng quan trọng. Một bản kế hoạch dòng tiền.
+[46:09] Bây giờ dựa vào cái kế hoạch bán hàng, kế toán có được gì? thông tin về doanh
+[46:16] thu có đúng không? Kết hợp với chính sách cho nợ và tỉ lệ thu hồi nợ, tiền về
+[46:23] bình quân, kế toán tính được dòng tiền vào có phải không? Dựa vào tất cả các kế
+[46:29] hoạch về nhân sự và đầu tư, truyền thông, quảng cáo và kế hoạch về chi tiêu
+[46:33] chi phí bằng tiền trong công ty, kế toán sẽ biết được dòng tiền là dòng tiền ra.
+[46:39] Có phải không? Nếu mà bạn biết được thông tin tiền vào,
+[46:43] bạn biết được thông tin tiền ra mà bạn không lập được dự thảo kế hoạch dòng
+[46:47] tiền thì làm sao?
+[46:51] Viết một cái đơn em xin tự nguyện hạ hai bậc lương, học lại kế hoạch dòng tiền
+[46:56] của thầy Long. Khi nào học xong rồi thì em xin tăng lương trở lại.
+[47:02] Bây giờ kế hoạch dòng tiền cấu trúc của nó như sau.
+[47:07] Đơn vị tính có cần giải thích không? Hai. Bây giờ tổng hợp theo kỳ này thì
+[47:15] tiếp theo chúng ta có mấy ba cái chỉ tiêu tổng hợp. Bốn cái chỉ tiêu tổng hợp
+[47:18] là số dư đầu kỳ. Có nghĩa là ở tại thời điểm đầu năm
+[47:25] chúng ta dự báo tiền tại quỹ và tiền gửi ngân hàng chúng ta có bao nhiêu.
+[47:31] Hoặc ở đúng tại thời điểm đầu năm, chúng ta chốt lại con số này một lần bằng số
+[47:37] liệu thực trong kết trong tất cả các ngân hàng.
+[47:41] Được chưa? Thế thì cái chỗ số dư đầu kỳ này này,
+[47:48] chỗ chỗ số dư đầu kỳ này thì nó chỉ bằng cái biện pháp chúng ta tham khảo cái
+[47:54] thông tin từ ngân hàng và tiền của mình thôi. Nó tính cả vàng, bạc, kim, khí,
+[47:58] quý, đá quý mà công ty đang nắm giữ, tính cả tiền Việt và tiền ngoại tệ. Được
+[48:03] chưa? Chỉ tiêu thứ hai là dòng tiền vào trong kỳ là nó tổng hợp tất cả những cái
+[48:08] tiền thu được từ hoạt động bán, từ hoạt động góp, từ hoạt động vay.
+[48:12] từ hoạt động thu hồi nợ. Còn dòng tiền ra trong kỳ là toàn bộ tiền sẽ đi ra
+[48:17] khỏi công ty và đừng bao giờ để tiền đi mà không trở lại. Thế thì khi người ta
+[48:22] lấy tiền dư cộng tiền vào trừ tiền ra thì nó gọi là cái gì ạ? Là cái nét khả
+[48:29] dụng. Tức là tiền khả dụng có thể chi tiêu và cái cân đối thặng dư hoặc thâm
+[48:35] hụt dòng tiền. Vậy thì khi chúng ta nhìn cái bảng kế hoạch dòng tiền, chúng ta
+[48:39] nhìn luôn cho thầy cái khúc đầu tiên này thôi này.
+[48:43] Để biết được rằng là trong cái năm tài chính đó mình có kịp cân đối được cái
+[48:48] dòng tiền cho hoạt động hay không. Bây giờ dòng tiền vào bạn phải kể chi tiết.
+[48:53] Đầu tiên là dòng tiền vào từ doanh thu bán tiền ngay. Doanh thu thu hồi công
+[48:58] nợ. Tiền từ vay vốn tiền từ góp vốn. Tiền từ hợp tác kinh doanh bất biết mục
+[49:04] đích là gì. Bạn phải liệt kê ra công ty bạn tất cả các giao dịch mà tiền nó về.
+[49:10] Sau đó bên này bạn chia theo từng tháng rồi cứ 3 tháng một lần bạn cộng thành
+[49:15] quý. Tương tự như vậy thì ở phần tiếp theo là
+[49:21] dòng tiền ra. Dòng tiền ra thì người ta chia thành mấy cái loại sau đây. Một là
+[49:28] tiền ra cho cái hoạt động thường ngày. Thí dụ như là thuê văn phòng, dịch vụ
+[49:33] viễn thông, dịch vụ mua ngoài và các cái hoạt động khác. Tiếp theo là một cái
+[49:39] khoản mục tiền ra nhưng tiền ra để trả cho nhà cung cấp
+[49:44] như là ứng trước cho nhà cung cấp, như là trả tiền mua hàng ngay cho nhà cung
+[49:50] cấp như là trả nợ cho nhà cung cấp thì riêng tiền cho nhà cung cấp đi một mục.
+[49:55] Kế tiếp là tiền gì ạ? Có liên quan đến giao nhận vận tải đi một mục. Thì cái
+[50:00] phần chia chi tiết này nó tùy thuộc vào từng đơn vị nhá. Nhưng tôi chỉ muốn nói
+[50:05] này, chúng ta buộc phải tách cho cho tôi thành các gói tiền sau đây.
+[50:10] Cái gói tiền thứ nhất có liên quan đến đầu vào chính là cái gói tiền liên quan
+[50:13] đến nhà cung cấp có phải không ạ? Ờ cái gói một này là cái gói cho nhà cung cấp
+[50:20] để anh làm cái gì ạ? cái đầu vào cho anh.
+[50:25] Cái gói thứ hai là có cái gói có liên quan đến chi phí bán
+[50:30] cộng với lại giao nhận vận tải cộng giao nhận là cái gói thứ hai. Cái
+[50:37] gói thứ ba là cái gói dành cho nhân sự. Cái gói thứ tư là cái gói dành cho thuế
+[50:46] phí. Các gói còn lại thì tùy quý vị. Nhưng
+[50:52] tôi nói 1 2 3 4 thứ này là đầu bảng và muốn làm thế nào thì làm. Cái gói cho
+[51:02] đầu tư là gói cuối cùng
+[51:07] chứ không phải đầu tư là gói thứ nhất nhé. Nếu làm dòng tiền mà làm đầu tư trở
+[51:12] thành ưu tiên số một là không phải. Muốn làm gì thì làm. Chúng ta là doanh nghiệp
+[51:17] SME, chúng ta cần phải sống trước đã rồi mới tính chuyện gì. lớn được
+[51:25] và cứ như vậy. Thế bây giờ quan trọng là thế này này.
+[51:29] Cái việc về mặt kỹ thuật ứng dụng thế thì nó dễ rồi, không có gì.
+[51:38] Trong này thì còn chia ra nào thì cho tín dụng, ngân hàng, cho nhiều thứ khác.
+[51:42] Nhưng tôi nói rằng là có những doanh nghiệp buộc phải cắt giảm bớt đi, cắt bỏ
+[51:45] bớt đi vì cái bảng này nó lớn. Vì doanh nghiệp nhỏ mà. Nhưng mà nó có quan trọng
+[51:51] bây giờ chúng ta xử lý tình huống. Chỗ xử lý tình huống này là đau đầu
+[51:57] nhất. Bây giờ khi dựng lên dự thảo kế hoạch
+[52:00] dòng tiền nó đi đến mấy kết cục sau đây. Kết cục thứ nhất này. Kết cục thứ nhất
+[52:07] là nó đủ tiền. Đủ tiền có nghĩa là cái thặng dư của nó
+[52:13] là thặng dư dương. Tức là dòng tiền vào trừ dòng tiền ra ở
+[52:18] tháng nào nó cũng dương là ok chứ gì. Thì đừng vội chấp nhận ngay hỏi rằng với
+[52:25] biện pháp này còn có thể làm tăng thặng dư ở các tháng
+[52:30] nữa không? Và nếu có thì bằng cách nào và nếu không
+[52:36] thì tại sao rồi mới chấp nhận. Thế trường hợp đó là trong mơ nhỉ.
+[52:43] Trường hợp không trong mơ này là nó thiếu tiền
+[52:46] nhưng nó thiếu nó lại xảy ra mấy trường hợp thiếu. Một là nó thiếu toàn diện
+[52:52] là tháng nào cũng thiếu đúng không? Nếu tháng nào cũng thiếu thì
+[52:59] thằng lớp hai nó cũng biết là tăng thu giảm chi đúng không? Thế bây giờ tăng
+[53:05] thu giảm chi thì thu thì bây giờ doanh thu nó có thế thôi. Thu công nợ thì cũng
+[53:09] khó rồi. Vậy thì còn cách duy nhất là giảm chi. Nhưng giảm chi trong góc nhìn
+[53:14] của dòng tiền người ta có hai cách giảm. Một là hoãn chi và hai là giảm giá trị
+[53:20] chi. Kết hợp hoãn chi có nghĩa là tôi đẩy.
+[53:25] Đáng nhẽ khoản này chi tuần thứ nhất tôi đẩy sang tuần thứ hai. Đáng nhẽ khoản
+[53:28] này chi ở tháng này tôi đẩy sang tháng kế tiếp.
+[53:31] Còn nếu thu tôi chấp nhận này tôi có thể hy sinh lợi nhuận một chút tôi muốn thu
+[53:36] nhanh hơn thì như vậy là người ta kéo tiền trong tương lai về hiện tại và đẩy
+[53:40] tiền hiện tại về chi thì đẩy tiền hiện tại ra tương lai thì bằng hai biện pháp
+[53:44] là gì như vậy để chúng ta cứu dần thế sau khi mà cứu hết rồi
+[53:51] vẫn bị âm thì câu hỏi đặt ra là có ông nào góp
+[53:55] được thêm không? Tiếp tục này các ông ơi, bây giờ vay
+[54:01] ngân hàng năm nay thế nào? Có ông nào cho mượn tài sản để vay nữa không? Thế
+[54:04] thì lúc này nó mới ra cái phương án tài chính vay vốn trong cả năm.
+[54:09] Hiểu ý không? Chứ không phải là ướm ướm trong đầu xong rồi ông đi vay đâu. Không
+[54:14] có. Từ trường hợp kịch bản thứ ba là nó
+[54:18] thiếu nhưng mà nó thiếu gì ạ? Nó thiếu nó gọi
+[54:23] là thiếu cách nhật. Thiếu thiếu thiếu thiếu gọi là thiếu lỗ chỗ
+[54:28] Nhật lại ngày sau lại cãi nhau. Có nghĩa là có tháng thiếu có tháng đủ thì cái
+[54:34] người làm tài chính buộc phải đề xuất bàn với giám đốc riêng chỗ này đau đầu
+[54:37] lắm ấ phải ngồi mất hàng ngày là đẩy khoản gì, kéo khoản gì. Bởi vì xin lỗi
+[54:42] các ông là tất cả các loại kế hoạch kia các ông muốn lập thế nào thì các ông
+[54:45] lập. Nhưng đến khi các ông dựng dòng tiền nó không khả thi có nghĩa là nó
+[54:49] thiếu tiền thì mọi bản kế hoạch kia không có giá trị gì hết. Vì bản kế hoạch
+[54:54] dòng tiền là bản kiểm chứng và nó là bản kinh bản kế hoạch kinh doanh bằng giá
+[55:01] trị của tiền tệ. Nó chứng minh được tính khả thi của các bản kế hoạch trước. Anh
+[55:05] Lập thì đó là cái quan trọng nhất là người
+[55:11] ta xử lý khi kế hoạch dòng tiền nó có vấn đề. Kế tiếp
+[55:17] cùng với kế hoạch dòng tiền thì kế toán dựng
+[55:22] kế hoạch chi phí. Kế hoạch chi phí thì giá vốn chúng ta
+[55:25] cần phải có định mức. Đơn vị sản xuất càng phải có định mức.
+[55:31] Chi phí nhân công thì có rồi, lắp vào thôi được không ạ? Chi phí bán hàng nó
+[55:35] cũng đề xuất rồi chúng ta ghép vào để chúng ta có được một bản kế hoạch chi
+[55:39] phí. Sau khi có được kế hoạch dòng tiền, kế
+[55:43] hoạch chi phí thì tôi nói sơ này, kế hoạch chi phí thì ở trên này là các
+[55:48] khoản mục chi phí chính, dưới này là các tiểu mục chi phí nhỏ.
+[55:53] Tổng hợp chúng ta chỉ nhập liệu ở tiểu mục chi phí để nó cộng số liệu lên khoản
+[55:58] mục chi phí. Mà khi chúng ta dự báo lập kế hoạch chi phí thì chúng ta tiến hành
+[56:05] lập kế hoạch chi phí theo từng tháng rồi cứ 3 tháng cộng vào thành một quỷ.
+[56:10] Tức là lập ở cái phần chi tiết bên này trước được không ạ? Rồi tự nó tổng hợp
+[56:15] lên trên này. Khi nhìn vào hai bản kế hoạch dòng tiền và kế hoạch chi phí,
+[56:23] lúc đấy ban giám đốc công ty sẽ quyết định rằng rằng nó còn đang giữ được cái
+[56:26] biên lợi nhuận mình mong muốn hay không và bản này đã mang để giao khoán được
+[56:32] hay chưa. Nhưng tôi nhắc trước nếu lập các bản chi
+[56:36] phí này các bạn kế toán ơi đừng bao giờ quên một khoản
+[56:41] là chi phí cho dự phòng phát sinh. Nếu bạn quên khoản đó là bạn chết đấy.
+[56:48] Sau này bạn không biết lấy tiền đâu để bù đâu.
+[56:51] Và cuối cùng bạn lấy kết quả của doanh thu ở bản kế hoạch gì?
+[56:57] bán kế hoạch chi phí ở bản chi phí này bạn dựng ra bản kết quả kinh doanh dự
+[57:03] kiến. Thế nhưng ở cái bản kế hoạch chi phí
+[57:08] này, một yêu cầu tiên quyết nếu bạn muốn phân tích được hòa vốn theo tháng thì
+[57:14] nhớ này, tất cả các khoản mục chi phí này là phải phân loại nó là biến phí hay
+[57:21] nó là định phí được không?
+[57:26] Biến phí có nghĩa là nó biến động theo doanh thu, còn định phí là không bán
+[57:31] hàng vẫn phải trả. Ví dụ tiền thuê văn phòng cỡ nào tháng đó phải trả, tiền
+[57:36] thuê thư ký lái xe cho sếp cỡ nào tháng đó phải trả. Cho dù đội kinh doanh không
+[57:40] bán xu nào đúng không? Nhưng tiền thưởng cho nhân viên sale là gì?
+[57:46] Là biến phí. Tiền công tác phí cho đội siêu là biến phí.
+[57:51] Tiền mà nguyên vật liệu tiêu hao để tạo ra sản phẩm trong nhà máy thì là biến
+[57:55] phí. Có phải không? Thì chúng ta nếu phòng kế toán muốn làm
+[58:01] được kế hoạch tốt thì bắt buộc bạn phải phân loại được các tiểu mục này đâu là
+[58:05] định phí và đâu là biến phí. Và sau đó nó có một cái khái niệm sau đây có thể
+[58:11] kế toán chưa biết đó là giá vốn cộng với lại chi phí bán
+[58:18] thì người ta gọi chung là chi phí kinh doanh.
+[58:22] Được chưa? Phần còn lại là gì ạ? Chi phí tài chính,
+[58:28] chi phí quản lý. Thế thì
+[58:32] nếu mà công ty có nhu cầu nắm bắt được điểm hòa vốn thì các bạn
+[58:40] làm thế này giúp tôi. Các bạn nên lấy số liệu ở trong cái bảng là bảng kế hoạch
+[58:46] chi phí. Xem xem
+[58:51] xem là khoản nào là biến phí, khoản nào là
+[58:56] định phí để bạn mang bạn bỏ vào bảng cái bảng hòa vốn này. Cái bảng này của tôi ở
+[59:02] dạng Excel nó lớn thế này cơ. Ở trên góc trên bên trái nó có số 1 và số 2. Nếu
+[59:08] click vào số 1 là bảng tổng hợp thế này. Nếu các bạn click vào số 2
+[59:15] nó sẽ ra bảng phân tích hòa vốn theo tháng.
+[59:20] Thế thì cách chúng ta làm là gì ạ? Ví dụ đây người ta gọi là chi phí kinh doanh
+[59:24] bao gồm giá vốn cộng chi phí bán hàng. Thì bạn phân biệt ra ở cái chỗ này đâu
+[59:30] là biến phí, đâu là định phí của từng tháng trong cái bảng kế hoạch chi phí
+[59:34] kia. Bạn nhặt nó hoặc bạn đặt công thức bạn bỏ nó vào đây.
+[59:38] Cái nào là định phí bạn bỏ vào đây. Tiếp theo là chi phí vận hành công ty. Đó là
+[59:42] chi phí cố định như là trả lương cho kế toán, trả lương cho thư ký, thuê văn
+[59:46] phòng thì cái đấy là định phí. Được chưa? Sau đó tổng cộng lại thôi thì nó
+[59:52] sẽ tự tính cho bạn doanh thu hòa vốn ở cái dòng này
+[59:57] để ban giám đốc công ty và phòng bán hàng biết được rằng trong từng tháng một

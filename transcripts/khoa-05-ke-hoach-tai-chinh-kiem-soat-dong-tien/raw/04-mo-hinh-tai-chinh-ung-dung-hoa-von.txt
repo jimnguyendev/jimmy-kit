@@ -1,0 +1,532 @@
+[0:10] Tiếp theo chủ đề về setup hệ thống tài chính công ty. Thì phần nội dung kế tiếp
+[0:15] tôi muốn trình bày với các anh chị nội dung đó là mô hình tài chính. Mô hình
+[0:18] tài chính có ba phần. Phần thứ nhất là cơ cấu tài sản, phần thứ hai là cơ cấu
+[0:23] chi phí và phần thứ ba là điểm hòa vốn. Có ba phần đó. Thì bây giờ mọi người
+[0:29] chuyển đến ngay cái chỗ phần thứ ba gọi là điểm hóa vốn.
+[0:37] Điểm hòa vốn người ta có thể tính cho toàn công ty hoặc người ta tính cho từng
+[0:41] nhóm hoặc từng sản phẩm. Nhưng bây giờ ở mức độ cơ bản thì chúng
+[0:46] ta cần phải nắm được điểm hòa vốn của cả công ty. Vậy đầu tiên bây giờ mình hiểu
+[0:49] đã điểm hòa vốn là thế nào anh chị?
+[0:56] >> Ok. Điểm hòa vốn là cái điểm mà tại đó này cái doanh thu này
+[1:03] doanh thu mà trừ đi chi phí
+[1:08] >> bằng 0 tức là hoàn toàn không có lợi nhuận.
+[1:14] Hoàn toàn không có lợi nhuận. Hãy khoan nói đến chuyện công nợ nhá.
+[1:20] Bởi vì tôi xin thưa anh chị là nói đến điểm hòa vốn thì cũng lại phải nhớ cho
+[1:24] tôi cái này người ta gọi là hòa vốn danh nghĩa thôi
+[1:28] phải không nhỉ?
+[1:29] >> Cái này là hòa vốn danh nghĩa bởi vì doanh thu như đã thu được tiền quái đâu.
+[1:34] Từ từ được chưa? Mà trong đó này chi phí thì bằng gì? Chi phí cố định cộng với
+[1:41] chi phí biến đổi hay còn gọi là định phí và biến phí.
+[1:50] Bây giờ định phí tức là chi phí cố định đó là những chi phí mà kiểu gì ông cũng
+[1:55] phải trả. Điều đó có nghĩa là nó không phụ thuộc
+[1:59] vào doanh thu tăng hay giảm. Chẳng hạn như chi phí để duy trì văn phòng đúng
+[2:04] không? Chi phí trả cho anh bảo vệ, chi phí trả cho chị kế toán vân vân.
+[2:11] không kể phần thưởng theo doanh thu. Nếu trừ những có công ty nó vẫn thưởng cho
+[2:14] cả cái toán theo doanh thu. Nhưng mà những cái khoản chi phí nào mà nó không
+[2:19] biến động theo doanh thu, nghĩa là kiểu gì ông cũng phải trả thì đó là chi phí
+[2:23] cố định. Còn lại các chi phí nó biến đổi theo doanh thu thì gọi là chi phí biến
+[2:30] đổi. Ví dụ nếu chúng ta bán hàng hóa thì có
+[2:35] phải cái giá vốn ấy nó chính là chi phí bán biến đổi đúng không? Vì nếu không
+[2:40] bán nữa thì không mất chi phí đó. Nhưng nếu không bán nữa thì gay tại vì chi phí
+[2:45] đó nó nằm ở kho. Đúng chưa nào? Rồi. Doanh thu trừ đi chi phí bằng 0. Vậy thì
+[2:51] để tính được ra cái điểm hòa vốn của công ty trong mỗi một tháng thì việc đầu
+[2:55] tiên, việc đầu tiên công ty mình phải biết được rằng 1 tháng chi phí cố định
+[3:01] của mình bằng bao nhiêu. Đúng không đã? Thứ nhì,
+[3:07] mình phải nắm được ở trong tay một cái nó gọi là tỉ suất lợi nhuận gộp.
+[3:18] Tỉ suất lợi nhuận gộp. Và thêm nữa là chi phí bán hàng.
+[3:27] Chi phí bán hàng biến đổi phải biết hai con số này.
+[3:36] Nếu biết hai con số này chúng ta tính vo là ra, không cần phải làng nhẳng. Bây
+[3:41] giờ tỉ suất lợi nhuận gộp là thế này. Thí dụ chúng ta mua một cái bàn với giá
+[3:46] 800.000đ bán được ra giá 1 triệu. Như vậy tỉ suất lợi nhuận gộp là 80%.
+[3:53] Xin lỗi tỉ suất lợi nhuận gộp là 20%. Tỉ lệ chi phí biến đổi tính trên giá vốn là
+[3:58] trường hợp đấy là 80% phải không? Nhưng mà để bán được cái bàn đấy anh phải chi
+[4:05] thêm tiền gì? Giao nhận à một số tiền ở khâu bán hàng chi thưởng cho nhân viên
+[4:09] bán hàng nữa vân vân. Và chi phí bán hàng cũng có hai phần ạ. chi phí cố định
+[4:14] và chi phí biến đổi. Những gì là cố định ta ta gạt riêng ra rồi, còn lại là chi
+[4:19] phí biến đổi. Vậy thì hai cái khoản mục này tôi xin thưa là các giám đốc ạ, các
+[4:23] anh phải thuộc phải thuộc
+[4:27] thì chúng ta thấy rằng là công thức là doanh thu trừ chi phí bằng 0. Nếu biết
+[4:32] được chi phí cố định rồi còn lại là chi phí biến đổi. Nếu chúng ta biết được tỉ
+[4:36] suất này và chi phí bán hàng biến đổi cũng tính theo tỉ lệ phần trăm của doanh
+[4:41] thu thì chúng ta sẽ ước chừng ngay được cái doanh thu hòa vốn trong từng tháng.
+[4:49] Nhưng khổ lắm là ở doanh nghiệp nó không kinh doanh sản phẩm đơn nhất. Tức là nếu
+[4:54] chỉ có một sản phẩm để thính phát ra ngay. Nhưng mà trong công ty lại có
+[4:58] nhiều nhóm hàng hóa khác nhau mà mỗi một nhóm hàng hóa thì nó lại có tỉ lệ chi
+[5:04] phí khác nhau. Có phải không? Thế thì thành ra lúc đấy người ta buộc
+[5:09] phải tính theo phương pháp gọi là bình quân ra quyền. Tính bình quân.
+[5:15] Cho nên cái ý hỏi ban đầu của thầy nó mới có cái là gì?
+[5:20] À đối với sản phẩm chủ chốt thôi, sản phẩm chính của mình thôi, chúng ta buộc
+[5:25] lòng phải tính được bình quân. Thế thì sơ sơ về điểm hòa vốn là như
+[5:30] thế. Cách tính thì thế nào cũng tính ra bởi
+[5:34] vì thầy quan sát cái quá trình thảo luận vừa rồi là biết mọi người là biết cách
+[5:37] tính. Hoặc tôi xin thưa là quý vị search trên internet một cái một mớ công thức
+[5:41] ngay. Rồi có cả những cái video hướng dẫn cận kẽ để quý vị làm. Và ngay trong
+[5:47] chương trình này thì thầy cũng cấp cho quý vị một cái file
+[5:51] bằng Excel. Cái file này gì ạ? Chúng ta về chúng ta tính chi phí chúng ta nhập
+[5:56] vô đây là nó tính cho chúng ta cái doanh thu hỏa vốn của từng tháng, từng quý và
+[6:00] cả năm. Đây là cái bản tóm tắt thôi ạ. Còn cái
+[6:05] bản đầy đủ của thầy nó cho phép mở rộng ra đến từng tháng. Thế nhưng mà đấy là
+[6:09] chuyện nhận diện. Nhận diện được điểm hòa vốn nó là như
+[6:13] thế. Câu chuyện quan trọng bây giờ là ứng dụng hòa vốn thế nào trong quá trình
+[6:19] anh điều hành kinh doanh mới là câu chuyện.
+[6:22] Bây giờ mình thấy một cái vấn đề thực tế thế này. Chị em chắc là hay đi shopping
+[6:27] bây giờ đầu hè nó mới ra một cái một cái loạt gọi là một số cửa hàng nó ra một
+[6:33] loạt váy hè mới nhá. model mới
+[6:43] hôm nay anh Hải Poly anh không anh anh không đi nhỉ.
+[6:47] Thế thì mình mới thấy rằng là ở các cửa hàng thời trang vân vân hoặc cửa hàng
+[6:51] công sản phẩm công nghệ thời gian đầu hàng nó mới ra giá một bộ của nó ví dụ 1
+[6:57] triệu nhưng mà sau một khoảng thời gian nó chỉ
+[7:02] cần bán với giá 400k. trên một bộ.
+[7:12] Vậy thì khi chúng ta nhìn vào cái sự kiện đó, chúng ta có mấy cách lý giải.
+[7:17] Cách một là nó xả kho để nó đổi model đúng không? Nhưng mà xả kho cái quái gì
+[7:25] mà chúng ta thấy rằng là tất cả các cửa hàng trên phố bây giờ đâ hầu hết chúng
+[7:30] nó đều giả treo biển gì? Xả kho. Đấy là xả kho. Nhất là thời kỳ Tết cuối
+[7:38] năm, cửa hàng nào nó cũng treo cái biển xả kho. Mẹ mình cứ tưởng nó xả thật.
+[7:44] Đấy. Thế giờ là ở trong Đồng Nai tôi nhớ nó có một cái cửa hàng nó treo cái chữ
+[7:49] biển là xả kho tất cả các mặt hàng đấy. Giảm đến 80%.
+[7:55] Thế thì ở cạnh đấy là có cái quán cà phê là The Coffee House. Tôi hay uống ở đấy.
+[7:59] Cái thời gian trước tôi làm ở ở làm tư vấn ở trong đó trong đó. Thế hôm ngồi
+[8:04] vui thì cái cậu chủ cửa hàng nó mới lên nó uống cà phê. Thế mình mới phát hiện
+[8:08] ra là à nó là chủ của cái cửa hàng phía dưới. Xong mình hỏi nó là sao mày xả
+[8:12] kho? Nó bảo anh thông cảm đấy. Cửa hàng em đặt tên là xả kho.
+[8:20] Nên em cứ treo thế để cho bà con thích. Xong nhạc nó bật thật to lên là từ sáng
+[8:24] sớm tôi thấy là đã rất cực kỳ đông vui. Thế thì nó phải có cái lý của nó chứ.
+[8:30] Cái lý của nó chính là điểm họp vộn. Tôi nói thí dụ
+[8:35] nếu như chúng ta kinh doanh ở mức độ thông thường, mình nhập một lô hàng này
+[8:39] về 1000 chiếc. 1000 chiếc đúng chưa? Giá mua là 8 đồng,
+[8:46] giá bán là xì đồng chẳng hạn. Thì nếu trong trường hợp chúng ta kinh doanh
+[8:51] thương mại thuần túy theo lô, khi anh nhập một lô hàng này về anh bán,
+[8:56] anh phải biết anh bán đến chiếc thứ bao nhiêu là nó hòa vốn.
+[9:01] Đấy là điều chắc chắn chúng ta phải làm. Bởi vì thế này, chúng ta thấy rằng đối
+[9:08] thủ của chúng ta, bạn của chúng ta và nhiều hình thức cửa hàng kinh doanh khác
+[9:14] nữa, đôi khi nó đưa ra các chương trình nào thì giảm giá, nào thì mua năm tặng
+[9:20] một, nào thì mua cái nọ thì được cái chai vân vân. Thì tất cả những câu
+[9:24] chuyện đó nếu đứa nào thực sự biết làm thì đó là đứa biết ứng dụng điểm hòa vốn
+[9:30] đấy. Còn đôi khi có những đứa làm cũng chẳng
+[9:34] biết điểm hòa vốn là gì đâu. Nhưng vì thằng kia nó giảm
+[9:39] nên mình cũng phải cắt máu theo nó mà thôi.
+[9:42] Thế thì cái hay ở chỗ là gì? Là người ta tính được rằng nếu một lô
+[9:47] này 1000 tôi bán đến cái thứ 400 là hòa vốn.
+[9:51] Nếu bán thêm 200 nữa là được đạt được lợi nhuận mục tiêu.
+[9:57] Đạt được lợi nhuận mục tiêu như vậy là 600 còn dư là 400. Nếu làm còn dư 400
+[10:04] thì lúc ấy nó mới xem tình hình thị trường. Nếu chưa có hàng tương tự thì
+[10:09] vẫn áp dụng chính sách giá hớt váng. Nghĩa là tính mới và tính đơn nhất của
+[10:14] sản phẩm, tính khan hiếm của sản phẩm nó còn thì chẳng tội gì nó phải hạ. Có phải
+[10:18] không ạ? Nhưng nếu có sản phẩm tương tự thay thế ở các cửa hàng gần đó rồi mẹ nó
+[10:24] hạ giá sập sàn luôn. Được chưa? Treo cái biển lên nhắn tin cho các khách hàng
+[10:29] thường xuyên. Nhất là các chị nếu đã mua vào rồi mặc thử chụp ảnh đăng Facebook
+[10:34] mà bạn bè vào live thật lực đúng không ạ? Đến khi nó thông báo là hôm nay vẫn
+[10:40] mua đen váy này giảm 50% chắc chắn chị gì inbox riêng tư cho bạn bè. Này cái
+[10:46] váy hôm trước ta mua nó giảm 50% đấy. Thế là lỗ lượt kéo nhau đi. Mua về để
+[10:51] làm gì?
+[10:59] >> Không. Thầy không trả lời. Thầy chỉ hỏi thế thôi.
+[11:03] Bởi vì cái cảm giác chiến thắng, cái tâm lý tiêu dùng là cảm giác chiến thắng.
+[11:08] Chứ thực sự có chiến thắng hay không là không cần biết. Thế bây giờ mình mới
+[11:12] ngồi mình nghĩ một cách đơn thuần. Mẹ cái sản phẩm này nó mua rõ ràng mình
+[11:17] điện sang Trung Quốc. Mình có mối quen mà giá vẫn 500 mà tại sao thằng này bán
+[11:22] có 200? À ở đây có nghĩa là họ ăn đủ cái lợi nhuận mục tiêu của họ rồi.
+[11:30] Thế thì cái phần còn lại tức là nó còn cao hơn cả điểm hòa vốn nhá. Trước kia
+[11:36] mình nói lý thuyết là gì ạ? À nếu em đã đạt đến điểm hỏa vốn rồi em bán trên
+[11:39] miễn phí là em có lời. Nhưng đây người ta tính là lợi nhuận mục tiêu trên một
+[11:44] đơn à trên trên một cái lô hàng hoặc được xem như đó là một dự án kinh doanh.
+[11:50] Tôi nói ví dụ hay là chỗ anh này sản xuất đèn LED, anh ra một cái model mới,
+[11:54] anh dự báo nhu cầu thị trường, anh sản xuất ra mấy triệu sản phẩm. Với mấy
+[11:58] triệu sản phẩm như vậy thì dự án này anh tính luôn bán bằng nhiêu cái là hòa vốn,
+[12:04] bao nhiêu cái tiếp theo cho các đại lý nào thì là anh đạt được cái lợi nhuận
+[12:08] mục tiêu. Thế thì ban đầu ấy là dựa vào cái việc như vậy người ta đưa
+[12:14] chính thách sách kích thích. Kích thích kích thích để cho người ta
+[12:19] làm gì? Người ta tích điểm. Tức là nó lấy nhiều hơn đi cho nó tích
+[12:25] điểm và báo với nó là nếu mày đạt được cái điểm như thế này thì sau đó đến cuối
+[12:28] tháng mày được chuyện một là mày chiết khấu thanh toán thứ gì? Hai là chiết
+[12:33] khấu thương mại. Chiết khấu thanh toán. Chiết khấu thương
+[12:37] mại rồi được quà tặng. Được chưa? Rồi được thưởng đại lý
+[12:44] rồi lại được đưa con hoặc vợ đi du lịch. Được chưa? 1 2 3 4 5 5 sáu thứ thì tất
+[12:54] cả những cái thứ này người ta mới dựa vào các cái thời điểm ứng với điểm hòa
+[12:59] vốn để nó đẩy ra kích thích và mỗi một tháng hoặc một tuần nó cho chạy chương
+[13:04] trình một lần người ta gọi là chương trình bán.
+[13:09] Chương trình bán đó. Thế thì với những công ty bán B2B có
+[13:15] áp dụng được hay không? Câu trả lời là hoàn toàn có. hoàn toàn có là ví dụ lúc
+[13:20] đấy người ta có thể ứng dụng là điểm hòa vốn tính trên đầu khách à với khách này
+[13:25] bán được cho nó bằng này là đạt được điểm hòa vốn với nó rồi. Thế thì sau đó
+[13:31] nếu công ty mình đang ở cái bối cảnh là buộc phải cạnh tranh để giữ khách với
+[13:35] thằng khác một cách quyết liệt thì sau cái điểm đấy người ta nghĩ ra
+[13:40] một cái chính sách nào đó trong những thứ này hoặc thứ khác để người ta đẩy
+[13:45] tiếp cái giá trị. Vậy thì chiến đấu ở chỗ này đôi khi
+[13:49] chúng ta nhìn vào chúng ta tưởng là cạnh tranh gì đến khô máu nhưng không phải.
+[13:54] Cái quan trọng nhất là tôi vẫn khuyên là đừng quá tham.
+[13:59] Đừng quá tham. Nghĩa là luôn luôn phải đưa ra mục tiêu lợi nhuận.
+[14:05] Mục tiêu lợi nhuận một cách cụ thể chứ không phải cứ bán được càng cao. Em cố
+[14:11] gắng tìm được lợi nhuận càng cao thì càng tốt. Vì xu hướng kinh doanh ngày
+[14:14] nay người ta muốn giữ khách quan trọng hơn là phát triển khách mới.
+[14:21] Người ta muốn đẩy cái tỉ trọng tức là cái cái cái
+[14:26] sự quay lại mua hàng nhiều hơn của khách cũ là quan trọng hơn đối với khách mới.
+[14:32] Quan trọng hơn nhiều. nhất là B2B. Vậy thì ở góc độ nào đó, phòng tài chính
+[14:39] kế toán của công ty phải biết gà bài cho giám đốc và phòng kinh doanh nha. Tháng
+[14:45] này đối với sản phẩm này bán đến cỡ này là hòa vốn, bán đến cỡ thêm thế này nữa
+[14:49] là đạt được cái lợi nhuận mục tiêu. Nghĩa là gì ạ? Chẳng hạn công ty 1 năm
+[14:55] đặt ra lợi nhuận mục tiêu là 10 tỷ. Nếu 10 tỷ nay mang chia cho 10 tháng, mỗi
+[15:00] tháng 1 tỷ. đóng góp của các sản phẩm. Ok, đạt được cái này hòm hòm rồi
+[15:06] thì ngay lập tức phải thực hiện các chính sách là đẩy lợi ích cho khách
+[15:10] hàng. Đẩy xuống. Đẩy như vậy nó có mấy tác dụng. Một là họ nhận được lợi ích
+[15:15] thật. Hai là nó tăng cái tính thanh khoản cho tiền của công ty. Ba là nó đẩy
+[15:24] cái hàng tồn kho đi. Tại vì ôm hàng tồn kho là ôm rủi ro người.
+[15:30] Đấy là ba tác dụng của nó chứ không phải là chúng ta tìm hiểu về điểm hòa vốn để
+[15:37] hai ba năm sau bắt đầu hội đồng quản trị, hội đồng thành viên mới ngồi bới ra
+[15:40] với nhau. Ờ công ty mình mấy năm vừa qua là doanh thu cỡ này, chi phí cỡ này và
+[15:45] điểm hòa vốn là cái này không. Nó phải được ứng dụng từng tháng một ngay lập
+[15:50] tức chứ không phải để ngồi phân tích tài chính để rút kinh nghiệm với nhau không
+[15:54] chơi. Cái đấy nó chả có giá trị gì. Phân tích như vậy nó chỉ có lợi ích đối
+[16:00] với mấy ông ngàm nghiên cứu thôi. Đối với việc mà tìm hiểu đối tác trong
+[16:05] quá khứ để mà mà làm chuyện nọ chuyện kia thôi. Chứ còn là trong cái ứng dụng
+[16:11] thật là chúng ta phải dựa vào điểm hòa vốn để có những thay đổi trong chính
+[16:16] sách bán. Nhưng cảnh báo đừng hiểu lầm ý tôi. Thay
+[16:22] đổi chính sách bán như vậy không có nghĩa là ông đạt đến cái điểm đó xong
+[16:26] cho ông này thông báo giảm giá sản phẩm. Vì ông thầy ông bảo giảm giá mà. Giảm
+[16:31] giá đây là giảm giá thực tế chứ không bao giờ được giảm giá liêm y miết.
+[16:36] Giảm bá giá liêm yết là chết đấy. Ông nào đi thầu nữa thì biết nó gọi là có
+[16:40] cái liên minh nhà thầu. Mẹ ông giảm giá xong có khi ra đường kính xe ô tô là vỡ
+[16:44] hết đấy. Đừng đùa. Làm ăn nó dễ thế đâu nhỉ?
+[16:52] Bởi vì nếu ông giảm giá niêm yết là ông thắt cổ ông luôn vì không bao giờ tăng
+[16:56] được. Trò đời là như thế. Ví dụ vừa rồi thời gian Covid kể cả
+[17:01] Covid Covid thế chú có giảm giá cho anh không? À không giá thì em không giảm
+[17:06] nhưng mà chỗ anh là đối tác thân tình. Được chưa? Nếu anh lấy đủ lượng bằng này
+[17:11] thì chúng em chiết khấu cho anh thêm bằng này. Như vậy là tổng giá thanh toán
+[17:15] của anh được rút đi. Hiểu ý không? Hoặc là đợt này Covid bọn em tạo điều
+[17:21] kiện hỗ trợ cho tỉ lệ thanh toán vẫn là như thế nhưng cứ thanh toán xong bọn em
+[17:26] chiết khấu thanh toán cho anh một ít. Cho nên lúc này chúng ta mới thấy cái sự
+[17:30] song hành giữa cái quy chế tài chính, cái chính sách tài chính với chính sách
+[17:34] bán dựa vào một điểm chung là gì? điểm hòa vốn nhưng bây giờ mới quay ngược trở
+[17:41] về. Ở công ty mình đã biết các gói chi phí cố định từng gói một bằng bao nhiêu
+[17:47] chưa? Ví dụ chi phí dịch vụ mua ngoài là một gói đúng không? Chi phí cho những
+[17:53] nhân công cố định là một gói, chi phí trả cho hạ tầng là một gói, chi phí nuôi
+[17:59] vòng ngoài là một gói. Kiểu thế. Vậy thì từng gói như vậy
+[18:05] là nếu giám đốc chưa biết thì phòng kế toán phải tính ra cho giám đốc biết chứ.
+[18:10] Thì đó là những khoảng chi phí cố định mà công ty cần phải tính ra. Thứ hai là
+[18:17] đối với chi phí biến đổi như là giá vốn, như là chi phí bán vân vân là phải có
+[18:23] một cái tỉ lệ mà tỷ lệ đấy tôi xin thưa là giám đốc điều hành doanh nghiệp anh
+[18:28] phải thuộc lòng lòng. đọc sản phẩm này anh biết ngay chi phí bán hàng của nó là
+[18:32] bao nhiêu, giá vốn là bao nhiêu, bán một sản phẩm anh lời được bao nhiêu. Chưa kể
+[18:36] đến công nợ, kệ nó. Nhưng đấy người ta gọi là gì ạ? Những cái thứ đó gọi là cơ
+[18:42] cấu chi phí. Đó chính là ở phần thứ hai. Mà chi phí trong doanh nghiệp thì bất kể
+[18:48] doanh nghiệp nào lớn hay nhỏ nó đều có những loại chi phí sau đây. Một là gì?
+[18:55] Giá vốn. Hai là gì? Chi phí tài chính. Ba là gì?
+[19:01] >> Chi phí bán. Bốn là
+[19:03] >> chi phí quản lý. Năm là
+[19:06] >> chi phí thuế. Sáu là chi phí bằng tiền khác.
+[19:13] Sáu là chi phí khác đúng không? 70 là chi phí thuế. Theo đúng trình tự của
+[19:18] bảng kết quả kinh doanh nó là như thế. Thế thì với tất cả các khoản chi phí đâ
+[19:22] như thế nha. Doanh nghiệp mình phải tính ra cái gì là định phí thì rõ ra về mặt
+[19:29] giá trị và cho biên độ biến đổu, cho biên độ dao động. Bởi vì nói là dịch vụ
+[19:34] mua ngoài thì nó cũng dao động đâu mấy phần trăm tháng này với tháng khác nó
+[19:37] khác nhau. Thế còn chi phí biến đổi thì phải tính
+[19:40] theo tỉ lệ của doanh thu. Tất cả những cái thứ đó nhá là phải tính
+[19:47] được ra cho bằng hết. Đối với công ty nào mà làm việc sản xuất thì cái chi phí
+[19:53] sản xuất bao gồm này nguyên vật liệu chính, nguyên vật liệu phụ, khấu hao
+[19:56] máy, chi phí nhân công trong xưởng đúng không ạ? Vân vân là ông phải tính đủ ra
+[20:02] và ông tính hết nó vào. Nếu đơn giá một sản phẩm nào đó thì bao nhiêu tiền ông
+[20:07] phải đọc vanh vách trong đó nguyên vật liệu là bao nhiêu, nhân công là bao
+[20:10] nhiêu trong đó. Vậy thì khi người ta thiết lập được các
+[20:19] cái giá trị định mức của chi phí của định phí và tỉ lệ chi phí của biến phí,
+[20:25] người ta đưa vào một cái bảng như thế này. Một cái bảng như thế này rồi người
+[20:30] ta mang nhân với tỉ lệ của doanh thu ước tính. Người ta gọi là mô hình chi phí.
+[20:37] Chính là phần thứ hai của mô hình tài chính.
+[20:44] ngược tiếp trở về. Mỗi một công ty cần phải duy trì một tỉ
+[20:50] lệ tài sản cho hợp lý. Ví dụ như nếu công ty mình làm về thương
+[20:56] mại, dịch vụ là chính mà tài sản của mình lại là gì ạ? Nhiều
+[21:01] nghiêng về cái chuyện mà kho bãi, xe vận tải thì nghe chừng nó không ổn
+[21:08] vân vân. Thế thì ghép ba thứ đó lại với nhau là
+[21:14] công ty đã xây dựng được một thứ người ta gọi là mô hình tài chính. Vậy mô hình
+[21:20] tài chính để làm gì? Bảo nhưng mà em làm chủ, em làm giám đốc, em cần quá thì mô
+[21:25] hình em cứ thế em làm. Chúng ta hãy tư duy khác hơn một tí, nó
+[21:29] khác ngay này. Tư duy khác đi là nếu như tôi không trực tiếp điều hành công ty
+[21:34] này, tôi giao lại công ty này cho giám đốc đi thuê hoặc một người khác tôi ủy
+[21:39] thác được thì có cần không? Chắc chắn là cần. Bởi
+[21:44] vì nếu như chúng ta với cương vị làm chủ, chúng ta giao lại quyền điều hành
+[21:48] cho người khác hoặc giám đốc đi thuê mà lại cái gì cũng anh ơi phê duyệt cho em
+[21:53] cái này là ông chết toi có đúng không? Bởi vì thuê người ta là
+[21:59] phải cho nó biết nha. Chi phí vận hành công ty 1 năm là được bằng này tỷ.
+[22:05] Nếu mà chú vận hành tiết kiệm hơn vẫn đạt mục tiêu thì chú hưởng
+[22:10] được chưa? Còn nếu như chú vượt lên thì chú phải đền.
+[22:14] Chỉ có thế thôi chứ không thể nào mà cứ cầm chứng từ nên
+[22:18] anh ơi duyệt cho em cái này, duyệt cho em cái khác. Chính bởi vậy cho nên ở
+[22:22] nhiều công ty mặc dù đã giao cho giám đốc rồi nhưng mà ông chủ bà chủ vẫn rất
+[22:28] khổ là cứ cuối ngày là phải nhăm nhăm nhăm nhăm về phê duyệt chi phí và ký gì
+[22:32] ạ? Ủy nhiệm chi. Và hơn nữa,
+[22:39] trong cái nội dung mà khuyến cáo các anh chị ứng dụng thì nó có một cái nữa đó là
+[22:47] nếu như cái vai trò về quản lý tài chính được dồn hết vào đầu của giám đốc là
+[22:53] toi. Đấy cho nên chúng ta cần phải hướng đến một việc là chúng ta xây dựng hết
+[23:00] định mức cả về biến phí và định phí. Sau đó chúng
+[23:05] ta tiến hành phân cấp quản lý tài chính. Phân cấp quản lý tài chính.
+[23:12] Bản chất là phân cấp nhưng hình thức là giao khoán
+[23:18] bằng hình thức gọi là giao khoán. Khoán có hai kiểu khoán. Kiểu khoán thứ
+[23:29] nhất là thằng nhận khoán tự đi mà lo vốn, tự triển khai. Kiểu khoán thứ hai
+[23:33] là gì? Mình vẫn lo vốn nhưng cho nó triển khai.
+[23:40] Trong bối cảnh hiện nay, tình hình gọi là triết lý kinh doanh nó
+[23:45] thay đổi rồi. Chúng ta hãy cố gắng làm thế nào đó để
+[23:52] biến công ty mình. Một là nó duy trì cái cơ sở kinh doanh
+[23:57] cho mình. Nhưng đó là cái chỗ để anh em nhân viên,
+[24:01] đặc biệt là những nhân sự chủ chốt nó cùng kiếm tiền với mình xong nó hưởng
+[24:06] một phần ở trong đó. Thế thì lúc đó nó đòi hỏi anh phải giao khoán. Bản chất
+[24:12] của giao khoán là giao mục tiêu, giao quyền, giao tiền và đòi trách nhiệm, đòi
+[24:19] kết quả. Vậy để giao khóa này trong cả hai chủ đề trước tôi đều nói rồi.
+[24:26] Nhưng một số người tiếp cận lần đầu thì hôm nay tôi nhắc lại anh giao cho người
+[24:29] ta một là anh giao mục tiêu, hai là anh giao cho người ta nhân sự
+[24:38] cộng quỹ lương và thứ ba là anh giao chi phí cho người
+[24:43] ta. Thứ tư là anh treo vào đầu người ta một
+[24:48] cái củ cà rốt à đó là lợi ích và anh kèm theo một cái là chế tải
+[25:01] 1 2 3 4 5 Một văn bản giao khoán được ký giữa công
+[25:07] ty với từng phòng ban bộ phận có năm phần.
+[25:11] Phần một là mục tiêu. Bây giờ thí dụ đối với bộ phận kinh doanh mục tiêu là gì?
+[25:18] Đương nhiên rồi, doanh thu hoặc lợi nhuận bán hàng tùy từng công ty. Được
+[25:23] không? Ok. Doanh thô. Thứ gì? Thứ hai là chắc chắn phải có
+[25:29] công nợ. Doanh thu thì có doanh thu tổng, có
+[25:34] doanh thu theo vùng, doanh thu theo nhóm sản phẩm chính vân vân. H tiếp theo nhân
+[25:40] sự và quỹ lương dựa vào quy mô của mục tiêu này suy ra luôn phòng ban này được
+[25:46] sử dụng mấy người mấy người đấy thì lương vị trí và bảo
+[25:50] hiểm là bao nhiêu gọi là quỹ lương chưa kể thưởng nhá cái này mới gọi là
+[25:56] giao quỹ lương để mấy hôm nữa chạy dự án nhiều việc nó
+[26:01] không bắt mình phải tuyển người cho nó nữa đúng không chứ không thì lúc đấy
+[26:06] mình điều động làm thêm giờ Giờ thì nó bảo vợ em bảo phải về về sớm nó không đi
+[26:12] vân vân và vân vân nhiều chuyện lắm. Thế mà không tuyển cho nó thì nó cứ ui giời
+[26:16] nhiều việc lắm. Mình hỏi đ kết quả nó bảo nhiều việc quá bọn em chưa làm xong
+[26:21] thì mình nhất định phải giao nhân sự và quỹ lương. Nhưng cái mấu chốt thứ ba là
+[26:25] mình giao luôn chi phí. Giờ tôi hỏi anh chị dám giao không?
+[26:31] Dám giao chi phí không? Chi phí ở mỗi một phòng ban bộ phận hoặc
+[26:40] phân vùng hoạt động trong một công ty nó có hai kiểu, hai loại.
+[26:44] Một là chi phí vận hành, hai là cái chi phí nghiệp vụ.
+[26:53] Ví dụ bây giờ phòng bán hàng, chi phí vận hành là những cái gì? Chi phí để duy
+[26:58] trì cho cái phòng đó. Ví dụ văn phòng phẩm của nó, ví dụ phòng ốc của nó, ví
+[27:02] dụ cửa hàng của nó. Nhưng bây giờ chi phí nghiệp vụ ví dụ
+[27:07] chi phí quảng cáo, chi phí nó đi làm thị trường.
+[27:11] Thế thì cái gì là chi phí vận hành ha hoặc hay còn gọi là chi phí phải cố định
+[27:18] thì anh chốt cho nó bằng con số xong anh giao. Còn cái gì là chi phí
+[27:24] nghiệp vụ thì anh chốt cho nó tỉ lệ theo phần trăm và cộng với lại gì? Kế hoạch
+[27:31] đó. sau anh giao với một cái chế tài cực kỳ khắt khe là
+[27:38] nếu tiết kiệm hơn chi phí thì cho nó hưởng phần lớn chi phí tiết kiệm.
+[27:44] Nhưng nếu mà nó tiêu quá cái chi phí đó thì bắt nó đền. Bây gi hỏi nhưng mà đèn
+[27:51] bằng cái gì?
+[27:53] >> Hả? Dao hớ phải chịu
+[27:56] >> ch toàn bộ hớ.
+[27:57] >> Ừ. Ông đi tán gái ông hớ cũng phải chịu mà phải không? Hớ phát là đền đền liền
+[28:03] mà hớ phải chịu.
+[28:08] >> Chỉ chừng nào từng bị hớ và trả giá rồi thì mới hết hớ. Có thế thôi. Nhưng mà
+[28:14] nếu không dám thì không bao giờ cả. Vậy thì câu hỏi của anh rất hay là hớ thì
+[28:19] sao? Hớ thì chịu nhưng bây giờ làm thế nào để không hớ?
+[28:24] là đo cái này đo tỉ đo giá trị định phí và đo tỉ lệ
+[28:30] của biến phí đo hòa vốn tính toán cái đó thật kỹ lưỡng thì bớt
+[28:37] hớ có thế thôi. Bây giờ tôi nói bạn làm thầu cho các thằng lớn
+[28:44] nó tính từng ni tí từng cái kim sợi chỉ và nó biết thừa ký hợp đồng với em là nó
+[28:48] cho em mấy phần trăm lợi nhuận phải không? bản chất đó là một hình thức giao
+[28:52] khoán nhưng nó giao khoán ra bên ngoài và bản thân thằng phụ trách mua của bên
+[28:56] nó cũng không đời nào được ký một cái hợp đồng mà cao khỏi cái định mức khoán
+[29:00] của nó có đúng không? Thì đấy là nó thành công được nhờ vào việc nó đưa ra
+[29:07] cơ chế khoán từ rất sớm. Như vậy ở công ty mình có khoán cho bộ
+[29:12] phận kinh doanh này. Nếu có có bộ phận sản xuất thì khoán cho sản xuất này.
+[29:17] Khoán sản xuất thì đòi về mục tiêu là sản lượng đúng không nhỉ? Thế bây giờ
+[29:22] khoán tiếp là khoán cái khối hành chính ph nhân sự nữa.
+[29:26] Khoán chi phí đào tạo, khoán chi phí tuyển dụng, khoán luôn cả chi phí văn
+[29:31] phòng. Ở các công ty của mình á, nhiều công ty
+[29:34] làm như nhà nước luôn ấy. Bắt đầu là cuối tháng inbox vào cho anh em hoặc là
+[29:39] anh em ơi đăng ký văn phòng phẩm. Đăng ký văn phòng phẩm ở một số công ty
+[29:44] có thợ làm thì anh em ơi đăng ký công cụ tại vì nó bảo là tháng trước cái kìm của
+[29:49] nó bị mất phải không? Cái kìm của nó bị mất, cái cà lê của nó bị gãy, cái tô vít
+[29:55] của nó bị cùn. Thế bắt đầu cứ ra đăng ký đăng ký đăng ký đăng ký đăng ký xong cấp
+[29:59] phát. Nhưng mà kỳ lạ một cái là vừa mới đăng ký vừa cấp phát tháng trước xong
+[30:03] tháng sau lại đăng ký. Như vậy chắc chắn ở đó là sự lãng phí.
+[30:10] Thế thì như là bọn công ty của Nhật, một số công ty nó làm thế này,
+[30:18] công nhân thợ sửa xe chứ gì. Ok. Nó phát cho ông một cái hòm
+[30:26] nó gọi là hòm công cụ. Hòm công cụ này nó dán ở trên cái nắp
+[30:32] hòm đấy. Một cái checklist. Tất cả những món đồ trong đấy kìm hai chiếc. Tôi vít
+[30:36] hai chiếc các loại như thế này có series đàng hoàng nó dán một cái checklist rồi
+[30:40] đấy. Xong cái thằng giám sát của nó ấ hoặc là
+[30:46] định kỳ hoặc là bất thường nó đi nó kiểm tra checklist của anh thợ.
+[30:50] Cứ thiếu món nào nó rút trong ba lô của nó ra nó bỏ vào luôn.
+[30:55] Cứ thiếu nó bỏ vào luôn. Không bao giờ nó để cho ông thiếu công cụ. Nhưng mỗi
+[31:00] tội cứ cuối tháng là nó quy ra cái đấy bao nhiêu tiền nó trừ.
+[31:06] Thế thì ông nào làm xong cũng chỉ nhăm nhăm kể cả thằng thằng bên cạnh nhá. Cho
+[31:11] cho tao mượn cái kìm cái nhưng mà làm chưa? Giọng nó đã hỏi xong
+[31:15] chưa đưa đây. Và chắc chắn cuối ngày về không cần ai phải nhắc cả. Nó tự lau
+[31:19] công cụ của nó nó xếp gọn vào. Nó chưa kể còn các phong trào tức là gì
+[31:25] ạ? thi đua xếp công cụ rồi là giải nhất của những ai gọi là sử dụng công cụ bèn.
+[31:31] Tôi xin thưa nó tiết kiệm vô cùng. Ở một số công ty của Anh của Đức
+[31:39] chúng ta thấy rằng là ở trên mặt bàn của một số em nào đó nó có cái ghim giấy mà
+[31:44] dán ở trên đó cái băng dính nho nhỏ ở dưới này cái mảnh giấy ghi tên nó luôn.
+[31:49] 1 năm có mỗi cái ghim ấy thôi đúng không? Còn nếu không cẩn thận mình
+[31:55] thì cứ mua về đó để đó dùng hỏng lại mua cái khác. Có thế thôi đúng không nhỉ? Ở
+[32:00] công ty của mình đôi khi mình nhắc anh em này mày ơi cái giấy này in những cái
+[32:04] thứ nội bộ này không quan trọng mày in in giấy một mặt cho anh cái. Đừng in
+[32:07] giấy trắng nó phí. Nói thế thôi chứ nó có làm đâu.
+[32:12] Nhưng nếu bây giờ tôi khoán cho bộ phận văn phòng với kế toán nhá. Hai ông này
+[32:15] liên đới chịu trách nhiệm. Tính đi. Sản lượng in của công ty 1 tháng là bao
+[32:21] nhiêu tờ? Mực in là thay mấy lần? Được chưa? Ông
+[32:26] tính hết ra đi. 1 năm tôi cấp phát cho ghim giấy với các thứ này hai lần hoặc
+[32:30] ba lần. Ông tính đủ tiền đi. Được chưa? Tôi đưa vào văn bản giao khoán.
+[32:36] Vậy thì nếu như bà phụ trách văn phòng đâu? Nếu bà tôi giao cho bà tháng này là
+[32:41] 10 triệu nhá. Điện nước, điện thoại, văn phòng phẩm tất cả tháng này 10 triệu.
+[32:46] Nếu bà chỉ tiêu hết có 8 triệu. Còn dưới 2 triệu không?
+[32:52] Tôi cho bà hưởng luôn 60% của 2 triệu, tức là được luôn triệu đốt tối. Được
+[32:57] chưa? Coi như đấy là một khoản phụ thu nhưng nếu bà tiêu 11 triệu
+[33:04] thì tôi sẽ trừ 1 triệu vào tiền thưởng trong các dịp kế tiếp nếu bà có thưởng
+[33:10] hoặc tháng này có thưởng trừ luôn cắt luôn.
+[33:15] Thì tôi xin thưa là lúc đấy tôi đảm bảo các ông không phải nhắc đứa nào hết á.
+[33:20] tự chúng nó chơi. Bởi vì nói thật là đôi khi không phải cứ
+[33:25] cung cấp cho người ta là nó tốt lên đâu. Nó lại tự nhiên nó hình thành một cái
+[33:29] văn hóa lãng phí. Trong khi chúng ta đang cần xây dựng một cái văn hóa gì?
+[33:33] Thực hành tiết kiệm. Nên như thế. Nghĩa là hãy giao khoán đến
+[33:38] tận nơi hơn. Nhưng việc giao khoán này nó vô tình tạo ra sự phân cấp tài chính.
+[33:43] Đó là chính những nhân sự cấp trung. Cái này dành cho thằng cấp trung.
+[33:49] Nhân sự cấp trung này họ tham gia vào quá trình giám sát tài chính và họ chịu
+[33:54] trách nhiệm với các định mức tài chính và các chi tiêu tài chính của bộ phận
+[33:58] của họ. Tôi nói bây giờ nhất là cái chuyện công tác phí cho anh em kinh
+[34:02] doanh nó lên đường. Mệt không? Tôi xin thưa anh chị là mệt
+[34:07] lắm ạ. Bởi vì nhiều khi nó bảo rằng là nếu mà không cấp xe taxi rồi thuê xe
+[34:12] Grab cho bọn em thì bọn em di chuyển rất là khó khăn rồi lý do nọ rồi lý do kia
+[34:17] rồi đủ thứ trên đời nhiều thứ lắm.
+[34:22] Thế là gì ạ? Phòng bắt đầu mới ngồi bàn với nhau trình lên giám đốc. Giám đốc
+[34:26] kêu thế này thì nhiều quá. Phòng bảo thế này thì ít quá. Thế thì lời khuyên của
+[34:31] tôi là chúng ta làm có một lần thôi là tôi tính hết các định mức tài chính đó.
+[34:37] Ở cái phần thứ hai của mô hình tài chính là các định mức đó tôi áp vào với kế
+[34:42] hoạch doanh thu của tôi và tôi giao luôn cho cái bộ phận kinh doanh này biết rằng
+[34:46] đấy nhá trong tổng số ví dụ 18% của doanh thu không kể quỹ lương cố định thì
+[34:54] tiền thưởng của kinh doanh là bao nhiêu phần trăm tiền công phí công tác phí rồi
+[35:00] hoa hồng môi giới là bao nhiêu phần trăm tiền lắp đặt vận chuyển là bao nhiêu
+[35:05] phần trăm Vậy nếu thằng này tiêu nhiều thì thằng
+[35:08] kia phải tiêu ít, tháng này tiêu nhiều thì tháng sau phải tiêu ít. Chỉ có thế
+[35:12] thôi. Vì cách quan trọng nhất ở cương vị người
+[35:17] điều hành chung và chủ doanh nghiệp, chúng ta phải nắm được cái phần của mình
+[35:22] là cái phần tỉ lệ hoặc con số lợi nhuận mục tiêu của mình mình phải giữ cho
+[35:25] chặt. Bởi vì trong kinh doanh có lúc khó, có
+[35:30] lúc không, có lúc mùa vụ, có lúc không mùa vụ. Nếu chúng ta cứ để nước trôi bèo
+[35:36] trôi thì rất khổ ở chỗ là đôi khi nó mất lòng cái nhân sự này. Và hơn nữa nếu
+[35:43] không cho nhân sự cấp trung tham gia vào quá trình quản lý tài chính chi tiêu ở
+[35:48] bộ phận của họ thì dường như quyền hành của họ đối với đám nhân viên là rất ít.
+[35:54] cho nó cái quyền đó, cho nó được quyền quyết bởi vì họ phải thỏa thuận với nhau
+[36:01] trong nội bộ cái phòng ấy rằng công ty đã khoán cho mình một gói này, nếu chúng
+[36:06] ta tiêu quá lên ở tiền công tác phí thì chúng ta buộc phải rút tiền thưởng.
+[36:12] Và chuyện đấy nên để cho họ tự thỏa thuận với nhau. Họ thỏa thuận cách nào
+[36:17] cũng được, miễn là có văn bản tất cả cùng ký vào gửi ngược lại cho công ty.
+[36:27] Vậy thì đây là cái tinh thần lớn nhất ở cái
+[36:33] chương trình của năm nay là cả ba chuyên đề tôi đề đều đề cập đến chuyện này. Và
+[36:38] tôi thực sự mong các công ty chúng ta ngồi đây chuyển dần sang cơ chế khoán
+[36:42] mục tiêu và chế tài. Tôi có tư vấn cho một vài
+[36:47] cái chế tài. Ví dụ mục tiêu này trong 2 tháng liên tiếp
+[36:52] không đạt được 70% xa thải trưởng phòng. Nhưng mà khổ quá đuổi người thì lấy ai
+[36:57] làm cán bộ nhỉ? Tuyển giờ nó cũng khó. Nhưng ý ở đây rằng là nếu đã giao mục
+[37:04] tiêu thì phải có chế tài. Chế tài đó có thể 2 tháng hoặc 3 tháng một lần nếu
+[37:09] không đạt được đến bao nhiêu phần trăm của mục tiêu bao gồm cả mục tiêu gì ạ?
+[37:13] Doanh thu lợi nhuận và mục tiêu chi phí thì dẫn đến chế tài gì?
+[37:19] cho cái trưởng phòng đó, cho cái nhân sự trong bộ phận đó. Nhưng ngược lại nếu nó
+[37:25] đạt được thì chắc chắn nó phải được hưởng một phần lớn hơn mức mà chúng ta
+[37:30] vẫn gì chi trả. Tương tự như vậy, ở đơn vị nào mà triển
+[37:37] khai kinh doanh chủ yếu ở hoạt động là gì?
+[37:41] Hợp đồng dự án thì các anh cũng khoán y choang như vậy. Nhưng nó chỉ khác một
+[37:47] cái là gì ạ? Nếu như hoạt động kinh doanh thông thường của công ty thì văn
+[37:50] bản giao khoán này là ký từng năm, mỗi năm ký một lần. Nhưng ở công ty làm
+[37:57] về hợp đồng dự án thì mỗi dự án anh ký một văn bản giáo khoán.
+[38:04] Nhớ rằng đã là hợp đồng dự án thì ngoài chuyện giao khoán về doanh thu chi phí
+[38:13] thì anh phải khoán luôn cả gì? tiến độ và chất lượng hồ sơ.
+[38:20] Hôm vừa rồi tôi có đi tư vấn giao khoán dự án cho một công ty
+[38:26] chỉ sang tư vấn mỗi cái văn bản này thôi.
+[38:31] Thế bây giờ ông trưởng phòng dự án ông bảo là tôi đề nghị lợi nhuận dự án là
+[38:38] phòng tôi phải được hưởng tất cả là 40%. Thế ông giám đốc ông nhảy dựng đ bảo lớn
+[38:43] thế. Tao chịu trách nhiệm pháp nhân tao lo
+[38:47] vốn mà tao ăn được có 40% còn 20% là này kia kinh doanh rồi đối tác các thứ là
+[38:53] bằng mày. À thế tôi chỉ hỏi ông trưởng phòng dự án
+[38:57] ông dám ký không? Ông dám ký với mức doanh thu 1 năm là
+[39:03] bằng này tỷ tỉ suất lợi nhuận không dưới 30% giám đốc mới ký hợp đồng cộng với
+[39:09] cái việc là ok tôi cho ông hưởng 40%. Nhưng cái quan trọng nữa là là
+[39:16] khi đó công ty còn phải đưa ra được một danh mục chi phí
+[39:22] cơ cấu gọi là cơ cấu chi phí dự án bao gồm một này nguyên nguyên nhân vật liệu
+[39:29] phục vụ dự án nhân công dự án công tác phí dự án nhưng có hai thứ chi phí mà
+[39:36] thông thường thì các công ty không bao giờ tính à đó là chi phí sử sử dụng vốn.
+[39:43] Hai là chi phí đảm bảo chất lượng hồ sơ nghiệm thu dự án. Bất kể đó chỉ là cái
+[39:49] dự án lắp đặt thông thường thì nào thì dự toán đúng không? À nào thì biên bản
+[39:54] nghiệm thu hạng mục, nào thì là biên bản kiểm nghiệm chạy thử. Rồi đến gì? Hồ sơ
+[40:01] quyết toán. Nếu những thứ đó không được chú ý làm từ khi thỏa thuận thì xin thưa
+[40:09] người ta có đi vay vốn để mà trả tiền cho anh cũng khó.
+[40:14] Công ty anh làm quyết toán xuất hóa đơn cũng khó và hạch toán thì không thể nào
+[40:19] hạch toán được. Thế hôm trước tôi nói thế, sau rồi mãi
+[40:25] rồi giám đốc cũng chịu. Và sau khi ký xong rồi thì trưởng phòng
+[40:31] dự án bắt đầu mới mắt hơi hoa hoa 40% vẫn hớ.
+[40:39] Bởi vì nếu tôi tính đủ chi phí thì ngay kể cả công ty chỉ hưởng ở mức
+[40:43] 40% lợi nhuận đạt được cũng đã là tốt hơn trong quá khứ.
+[40:50] Bởi vì trong quá khứ là thả chi phí cho nó trôi,
+[40:54] mặc kệ dự án, mặc kệ cho quân dự án. Thế là nó đòi nào thì lương kim nhiệm dự án,
+[41:00] nào thì công tác phí dự án, nào thì chậm tiến độ hết tháng này qua tháng khác.
+[41:07] Ấy mới biết là đôi khi chúng ta chấp nhận ăn một phần nhỏ hơn nhưng sẽ được
+[41:12] một giá trị lớn hơn. Đó người ta gọi là tối ưu cái lợi nhuận
+[41:18] của công ty. Mà hay một cái là nếu làm tốt việc này thông qua cơ chế khoán thì
+[41:23] ba bên cùng có lợi. Đối với dự án chủ đầu tư có lợi, công ty
+[41:28] có lợi và người lao động có lợi. Nên thế đi thì cái tính chủ động nó cao
+[41:37] hơn. Đành rằng bây giờ trong quản trị doanh nghiệp đôi khi mình cứ kêu can
+[41:41] rằng là uiời mấy nhân viên của mình á là nó không có chủ động có việc gì cả.
+[41:48] Thật lòng mà nói mình phải hỏi mình trước mình đã giao đâu mà nó chủ
+[41:52] hoặc giao chỉ là hình thức. Nói thế thôi chứ nó có được quyết thứ gì đâu. Cái gì
+[41:57] nó chả hỏi anh thì làm sao nó chủ động được. Có phải không nhỉ?
+[42:02] Và đó nó chính là vấn đề. Vậy thì tóm lại tóm lại
+[42:09] việc một là về hoàn thiện kiện toàn hồ sơ chứng từ có liên quan đến vốn gó.
+[42:16] Được chưa? Sau đó này, hãy gọi tất cả những em cổ
+[42:21] đông, cổ phần, cổ cánh ngồi lại với nhau để thống nhất nguyên
+[42:25] tắc về góp vốn, chuyển nhượng vốn và sử dụng
+[42:29] vốn theo pháp luật mà tất cả đều nên tuân thủ.
+[42:34] Đừng làm theo kiểu không thích nữa thì giả dép bố về được không? Còn cũng phải
+[42:40] nói cho nhau hiểu một điều rất rành mạch rằng chúng ta là những người trung
+[42:45] thuyền cùng góp vốn vào với nhau để thành lập công ty nhưng không có nghĩa
+[42:49] là chúng ta buộc phải ngồi ở công ty để làm việc với nhau.
+[42:53] Nếu cảm thấy năng suất làm việc, kết quả làm việc mà nó không còn đạt được kỳ
+[42:59] vọng của công ty theo kế hoạch kinh doanh nữa.
+[43:03] Cho nên xin thưa mấy anh chị là cách đây gần 20 năm khi mà tôi đến bắt đầu ở
+[43:10] cương vị là mới đ làm thuê cho một công ty khác thì việc đầu tiên là tôi đuổi
+[43:17] phó giám đốc. Thế xong rồi mấy thành viên có vốn nó
+[43:22] nhảy dựng đ bảo từ cổ chi kim tao chưa thấy thằng nào đi làm thuê mà đuổi thằng
+[43:25] chủ. Tôi bảo chúng mày không hiểu luật à? Cái
+[43:29] chuyện tụi bay góp vốn vào với nhau đấy là chuyện của tụi bay chứ.
+[43:33] Chuyện của mày là ông chủ chứ tao có nhất khiếp phải thuê ông chủ để làm việc
+[43:35] cho tao đâu. Bây giờ mày thuê tao với giá, tiền lương là như thế này, tao phải
+[43:40] chịu trách nhiệm về kết quả công ty đúng không? Mày đưa hẳn tên tao vào dự
+[43:46] kiến là phải chịu trách nhiệm này kia, phải cam kết đủ thứ. Bây giờ tại sao bắt
+[43:50] tao phải dùng một cái thằng cổ đông này? Tôi viết đơn tôi trả cổ đông đó về cho
+[43:54] ban giám đốc không dùng. Mẹ lúc đấy nó cay nó cay tới lắm.
+[44:02] Thế nhưng mà bảo nhưng mày thích đến công nhưng mà tao rất thích cà phê với
+[44:06] mày. Thế là hai thằng bọn tôi vẫn cứ sáng nào cũng cứ cà phê với nhau bàn
+[44:10] chuyện kinh doanh tôi nhất định không cho thằng đấy làm việc.
+[44:14] À mãi sau này thì anh em cũng hiểu ra. Thế cho nên là ở đây tôi nói rằng là
+[44:20] trong công ty của chúng ta đôi khi có những chuyện như vậy là những thành viên
+[44:24] góp vốn chúng ta nhìn rành mạch ra góp vốn là một việc khác có phải không?
+[44:29] Nhưng làm việc được hay không là một việc khác.
+[44:33] Mà cái việc đấy muốn điều chỉnh được thì như tôi nói rồi, yêu nhau giào dậu cho
+[44:38] kín được không? À nói với nhau một trước một câu cho nó dễ hiểu. Đưa vào quy chế
+[44:43] công ty rằng đã là làm việc như thế thì không xét đến là chủ tớ mà chỉ xét đến
+[44:49] là hiệu quả giao khoán. Một khi hiệu quả giao khoán không được
+[44:54] thì làm sao? áp dụng chế tài mà đã là chế tài ai cũng đuổi đó chưa? Sa thải
+[45:01] đôi khi là động lực cứ sa thải đi, đừng sợ thiếu người.
+[45:07] Nhưng ngược lại nếu đã dùng thì luôn luôn ưu tiên người cũ, hạn chế tuyển
+[45:12] người mới về làm sếp của người cũ. Sang chuyên đề nhân sự nói kỹ hơn. Mẹ
+[45:18] một thằng ngồi công ty mòn đít ra rồi 10 năm mẹ tuyển một em xì chỉ được mỗi cái
+[45:24] da trắng chân dài về làm sếp điên lắm nó làm thui chột động lực trong khi đó
+[45:30] lúc nào lên đọc báo cáo cũng gì công ty ưu tiên phát triển người lao động tạo
+[45:34] điều kiện thăng tiến cho anh em thăng tiến chó gì
+[45:42] thế thì mới thấy không có cái gì nó tách ra khỏi cái gì
+[45:46] anh chị Nếu anh chị nào ngồi đây với tôi bốn
+[45:49] chuyên đề vừa qua thì mới thấy rằng à từ câu chuyện của mục tiêu chiến lược sang
+[45:55] đến câu chuyện của tổ chức đến câu chuyện của kinh doanh vừa rồi và bây giờ
+[45:59] là tài chính nó gắn trùm với nhau không có thứ gì tách được khỏi thứ gì
+[46:08] thì hy vọng dựa vào cái văn bản giao khoán này đầu tiên chúng ta về phải
+[46:13] truyền thông trong nội bộ À anh em ơi, bây giờ ban giám đốc ra một chỉ thị là
+[46:20] xây dựng cái cơ chế khoán từ quý 3 năm nay chẳng hạn hoặc từ năm 2020
+[46:26] hay 21. Đối với dự án thì khoán thế này, đối với
+[46:31] hoạt động thông thường thì khoán theo phòng bàn.
+[46:34] Cứ khoán đi. Và khoán là con đường duy nhất để giải phóng lãnh đạo
+[46:41] chứ không phải NLP, không phải thứ gì khác.
+[46:47] Đừng sợ thiệt các ông chủ ạ. Đừng sợ thiệt.
+[46:52] Bởi vì nếu nó làm cho lợi nhuận tăng thực và nó làm cho công nợ công ty giảm
+[46:57] đi thì đó là các bên cùng có lời. Hơn nữa, cách duy nhất để giữ một người
+[47:03] người ta làm việc lâu dài cho công ty là nó được chia sẻ lợi ích ngay cả khi chia
+[47:10] sẻ khó khăn. được tự chủ quyết định. Bây giờ hỏi nó
+[47:15] làm việc, em muốn làm việc trong môi trường thế nào? Em muốn khẳng định bản
+[47:19] thân, khẳng định bản thân nhưng cái gì nó cũng hỏi ông thì không bao giờ là có
+[47:22] cơ hội. Cho nên cái cơ chế gốc luôn luôn là động
+[47:29] lực. Cái cơ chế gốc nó mới lột tả được mọi thứ. Còn mọi thứ chỉ là văn bản trên
+[47:33] giấy mà thôi. Ok. Thì đó là nội dung kế tiếp. Mô hình
+[47:42] tài chính và phân cấp.
+[48:16] 0:02 /

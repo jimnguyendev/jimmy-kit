@@ -1,0 +1,693 @@
+[0:11] Tôi xin được thông qua cái phạm vi cũng như là cái nội dung chương trình của
+[0:15] ngày hôm nay là như thế. Đấy thì thay mặt cho công ty Startup Coaching à thay
+[0:21] mặt cho giám.net Net và ban tổ chức à xin được trân trọng cảm ơn các anh chị,
+[0:25] thực sự rất cảm ơn các anh chị đã có mặt rất đông đủ với một hội trường đông đúc
+[0:29] như thế này. Nó tạo hưng phấn khá là lớn à cho tôi ở trên này.
+[0:35] >> Chủ đề thuế dành cho chủ doanh nghiệp và giám đốc điều hành. Phạm vi vấn đề ba
+[0:42] xác thuế là thuế giá trị gia tăng, thuế thu nhập cá nhân và thuế thu nhập doanh
+[0:46] nghiệp. Bây giờ thế này, theo trình tự thì chúng
+[0:51] ta sẽ nói về thuế nó chỉ gia tăng trước. Theo trình tự thì chúng ta sẽ nói về
+[0:55] thuế chỉ thế hỏi thêm nữa là thuế giá trị gia
+[1:04] tăng thì thay thế thuế gì? Trước kia Việt Nam áp dụng thuế gì và
+[1:09] sau này thì là thuế chế ra thu à ngày xưa là thuế doanh thu. Thế thì thuế
+[1:16] doanh thu thì bản tân thân cái tên của nó là chúng ta biết rồi là thuế thu trên
+[1:21] doanh thu. Thuế thu trên doanh thu thì người ta nói
+[1:25] rằng nó là sắc thuế mà dẫn đến tình trạng là đánh thuế chủng.
+[1:32] dẫn đến tình trạng là đánh thuế chủng. Vậy thì nó trùng như thế nào và sau này
+[1:38] nó thay thế bằng thuế tác trị gia tăng thì liệu nó đã khắc phục được cái tình
+[1:42] trạng đánh thuế trùng đối với doanh nghiệp hay chưa?
+[1:47] thì tôi xin được trở lại một chút à từ cái bản chất nội hàm của nó để chúng ta
+[1:53] hiểu. Vì khi chúng ta hiểu được bản chất của xác thuế rồi thì sau này chúng ta sẽ
+[1:57] không còn sợ văn bản thuế nữa. Vì nếu không thì hiện nay chúng ta đang rất sợ
+[2:02] văn bản thuế vì mỗi một năm đâu đó có vài trăm cái cái cái văn bản được ra
+[2:06] đời. Mà tôi nói thật là bản thân bọn tôi là những người làm về chuyên môn nghiên
+[2:10] cứu rất là thường xuyên đọc không xể, nhớ tên văn bản cũng không xể luôn. Vậy
+[2:17] thì sao doanh nghiệp có thể tiếp cận đây?
+[2:20] hoặc thậm chí sự bất đồng nhất giữa các văn bản ở trong 1 năm chứ tôi chưa nói
+[2:25] là các thời kỳ rồi chưa kể đến việc là việc vận dụng triển khai áp dụng cũng
+[2:30] như quản lý ở các địa phương khác nhau là có sự khác nhau.
+[2:36] Nhưng nếu chúng ta hiểu được bản chất của vấn đề nhé, chúng ta hiểu được bản
+[2:40] chất của sắc thuế, bản chất của thủ tục thì sau này dù người ta có thay đổi cỡ
+[2:44] nào đi chăng nữa thì các anh chị vẫn biết được rằng chúng ta triển khai như
+[2:48] vậy là đúng hay sai. Và chúng ta sẽ giải quyết được một việc là không nhất thiết
+[2:52] phải đọc tất cả các văn bản của ngành thuế họ ban hành.
+[2:57] Chỉ nghe cái tên xem nó có động chạm gì đến cái hoạt động của ta không. Còn nếu
+[3:01] nó đã không động chạm rồi thì thôi, đó là chuyện của xã hội, không liên quan
+[3:05] đến ta. Còn nếu không thì chúng ta cứ ờ không
+[3:08] biết bây giờ cái văn bản đó nó như nào, tìm hiểu ra làm sao và kế toán tương đối
+[3:11] mệt mỏi với với cái việc đó. Thì bây giờ trở lại thế này,
+[3:17] nếu ngày xưa là thuế doanh thu giả sử với một chai nước này thì nó sẽ có những
+[3:23] công đoạn sau đây. Công đoạn thứ nhất là người ta khai thác cái nước từ giấy ngầm
+[3:27] lên. Công đoạn thứ hai ấ là cái thằng sản xuất bao bì nó nó đổ cái này. Cái
+[3:33] công đoạn thứ ba là cái thằng in ấn ấ nó in cái nhãn này nhá. Đấy là tôi nói ít
+[3:39] nhất cho đến khi chai nước này nó hình thành thì nó có ba cái đoạn có ba cái
+[3:44] anh nó tham gia vào như thế. Một ấy là cái ông làm vỏ chai. Hai là cái ông làm
+[3:48] bao bì. Ba là cái ông gì ạ? Làm nước. Thế bây giờ nước khai thác lên đánh thuế
+[3:53] phát. Tức là thuế doanh thu mà đúng không ạ? Nước khai thác lên về mặt bả
+[3:58] bản chất nếu bán nước không là đánh thoái phá. Thế bây giờ đến cái anh mà nó
+[4:02] làm bao bì, nó làm cái vỏ chai này là cái anh nó sản xuất bao bì chứ nó không
+[4:05] sản xuất nước. Thế nó làm ra cái bao bì nó lại bán cho cái thằng sản xuất nước
+[4:10] thì đầu tiên cái chai này bị đánh thuế cái đã. Được chưa nào? Tiếp tục đến cái
+[4:14] thằng cái thằng nó làm in ấn ấy nó cũng in ra cái nhãn này. Nó bán cho cái ông
+[4:18] sản xuất nước. Cái nhãn này bị đánh thuế một phát ạ.
+[4:21] Như vậy thì đến khi cái chai nước này nó hình thành là ít nhất là đã có thuế của
+[4:28] cái phần nhãn, thuế của phần bao bì. Và đến khi nó đóng hình thành cái này nó
+[4:32] bán ra bên ngoài thì toàn bộ từ nước cho đến chai mọi thứ này nó tạo ra doanh thu
+[4:37] mà lại bị đánh thuế một phát nữa trên toàn bộ cái giá trị đó. Đấy là đấy là
+[4:42] nói trường hợp là cái thằng sản xuất này nó bán trực tiếp cho thằng tiêu dùng.
+[4:46] Thế bây giờ nó lại xảy ra trường hợp nữa là cái thằng sản xuất này nó bán cho một
+[4:49] thằng thương mại, thằng thương mại lại nhập cái nước về lại bán cho thằng khác
+[4:52] mà cứ như vậy. Cứ doanh thu tạo ra đ ở đâu thì lập tức tính phần trăm thuế trên
+[4:59] đó. Tức là thuế đánh trực tiếp trên doanh thu bán ra. Và cứ như vậy người ta
+[5:04] gọi là trường hợp nó xảy ra trường hợp gọi là đánh thuế trùng tức là thuế trồng
+[5:08] lên thuế. Vì thế, vì thế cho đến năm 1999
+[5:15] thì Việt Nam ban hành thuế VAT bắt đầu áp dụng từ năm 2000
+[5:22] thì thuế VAT VA là giá trị tăng thêm
+[5:30] là giá trị tăng thêm và T viết tắt của chị thách là thuế tức
+[5:37] là thuế chỉ đánh trên phần giá trị tăng thêm.
+[5:42] Thuế chỉ đánh trên phần giá trị tăng thêm. Vậy thì với bản chất là thuế chỉ
+[5:47] đánh trên phần giá trị tăng thêm như thế thì một câu hỏi cần phải được giải quyết
+[5:52] đó là làm thế nào để xác định được cái VA này? Tức là làm thế nào để xác định
+[5:57] được giá trị gia tăng của hàng hóa dịch vụ trong nền kinh tế và trong hoạt động
+[6:02] của doanh nghiệp. Đó là một.
+[6:06] Cái thứ hai phải xác định được một cách chính xác đối tượng nào là đối tượng
+[6:11] phải nộp thuế. Và câu chuyện thứ ba, nhà nước sẽ quản
+[6:17] lý cái đó thế nào? Vậy với ba câu hỏi này nó tạo ra một
+[6:22] loạt các văn bản có liên quan đến thuế giá trị gia tăng ngày nay mà chúng ta
+[6:28] đang áp dụng. xoay cho cùng nó chỉ giải quyết ba chuyện này thôi.
+[6:33] xoay cho cùng chỉ giải quyết ba câu chuyện này. Vậy thì bây giờ làm thế nào
+[6:37] để xác định được giá trị gia tăng? Thì bây giờ chúng ta lại minh chứng một tí
+[6:42] về cái gọi là giá trị gia tăng. Nếu tôi là doanh nghiệp kinh doanh
+[6:47] thương mại, tôi mua chai nước này với giá là 5000đ, tôi mang về tôi bán lẻ ra
+[6:53] ngoài và nếu tôi bán được 6.000đ ngàn 000đ thì ở đây nó có 1000đ chênh giữa
+[6:59] cái tiền tôi bán ra và tiền tôi mua vào thì đó chính là giá trị gia tăng.
+[7:06] Còn đối với doanh nghiệp sản xuất toàn bộ giá trị của vật tư tôi mua vào tôi
+[7:10] đưa vào nhà máy sau đó tôi sản xuất ra thành phẩm à thì cái chênh lệch giữa giá
+[7:15] thành của sản thành phẩm đó ở khâu mà tôi sẽ bán ra so với cái giá thành tôi
+[7:20] tôi tôi sản xuất tức là cái giá bán ra và giá thành sản xuất nó chênh nhau bao
+[7:23] nhiêu. Ví dụ tôi sản xuất ra chai nước này là hết 4000 nhưng tôi bán ra là 5000
+[7:27] thì cũng 1000 đó là giá trị tăng thêm. Vậy bản chất của giá trị tăng thêm là
+[7:33] không phân biệt ở quá trình sản xuất, lưu thông hay phân phối. Miễn là cứ có
+[7:39] sự chênh lệch về mặt giá trị ở khâu bán ra so với khâu mua vào hoặc không sản
+[7:45] xuất thì đó là giá trị tăng thêm. Vậy thì thuế giá trị gia tăng là cái thuế mà
+[7:50] chỉ đánh trên phần giá trị tăng thêm đó thôi.
+[7:54] Điều đó có nghĩa là trong trường hợp tôi mua vào chai nước này 5000 mà tôi cũng
+[8:00] bán là 5000 thì giá trị gia tăng bằng mấy? Bằng 0.
+[8:05] Trong trường hợp đấy hàng hóa không chịu thuế sẽ không không không bị đánh thuế
+[8:10] vì thực chất tức là nó có chịu thuế nhưng nó không phát sinh.
+[8:14] >> Đúng rồi. Nó có chịu thuế nhưng nó không phát sinh nghĩa vụ thuế. Vậy nếu trong
+[8:18] trường hợp tôi mua vào 5000 tôi bán có 4000 thì cũng không phát sinh cái gì.
+[8:22] Trong trường hợp đấy là giá trị gia tăng bị âm tức là lỗ vốn ấy thì nó cũng không
+[8:27] phát sinh. Vậy thì bây giờ câu chuyện nó xảy ra thế
+[8:31] này. Câu chuyện nó xảy ra thế này
+[8:36] trong toàn bộ cái hoạt động của doanh nghiệp như thế. Thế thì lúc này thì ông
+[8:40] mua hàng hóa này, lúc khác thì ông mua hàng hóa khác. Doanh nghiệp này thì mua
+[8:43] hàng hóa này, doanh nghiệp khác thì mua hàng hóa khác.
+[8:47] Vậy làm thế nào để nhà nước quản lý được cái câu chuyện đó thì
+[8:56] làm thế nào nhà nước quản lý được cái câu chuyện đó thì người ta mới sinh ra
+[9:00] người ta mới sinh ra một cái cơ chế gọi là cơ chế báo cáo.
+[9:08] Kê khai báo cáo. Mà để kê khai được báo cáo thì nó thông qua một cái nó gọi là
+[9:14] chế độ hóa đơn. Thêm nữa, thuế giá trị gia tăng này đánh
+[9:22] vào thằng nào? Thằng nào chịu thuế?
+[9:28] Doanh nghiệp chịu thuế
+[9:32] >> hay thằng nào chịu thuế?
+[9:34] >> Người tiêu dùng. À
+[9:37] >> bản chất đối tượng chịu thuế giá trị gia tăng này là thằng nào tiêu dùng
+[9:44] nhưng tiêu dùng là tiêu dùng cuối cùng cơ.
+[9:49] Thằng nào là thằng tiêu dùng cuối cùng thì đó là đối tượng đối tượng mà phải
+[9:54] nộp cái thuế đó. Còn hàng hóa là đối tượng chịu thuế nhưng mà cái đối tượng
+[9:59] phải nộp thuế, phải trả cái tiền thuế này là người tiêu dùng cuối. Vậy thì để
+[10:03] quản lý được đâu là người tiêu dùng cuối, người ta cũng thông qua cái cơ chế
+[10:07] báo cáo. Mà để báo cáo được thì phải có chế độ hóa đơn.
+[10:12] Vậy thì đã nhắc đến thuế giá trị gia tăng thì phải nhắc đến những câu chuyện
+[10:17] một xác định cho bằng được cái tức là giá trị gia tăng và phải đi trùm với nó.
+[10:24] Câu chuyện về hóa đơn. Về hóa đơn chứng tử.
+[10:31] Đó. Vậy thì về mặt pháp lý đầu tiên người ta cần có luật thuế giá trị gia
+[10:35] tăng. Luật thuế
+[10:40] đầu tiên người ta có cần có luật thuế giá trị gia tăng. Và để triển khai luật
+[10:44] thuế giá trị gia tăng này, người ta có nghị định
+[10:47] của chính phủ. Và để hướng dẫn thực hiện cái nghị định
+[10:52] này thì người ta có cái gì? À có cái thông tư hướng dẫn. Vậy nếu thông tư mà
+[11:00] hướng dẫn chưa đầy đủ thì người ta lại có cái thông tư bổ sung điều chỉnh đúng
+[11:04] không? Thông tư bổ sung điều chỉnh. Và trong
+[11:08] quá trình hoạt động, nếu như trong trường hợp mà còn có vướng mắc, cần có
+[11:12] sự trợ giúp trả lời thêm chăng nữa thì người ta có công văn hướng dẫn và trả
+[11:16] lời. Đó thì cái lộ trình về mặt pháp lý nó đi
+[11:22] là như thế anh chị nhé. Đầu tiên để điều chỉnh cái xác thuế là thuế giá trị gia
+[11:26] tăng, người ta ban hành luật thuế. Để thực thi luật thuế này, người ta có nghị
+[11:31] định hướng dẫn của chính phủ. Để nghị định này đi vào hoạt động của doanh
+[11:34] nghiệp được, người ta cần phải hướng dẫn một cách chi tiết đó là các thông tư.
+[11:39] Thì nhưng mà trong quá trình thực hiện theo hướng dẫn của thông tư này nó vẫn
+[11:43] còn vướng mắc mà đối tượng tức là doanh nghiệp hỏi, người nộp thuế hỏi, nhà nước
+[11:49] trả lời đó là các công văn. Vậy thì chúng ta nhớ cái trình tự pháp
+[11:54] lý này nó đi như thế này, nó ứng dụng với tất cả các loại thuế và các loại văn
+[11:59] bản nói chung là đã liên quan đến luật thì nó phải đi đủ theo cái trình tự này.
+[12:04] Vậy thì khi mà người ta tìm kiếm các văn bản để điều chỉnh về câu chuyện như thế
+[12:08] này thì các anh phải nhớ cho rằng à vậy thì mình phải biết nó căn cứ vào luật
+[12:13] nào, luật đó theo nghị định nào được triển khai bằng nghị định nào, nghị định
+[12:17] đó được hướng dẫn bởi những thông nào và trong quá trình thực hiện thông tư như
+[12:21] thế nó có những công văn. Nhưng cái chết nhất ở Việt Nam, công văn này thì có
+[12:26] tính chất là văn bản trả lời trả lời. Nhưng đôi khi người ta dùng
+[12:32] công văn này để áp đảo cái thông tư, đôi khi là như thế. Nghĩa là thông tư
+[12:39] thì hướng dẫn một đằng nhưng nếu thông tư bao quát không hết thì dùng công văn
+[12:44] để giải quyết. Và vì thế số lượng công văn này một năm
+[12:48] nó hàng nhiều nghìn cái công văn nó được ra đời. Và câu chuyện đó nó giải nó giải
+[12:53] thích tại sao đôi khi chúng ta vận dụng nó khó khăn. Vì ngay đến cái lúc người
+[12:57] ta soạn cái thông tư hướng dẫn này nó chưa đủ bao quát hết được tất cả các
+[13:01] tình huống. Đấy thì đấy là về mặt trình tự của nó. Về trình tự văn bản. Bây giờ
+[13:09] quay trở lại bản chất nội hàm của nó. Đó là thuế được đánh trên giá trị tăng
+[13:14] thêm. đánh vào người tiêu dùng cuối cùng. Vậy bây giờ chúng ta phải xác định
+[13:19] được thế nào là người tiêu dùng cuối cùng.
+[13:22] Chẳng nhẽ bây giờ bán hàng cho nó, tôi bán cho ông chai nước này. Bây giờ tôi
+[13:24] hỏi ông ơi, ông mua nước về để bán cho con này hay là ông mua về để uống? Tôi
+[13:29] mua về cái gì là kệ tôi đúng không? Làm thế nào để biết được?
+[13:34] Thế thì nó thông qua cái chế độ hóa đơn này anh chị
+[13:39] nó có cơ chế như sau. Bây giờ tôi bán nước cho ông này,
+[13:44] tôi xuất hóa đơn cho ông ấy. Với tôi đó là hóa đơn đầu ra để ghi nhận doanh thu.
+[13:50] Nhưng với ông này là hóa đơn đầu vào để ghi nhận đầu vào. Như vậy thì tôi cuối
+[13:57] kỳ tôi cũng kê khai và ông này cũng kê khai.
+[14:01] Trong trường hợp như vậy không cần biết là ông ta đ đang để trái nước ở đâu, chỉ
+[14:06] cần biết rằng ông ta chưa có hoạt động bán ra. Thì ở tại thời điểm đó ông ta
+[14:11] tặng được xác định là người tiêu dùng cuối.
+[14:16] Và bây giờ tiếp tục ông này ông lừa con này ông bán cho nóẹ mua của ông Long
+[14:19] 5000 về bán cho nó 10.000. Ok. Thế thì lúc này ông ấy bán thì ông lại xuất hóa
+[14:25] đơn cho cô này. Vậy hóa đơn bán nước cho của ông trong trường hợp này của ông đấy
+[14:30] là đầu ra nhưng với cô này nó là đầu vàng. Vậy đến cuối kỳ lại tiếp tục kê
+[14:35] khai báo cáo. Lúc bấy giờ ông ấy không còn đóng vai trò là người tiêu dùng cuối
+[14:41] nữa mà lúc đấy chuyển sang cô này. Nếu cô này dừng lại ở đó thì cô ấy là người
+[14:47] tiêu dùng cuối. Nhưng nếu cô ấy lại lừa bán cho thằng cha này
+[14:51] thì cũng như vậy. Cái tiến trình nó cứ lặp đi lặp lại như thế. Vậy thì nó cứ
+[14:55] cái anh nào nó dừng ở đâu anh không ta không đẩy hóa đơn ra nữa
+[15:00] thì đó được xác định là người tiêu dùng cuối và đó là cái người phải trả cái
+[15:06] tiền thuế đấy. Thế thì đấy là cái phân tích một chút về bản chất nội hàm của
+[15:13] sắc thuế. Và với bản chất nội hàm như vậy giải quyết được câu chuyện đâu là
+[15:18] giá trị tăng thêm và đâu là người phải trả tiền thuế. Và để giải quyết được
+[15:23] những câu chuyện như vậy, nhà nước thu được thuế thì nó phải thông qua chế độ
+[15:27] phải hóa đơn. Như vậy đối với thuế giá trị gia tăng về mặt văn bản pháp lý các
+[15:32] anh chị về phải gì ạ? Tìm cho bằng được luật thuế đâu, nghị định nào, các thông
+[15:37] tư nào hướng dẫn. Được chưa? Đấy. Thế và trong các trường hợp vướng mắc thì đi
+[15:42] tìm các công văn người ta trả lời thì đó là cái dòng tư duy về mặt văn bản pháp
+[15:48] lý liên quan đến thuế giá trị gia tăng. Nhưng đối với lại thuế giá trị gia tăng
+[15:53] thì cái vướng mắc nhiều nhất nó đôi khi lại không nằm ở luật
+[15:59] mà nó nằm ở cái này, nằm ở chế độ hóa đơn. Đấy. Và chế độ hóa đơn thì trước
+[16:06] kia là hóa đơn là phải lên cơ quan thuế đúng không ạ? Mua một cái sổ nó gọi là
+[16:12] sổ mua hóa đơn giống như ngày xưa người ta phát sổ gạo.
+[16:15] Xong rồi là anh phải lên làm vấn đề là làm cái đề nghị mua hóa đơn. Thế mua
+[16:20] xong người ta bán cho từng cuốn một thì mới về gì ạ? Mới ngồi trên cơ quan thuế
+[16:24] mới đóng dấu tại chỗ đấy. Đóng dấu tại chỗ xong rồi mang về sử dụng dần và dùng
+[16:29] đến đâu thì báo cáo đến đó. 19.500 đồng một cuốn và cực kỳ khổ, vô cùng khó
+[16:34] khăn. Đến kỳ mua hóa đơn thì bác các vị nào từng đi mua hóa đơn thì sẽ biết rồi
+[16:38] ngồi trầu trực ở trên cơ quan con thuế như thế nào để mua. Và cái điều đấy nó
+[16:42] kết thúc vào năm 2010 khi lúc đấy giờ là cái nghị định số 51.
+[16:51] nghị định 51 và sau này thay thế bằng nghị định số 04 đúng không? Đấy thì cái
+[16:56] nghị định 51 và được hướng dẫn bởi cái thông tư 153
+[17:00] đấy là thay thế hoàn toàn cái chế độ hóa đơn theo kiểu lên cơ con thuế để mua mà
+[17:06] người ta trao lại cái quyền chủ động về việc phát hành và sử dụng hóa đơn cho
+[17:11] doanh nghiệp. Giống như từ năm 2015 trở lại đây, người ta giao lại cái quyền chủ
+[17:16] động phát hành con dấu, tức là đặt mẫu dấu và thông báo sử dụng mẫu dấu trở về
+[17:22] cho doanh nghiệp. Chứ trước kia chúng ta thành lập doanh nghiệp là khi thành lập
+[17:26] doanh nghiệp xong nó kèm theo một cái cái con dấu thì nó có cái giấy chứng
+[17:29] nhận sử dụng mẫu dấu. Anh nào thành lập trước năm 2015 thì sẽ biết chuyện đó.
+[17:34] Nhưng nếu thành lập sau này thì nó không còn cái chuyện đó nữa. Nó không còn cái
+[17:36] chứng nhận đó nữa đúng không ạ? Mà anh sẽ thực hiện cái việc là tôi về tôi khắc
+[17:40] con dấu vuông tròn gì đó. Đó là chuyện của tôi đấy. Và với cái chuyện của tôi
+[17:44] như thế thì tôi chỉ cần thông báo với sở các bách đầu tư là tôi sẽ sử dụng cái
+[17:47] mẫu đấu dấu đó. Và như vậy là được. Nghĩa là trước kia là nhà nước quản lý
+[17:52] hoàn toàn cả con dấu của chúng ta. Còn ngày nay con dấu là của chúng ta. Thậm
+[17:57] chí bây giờ chúng ta khác mấy dấu mấy con dấu cũng được đúng không ạ? Một cái
+[18:00] đút vào túi vào cặp thế này, đi cà phê xong bắt đầu là ngồi gọi điện thoại thế
+[18:04] này. Bạn gái ngồi bên cạnh bắt đầu rút giấy tờ ra đóng dấu phạch phạch trên bàn
+[18:07] ấy cho nó oách. Thì đấy là cái cơ chế dần dần là người
+[18:13] ta chuyển cái sự bị động của doanh nghiệp trở về cái quyền chủ động cho
+[18:18] doanh nghiệp. Nhưng đó là luật chứ thực tế thì còn khó khăn lắm. Ở chỗ
+[18:25] là bây giờ nói rằng con dấu là của doanh nghiệp nhưng đã mấy thằng nào dám khắc
+[18:29] cái dấu không tròn đâu đúng không? Trừ những ông doanh nghiệp
+[18:33] lớn hoặc là chúng ta thấy dạng này như là Vin Vincom Vinfat ấy là gì ạ? Nó giấu
+[18:37] là hình logo của nó luôn. Còn chúng ta không chúng ta không dám.
+[18:42] Tại sao chúng ta không dám? Vì giống hệt câu chuyện hóa đơn năm 2011
+[18:48] khi mà chuyển đổi từ hóa đơn phải mua của cơ con thuế tức là hóa đơn có ba
+[18:52] liên tím, đỏ và màu xanh. Sau này chuyển sang hóa đơn được in bằng phần mềm và in
+[18:58] bằng giấy in giấy giấy trắng giấy A4 thông thương. Đây n thì hàng đi trên
+[19:03] đường công an hỏi hóa đơn đâu nó chìa cái tờ giấy ra. Cái này không phải hóa
+[19:07] đơn. hàng ác lại không đi được.
+[19:11] Đấy thì bây giờ con dấu cũng như vậy. Đi giao dịch với nhiều cơ quan doanh
+[19:17] nghiệp, nhiều cơ quan tổ chức người ta bảo rằng là con dấu này là không đúng
+[19:23] mới quy định phải là dấu tròn. Từ xưa đến giờ nó nhìn thấy dấu tròn, dấu củ
+[19:28] khoai khắc xong đóng ngay chứ có bao giờ nhìn thấy cái dấu hình dạng khác đâu.
+[19:32] Cho nên là giữa cái quy định kể cả luật pháp với việc chúng ta thực thi được thì
+[19:37] nó còn một khoảng cách rất là xa. Mặc dù pháp luật và văn bản là rành rành rõ là
+[19:41] như thế. Cho nên cho nên nó mới sinh ra cái cơ chế là cơ chế các doanh nghiệp họ
+[19:46] hay làm sao phòng thủ cho nó chắc nhá. Thôi cứ cái gì như thông lệ thị trường,
+[19:52] thông lệ địa phương thì em làm cho nó dễ đó. Vậy bây giờ quay trở lại một chút
+[19:57] câu chuyện về hóa đơn này nghĩa là trước kia phải đi mua hóa đơn thì bây giờ
+[20:03] doanh nghiệp được phép là khi thành lập xong thì doanh nghiệp tự thiết kế cái
+[20:08] mẫu hóa đơn mà mình mong muốn. Sau đó mới tiến hành cái việc là thông báo cái
+[20:13] mẫu đó cho cơ thuế họ biết rồi đặt nhà in họ in thành từng cuốn để dùng
+[20:20] dần hoặc tự in bằng phần mềm bằng giấy thông thường của chúng ta.
+[20:26] Và cuối cùng có một loại nữa là hóa đơn điện tử. Thì khái niệm hóa đơn điện tử
+[20:32] bắt đầu có từ nghị định số 51 nhưng cho đến thời điểm bây giờ nó mới bắt đầu
+[20:38] được triển khai nha. Tức là đâu đó mất gần 10 năm.
+[20:44] Đâu đó mất gần 10 năm. Vậy bây giờ chúng ta quay về chúng ta nói bắt đầu câu
+[20:48] chuyện đầu tiên liên quan đến thuế giá trị gia tăng.
+[20:52] Quy định và chế độ về hóa đơn VAT.
+[20:59] Thuế giá trị gia tăng có hai phương pháp kê khai báo cáo.
+[21:09] Có hai phương pháp kê khai
+[21:15] và báo cáo. Phương pháp thứ nhất đó là phương pháp trực tiếp.
+[21:22] Phương pháp thứ hai đó là phương pháp khấu trừ.
+[21:30] Và câu chuyện thứ hai đó là chế độ hóa đơn.
+[21:40] Chế độ hóa đơn này nó phục tùng cho hai cái công tác kê khai báo cáo
+[21:46] này. Thế thôi. Vậy bây giờ mọi người nhìn
+[21:50] này. Cảm ơn này.
+[21:56] Kê khai thuế trực tiếp và kê khai thuế khấu trừ
+[22:02] là thế nào? Bây giờ chúng ta phải hiểu thế nào là
+[22:06] trực tiếp, thế nào là khấu trừ đại để sau này lỡ may chúng ta quay trở về
+[22:12] câu chuyện về trực tiếp thì chúng ta biết bản chất của nó là gì, có phải cái
+[22:16] gì nó ghê gớm hay không. Bởi vì thông thường từ trước đến nay doanh nghiệp
+[22:19] sinh ra một cái là trong các năm trước nó có cái mẫu 06
+[22:23] kế toán còn nhớ không ạ? Đúng không? À là cứ đến tháng 12 là lập tức là làm cái
+[22:30] mẫu 06 là đề nghị với quý cơ quan thuế là cho phép em tự nguyện thực hiện theo
+[22:34] phương pháp khấu trừ. Người ta đủ điều kiện nào đó thì cho
+[22:38] người ta khấu trừ luôn thì tự nhiên bày vẽ ra cái thông tư cái mẫu 06 xong thực
+[22:43] hiện được mấy năm bây giờ bỏ đúng không? Mà ông nào quên không nộp cái đó cái là
+[22:48] đến sang năm hết hóa đơn phát hành hóa đơn nó không cho phát hành.
+[22:55] Vậy bây giờ bản chất chúng ta phải hiểu trực tiếp tho, khấu trừ là thế nào.
+[23:00] >> Đúng rồi.
+[23:02] >> Còn giải thích cái khấu trừ cái nào?
+[23:04] >> Khấu trừ thì là sẽ là khấu trừ giữa đầu ra và đầu vào à như lúc thầy nói lúc
+[23:11] trước đấy. Đầu ra là 100 và đầu vào 90.
+[23:15] >> Ừ. Trực tiếp là thế này nhá. Trực tiếp là
+[23:20] không quan tâm đồ vào ông mua là cái thứ gì.
+[23:23] không quan tâm đầu vào mua giá trị là bao nhiêu, cứ bán hàng ra một cái là căn
+[23:27] theo doanh thu bán ra là chích luôn một tỉ lệ phần trăm nhất định theo định mức
+[23:32] tỉ lệ thuế suất
+[23:34] >> của thông tư số 2019 là quất luôn. Ví dụ ví dụ xây dựng có
+[23:42] bao thầu vật tư là 5%, kinh doanh hàng hóa thương mại thông thường là 2%.
+[23:48] Một số loại dịch vụ, một số loại khác là 1%.
+[23:51] Một số loại cung cấp dịch vụ hay là xây lắp mà không bao thầu vật tư là 3%. Nó
+[23:55] chỉ có là 1 2 3 5. Đấy là không nó không cần quan tâm là ông có đầu vào hay
+[24:02] không, cũng không cần quan tâm là đầu vào bao nhiêu, cũng chỉ cần quan tâm là
+[24:06] doanh thu bán ra bao nhiêu, trích luôn một tỉ lệ tuyệt đối cho doanh thu đó, kê
+[24:10] khai nộp luôn. Thì đó là đó là gì ạ? Đó là kê khai báo cáo thuế theo phương pháp
+[24:17] trực tiếp. Trong rất nhiều trường hợp hoặc quy mô
+[24:21] doanh nghiệp nhỏ mà đầu vào nó không đều hoặc không đủ điều kiện để lấy đồ vào
+[24:26] lời khuyên làm trực tiếp luôn đi cho nó nhẹ.
+[24:30] Đừng cố gắng khấu trừ làm gì cả. Vậy tại sao tôi lại nói là đừng cố gắng khấu trừ
+[24:35] trong khi cả làng là gì ạ? Nhao lên là cho em khấu trừ với.
+[24:41] Vậy ta hiểu bản chất của khấu trừ là thả gà ra đuổi
+[24:47] nhé. Chứ không sung sướng gì lắm đâu. Thế nào khấu trừ là thả gà ra đuổi.
+[24:53] Bây giờ tôi lấy một cái ví dụ này. Trở lại câu chuyện ví dụ tôi kinh doanh
+[25:01] nước được chưa? Tôi mua một lô một xe là 1000 chai nước
+[25:07] này. Mỗi chai là 5000. Mỗi chai là 5000đ.
+[25:13] 1000 chai là bao nhiêu ạ? 5 triệu.
+[25:15] >> Ui giỏi thế. Thì nếu trong trường hợp không tính thuế
+[25:20] chỉ có 5 triệu đồng đúng không ạ? Nhưng nếu tính thuế tức là cái ông sản xuất
+[25:26] khi ông bán cho tôi ông có tính thuế giá trị gia tăng giả sử nó chịu thuế 10% thì
+[25:30] để mua chót lọt được cái lô này tôi phải trả ra bao nhiêu ạ?
+[25:35] >> 10% tiền thuế là 5 triệu. Nghĩa là 5 triệu tiền hàng và 500.000 tiền thuế.
+[25:41] Không cần biết là tôi mua về để uống hay tôi mua về để bán ra hay tôi mua về để
+[25:46] làm gì hay tôi mua về để tích chữ. Cứ là gì ạ? Ngay tại thời điểm mua tôi đã phải
+[25:52] ựa ra 500 đã. Đúng chưa nào? Rồi. Thế thì cái 500 đầu
+[25:58] tiên tôi phải trả ra như vậy. Người ta gọi là tạm trả thuế. Vì nguyên lý của
+[26:04] thuế là thu và tính tại nơi nó phát sinh chứ không theo quá trình. Nghĩa là cái
+[26:11] ông bán nước cho tôi, ông ấy bán cho tôi thì trách nhiệm của ông là thu ngay tiền
+[26:14] thuế của tôi cái đạ. Còn cái chuyện tôi mang về tôi bán được hay không, tôi làm
+[26:18] cái chuyện gì đấy là chuyện của tôi đúng không ạ? À rồi thế thì thì khi mà tôi
+[26:23] mua vào 5000 với giá 5 triệu tôi tạm trả 500. Bây giờ tôi mang nước vào tôi nhập
+[26:30] về kho, tôi chờ tôi bàn thì có phải không? Tôi tạm trả 500.
+[26:37] tạm trả 500.000
+[26:43] xong tôi chờ bán. Nếu tôi đã đơn vị kinh doanh, tôi chờ
+[26:47] bán ra. Vậy khi nào tôi bán được cơ, khi nào tôi bán được thì tôi mới lại thu
+[26:54] cái tiền thuế, thu tiền thuế
+[26:59] của bên mua. Không cần biết đó là bên tổ chức hay bên
+[27:03] cá nhân hay bên gì. Tôi tôi đang nói làm đúng nhá. Còn các
+[27:06] bố bán hàng không sốt hóa đơn thì tôi không nói.
+[27:09] Vậy bây giờ giả sử tôi bán ra gì ạ? Tôi mua 1000 nhưng tôi bán được 500
+[27:15] chai với giá là 6.000đ.
+[27:20] Vậy ở cái lô này tôi phát sinh là gì? Thuế là 3 triệu.
+[27:25] Vậy à xin lỗi tiền hàng là 3 triệu cộng với tiền thuế là 300.
+[27:31] Vậy thì bây giờ mọi người nhìn này, 500 tôi tạm trả đầu vào.
+[27:36] Tôi bán được sáu mua mua vào 10 1000 chai và tôi mới bán được có 500 chai.
+[27:42] Vậy thì tôi còn tồn kho bao nhiêu ạ?
+[27:45] >> Tôi còn tồn kho 500. Tồn kho 500 chai và doanh thu bán ra tôi
+[27:51] mới thu được có 3 triệu nhưng tiền thuế bán ra tôi mới thu được có 300k
+[27:55] là 300.000. Vậy khấu trừ có nghĩa là đáng nhẽ ra tôi phải nộp hết 300 này vào
+[28:01] nguyên sách nhà nước chứ gì. Nhưng vì tôi tạm trả khâu đồ vào 500,
+[28:07] nhà nước cho phép tôi cấn trừ hai khoản này với nhau gọi là khấu trừ lại nhá.
+[28:14] Bây giờ tôi bù trừ giữa hai khoản này tôi vẫn còn âm bao nhiêu?
+[28:18] >> -200k. -200k này về mặt bản chất nhà nước đang
+[28:24] cầm tiền của chúng ta. có phải không? Về mặt bản chất là chúng
+[28:29] ta đưa tiền trước. Nhưng nhà nước cũng khổ một cái là ông ấy đứng giữa cũng
+[28:34] không biết là cái thằng nó bán cho ta nó đã nộp cái này chưa
+[28:38] nó. Cái thằng này là nhà bên đơn vị bán nó cầm của chúng ta này. Nhưng chuyện nó
+[28:43] đã kê khai nộp hay chưa là chúng ta cũng không biết. Cho nên nhà nước mới réo dắt
+[28:47] thằng này là mày phải kê khai nộp ngay. Đúng chưa? Nhưng nếu trong trường hợp
+[28:50] đầu vào của thằng này cũng lại lớn hơn 500 thì cứ như thế nó gánh gồng lẫn nhau
+[28:55] giữa khâu này với khâu khác. Nhưng giả định rằng ở lúc trước kia thằng này nó
+[29:00] cũng nộp đủ cái này vào ngân sách nhà nước là 500 rồi thì ở lúc đầu ra chúng
+[29:04] ta mới thu được có 300. Vậy thì đâu đó nhà nước đang giữ của chúng ta 200.
+[29:09] Vậy khi mà người ta giữ của chúng ta 200 thế này này thì trong quy định của luật
+[29:13] thuế nó có điều khoản là nếu khấu trừ không hết thì để kỳ sau trừ tiếp.
+[29:21] Rõ không? Nhưng nếu trong trường hợp giả sử chỗ này tôi bán hết đi 1000 thì có
+[29:26] phải là thuế đầu ra của tôi là bao nhiêu? 600. Tôi mang 600 tôi cấn trừ với
+[29:32] 500 đầu vào chênh 100 nộp luôn vào ngân sách không được trễ ngày nào.
+[29:38] Nghĩa là nếu chúng ta thu được thuế của bên mua, cân với thuế của bên vào mà có
+[29:43] phần chênh lệch thì ngay lập tức phải nộp liền. Mà nếu không nộp liền thì sao?
+[29:50] Tính phạt nộp trận. À phạt nộp chậm.
+[29:56] Phạt chậm nộp. Phạt chậm nộp này ngày xưa là 0.05%
+[30:02] tính trên 1 ngày trên số tiền nộp chậm. Ngày nay là bao nhiêu?
+[30:07] >> 0.03% tính trên 1 ngày trên số tầm tiền nột
+[30:11] chậm trong 90 ngày đầu. Còn sau 90 ngày lại trở về 0.05.
+[30:18] Nhưng thông thường thì khó lắm. Chúng ta không nợ được tiền thuế lâu thế đâu. Trừ
+[30:23] trường hợp chúng ta rơi vào loại mà đã cưỡng chế tài khoản rồi mà vẫn không có
+[30:28] tiền nổi. Chứ thông thường đã nợ thuế là chúng ta bị dục này, bị gọi này, bị yêu
+[30:35] cầu giải trình bổ sung hồ sơ này đúng không ạ? Yêu cầu xuất trình bổ sung hồ
+[30:39] sơ là xuất trình đồ ra đồ vào này. Đấy. Sau đó là gì ạ? Thông báo nộp xong trong
+[30:43] vòng 30 ngày mà không có tiền nộp một cái thì cái việc đầu tiên hoặc có những
+[30:47] chỗ không cần đến 30 ngày đâu. Người ta sẽ thực hiện ngay các biện pháp cưỡng
+[30:51] chế thuế. Mà biện pháp cưỡng chế đầu tiên là biện pháp cưỡng chế tài khoản.
+[30:58] Cưỡng chế tài khoản tức là nó ra văn bản yêu cầu ngân hàng đóng băng tài khoản
+[31:02] của chúng ta lại tiền vô công tài khoản công ty của chúng ta một cái chúng ta
+[31:06] không được rút ra không được chuyển khoản mà phải đợi trích tiền thuế xong
+[31:10] cái đại thì đấy gọi là cưỡng chế tài khoản. Nếu nó cưỡng chế tài khoản à ông
+[31:17] lại lách bằng cách là ông cho chuyển về tài khoản khác hoặc tài khoản cá nhân. Ở
+[31:20] tài khoản đấy nó không có tiền. Phát thứ hai nó cưỡng chế hóa đơn.
+[31:27] Cưỡng chế hóa đơn. Tức là họ ra một cái thông báo báo trên hệ thống chung của
+[31:32] toàn quốc rằng cái công ty đó hóa đơn của nó không còn giá trị để lưu hành.
+[31:38] Nhưng cái khổ nhất là lúc nó báo nó không báo cho ta, nó chỉ báo trên cổng
+[31:43] thông tin của ngành thuế thế thôi. Và thậm chí chúng ta không biết rằng
+[31:48] mình bị cưỡng chế hóa đời.
+[31:53] >> Họ có trong báo nhưng trong rất nhiều trường nhiều trường hợp là chúng ta nhận
+[31:56] được văn bản thì đã bị cướng chế rồi. Tức là cái thời gian người ta gửi văn
+[32:00] bản từ con thuế đến doanh nghiệp ấy thì nó đã bị cứng chế trước đó rồi. Thế còn
+[32:05] gì ạ? Cưỡng chế hoa đơn thì cũng trong trường hợp như vậy. Cho nên rất nhiều
+[32:09] doanh nghiệp trong hai ba năm vừa qua nó rơi phải một cái trường tình huống là
+[32:12] khách hàng họ phản hồi về là mày ơi chết rồi hóa đơn của mày không còn giá trị sử
+[32:15] dụng nó thông báo không được thì lúc ấy mới biết và tá hỏa ra lúc ấy đã xuất
+[32:19] thêm một hai cuốn nữa rồi và phải tiến hành một bài thu hồi về nhục không thể
+[32:25] nào tả nổi. Thì đấy là cẩn trọng cho cái việc này.
+[32:29] Mà cái việc này ở góc độ về quản trị, ở góc độ về quản trị
+[32:36] thì các anh chị giám đốc nhớ cho tôi đôi khi đôi khi chúng ta không muốn trầy bừa
+[32:43] và nợ tiền thuế đâu. Nhưng nó có một số lỗi thuộc về quản trị mà các anh chị cần
+[32:47] phải nhớ về để quản lý nhân viên của mình. Việc một là khai nhầm.
+[32:54] Khai nhầm thuế có triệu nó quất phát 1 tỷ đúng không ạ? Thừa một con số.
+[33:00] Một là khai nhầm. Thứ hai, cái nguyên nhân thứ hai dẫn đến việc chúng ta không
+[33:05] đủ tiền để nộp thuế ngay lập tức tại thời điểm nộp thuế. Đó là do gì ạ? Không
+[33:10] có sự chuẩn bị. Không có sự chuẩn bị.
+[33:20] Vậy khai nhầm thì tôi không nói rồi nhé. Thứ hai là không có sự chuẩn bị là thế
+[33:24] nào? Ví dụ hiện nay kỳ kê khai báo cáo thuế giá trị gia tăng nếu doanh thu của
+[33:30] năm trước liền kề là trên 50 tỷ là kỳ khai tháng mà đã là kỳ khai tháng là
+[33:35] ngày 20 của tháng kế tiếp kỳ khai quý là ngày 30 của quý kế tiếp
+[33:43] thế nhưng mà bây giờ thường ấy nhiều doanh nghiệp là dùng dịch vụ kế toán
+[33:46] thuê ngoài thế là gì ạ nó cứ làm giết giết giết giết hết tận cái ngày cuối
+[33:51] cùng thậm chí chữ cái số cũng đưa cho nó phải không hoặc giữa cái số đưa cho nhân
+[33:56] viên nhân viên mang về nhà thế là đợi đến ngày cuối cùng nó mới nhoáng nhoàng
+[33:59] nó làm cái tờ khai nộp cái vụp phát lên thế là phát sinh nghĩa vụ nộp thuế liền
+[34:05] và nó nộp ở cái ngày cuối cùng đấy thì về mặt nguyên tắc đúng cái ngày nộp tờ
+[34:09] khai đấy chính là cái ngày anh nộp thuế luôn đúng
+[34:16] vậy thì cần có sự chuẩn bị nghĩa là doanh nghiệp
+[34:22] phải yêu cầu bộ phận kế toán nhân viên kế toán hoặc bên cung cấp dịch vụ kế
+[34:26] toán trước cái thời hạn mà kê khai nộp thuế
+[34:30] đó ít nhất một tuần ít nhất nhá là phải tạm báo cho các anh chị biết dự kiến số
+[34:38] tiền thuế sẽ phải nộp trong kỳ này đối với thuế giá trị gia tăng
+[34:42] vì rất có thể thuế phải nộp kỳ này là 2 tỷ
+[34:48] nhưng tại cái ngày nó đẩy tờ khai lên tôi không có tiền nhưng nếu tôi có sự
+[34:53] chuẩn bị trước một tuần trước đó 10 ngày trước đó thì tôi biết số tiền thuế là
+[34:57] bao nhiêu để tôi cân đối lại cái tiền thì đây là động thái mà doanh nghiệp nên
+[35:02] làm là luôn luôn yêu cầu kể cả các anh chị thuê ngoài dịch vụ kế toán hay nhân
+[35:08] viên các anh chị tự làm thì nhớ cho tôi nếu khai anh chị khai theo tháng ngày 20
+[35:14] hết hạn đấy thì đâu đó vào khoảng ngày 12 là phải tạm báo cho các anh chị biết
+[35:18] số tiền rồi tránh trường hợp là bụp một phát đến ngày 20 nó anh ơi hôm nay em
+[35:22] nộp t khai thuế xong Xong rồi nhá. Tiền thuế h nộp 2 tỷ mẹ mày chết rồi. Ngay
+[35:27] làm l tức làm sao đây có tiền 2 tỷ đây. Đấy hoặc là thậm chí này đôi khi chúng
+[35:32] ta thuê dịch vụ kế toán thuê ngoài người ta nộp tờ khai xong chúng ta cũng đâu có
+[35:37] biết vì ngày xưa còn ký tá đóng dấu chứ bây
+[35:41] giờ là gì? Nó khai xong chữ cái số nó cũng cầm luôn đúng không? Nó nộp.
+[35:46] Nó nộp xong rồi nó cũng chẳng báo với chúng ta là gì? Phải nộp thuế hay không
+[35:50] phải nộp thuế. treo luôn ở đấy. Sau đó thì bị phạt một trận. Trường hợp này nó
+[35:55] xảy ra khá nhiều trong đôi 3 năm vừa qua. Đặc biệt ở những nơi hoặc doanh
+[35:59] nghiệp nào chưa thực hiện nộp thuế online, vẫn mang ra ngân hàng với các
+[36:03] thứ để nộp đấy. Đấy thì ở cái chỗ này là chỗ tôi đưa ra cái lời khuyên nhỏ như
+[36:10] thế ở cương vị giám đốc và người quản lý doanh nghiệp thì các anh chị nắm được.
+[36:14] Rồi bây giờ quay trở lại ta vừa mới quay vừa mới thông qua nhau được thế nào là
+[36:19] trực tiếp và thế nào là khấu trừ. Vì thuế giá trị gia tăng có hai phương
+[36:38] pháp kê khai là trực tiếp về và khấu trừ. Cho nên cho nên thằng nó mới có các
+[36:43] loại hóa đơn sau đây này. Thằng nào kê khai theo phương pháp trực tiếp thì anh
+[36:48] sử dụng hóa đơn bán hàng. Ông nào kê khai khấu trừ thì ông sử dụng
+[36:56] hóa đơn giá trị gia tăng. Vậy thì về mặt bản chất cả hai loại hóa
+[37:06] đơn này đều là hóa đơn giá trị gia tăng. nhỉ? Hóa đơn bán hàng hoặc hóa đơn bán
+[37:14] hàng thông thường ấy về mặt bản chất nó cũng là hóa đơn giá trị gia tăng nhưng
+[37:20] đó là hóa đ đơn giá trị gia tăng tính theo phương pháp trực tiếp nghĩa là
+[37:24] không có phân biệt tách biệt giữa tiền hàng và tiền thuế và được hiểu rằng giá
+[37:29] thanh toán đã bao gồm thuế trong đó. Còn ông nào kia khai khấu trừ thì vì nó
+[37:37] phải liên quan đến cái động thái là đầu vào với đầu ra trừ cho nhau. Cho nên cái
+[37:41] loại hóa đơn thứ hai là gọi là hóa đơn giá trị gia tăng thì nó có phân biệt ra
+[37:47] tiền hàng và tiền thuế diệc. Cái mà chúng ta vẫn thường sử dụng đấy.
+[37:53] Thì chúng ta nắm được cái này để chúng ta biết rằng nếu doanh nghiệp chúng ta
+[37:55] muốn kê khai theo phương pháp trực tiếp thì phải sử dụng hóa đơn bán hàng chứ
+[37:59] không phải sử dụng hóa đơn giá trị gia đặc.
+[38:02] Thế còn nếu trong trường hợp chúng ta sử dụng hóa đơn bán hàng à sử dụng khấu trừ
+[38:07] thì phải sử dụng hóa đơn giá trị gia tăng. Bản chất của nó đều là hóa đơn giá
+[38:11] trị gia tăng nhưng dùng cho hai phương pháp. Ngoài ra thì tất cả các loại tem
+[38:17] vé thẻ như vé gửi xe, vé xe lựa vé tàu hòa, vé xe buýt,
+[38:23] phí cầu đường, vé máy bay thì đó là các loại hóa đơn giá trị gia tăng đặc biệt
+[38:29] thuộc vào loại tem vé thẻ. Biên lai đã là tem vé thẻ biên la thì nó được nới
+[38:35] cái điều kiện ra đó là không cần thiết phải ghi tên của thằng mua ở trên đó.
+[38:39] Nghĩa là cứ phát hành ông xé thôi. Xé thôi. Anh chị hình dung à. Thì đấy là
+[38:44] tem vé thể cũng là hóa đơn. Một số cái hoạt động khác như là chúng
+[38:51] ta nhập khẩu hàng về. Chúng ta nhập khẩu hàng về thì nó không
+[38:56] có cái hóa đơn giá trị gia tăng ở khâu nhập khẩu. Vậy chủ doanh nghiệp hỏi thế
+[39:00] thì tôi khấu trừ bằng kiểu gì? À lúc đấy người ta dùng tờ khai hải quan và chứng
+[39:07] nộp tiền và ngân sách nhà nước cho thuế giá trị gia tăng ở khâu nhập khẩu gọi là
+[39:11] giấy nộp tiền và ngân sách. Hai cái thứ đó cộng vào với nhau nó thay thế cho hóa
+[39:17] đơn giá trị gia tăng ở khâu nhập khẩu. Anh chị rõ chưa?
+[39:23] Vậy thì nghĩa là nếu như cô chỉ có nguyên cái tờ khai hải quan mà chưa có
+[39:27] giấy nộp tiền vào ngân sách nhà nước, nghĩa là chưa trả thuế ở khâu gì mua vào
+[39:33] thì không được xác định đó là đã đủ điều kiện khấu trừ thuế. Vì thực
+[39:39] chất khấu trừ thuế là người ta chỉ trả tiền lại, tức là chỉ cho phép khấu trừ
+[39:44] trong trường hợp anh đã trả tiền thuế trước đó.
+[39:49] Chứ nhiều doanh nghiệp chưa trả tiền thuế trước đó mà cứ đòi là em có được
+[39:52] khấu trừ hay không thì không được. vì cái bản chất rằng là chỉ được khấu
+[39:57] trừ trong trường hợp tôi đã trả tiền thuế cho nên nó mới có cái quy định
+[40:03] là tại cái thời điểm mà kiểm tra
+[40:09] thuế đối với các khoản công nợ
+[40:15] phải trả mà chưa trả
+[40:22] và quá cái hạn thanh toán của hợp đồng
+[40:29] thì anh không còn được khấu trừ nữa. Không khấu trừ.
+[40:37] Điều này nghĩa là sao? Ví dụ năm trước tôi mua hàng của ông này với
+[40:43] giá là 3 tỷ đồng tôi mới trả cho ông ấy 1 tỷ. Tôi còn nợ ông ấy 2 tỷ
+[40:48] đúng không? Và thời hạn thanh toán cái 2 tỷ đấy giữa chúng tôi thỏa thuận với
+[40:52] nhau chỉ là 2 tháng thôi, tức là 60 ngày. Nhưng tại thời điểm hiện tại các
+[40:56] con thuế kiểm tra tại doanh nghiệp của tôi, họ phát hiện ra một khoản 2 tỷ của
+[41:01] ông này mà tôi chưa trả. Mặc dù ông đã phát hành hóa đơn đủ 3 tỷ cho tôi rồi
+[41:05] nhưng số tiền 2 tỷ còn lại tôi chưa trả. Thì cái tiền thuế đầu vào ứng với 2 tỷ
+[41:11] đó, người ta yêu cầu tôi điều chỉnh tạm thời chưa được khấu trừ. Vì về mặt bản
+[41:16] chất tôi đã trả cho ông ấy đâu. Hiểu ý không? Cho nên lúc đấy nó sẽ gặp
+[41:22] phải một trường hợp là người ta yêu cầu chúng ta nộp ngay cái này đã.
+[41:27] Và nếu nộp ngay cái này thì sẽ tính lùi lại thời gian từ thời điểm này đến cái
+[41:33] thời gian mà tôi phát sinh nợ với ông kia là hơn 1 năm đó. Tính luôn tiền nộp
+[41:37] chậm các thứ luôn nhé. Thế bảo nhưng mà sau này tôi lại trả tiền cho ông kia thì
+[41:42] sao? Vì tôi có ăn được của ông ấy đâu. Sau này trả, lúc nào trả lại điều chỉnh
+[41:48] vào để khấu trừ cho kỳ kế tiếp. Còn tại thời điểm hiện tại dù đã có hóa đơn rồi
+[41:53] nhưng tôi chưa trả thì làm sao? Thì không được không trời.
+[41:59] Thì đấy tất cả các anh chị thấy không ạ? Tất cả các quy định nào đó nó rất lẻ tẻ
+[42:05] nhưng suy cho cùng thì nó đều giải quyết một câu chuyện bản chất của xác thuế đó
+[42:12] là trực tiếp hoặc khấu trừ. Mà khấu trừ về mặt nguyên lý của khấu trừ là chỉ
+[42:17] khấu trừ cho những gì đủ bằng chứng nó phát sinh mà tôi đã phải trả tiền ở
+[42:25] trong quá khứ. Cho em hỏi chút là trong trường hợp mà mình lại xuất hóa đơn ra
+[42:30] trước mà cái đơn bên vị kia nó chưa chuyển tiền cho mình ấy
+[42:33] >> thì mình cứ phải nộp luôn cái đã.
+[42:35] >> Vâng.
+[42:36] >> Không phân biệt anh đã thu tiền được hay chưa. À đấy là trường hợp lúc trước nó
+[42:40] nói ví dụ ông này là đầu vào mà bây giờ cậu hỏi là chuyện đầu ra đúng không?
+[42:44] >> Đầu ra cũng thế cứ xuất hóa đơn một cái không phân biệt ông đã thu được tiền hay
+[42:47] chưa.
+[42:49] >> Chỉ cần biết là có phát sinh hóa đơn tức là anh ghi nhận doanh thu là lập tức gì
+[42:54] à tính vào lộp thuế luôn. Cho nên là gì ạ? Cái điều đấy nó lý giải tiếp một cái
+[42:59] chuyện nữa mà các anh chị nhớ không? Trong quản lý tài chính cái công nợ nó
+[43:02] đè chết anh chị liền này.
+[43:05] >> Bán hàng ra tiền thì chưa thu được nhưng mà gì ạ?
+[43:09] >> Thuế nộp rồi. Đấy.
+[43:13] Bây giờ này trở lại hóa đơn. Đối với câu chuyện về hóa đơn thì về mặt
+[43:20] hình thức đấy là các loại hóa đơn nhé. là hóa đơn bán hàng, hóa đơn giá trị gia
+[43:24] tăng. Vậy bây giờ phân biệt một tí đã rồi mới lại nói cái khác. Bây giờ phân
+[43:29] biệt giữa hóa đơn bán hàng và hóa đơn giá trị gia tăng, các anh chị phân biệt
+[43:31] bằng kiểu gì? Ở trên góc phải của tờ hóa đơn nhé. Nó
+[43:44] có các thông tin như sau. Nếu hóa đơn mà nó có cái loại hóa đơn nó
+[43:48] ghi ví dụ 01 GT
+[43:54] GT là số thứ tự thứ nhất
+[44:00] giá trị gia tăng xin lỗi GTKT
+[44:05] >> GTKT là 01 là loại thứ nhất này số thứ tự thứ
+[44:10] nhất thôi. Giá trị gia tăng theo phương pháp khấu trừ. Còn nếu trên góc phải của
+[44:15] hóa đơn nó ghi là 02 GTT
+[44:19] là giá trị gia tăng theo phương pháp trực tiếp
+[44:23] đấy. Hay là ví dụ cái ký hiệu hóa đơn người ta ghi thế nào nhỉ anh chị?
+[44:31] Ký hiệu hóa đơn ví dụ nó ghi là à ví dụ SC
+[44:41] gạch gì hai chữ cái đầu ấy hay là gì ạ? AA gì đấy?
+[44:50] 48
+[44:54] >> À ví dụ như là aa 18
+[45:00] >> p điều này nghĩa là gì? Hai chữ cái đầu
+[45:05] này do doanh nghiệp tự đặt. Muốn đặt thế nào thì đặt.
+[45:10] Miễn là nó là chữ cái trong bảng chữ cái tiếng Việt. Như vậy không có J không có
+[45:15] Z. Được chưa? 18 hay 17 hay 11 hay 12. Hai con số này
+[45:22] là hai số cuối của cái năm
+[45:27] >> năm mà doanh nghiệp phát hành. Thế còn chữ P cuối này là cái gì anh chị?
+[45:34] Chữ P cuối này là nó ám chỉ rằng hóa đơn này được phát hành theo hình thức đặt
+[45:40] in. Nếu nó là chữ T thì là ám chỉ rằng hóa
+[45:46] đơn này phát hành theo hình thức tự in. Nếu nó là chữ E, tức là doanh nghiệp
+[45:52] đang sử dụng hóa đơn điện tử nhưng chữ E là in chuyển đổi để mắt người có thể
+[45:57] nhìn thấy. Vậy bây giờ ta lại phân biệt thêm một
+[46:02] chút nữa. Chúng ta làm thế nào để phân biệt được
+[46:07] đâu là hóa đơn đặt in và đâu là hóa đơn tự in.
+[46:12] Chúng ta phân biệt về mặt bản chất đi, đừng nhìn về hình thức nữa.
+[46:17] Tại sao tôi phải đặt vấn đề này ra dù nó nhỏ thôi? Tôi hỏi rất nhiều các ông giám
+[46:21] đốc là ông ơi, ông mới thành lập doanh nghiệp thế thì bây giờ công ty ông sử
+[46:24] dụng hóa đơn đặt in hay tự in? Bên em tự in hết.
+[46:28] >> Bên anh tự in hay đặt in?
+[46:30] >> Đặt in.
+[46:31] >> Vì sao anh biết nó đặt in?
+[46:33] >> Thu ngoài in.
+[46:36] >> Thuê ngoài in đúng không? Đó là chúng ta dựa vào hình thức thôi
+[46:44] chứ không vào bản chất. Đặt in là thế này ạ. Đặt in là cấp số
+[46:56] trước dùng sau thì là đặt in bất biết bằng cách nào.
+[47:01] Cấp số trước nghĩa là anh tạo ra sẵn thành từng quyển hoặc thành từng sập
+[47:05] từng sấp thế này mà anh có số trước trên đó.
+[47:09] dùng đến đâu thì anh cứ thế anh dùng trong cái kho số đấy thờ. Thế còn tự in
+[47:15] là tôi in đến đâu mới cấp số đến đó thì đó là tự in. Nó phân biệt thế thôi.
+[47:22] Như vậy nô na thì đặt in à tự in là tôi phải sử dụng phần mềm in hóa đơn chuyên
+[47:27] ngành và in bằng máy in thông thường. In bằng
+[47:32] giấy thông thường được chưa? bằng giấy hàng ngày chúng ta in đây này, ký tên nó
+[47:38] cũng dấu và in đến đâu mới cấp số đến đó thì đó gọi là tự in.
+[47:45] Thế nhưng câu chuyện đặt in và tự in sẽ sớm kết thúc. Nó bắt đầu được hướng dẫn
+[47:50] từ ngày mùng 01 tháng 11 năm 2018. Đây là cái mốc. Cái mốc thứ hai là ngày mùng
+[47:58] 01 tháng 11 năm 2020. Đây là hai cái mốc về mặt thời gian tôi
+[48:04] sẽ giải thích. Doanh nghiệp nào thành lập trước ngày
+[48:09] mùng 1 tháng 11 năm nay mà còn đang tồn dư hóa đơn tự in đặt in
+[48:16] trước đó thì cứ dùng hết đi. Nhưng nếu sau cái ngày đó anh dùng hết
+[48:22] rồi anh cần phải phát hành thêm nữa thì không được phát hành nữa. Anh bắt buộc
+[48:28] phải chuyển sang dùng hóa đơn điện tử. Nghĩa là công ty phong thủy của anh đợt
+[48:33] này là điện tử nhá. Nhưng nếu anh chót in quá nhiều ra và
+[48:42] anh vẫn đang tiếp tục dùng thì anh cũng chỉ được dùng tối đa đến ngày mùng 01
+[48:46] tháng 11 năm 2000 trước ngày mùng 01 tháng 11 năm 2019 à năm 2020. Lúc đấy
+[48:52] nếu còn cũng hủy. Rõ chưa? Bây giờ doanh nghiệp nào chót in ra nhiều trục cuốn để
+[48:57] đó để dùng dần thì đến cái ngày này dùng chưa hết cũng hủy chuyển hết sang hóa
+[49:02] đơn điện tử. Và khi sử dụng hóa đơn điện tử thì nó có
+[49:09] những cái yêu cầu và đặc điểm sau. Hóa đơn điện tử.
+[49:22] Hóa đơn điện tử có hai trường hợp. Trường hợp thứ nhất là có mã xác thực.
+[49:31] Trường hợp thứ hai là không mã sát thự. Trường hợp thứ nhất là có mã xác thực.
+[49:40] Trường hợp thứ hai là không mã xác thực. Câu chuyện này tôi sẽ nói kỹ một tí vì
+[49:45] các anh bắt đầu đối diện với nó rồi. Một số cái trò thủ thuật về hóa đơn
+[49:50] trước kia sẽ không còn làm được nữa.
+[49:57] >> Có mã không mã xác thực có nghĩa là thế này là đối với một số ngành hàng đặc
+[50:02] biệt điện nước, viễn thông xăng dầu do nhà nước quy định nhé thì vẫn dùng hóa
+[50:09] đơn điện tử nhưng không cần đóng mã xác thực của cơ thuế.
+[50:14] Nhưng đầu tiên phải hiểu thế nào là hóa đơn điện tử đã. Hóa đơn điện tử là nó
+[50:19] được phát hành dựa trên ứng dụng tin học.
+[50:24] Ứng dụng tin học và ký số.
+[50:30] Cái token key mà chúng ta ký tờ khai á tới đây dùng để ký hóa đơn luôn.
+[50:36] Được chưa? Ứng dụng tin học là cổng thông tin phát hành hóa đơn hoặc phần
+[50:40] mềm tạo được hóa đơn điện tử. hóa đơn điện tử về mặt bản chất thì đó
+[50:44] chỉ là cái ký cái dữ liệu mang thông tin thôi đúng không?
+[50:51] Dữ liệu mang thông tin thôi và cũng phải được truyền cho nhau qua
+[50:56] đường gì? Điện tử. Nói tóm lại là online đúng không? email
+[51:02] hay gì đấy. Thế nhưng các doanh nghiệp còn lại như
+[51:09] của chúng ta bắt buộc phải có một động thái cơ quan thuế họ can thiệp vào có mã
+[51:15] xác thực. Thế nào là mã xác thực? có nghĩa là anh là nhà cung cấp cho tôi,
+[51:21] tôi là khách hàng của anh, anh bán hàng cho tôi, anh xuất hóa đơn điện tử cho
+[51:25] tôi. Nhưng trước khi tôi nhận được hóa đơn đó, anh xuất hóa đơn đẩy về server
+[51:30] hoặc hệ thống tin học của ngành thuế. Họ xác thực hóa đơn đó rồi hóa đơn đó mới
+[51:36] được chuyển đến tôi. Đấy là hóa đơn điện tử có mã xác thực.
+[51:44] Giống như một cái vé hoặc một cái cái tài liệu gì đó mà bây giờ chúng ta nhìn
+[51:49] thấy cái mã vạch hai chiều ở trên cái loại tài liệu đó thì tới đây cái mã xác
+[51:55] thực của chúng ta cũng sẽ được gộp vào cùng với các thông tin của hóa đơn về
+[51:59] ngày tháng năm bên mua, bên bán hàng hóa, giá trị, mã số thuế vân vân nó tích
+[52:05] hợp hết vào đó để nó tạo ra một cái mã và cái mã đó là mã xác thực.
+[52:12] Như vậy thì trước kia hóa đơn tự in đặt in là tôi làm sai đúng không? À gạch cái
+[52:19] rẹt xuất lại cái khác. Nhưng tới đây nếu xác thực thì không làm
+[52:24] thế được nữa. Phải có cái thông báo đề nghị bên kia là
+[52:29] ta đề nghị với cơ quan thuế là tôi hủy rồi mới lại gì cấp lại rồi à lập lại hóa
+[52:35] đơn khác rồi mới xác thực lại chứ không còn dễ dàng như trước kia là
+[52:40] gạch cái red phát xong rồi gì á viết cái khác. Đó là cái thứ nhất mà phải quản
+[52:45] trị thật bài bản nếu không thì cái giá phải trả rất lớn. Đấy là một.
+[52:50] Thứ hai là đã là hóa đơn điện tử thì nó không in phải không?
+[52:57] Nhưng mà hồ sơ kế toán thì vẫn phải kẹp, vẫn phải ghi nhận, vẫn phải làm, vẫn
+[53:01] phải nhìn được bằng mắt thường rằng giá trị bằng bao nhiêu. Thì trong trường hợp
+[53:04] đấy người ta có cơ chế view online, tức là view bằng phần mềm hoặc gì đó. Và
+[53:12] thứ hai vẫn được phép in. Nhưng trong trường hợp đấy người ta gọi là in chuyển
+[53:16] đổi. Hóa đơn in chuyển đổi thì trên góc bên
+[53:23] phải của tờ hóa đơn có chữ E. Nhớ cho cái đó. In chuyển đổi là in ra
+[53:29] giống như tờ hóa đơn thông thường để chúng ta nhìn thấy bằng mắt mình. Và
+[53:32] những cái chúng ta nhìn thấy được là cơ sở để đánh giá xem cái tính xác thực có
+[53:36] đúng hay không. Và khi mà hóa đơn điện tử bây giờ nó có
+[53:41] hiệu lực thì có những câu chuyện sau đây anh chị nhớ cho.
+[53:47] Thứ nhất, từng giây một nhé, tức là thời gian,
+[53:53] giây, phút, giờ, ngày, tháng năm, mã số thuế, thông tin bên mua, bên bãng, hàng
+[53:58] hóa, dịch vụ, hình thức thanh toán gộp hết vào mã vạch. Mà mã vạch này là mã
+[54:04] hai chiều. Nghĩa là anh không lùi ngày xuất hoa đơn
+[54:08] được đâu. Bán ngày nào quất luôn ngày đó. Tức là tại thời điểm phát sinh doanh
+[54:15] thu thì nó mới giải quyết được. Ngay lập tức anh phải bán, anh phải xuất đời.
+[54:21] Thứ hai là không có ngoại lệ. Không có ngoại lệ cho câu chuyện
+[54:29] 200.000. Trước kia hóa đơn bán hàng dưới 200.000
+[54:36] thì người nếu người mua không cung cấp thông tin lấy hóa đơn hoặc không yêu cầu
+[54:40] thì người bán có quyền không xuất hóa đơn cho từng giao dịch nhưng cuối ngày
+[54:44] tổng hợp vào bảng kê và xuất một hóa đơn tổng. Có đúng thế không? Kế toán
+[54:50] bây giờ không có ngoại lệ đó nhé. Dưới 200 cụ xuất tức là cho từng lần luôn chứ
+[54:58] không còn cái chuyện bảng kê như trước kia.
+[55:01] Cho nên ông nào bán nhỏ lẻ thì cẩn thận làm lại ngay nhé. Hóa đơn điện tử không
+[55:10] có ngoại lệ của câu chuyện 200.000. Thế nó vẫn như hóa đơn kia thôi. Nhưng
+[55:17] nhớ cho rằng bây giờ là nó có ba vòng kiểm soát. Vòng thứ nhất là vòng của
+[55:22] thời gian được đóng thẳng vào mã vạch.
+[55:26] Vòng thứ hai là vòng đóng mã xác thực của cơ quan thuế. Tức là ngày xưa chúng
+[55:31] ta tự xuất hóa đơn cho nhau, không cần một thằng nào kiểm chứng.
+[55:36] Ở đây có hai trường hợp đúng anh hỏi câu hỏi này nó hay nó rõ ra được hai cái ý.
+[55:41] Nó rõ ra hai cái ý là thế này. Trường hợp tôi vừa mới nói là trong
+[55:47] trường hợp trong ngày anh bán lẻ người ta không cung cấp thông tin lấy hóa đơn
+[55:52] như trước kia là được tập hợp lại để lập bảng kê cuối ngày. Nhưng anh ấy hỏi một
+[55:56] ý hoàn toàn khác. Cái ý khác đấy nó dành cho những loại doanh nghiệp như sau.
+[56:02] Loại thứ nhất là anh kinh doanh vận tải. Thứ hai là anh dịch giao dịch mua bán.
+[56:08] mua bán. Nhưng mua bán này nó dựa trên một cái nguyên lý là cứ hàng ngày thì cứ
+[56:17] giao nhận với nhau nhưng một tuần 10 ngày hoặc nửa tháng thì tiến hành đối
+[56:22] soát và nghiệm thu với nhau một lần. Còn thằng vận tải nào nó có nhật ký vận tải
+[56:29] cũng trong một khoảng thời gian thì cái đấy các anh phải làm hợp đồng rất rõ với
+[56:32] nhau là đối soát cuối tuần hay đối soát cuối tháng. Rõ chưa? Vậy thì khi nào
+[56:38] hoàn thành cái biên bản ký nghiệm thu toàn bộ cái lượng trong tuần trong tháng
+[56:41] đó thì anh chốt cái biên bản đấy lúc đấy xuất hóa đơn một lần. Nó khác với trường
+[56:46] hợp bảng kê bán lẻ của hóa đơn hàng ngày. Đó chưa?
+[56:51] Nhưng đấy là trong trường hợp tôi nói là nguyên lý.
+[56:57] Đấy là tôi nói nguyên lý thôi nhé. Nhưng mà nếu trong các trường hợp này
+[57:03] mà ở địa phương áp dụng thì cẩn trọng vẫn hơn. Bởi vì giữa một cái gọi là
+[57:09] nguyên lý với cái thực thi thực tế tại địa phương tôi nói thật là nó cũng xa
+[57:13] lắm. Cho nên anh vẫn phải tính đến phương án
+[57:18] là hóa đơn từng ngày anh nhá.
+[57:27] Lát nữa sang phần thuế thu nhập chiều, sang phần thuế thu nhập doanh nghiệp.
+[57:29] Tôi nói cái nghị định số 20 người ta nói về cái giao dịch liên kết và lãi vay
+[57:35] trong trường hợp giao dịch liên kết nhưng nó với cả sang luôn cho cái chuyện
+[57:40] là tất cả các khoản lại vay. Mà trong văn bản này chẳng có cái chỗ
+[57:45] nào nói rõ cái chỗ đây cả. Nó cứ mập mờ thế. Nhưng nếu mình động phát là dính
+[57:49] liền. Đấy thì đây. Ok. Hóa đơn điện tử thế này
+[57:55] được chưa? Thế thôi về chuẩn bị tinh thần làm hóa
+[58:00] đơn điện tử đi nhá. Tới đây trong trường hợp chúng ta còn kho hóa đơn để lữ chữ ở
+[58:05] nhà đó mà dùng chưa hết thì yên tâm đi, dùng hết số đó thôi. Mà nếu số đó đến
+[58:10] ngày 31 tháng 10 năm 2020 mà chưa hết, lập tức cũng hủy, không kéo dài thêm
+[58:15] nữa. Vì thực ra đây là lần kéo dài thờ hạn thứ ba rồi. Đáng nhẽ nó được dùng
+[58:20] liền vào năm 2011 cơ. Và liên quan đến câu chuyện về hóa đơn
+[58:26] điện tử này thì sẽ rất sớm thôi anh chị. Tôi chưa biết đến thời điểm nào nhưng
+[58:31] giá trị thanh toán yêu cầu không dùng tiền mặt hiện nay là 20 triệu phải
+[58:35] không? Sẽ sớm kéo về 10 triệu và sẽ rất sớm
+[58:40] thôi kéo về 5 triệu. Đấy.
+[58:46] Và một loạt các biện pháp khác nữa nhé. thì có nghĩa là có nghĩa là chúng ta
+[58:52] phải tính đi càng sớm minh bạch được càng tốt.
+[58:58] Còn nếu bảo nhưng mà bây giờ em minh bạch ra em không có lời
+[59:02] thì câu chuyện này tôi nói rõ lại với các giám đốc nhiều lần rồi nhưng hôm nay
+[59:06] vẫn nói lại là nếu như doanh nghiệp của anh chỉ tính lời dựa trên phần này thôi
+[59:11] đấy nghĩa là cái mô hình kinh doanh nó không
+[59:14] ổn anh chẳng có lợi thế gì cả anh đang
+[59:18] tranh tối tranh sáng anh ăn được một cái chút cái thặng dư do cái việc cái gì ạ
+[59:23] không rõ ràng về thuế chứ thực chất mô hình kinh doanh rất không ổn chiến lược
+[59:27] được là không là không ổn hoặc quản trị đang rất không ổn thì đấy là cái mà
+[59:31] chúng ta phải nhìn nhận lại một cách sòng phẳng nhá giám đốc nhá một cách
+[59:35] sòng phẳng để tiếp tục kinh doanh ngành đó hay chuyển sang ngành khác đấy là câu
+[59:40] hỏi lớn mà chúng ta sẽ phải đặt ra trong thời gian tới.
+[59:44] Bây giờ quay trở lại tiếp tục với câu chuyện liên quan đến thuế giá trị gia
+[59:47] tăng. Nó có mấy ý sau đây mà nếu không phải
+[59:52] người làm kế toán ở góc độ của giám đốc thì rất dễ hiểu nhầm.
+[59:58] hoặc thậm chí đôi khi kế toán hiểu nhầm xong gà bài cho giám đốc
