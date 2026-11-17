@@ -14,7 +14,8 @@
 - Canonical plan: `.orchestrate/plans/NNN-<slug>.md`, version `<vN>`
 - Approval state: `APPROVED` | `PENDING` | `BLOCKED`
 - Acceptance contract: `.orchestrate/contracts/NNN-<slug>.json`
-- Executor route: `<configured seat or legacy executor>` (default routing: SKILL.md "Model routing")
+- Executor: `<model, chosen when the packet is written: SKILL.md "Model routing"; never one the project forbids>`
+- Advisor: `PLAN_APPROVED <path to the review file>` | `waived by <who> — <reason>` | omit when the plan touches none of queue, lease, retry, backoff, lock, fencing, idempot-, rebalance, offset, outbound, state machine
 - Worktree: `<absolute path root created with git worktree add; the executor works only here>`
 - Ports and scratch: `<ports derived from the packet number, e.g. service 18000+NNN, dev server 5200+NNN; files under /tmp/<repo>-NNN/>`
 - Owned write paths: `<exact files/directories; must not overlap a parallel packet>`

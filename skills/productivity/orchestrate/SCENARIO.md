@@ -69,3 +69,16 @@
 **Sample input:** "Plan the admin for a product that replaces a third-party tool; dispatch packets overnight with an opencode executor; land them."
 **Expected:** the root builds a usage inventory and parity table, and asks the company-wide count for each model concept, before the first plan; Advisor review stops at 2 rounds; a migration number comes from the SPRINT.md table; opencode is launched detached with a log and a usage-limit line triggers hand-over; a rate-limited root schedules a wake-up; land waits for executor gates to finish; a UI packet is reported done only after a walk-through on seeded data beside the reference screen, and locale files pass a deny-list test.
 **Status:** [exit 2 — no real run pasted yet]
+
+## Repeated lessons become checks (rule table, quiet land, forge retry, Advisor gate, wave audit, executor seats)
+
+**Rationale:** in one sprint the root skipped four prose rules and broke an owner-pinned seat; nothing failed. Three of 14 lands failed on timing tests under load and passed on rerun; the forge answered 400 to the merge-request create call seconds after a push with every gate green, `land.sh` hid the response and a rerun repeated 15 minutes of gates; a packet that changed Kafka retry and rebalance semantics was dispatched with no Advisor round; nine packets landed before the owner asked for the audit; a packet went to the root's own model.
+
+**Sample input:** "Dispatch packet 176 (consumer retry and rebalance), then land the wave."
+
+**Expected behaviors:**
+- [x] `orchestration_lint.py --phase dispatch --packet <p> --sprint <SPRINT.md>` fails `ADVISOR_REQUIRED` for a packet in the risk vocabulary with no approved review file or named waiver, `EXECUTOR_FORBIDDEN` for a missing or forbidden executor, `AUDIT_DUE` after more than `audit_every` landed packets since the last `audit:` line.
+- [x] `land.sh` waits for a quiet machine before the gates and exits 3 when it stays busy; retries the create call and prints the forge's response (never the token); `--resume` skips the gates only for the commit recorded green.
+- [x] `references/rules-and-enforcers.md` lists every non-negotiable rule with its enforcer or `prose only`.
+
+**Status:** [PASS — exit 0, scripts only] 2026-11-17: `python3 -m unittest discover -s scripts -p 'test_*.py'` 109/109 passed (76 before). Run against the previous `land.sh` and `orchestration_lint.py`, 29 of the 33 new tests fail, so each check bites. No model-behavior evaluation of the SKILL.md changes was run.

@@ -4,6 +4,7 @@
 - Canonical plan: `plan.md`, version `v2`
 - Approval state: `APPROVED`
 - Acceptance contract: `contract.json`
+- Executor: sonnet
 
 ## Volume and budget
 - N/A — the linter fixture adds no query over a growing table and no loop on a hot path.

@@ -14,6 +14,16 @@ from typing import Any
 SCHEMA_VERSION = "orchestrate.contract.v1"
 AC_ID = re.compile(r"^AC-[0-9]+$")
 RG_ID = re.compile(r"^RG-[0-9]+$")
+# A plan or packet that mentions one of these changes semantics a weaker reviewer misses; its
+# packet must carry an `advisor:` line. One constant, so the list is changed in one place.
+RISK_WORDS = (
+    "queue", "lease", "retry", "retries", "backoff", "lock", "fencing", "idempot",
+    "rebalance", "offset", "outbound", "state machine",
+)
+RISK_PATTERN = re.compile(
+    r"\b(?:" + "|".join(w.replace(" ", r"[\s-]+") for w in RISK_WORDS) + r")\w*", re.IGNORECASE
+)
+AUDIT_EVERY_DEFAULT = 6
 BRIEF_KEYS = ("What it is", "Why now", "Options", "Recommendation", "If no answer", "Evidence")
 # Ids an owner may not know: ADR-0017, PR #12, MR !34, #123, !34, a ticket key such as ABC-42.
 BRIEF_ID = re.compile(
@@ -24,11 +34,22 @@ BRIEF_ID_ALLOWED = re.compile(r"^(?:UTF|SHA|ISO|HTTP|TLS|UTC|GMT|MD|BASE)-?[0-9]
 
 
 class Linter:
-    def __init__(self, contract_path: Path, plan_path: Path, packet_path: Path, phase: str) -> None:
+    def __init__(
+        self,
+        contract_path: Path | None,
+        plan_path: Path | None,
+        packet_path: Path | None,
+        phase: str,
+        sprint_path: Path | None = None,
+        config_path: Path | None = None,
+    ) -> None:
         self.contract_path = contract_path
         self.plan_path = plan_path
         self.packet_path = packet_path
+        self.sprint_path = sprint_path
+        self.config_path = config_path
         self.phase = phase
+        self.config: dict[str, Any] = {}
         self.errors: list[str] = []
         self.contract: dict[str, Any] = {}
         self.plan = ""
@@ -332,7 +353,154 @@ class Linter:
                         f"concept {item.get('concept', '<unnamed>')} pattern {pattern!r} missing from {file}",
                     )
 
+    @staticmethod
+    def ancestors(path: Path) -> list[Path]:
+        start = path if path.is_dir() else path.parent
+        return [start, *start.parents]
+
+    def find_file(self, value: str, near: Path | None) -> Path | None:
+        """A path named inside a packet or sprint: relative to cwd, to the file, or to any parent of it."""
+        candidate = Path(value).expanduser()
+        if candidate.is_absolute():
+            return candidate if candidate.is_file() else None
+        bases = [Path.cwd()] + (self.ancestors(near) if near else [])
+        for base in bases:
+            if (base / candidate).is_file():
+                return base / candidate
+        return None
+
+    def load_config(self) -> None:
+        """`.claude/orchestrator.json`: --config, else the nearest one above the packet or sprint file."""
+        path = self.config_path
+        if path is None:
+            for anchor in (self.packet_path, self.sprint_path):
+                if anchor is None:
+                    continue
+                for base in self.ancestors(anchor):
+                    if (base / ".claude" / "orchestrator.json").is_file():
+                        path = base / ".claude" / "orchestrator.json"
+                        break
+                if path:
+                    break
+        if path is None:
+            return
+        try:
+            parsed = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            self.error("CONFIG_READ", f"cannot read {path}: {exc}")
+            return
+        if isinstance(parsed, dict):
+            self.config = parsed
+
+    def validate_advisor(self) -> None:
+        """A plan or packet in the risk vocabulary needs an approved Advisor round or a named waiver."""
+        text = self.packet + "\n" + self.plan
+        hits = sorted({m.group(0).lower() for m in RISK_PATTERN.finditer(text)})
+        if not hits:
+            return
+        value = self.field(r"^\s*-?\s*advisor\s*:\s*(.+)$", self.packet)
+        how = (
+            "run `<installed-skill-dir>/scripts/advisor-review.sh <plan.md>`, then add "
+            "`advisor: PLAN_APPROVED <review file>` to the packet, or "
+            "`advisor: waived by <who> — <reason>`"
+        )
+        if not value:
+            self.error("ADVISOR_REQUIRED", f"the packet touches {', '.join(hits)} but has no `advisor:` line; {how}")
+            return
+        waived = re.match(r"^waived\s+by\s+(\S.*?)\s*[—:-]+\s*(\S.*)$", value, re.IGNORECASE)
+        if waived:
+            if len(re.findall(r"[A-Za-z]", waived.group(2))) < 10:
+                self.error("ADVISOR_REQUIRED", "advisor waiver needs a reason (10+ letters)")
+            return
+        approved = re.match(r"^`?PLAN_APPROVED`?\s+`?([^`\s]+)`?", value)
+        if not approved:
+            self.error("ADVISOR_REQUIRED", f"`advisor: {value}` is not an approved verdict; {how}")
+        elif self.find_file(approved.group(1), self.packet_path) is None:
+            self.error("ADVISOR_REQUIRED", f"advisor review file {approved.group(1)} does not exist; {how}")
+
+    def validate_executor(self) -> None:
+        """The packet names its executor; the project may forbid some models (the root's own, for one)."""
+        value = self.field(r"^\s*-?\s*executor\s*:\s*`?([^`\n]+?)`?\s*$", self.packet)
+        if not value:
+            self.error("EXECUTOR_FORBIDDEN", "the packet has no `executor: <model>` line; the root reads the seat from the packet")
+            return
+        forbidden = self.config.get("forbidden_executor_models", [])
+        if isinstance(forbidden, list):
+            tokens = set(re.split(r"[\s/:,@-]+", value.lower()))
+            for model in forbidden:
+                if isinstance(model, str) and model.lower() in tokens:
+                    self.error(
+                        "EXECUTOR_FORBIDDEN",
+                        f"executor {value!r} is forbidden by forbidden_executor_models in .claude/orchestrator.json; "
+                        "pick the model from executor_models for this packet kind",
+                    )
+
+    def validate_wave_audit(self) -> None:
+        """More than `audit_every` packets landed since the last recorded audit stops the next dispatch."""
+        assert self.sprint_path is not None
+        try:
+            lines = self.sprint_path.read_text(encoding="utf-8").splitlines()
+        except OSError as exc:
+            self.error("SPRINT_READ", f"cannot read sprint file: {exc}")
+            return
+        landed = 0
+        for line in lines:
+            audit = re.match(r"^\W*audit\s*:\s*`?([^`\s]+)`?\s*$", line, re.IGNORECASE)
+            if audit:
+                if self.find_file(audit.group(1), self.sprint_path) is not None:
+                    landed = 0
+                continue
+            cells = [c.strip() for c in re.split(r"[|·]", line) if c.strip()]
+            if len(cells) >= 3 and re.fullmatch(r"[0-9]+[a-z]?", cells[0]) and cells[2].strip("` *").lower() == "landed":
+                landed += 1
+        every = self.config.get("audit_every", AUDIT_EVERY_DEFAULT)
+        if not isinstance(every, int) or every < 1:
+            every = AUDIT_EVERY_DEFAULT
+        if landed > every:
+            self.error(
+                "AUDIT_DUE",
+                f"{landed} packets landed since the last audit (limit {every}); run the health pass "
+                "(references/rules-and-enforcers.md#health-pass-after-a-wave) and record `audit: <path to the report>` in SPRINT.md",
+            )
+
+    def validate_dispatch_packet(self) -> None:
+        """Rules that read the packet alone; they also run without a contract."""
+        if self.packet_path is not None:
+            self.validate_volume_budget()
+            self.validate_advisor()
+            self.validate_executor()
+        if self.sprint_path is not None:
+            self.validate_wave_audit()
+
+    def finish(self) -> int:
+        if self.errors:
+            for error in self.errors:
+                print(f"ERROR {error}")
+            print(f"orchestration lint: FAIL ({len(self.errors)} error(s))")
+            return 1
+        print(f"orchestration lint: PASS ({self.phase})")
+        return 0
+
+    def run_packet_only(self) -> int:
+        """`--phase dispatch` without a contract: the packet-only rules."""
+        self.load_config()
+        for label, path in (("plan", self.plan_path), ("packet", self.packet_path)):
+            if path is None:
+                continue
+            try:
+                text = path.read_text(encoding="utf-8")
+            except OSError as exc:
+                self.error("FILE_READ", f"cannot read {label} file: {exc}")
+                text = ""
+            if label == "plan":
+                self.plan = text
+            else:
+                self.packet = text
+        self.validate_dispatch_packet()
+        return self.finish()
+
     def run(self) -> int:
+        self.load_config()
         self.load()
         self.validate_contract_shape()
         self.validate_metadata()
@@ -355,9 +523,10 @@ class Linter:
                 self.error("ACCEPTANCE_EXTRA", f"{label} has unknown IDs: {', '.join(extra)}")
 
         self.validate_verdicts()
-        if self.phase in ("review", "dispatch"):
+        if self.phase == "review":
             self.validate_volume_budget()
         if self.phase == "dispatch":
+            self.validate_dispatch_packet()
             plan_status = self.field(r"^\s*-\s*Status:\s*`?([^`\s]+)", self.plan)
             if (plan_status or "").upper() != "APPROVED":
                 self.error("PLAN_APPROVAL", "dispatch requires plan Status: APPROVED")
@@ -367,13 +536,7 @@ class Linter:
         if self.phase == "docs":
             self.validate_docs()
 
-        if self.errors:
-            for error in self.errors:
-                print(f"ERROR {error}")
-            print(f"orchestration lint: FAIL ({len(self.errors)} error(s))")
-            return 1
-        print(f"orchestration lint: PASS ({self.phase})")
-        return 0
+        return self.finish()
 
 
 def lint_handoff(path: Path) -> int:
@@ -462,16 +625,27 @@ def main() -> int:
     parser.add_argument("--plan", type=Path)
     parser.add_argument("--packet", type=Path)
     parser.add_argument("--handoff", type=Path, help="HANDOFF.md to check (phase handoff)")
+    parser.add_argument("--sprint", type=Path, help="SPRINT.md: with --phase dispatch, fail AUDIT_DUE when too many packets landed since the last audit")
+    parser.add_argument("--config", type=Path, help=".claude/orchestrator.json (default: the nearest one above the packet or sprint file)")
     parser.add_argument("--phase", required=True, choices=("review", "dispatch", "docs", "handoff"))
     args = parser.parse_args()
     if args.phase == "handoff":
         if args.handoff is None:
             parser.error("--phase handoff requires --handoff")
         return lint_handoff(args.handoff.resolve())
+    def resolve(path: Path | None) -> Path | None:
+        return path.resolve() if path is not None else None
+
+    if args.phase == "dispatch" and args.contract is None:
+        if args.packet is None and args.sprint is None:
+            parser.error("--phase dispatch without --contract requires --packet (and/or --sprint)")
+        return Linter(None, resolve(args.plan), resolve(args.packet), "dispatch",
+                      resolve(args.sprint), resolve(args.config)).run_packet_only()
     missing = [name for name in ("contract", "plan", "packet") if getattr(args, name) is None]
     if missing:
         parser.error(f"--phase {args.phase} requires " + ", ".join(f"--{name}" for name in missing))
-    linter = Linter(args.contract.resolve(), args.plan.resolve(), args.packet.resolve(), args.phase)
+    linter = Linter(args.contract.resolve(), args.plan.resolve(), args.packet.resolve(), args.phase,
+                    resolve(args.sprint), resolve(args.config))
     return linter.run()
 
 
