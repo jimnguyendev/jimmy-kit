@@ -27,6 +27,7 @@ CONTRACT_SOURCE = FIXTURE_ROOT / "contract.json"
 PLAN_SOURCE = FIXTURE_ROOT / "plan.md"
 PACKET_SOURCE = FIXTURE_ROOT / "packet.md"
 HANDOFF_SOURCE = FIXTURE_ROOT / "handoff.md"
+PACKET_TEMPLATE = SKILL_ROOT / "PACKET.md"
 
 
 class Fixture:
@@ -481,6 +482,188 @@ class HandoffLintTests(unittest.TestCase):
         text = (SKILL_ROOT / "references" / "context-and-resume.md").read_text(encoding="utf-8")
         self.assertIn("--phase handoff", text)
         self.assertIn("## Waiting on owner", text)
+
+
+PACKET_ONLY = """# Packet 176 — rename-column
+
+## Objective
+{objective}
+
+## Volume and budget
+- N/A — the packet changes no query and adds no loop on a hot path.
+{lines}
+"""
+
+
+class DispatchEnforcementTests(unittest.TestCase):
+    """The four rules a sprint broke while nothing failed: Advisor round, executor seat, wave audit."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory(prefix="orchestration-enforce-")
+        self.root = Path(self.tmp.name).resolve()
+        (self.root / ".orchestrate" / "packets").mkdir(parents=True)
+        (self.root / ".claude").mkdir()
+        self.addCleanup(self.tmp.cleanup)
+
+    def config(self, **values: object) -> None:
+        (self.root / ".claude" / "orchestrator.json").write_text(json.dumps(values), encoding="utf-8")
+
+    def packet(self, objective: str = "Rename a column.", *lines: str) -> Path:
+        path = self.root / ".orchestrate" / "packets" / "176-rename-column.md"
+        path.write_text(
+            PACKET_ONLY.format(objective=objective, lines="\n".join(lines)), encoding="utf-8"
+        )
+        return path
+
+    def lint(self, *args: str) -> subprocess.CompletedProcess[str]:
+        return subprocess.run(
+            [sys.executable, str(LINTER), "--phase", "dispatch", *args],
+            cwd=self.root, check=False, capture_output=True, text=True,
+        )
+
+    def assert_fails(self, result: subprocess.CompletedProcess[str], code: str) -> None:
+        self.assertNotEqual(result.returncode, 0, result.stdout)
+        self.assertIn(code, result.stdout)
+
+    def assert_passes(self, result: subprocess.CompletedProcess[str]) -> None:
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    # Incident 3: a packet that changed Kafka retry and rebalance semantics was dispatched with no Advisor round.
+    KAFKA = "Change the consumer retry policy and the rebalance handling of the Kafka consumer."
+
+    def test_risky_packet_without_advisor_line_is_rejected_without_a_contract(self) -> None:
+        path = self.packet(self.KAFKA, "- Executor: opus")
+        result = self.lint("--packet", str(path))
+        self.assert_fails(result, "ADVISOR_REQUIRED")
+        self.assertIn("advisor-review.sh", result.stdout)
+        self.assertIn("rebalance", result.stdout)
+
+    def test_ordinary_packet_needs_no_advisor_line(self) -> None:
+        self.assert_passes(self.lint("--packet", str(self.packet("Rename a column.", "- Executor: sonnet"))))
+
+    def test_risk_words_match_whole_words_only(self) -> None:
+        text = "Block the clock skew; unlockable offsets are not a topic here."
+        self.assert_passes(self.lint("--packet", str(self.packet(text.replace("offsets", "numbers"), "- Executor: sonnet"))))
+
+    def test_risk_word_in_the_plan_also_requires_the_advisor_line(self) -> None:
+        plan = self.root / "plan.md"
+        plan.write_text("# Plan\nA lease with fencing tokens.\n", encoding="utf-8")
+        path = self.packet("Rename a column.", "- Executor: sonnet")
+        self.assert_fails(self.lint("--packet", str(path), "--plan", str(plan)), "ADVISOR_REQUIRED")
+
+    def test_approved_verdict_needs_an_existing_review_file(self) -> None:
+        review = self.root / ".orchestrate" / "plans" / "176-review.md"
+        path = self.packet(self.KAFKA, "- Executor: opus", f"- Advisor: PLAN_APPROVED {review}")
+        self.assert_fails(self.lint("--packet", str(path)), "ADVISOR_REQUIRED")
+        review.parent.mkdir(parents=True)
+        review.write_text("PLAN_APPROVED\n", encoding="utf-8")
+        self.assert_passes(self.lint("--packet", str(path)))
+
+    def test_relative_review_path_resolves_from_the_repository_root(self) -> None:
+        review = self.root / ".orchestrate" / "plans" / "176-review.md"
+        review.parent.mkdir(parents=True)
+        review.write_text("PLAN_APPROVED\n", encoding="utf-8")
+        path = self.packet(self.KAFKA, "- Executor: opus", "- Advisor: PLAN_APPROVED .orchestrate/plans/176-review.md")
+        self.assert_passes(self.lint("--packet", str(path)))
+
+    def test_plan_revise_is_not_an_approval(self) -> None:
+        review = self.root / "review.md"
+        review.write_text("PLAN_REVISE\n", encoding="utf-8")
+        path = self.packet(self.KAFKA, "- Executor: opus", f"- Advisor: PLAN_REVISE {review}")
+        self.assert_fails(self.lint("--packet", str(path)), "ADVISOR_REQUIRED")
+
+    def test_waiver_names_who_and_why(self) -> None:
+        for waiver, ok in (
+            ("waived by the owner — pure rename, no behavior change", True),
+            ("waived — pure rename, no behavior change", False),
+            ("waived by the owner — ok", False),
+        ):
+            path = self.packet(self.KAFKA, "- Executor: opus", f"- Advisor: {waiver}")
+            result = self.lint("--packet", str(path))
+            if ok:
+                self.assert_passes(result)
+            else:
+                self.assert_fails(result, "ADVISOR_REQUIRED")
+
+    def test_contract_dispatch_also_requires_the_advisor_line(self) -> None:
+        with Fixture() as fixture:
+            mutate_text(fixture.packet_path, lambda text: text.replace("- Executor: sonnet", "- Executor: sonnet\n- Note: change the retry policy.", 1))
+            OrchestrationLintTests().assert_fail(fixture, "dispatch", "ADVISOR_REQUIRED")
+            OrchestrationLintTests().assert_pass(fixture, "review")
+
+    # Incident 5: the owner pinned seats ("the root model never executes"), the root dispatched to its own model.
+    def test_forbidden_executor_is_rejected(self) -> None:
+        self.config(forbidden_executor_models=["fable"], executor_models={"hard": "opus", "default": "sonnet"})
+        result = self.lint("--packet", str(self.packet("Rename a column.", "- Executor: fable")))
+        self.assert_fails(result, "EXECUTOR_FORBIDDEN")
+        self.assertIn("executor_models", result.stdout)
+        self.assert_passes(self.lint("--packet", str(self.packet("Rename a column.", "- Executor: opus"))))
+
+    def test_forbidden_model_is_found_inside_a_provider_route(self) -> None:
+        self.config(forbidden_executor_models=["fable"])
+        path = self.packet("Rename a column.", "- Executor: opencode run -m provider/Fable-5")
+        self.assert_fails(self.lint("--packet", str(path)), "EXECUTOR_FORBIDDEN")
+
+    def test_missing_executor_is_rejected(self) -> None:
+        self.assert_fails(self.lint("--packet", str(self.packet())), "EXECUTOR_FORBIDDEN")
+
+    # Incident 4: nine packets landed before the owner asked for the audit.
+    def sprint(self, rows: int, *markers: tuple[int, str]) -> Path:
+        lines = ["# Sprint", "", "| NNN | slug | state | owner |", "|---|---|---|---|"]
+        for number in range(1, rows + 1):
+            lines.append(f"| {number:03d} | packet-{number} | landed | root |")
+            lines.extend(f"audit: {path}" for at, path in markers if at == number)
+        lines.append("| 099 | next | approved | root |")
+        path = self.root / ".orchestrate" / "SPRINT.md"
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        return path
+
+    def test_audit_due_after_more_than_six_landed_packets(self) -> None:
+        packet = self.packet("Rename a column.", "- Executor: sonnet")
+        result = self.lint("--packet", str(packet), "--sprint", str(self.sprint(9)))
+        self.assert_fails(result, "AUDIT_DUE")
+        self.assertIn("9 packets", result.stdout)
+        self.assert_passes(self.lint("--packet", str(packet), "--sprint", str(self.sprint(6))))
+
+    def test_audit_marker_with_an_existing_report_resets_the_count(self) -> None:
+        packet = self.packet("Rename a column.", "- Executor: sonnet")
+        report = self.root / ".orchestrate" / "audit-1.md"
+        report.write_text("health pass\n", encoding="utf-8")
+        self.assert_passes(self.lint("--packet", str(packet), "--sprint", str(self.sprint(9, (4, str(report))))))
+        missing = self.sprint(9, (4, str(self.root / "never-written.md")))
+        self.assert_fails(self.lint("--packet", str(packet), "--sprint", str(missing)), "AUDIT_DUE")
+
+    def test_audit_every_comes_from_orchestrator_json(self) -> None:
+        packet = self.packet("Rename a column.", "- Executor: sonnet")
+        self.config(audit_every=3)
+        self.assert_fails(self.lint("--packet", str(packet), "--sprint", str(self.sprint(4))), "AUDIT_DUE")
+        self.config(audit_every=10)
+        self.assert_passes(self.lint("--packet", str(packet), "--sprint", str(self.sprint(9))))
+
+    def test_sprint_alone_is_enough_to_check_the_audit(self) -> None:
+        self.assert_fails(self.lint("--sprint", str(self.sprint(9))), "AUDIT_DUE")
+
+    def test_packet_only_mode_still_checks_volume_and_budget(self) -> None:
+        path = self.packet("Rename a column.", "- Executor: sonnet")
+        path.write_text(path.read_text(encoding="utf-8").replace("## Volume and budget", "## Other"), encoding="utf-8")
+        self.assert_fails(self.lint("--packet", str(path)), "VOLUME_BUDGET")
+
+    def test_packet_template_names_executor_and_advisor(self) -> None:
+        text = PACKET_TEMPLATE.read_text(encoding="utf-8")
+        self.assertRegex(text, r"(?m)^- Executor: ")
+        self.assertRegex(text, r"(?m)^- Advisor: ")
+
+    def test_every_non_negotiable_rule_is_in_the_rule_table(self) -> None:
+        skill = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+        table = (SKILL_ROOT / "references" / "rules-and-enforcers.md").read_text(encoding="utf-8")
+        section = skill.split("## Non-negotiable rules", 1)[1]
+        rules = [line[2:].strip() for line in section.splitlines() if line.startswith("- ")]
+        self.assertGreaterEqual(len(rules), 8)
+        for rule in rules:
+            self.assertIn(rule.rstrip(".").replace("`", ""), table.replace("`", ""), rule)
+        for code in ("ADVISOR_REQUIRED", "AUDIT_DUE", "EXECUTOR_FORBIDDEN"):
+            self.assertIn(code, table)
+            self.assertIn(code, LINTER.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

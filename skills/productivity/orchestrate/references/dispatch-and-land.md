@@ -111,9 +111,20 @@ merged both cleanly, and the result did not compile (one removed a field the oth
 
 ### Landing under load
 
-- WHEN a land starts · CHECK no executor is running gates and the 5-minute load is low (about 14 on
-  the origin machine) · BECAUSE timing and performance tests with short waits failed three different
-  ways under load 50 and each passed alone in seconds. Land one packet at a time.
+- WHEN a land starts · CHECK `land.sh` waits by itself until the 1-minute load average is at or
+  below `ORCH_MAX_LOAD` (default: CPU count; `0` disables), polls every `ORCH_LOAD_POLL` seconds
+  (15), prints one line a minute and exits 3 after `ORCH_LOAD_WAIT` seconds (900) · BECAUSE timing
+  and performance tests with short waits failed three different ways under load 50 and each passed
+  alone in seconds. Land one packet at a time, and do not start executors that run gates while a
+  land waits.
+- WHEN the forge fails after the gates were green (the create call answered 400 seconds after the
+  push once) · CHECK `land.sh` already retried the create call `ORCH_CREATE_TRIES` times (5), 5 s
+  apart, reusing an MR/PR that appeared meanwhile, and printed the forge's response. Fix the cause,
+  then rerun `land.sh --resume <worktree> "<title>"` (or `ORCH_SKIP_GATES_FOR_SHA=<sha>`): it skips
+  the gates only when the merged HEAD equals the commit recorded in
+  `${TMPDIR:-/tmp}/gates-<worktree name>/green-sha` by the run whose gates passed. A new commit, a
+  moved default branch that changes HEAD, or no record runs every gate again; the merge still
+  passes the head SHA. · BECAUSE a rerun repeated 15 minutes of gates that had already passed.
 - WHEN a gate fails · CHECK rerun that single test alone 3 times before touching code; consistent
   passes mean load, so wait and rerun the gate · BECAUSE a fake red gate costs a land (about 25 min).
 - WHEN a wall-clock budget sits in the parallel suite · CHECK it asserts server-side time or a

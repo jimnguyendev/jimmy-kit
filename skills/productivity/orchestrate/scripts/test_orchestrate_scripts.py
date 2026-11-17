@@ -16,7 +16,10 @@ import os
 import subprocess
 import tempfile
 import textwrap
+import threading
 import unittest
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from urllib.parse import parse_qs, urlparse
 from pathlib import Path
 
 
@@ -33,8 +36,11 @@ GH_STUB = textwrap.dedent(
     # Minimal gh stand-in: one PR (#7) whose merge fast-forwards the bare origin.
     echo "$*" >>"$STUB_LOG"
     case "$1 $2" in
-      "pr list") echo "" ;;
-      "pr create") echo "https://github.com/example/repo/pull/7" ;;
+      "pr list") if [ -n "${STUB_PR_APPEARS:-}" ] && [ -f "$STUB_ORIGIN.creates" ]; then echo 7; else echo ""; fi ;;
+      "pr create")
+        n=$(( $(cat "$STUB_ORIGIN.creates" 2>/dev/null || echo 0) + 1 )); echo "$n" >"$STUB_ORIGIN.creates"
+        if [ "$n" -le "${STUB_CREATE_FAILS:-0}" ]; then echo "HTTP 400: Validation Failed (head branch not ready)" >&2; exit 1; fi
+        echo "https://github.com/example/repo/pull/7" ;;
       "pr view")
         case "$*" in
           *mergeable*) echo MERGEABLE ;;
@@ -101,6 +107,8 @@ class Repos:
                 "STUB_ORIGIN": str(self.origin),
                 "ORCH_FORGE": "github",
                 "ORCH_MERGE_WAIT": "6",
+                "ORCH_MAX_LOAD": "0",
+                "ORCH_CREATE_SLEEP": "0",
                 "TMPDIR": str(self.root),
                 "GIT_CONFIG_GLOBAL": str(self.root / "gitconfig"),
             }
@@ -200,6 +208,211 @@ class LandTests(unittest.TestCase):
             self.assertEqual(result.returncode, 1)
             self.assertIn("worktree kept", result.stderr)
             self.assertTrue(r.wt.exists())
+
+
+class FakeGitLab:
+    """The three merge-request calls of land_gitlab, on 127.0.0.1. Create answers 400 `fail_creates` times."""
+
+    def __init__(self, origin: Path, fail_creates: int = 0) -> None:
+        outer = self
+        self.origin, self.fail_creates, self.creates, self.tokens = origin, fail_creates, 0, set()
+        self.created = False
+
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *_: object) -> None:
+                pass
+
+            def reply(self, code: int, body: object) -> None:
+                data = json.dumps(body).encode()
+                self.send_response(code)
+                self.send_header("Content-Type", "application/json")
+                self.send_header("Content-Length", str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+
+            def route(self, method: str) -> None:
+                outer.tokens.add(self.headers.get("PRIVATE-TOKEN", ""))
+                if method == "POST":
+                    self.rfile.read(int(self.headers.get("Content-Length", 0)))
+                url = urlparse(self.path)
+                if method == "GET" and url.path.endswith("/merge_requests"):
+                    return self.reply(200, [{"iid": 5}] if outer.created else [])
+                if method == "POST" and url.path.endswith("/merge_requests"):
+                    outer.creates += 1
+                    if outer.creates <= outer.fail_creates:
+                        return self.reply(400, {"message": "source branch does not exist yet"})
+                    outer.created = True
+                    return self.reply(201, {"iid": 5})
+                if method == "GET" and url.path.endswith("/merge_requests/5"):
+                    return self.reply(200, {"detailed_merge_status": "mergeable"})
+                if method == "PUT" and url.path.endswith("/merge_requests/5/merge"):
+                    sha = parse_qs(url.query)["sha"][0]
+                    git(outer.origin, "update-ref", "refs/heads/main", sha)
+                    return self.reply(200, {"state": "merged"})
+                self.reply(404, {"message": "unexpected " + method + " " + self.path})
+
+            def do_GET(self) -> None:
+                self.route("GET")
+
+            def do_POST(self) -> None:
+                self.route("POST")
+
+            def do_PUT(self) -> None:
+                self.route("PUT")
+
+        self.server = HTTPServer(("127.0.0.1", 0), Handler)
+        self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
+
+    @property
+    def api(self) -> str:
+        return f"http://127.0.0.1:{self.server.server_port}"
+
+    def __enter__(self) -> "FakeGitLab":
+        self.thread.start()
+        return self
+
+    def __exit__(self, *_: object) -> None:
+        self.server.shutdown()
+        self.server.server_close()
+
+
+GATE_COUNTER = 'build: echo run >>"$GATE_COUNT"; test -f feature.txt\n'
+
+
+class LandEnforcementTests(unittest.TestCase):
+    """The land incidents of one sprint: gates under load, a forge 400 after green gates, a 15-minute rerun."""
+
+    # Incident 1: 3 of 14 lands failed on timing tests under load and passed unchanged on rerun.
+    def test_busy_machine_blocks_the_gates_and_exits_three(self) -> None:
+        with Repos(GATE_COUNTER) as r:
+            counter = r.root / "gate-runs"
+            result = r.run("bash", str(LAND), str(r.wt), "feature", GATE_COUNT=str(counter),
+                           ORCH_MAX_LOAD="1", ORCH_LOADAVG="9.5", ORCH_LOAD_WAIT="2", ORCH_LOAD_POLL="1")
+            self.assertEqual(result.returncode, 3, result.stdout + result.stderr)
+            self.assertIn("waiting for a quiet machine: load 9.5 > 1", result.stdout)
+            self.assertIn("ORCH_MAX_LOAD", result.stderr)
+            self.assertFalse(counter.exists(), "gates must not start on a busy machine")
+            self.assertFalse(r.origin_has_branch("p001-feature"))
+            self.assertTrue(r.wt.exists())
+
+    def test_quiet_machine_runs_the_gates(self) -> None:
+        with Repos(GATE_COUNTER) as r:
+            counter = r.root / "gate-runs"
+            result = r.run("bash", str(LAND), str(r.wt), "feature", GATE_COUNT=str(counter),
+                           ORCH_MAX_LOAD="4", ORCH_LOADAVG="0.5")
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run"])
+
+    def test_zero_max_load_disables_the_wait(self) -> None:
+        with Repos() as r:
+            result = r.run("bash", str(LAND), str(r.wt), "feature", ORCH_MAX_LOAD="0", ORCH_LOADAVG="99")
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    # Incident 2: the forge answered 400 to the create call seconds after the push, all gates green.
+    def test_github_create_is_retried_until_it_succeeds(self) -> None:
+        with Repos() as r:
+            result = r.run("bash", str(LAND), str(r.wt), "feature", STUB_CREATE_FAILS="2")
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(r.log.read_text(encoding="utf-8").count("pr create"), 3)
+            self.assertIn("PR create failed (try 2/5)", result.stdout)
+
+    def test_github_create_retry_reuses_a_pr_that_appeared(self) -> None:
+        with Repos() as r:
+            result = r.run("bash", str(LAND), str(r.wt), "feature", STUB_CREATE_FAILS="9", STUB_PR_APPEARS="1")
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(r.log.read_text(encoding="utf-8").count("pr create"), 1)
+
+    def test_github_final_failure_prints_the_forge_response(self) -> None:
+        with Repos() as r:
+            result = r.run("bash", str(LAND), str(r.wt), "feature", STUB_CREATE_FAILS="9", ORCH_CREATE_TRIES="3")
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("after 3 tries", result.stderr)
+            self.assertIn("HTTP 400: Validation Failed", result.stderr)
+            self.assertTrue(r.wt.exists())
+
+    def gitlab_env(self, api: FakeGitLab, **extra: str) -> dict:
+        return dict(ORCH_FORGE="gitlab", GITLAB_TOKEN="secret-token-xyz", GITLAB_API=api.api,
+                    GITLAB_PROJECT="group/project", **extra)
+
+    def test_gitlab_create_is_retried_and_merges_with_the_head_sha(self) -> None:
+        with Repos() as r, FakeGitLab(r.origin, fail_creates=2) as api:
+            result = r.run("bash", str(LAND), str(r.wt), "feature", **self.gitlab_env(api))
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(api.creates, 3)
+            self.assertEqual(api.tokens, {"secret-token-xyz"})
+            self.assertIn("feature.txt", git(r.origin, "ls-tree", "--name-only", "main").split())
+
+    def test_gitlab_final_failure_prints_the_body_and_never_the_token(self) -> None:
+        with Repos() as r, FakeGitLab(r.origin, fail_creates=99) as api:
+            result = r.run("bash", str(LAND), str(r.wt), "feature", **self.gitlab_env(api, ORCH_CREATE_TRIES="3"))
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("source branch does not exist yet", result.stderr)
+            self.assertIn("after 3 tries", result.stderr)
+            self.assertNotIn("secret-token-xyz", result.stdout + result.stderr)
+            self.assertEqual(api.creates, 3)
+
+    # Incident 2, cost side: a rerun repeated 15 minutes of gates that had already passed.
+    def failed_create_then(self, r: Repos, counter: Path, *args: str, **extra: str) -> subprocess.CompletedProcess:
+        first = r.run("bash", str(LAND), str(r.wt), "feature", GATE_COUNT=str(counter),
+                      STUB_CREATE_FAILS="99", ORCH_CREATE_TRIES="1")
+        self.assertEqual(first.returncode, 1, first.stdout + first.stderr)
+        self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run"])
+        return r.run("bash", *args, GATE_COUNT=str(counter), STUB_CREATE_FAILS="0", **extra)
+
+    def test_resume_skips_gates_that_already_passed_on_this_commit(self) -> None:
+        with Repos(GATE_COUNTER) as r:
+            counter = r.root / "gate-runs"
+            second = self.failed_create_then(r, counter, str(LAND), "--resume", str(r.wt), "feature")
+            self.assertEqual(second.returncode, 0, second.stdout + second.stderr)
+            self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run"], "gates must not rerun")
+            self.assertIn("skipping them", second.stdout)
+            self.assertFalse(r.wt.exists())
+
+    def test_sha_variable_skips_gates_only_for_the_gated_commit(self) -> None:
+        with Repos(GATE_COUNTER) as r:
+            counter = r.root / "gate-runs"
+            head = git(r.wt, "rev-parse", "HEAD")
+            second = self.failed_create_then(r, counter, str(LAND), str(r.wt), "feature", ORCH_SKIP_GATES_FOR_SHA=head)
+            self.assertEqual(second.returncode, 0, second.stdout + second.stderr)
+            self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run"])
+
+    def test_resume_after_a_new_commit_runs_the_gates_again(self) -> None:
+        with Repos(GATE_COUNTER) as r:
+            counter = r.root / "gate-runs"
+            first = r.run("bash", str(LAND), str(r.wt), "feature", GATE_COUNT=str(counter),
+                          STUB_CREATE_FAILS="99", ORCH_CREATE_TRIES="1")
+            self.assertEqual(first.returncode, 1)
+            (r.wt / "late.txt").write_text("not gated\n", encoding="utf-8")
+            git(r.wt, "add", "-A")
+            git(r.wt, "commit", "-q", "-m", "late")
+            second = r.run("bash", str(LAND), "--resume", str(r.wt), "feature", GATE_COUNT=str(counter))
+            self.assertEqual(second.returncode, 0, second.stdout + second.stderr)
+            self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run", "run"])
+            self.assertIn("no gate-green record", second.stdout)
+
+    def test_resume_without_a_record_runs_the_gates(self) -> None:
+        with Repos(GATE_COUNTER) as r:
+            counter = r.root / "gate-runs"
+            result = r.run("bash", str(LAND), "--resume", str(r.wt), "feature", GATE_COUNT=str(counter))
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run"])
+
+    def test_wrong_sha_variable_runs_the_gates(self) -> None:
+        with Repos(GATE_COUNTER) as r:
+            counter = r.root / "gate-runs"
+            result = r.run("bash", str(LAND), str(r.wt), "feature", GATE_COUNT=str(counter),
+                           ORCH_SKIP_GATES_FOR_SHA="0" * 40)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run"])
+
+    def test_a_failed_gate_leaves_no_green_record(self) -> None:
+        with Repos(GATE_COUNTER + "late: exit 1\n") as r:
+            counter = r.root / "gate-runs"
+            first = r.run("bash", str(LAND), str(r.wt), "feature", GATE_COUNT=str(counter))
+            self.assertEqual(first.returncode, 1)
+            second = r.run("bash", str(LAND), "--resume", str(r.wt), "feature", GATE_COUNT=str(counter))
+            self.assertEqual(second.returncode, 1)
+            self.assertEqual(counter.read_text(encoding="utf-8").split(), ["run", "run"])
 
 
 class ContextHookTests(unittest.TestCase):

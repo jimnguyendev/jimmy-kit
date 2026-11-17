@@ -58,7 +58,11 @@ requires another workflow, stop and ask for a supported workflow instead of inst
 routing plugin or silently changing the requested route.
 
 For `legacy`, resolve the executor from current args → sprint pin →
-`.claude/orchestrator.json` → `sonnet`:
+`.claude/orchestrator.json` → `sonnet`, and write it into the packet's `executor:` line. The root
+reads the executor from the packet at dispatch and never chooses then.
+`.claude/orchestrator.json` may pin seats: `"executor_models": {"hard": "opus", "default": "sonnet"}`
+(what the root picks from when it writes a packet) and `"forbidden_executor_models": ["fable"]`
+(the dispatch lint fails `EXECUTOR_FORBIDDEN` on a packet whose executor is listed or missing):
 
 - `sonnet|opus|haiku`: the root creates the packet's worktree in the target repo
   (`git worktree add`), then spawns one general-purpose executor with the prompt
@@ -141,7 +145,8 @@ round and without budgets; the owner had to point back at the previous sprint's 
      tool or canvas screenshots ([references/design-export.md](references/design-export.md)).
    A plan that touches queue, lease, retry, lock, fencing, idempotency, outbound-call or
    long-running state-machine semantics needs an independent Advisor that reads the repo,
-   including code already landed. At most 2 rounds (a third only as a cross-debate), and a lower
+   including code already landed. The packet records it as `advisor: PLAN_APPROVED <review file>`
+   or `advisor: waived by <who> — <reason>`; the dispatch lint fails `ADVISOR_REQUIRED` without one. At most 2 rounds (a third only as a cross-debate), and a lower
    project cap in `.claude/orchestrator.json` wins; rounds 3+ mostly find defects the root's own
    fixes introduced, and an Advisor checks plan-to-code consistency, never product fit. Split a plan
    that needs more into release units. Run
@@ -167,7 +172,7 @@ round and without budgets; the owner had to point back at the previous sprint's 
    Every packet has a **Volume and budget** section: data volume after 13 months, a latency or
    throughput target, and the load run or `EXPLAIN ANALYZE` on a seeded realistic size that
    proves it, or `N/A — <reason>`. Root rejects a send-path, dispatch-loop or growing-table query
-   packet that has no numbers; the contract linter rejects a packet without the section. Origin: the
+   packet that has no numbers (`VOLUME_BUDGET` rejects a missing section). Origin: the
    throughput target existed in an ADR from day one but was never an AC; the first load test
    came after 35 packets and found four bottlenecks the packets themselves asked for.
    A packet that adds a migration takes its number from the SPRINT.md table, reserved at plan time,
@@ -177,7 +182,10 @@ round and without budgets; the owner had to point back at the previous sprint's 
    runtime-parity, release, and landing **verdict dimensions** are tracked separately. Name both
    an **evidence owner** (who proves the harness/claim) and a **runtime-fix owner** (who changes
    behavior) for each systemic drift route. Parallelize only independent packets with
-   non-overlapping writes and integration order recorded in the plan. Each packet gets its own
+   non-overlapping writes and integration order recorded in the plan. Before spawning the executor run
+   `python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase dispatch --packet <packet.md> --sprint .orchestrate/SPRINT.md`
+   (add `--contract` and `--plan` for a contract-backed cycle): it enforces the Advisor line, the
+   executor seat, the budget and the wave audit. Each packet gets its own
    worktree, ports and scratch paths derived from its number. Executors never open a browser or
    a UI-driving tool. Rules: [references/dispatch-and-land.md](references/dispatch-and-land.md).
 6. **Verify.** Root reviews the diff for scope, parity, architecture, naming and unrelated
@@ -207,10 +215,15 @@ round and without budgets; the owner had to point back at the previous sprint's 
    step does not run is a gate nobody runs. Call the scripts from the installed skill, never a
    copy under `.orchestrate/bin/`: a project copy made before land ran gates kept landing without
    them, and a root that pipes gates into `tail && land` lands on a failed gate. The context hook
-   warns when it finds such a copy. Land only while no executor is running gates; timing tests
-   flake under load ([references/dispatch-and-land.md](references/dispatch-and-land.md#landing-under-load)).
+   warns when it finds such a copy. `land.sh` waits for a quiet machine before the gates (exit 3
+   when it stays busy), retries the PR/MR create call and prints the forge's answer when it
+   fails; after a forge failure with green gates, `land.sh --resume` skips the gates only for the
+   commit that passed them ([references/dispatch-and-land.md](references/dispatch-and-land.md#landing-under-load)).
    Record PR/commit and verdict in SPRINT.md.
-9. **Hygiene.** Rewrite HANDOFF.md after every land (what landed, what runs with agent IDs and
+9. **Hygiene.** After every wave (`audit_every` landed packets, default 6) run the health pass and
+   record `audit: <report path>` in SPRINT.md; the dispatch lint fails `AUDIT_DUE` until you do
+   ([references/rules-and-enforcers.md](references/rules-and-enforcers.md#health-pass-after-a-wave)).
+   Rewrite HANDOFF.md after every land (what landed, what runs with agent IDs and
    pids, next actions, standing user rules, and `Waiting on owner` as decision briefs or `None.`,
    checked with `orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md`); the
    PreCompact/SessionStart hook in
@@ -259,6 +272,10 @@ accept ADR-0017?" and six one-line tech-debt items with unexplained library name
 to ask what each meant before deciding.
 
 ## Non-negotiable rules
+
+Each rule and what enforces it: [references/rules-and-enforcers.md](references/rules-and-enforcers.md).
+A rule marked `prose only` that is broken twice gets a check in the same change (the `/correct`
+rule: the check's failure names the fix, and it is proven to fail on the real mistake).
 
 - Root writes plans, packets, ADRs, reviews, and performs final verification.
 - Planner and Advisor never edit, execute commands, direct Executors, or contact each other.
