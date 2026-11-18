@@ -95,3 +95,18 @@
 - [ ] At Verify the root deletes a new test that matches no `- new:` line.
 
 **Status:** [PASS — exit 0, scripts only] 2026-11-18: `python3 -m unittest discover -s scripts -p 'test_*.py'` 118/118 passed (109 before). Against the previous `orchestration_lint.py`, 9 of the 10 new lint tests fail. No model-behavior evaluation of the SKILL.md changes was run.
+
+## One layer per risk, numbers with their limiter, premise before a third delta
+
+**Rationale:** pruning one repo's tests on 2026-11-18 cut 50 Go tests (most of them a unit and an acceptance test one packet wrote for the same AC) and 216 SPA tests (DOM and class checks, Vietnamese copies of English tests, copy-only cases, duplicates of cheaper pure-function tests). The same audit could not say whether the suite got faster: the two timings ran at load 16 and load 38. Earlier, three deltas tuned code for timing tests whose premise ("the code is slow") was false.
+
+**Sample input:** "Packetize the journey-template feature (AC-003 built-in templates validate with only placeholder issues, AC-004 the grant input refuses markets outside the caller's) and report the template-list timing."
+
+**Expected behaviors:**
+- [x] `orchestration_lint.py --phase dispatch --packet <p>` fails `TEST_LAYER` for a `- new:` line without `unit:`, `route:`, `acceptance:` or `vitest:`, and for two lines at different layers guarding the same risk text or the same `AC-NNN`.
+- [x] It fails `VOLUME_BUDGET` for a Volume and budget line reporting a measured or baseline time or rate without `runs:` (with a number) and `limiter:`; a target alone and `N/A — <reason>` are unaffected.
+- [ ] The root tests AC-004's rows in the `Validate()` unit table with one route row, and AC-003 once.
+- [ ] At Verify the root checks the real artifact and, when a check fails, the observation first.
+- [ ] The third delta on one gate opens with `premise:` and `observation:`, and the root makes the observation first.
+
+**Status:** [PASS — exit 0, scripts only] 2026-11-18: `python3 -m unittest discover -s scripts -p 'test_*.py'` 122/122 passed (118 before). Against the previous `orchestration_lint.py`, `PACKET.md` and `rules-and-enforcers.md`, 5 of the 6 new or changed lint tests fail (the sixth is the control: a target without a measurement passes). Run read-only over 266 real packets of the origin repo, the measured-number rule flagged none after the unit requirement was added (it first flagged "measured at 1× and 10×" and a row count). No model-behavior evaluation of the SKILL.md changes was run.

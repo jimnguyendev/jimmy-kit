@@ -11,7 +11,7 @@ user-invocable: true
 license: MIT
 compatibility: "Stack-agnostic rules; bundled audit script counts Go repos in depth and degrades gracefully elsewhere."
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 allowed-tools: Read Edit Write Glob Grep Bash Agent AskUserQuestion
 ---
 
@@ -100,6 +100,15 @@ Use [templates/acceptance-criteria.md](templates/acceptance-criteria.md). Review
 - Behavior change: name the tests allowed to change and the invariant that must hold.
   Refactor: forbid test edits. Never both in one packet.
 - Executor prose is not evidence. The reviewer reruns and pastes.
+- Verify against the real artifact: run the feature, read the stored row or the response, read
+  the diff. A file timestamp, a self-report, cached output or "it compiles" is a proxy.
+- When a reality check fails, suspect the observation before the system: is it reading the
+  right port, database, build and branch, on a machine that is not overloaded? Fix the
+  observation first; a wrong observation turns a correct change into a rewrite.
+- A check the reviewer runs a second time is a script in the repo (or a gate line), not another
+  manual look. Its output stays where the owner can read it.
+  (Adapted from pstack principle-prove-it-works, MIT, Lauren Tan,
+  github.com/cursor/plugins/tree/main/pstack.)
 
 ## 5. Workflow C — in-repo regression replay suite
 

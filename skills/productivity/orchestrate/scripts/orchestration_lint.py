@@ -33,6 +33,20 @@ TEST_PER_ITEM = re.compile(
     r"|\bfor\s+(?:every|each)\s+row\b",
     re.IGNORECASE,
 )
+# The layer a new test runs at. One risk is tested at one layer: a rule table at `unit` (Validate,
+# pure decisions), one `route` row to prove the handler path, `acceptance` only for a seam (rows
+# written, a request out, a real engine), `vitest` for SPA code.
+TEST_LAYERS = ("unit", "route", "acceptance", "vitest")
+AC_REF = re.compile(r"\bAC-[0-9]+\b", re.IGNORECASE)
+# A Volume and budget line that reports a measured number (not a target) carries its limiter and runs:
+# "Measured: p99 41 ms", "baseline 120 ms", "measured p95 = 80 ms"; not "measured by EXPLAIN ANALYZE"
+# or "measured at 1x and 10x". Only a time or a rate counts; a row or byte count is AC-007's cost number.
+MEASURED = re.compile(
+    r"\b(?:measured|baseline)\b\s*(?:p[0-9]{2,3}\b\s*)?(?:[:=]|\bat\b|\bis\b|\bwas\b|\bof\b)?\s*"
+    r"(?:p[0-9]{2,3}\b\s*)?[~\u2248]?[0-9][0-9.,]*\s*"
+    r"(?:[n\u00b5u]?s\b|ms\b|sec|min|\w*/s\b|rps\b|qps\b)",
+    re.IGNORECASE,
+)
 BRIEF_KEYS = ("What it is", "Why now", "Options", "Recommendation", "If no answer", "Evidence")
 # Ids an owner may not know: ADR-0017, PR #12, MR !34, #123, !34, a ticket key such as ABC-42.
 BRIEF_ID = re.compile(
@@ -330,16 +344,33 @@ class Linter:
             value = self.field(r"^\s*-\s*" + label + r":\s*(.*)$", body)
             if not value or re.fullmatch(r"<[^>]*>", value) or len(re.findall(r"[A-Za-z0-9]", value)) < 3:
                 self.error("VOLUME_BUDGET", f"Volume and budget is missing a measured {label.lower()}")
+        for line in lines:
+            if not MEASURED.search(line):
+                continue
+            limiter = re.search(r"\blimiter\s*:\s*([^<\n—|;]*)", line, re.IGNORECASE)
+            runs = re.search(r"\bruns\s*:\s*([^<\n—|;]*)", line, re.IGNORECASE)
+            if (
+                not limiter
+                or len(re.findall(r"[A-Za-z]", limiter.group(1))) < 3
+                or not runs
+                or not re.search(r"[0-9]", runs.group(1))
+            ):
+                self.error(
+                    "VOLUME_BUDGET",
+                    f"`{line[:80]}` reports a measured number without `runs: <count, median and range>` and "
+                    "`limiter: <the resource or code path that bounded it, from a profile or counters taken "
+                    "during the run>`; a number without them is not evidence",
+                )
 
     def validate_tests(self) -> None:
-        """A packet lists every new test with the risk it guards, within a budget, never one per item."""
+        """A packet lists every new test with its layer and the risk it guards, within a budget, never one per item."""
         packet = re.sub(r"<!--.*?-->", "", self.packet, flags=re.DOTALL)
         body = self.section(packet, "Tests")
         if body is None:
             self.error(
                 "TESTS_SECTION",
                 "packet has no `## Tests` section; add one line per new test "
-                "(`- new: <test> — guards: <behaviour that breaks silently without it>`) or `- none — <reason>`",
+                "(`- new: <layer>: <test> — guards: <behaviour that breaks silently without it>`) or `- none — <reason>`",
             )
         else:
             lines = [line.strip() for line in body.splitlines() if line.strip()]
@@ -353,7 +384,7 @@ class Linter:
                 reason = re.sub(r"^-\s*`?none`?\s*[:\-—–]*", "", none[0], flags=re.IGNORECASE)
                 if len(re.findall(r"[A-Za-z]", reason)) < 10:
                     self.error("TESTS_SECTION", "`- none` needs a reason (10+ letters)")
-            seen: dict[str, str] = {}
+            seen: dict[str, tuple[str, str]] = {}
             for line in new:
                 match = re.match(r"^-\s*new\s*:\s*(.*?)\s*[—–;,-]*\s*guards\s*:\s*(.*)$", line, re.IGNORECASE)
                 name, risk = (match.group(1), match.group(2)) if match else ("", "")
@@ -369,10 +400,37 @@ class Linter:
                         "without it>`; a test that guards nothing named is not added",
                     )
                     continue
-                key = re.sub(r"\W+", " ", risk.lower()).strip()
-                if key in seen:
-                    self.error("TEST_RISK", f"`{name}` guards the same risk as `{seen[key]}`; keep one test per risk")
-                seen.setdefault(key, name)
+                layer_match = re.match(r"^(\w+)\s*:\s*\S", name)
+                layer = layer_match.group(1).lower() if layer_match else ""
+                if layer not in TEST_LAYERS:
+                    self.error(
+                        "TEST_LAYER",
+                        f"`{line[:80]}` names no layer; start the test with `unit:` (a rule table: Validate, a pure "
+                        "decision), `route:` (one row proving the handler path), `acceptance:` (a seam: rows written, "
+                        "a request out, a real engine) or `vitest:`",
+                    )
+                key = re.sub(r"\W+", " ", re.split(r";\s*fails\s+if\b", risk, flags=re.IGNORECASE)[0].lower()).strip()
+                owners = [key] + [ac.upper() for ac in AC_REF.findall(risk)]
+                for owner in owners:
+                    if owner not in seen:
+                        continue
+                    other_name, other_layer = seen[owner]
+                    if layer and other_layer and layer != other_layer:
+                        what = owner if owner.startswith("AC-") else "the same risk"
+                        self.error(
+                            "TEST_LAYER",
+                            f"`{name}` ({layer}) and `{other_name}` ({other_layer}) both guard {what}; test it once, "
+                            "at one layer: the rule table at unit, one route row for the handler path, acceptance "
+                            "only for the seam",
+                        )
+                        break
+                    if owner == key:
+                        self.error(
+                            "TEST_RISK", f"`{name}` guards the same risk as `{other_name}`; keep one test per risk"
+                        )
+                        break
+                for owner in owners:
+                    seen.setdefault(owner, (name, layer))
             waived = re.search(
                 r"^\W*test\s+budget\s*:\s*waived\s+by\s+(\S.*?)\s*[—–:-]+\s*(\S.*)$",
                 body,
