@@ -82,3 +82,16 @@
 - [x] `references/rules-and-enforcers.md` lists every non-negotiable rule with its enforcer or `prose only`.
 
 **Status:** [PASS — exit 0, scripts only] 2026-11-17: `python3 -m unittest discover -s scripts -p 'test_*.py'` 109/109 passed (76 before). Run against the previous `land.sh` and `orchestration_lint.py`, 29 of the 33 new tests fail, so each check bites. No model-behavior evaluation of the SKILL.md changes was run.
+
+## Test budget per packet
+
+**Rationale:** AGENTS.md and the testing skills said "add a test only when behaviour is not covered" and "never test implementation details"; the rule was prose only. Packets asked for "every finding has a vitest assertion", "one case per role" and 15 named route cases, executors followed the packet, and one repo reached 91 000 Go test lines for 128 000 code lines and 40 000 SPA test lines for 85 000, while a screen audit found 58 UX problems no test caught.
+
+**Sample input:** "Packetize the screen audit fixes (12 findings, three roles) and dispatch."
+
+**Expected behaviors:**
+- [x] `orchestration_lint.py --phase dispatch --packet <p>` fails `TESTS_SECTION` without `## Tests`, `TEST_RISK` for a `- new:` line without `guards: <reason>` or two lines guarding one risk, `TEST_BUDGET` for more than 3 new tests without `test budget: waived by <who> — <reason>`, `TEST_PER_ITEM` for "every finding" / "one case per role" wording in an AC or Tests line.
+- [ ] The root writes each `- new:` line with the two-edit check (fails if the behaviour breaks, passes if the internals change) and leaves copy and per-role screens to its walk.
+- [ ] At Verify the root deletes a new test that matches no `- new:` line.
+
+**Status:** [PASS — exit 0, scripts only] 2026-11-18: `python3 -m unittest discover -s scripts -p 'test_*.py'` 118/118 passed (109 before). Against the previous `orchestration_lint.py`, 9 of the 10 new lint tests fail. No model-behavior evaluation of the SKILL.md changes was run.

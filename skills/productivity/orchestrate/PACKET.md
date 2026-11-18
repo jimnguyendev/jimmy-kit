@@ -54,6 +54,25 @@
 - Budget: <latency p99 or throughput target, e.g. "count < 50 ms", "220 sends/s per worker">
 - Proof: <the load run (provider latency > 0) or EXPLAIN ANALYZE on a seeded realistic size, named as an AC>
 
+## Tests
+<!-- Required; the linter rejects a packet without it (TESTS_SECTION). One line per NEW test, or
+     one line `- none — <reason>`. Changed existing tests are not listed.
+     - At most 3 new tests per packet (TEST_BUDGET). More needs a distinct named risk on every line
+       and `test budget: waived by <who> — <reason>` in this section.
+     - Every line names the behaviour that breaks silently without the test (TEST_RISK). Two lines
+       guarding the same risk are one test.
+     - Every line passes the two-edit check (pstack, principle-test-behavior-not-implementation,
+       MIT, Lauren Tan, github.com/cursor/plugins/tree/main/pstack): the test fails if the guarded
+       behaviour is broken and still passes if the internals are rewritten. Write both halves:
+       `fails if <behaviour broken>, passes if <internals changed>`.
+     - Never a test that pins copy text, log text, exact SQL, DOM structure or classes, or a snapshot.
+     - Never one case per role, finding or row (TEST_PER_ITEM, also checked in the AC lines): test
+       the rule once, at its owner.
+     - UI copy and layout are verified by the root's walk with screenshots, not by tests.
+     - Reality ACs (the container tests named in AC-006 / AC-007 evidence) count against the budget
+       like any other new test. -->
+- new: <TestName or "vitest: <file> › <case>"> — guards: <the behaviour that breaks silently without it>; fails if <behaviour broken>, passes if <internals changed>
+
 ## Verdict dimensions
 - Implementation verdict: PENDING
 - Evidence verdict: PENDING
@@ -74,7 +93,10 @@ section below contains IDs only.
 <!-- Add AC-006 when a container-backed test is the evidence (engine parity), and AC-007
      when the packet touches a cost-bearing seam — a database read or write, a call to
      another service, a list/response path (cost budget). Both come from skill reality-gate. Omitting them is a decision the
-     packet states, not a default. -->
+     packet states, not a default.
+     An AC asks for evidence that a named risk is handled: one command and its expected outcome.
+     It never asks for a list of test cases ("every finding has an assertion", "one case per
+     role"); the new tests are listed once, in ## Tests, within its budget. -->
 
 ## Acceptance references
 - AC-001

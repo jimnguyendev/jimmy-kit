@@ -24,6 +24,15 @@ RISK_PATTERN = re.compile(
     r"\b(?:" + "|".join(w.replace(" ", r"[\s-]+") for w in RISK_WORDS) + r")\w*", re.IGNORECASE
 )
 AUDIT_EVERY_DEFAULT = 6
+# New tests one packet may add without a named waiver. Executors follow the packet over AGENTS.md,
+# so a packet that lists cases is the only test budget that holds.
+TEST_BUDGET = 3
+# Wording that asks for a test per item instead of one test per risk.
+TEST_PER_ITEM = re.compile(
+    r"\b(?:every|each)\s+finding\b|\bone\s+(?:test|case|assertion)\s+per\s+\w+|\bper[\s-]+role\b"
+    r"|\bfor\s+(?:every|each)\s+row\b",
+    re.IGNORECASE,
+)
 BRIEF_KEYS = ("What it is", "Why now", "Options", "Recommendation", "If no answer", "Evidence")
 # Ids an owner may not know: ADR-0017, PR #12, MR !34, #123, !34, a ticket key such as ABC-42.
 BRIEF_ID = re.compile(
@@ -322,6 +331,76 @@ class Linter:
             if not value or re.fullmatch(r"<[^>]*>", value) or len(re.findall(r"[A-Za-z0-9]", value)) < 3:
                 self.error("VOLUME_BUDGET", f"Volume and budget is missing a measured {label.lower()}")
 
+    def validate_tests(self) -> None:
+        """A packet lists every new test with the risk it guards, within a budget, never one per item."""
+        packet = re.sub(r"<!--.*?-->", "", self.packet, flags=re.DOTALL)
+        body = self.section(packet, "Tests")
+        if body is None:
+            self.error(
+                "TESTS_SECTION",
+                "packet has no `## Tests` section; add one line per new test "
+                "(`- new: <test> — guards: <behaviour that breaks silently without it>`) or `- none — <reason>`",
+            )
+        else:
+            lines = [line.strip() for line in body.splitlines() if line.strip()]
+            new = [line for line in lines if re.match(r"^-\s*new\s*:", line, re.IGNORECASE)]
+            none = [line for line in lines if re.match(r"^-\s*`?none\b", line, re.IGNORECASE)]
+            if not new and not none:
+                self.error("TESTS_SECTION", "`## Tests` lists no `- new:` line and no `- none — <reason>`")
+            elif new and none:
+                self.error("TESTS_SECTION", "`## Tests` has both `- none` and `- new:` lines; keep one")
+            elif none:
+                reason = re.sub(r"^-\s*`?none`?\s*[:\-—–]*", "", none[0], flags=re.IGNORECASE)
+                if len(re.findall(r"[A-Za-z]", reason)) < 10:
+                    self.error("TESTS_SECTION", "`- none` needs a reason (10+ letters)")
+            seen: dict[str, str] = {}
+            for line in new:
+                match = re.match(r"^-\s*new\s*:\s*(.*?)\s*[—–;,-]*\s*guards\s*:\s*(.*)$", line, re.IGNORECASE)
+                name, risk = (match.group(1), match.group(2)) if match else ("", "")
+                if (
+                    not match
+                    or re.search(r"<[^<>]+>", line)
+                    or len(re.findall(r"\w", name)) < 3
+                    or len(re.findall(r"[A-Za-z]", risk)) < 10
+                ):
+                    self.error(
+                        "TEST_RISK",
+                        f"`{line[:80]}` needs a test name and `guards: <the behaviour that breaks silently "
+                        "without it>`; a test that guards nothing named is not added",
+                    )
+                    continue
+                key = re.sub(r"\W+", " ", risk.lower()).strip()
+                if key in seen:
+                    self.error("TEST_RISK", f"`{name}` guards the same risk as `{seen[key]}`; keep one test per risk")
+                seen.setdefault(key, name)
+            waived = re.search(
+                r"^\W*test\s+budget\s*:\s*waived\s+by\s+(\S.*?)\s*[—–:-]+\s*(\S.*)$",
+                body,
+                re.IGNORECASE | re.MULTILINE,
+            )
+            waiver_ok = waived is not None and len(re.findall(r"[A-Za-z]", waived.group(2))) >= 10
+            if len(new) > TEST_BUDGET and not waiver_ok:
+                self.error(
+                    "TEST_BUDGET",
+                    f"{len(new)} new tests (budget {TEST_BUDGET}); merge tests that guard one rule, leave copy and "
+                    "layout to the root's walk, or add `test budget: waived by <who> — <reason>`",
+                )
+
+        current = ""
+        for line in packet.splitlines():
+            heading = re.match(r"^##\s+(.*?)\s*$", line)
+            if heading:
+                current = heading.group(1).lower()
+                continue
+            in_scope = current.startswith(("acceptance", "tests")) or re.search(r"\bAC-[0-9]+", line)
+            hit = TEST_PER_ITEM.search(line) if in_scope else None
+            if hit:
+                self.error(
+                    "TEST_PER_ITEM",
+                    f"`{hit.group(0)}` asks for a test per item: `{line.strip()[:80]}`; name the risk once and "
+                    "test the rule at its owner; copy and per-role screens go to the root's walk",
+                )
+
     def validate_docs(self) -> None:
         coverage = self.contract.get("document_coverage")
         if not isinstance(coverage, list):
@@ -469,6 +548,7 @@ class Linter:
             self.validate_volume_budget()
             self.validate_advisor()
             self.validate_executor()
+            self.validate_tests()
         if self.sprint_path is not None:
             self.validate_wave_audit()
 
