@@ -5,7 +5,7 @@ user-invocable: true
 license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents. Stack-agnostic.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 allowed-tools: Read Edit Write Glob Grep Bash(git:*) Agent WebFetch WebSearch AskUserQuestion
 ---
 
@@ -126,6 +126,26 @@ Every optimization PR must include:
 5. **Dashboard/alert updates** — proving the improvement is monitored
 
 A PR that says "improved performance" without these five items is incomplete.
+
+## Explain Every Number
+
+Adapted from pstack principle-explain-the-number and benchmark-checklist (MIT, Lauren Tan,
+github.com/cursor/plugins/tree/main/pstack). Apply before a run and before you report a number.
+
+1. **Before the run, write the decision and the noise floor.** The sentence you expect to ship
+   ("count p99 under 50 ms on the 5M-row seed"), what each outcome changes, and the spread of two
+   runs of unchanged code. A gap smaller than that spread is no measurable difference.
+2. **Record the machine.** `uptime` (1-minute load) and the core count at measure time. On a busy
+   machine, alternate the sides (A, B, A, B) so both see the same noise, and say so.
+3. **Name the limiter.** Ask "why not double?" and answer from a profile or counters taken during
+   a run (CPU per process, pprof, I/O wait, `EXPLAIN (ANALYZE, BUFFERS)`, query counts), not from
+   reading the code. A change that did not move the number is explained by the limiter.
+4. **Rule out the other things the number could be measuring:** errors and rejections (fast),
+   skipped or cached work, code that never ran in the timed region, an untuned side.
+5. **Report the number with its unit, run count, median and range, limiter and load**, for
+   example "p99 41 ms, median of 5 runs, range 39-44 ms, bound by the index scan on
+   ledger_user_idx, load 3.1 on 10 cores". Without a limiter, or with errors uncounted, the
+   verdict is inconclusive.
 
 ## Iterating Toward the Target
 

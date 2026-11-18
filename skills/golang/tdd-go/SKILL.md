@@ -185,6 +185,24 @@ Blog (change-detector tests), Bernhardt (functional core / imperative shell), Ra
 | Service shell + handler, one per flow | **acceptance**: real router + real middleware + real adapters + containers; assert the JSON body and the persisted document | `integration` |
 | Clients of unmanaged dependencies | unit with `httptest` replaying captured responses + contract test | none / `integration` |
 
+### One behavior, one layer
+
+Each accepted behavior (each AC of a packet) gets one test at one named layer. A pruning audit of a
+repo with 2 100 Go tests cut 50, and most were a second test for an AC another layer already proved.
+
+- **Input rules:** every row lives in the unit table of the input's `Validate()`. The route test
+  carries one row, proving the handler maps the rule to 400 with its code. Writing the six rows
+  twice, once per layer, is the waste.
+- **Pure decisions** (diff, collapse, precedence, projections): the unit table. The acceptance test
+  proves only the seam, the row written and read back or the request sent. A unit test with the
+  same `want` table as an acceptance test is deleted, whichever was written first.
+- **No test for** an unexported helper whose numbers a route test already asserts, a constructor
+  default, a getter, an ID generator, an internal key format, or two code paths sharing a function.
+- **Dev fakes:** the real client running against the fake is the fake's contract test (rule 6). The
+  fake's own rules get no separate test.
+- **Errors:** assert the code or sentinel the caller branches on (`errors.Is`, the envelope
+  `code`), not the message. Assert a message only when it is user-facing copy, and then in one test.
+
 Make the integration harness fail loudly when its container is unavailable (an env var such as
 `INTEGRATION_SKIP_OK=1` to opt into skipping), so `ok` always means the tests ran.
 

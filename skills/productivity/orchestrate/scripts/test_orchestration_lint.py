@@ -322,6 +322,44 @@ class OrchestrationLintTests(unittest.TestCase):
             )
             self.assert_pass(fixture, "dispatch")
 
+    # A packet reported "p99 41 ms" from one run on a machine at load 34; nobody knew what bounded it
+    # or whether a second run would agree (pstack principle-explain-the-number).
+    def volume(self, fixture: Fixture, measured: str) -> None:
+        mutate_text(
+            fixture.packet_path,
+            lambda text: re.sub(
+                r"^- N/A .*$",
+                "- Data volume: 5M ledger rows at 13 months\n"
+                "- Budget: count p99 < 50 ms\n"
+                "- Proof: EXPLAIN ANALYZE on a 5M-row seed\n" + measured,
+                text,
+                flags=re.MULTILINE,
+            ),
+        )
+
+    def test_measured_number_needs_its_limiter_and_runs(self) -> None:
+        for line in (
+            "- Measured: p99 41 ms on the 5M seed",
+            "- Measured: p99 41 ms — runs: 5, range 39-44 ms",
+            "- Measured: p99 41 ms — limiter: index scan on ledger_user_idx",
+            "- Baseline: p99 120 ms — runs: <count> — limiter: <what bounded it>",
+        ):
+            with self.subTest(line=line), Fixture() as fixture:
+                self.volume(fixture, line)
+                self.assert_fail(fixture, "dispatch", "VOLUME_BUDGET", "limiter:")
+        with Fixture() as fixture:
+            self.volume(
+                fixture,
+                "- Measured: p99 41 ms — runs: 5, median 41, range 39-44 ms — limiter: index scan on "
+                "ledger_user_idx, from EXPLAIN (ANALYZE, BUFFERS) — load: 3.1",
+            )
+            self.assert_pass(fixture, "dispatch")
+
+    def test_target_without_a_measured_number_needs_no_limiter(self) -> None:
+        with Fixture() as fixture:
+            self.volume(fixture, "")
+            self.assert_pass(fixture, "dispatch")
+
     def test_packet_template_has_volume_and_budget(self) -> None:
         template = (SKILL_ROOT / "PACKET.md").read_text(encoding="utf-8")
         self.assertRegex(template, r"(?m)^## Volume and budget$")
@@ -663,7 +701,8 @@ class DispatchEnforcementTests(unittest.TestCase):
     @staticmethod
     def new_tests(count: int) -> str:
         return "\n".join(
-            f"- new: TestRename_case{n} — guards: renamed column number {n} keeps its stored values" for n in range(count)
+            f"- new: unit: TestRename_case{n} — guards: renamed column number {n} keeps its stored values"
+            for n in range(count)
         )
 
     def test_packet_without_tests_section_is_rejected(self) -> None:
@@ -691,8 +730,42 @@ class DispatchEnforcementTests(unittest.TestCase):
         ))
 
     def test_two_tests_guarding_one_risk_are_rejected(self) -> None:
-        line = "- new: TestRename_{} — guards: renamed column keeps its stored values"
+        line = "- new: unit: TestRename_{} — guards: renamed column keeps its stored values"
         self.assert_fails(self.lint_tests(line.format("a") + "\n" + line.format("b")), "TEST_RISK")
+
+    # Incident 7: one packet wrote a unit test and a route test with the same `want` table for one AC
+    # (TestStarters_ValidateWithOnlyPlaceholderIssues and TestJourneyRoute_TemplateCreateFromBuiltin);
+    # the pruning audit found that pattern behind most of the 50 Go tests it cut.
+    def test_new_test_must_name_its_layer(self) -> None:
+        result = self.lint_tests("- new: TestRename_keeps — guards: renamed column keeps its stored values")
+        self.assert_fails(result, "TEST_LAYER")
+        for layer in ("unit", "route", "acceptance"):
+            self.assertIn(layer, result.stdout)
+        for layer in ("unit", "route", "acceptance", "vitest", "Route"):
+            with self.subTest(layer=layer):
+                self.assert_passes(self.lint_tests(
+                    f"- new: {layer}: TestRename_keeps — guards: renamed column keeps its stored values"
+                ))
+
+    def test_one_risk_at_two_layers_is_rejected(self) -> None:
+        real = (
+            "- new: unit: TestStarters_ValidateWithOnlyPlaceholderIssues — guards: AC-003 a built-in "
+            "template validates with only placeholder issues\n"
+            "- new: route: TestJourneyRoute_TemplateCreateFromBuiltin — guards: AC-003 a journey created "
+            "from a built-in template has only placeholder issues"
+        )
+        result = self.lint_tests(real)
+        self.assert_fails(result, "TEST_LAYER")
+        self.assertIn("AC-003", result.stdout)
+        same_text = (
+            "- new: unit: TestRename_keeps — guards: renamed column keeps its stored values\n"
+            "- new: acceptance: TestRenameRoute_keeps — guards: renamed column keeps its stored values"
+        )
+        self.assert_fails(self.lint_tests(same_text), "TEST_LAYER")
+        self.assert_passes(self.lint_tests(
+            "- new: unit: TestGrantInput_Validate — guards: AC-002 a grant outside the caller's markets is refused\n"
+            "- new: acceptance: TestGrantRoute_Persists — guards: AC-004 an accepted grant is stored and read back"
+        ))
 
     def test_more_than_three_new_tests_need_a_named_waiver(self) -> None:
         self.assert_passes(self.lint_tests(self.new_tests(3)))
@@ -731,7 +804,7 @@ class DispatchEnforcementTests(unittest.TestCase):
     def test_packet_template_has_tests_section(self) -> None:
         text = PACKET_TEMPLATE.read_text(encoding="utf-8")
         self.assertRegex(text, r"(?m)^## Tests$")
-        self.assertRegex(text, r"(?m)^- new: .* — guards: ")
+        self.assertRegex(text, r"(?m)^- new: <unit\|route\|acceptance\|vitest>: .* — guards: ")
 
     def test_packet_template_names_executor_and_advisor(self) -> None:
         text = PACKET_TEMPLATE.read_text(encoding="utf-8")
@@ -747,7 +820,7 @@ class DispatchEnforcementTests(unittest.TestCase):
         for rule in rules:
             self.assertIn(rule.rstrip(".").replace("`", ""), table.replace("`", ""), rule)
         for code in ("ADVISOR_REQUIRED", "AUDIT_DUE", "EXECUTOR_FORBIDDEN",
-                     "TESTS_SECTION", "TEST_RISK", "TEST_BUDGET", "TEST_PER_ITEM"):
+                     "TESTS_SECTION", "TEST_RISK", "TEST_BUDGET", "TEST_PER_ITEM", "TEST_LAYER"):
             self.assertIn(code, table)
             self.assertIn(code, LINTER.read_text(encoding="utf-8"))
 

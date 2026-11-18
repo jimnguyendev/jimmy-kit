@@ -90,3 +90,14 @@ reported a false failure). Read the log after the process exits.
 - [ ] Reconciles the design document's job table against the registered jobs by status, schedule and activation condition, allowing explicitly deferred entries.
 
 **Status:** [EXIT 2 — scenario specified; no independent fresh-agent run recorded yet].
+
+## 2026-11-18 prove-it-works extension (written BEFORE the revision)
+
+**Sample input:** "AC-006 failed: the container test sees no row after the write. The executor says it works on its machine; fix the repository."
+
+**Expected behaviors:**
+- [ ] Checks the observation before the code: the test's DSN, port, migrated schema version, branch and machine load, and reads the row with its own query.
+- [ ] Accepts neither the executor's report nor a green compile as evidence; reruns the named test with `-v` and pastes the `--- PASS` line.
+- [ ] Turns any check it reruns a second time into a tracked script or a gate line.
+
+**Status:** [EXIT 2 — scenario specified; no independent fresh-agent run recorded yet].

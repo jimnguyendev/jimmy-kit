@@ -6,7 +6,11 @@ lifecycle rules a script can read, what fails when it is broken. `prose only` me
 
 **The `/correct` rule.** A `prose only` rule that is broken twice gets a check in the same change that
 records the second break. The check's failure message names the fix, and a test reproduces the real
-mistake and fails without the check. Prose is the last resort.
+mistake and fails without the check. Prose is the last resort. The general principle is pstack's
+principle-encode-lessons-in-structure (MIT, Lauren Tan, github.com/cursor/plugins/tree/main/pstack):
+a lesson written as an instruction a second time becomes a lint, a metadata field, a runtime check or
+a script; when the fix is structural, only the structural fix ships, because the instruction is the
+symptom. A lesson that needs judgement stays prose, made prominent and given one example of the failure.
 
 Scripts are called from the installed skill: `<installed-skill-dir>/scripts/`. Opt-outs are in the last column.
 
@@ -35,9 +39,18 @@ Scripts are called from the installed skill: `<installed-skill-dir>/scripts/`. O
 | Every packet names its executor; the project can forbid models (the root's own). | `orchestration_lint.py --phase dispatch`: `EXECUTOR_FORBIDDEN` for a missing `executor:` line or a model in `forbidden_executor_models` | edit `.claude/orchestrator.json` with the owner's agreement |
 | A health pass runs after every wave. | `orchestration_lint.py --phase dispatch --sprint SPRINT.md`: `AUDIT_DUE` when more than `audit_every` (default 6) packets are `landed` since the last `audit:` line | `"audit_every": <n>` in `.claude/orchestrator.json`; record the audit |
 | A packet adds at most 3 new tests, each guarding a named risk; never one case per role, finding or row; UI copy and layout go to the root's walk. Was prose only (AGENTS.md, `tdd-go`, `backend-go-testing`) and broken across a whole sprint. | `orchestration_lint.py --phase dispatch`: `TESTS_SECTION` (no `## Tests`, or no line), `TEST_RISK` (a `- new:` line without `guards: <reason>`, or two lines guarding one risk), `TEST_BUDGET` (more than 3 `- new:` lines), `TEST_PER_ITEM` (per-item wording in an AC or Tests line) | `test budget: waived by <who> — <reason>` lifts `TEST_BUDGET` only |
+| Each new test names its layer, and one risk or AC is tested at one layer: a rule table at unit, one route row for the handler path, acceptance only for a seam. A pruning audit traced most of 50 cut Go tests to one packet writing a unit and an acceptance test for the same AC. | `orchestration_lint.py --phase dispatch`: `TEST_LAYER` (a `- new:` line without `unit:`, `route:`, `acceptance:` or `vitest:`, or two lines at different layers guarding the same risk text or the same `AC-NNN`) | none |
 | Every packet has Volume and budget numbers or a reasoned `N/A`. | `orchestration_lint.py` phases `review` and `dispatch`: `VOLUME_BUDGET` | `N/A — <reason>` |
+| A measured number travels with its run count, spread and limiter (pstack principle-explain-the-number). | `orchestration_lint.py` phases `review` and `dispatch`: `VOLUME_BUDGET` for a Volume and budget line that reports a measured or baseline number without `runs: <count, spread>` and `limiter: <what bounded it>` | none; a target without a measurement is not checked |
 | Dispatch only from an approved plan and packet, with matching versions, paths and acceptance IDs. | `orchestration_lint.py` with `--contract`: `PLAN_APPROVAL`, `PACKET_APPROVAL`, `VERSION_MISMATCH`, `PATH_MISMATCH`, `ACCEPTANCE_*`, `RECON_*` | none |
 | Call `land.sh` and `gates.sh` from the installed skill. | `orchestrate-context.sh resume` warns about a project copy | none |
+
+## Lifecycle rules left as prose
+
+| Rule | Why no check yet | Opt out |
+|---|---|---|
+| Verify runs against the real artifact (the feature, the stored value, the diff), never an executor's report or "it compiles"; a failed check first suspects the observation; a check the root reruns becomes a script or a line in `.orchestrate/gates`. | Judgement at Verify; the rerun half is enforced once the check is in `.orchestrate/gates` | none |
+| Before a third delta on the same gate, the delta opens with `premise:` and `observation:`. | Deltas are chat messages to the executor, not files a script reads | none |
 
 ## Linting a packet without a contract
 
@@ -48,7 +61,7 @@ python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase dispatch \
 ```
 
 This runs the packet-only rules (`VOLUME_BUDGET`, `ADVISOR_REQUIRED`, `EXECUTOR_FORBIDDEN`, `TESTS_SECTION`,
-`TEST_RISK`, `TEST_BUDGET`, `TEST_PER_ITEM`) and, with
+`TEST_RISK`, `TEST_LAYER`, `TEST_BUDGET`, `TEST_PER_ITEM`) and, with
 `--sprint`, `AUDIT_DUE`. With `--contract`, `--plan` and `--packet` the same rules run next to the contract
 checks. The config is the `.claude/orchestrator.json` nearest above the packet or sprint file unless `--config` is given.
 
@@ -63,14 +76,22 @@ Packet metadata the lint reads (one line each, in the "Approved plan and routing
 The packet's `## Tests` section, one line per new test (HTML comments are ignored):
 
 ```text
-- new: TestOutbox_RetryAfterCrash — guards: a crash between claim and send loses the message; fails if the claim is not released, passes if the claim query is rewritten
+- new: acceptance: TestOutbox_RetryAfterCrash — guards: a crash between claim and send loses the message; fails if the claim is not released, passes if the claim query is rewritten
 - new: vitest: src/journeys/list.test.tsx › pages past 50 — guards: journeys after the 50th are unreachable; fails if the next page is never requested, passes if the list component is restructured
 - none — <reason of at least 10 letters>
 test budget: waived by <who> — <reason of at least 10 letters>
 ```
 
-The lint checks `guards:` only; the `fails if …, passes if …` half (the pstack two-edit check) is
-read by the root at packet review and at Verify.
+The lint checks the layer and `guards:`; the `fails if …, passes if …` half (the pstack two-edit check) is
+read by the root at packet review and at Verify. `TEST_LAYER` compares the `guards:` text before
+`; fails if` and every `AC-NNN` it names, so writing the AC id makes the one-layer rule bite.
+
+A measured number in the Volume and budget section (a `Measured:` or `Baseline:` line, or
+"measured 41 ms" inside another line; the `MEASURED` pattern of `orchestration_lint.py`):
+
+```text
+- Measured: p99 41 ms — runs: 5, median 41, range 39-44 ms — limiter: index scan on ledger_user_idx, from EXPLAIN (ANALYZE, BUFFERS) — load: 3.1
+```
 
 `TEST_PER_ITEM` reads the lines of every `## Acceptance…` and `## Tests` section and any line naming
 an `AC-NNN`; its phrases are the `TEST_PER_ITEM` pattern of `orchestration_lint.py`.

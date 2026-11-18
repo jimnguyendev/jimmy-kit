@@ -172,11 +172,15 @@ round and without budgets; the owner had to point back at the previous sprint's 
    github.com/cursor/plugins/tree/main/pstack), at most 3 per packet unless `test budget: waived by <who> — <reason>`;
    never a test that pins copy, log text, exact SQL, DOM structure or a snapshot, never one case
    per role, finding or row. UI copy and layout belong to the root's walk with screenshots.
-   `orchestration_lint.py --phase dispatch` fails `TESTS_SECTION`, `TEST_RISK`, `TEST_BUDGET` and
-   `TEST_PER_ITEM`. Origin: AGENTS.md and the testing skills already said "add a test only when
+   Each line names its layer and a risk is tested at one layer: the rule table at `unit`, one
+   `route` row for the handler path, `acceptance` only for a seam, `vitest` for SPA code.
+   `orchestration_lint.py --phase dispatch` fails `TESTS_SECTION`, `TEST_RISK`, `TEST_LAYER`,
+   `TEST_BUDGET` and `TEST_PER_ITEM`. Origin: AGENTS.md and the testing skills already said "add a test only when
    behaviour is not covered", yet packets asked for "every finding has a vitest assertion" and
    "one case per role"; one repo reached 91 000 Go test lines for 128 000 code lines and 40 000
-   SPA test lines for 85 000, while a screen audit found 58 UX problems no test caught. A packet touching a
+   SPA test lines for 85 000, while a screen audit found 58 UX problems no test caught; pruning them
+   later cut 50 Go tests, most of them a unit and an acceptance test written for one AC, and 216 SPA
+   tests (DOM and class checks, Vietnamese copies of English tests, copy-only cases). A packet touching a
    cost-bearing seam (database, another service, a list/response path) states its cost budget (AC-007) and, when container tests are the evidence, its
    engine parity (AC-006). Neither needs database expertise to review — both print a number.
    An executor cannot measure what it cannot reach: a packet whose AC needs a real database
@@ -187,6 +191,12 @@ round and without budgets; the owner had to point back at the previous sprint's 
    packet that has no numbers (`VOLUME_BUDGET` rejects a missing section). Origin: the
    throughput target existed in an ADR from day one but was never an AC; the first load test
    came after 35 packets and found four bottlenecks the packets themselves asked for.
+   The Proof line names what the number decides and its noise floor before the run; a measured
+   number carries its run count, spread and limiter (from a profile or counters taken during the
+   run) and the `uptime` load, and `VOLUME_BUDGET` fails a measured line without `runs:` and
+   `limiter:` (pstack principle-explain-the-number and benchmark-checklist, MIT, Lauren Tan).
+   Origin: a suite timed at 212 s under load 16 and 308 s under load 38 could not say whether
+   removing 216 tests made it faster.
    A packet that adds a migration takes its number from the SPRINT.md table, reserved at plan time,
    and packets land in number order: golang-migrate skips a lower number once a higher one is
    applied, so a late low number never runs.
@@ -202,6 +212,11 @@ round and without budgets; the owner had to point back at the previous sprint's 
    a UI-driving tool. Rules: [references/dispatch-and-land.md](references/dispatch-and-land.md).
 6. **Verify.** Root reviews the diff for scope, parity, architecture, naming and unrelated
    changes, then runs every acceptance command itself. Executor prose is not evidence.
+   Check the real artifact: run the feature, read the stored value, read the diff; a report, a
+   file timestamp, cached output or "it compiles" is a proxy. When a check fails, suspect the
+   observation first (wrong port, database, build or branch; a loaded machine) before the code.
+   A check the root runs a second time becomes a script or a line in `.orchestrate/gates`, not
+   another look (pstack principle-prove-it-works, MIT, Lauren Tan).
    Every new test in the diff matches a `- new:` line of the packet's Tests section; root deletes
    a new test that guards nothing named there before landing.
    A packet touching a seam (SQL, document store, cache, gRPC/HTTP client, config, response
@@ -221,7 +236,13 @@ round and without budgets; the owner had to point back at the previous sprint's 
    screen; internal vocabulary in the UI fails it.
 7. **Iterate.** Send a short delta describing failed evidence and required correction. Maximum
    three implementation iterations; then root re-scopes, takes over the sticking point, or
-   reports the blocker.
+   reports the blocker. **Two fixes failed the same gate: attack the premise before the third.**
+   The third delta opens with `premise:` (the one sentence every failed fix assumed) and
+   `observation:` (what would come out differently if it were false), and the root makes that
+   observation before sending a fix (pstack principle-attack-the-premise, MIT, Lauren Tan).
+   Failure example: three lands failed on timing tests and each delta tuned the code; the premise
+   "the code is too slow" was false, because the same tests passed unchanged at load 11 and failed
+   at load 34. The fix was a quiet machine before the gates, not faster code.
 8. **Land.** Only through `scripts/land.sh <worktree> "<title>"`: it merges the default branch
    into the packet, runs every gate in `.orchestrate/gates` (`scripts/gates.sh`) on the merged
    result, merges with the head SHA once the forge reports mergeable, and removes the worktree

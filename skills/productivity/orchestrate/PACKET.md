@@ -49,10 +49,18 @@
      table or a loop on a hot path (send, dispatch, ingest, import) fills all three lines with
      numbers. Any other packet writes one line: `- N/A — <why no such query or loop is touched>`.
      AC-007 (reality-gate) is the per-request cost; this section fixes the data size it is
-     measured on and the target it must meet. -->
+     measured on and the target it must meet.
+     Before the run, the Proof line says what the number decides (ship, change the plan) and the
+     noise floor (the spread of two runs of unchanged code); a gap inside the spread is no result.
+     A line that reports a measured number (a baseline here, the result at Verify) carries
+     `runs: <count, median and range>` and `limiter: <resource or code path that bounded it, from a
+     profile or counters taken during the run>`, plus the machine's `uptime` load at the time; the
+     linter fails VOLUME_BUDGET without the first two (pstack principle-explain-the-number, MIT,
+     Lauren Tan). -->
 - Data volume: <rows or items the path sees after 13 months of production growth>
 - Budget: <latency p99 or throughput target, e.g. "count < 50 ms", "220 sends/s per worker">
-- Proof: <the load run (provider latency > 0) or EXPLAIN ANALYZE on a seeded realistic size, named as an AC>
+- Proof: <the load run (provider latency > 0) or EXPLAIN ANALYZE on a seeded realistic size, named as an AC; what the number decides and the noise floor>
+- Measured: <only once a number exists: value with unit — runs: <count, median, range> — limiter: <what bounded it> — load: <uptime 1-min load>>
 
 ## Tests
 <!-- Required; the linter rejects a packet without it (TESTS_SECTION). One line per NEW test, or
@@ -61,6 +69,19 @@
        and `test budget: waived by <who> — <reason>` in this section.
      - Every line names the behaviour that breaks silently without the test (TEST_RISK). Two lines
        guarding the same risk are one test.
+     - Every line names its layer (TEST_LAYER), and one risk or AC is tested at one layer only:
+       `unit:` a table for an input rule (`Validate()`) or a pure decision (diff, precedence,
+       collapse), every row here; `route:` one row proving the handler path maps the rule (400
+       with its code), never the table again; `acceptance:` only for a seam (the row written and
+       read back, the request sent, a real engine); `vitest:` SPA code. A unit test and an
+       acceptance test for the same AC fail the lint.
+     - No test of an unexported helper whose numbers a route test already asserts, of a
+       constructor default, a getter or an id generator, or of a dev fake's own rules (test the
+       real client against the fake). Assert the error code the caller branches on, not the message.
+     - SPA (vitest): branching logic in a pure-function `.test.ts`, the screen gets one wiring
+       case; no second copy of a test per locale (the locale-file guard covers keys and plurals);
+       no empty, loading or copy-only case. A new test file pays a jsdom setup and its imports, so
+       add a case to the existing file.
      - Every line passes the two-edit check (pstack, principle-test-behavior-not-implementation,
        MIT, Lauren Tan, github.com/cursor/plugins/tree/main/pstack): the test fails if the guarded
        behaviour is broken and still passes if the internals are rewritten. Write both halves:
@@ -71,7 +92,7 @@
      - UI copy and layout are verified by the root's walk with screenshots, not by tests.
      - Reality ACs (the container tests named in AC-006 / AC-007 evidence) count against the budget
        like any other new test. -->
-- new: <TestName or "vitest: <file> › <case>"> — guards: <the behaviour that breaks silently without it>; fails if <behaviour broken>, passes if <internals changed>
+- new: <unit|route|acceptance|vitest>: <TestName, or "<file> › <case>" for vitest> — guards: <the behaviour that breaks silently without it>; fails if <behaviour broken>, passes if <internals changed>
 
 ## Verdict dimensions
 - Implementation verdict: PENDING
