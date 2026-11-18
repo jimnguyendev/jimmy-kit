@@ -492,6 +492,9 @@ PACKET_ONLY = """# Packet 176 — rename-column
 ## Volume and budget
 - N/A — the packet changes no query and adds no loop on a hot path.
 {lines}
+
+## Tests
+{tests}
 """
 
 
@@ -505,13 +508,15 @@ class DispatchEnforcementTests(unittest.TestCase):
         (self.root / ".claude").mkdir()
         self.addCleanup(self.tmp.cleanup)
 
+    tests = "- none — a column rename changes no behaviour a new test would guard."
+
     def config(self, **values: object) -> None:
         (self.root / ".claude" / "orchestrator.json").write_text(json.dumps(values), encoding="utf-8")
 
     def packet(self, objective: str = "Rename a column.", *lines: str) -> Path:
         path = self.root / ".orchestrate" / "packets" / "176-rename-column.md"
         path.write_text(
-            PACKET_ONLY.format(objective=objective, lines="\n".join(lines)), encoding="utf-8"
+            PACKET_ONLY.format(objective=objective, lines="\n".join(lines), tests=self.tests), encoding="utf-8"
         )
         return path
 
@@ -648,6 +653,86 @@ class DispatchEnforcementTests(unittest.TestCase):
         path.write_text(path.read_text(encoding="utf-8").replace("## Volume and budget", "## Other"), encoding="utf-8")
         self.assert_fails(self.lint("--packet", str(path)), "VOLUME_BUDGET")
 
+    # Incident 6: packets listed test cases in their ACs ("every finding has a vitest assertion",
+    # "one case per role", 15 named route cases); executors obeyed the packet over AGENTS.md and the
+    # test code grew to 91 000 Go and 40 000 SPA lines while a screen audit found 58 UX problems.
+    def lint_tests(self, tests: str, objective: str = "Rename a column.") -> subprocess.CompletedProcess[str]:
+        self.tests = tests
+        return self.lint("--packet", str(self.packet(objective, "- Executor: sonnet")))
+
+    @staticmethod
+    def new_tests(count: int) -> str:
+        return "\n".join(
+            f"- new: TestRename_case{n} — guards: renamed column number {n} keeps its stored values" for n in range(count)
+        )
+
+    def test_packet_without_tests_section_is_rejected(self) -> None:
+        path = self.packet("Rename a column.", "- Executor: sonnet")
+        path.write_text(path.read_text(encoding="utf-8").replace("## Tests", "## Other"), encoding="utf-8")
+        result = self.lint("--packet", str(path))
+        self.assert_fails(result, "TESTS_SECTION")
+        self.assertIn("guards:", result.stdout)
+
+    def test_tests_section_needs_a_line_and_none_needs_a_reason(self) -> None:
+        self.assert_fails(self.lint_tests(""), "TESTS_SECTION")
+        self.assert_fails(self.lint_tests("- none"), "TESTS_SECTION")
+        self.assert_fails(self.lint_tests("- none — rename\n" + self.new_tests(1)), "TESTS_SECTION")
+
+    def test_new_test_must_name_the_risk_it_guards(self) -> None:
+        for line in (
+            "- new: TestRenameColumn",
+            "- new: TestRenameColumn — guards: ok",
+            "- new: <TestName> — guards: <the behaviour that breaks silently without it>",
+        ):
+            with self.subTest(line=line):
+                self.assert_fails(self.lint_tests(line), "TEST_RISK")
+        self.assert_passes(self.lint_tests(
+            "- new: vitest: web/src/rename.test.ts › keeps values — guards: renamed column keeps its stored values"
+        ))
+
+    def test_two_tests_guarding_one_risk_are_rejected(self) -> None:
+        line = "- new: TestRename_{} — guards: renamed column keeps its stored values"
+        self.assert_fails(self.lint_tests(line.format("a") + "\n" + line.format("b")), "TEST_RISK")
+
+    def test_more_than_three_new_tests_need_a_named_waiver(self) -> None:
+        self.assert_passes(self.lint_tests(self.new_tests(3)))
+        result = self.lint_tests(self.new_tests(4))
+        self.assert_fails(result, "TEST_BUDGET")
+        self.assertIn("waived by", result.stdout)
+        self.assert_fails(self.lint_tests(self.new_tests(4) + "\ntest budget: waived by the owner — ok"), "TEST_BUDGET")
+        self.assert_passes(self.lint_tests(
+            self.new_tests(4) + "\ntest budget: waived by the owner — four independent stored formats migrate here"
+        ))
+
+    def test_acceptance_asking_for_a_test_per_item_is_rejected(self) -> None:
+        real = (
+            "## Acceptance (executor)\n"
+            "- AC-002 every finding has a vitest assertion where behaviour or copy changed "
+            "(role-gated rendering: one case per role)."
+        )
+        result = self.lint_tests(self.new_tests(1) + "\n\n" + real)
+        self.assert_fails(result, "TEST_PER_ITEM")
+        self.assertIn("every finding", result.stdout)
+        for phrase in ("each finding gets a test", "one test per role", "a case per role", "a test for every row"):
+            with self.subTest(phrase=phrase):
+                self.assert_fails(self.lint_tests(f"{self.new_tests(1)}\n\n## Acceptance\n- AC-001 {phrase}."), "TEST_PER_ITEM")
+
+    def test_per_item_wording_outside_acceptance_and_comments_is_allowed(self) -> None:
+        objective = "Show every finding of the audit per role on one screen."
+        tests = self.new_tests(1) + "\n<!-- never one case per role, finding or row -->"
+        self.assert_passes(self.lint_tests(tests, objective))
+
+    def test_tests_rules_run_at_contract_dispatch_only(self) -> None:
+        with Fixture() as fixture:
+            mutate_text(fixture.packet_path, lambda text: text.replace("## Tests", "## Other", 1))
+            OrchestrationLintTests().assert_fail(fixture, "dispatch", "TESTS_SECTION")
+            OrchestrationLintTests().assert_pass(fixture, "review")
+
+    def test_packet_template_has_tests_section(self) -> None:
+        text = PACKET_TEMPLATE.read_text(encoding="utf-8")
+        self.assertRegex(text, r"(?m)^## Tests$")
+        self.assertRegex(text, r"(?m)^- new: .* — guards: ")
+
     def test_packet_template_names_executor_and_advisor(self) -> None:
         text = PACKET_TEMPLATE.read_text(encoding="utf-8")
         self.assertRegex(text, r"(?m)^- Executor: ")
@@ -661,7 +746,8 @@ class DispatchEnforcementTests(unittest.TestCase):
         self.assertGreaterEqual(len(rules), 8)
         for rule in rules:
             self.assertIn(rule.rstrip(".").replace("`", ""), table.replace("`", ""), rule)
-        for code in ("ADVISOR_REQUIRED", "AUDIT_DUE", "EXECUTOR_FORBIDDEN"):
+        for code in ("ADVISOR_REQUIRED", "AUDIT_DUE", "EXECUTOR_FORBIDDEN",
+                     "TESTS_SECTION", "TEST_RISK", "TEST_BUDGET", "TEST_PER_ITEM"):
             self.assertIn(code, table)
             self.assertIn(code, LINTER.read_text(encoding="utf-8"))
 

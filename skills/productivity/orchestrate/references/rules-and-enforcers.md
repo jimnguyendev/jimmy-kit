@@ -34,6 +34,7 @@ Scripts are called from the installed skill: `<installed-skill-dir>/scripts/`. O
 | A plan touching queue, lease, retry, backoff, lock, fencing, idempotency, rebalance, offset, outbound calls or a state machine needs an independent Advisor. | `orchestration_lint.py --phase dispatch`: `ADVISOR_REQUIRED` unless the packet has `advisor: PLAN_APPROVED <existing review file>` or `advisor: waived by <who> — <reason>` | the named waiver |
 | Every packet names its executor; the project can forbid models (the root's own). | `orchestration_lint.py --phase dispatch`: `EXECUTOR_FORBIDDEN` for a missing `executor:` line or a model in `forbidden_executor_models` | edit `.claude/orchestrator.json` with the owner's agreement |
 | A health pass runs after every wave. | `orchestration_lint.py --phase dispatch --sprint SPRINT.md`: `AUDIT_DUE` when more than `audit_every` (default 6) packets are `landed` since the last `audit:` line | `"audit_every": <n>` in `.claude/orchestrator.json`; record the audit |
+| A packet adds at most 3 new tests, each guarding a named risk; never one case per role, finding or row; UI copy and layout go to the root's walk. Was prose only (AGENTS.md, `tdd-go`, `backend-go-testing`) and broken across a whole sprint. | `orchestration_lint.py --phase dispatch`: `TESTS_SECTION` (no `## Tests`, or no line), `TEST_RISK` (a `- new:` line without `guards: <reason>`, or two lines guarding one risk), `TEST_BUDGET` (more than 3 `- new:` lines), `TEST_PER_ITEM` (per-item wording in an AC or Tests line) | `test budget: waived by <who> — <reason>` lifts `TEST_BUDGET` only |
 | Every packet has Volume and budget numbers or a reasoned `N/A`. | `orchestration_lint.py` phases `review` and `dispatch`: `VOLUME_BUDGET` | `N/A — <reason>` |
 | Dispatch only from an approved plan and packet, with matching versions, paths and acceptance IDs. | `orchestration_lint.py` with `--contract`: `PLAN_APPROVAL`, `PACKET_APPROVAL`, `VERSION_MISMATCH`, `PATH_MISMATCH`, `ACCEPTANCE_*`, `RECON_*` | none |
 | Call `land.sh` and `gates.sh` from the installed skill. | `orchestrate-context.sh resume` warns about a project copy | none |
@@ -46,7 +47,8 @@ python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase dispatch \
   [--sprint .orchestrate/SPRINT.md] [--config .claude/orchestrator.json]
 ```
 
-This runs the packet-only rules (`VOLUME_BUDGET`, `ADVISOR_REQUIRED`, `EXECUTOR_FORBIDDEN`) and, with
+This runs the packet-only rules (`VOLUME_BUDGET`, `ADVISOR_REQUIRED`, `EXECUTOR_FORBIDDEN`, `TESTS_SECTION`,
+`TEST_RISK`, `TEST_BUDGET`, `TEST_PER_ITEM`) and, with
 `--sprint`, `AUDIT_DUE`. With `--contract`, `--plan` and `--packet` the same rules run next to the contract
 checks. The config is the `.claude/orchestrator.json` nearest above the packet or sprint file unless `--config` is given.
 
@@ -57,6 +59,21 @@ Packet metadata the lint reads (one line each, in the "Approved plan and routing
 - Advisor: PLAN_APPROVED .orchestrate/plans/NNN-slug-review.md
 - Advisor: waived by <who> — <reason of at least 10 letters>
 ```
+
+The packet's `## Tests` section, one line per new test (HTML comments are ignored):
+
+```text
+- new: TestOutbox_RetryAfterCrash — guards: a crash between claim and send loses the message; fails if the claim is not released, passes if the claim query is rewritten
+- new: vitest: src/journeys/list.test.tsx › pages past 50 — guards: journeys after the 50th are unreachable; fails if the next page is never requested, passes if the list component is restructured
+- none — <reason of at least 10 letters>
+test budget: waived by <who> — <reason of at least 10 letters>
+```
+
+The lint checks `guards:` only; the `fails if …, passes if …` half (the pstack two-edit check) is
+read by the root at packet review and at Verify.
+
+`TEST_PER_ITEM` reads the lines of every `## Acceptance…` and `## Tests` section and any line naming
+an `AC-NNN`; its phrases are the `TEST_PER_ITEM` pattern of `orchestration_lint.py`.
 
 The risk words are the `RISK_WORDS` constant of `orchestration_lint.py`; the lint matches them
 as word starts in the packet and in the plan given with `--plan`.

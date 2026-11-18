@@ -164,7 +164,19 @@ round and without budgets; the owner had to point back at the previous sprint's 
 4. **Packetize.** Copy [PACKET.md](PACKET.md). One packet is one bounded change/commit with
    explicit file ownership, stop conditions, and exact acceptance commands.
    The AC is where quality is decided, not Verify: an executor optimizes for the criteria it
-   is given, so a question the AC never asks is a question nobody asks. A packet touching a
+   is given, so a question the AC never asks is a question nobody asks. An AC asks for evidence
+   that a named risk is handled, never for a list of test cases: the executor writes every case
+   the packet names, whatever AGENTS.md says. The **Tests** section lists each new test with the
+   behaviour it guards and the two-edit check ("fails if <behaviour broken>, passes if <internals
+   changed>"; pstack principle-test-behavior-not-implementation, MIT, Lauren Tan,
+   github.com/cursor/plugins/tree/main/pstack), at most 3 per packet unless `test budget: waived by <who> — <reason>`;
+   never a test that pins copy, log text, exact SQL, DOM structure or a snapshot, never one case
+   per role, finding or row. UI copy and layout belong to the root's walk with screenshots.
+   `orchestration_lint.py --phase dispatch` fails `TESTS_SECTION`, `TEST_RISK`, `TEST_BUDGET` and
+   `TEST_PER_ITEM`. Origin: AGENTS.md and the testing skills already said "add a test only when
+   behaviour is not covered", yet packets asked for "every finding has a vitest assertion" and
+   "one case per role"; one repo reached 91 000 Go test lines for 128 000 code lines and 40 000
+   SPA test lines for 85 000, while a screen audit found 58 UX problems no test caught. A packet touching a
    cost-bearing seam (database, another service, a list/response path) states its cost budget (AC-007) and, when container tests are the evidence, its
    engine parity (AC-006). Neither needs database expertise to review — both print a number.
    An executor cannot measure what it cannot reach: a packet whose AC needs a real database
@@ -185,11 +197,13 @@ round and without budgets; the owner had to point back at the previous sprint's 
    non-overlapping writes and integration order recorded in the plan. Before spawning the executor run
    `python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase dispatch --packet <packet.md> --sprint .orchestrate/SPRINT.md`
    (add `--contract` and `--plan` for a contract-backed cycle): it enforces the Advisor line, the
-   executor seat, the budget and the wave audit. Each packet gets its own
+   executor seat, the volume budget, the test budget and the wave audit. Each packet gets its own
    worktree, ports and scratch paths derived from its number. Executors never open a browser or
    a UI-driving tool. Rules: [references/dispatch-and-land.md](references/dispatch-and-land.md).
 6. **Verify.** Root reviews the diff for scope, parity, architecture, naming and unrelated
    changes, then runs every acceptance command itself. Executor prose is not evidence.
+   Every new test in the diff matches a `- new:` line of the packet's Tests section; root deletes
+   a new test that guards nothing named there before landing.
    A packet touching a seam (SQL, document store, cache, gRPC/HTTP client, config, response
    shape) MUST carry a reality AC — a named container-backed test run with `-v` whose
    `--- PASS` line is pasted, or a replay diff against the legacy system — in addition to

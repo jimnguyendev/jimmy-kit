@@ -9,6 +9,9 @@
 ## Volume and budget
 - N/A — the linter fixture adds no query over a growing table and no loop on a hot path.
 
+## Tests
+- none — the fixture adds no behaviour that a new test would guard.
+
 ## Verdict dimensions
 - Implementation verdict: PASS
 - Evidence verdict: PASS
