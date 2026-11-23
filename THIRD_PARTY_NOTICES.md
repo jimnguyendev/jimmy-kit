@@ -1,6 +1,6 @@
 # Third-party notices
 
-Ideas in `skills/engineering/verify-app`, `skills/productivity/write-a-skill/references/blind-eval.md`, the mechanism ladder in `skills/process/retrospective`, the iteration loop and the "Explain Every Number" section in `skills/engineering/engineering-perf-optimization-process`, the verification, measurement, premise and encode-lessons rules in `skills/productivity/orchestrate` and `skills/engineering/reality-gate` (from pstack's principle skills and benchmark-checklist), and `skills/productivity/ketchup` (from pstack's `ketchup` and `bro` skills) are adapted from pstack (https://github.com/cursor/plugins/tree/main/pstack), distributed under the following license:
+Ideas in `skills/engineering/verify-app`, `skills/productivity/write-a-skill/references/blind-eval.md`, the mechanism ladder in `skills/process/retrospective`, the iteration loop and the "Explain Every Number" section in `skills/engineering/engineering-perf-optimization-process`, the verification, measurement, premise and encode-lessons rules in `skills/productivity/orchestrate` and `skills/engineering/reality-gate` (from pstack's principle skills and benchmark-checklist), `skills/productivity/ketchup` (from pstack's `ketchup` and `bro` skills), and `skills/engineering/no-comments` (from pstack's `no-comments` skill and `comment-sicko` agent) are adapted from pstack (https://github.com/cursor/plugins/tree/main/pstack), distributed under the following license:
 
 ```
 MIT License
