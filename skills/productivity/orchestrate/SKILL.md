@@ -263,7 +263,8 @@ round and without budgets; the owner had to point back at the previous sprint's 
    checked with `orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md`); the
    PreCompact/SessionStart hook in
    `scripts/orchestrate-context.sh` restores it after compaction
-   ([references/context-and-resume.md](references/context-and-resume.md)). Add a
+   ([references/context-and-resume.md](references/context-and-resume.md)). Read
+   `.jimmy/work/papercuts.md` (skill `log-papercut`) at the end of a wave and turn a repeated entry into a fix of the skill at its source. Add a
    WHEN · CHECK · BECAUSE line to LEARNINGS.md when a failure teaches a rule. After a session
    limit, resume each stopped agent with `SendMessage`; do not respawn it. **One release unit per
    session:** the context hook counts compactions per session; after the second, finish the current
