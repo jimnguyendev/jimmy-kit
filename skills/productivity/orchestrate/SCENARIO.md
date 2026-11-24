@@ -110,3 +110,17 @@
 - [ ] The third delta on one gate opens with `premise:` and `observation:`, and the root makes the observation first.
 
 **Status:** [PASS — exit 0, scripts only] 2026-11-18: `python3 -m unittest discover -s scripts -p 'test_*.py'` 122/122 passed (118 before). Against the previous `orchestration_lint.py`, `PACKET.md` and `rules-and-enforcers.md`, 5 of the 6 new or changed lint tests fail (the sixth is the control: a target without a measurement passes). Run read-only over 266 real packets of the origin repo, the measured-number rule flagged none after the unit requirement was added (it first flagged "measured at 1× and 10×" and a row count). No model-behavior evaluation of the SKILL.md changes was run.
+
+## Cited references, gates by changed paths, session length
+
+**Rationale:** three prose rules were broken more than once. A packet listed a tool "like <reference product>" from the root's memory and the reference hides that tool from external clients; a comment-only diff went through fifteen gates including container suites; in one project the four longest sessions held two thirds of a month's spend and most of the owner's corrections.
+
+**Sample input:** "Dispatch a packet that adds a metrics tool like <reference product>, then land a comment-only diff, in a session that has been compacted twice."
+
+**Expected behaviors:**
+- [x] `orchestration_lint.py --phase dispatch --packet <p>` fails `REFERENCE_CITED` for a line naming a reference listed under `references` in `.claude/orchestrator.json` without `ref: <path>[:line]` (path inside the clone) or `ref: none — <reason>`; without the key the rule is off.
+- [x] `gates.sh --base <ref>` (and `land.sh`) skips a `name @glob: command` gate when the diff matches none of its globs and prints `SKIP`; lines without `@` and runs without a base behave as before.
+- [x] `orchestrate-context.sh resume` prints the compaction count of the session and, from the second, the instruction to finish the release unit, rewrite HANDOFF.md and continue in a new session.
+- [ ] The root obeys that instruction and tells the owner.
+
+**Status:** [PASS — exit 0, scripts only] 2026-11-24: `python3 -m unittest discover -s scripts -p 'test_*.py'` 125/125 passed. No model-behavior evaluation of the SKILL.md changes was run.

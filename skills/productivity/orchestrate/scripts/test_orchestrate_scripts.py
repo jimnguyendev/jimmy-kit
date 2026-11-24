@@ -158,6 +158,30 @@ class GatesTests(unittest.TestCase):
             missing = r.run("bash", str(GATES), str(r.wt), ORCH_GATES_FILE=str(r.root / "none"))
             self.assertEqual(missing.returncode, 2)
 
+    def test_gate_limited_to_paths_is_skipped_when_diff_misses_them(self) -> None:
+        gates = "any: true\nweb @web/**: touch ran-web\ndocs @*.txt,docs/**: touch ran-docs\n"
+        with Repos(gates) as r:
+            skipped = r.run("bash", str(GATES), "--base", "main", str(r.wt))
+            self.assertEqual(skipped.returncode, 0, skipped.stdout + skipped.stderr)
+            self.assertIn("ok   any", skipped.stdout)
+            self.assertIn("SKIP web: no changed path matches web/**", skipped.stdout)
+            self.assertIn("ok   docs", skipped.stdout)
+            self.assertFalse((r.wt / "ran-web").exists())
+            self.assertTrue((r.wt / "ran-docs").exists())
+            self.assertIn("2 ran (any docs), 1 skipped (web)", skipped.stdout)
+            everything = r.run("bash", str(GATES), "--base", "main", str(r.wt), ORCH_GATES_ALL="1")
+            self.assertIn("ok   web", everything.stdout)
+            self.assertIn("gates: all 3 ok", everything.stdout)
+            (r.wt / "web").mkdir()
+            (r.wt / "web" / "app.ts").write_text("x\n", encoding="utf-8")
+            git(r.wt, "add", "-A")
+            git(r.wt, "commit", "-q", "-m", "web")
+            touched = r.run("bash", str(GATES), "--base", "main", str(r.wt))
+            self.assertIn("ok   web", touched.stdout)
+            self.assertIn("gates: all 3 ok", touched.stdout)
+            without_base = r.run("bash", str(GATES), str(r.wt))
+            self.assertIn("gates: all 3 ok", without_base.stdout)
+
     def test_malformed_line_is_rejected(self) -> None:
         with Repos("just a command without a name\n") as r:
             self.assertEqual(r.run("bash", str(GATES), str(r.wt)).returncode, 2)
@@ -435,6 +459,22 @@ class ContextHookTests(unittest.TestCase):
             self.assertIn("Next: land 001", resume.stdout)
             self.assertIn("AUTO-STATE.md", resume.stdout)
             self.assertIn("/ketchup", resume.stdout)
+
+    def test_resume_tells_to_hand_off_after_second_compaction(self) -> None:
+        with Repos() as r:
+            self.setup_state(r)
+            hook = {"cwd": str(r.repo), "session_id": "s-1"}
+            r.run("bash", str(HOOK), "snapshot", stdin=json.dumps(hook))
+            first = r.run("bash", str(HOOK), "resume", stdin=json.dumps(hook))
+            self.assertIn("compacted 1 time(s)", first.stdout)
+            self.assertNotIn("INSTRUCTION", first.stdout)
+            r.run("bash", str(HOOK), "snapshot", stdin=json.dumps(hook))
+            second = r.run("bash", str(HOOK), "resume", stdin=json.dumps(hook))
+            self.assertIn("compacted 2 time(s)", second.stdout)
+            self.assertIn("tell the owner to continue in a new session", second.stdout)
+            other = r.run("bash", str(HOOK), "resume", stdin=json.dumps({**hook, "session_id": "s-2"}))
+            self.assertNotIn("INSTRUCTION", other.stdout)
+            self.assertEqual(r.run("git", "-C", str(r.repo), "status", "--porcelain").stdout.strip(), "")
 
     def test_resume_prints_whole_owner_section_past_the_head_limit(self) -> None:
         with Repos() as r:

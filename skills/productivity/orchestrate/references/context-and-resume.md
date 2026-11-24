@@ -3,6 +3,14 @@
 Read when a sprint will outlive one context window, which is any sprint with more than a few
 packets.
 
+## One release unit per session
+
+`orchestrate-context.sh snapshot` (PreCompact) counts compactions per session id in
+`.orchestrate/compactions/<session id>`, next to `AUTO-STATE.md` and never in tracked files. `resume` prints
+the count and, from the second compaction, one instruction: finish the current release unit, rewrite
+HANDOFF.md, and tell the owner to continue in a new session. Measured origin: in one project the four
+longest sessions held two thirds of a month's spend and most of the owner's corrections.
+
 ## HANDOFF after every land
 
 The state on disk is enough to resume only if it is current. The root rewrites `HANDOFF.md`

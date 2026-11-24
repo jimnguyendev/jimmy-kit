@@ -5,7 +5,8 @@
 #   2. fetch and merge origin/<main> into the packet branch (a conflict stops here)
 #   3. wait for a quiet machine (1-minute load average at or below ORCH_MAX_LOAD), then run the
 #      gate runner on the merged result: a clean git merge can still fail to build, and timing
-#      tests fail under load. Gates that pass record their commit in <gates dir>/green-sha.
+#      tests fail under load. A gate limited to paths (`name @glob: command`) runs only when the merge
+#      with origin/<main> changes a matching path; the gate output lists what ran and what was skipped. Gates that pass record their commit in <gates dir>/green-sha.
 #   4. push the branch, open a PR/MR (retried; or reuse the open one), wait until the forge says mergeable
 #   5. merge with the head SHA, so nothing pushed after the gates can land
 #   6. fast-forward the main checkout, then remove the worktree and the local branch
@@ -29,6 +30,7 @@
 #   ORCH_LOAD_WAIT     seconds to wait for the load to drop before exit 3 (default 900)
 #   ORCH_LOAD_POLL     seconds between load readings (default 15)
 #   ORCH_CREATE_TRIES  attempts to open the PR/MR (default 5), ORCH_CREATE_SLEEP seconds between (default 5)
+#   ORCH_GATES_ALL     1 runs every gate even when a path-limited gate matches nothing in the diff
 #   ORCH_SKIP_GATES_FOR_SHA  the commit whose gates passed; same as --resume but names the commit
 #   ORCH_MERGE_METHOD  github only: merge | squash | rebase (default merge)
 #   GITLAB_TOKEN       gitlab: token with api scope (sent from a file descriptor, not argv)
@@ -107,7 +109,7 @@ else
   rm -f "$marker"
   wait_quiet
   say "running gates on the merged result"
-  "${ORCH_GATES:-$here/gates.sh}" "$wt" || die "gates failed; nothing was pushed"
+  ORCH_GATES_BASE="origin/$main" "${ORCH_GATES:-$here/gates.sh}" "$wt" || die "gates failed; nothing was pushed"
   [ -z "$(git -C "$wt" status --porcelain --untracked-files=no)" ] ||
     die "a gate changed tracked files (generated code or formatting drift); commit the result and rerun"
   mkdir -p "$gates_dir"
