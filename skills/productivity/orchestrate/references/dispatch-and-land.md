@@ -89,6 +89,15 @@ Each packet derives its resources from its number and the packet lists them:
 5. merges with the head SHA (`--match-head-commit` / `sha=`), so a commit pushed after the gates cannot land;
 6. fast-forwards the main checkout, then removes the worktree and the local branch.
 
+A gate may limit itself to paths: `name @glob[,glob...]: command`. `land.sh` runs the gates with the
+default branch as base, so a limited gate runs only when `git diff --name-only <base>...HEAD` of the merged
+result has a path matching one of its globs (`*` stays inside a directory, `**` crosses directories),
+and otherwise prints `SKIP <name>: no changed path matches <globs>`. The gate output ends with the gates
+that ran and the ones that were skipped. A line without `@` always runs; without a base (`gates.sh` called
+by hand) every gate runs, and `ORCH_GATES_ALL=1` forces that in a land. `gates.sh --base <ref> <worktree>`
+(or `ORCH_GATES_BASE`) sets the base by hand. Origin: a comment-only diff went through fifteen gates including
+container suites.
+
 The gate list lives in `<repo>/.orchestrate/gates`, one `name: command` per line, run from the
 worktree root. List **every** gate the repo has, backend and frontend, including the slow
 container-backed ones:
@@ -101,6 +110,13 @@ acceptance: make test-acceptance
 fe-install: cd web && pnpm install --frozen-lockfile
 fe-check:   cd web && pnpm -s typecheck && pnpm -s lint && pnpm -s test
 fe-build:   cd web && pnpm -s build
+```
+
+Limited form, for a gate that only a part of the tree can break:
+
+```text
+acceptance @internal/**,db/**,go.mod: make test-acceptance
+fe-check   @web/**:                   cd web && pnpm -s typecheck && pnpm -s lint && pnpm -s test
 ```
 
 Why the script runs the gates itself: in the origin run the handoff said the land script

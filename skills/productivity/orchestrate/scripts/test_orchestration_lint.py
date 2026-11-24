@@ -647,6 +647,28 @@ class DispatchEnforcementTests(unittest.TestCase):
         path = self.packet("Rename a column.", "- Executor: opencode run -m provider/Fable-5")
         self.assert_fails(self.lint("--packet", str(path)), "EXECUTOR_FORBIDDEN")
 
+    # Incident: a packet listed a tool "like <reference product>" from memory; the reference hides that tool from
+    # external clients, so the scope was invented and a saved prose rule did not stop the second occurrence.
+    def test_reference_named_without_citation_fails(self) -> None:
+        clone = self.root / "refs" / "rill"
+        (clone / "src").mkdir(parents=True)
+        (clone / "src" / "tools.go").write_text("package src\n", encoding="utf-8")
+        self.config(references={"rill": "refs/rill"})
+        bare = self.packet("Add a metrics tool like Rill's query_metrics.", "- Executor: sonnet")
+        result = self.lint("--packet", str(bare))
+        self.assert_fails(result, "REFERENCE_CITED")
+        self.assertIn("rill", result.stdout)
+        self.assertIn("ref:", result.stdout)
+        self.assert_fails(self.lint("--packet", str(self.packet("Like Rill (ref: src/missing.go:3).", "- Executor: sonnet"))), "REFERENCE_CITED")
+        self.assert_fails(self.lint("--packet", str(self.packet("Like Rill (ref: ../outside.go).", "- Executor: sonnet"))), "REFERENCE_CITED")
+        self.assert_fails(self.lint("--packet", str(self.packet("Like Rill (ref: none).", "- Executor: sonnet"))), "REFERENCE_CITED")
+        self.assert_passes(self.lint("--packet", str(self.packet("Like Rill (ref: src/tools.go:1).", "- Executor: sonnet"))))
+        self.assert_passes(self.lint("--packet", str(self.packet("Like Rill (ref: none — it has no such tool).", "- Executor: sonnet"))))
+        fenced = self.packet("Rename a column.", "- Executor: sonnet", "```", "rill output pasted here", "```")
+        self.assert_passes(self.lint("--packet", str(fenced)))
+        (self.root / ".claude" / "orchestrator.json").unlink()
+        self.assert_passes(self.lint("--packet", str(bare)))
+
     def test_missing_executor_is_rejected(self) -> None:
         self.assert_fails(self.lint("--packet", str(self.packet())), "EXECUTOR_FORBIDDEN")
 

@@ -73,6 +73,7 @@ class Linter:
         self.config_path = config_path
         self.phase = phase
         self.config: dict[str, Any] = {}
+        self.config_file: Path = Path.cwd() / ".claude" / "orchestrator.json"
         self.errors: list[str] = []
         self.contract: dict[str, Any] = {}
         self.plan = ""
@@ -528,6 +529,45 @@ class Linter:
             return
         if isinstance(parsed, dict):
             self.config = parsed
+            self.config_file = path
+
+    def validate_references(self) -> None:
+        """A line that names a configured reference product must cite a file of its clone, or say why not."""
+        references = self.config.get("references")
+        if not isinstance(references, dict) or not references:
+            return
+        root = self.config_file.parent.parent if self.config_file.parent.name == ".claude" else self.config_file.parent
+        text = re.sub(r"^(`{3,}|~{3,}).*?^\1[^\n]*$", "", self.packet, flags=re.MULTILINE | re.DOTALL)
+        for name, location in references.items():
+            if not isinstance(name, str) or not name or not isinstance(location, str):
+                continue
+            clone = Path(location).expanduser()
+            clone = (clone if clone.is_absolute() else root / clone).resolve()
+            word = re.compile(r"(?<!\w)" + re.escape(name) + r"(?!\w)", re.IGNORECASE)
+            for number, line in enumerate(text.splitlines(), start=1):
+                if not word.search(line):
+                    continue
+                fix = (
+                    f"cite the reference's code with `ref: <path in {name}'s clone>[:line]` on the line, "
+                    "or write `ref: none — <reason>`; never list behaviour of a reference from memory"
+                )
+                cited = re.search(r"(?<!\w)ref\s*:\s*`?([^\s`]+)`?(.*)$", line, re.IGNORECASE)
+                where = f"packet line {number} names reference '{name}'"
+                if not cited:
+                    self.error("REFERENCE_CITED", f"{where} without a citation; {fix}")
+                    continue
+                target, rest = cited.group(1), cited.group(2)
+                if target.lower() == "none":
+                    if not re.match(r"^\s*[\u2014\u2013-]+\s*\S", rest):
+                        self.error("REFERENCE_CITED", f"{where} with `ref: none` and no reason; write `ref: none — <reason>`")
+                    continue
+                target = re.sub(r":[0-9]+(?:-[0-9]+)?$", "", target.rstrip(".,;)"))
+                path = Path(target).expanduser()
+                path = (path if path.is_absolute() else clone / path).resolve()
+                if clone != path and clone not in path.parents:
+                    self.error("REFERENCE_CITED", f"{where}; `ref: {target}` is outside {clone}")
+                elif not path.exists():
+                    self.error("REFERENCE_CITED", f"{where}; `ref: {target}` does not exist in {clone}; {fix}")
 
     def validate_advisor(self) -> None:
         """A plan or packet in the risk vocabulary needs an approved Advisor round or a named waiver."""
@@ -604,6 +644,7 @@ class Linter:
         """Rules that read the packet alone; they also run without a contract."""
         if self.packet_path is not None:
             self.validate_volume_budget()
+            self.validate_references()
             self.validate_advisor()
             self.validate_executor()
             self.validate_tests()
@@ -663,6 +704,7 @@ class Linter:
         self.validate_verdicts()
         if self.phase == "review":
             self.validate_volume_budget()
+            self.validate_references()
         if self.phase == "dispatch":
             self.validate_dispatch_packet()
             plan_status = self.field(r"^\s*-\s*Status:\s*`?([^`\s]+)", self.plan)

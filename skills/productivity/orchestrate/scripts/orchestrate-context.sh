@@ -10,6 +10,10 @@
 # "<session cwd> <repo path>" (either may contain spaces) in $ORCH_TARGETS (default ~/.claude/orchestrate-targets) whose first
 # field equals the cwd. No repo found: exit 0 with no output, so the hook is safe in every session.
 #
+# Compactions are counted per session id (hook JSON `session_id`) in <repo>/.orchestrate/compactions/<id>,
+# next to AUTO-STATE.md. `resume` prints the count and, from the second compaction, tells the root to
+# hand off to a new session.
+#
 # Environment: ORCH_TARGETS (mapping file) · ORCH_PS_PATTERN (extended regex of executor processes
 # to list; default covers opencode, claude -p, codex exec and browsers started with a CDP port).
 set -u
@@ -32,6 +36,8 @@ for k in sys.argv[1:]:
         print(v); break' "$@" 2>/dev/null; }
 cwd="$(field cwd)"
 [ -n "$cwd" ] || cwd="${CLAUDE_PROJECT_DIR:-$PWD}"
+session="$(field session_id | tr -c 'A-Za-z0-9._\n-' '_')"
+session="${session:-unknown}"
 trigger="$(field trigger source)"
 trigger="${trigger:-unknown}"
 
@@ -53,8 +59,13 @@ main="${main#origin/}"
 main="${main:-main}"
 pattern="${ORCH_PS_PATTERN:-opencode[0-9]*(\.exe)? run|claude -p|codex exec|remote-debugging-port}"
 
+counter="$state/compactions/$session"
+compactions() { cat "$counter" 2>/dev/null || echo 0; }
+
 snapshot() {
   local out="$state/AUTO-STATE.md" tmp
+  mkdir -p "$state/compactions"
+  echo $(($(compactions) + 1)) >"$counter"
   tmp="$(mktemp)"
   {
     echo "# AUTO-STATE (written by the PreCompact hook, $(date '+%Y-%m-%d %H:%M:%S'), trigger: $trigger)"
@@ -107,6 +118,15 @@ resume() {
   echo "Read LEARNINGS.md and packets/ only when a step needs them."
   echo "Your first message to the owner after this follows /ketchup: how many decisions wait on them, what"
   echo "happened since their last message, then one decision brief per item in 'Waiting on owner'."
+  local n
+  n="$(compactions)"
+  if [ "$n" -ge 1 ] 2>/dev/null; then
+    echo "This session has been compacted $n time(s)."
+  fi
+  if [ "$n" -ge 2 ] 2>/dev/null; then
+    echo "INSTRUCTION: this session has been compacted twice or more. Finish the current release unit, rewrite"
+    echo "HANDOFF.md, and tell the owner to continue in a new session. Do not start another release unit here."
+  fi
   for copy in land.sh gates.sh; do
     if [ -e "$state/bin/$copy" ]; then
       echo "WARNING: $state/bin/$copy is a project copy; land and gate with the installed orchestrate skill's"

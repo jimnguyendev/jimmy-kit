@@ -265,7 +265,12 @@ round and without budgets; the owner had to point back at the previous sprint's 
    `scripts/orchestrate-context.sh` restores it after compaction
    ([references/context-and-resume.md](references/context-and-resume.md)). Add a
    WHEN · CHECK · BECAUSE line to LEARNINGS.md when a failure teaches a rule. After a session
-   limit, resume each stopped agent with `SendMessage`; do not respawn it. When the root's own
+   limit, resume each stopped agent with `SendMessage`; do not respawn it. **One release unit per
+   session:** the context hook counts compactions per session; after the second, finish the current
+   release unit, rewrite HANDOFF.md and tell the owner to continue in a new session (in one project the
+   four longest sessions held two thirds of a month's spend and most of the owner's corrections).
+   A packet that claims parity with a reference product cites its code (`ref: <path>[:line]`), checked by
+   `REFERENCE_CITED` when `.claude/orchestrator.json` lists the reference. When the root's own
    model is rate-limited, schedule a wake-up after the reset and write the stall into the status. Capture durable
    decisions in ADR/docs. A material requirement, baseline, route, or ownership change ends the
    review episode: obtain user authorization for a **fresh cycle** and rerun recon/review rather
