@@ -59,6 +59,18 @@ GH_STUB = textwrap.dedent(
 )
 
 
+CALLER_PREFIXES = ("ORCH_", "GITLAB_")
+CALLER_NAMES = ("GITHUB_TOKEN", "GH_TOKEN")
+
+
+def hermetic_env() -> dict:
+    return {
+        k: v
+        for k, v in os.environ.items()
+        if not k.startswith(CALLER_PREFIXES) and k not in CALLER_NAMES
+    }
+
+
 def git(cwd: Path, *args: str) -> str:
     return subprocess.run(
         ["git", *args], cwd=cwd, check=True, capture_output=True, text=True
@@ -99,7 +111,7 @@ class Repos:
         stub.chmod(0o755)
 
     def env(self, **extra: str) -> dict:
-        env = dict(os.environ)
+        env = hermetic_env()
         env.update(
             {
                 "PATH": f"{self.bin}{os.pathsep}{env['PATH']}",
