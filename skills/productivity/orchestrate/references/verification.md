@@ -49,6 +49,10 @@ reference product's real usage, with the reference product's screen open beside 
 toy data hides dead ends, missing columns and broken empty states; a feature checked only
 against our own spec can match the spec and still be the wrong screen.
 
+When the unit has a [reference inventory](product-fit.md#reference-inventory), the walk follows its
+`build` rows, not the list of what was built: each row is walked and marked done or not done, with
+the evidence path. A row nobody built shows up as not done instead of staying invisible.
+
 Internal vocabulary never reaches the UI: terms from the code, ADRs or other repos (revision,
 tombstone, executor, lease) are not words the admin uses. Recommended gate: a test over the
 UI locale files that fails on a deny-list of internal terms, with an allow-list for reviewed

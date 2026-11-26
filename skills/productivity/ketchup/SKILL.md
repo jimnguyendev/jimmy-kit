@@ -66,8 +66,9 @@ One brief per decision; several decisions get numbered briefs, the most blocking
 2. What happened, most important first: each result and what it means for the owner. Skip steps that changed nothing.
 3. Still running, and what you could not check.
 4. Decisions you took yourself, one line each with the reason.
-5. Work left that you can do yourself, in one line.
-6. One decision brief per action item.
+5. Strike list, when the work compares itself with a reference product: the rows you propose to drop or defer, one line each (`<id> · <feature> · <reason>`), so the owner can answer by id. The list is one action item, not one per row: one brief, "which of these rows do we drop?".
+6. Work left that you can do yourself, in one line.
+7. One decision brief per action item.
 
 ## 5. Check before sending
 

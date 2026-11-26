@@ -47,6 +47,10 @@ Scripts are called from the installed skill: `<installed-skill-dir>/scripts/`. O
 | Land runs only the gates whose paths the diff touches. A comment-only diff went through fifteen gates including container suites; picking a smaller gates file by hand was itself a prose rule. | `gates.sh` / `land.sh`: a gates line `name @glob[,glob...]: command` is skipped (`SKIP name: no changed path matches ...`) when `git diff --name-only <default branch>...HEAD` matches none of its globs; `land.sh` passes the default branch as base on the merged result | write the gate without `@` (always runs); `ORCH_GATES_ALL=1` runs everything |
 | A session that has been compacted twice hands off to a new one (one release unit per session). In one project the four longest sessions held two thirds of a month's spend and most of the owner's corrections. | `orchestrate-context.sh snapshot` counts compactions per session id in `.orchestrate/compactions/<id>`; `resume` prints the count and, from the second, the instruction to finish the unit, rewrite HANDOFF.md and tell the owner to continue in a new session. The instruction is read by the root; obeying it is prose only | none |
 | Call `land.sh` and `gates.sh` from the installed skill. | `orchestrate-context.sh resume` warns about a project copy | none |
+| Every packet names where its scope came from: inventory rows it builds, the owner's dated words, or the landed behaviour it fixes. A plan claimed parity with two reference builders from a 16-row table and each gap surfaced only when the owner asked "does it have X?". | `orchestration_lint.py` phases `review` and `dispatch`: `SCOPE_SOURCE` for no valid `scope:` line; `SCOPE_INVENTORY` when the cited inventory is missing or malformed, a cited id is not in it, or a cited row's decision is not `build <packet id>` | none |
+| Scope is fixed from an inventory read from the reference's source, and every row carries a decision. | `orchestration_lint.py --phase scope --inventory <file>…`, and phases `review` and `dispatch` for the inventory a packet cites: `SCOPE_INVENTORY` (no table with `id`, `status`, `decision`; a repeated id; a status other than `HAVE`, `PARTIAL`, `MISSING`, `N/A`; a `HAVE` row with an empty `ours`; no `reference: <name> @ <commit>` line, or a name that is not a key of `references` with an existing clone), `SCOPE_UNDECIDED` (a `PARTIAL` / `MISSING` row without a valid decision, an `N/A` row without `n/a — <reason>`) | none; reading option by option from the source, not from memory or docs prose, is prose only |
+| Scope cuts are the owner's: a root never writes `drop` or `later` without the owner's dated words. A standing "decide, don't ask" rule covers technical choices, not dropping a reference feature. | `SCOPE_ROOT_DROP` for a `drop` / `later` decision without `owner <date>: "<quote>"`; the root writes `propose-drop` / `propose-later`, which do not fail dispatch | none |
+| Proposed cuts reach the owner. | `--phase scope` prints the strike list (every `propose-*` row) for the owner's report; `orchestration_lint.py --phase handoff`: `SCOPE_PENDING_OWNER` while an inventory named on an `inventory:` line of SPRINT.md (next to the handoff, or `--sprint`) has `propose-*` rows and `Waiting on owner` does not name the file | none |
 
 ## Lifecycle rules left as prose
 
@@ -54,6 +58,7 @@ Scripts are called from the installed skill: `<installed-skill-dir>/scripts/`. O
 |---|---|---|
 | Verify runs against the real artifact (the feature, the stored value, the diff), never an executor's report or "it compiles"; a failed check first suspects the observation; a check the root reruns becomes a script or a line in `.orchestrate/gates`. | Judgement at Verify; the rerun half is enforced once the check is in `.orchestrate/gates` | none |
 | Before a third delta on the same gate, the delta opens with `premise:` and `observation:`. | Deltas are chat messages to the executor, not files a script reads | none |
+| The unit-end walk follows the inventory's `build` rows (each walked: done / not done), not the list of what was built. | The walk is a browser session the root reads, not a file | none |
 
 ## Linting a packet without a contract
 
@@ -63,7 +68,7 @@ python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase dispatch \
   [--sprint .orchestrate/SPRINT.md] [--config .claude/orchestrator.json]
 ```
 
-This runs the packet-only rules (`VOLUME_BUDGET`, `ADVISOR_REQUIRED`, `EXECUTOR_FORBIDDEN`, `TESTS_SECTION`,
+This runs the packet-only rules (`SCOPE_*`, `VOLUME_BUDGET`, `ADVISOR_REQUIRED`, `EXECUTOR_FORBIDDEN`, `TESTS_SECTION`,
 `TEST_RISK`, `TEST_LAYER`, `TEST_BUDGET`, `TEST_PER_ITEM`) and, with
 `--sprint`, `AUDIT_DUE`. With `--contract`, `--plan` and `--packet` the same rules run next to the contract
 checks. The config is the `.claude/orchestrator.json` nearest above the packet or sprint file unless `--config` is given.
@@ -74,6 +79,21 @@ Packet metadata the lint reads (one line each, in the "Approved plan and routing
 - Executor: opus
 - Advisor: PLAN_APPROVED .orchestrate/plans/NNN-slug-review.md
 - Advisor: waived by <who> — <reason of at least 10 letters>
+- Scope: .orchestrate/recon/builder-triggers.md#T2, T5
+- Scope: owner 26/11 — "<the owner's words, quoted>"
+- Scope: fix — <the landed behaviour or audit finding it fixes, 10+ letters>
+```
+
+The inventory path is relative to the project root (or the packet's directory) or absolute; the
+inventory grammar is in [product-fit.md](product-fit.md#reference-inventory). A `scope:` line in the
+inventory form is exempt from `REFERENCE_CITED`: the inventory's `reference:` header is checked instead.
+
+Checking inventories on their own, before a plan is packetized and for the owner's report:
+
+```bash
+python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase scope \
+  --inventory .orchestrate/recon/builder-triggers.md [.orchestrate/recon/builder-actions.md …] \
+  [--config .claude/orchestrator.json]
 ```
 
 The packet's `## Tests` section, one line per new test (HTML comments are ignored):

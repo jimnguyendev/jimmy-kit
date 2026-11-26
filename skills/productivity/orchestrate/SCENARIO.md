@@ -124,3 +124,18 @@
 - [ ] The root obeys that instruction and tells the owner.
 
 **Status:** [PASS — exit 0, scripts only] 2026-11-24: `python3 -m unittest discover -s scripts -p 'test_*.py'` 125/125 passed. No model-behavior evaluation of the SKILL.md changes was run.
+
+## Scope from a source inventory (written BEFORE the 2026-11-26 change)
+
+**Rationale:** a plan claimed parity with two reference products from a 16-row table at node-kind level, in a messaging workflow builder compared with two reference builders. The root judged seven rows "covered", "not built" or "not applicable" by itself, from recon summaries and memory. Nobody listed the references' triggers, operations and options from their source, so each gap surfaced only when the owner asked "does it have X?". Every later check (tests, wave audit, walks) looked only at what was built. The rule "the owner must not be the requirements-discovery mechanism" was prose with no enforcer, and `REFERENCE_CITED` did not fire because the two references were not in the config's `references`.
+
+**Sample input:** "Plan the builder's parity with the two reference builders, packetize the first wave, and report what you propose to leave out."
+
+**Expected behaviors:**
+- [ ] The root writes one inventory file per area from the references' source clones, option by option, with `reference: <name> @ <commit>` headers and an `id | reference feature | ref | ours | status | decision` table, and lists it on an `inventory:` line in SPRINT.md.
+- [ ] `orchestration_lint.py --phase scope --inventory <file>` prints counts per status and per decision kind and the strike list (every `propose-drop` / `propose-later` row); it exits 1 on an undecided `PARTIAL` / `MISSING` row (`SCOPE_UNDECIDED`), a `drop` / `later` without the owner's dated words (`SCOPE_ROOT_DROP`), or a malformed inventory or a reference missing from the config's `references` (`SCOPE_INVENTORY`).
+- [ ] Phases `review` and `dispatch` fail `SCOPE_SOURCE` for a packet without a valid `scope:` line, and `SCOPE_INVENTORY` when a cited row is missing or not `build …`.
+- [ ] `--phase handoff` fails `SCOPE_PENDING_OWNER` while an inventory named in SPRINT.md has `propose-*` rows and `Waiting on owner` does not name it.
+- [ ] The owner's report carries the strike list as one brief ("which of these rows do we drop?"); the unit-end walk follows the inventory's `build` rows.
+
+**Status:** [PASS — exit 0, scripts only] 2026-11-26: `python3 -m unittest discover -s scripts -p 'test_*.py'` 128/128 passed (125 before). Against the previous `orchestration_lint.py`, all 3 new tests fail (20 subtest failures). A hand-made inventory with one row of every kind printed its strike list and exited 0; blanking one `propose-drop` decision exited 1 with `SCOPE_UNDECIDED` naming the row. No model-behavior evaluation of the SKILL.md, product-fit or ketchup text was run.
