@@ -5,6 +5,7 @@
 - Approval state: `APPROVED`
 - Acceptance contract: `contract.json`
 - Executor: sonnet
+- Scope: fix — the linter tests read a developer's gitignored contract and errored on a clean clone
 
 ## Volume and budget
 - N/A — the linter fixture adds no query over a growing table and no loop on a hot path.

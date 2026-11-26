@@ -524,6 +524,8 @@ class HandoffLintTests(unittest.TestCase):
 
 PACKET_ONLY = """# Packet 176 — rename-column
 
+- Scope: fix — the ledger column name misleads every reader of the table
+
 ## Objective
 {objective}
 
@@ -832,6 +834,7 @@ class DispatchEnforcementTests(unittest.TestCase):
         text = PACKET_TEMPLATE.read_text(encoding="utf-8")
         self.assertRegex(text, r"(?m)^- Executor: ")
         self.assertRegex(text, r"(?m)^- Advisor: ")
+        self.assertRegex(text, r"(?m)^- Scope: ")
 
     def test_every_non_negotiable_rule_is_in_the_rule_table(self) -> None:
         skill = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
@@ -842,9 +845,147 @@ class DispatchEnforcementTests(unittest.TestCase):
         for rule in rules:
             self.assertIn(rule.rstrip(".").replace("`", ""), table.replace("`", ""), rule)
         for code in ("ADVISOR_REQUIRED", "AUDIT_DUE", "EXECUTOR_FORBIDDEN",
-                     "TESTS_SECTION", "TEST_RISK", "TEST_BUDGET", "TEST_PER_ITEM", "TEST_LAYER"):
+                     "TESTS_SECTION", "TEST_RISK", "TEST_BUDGET", "TEST_PER_ITEM", "TEST_LAYER",
+                     "SCOPE_SOURCE", "SCOPE_INVENTORY", "SCOPE_UNDECIDED", "SCOPE_ROOT_DROP", "SCOPE_PENDING_OWNER"):
             self.assertIn(code, table)
             self.assertIn(code, LINTER.read_text(encoding="utf-8"))
+
+
+INVENTORY = """# Builder inventory
+
+reference: builder-a @ 3f2a9c1
+
+| id | reference feature | ref | ours | status | decision |
+|---|---|---|---|---|---|
+| T1 | Webhook trigger with a secret header | nodes/webhook.ts | webhook trigger | HAVE | |
+| T2 | Schedule trigger with a cron expression | nodes/schedule.ts:40 | daily schedule only | PARTIAL | build 214 |
+| O1 | Send email with CC and reply-to | nodes/email.ts:88 | | MISSING | propose-later — no team sends with CC today |
+| O2 | HTTP request response pagination | nodes/http.ts | | MISSING | drop — owner 26/11: "we never page third-party responses" |
+| O3 | Wait until a date field of the user | nodes/wait.ts | | MISSING | propose-drop — every live wait is a fixed delay |
+| X1 | Self-hosted runner pool | runner/pool.ts | | N/A | n/a — one managed worker pool, no customer runners |
+"""
+
+
+class ScopeInventoryTests(unittest.TestCase):
+    """A packet names where its scope came from; an inventory read from the reference's source decides every row.
+
+    Incident: a plan claimed parity with two reference builders from a 16-row table; the root marked seven rows
+    covered, not built or not applicable from memory, and each gap surfaced only when the owner asked for it.
+    """
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory(prefix="orchestration-scope-")
+        self.root = Path(self.tmp.name).resolve()
+        self.addCleanup(self.tmp.cleanup)
+        (self.root / ".orchestrate" / "packets").mkdir(parents=True)
+        (self.root / ".orchestrate" / "recon").mkdir()
+        (self.root / ".claude").mkdir()
+        (self.root / "refs" / "builder-a").mkdir(parents=True)
+        (self.root / ".claude" / "orchestrator.json").write_text(
+            json.dumps({"references": {"builder-a": "refs/builder-a"}}), encoding="utf-8"
+        )
+        self.inventory = self.root / ".orchestrate" / "recon" / "builder.md"
+        self.inventory.write_text(INVENTORY, encoding="utf-8")
+
+    def run_lint(self, *args: str) -> subprocess.CompletedProcess[str]:
+        return subprocess.run(
+            [sys.executable, str(LINTER), *args], cwd=self.root, check=False, capture_output=True, text=True
+        )
+
+    def dispatch(self, scope: str | None) -> subprocess.CompletedProcess[str]:
+        text = PACKET_ONLY.format(
+            objective="Add the cron schedule trigger.", lines="- Executor: sonnet",
+            tests="- none — the packet text is what the lint reads here.",
+        )
+        text = text.replace("- Scope: fix — the ledger column name misleads every reader of the table\n", "")
+        if scope is not None:
+            text = text.replace("## Objective", f"- Scope: {scope}\n\n## Objective", 1)
+        path = self.root / ".orchestrate" / "packets" / "214-cron-trigger.md"
+        path.write_text(text, encoding="utf-8")
+        return self.run_lint("--phase", "dispatch", "--packet", str(path))
+
+    def test_scope_source_required(self) -> None:
+        for scope, ok in (
+            (None, False),
+            ("cron trigger", False),
+            ("fix — cron", False),
+            ("fix — <which landed behaviour is wrong>", False),
+            ('owner <date> — "<quote>"', False),
+            ("fix — the daily schedule fires twice on the day clocks change", True),
+            ('owner 26/11/2026 — "add cron to the schedule trigger"', True),
+            ('owner 2026-11-26 — "add cron to the schedule trigger"', True),
+            (".orchestrate/recon/builder.md#T2", True),
+        ):
+            with self.subTest(scope=scope):
+                result = self.dispatch(scope)
+                if ok:
+                    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                else:
+                    self.assertNotEqual(result.returncode, 0, result.stdout)
+                    self.assertIn("SCOPE_SOURCE", result.stdout)
+
+    def test_scope_inventory_decisions(self) -> None:
+        cases = (
+            ("undecided row", lambda t: t.replace("propose-later — no team sends with CC today", ""), "SCOPE_UNDECIDED", "O1"),
+            ("decision outside the grammar", lambda t: t.replace("propose-later — no team sends with CC today", "maybe"), "SCOPE_UNDECIDED", "O1"),
+            ("n/a without a reason", lambda t: t.replace("n/a — one managed worker pool, no customer runners", "n/a"), "SCOPE_UNDECIDED", "X1"),
+            ("root-written drop", lambda t: t.replace('drop — owner 26/11: "we never page third-party responses"', "drop — nobody pages responses"), "SCOPE_ROOT_DROP", "O2"),
+            ("root-written later", lambda t: t.replace("propose-drop — every live wait is a fixed delay", "later"), "SCOPE_ROOT_DROP", "O3"),
+            ("HAVE without ours", lambda t: t.replace("| webhook trigger |", "| |"), "SCOPE_INVENTORY", "T1"),
+            ("unknown reference", lambda t: t.replace("builder-a @", "builder-z @"), "SCOPE_INVENTORY", "builder-z"),
+            ("no reference header", lambda t: t.replace("reference: builder-a @ 3f2a9c1\n", ""), "SCOPE_INVENTORY", "reference:"),
+            ("unknown status", lambda t: t.replace("| PARTIAL |", "| SOME |"), "SCOPE_INVENTORY", "T2"),
+            ("repeated id", lambda t: t.replace("| O3 |", "| O1 |"), "SCOPE_INVENTORY", "O1"),
+            ("no inventory table", lambda t: t.replace("| decision |", "| verdict |"), "SCOPE_INVENTORY", "decision"),
+        )
+        for name, mutate, code, detail in cases:
+            with self.subTest(case=name):
+                self.inventory.write_text(mutate(INVENTORY), encoding="utf-8")
+                result = self.dispatch(".orchestrate/recon/builder.md#T2")
+                self.assertNotEqual(result.returncode, 0, result.stdout)
+                self.assertIn(code, result.stdout)
+                self.assertIn(detail, result.stdout)
+        self.inventory.write_text(INVENTORY, encoding="utf-8")
+        for scope, detail in ((".orchestrate/recon/builder.md#T2, Z9", "Z9"), (".orchestrate/recon/builder.md#O1", "O1"),
+                              (".orchestrate/recon/missing.md#T2", "missing.md")):
+            with self.subTest(scope=scope):
+                result = self.dispatch(scope)
+                self.assertNotEqual(result.returncode, 0, result.stdout)
+                self.assertIn("SCOPE_INVENTORY", result.stdout)
+                self.assertIn(detail, result.stdout)
+        result = self.dispatch(".orchestrate/recon/builder.md#T2")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_scope_phase_prints_strike_list(self) -> None:
+        result = self.run_lint("--phase", "scope", "--inventory", ".orchestrate/recon/builder.md")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        strike = result.stdout.split("strike list", 1)[1]
+        self.assertIn("O1 · Send email with CC and reply-to · no team sends with CC today", strike)
+        self.assertIn("O3 · Wait until a date field of the user · every live wait is a fixed delay", strike)
+        for decided in ("O2", "T2", "X1"):
+            self.assertNotIn(decided + " ·", strike)
+        self.inventory.write_text(INVENTORY.replace("propose-drop — every live wait is a fixed delay", ""), encoding="utf-8")
+        result = self.run_lint("--phase", "scope", "--inventory", ".orchestrate/recon/builder.md")
+        self.assertNotEqual(result.returncode, 0, result.stdout)
+        self.assertIn("SCOPE_UNDECIDED", result.stdout)
+        self.assertIn("O3", result.stdout)
+
+        self.inventory.write_text(INVENTORY, encoding="utf-8")
+        handoff = self.root / ".orchestrate" / "HANDOFF.md"
+        (self.root / ".orchestrate" / "SPRINT.md").write_text(
+            "# Sprint\n\ninventory: .orchestrate/recon/builder.md\n", encoding="utf-8"
+        )
+        handoff.write_text("# HANDOFF\n\n## Waiting on owner\nNone.\n", encoding="utf-8")
+        result = self.run_lint("--phase", "handoff", "--handoff", str(handoff))
+        self.assertNotEqual(result.returncode, 0, result.stdout)
+        self.assertIn("SCOPE_PENDING_OWNER", result.stdout)
+        self.assertIn("O1", result.stdout)
+        named = HANDOFF_SOURCE.read_text(encoding="utf-8").replace(
+            "- What it is: the cap", "- What it is: rows O1 and O3 of .orchestrate/recon/builder.md; the cap", 1
+        )
+        handoff.write_text(named, encoding="utf-8")
+        result = self.run_lint("--phase", "handoff", "--handoff", str(handoff))
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
 
 if __name__ == "__main__":

@@ -54,6 +54,138 @@ BRIEF_ID = re.compile(
 )
 # Standard names that look like ticket keys but need no explanation.
 BRIEF_ID_ALLOWED = re.compile(r"^(?:UTF|SHA|ISO|HTTP|TLS|UTC|GMT|MD|BASE)-?[0-9]+$", re.IGNORECASE)
+# Scope: a packet names where its scope came from on one `scope:` line, and an inventory read from a
+# reference's source decides every row (references/product-fit.md#reference-inventory).
+SCOPE_LINE = re.compile(r"^\s*[-*]?\s*`?scope`?\s*:\s*(.*?)\s*$", re.IGNORECASE | re.MULTILINE)
+DATE = r"(?:[0-9]{1,2}/[0-9]{1,2}(?:/[0-9]{4})?|[0-9]{4}-[0-9]{2}-[0-9]{2})"
+SEP = r"\s*[\u2014\u2013:-]+\s*"
+OWNER_WORDS = (
+    r"owner\s+(?P<date>" + DATE + r")\s*[\u2014\u2013:-]*\s*[\"\u201c](?P<quote>[^\"\u201c\u201d]+)[\"\u201d]"
+)
+SCOPE_OWNER = re.compile(r"^" + OWNER_WORDS + r"$", re.IGNORECASE)
+SCOPE_FIX = re.compile(r"^fix(?:\s+[\u2014\u2013:-]+|\s*[\u2014\u2013:])\s*(?P<reason>.*)$", re.IGNORECASE)
+SCOPE_ROWS = re.compile(r"^`?(?P<path>[^`#\s][^`#]*?)`?\s*#(?P<ids>.+)$")
+INVENTORY_STATUSES = ("HAVE", "PARTIAL", "MISSING", "N/A")
+DECISION_BUILD = re.compile(r"^build\s+`?[^\s`]*[0-9][^\s`]*`?(?:\s.*)?$", re.IGNORECASE)
+DECISION_OWNER = re.compile(r"^(?P<kind>drop|later)" + SEP + OWNER_WORDS + r"\s*$", re.IGNORECASE)
+DECISION_ROOT_CUT = re.compile(r"^(?:drop|later)\b", re.IGNORECASE)
+DECISION_PROPOSE = re.compile(r"^propose-(?P<kind>drop|later)" + SEP + r"(?P<reason>\S.*)$", re.IGNORECASE)
+DECISION_NA = re.compile(r"^n/a" + SEP + r"(?P<reason>\S.*)$", re.IGNORECASE)
+DECISION_KINDS = ("build", "drop", "later", "propose-drop", "propose-later", "n/a", "none", "root-cut", "invalid")
+REFERENCE_HEADER = re.compile(r"^\s*[-*]?\s*`?reference`?\s*:\s*(?P<value>.*?)\s*$", re.IGNORECASE)
+INVENTORY_LINE = re.compile(r"^\W*inventory\s*:\s*`?([^`\s]+)`?\s*$", re.IGNORECASE | re.MULTILINE)
+
+
+def letters(text: str) -> int:
+    """Letters in any script, so a reason written in the owner's language counts the same."""
+    return len(re.findall(r"[^\W\d_]", text))
+
+
+def id_list(ids: list[str]) -> str:
+    shown = ", ".join(ids[:10])
+    return shown + (f" +{len(ids) - 10} more" if len(ids) > 10 else "")
+
+
+def without_code(text: str) -> str:
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
+    return re.sub(r"^(`{3,}|~{3,}).*?^\1[^\n]*$", "", text, flags=re.MULTILINE | re.DOTALL)
+
+
+def find_near(value: str, near: Path | None) -> Path | None:
+    """A path named inside a packet, sprint or handoff: relative to cwd, to the file, or to any parent of it."""
+    candidate = Path(value).expanduser()
+    if candidate.is_absolute():
+        return candidate if candidate.is_file() else None
+    start = None if near is None else (near if near.is_dir() else near.parent)
+    bases = [Path.cwd()] + ([start, *start.parents] if start else [])
+    for base in bases:
+        if (base / candidate).is_file():
+            return base / candidate
+    return None
+
+
+def decision_kind(decision: str) -> str:
+    """The kind of an inventory decision cell; one of DECISION_KINDS."""
+    text = decision.strip()
+    if not text:
+        return "none"
+    if DECISION_BUILD.match(text):
+        return "build"
+    owner = DECISION_OWNER.match(text)
+    if owner and len(re.findall(r"\w", owner.group("quote"))) >= 3:
+        return owner.group("kind").lower()
+    if DECISION_ROOT_CUT.match(text):
+        return "root-cut"
+    proposed = DECISION_PROPOSE.match(text)
+    if proposed and letters(proposed.group("reason")) >= 10:
+        return "propose-" + proposed.group("kind").lower()
+    reason = DECISION_NA.match(text)
+    if reason and letters(reason.group("reason")) >= 10:
+        return "n/a"
+    return "invalid"
+
+
+class Inventory:
+    """One reference inventory file: its `reference:` header lines and the rows of every table that has
+    `id`, `status` and `decision` columns (matched by header name, case-insensitive, any order)."""
+
+    def __init__(self, path: Path) -> None:
+        self.path = path
+        self.read_error = ""
+        self.references: list[tuple[str, int]] = []
+        self.tables = 0
+        self.rows: list[dict[str, str]] = []
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError as exc:
+            self.read_error = str(exc)
+            return
+        lines = without_code(text).splitlines()
+        index = 0
+        while index < len(lines):
+            line = lines[index]
+            header = REFERENCE_HEADER.match(line)
+            if header and not line.lstrip().startswith("|"):
+                self.references.append((header.group("value"), index + 1))
+            if line.lstrip().startswith("|") and index + 1 < len(lines) and self.is_separator(lines[index + 1]):
+                columns = [self.cell(c).lower() for c in self.cells(line)]
+                index += 2
+                body: list[tuple[int, list[str]]] = []
+                while index < len(lines) and lines[index].lstrip().startswith("|"):
+                    body.append((index + 1, self.cells(lines[index])))
+                    index += 1
+                if all(name in columns for name in ("id", "status", "decision")):
+                    self.tables += 1
+                    for number, cells in body:
+                        row = {name: self.cell(cells[at]) if at < len(cells) else "" for at, name in enumerate(columns)}
+                        row["line"] = str(number)
+                        self.rows.append(row)
+                continue
+            index += 1
+
+    @staticmethod
+    def cells(line: str) -> list[str]:
+        parts = re.split(r"(?<!\\)\|", line.strip())
+        if parts and not parts[0].strip():
+            parts = parts[1:]
+        if parts and not parts[-1].strip():
+            parts = parts[:-1]
+        return [part.strip().replace("\\|", "|") for part in parts]
+
+    @staticmethod
+    def cell(text: str) -> str:
+        return re.sub(r"^[`*]+|[`*]+$", "", text.strip()).strip()
+
+    def is_separator(self, line: str) -> bool:
+        cells = self.cells(line)
+        return bool(cells) and all(re.fullmatch(r":?-{3,}:?", cell) for cell in cells)
+
+    def proposed(self) -> list[dict[str, str]]:
+        """Rows the root proposes to drop or defer; they wait on the owner."""
+        return [
+            row for row in self.rows
+            if row.get("status") in ("PARTIAL", "MISSING") and decision_kind(row.get("decision", "")).startswith("propose-")
+        ]
 
 
 class Linter:
@@ -78,6 +210,7 @@ class Linter:
         self.contract: dict[str, Any] = {}
         self.plan = ""
         self.packet = ""
+        self.inventory_paths: list[tuple[str, Path]] = []
 
     def error(self, code: str, message: str) -> None:
         self.errors.append(f"{code}: {message}")
@@ -497,21 +630,13 @@ class Linter:
         return [start, *start.parents]
 
     def find_file(self, value: str, near: Path | None) -> Path | None:
-        """A path named inside a packet or sprint: relative to cwd, to the file, or to any parent of it."""
-        candidate = Path(value).expanduser()
-        if candidate.is_absolute():
-            return candidate if candidate.is_file() else None
-        bases = [Path.cwd()] + (self.ancestors(near) if near else [])
-        for base in bases:
-            if (base / candidate).is_file():
-                return base / candidate
-        return None
+        return find_near(value, near)
 
     def load_config(self) -> None:
         """`.claude/orchestrator.json`: --config, else the nearest one above the packet or sprint file."""
         path = self.config_path
         if path is None:
-            for anchor in (self.packet_path, self.sprint_path):
+            for anchor in (self.packet_path, self.sprint_path, *(path for _, path in self.inventory_paths)):
                 if anchor is None:
                     continue
                 for base in self.ancestors(anchor):
@@ -531,21 +656,33 @@ class Linter:
             self.config = parsed
             self.config_file = path
 
-    def validate_references(self) -> None:
-        """A line that names a configured reference product must cite a file of its clone, or say why not."""
+    def reference_clones(self) -> dict[str, tuple[str, Path]]:
+        """The config's `references`, keyed by lower-case name: (name, resolved clone path)."""
         references = self.config.get("references")
-        if not isinstance(references, dict) or not references:
-            return
+        if not isinstance(references, dict):
+            return {}
         root = self.config_file.parent.parent if self.config_file.parent.name == ".claude" else self.config_file.parent
-        text = re.sub(r"^(`{3,}|~{3,}).*?^\1[^\n]*$", "", self.packet, flags=re.MULTILINE | re.DOTALL)
+        clones: dict[str, tuple[str, Path]] = {}
         for name, location in references.items():
             if not isinstance(name, str) or not name or not isinstance(location, str):
                 continue
             clone = Path(location).expanduser()
-            clone = (clone if clone.is_absolute() else root / clone).resolve()
+            clones[name.lower()] = (name, (clone if clone.is_absolute() else root / clone).resolve())
+        return clones
+
+    def validate_references(self) -> None:
+        """A line that names a configured reference product must cite a file of its clone, or say why not."""
+        clones = self.reference_clones()
+        if not clones:
+            return
+        text = re.sub(r"^(`{3,}|~{3,}).*?^\1[^\n]*$", "", self.packet, flags=re.MULTILINE | re.DOTALL)
+        for name, clone in clones.values():
             word = re.compile(r"(?<!\w)" + re.escape(name) + r"(?!\w)", re.IGNORECASE)
             for number, line in enumerate(text.splitlines(), start=1):
                 if not word.search(line):
+                    continue
+                scope = SCOPE_LINE.fullmatch(line)
+                if scope and SCOPE_ROWS.match(scope.group(1)) and not SCOPE_OWNER.match(scope.group(1)):
                     continue
                 fix = (
                     f"cite the reference's code with `ref: <path in {name}'s clone>[:line]` on the line, "
@@ -568,6 +705,157 @@ class Linter:
                     self.error("REFERENCE_CITED", f"{where}; `ref: {target}` is outside {clone}")
                 elif not path.exists():
                     self.error("REFERENCE_CITED", f"{where}; `ref: {target}` does not exist in {clone}; {fix}")
+
+    def validate_scope(self) -> None:
+        """The packet names where its scope came from: inventory rows it builds, the owner's words, or a fix."""
+        hint = (
+            "write one `scope:` line: `scope: <inventory path>#<id>[, <id>...]` (the inventory rows this packet "
+            "builds), `scope: owner <date> — \"<the owner's words>\"` (the owner asked for exactly this), or "
+            "`scope: fix — <the landed behaviour or audit finding it fixes>`"
+        )
+        match = SCOPE_LINE.search(without_code(self.packet))
+        if not match:
+            self.error("SCOPE_SOURCE", f"the packet has no `scope:` line; {hint}")
+            return
+        value = match.group(1)
+        if re.search(r"<[^<>\n]+>", value):
+            self.error("SCOPE_SOURCE", f"`scope: {value}` still holds a <placeholder>; {hint}")
+            return
+        owner = SCOPE_OWNER.match(value)
+        if owner:
+            if len(re.findall(r"\w", owner.group("quote"))) < 3:
+                self.error("SCOPE_SOURCE", f"`scope: {value}` quotes no words of the owner; {hint}")
+            return
+        fix = SCOPE_FIX.match(value)
+        if fix:
+            if letters(fix.group("reason")) < 10:
+                self.error("SCOPE_SOURCE", f"`scope: {value}` needs what it fixes (10+ letters); {hint}")
+            return
+        rows = SCOPE_ROWS.match(value)
+        if not rows:
+            self.error("SCOPE_SOURCE", f"`scope: {value}` is none of the three forms; {hint}")
+            return
+        label = rows.group("path").strip()
+        ids = [ident for ident in (Inventory.cell(part).lstrip("#") for part in re.split(r"[,\s]+", rows.group("ids"))) if ident]
+        if not ids:
+            self.error("SCOPE_SOURCE", f"`scope: {value}` cites no inventory id; {hint}")
+            return
+        path = self.find_file(label, self.packet_path)
+        if path is None:
+            self.error("SCOPE_INVENTORY", f"inventory {label} named on the scope line does not exist; write it "
+                       "(references/product-fit.md#reference-inventory) or fix the path")
+            return
+        inventory = Inventory(path)
+        self.check_inventory(inventory, label)
+        by_id = {row.get("id", ""): row for row in inventory.rows}
+        missing = [ident for ident in ids if ident not in by_id]
+        if missing:
+            self.error("SCOPE_INVENTORY", f"scope cites {id_list(missing)}, not an id of {label}")
+        not_built = [ident for ident in ids if ident in by_id and decision_kind(by_id[ident].get("decision", "")) != "build"]
+        if not_built:
+            self.error("SCOPE_INVENTORY", f"scope cites {id_list(not_built)} of {label}, whose decision is not "
+                       "`build <packet id>`; set the row's decision to this packet before dispatching it")
+
+    def check_inventory(self, inventory: Inventory, label: str) -> None:
+        """The inventory rules of references/product-fit.md#reference-inventory, without any packet."""
+        if inventory.read_error:
+            self.error("SCOPE_INVENTORY", f"cannot read inventory {label}: {inventory.read_error}")
+            return
+        if not inventory.tables:
+            self.error("SCOPE_INVENTORY", f"{label} has no table with `id`, `status` and `decision` columns; use "
+                       "`| id | reference feature | ref | ours | status | decision |`")
+        if not inventory.references:
+            self.error("SCOPE_INVENTORY", f"{label} has no `reference: <name> @ <commit>` line; read the inventory from "
+                       "the reference's source clone and name the commit read")
+        clones = self.reference_clones()
+        for value, number in inventory.references:
+            header = re.match(r"^`?(?P<name>[^@`]+?)`?\s*@\s*`?(?P<commit>[^`\s]+)`?$", value)
+            if not header:
+                self.error("SCOPE_INVENTORY", f"{label} line {number}: `reference: {value}` must read "
+                           "`reference: <name> @ <commit>`")
+                continue
+            name = header.group("name").strip()
+            if name.lower() not in clones:
+                self.error("SCOPE_INVENTORY", f"{label}: reference '{name}' is not a key of `references` in "
+                           f".claude/orchestrator.json; add `\"{name}\": \"<clone path>\"` so the inventory and "
+                           "REFERENCE_CITED read the same clone")
+            elif not clones[name.lower()][1].exists():
+                self.error("SCOPE_INVENTORY", f"{label}: the clone of reference '{name}' ({clones[name.lower()][1]}) "
+                           f"does not exist; clone it at {header.group('commit')}")
+        seen: set[str] = set()
+        repeated: list[str] = []
+        unnamed: list[str] = []
+        bad_status: list[str] = []
+        empty_ours: list[str] = []
+        undecided: list[str] = []
+        root_cut: list[str] = []
+        for row in inventory.rows:
+            ident = row.get("id", "")
+            if not ident:
+                unnamed.append(f"line {row['line']}")
+                continue
+            if ident in seen and ident not in repeated:
+                repeated.append(ident)
+            seen.add(ident)
+            status = row.get("status", "")
+            kind = decision_kind(row.get("decision", ""))
+            if status not in INVENTORY_STATUSES:
+                bad_status.append(ident)
+            elif status == "HAVE":
+                if not row.get("ours", ""):
+                    empty_ours.append(ident)
+            elif kind == "root-cut":
+                root_cut.append(ident)
+            elif status == "N/A" and kind != "n/a":
+                undecided.append(ident)
+            elif status in ("PARTIAL", "MISSING") and kind not in ("build", "drop", "later", "propose-drop", "propose-later"):
+                undecided.append(ident)
+        for items, message in (
+            (unnamed, "rows without an id"),
+            (repeated, "repeats ids"),
+            (bad_status, "has a status other than HAVE, PARTIAL, MISSING or N/A on"),
+            (empty_ours, "marks HAVE with an empty `ours` (name what we have, or the row is PARTIAL or MISSING) on"),
+        ):
+            if items:
+                self.error("SCOPE_INVENTORY", f"{label} {message}: {id_list(items)}")
+        if undecided:
+            self.error("SCOPE_UNDECIDED", f"{label} rows {id_list(undecided)} have no valid decision; a PARTIAL or MISSING "
+                       "row takes `build <packet id>`, `propose-drop — <reason>`, `propose-later — <reason>`, or "
+                       "`drop` / `later — owner <date>: \"<quote>\"`; an N/A row takes `n/a — <reason>`")
+        if root_cut:
+            self.error("SCOPE_ROOT_DROP", f"{label} rows {id_list(root_cut)} are dropped or deferred without the owner's "
+                       "words; write `propose-drop — <reason>` (or `propose-later`) and ask, then "
+                       "`drop — owner <date>: \"<quote>\"` once the owner answers")
+
+    def run_scope(self) -> int:
+        """`--phase scope`: check each inventory and print its counts and strike list for the owner's report."""
+        self.load_config()
+        for label, path in self.inventory_paths:
+            inventory = Inventory(path)
+            self.check_inventory(inventory, label)
+            statuses = [row.get("status", "") for row in inventory.rows]
+            kinds = [decision_kind(row.get("decision", "")) for row in inventory.rows]
+            print(f"inventory: {label}")
+            print("  references: " + (", ".join(value for value, _ in inventory.references) or "none"))
+            status_counts = [f"{name} {statuses.count(name)}" for name in INVENTORY_STATUSES]
+            other = len([s for s in statuses if s not in INVENTORY_STATUSES])
+            print("  status: " + " · ".join(status_counts + ([f"other {other}"] if other else [])))
+            print("  decision: " + (" · ".join(f"{k} {kinds.count(k)}" for k in DECISION_KINDS if kinds.count(k)) or "none"))
+            proposed = inventory.proposed()
+            if not proposed:
+                print("  strike list: none")
+                continue
+            rows_word = "row" if len(proposed) == 1 else "rows"
+            print(f"  strike list ({len(proposed)} {rows_word} the root proposes to cut; the owner answers by id):")
+            for kind in ("propose-drop", "propose-later"):
+                rows = [row for row in proposed if decision_kind(row["decision"]) == kind]
+                if not rows:
+                    continue
+                print(f"    {kind.replace('-', ' ')}:")
+                for row in rows:
+                    reason = DECISION_PROPOSE.match(row["decision"]).group("reason")  # type: ignore[union-attr]
+                    print(f"    - {row['id']} · {row.get('reference feature', '')} · {reason}")
+        return self.finish()
 
     def validate_advisor(self) -> None:
         """A plan or packet in the risk vocabulary needs an approved Advisor round or a named waiver."""
@@ -643,6 +931,7 @@ class Linter:
     def validate_dispatch_packet(self) -> None:
         """Rules that read the packet alone; they also run without a contract."""
         if self.packet_path is not None:
+            self.validate_scope()
             self.validate_volume_budget()
             self.validate_references()
             self.validate_advisor()
@@ -703,6 +992,7 @@ class Linter:
 
         self.validate_verdicts()
         if self.phase == "review":
+            self.validate_scope()
             self.validate_volume_budget()
             self.validate_references()
         if self.phase == "dispatch":
@@ -719,12 +1009,15 @@ class Linter:
         return self.finish()
 
 
-def lint_handoff(path: Path) -> int:
+def lint_handoff(path: Path, sprint: Path | None = None) -> int:
     """Check the `Waiting on owner` section of a HANDOFF file against the decision brief form.
 
     The form is defined by skill `ketchup` (references/decision-brief.md): one `###` per decision,
     keys in English, every key filled, at least two options with Cost and Effect, and every id used
     in a brief introduced in its `What it is` line. `None.` means nothing waits.
+
+    Every inventory named on an `inventory:` line of SPRINT.md (`--sprint`, else the SPRINT.md next to
+    the handoff) that still has `propose-*` rows must be named in `Waiting on owner`.
     """
     errors: list[str] = []
 
@@ -790,6 +1083,28 @@ def lint_handoff(path: Path) -> int:
             if ident not in introduced:
                 error("BRIEF_BARE_ID", f"{label} uses {ident} without introducing it in 'What it is'")
 
+    if sprint is None and (path.parent / "SPRINT.md").is_file():
+        sprint = path.parent / "SPRINT.md"
+    if sprint is not None:
+        try:
+            sprint_text = sprint.read_text(encoding="utf-8")
+        except OSError as exc:
+            error("SPRINT_READ", f"cannot read sprint file: {exc}")
+            sprint_text = ""
+        for named in INVENTORY_LINE.findall(sprint_text):
+            found = find_near(named, sprint)
+            if found is None:
+                error("SCOPE_INVENTORY", f"SPRINT.md names inventory {named}, which does not exist")
+                continue
+            pending = [row["id"] for row in Inventory(found).proposed()]
+            if pending and named not in body and found.name not in body:
+                error(
+                    "SCOPE_PENDING_OWNER",
+                    f"{named} has rows the root proposes to drop or defer ({id_list(pending)}) and 'Waiting on owner' "
+                    f"does not name it; add one brief \"which of these rows do we drop?\" whose 'What it is' names "
+                    f"{named} and carries the strike list of `--phase scope`",
+                )
+
     if errors:
         for item in errors:
             print(f"ERROR {item}")
@@ -805,16 +1120,25 @@ def main() -> int:
     parser.add_argument("--plan", type=Path)
     parser.add_argument("--packet", type=Path)
     parser.add_argument("--handoff", type=Path, help="HANDOFF.md to check (phase handoff)")
-    parser.add_argument("--sprint", type=Path, help="SPRINT.md: with --phase dispatch, fail AUDIT_DUE when too many packets landed since the last audit")
+    parser.add_argument("--sprint", type=Path, help="SPRINT.md: with --phase dispatch, fail AUDIT_DUE when too many packets landed since the last audit; with --phase handoff, the SPRINT.md whose inventory: lines are checked (default: next to the handoff)")
+    parser.add_argument("--inventory", type=Path, nargs="+", help="reference inventory files to check and summarise (phase scope)")
     parser.add_argument("--config", type=Path, help=".claude/orchestrator.json (default: the nearest one above the packet or sprint file)")
-    parser.add_argument("--phase", required=True, choices=("review", "dispatch", "docs", "handoff"))
+    parser.add_argument("--phase", required=True, choices=("review", "dispatch", "docs", "handoff", "scope"))
     args = parser.parse_args()
+
+    def resolve(path: Path | None) -> Path | None:
+        return path.resolve() if path is not None else None
+
     if args.phase == "handoff":
         if args.handoff is None:
             parser.error("--phase handoff requires --handoff")
-        return lint_handoff(args.handoff.resolve())
-    def resolve(path: Path | None) -> Path | None:
-        return path.resolve() if path is not None else None
+        return lint_handoff(args.handoff.resolve(), resolve(args.sprint))
+    if args.phase == "scope":
+        if not args.inventory:
+            parser.error("--phase scope requires --inventory <file> [<file> ...]")
+        linter = Linter(None, None, None, "scope", None, resolve(args.config))
+        linter.inventory_paths = [(str(path), path.resolve()) for path in args.inventory]
+        return linter.run_scope()
 
     if args.phase == "dispatch" and args.contract is None:
         if args.packet is None and args.sprint is None:

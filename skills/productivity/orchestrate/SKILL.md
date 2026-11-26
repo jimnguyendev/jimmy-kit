@@ -18,6 +18,7 @@ bounded packets. No child result is accepted without root verification.
   HANDOFF.md                     # compact cross-task context named by SPRINT.md
   plans/NNN-<slug>.md            # canonical plan + Advisor findings ledger
   packets/NNN-<slug>.md          # one independently verifiable implementation slice
+  recon/<area>.md                # reference inventories (references/product-fit.md#reference-inventory)
   gates                          # `name: command` per line; run by scripts/gates.sh and land.sh
   AUTO-STATE.md                  # written by the PreCompact hook from git and ps; never hand-edited
   LEARNINGS.md                   # WHEN · CHECK · BECAUSE lines learned during the sprint
@@ -102,7 +103,9 @@ repo, the root checks and records in SPRINT.md:
 5. `land.sh` and `gates.sh` are called from the installed skill, and `.orchestrate/gates` lists
    every gate.
 6. A new product area has its usage inventory and parity table before its first technical plan
-   ([references/product-fit.md](references/product-fit.md)).
+   ([references/product-fit.md](references/product-fit.md)). A plan that names a reference product
+   lists its [inventory files](references/product-fit.md#reference-inventory) on `inventory:` lines in
+   SPRINT.md and is not packetized while `orchestration_lint.py --phase scope --inventory <file>…` fails.
 7. Every migration number the sprint will use is reserved in the SPRINT.md table.
 
 Origin: a sprint started from another repo's session dispatched two packets without the Advisor
@@ -125,6 +128,11 @@ round and without budgets; the owner had to point back at the previous sprint's 
    (normally one packet), while a longer roadmap records only high-level goals and
    dependencies. When an Advisor is explicitly requested, record its verdict and the root's
    disposition of findings in [PLAN_REVIEW.md](PLAN_REVIEW.md).
+   Scope comes from the [reference inventory](references/product-fit.md#reference-inventory) when the
+   plan names a reference product: every `PARTIAL` or `MISSING` row carries a decision before the plan
+   is packetized. Scope cuts are the owner's: a standing "decide, don't ask" rule covers technical
+   choices, not dropping a reference feature, so the root writes `propose-drop` or `propose-later` and
+   the strike list of `--phase scope` goes into the owner's report.
    For a contract-backed cycle, prepare the matching draft packet metadata and acceptance IDs,
    then run `python3 <installed-skill-dir>/scripts/orchestration_lint.py --contract <contract.json> --plan <plan.md> --packet <packet.md> --phase review`
    before requesting review. A stale version, mismatched path, missing AC, or failed recon stops
@@ -163,6 +171,11 @@ round and without budgets; the owner had to point back at the previous sprint's 
    so the seat is a role with a fallback, not a product.
 4. **Packetize.** Copy [PACKET.md](PACKET.md). One packet is one bounded change/commit with
    explicit file ownership, stop conditions, and exact acceptance commands.
+   Its `scope:` line names where the scope came from: the inventory rows it builds
+   (`scope: <inventory>#<id>[, <id>…]`, each row's decision `build <packet id>`), the owner's dated words
+   (`scope: owner <date> — "<quote>"`), or the landed behaviour or audit finding it fixes
+   (`scope: fix — <what>`). Phases `review` and `dispatch` fail `SCOPE_SOURCE`, `SCOPE_INVENTORY`,
+   `SCOPE_UNDECIDED` and `SCOPE_ROOT_DROP`.
    The AC is where quality is decided, not Verify: an executor optimizes for the criteria it
    is given, so a question the AC never asks is a question nobody asks. An AC asks for evidence
    that a named risk is handled, never for a list of test cases: the executor writes every case
@@ -206,7 +219,7 @@ round and without budgets; the owner had to point back at the previous sprint's 
    behavior) for each systemic drift route. Parallelize only independent packets with
    non-overlapping writes and integration order recorded in the plan. Before spawning the executor run
    `python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase dispatch --packet <packet.md> --sprint .orchestrate/SPRINT.md`
-   (add `--contract` and `--plan` for a contract-backed cycle): it enforces the Advisor line, the
+   (add `--contract` and `--plan` for a contract-backed cycle): it enforces the scope source, the Advisor line, the
    executor seat, the volume budget, the test budget and the wave audit. Each packet gets its own
    worktree, ports and scratch paths derived from its number. Executors never open a browser or
    a UI-driving tool. Rules: [references/dispatch-and-land.md](references/dispatch-and-land.md).
@@ -260,7 +273,8 @@ round and without budgets; the owner had to point back at the previous sprint's 
    ([references/rules-and-enforcers.md](references/rules-and-enforcers.md#health-pass-after-a-wave)).
    Rewrite HANDOFF.md after every land (what landed, what runs with agent IDs and
    pids, next actions, standing user rules, and `Waiting on owner` as decision briefs or `None.`,
-   checked with `orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md`); the
+   checked with `orchestration_lint.py --phase handoff --handoff .orchestrate/HANDOFF.md`, which also
+   fails `SCOPE_PENDING_OWNER` while an inventory of SPRINT.md has `propose-*` rows the section does not name); the
    PreCompact/SessionStart hook in
    `scripts/orchestrate-context.sh` restores it after compaction
    ([references/context-and-resume.md](references/context-and-resume.md)). Read
