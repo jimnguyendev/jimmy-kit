@@ -120,7 +120,7 @@
 **Expected behaviors:**
 - [x] `orchestration_lint.py --phase dispatch --packet <p>` fails `REFERENCE_CITED` for a line naming a reference listed under `references` in `.claude/orchestrator.json` without `ref: <path>[:line]` (path inside the clone) or `ref: none — <reason>`; without the key the rule is off.
 - [x] `gates.sh --base <ref>` (and `land.sh`) skips a `name @glob: command` gate when the diff matches none of its globs and prints `SKIP`; lines without `@` and runs without a base behave as before.
-- [x] `orchestrate-context.sh resume` prints the compaction count of the session and, from the second, the instruction to finish the release unit, rewrite HANDOFF.md and continue in a new session.
+- [x] `orchestrate-context.sh resume` prints the compaction count of the session and, from the second, the instruction to finish the wave, rewrite HANDOFF.md and continue in a new session.
 - [ ] The root obeys that instruction and tells the owner.
 
 **Status:** [PASS — exit 0, scripts only] 2026-11-24: `python3 -m unittest discover -s scripts -p 'test_*.py'` 125/125 passed. No model-behavior evaluation of the SKILL.md changes was run.

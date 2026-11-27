@@ -20,6 +20,31 @@ always the target (origin: the session ran from another repo; executors would ha
 A worktree is removed by `land.sh` after a confirmed merge, never by a cleanup chained with `;`
 (origin: a `;`-chained cleanup removed the worktree of a branch whose merge had been refused).
 
+## Wave integration branch
+
+Wave mode (SKILL.md "Wave mode (default)") lands a set of packets at once. In the **target** repo:
+
+```bash
+git -C <repo> worktree add <repo>-wt/wave-<name> -b feat/<name> <main>
+git -C <repo> worktree add <repo>-wt/<NNN>-<slug> -b p<NNN>-<slug> feat/<name>
+```
+
+The executor works in its packet worktree and runs the code-only checks of its packet. When the
+root accepts the diff, it merges the packet branch into `feat/<name>` inside the wave worktree with
+`git merge --no-ff p<NNN>-<slug>`: one merge commit per packet, so `git log --first-parent` names the
+merge that broke a gate and the delta goes to that packet's resumed executor. Packets are merged in
+the order the plan records; rerun the cheap code checks after a merge that touches a file another
+packet changed.
+
+The root then runs the full gates, container tests, the full frontend suite, migrations up and down,
+`EXPLAIN` and the preflight in the wave worktree, once. `scripts/land.sh <wave worktree> "<title>"`
+needs no change for this: it accepts any worktree on a branch other than the default branch, merges
+the default branch in, runs every gate and merges the one PR/MR. The packet worktrees are removed by
+hand after that land (`land.sh` removes only the one it was given).
+
+Land a packet on its own, first, only in the four cases of Wave mode. While the machine is idle the
+root may run one cheap container test on `feat/<name>` early; the full suites wait for the end of the wave.
+
 ## Model routing
 
 A default for packets whose seat the user has not pinned. Explicit seat labels still win.
@@ -131,7 +156,7 @@ merged both cleanly, and the result did not compile (one removed a field the oth
   below `ORCH_MAX_LOAD` (default: CPU count; `0` disables), polls every `ORCH_LOAD_POLL` seconds
   (15), prints one line a minute and exits 3 after `ORCH_LOAD_WAIT` seconds (900) · BECAUSE timing
   and performance tests with short waits failed three different ways under load 50 and each passed
-  alone in seconds. Land one packet at a time, and do not start executors that run gates while a
+  alone in seconds. Land one wave (or one packet that lands alone) at a time, and do not start executors that run gates while a
   land waits.
 - WHEN the forge fails after the gates were green (the create call answered 400 seconds after the
   push once) · CHECK `land.sh` already retried the create call `ORCH_CREATE_TRIES` times (5), 5 s
