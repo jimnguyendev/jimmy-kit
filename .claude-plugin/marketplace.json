@@ -10,7 +10,7 @@
       "name": "jimmy-kit",
       "source": "./",
       "description": "All 98 skills (every group).",
-      "version": "0.7.0"
+      "version": "0.9.0"
     },
     {
       "name": "core",
