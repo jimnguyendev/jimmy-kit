@@ -124,8 +124,8 @@ resume() {
     echo "This session has been compacted $n time(s)."
   fi
   if [ "$n" -ge 2 ] 2>/dev/null; then
-    echo "INSTRUCTION: this session has been compacted twice or more. Finish the current release unit, rewrite"
-    echo "HANDOFF.md, and tell the owner to continue in a new session. Do not start another release unit here."
+    echo "INSTRUCTION: this session has been compacted twice or more. Finish the current wave, rewrite"
+    echo "HANDOFF.md, and tell the owner to continue in a new session. Do not start another wave here."
   fi
   for copy in land.sh gates.sh; do
     if [ -e "$state/bin/$copy" ]; then

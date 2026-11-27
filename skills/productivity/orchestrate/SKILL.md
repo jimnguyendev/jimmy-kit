@@ -90,6 +90,39 @@ When the user has not pinned a seat per packet, route by packet kind (details an
 | Hard: auth, queue/dispatch, lease/retry, rich editors, performance | Opus |
 | Root | Opus |
 
+## Wave mode (default)
+
+A **wave** is the set of packets planned together once their ADRs, contracts and shared seams have
+landed: at most about 8 packets or one day of code. Packets are coded in parallel and verified and
+landed together, not one by one, because a full verify per packet serialized every wave on one
+machine and repeated the same suites many times.
+
+- **Executors run code-only checks:** build, `vet` with the integration tags, lint, architecture
+  lint, unit tests of the packages they touched, the skill/schema checkers, and for a frontend the
+  API check, typecheck, lint and the vitest file they wrote. No container tests, no full frontend
+  suite, no `EXPLAIN`, no preflight: they are the root's, once, on the integration branch.
+- **Integration branch.** The root creates `feat/<wave>` from the default branch and its own
+  worktree. Each packet branch is cut from `feat/<wave>` (or the default branch) and merges into
+  `feat/<wave>` as its own merge commit, so a failure can be traced to the merge that brought it.
+- **Root verifies once, on `feat/<wave>`:** every gate in `.orchestrate/gates`, every container-backed
+  test and reality AC, the full frontend suite, migrations up and down, `EXPLAIN` on the seeded
+  sizes and the preflight. A failure goes back as a delta to the executor of the merge that
+  introduced it (resume that executor; do not respawn).
+- **Land once.** `scripts/land.sh <feat/<wave> worktree> "<title>"` merges the default branch,
+  runs every gate and merges the wave in one PR/MR. Then one dev deploy, one migrate and one walk.
+- **Land a packet alone, first, only when** (1) it is an ADR, a contract or a shared seam the other
+  packets build on; (2) its migration rewrites or deletes existing data; (3) it is a hotfix for
+  something live; (4) it is a spike whose result decides the other packets' design.
+- **Early signal.** While the machine is idle (1-minute load well below the CPU count) the root may
+  run one cheap container test on `feat/<wave>` to catch a broken seam before the end of the wave.
+  It is never a reason to start a second full suite.
+- **Easy backend Go** that copies a feature already in the repo and has no queue, lease, retry or
+  idempotency semantics goes to a low-cost model through opencode, one opencode writer at a time,
+  never frontend (see Model routing).
+
+Per-packet verification still applies to a packet that lands alone (the four cases above) and to
+any packet whose acceptance cannot be checked on the integration branch.
+
 ## Sprint kickoff
 
 Before packet 001 of a new sprint, and again when a sprint is picked up from another session or
@@ -124,8 +157,8 @@ round and without budgets; the owner had to point back at the previous sprint's 
    blocked access or missing tooling stops dispatch instead of sending an unprepared executor.
    PASS observations must contain every expected field with the expected value; extra observed
    evidence is allowed. The linter checks recorded evidence, not the environment itself.
-3. **Plan.** Root writes the plan, or obtains a Planner draft. The review unit is the **next release unit**
-   (normally one packet), while a longer roadmap records only high-level goals and
+3. **Plan.** Root writes the plan, or obtains a Planner draft. The review unit is the **next wave**
+   (normally up to about 8 packets, or one packet that lands alone), while a longer roadmap records only high-level goals and
    dependencies. When an Advisor is explicitly requested, record its verdict and the root's
    disposition of findings in [PLAN_REVIEW.md](PLAN_REVIEW.md).
    Scope comes from the [reference inventory](references/product-fit.md#reference-inventory) when the
@@ -157,7 +190,7 @@ round and without budgets; the owner had to point back at the previous sprint's 
    or `advisor: waived by <who> — <reason>`; the dispatch lint fails `ADVISOR_REQUIRED` without one. At most 2 rounds (a third only as a cross-debate), and a lower
    project cap in `.claude/orchestrator.json` wins; rounds 3+ mostly find defects the root's own
    fixes introduced, and an Advisor checks plan-to-code consistency, never product fit. Split a plan
-   that needs more into release units. Run
+   that needs more into waves. Run
    `<installed-skill-dir>/scripts/advisor-review.sh <plan.md>`: it uses the first installed route
    (Codex, then opencode's read-only `plan` agent with the configured model) and writes the
    route under the verdict. When it exits 3, no external route exists: run the round with a fresh
@@ -217,14 +250,17 @@ round and without budgets; the owner had to point back at the previous sprint's 
    runtime-parity, release, and landing **verdict dimensions** are tracked separately. Name both
    an **evidence owner** (who proves the harness/claim) and a **runtime-fix owner** (who changes
    behavior) for each systemic drift route. Parallelize only independent packets with
-   non-overlapping writes and integration order recorded in the plan. Before spawning the executor run
+   non-overlapping writes and merge order into the wave branch recorded in the plan (Wave mode). Before spawning the executor run
    `python3 <installed-skill-dir>/scripts/orchestration_lint.py --phase dispatch --packet <packet.md> --sprint .orchestrate/SPRINT.md`
    (add `--contract` and `--plan` for a contract-backed cycle): it enforces the scope source, the Advisor line, the
    executor seat, the volume budget, the test budget and the wave audit. Each packet gets its own
-   worktree, ports and scratch paths derived from its number. Executors never open a browser or
+   worktree, ports and scratch paths derived from its number, and tells the executor to run only
+   the code-only checks of Wave mode. Executors never open a browser or
    a UI-driving tool. Rules: [references/dispatch-and-land.md](references/dispatch-and-land.md).
-6. **Verify.** Root reviews the diff for scope, parity, architecture, naming and unrelated
-   changes, then runs every acceptance command itself. Executor prose is not evidence.
+6. **Verify.** Per packet the root reviews the diff for scope, parity, architecture, naming and
+   unrelated changes and merges it into `feat/<wave>`; the full gates, container tests and every other
+   acceptance command run once on the integration branch (Wave mode), by the root itself, except for
+   a packet that lands alone. Executor prose is not evidence.
    Check the real artifact: run the feature, read the stored value, read the diff; a report, a
    file timestamp, cached output or "it compiles" is a proxy. When a check fails, suspect the
    observation first (wrong port, database, build or branch; a loaded machine) before the code.
@@ -256,7 +292,7 @@ round and without budgets; the owner had to point back at the previous sprint's 
    Failure example: three lands failed on timing tests and each delta tuned the code; the premise
    "the code is too slow" was false, because the same tests passed unchanged at load 11 and failed
    at load 34. The fix was a quiet machine before the gates, not faster code.
-8. **Land.** Only through `scripts/land.sh <worktree> "<title>"`: it merges the default branch
+8. **Land.** One land per wave (or per packet in the four alone-cases of Wave mode). Only through `scripts/land.sh <worktree> "<title>"`: it merges the default branch
    into the packet, runs every gate in `.orchestrate/gates` (`scripts/gates.sh`) on the merged
    result, merges with the head SHA once the forge reports mergeable, and removes the worktree
    only after the merge succeeded. A clean git merge can still fail to build; a gate the land
@@ -280,9 +316,9 @@ round and without budgets; the owner had to point back at the previous sprint's 
    ([references/context-and-resume.md](references/context-and-resume.md)). Read
    `.jimmy/work/papercuts.md` (skill `log-papercut`) at the end of a wave and turn a repeated entry into a fix of the skill at its source. Add a
    WHEN · CHECK · BECAUSE line to LEARNINGS.md when a failure teaches a rule. After a session
-   limit, resume each stopped agent with `SendMessage`; do not respawn it. **One release unit per
+   limit, resume each stopped agent with `SendMessage`; do not respawn it. **One wave per
    session:** the context hook counts compactions per session; after the second, finish the current
-   release unit, rewrite HANDOFF.md and tell the owner to continue in a new session (in one project the
+   wave, rewrite HANDOFF.md and tell the owner to continue in a new session (in one project the
    four longest sessions held two thirds of a month's spend and most of the owner's corrections).
    A packet that claims parity with a reference product cites its code (`ref: <path>[:line]`), checked by
    `REFERENCE_CITED` when `.claude/orchestrator.json` lists the reference. When the root's own

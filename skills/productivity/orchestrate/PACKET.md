@@ -120,6 +120,22 @@ section below contains IDs only.
      It never asks for a list of test cases ("every finding has an assertion", "one case per
      role"); the new tests are listed once, in ## Tests, within its budget. -->
 
+## Executor checks (code-only)
+<!-- Run before reporting DONE; paste each command and its exit status. Nothing here needs a
+     container, a database or a browser. Wave mode: SKILL.md "Wave mode (default)". -->
+- Build, `vet` with the integration tags, lint, architecture lint: <commands>
+- Unit tests of the packages this packet touches: <narrow commands>
+- Skill/schema checkers and, for a frontend packet, the API check, typecheck, lint and the vitest file this packet wrote: <commands>
+- Do NOT run container tests, the full frontend suite, `EXPLAIN`, migrations or the preflight.
+
+## Root checks on the integration branch
+<!-- Run by the root once on `feat/<wave>` after every packet of the wave merged; not by the
+     executor. A packet that lands alone runs them on its own branch. A failure is traced to the
+     merge that brought it and returns to this packet's executor as a delta. -->
+- Every gate of `.orchestrate/gates`: run by `land.sh`, and before it by hand where a failure needs tracing
+- Container-backed tests and reality ACs of this packet (AC-006 / AC-007 evidence): <named `-v` commands>
+- Migrations up and down, `EXPLAIN` on the seeded size of Volume and budget, preflight: <commands or N/A>
+
 ## Acceptance references
 - AC-001
 - AC-002

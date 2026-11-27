@@ -29,8 +29,8 @@ These are the five verdict dimensions for this review episode.
 - Release verdict: BLOCKED_UNTIL_VERIFIED
 - Landing verdict: UNLANDED
 
-## Next release unit
-<The one packet/release unit under this review.>
+## Next wave
+<The packets of the wave (or the one packet that lands alone) under this review.>
 
 ## High-level roadmap
 <Future objectives and dependencies only; future ownership remains provisional.>
